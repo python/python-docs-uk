@@ -1,0 +1,93 @@
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  push:
+    branches: ['main']
+
+jobs:
+  update-translation:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: ['3.8', '3.9', '3.10', '3.11']
+    steps:
+      - uses: styfle/cancel-workflow-action@main
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@master
+        with:
+          python-version: '3.9'
+      - run: sudo apt-get install -y gettext
+      - run: pip install 'transifex-client>=0.14' requests
+      - uses: actions/checkout@master
+        with:
+          ref: ${{ matrix.version }}
+      - run: .github/scripts/manage_translation.py recreate_tx_config
+        env:
+          TX_TOKEN: ${{ secrets.TX_TOKEN }}
+      - run: echo -e '[https://www.transifex.com]\napi_hostname = https://api.transifex.com\nhostname = https://www.transifex.com\nusername = api' > $HOME/.transifexrc
+      - run: .github/scripts/manage_translation.py fetch
+        env:
+          TX_TOKEN: ${{ secrets.TX_TOKEN }}
+      - run: .github/scripts/manage_translation.py recreate_readme
+        env:
+          TX_TOKEN: ${{ secrets.TX_TOKEN }}
+      - run: git config --local user.email 'dkazanzhy@gmail.com'
+        name: Run git config --local user.email '…'
+      - run: git config --local user.name "GitHub Action's update-translation job"
+      - run: git add .
+      - run: git commit -m 'Update translation from Transifex' || true
+      - uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ matrix.version }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: peter-evans/repository-dispatch@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: translation-updated
+  build-translation:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: ['3.8', '3.9', '3.10', '3.11']
+        format: [html, latex]
+    needs: ['update-translation']
+    steps:
+      - uses: actions/setup-python@master
+        with:
+          python-version: '3.10'
+      - uses: actions/checkout@master
+        with:
+          repository: python/cpython
+          ref: ${{ matrix.version }}
+      - run: make venv
+        working-directory: ./Doc
+      - uses: actions/checkout@master
+        with:
+          ref: ${{ matrix.version }}
+          path: Doc/locales/uk/LC_MESSAGES
+      - run: git pull
+        working-directory: ./Doc/locales/uk/LC_MESSAGES
+      - run: make -e SPHINXOPTS="-D language='uk' -D gettext_compact=0 -W --keep-going" ${{ matrix.format }}
+        working-directory: ./Doc
+      - uses: actions/upload-artifact@master
+        with:
+          name: build-${{ matrix.version }}-${{ matrix.format }}
+          path: Doc/build/${{ matrix.format }}
+  output-pdf:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: ['3.8', '3.9', '3.10', '3.11']
+    needs: ['build-translation']
+    steps:
+      - uses: actions/download-artifact@master
+        with:
+          name: build-${{ matrix.version }}-latex
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y latexmk texlive-xetex fonts-freefont-otf xindy
+      - run: make
+      - uses: actions/upload-artifact@master
+        with:
+          name: build-${{ matrix.version }}-pdf
+          path: .
