@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:09+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`modulefinder` --- Find modules used by a script"
+msgstr ":mod:`modulefinder` --- Знайти модулі, які використовуються сценарієм"
+
+msgid "**Source code:** :source:`Lib/modulefinder.py`"
+msgstr "**Вихідний код:** :source:`Lib/modulefinder.py`"
+
+msgid ""
+"This module provides a :class:`ModuleFinder` class that can be used to "
+"determine the set of modules imported by a script. ``modulefinder.py`` can "
+"also be run as a script, giving the filename of a Python script as its "
+"argument, after which a report of the imported modules will be printed."
+msgstr ""
+"Цей модуль надає клас :class:`ModuleFinder`, який можна використовувати для "
+"визначення набору модулів, імпортованих сценарієм. ``modulefinder.py`` також "
+"можна запустити як сценарій, надаючи назву файлу сценарію Python як "
+"аргумент, після чого буде надруковано звіт про імпортовані модулі."
+
+msgid ""
+"Record that the package named *pkg_name* can be found in the specified "
+"*path*."
+msgstr ""
+"Запишіть, що пакет із назвою *pkg_name* можна знайти у вказаному *шляху*."
+
+msgid ""
+"Allows specifying that the module named *oldname* is in fact the package "
+"named *newname*."
+msgstr ""
+"Дозволяє вказати, що модуль з назвою *oldname* насправді є пакетом з назвою "
+"*newname*."
+
+msgid ""
+"This class provides :meth:`run_script` and :meth:`report` methods to "
+"determine the set of modules imported by a script. *path* can be a list of "
+"directories to search for modules; if not specified, ``sys.path`` is used.  "
+"*debug* sets the debugging level; higher values make the class print "
+"debugging messages about what it's doing. *excludes* is a list of module "
+"names to exclude from the analysis. *replace_paths* is a list of ``(oldpath, "
+"newpath)`` tuples that will be replaced in module paths."
+msgstr ""
+"Цей клас надає методи :meth:`run_script` і :meth:`report` для визначення "
+"набору модулів, імпортованих сценарієм. *шлях* може бути списком каталогів "
+"для пошуку модулів; якщо не вказано, використовується ``sys.path``. *debug* "
+"встановлює рівень налагодження; вищі значення змушують клас друкувати "
+"повідомлення про те, що він робить. *excludes* — список імен модулів, які "
+"потрібно виключити з аналізу. *replace_paths* — це список кортежів "
+"``(oldpath, newpath)``, які будуть замінені в шляхах модуля."
+
+msgid ""
+"Print a report to standard output that lists the modules imported by the "
+"script and their paths, as well as modules that are missing or seem to be "
+"missing."
+msgstr ""
+"Роздрукуйте звіт у стандартний вихід із переліком модулів, імпортованих "
+"сценарієм, і їхніх шляхів, а також модулів, які відсутні або здаються "
+"відсутніми."
+
+msgid ""
+"Analyze the contents of the *pathname* file, which must contain Python code."
+msgstr "Проаналізуйте вміст файлу *pathname*, який повинен містити код Python."
+
+msgid ""
+"A dictionary mapping module names to modules. See :ref:`modulefinder-"
+"example`."
+msgstr ""
+"Словник зіставляє імена модулів із модулями. Див. :ref:`modulefinder-"
+"example`."
+
+msgid "Example usage of :class:`ModuleFinder`"
+msgstr "Приклад використання :class:`ModuleFinder`"
+
+msgid "The script that is going to get analyzed later on (bacon.py)::"
+msgstr "Сценарій, який буде проаналізовано пізніше (bacon.py):"
+
+msgid "The script that will output the report of bacon.py::"
+msgstr "Сценарій, який виведе звіт bacon.py::"
+
+msgid "Sample output (may vary depending on the architecture)::"
+msgstr "Зразок вихідних даних (може відрізнятися залежно від архітектури):"

@@ -1,0 +1,497 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:05+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`errno` --- Standard errno system symbols"
+msgstr ":mod:`errno` --- Стандартні символи системи errno"
+
+msgid ""
+"This module makes available standard ``errno`` system symbols. The value of "
+"each symbol is the corresponding integer value. The names and descriptions "
+"are borrowed from :file:`linux/include/errno.h`, which should be all-"
+"inclusive."
+msgstr ""
+"Цей модуль робить доступними стандартні системні символи ``errno``. Значення "
+"кожного символу є відповідним цілим значенням. Назви та описи запозичені з :"
+"file:`linux/include/errno.h`, який має бути повним."
+
+msgid ""
+"Dictionary providing a mapping from the errno value to the string name in "
+"the underlying system.  For instance, ``errno.errorcode[errno.EPERM]`` maps "
+"to ``'EPERM'``."
+msgstr ""
+"Словник, що забезпечує зіставлення значення errno з іменем рядка в базовій "
+"системі. Наприклад, ``errno.errorcode[errno.EPERM]`` відповідає ``'EPERM''``."
+
+msgid ""
+"To translate a numeric error code to an error message, use :func:`os."
+"strerror`."
+msgstr ""
+"Щоб перетворити числовий код помилки на повідомлення про помилку, "
+"використовуйте :func:`os.strerror`."
+
+msgid ""
+"Of the following list, symbols that are not used on the current platform are "
+"not defined by the module.  The specific list of defined symbols is "
+"available as ``errno.errorcode.keys()``.  Symbols available can include:"
+msgstr ""
+"З наведеного нижче списку символи, які не використовуються на поточній "
+"платформі, не визначені модулем. Конкретний список визначених символів "
+"доступний як ``errno.errorcode.keys()``. Доступні символи можуть включати:"
+
+msgid ""
+"Operation not permitted. This error is mapped to the exception :exc:"
+"`PermissionError`."
+msgstr ""
+"Операція не дозволена. Ця помилка зіставляється з винятком :exc:"
+"`PermissionError`."
+
+msgid ""
+"No such file or directory. This error is mapped to the exception :exc:"
+"`FileNotFoundError`."
+msgstr ""
+"Такого файлу чи каталогу немає. Ця помилка зіставляється з винятком :exc:"
+"`FileNotFoundError`."
+
+msgid ""
+"No such process. This error is mapped to the exception :exc:"
+"`ProcessLookupError`."
+msgstr ""
+"Такого процесу немає. Ця помилка зіставляється з винятком :exc:"
+"`ProcessLookupError`."
+
+msgid ""
+"Interrupted system call. This error is mapped to the exception :exc:"
+"`InterruptedError`."
+msgstr ""
+"Перерваний системний виклик. Ця помилка зіставляється з винятком :exc:"
+"`InterruptedError`."
+
+msgid "I/O error"
+msgstr "Помилка введення/виведення"
+
+msgid "No such device or address"
+msgstr "Немає такого пристрою чи адреси"
+
+msgid "Arg list too long"
+msgstr "Список аргументів задовгий"
+
+msgid "Exec format error"
+msgstr "Помилка формату Exec"
+
+msgid "Bad file number"
+msgstr "Неправильний номер файлу"
+
+msgid ""
+"No child processes. This error is mapped to the exception :exc:"
+"`ChildProcessError`."
+msgstr ""
+"Немає дочірніх процесів. Ця помилка зіставляється з винятком :exc:"
+"`ChildProcessError`."
+
+msgid ""
+"Try again. This error is mapped to the exception :exc:`BlockingIOError`."
+msgstr ""
+"Спробуйте знову. Ця помилка зіставляється з винятком :exc:`BlockingIOError`."
+
+msgid "Out of memory"
+msgstr "Недостатньо помяті"
+
+msgid ""
+"Permission denied.  This error is mapped to the exception :exc:"
+"`PermissionError`."
+msgstr ""
+"У дозволі відмовлено. Ця помилка зіставляється з винятком :exc:"
+"`PermissionError`."
+
+msgid "Bad address"
+msgstr "Погана адреса"
+
+msgid "Block device required"
+msgstr "Потрібен блоковий пристрій"
+
+msgid "Device or resource busy"
+msgstr "Пристрій або ресурс зайняті"
+
+msgid ""
+"File exists. This error is mapped to the exception :exc:`FileExistsError`."
+msgstr ""
+"Файл існує. Ця помилка зіставляється з винятком :exc:`FileExistsError`."
+
+msgid "Cross-device link"
+msgstr "Зв’язок між пристроями"
+
+msgid "No such device"
+msgstr "Немає такого пристрою"
+
+msgid ""
+"Not a directory. This error is mapped to the exception :exc:"
+"`NotADirectoryError`."
+msgstr ""
+"Не каталог. Ця помилка зіставляється з винятком :exc:`NotADirectoryError`."
+
+msgid ""
+"Is a directory. This error is mapped to the exception :exc:"
+"`IsADirectoryError`."
+msgstr ""
+"Це каталог. Ця помилка зіставляється з винятком :exc:`IsADirectoryError`."
+
+msgid "Invalid argument"
+msgstr "Недійсний аргумент"
+
+msgid "File table overflow"
+msgstr "Переповнення таблиці файлів"
+
+msgid "Too many open files"
+msgstr "Забагато відкритих файлів"
+
+msgid "Not a typewriter"
+msgstr "Не друкарська машинка"
+
+msgid "Text file busy"
+msgstr "Текстовий файл зайнятий"
+
+msgid "File too large"
+msgstr "Файл завеликий"
+
+msgid "No space left on device"
+msgstr "На пристрої не залишилося місця"
+
+msgid "Illegal seek"
+msgstr "Незаконний пошук"
+
+msgid "Read-only file system"
+msgstr "Файлова система лише для читання"
+
+msgid "Too many links"
+msgstr "Забагато посилань"
+
+msgid ""
+"Broken pipe. This error is mapped to the exception :exc:`BrokenPipeError`."
+msgstr ""
+"Розбита труба. Ця помилка зіставляється з винятком :exc:`BrokenPipeError`."
+
+msgid "Math argument out of domain of func"
+msgstr "Математичний аргумент поза областю функ"
+
+msgid "Math result not representable"
+msgstr "Математичний результат неможливо представити"
+
+msgid "Resource deadlock would occur"
+msgstr "Виникне блокування ресурсів"
+
+msgid "File name too long"
+msgstr "Назва файлу задовга"
+
+msgid "No record locks available"
+msgstr "Немає доступних блокувань записів"
+
+msgid "Function not implemented"
+msgstr "Функція не реалізована"
+
+msgid "Directory not empty"
+msgstr "Каталог не порожній"
+
+msgid "Too many symbolic links encountered"
+msgstr "Знайдено забагато символічних посилань"
+
+msgid ""
+"Operation would block. This error is mapped to the exception :exc:"
+"`BlockingIOError`."
+msgstr ""
+"Операція буде заблокована. Ця помилка зіставляється з винятком :exc:"
+"`BlockingIOError`."
+
+msgid "No message of desired type"
+msgstr "Немає повідомлень потрібного типу"
+
+msgid "Identifier removed"
+msgstr "Ідентифікатор видалено"
+
+msgid "Channel number out of range"
+msgstr "Номер каналу поза діапазоном"
+
+msgid "Level 2 not synchronized"
+msgstr "Рівень 2 не синхронізовано"
+
+msgid "Level 3 halted"
+msgstr "Рівень 3 зупинено"
+
+msgid "Level 3 reset"
+msgstr "Скидання рівня 3"
+
+msgid "Link number out of range"
+msgstr "Номер посилання поза діапазоном"
+
+msgid "Protocol driver not attached"
+msgstr "Драйвер протоколу не підключено"
+
+msgid "No CSI structure available"
+msgstr "Немає доступної структури CSI"
+
+msgid "Level 2 halted"
+msgstr "Рівень 2 зупинено"
+
+msgid "Invalid exchange"
+msgstr "Недійсний обмін"
+
+msgid "Invalid request descriptor"
+msgstr "Недійсний дескриптор запиту"
+
+msgid "Exchange full"
+msgstr "Обмін повний"
+
+msgid "No anode"
+msgstr "Без анода"
+
+msgid "Invalid request code"
+msgstr "Недійсний код запиту"
+
+msgid "Invalid slot"
+msgstr "Недійсний слот"
+
+msgid "File locking deadlock error"
+msgstr "Помилка взаємоблокування блокування файлу"
+
+msgid "Bad font file format"
+msgstr "Неправильний формат файлу шрифту"
+
+msgid "Device not a stream"
+msgstr "Пристрій не є потоком"
+
+msgid "No data available"
+msgstr "Немає даних"
+
+msgid "Timer expired"
+msgstr "Таймер закінчився"
+
+msgid "Out of streams resources"
+msgstr "Ресурси поза потоками"
+
+msgid "Machine is not on the network"
+msgstr "Машина не в мережі"
+
+msgid "Package not installed"
+msgstr "Пакет не встановлено"
+
+msgid "Object is remote"
+msgstr "Об'єкт віддалений"
+
+msgid "Link has been severed"
+msgstr "Посилання розірвано"
+
+msgid "Advertise error"
+msgstr "Помилка реклами"
+
+msgid "Srmount error"
+msgstr "Помилка Srmount"
+
+msgid "Communication error on send"
+msgstr "Помилка зв’язку під час надсилання"
+
+msgid "Protocol error"
+msgstr "Помилка протоколу"
+
+msgid "Multihop attempted"
+msgstr "Спроба кількох стрибків"
+
+msgid "RFS specific error"
+msgstr "Специфічна помилка RFS"
+
+msgid "Not a data message"
+msgstr "Не повідомлення даних"
+
+msgid "Value too large for defined data type"
+msgstr "Значення завелике для визначеного типу даних"
+
+msgid "Name not unique on network"
+msgstr "Ім'я не унікальне в мережі"
+
+msgid "File descriptor in bad state"
+msgstr "Дескриптор файлу в поганому стані"
+
+msgid "Remote address changed"
+msgstr "Змінено віддалену адресу"
+
+msgid "Can not access a needed shared library"
+msgstr "Неможливо отримати доступ до необхідної спільної бібліотеки"
+
+msgid "Accessing a corrupted shared library"
+msgstr "Доступ до пошкодженої спільної бібліотеки"
+
+msgid ".lib section in a.out corrupted"
+msgstr "Розділ .lib у файлі a.out пошкоджено"
+
+msgid "Attempting to link in too many shared libraries"
+msgstr "Спроба зв’язатися із занадто великою кількістю спільних бібліотек"
+
+msgid "Cannot exec a shared library directly"
+msgstr "Неможливо виконати спільну бібліотеку безпосередньо"
+
+msgid "Illegal byte sequence"
+msgstr "Недопустима послідовність байтів"
+
+msgid "Interrupted system call should be restarted"
+msgstr "Перерваний системний виклик слід розпочати заново"
+
+msgid "Streams pipe error"
+msgstr "Помилка каналу потоків"
+
+msgid "Too many users"
+msgstr "Забагато користувачів"
+
+msgid "Socket operation on non-socket"
+msgstr "Робота сокета на несокеті"
+
+msgid "Destination address required"
+msgstr "Потрібна адреса призначення"
+
+msgid "Message too long"
+msgstr "Повідомлення задовге"
+
+msgid "Protocol wrong type for socket"
+msgstr "Неправильний тип протоколу для сокета"
+
+msgid "Protocol not available"
+msgstr "Протокол недоступний"
+
+msgid "Protocol not supported"
+msgstr "Протокол не підтримується"
+
+msgid "Socket type not supported"
+msgstr "Тип розетки не підтримується"
+
+msgid "Operation not supported on transport endpoint"
+msgstr "Операція не підтримується на транспортній кінцевій точці"
+
+msgid "Protocol family not supported"
+msgstr "Сімейство протоколів не підтримується"
+
+msgid "Address family not supported by protocol"
+msgstr "Сімейство адрес не підтримується протоколом"
+
+msgid "Address already in use"
+msgstr "Адреса вже використовується"
+
+msgid "Cannot assign requested address"
+msgstr "Неможливо призначити запитану адресу"
+
+msgid "Network is down"
+msgstr "Мережа не працює"
+
+msgid "Network is unreachable"
+msgstr "Мережа недоступна"
+
+msgid "Network dropped connection because of reset"
+msgstr "З’єднання з мережею перервано через скидання"
+
+msgid ""
+"Software caused connection abort. This error is mapped to the exception :exc:"
+"`ConnectionAbortedError`."
+msgstr ""
+"Програмне забезпечення спричинило переривання підключення. Ця помилка "
+"зіставляється з винятком :exc:`ConnectionAbortedError`."
+
+msgid ""
+"Connection reset by peer. This error is mapped to the exception :exc:"
+"`ConnectionResetError`."
+msgstr ""
+"Підключення скинуто іншим комп'ютером. Ця помилка зіставляється з винятком :"
+"exc:`ConnectionResetError`."
+
+msgid "No buffer space available"
+msgstr "Немає буферного простору"
+
+msgid "Transport endpoint is already connected"
+msgstr "Транспортна кінцева точка вже підключена"
+
+msgid "Transport endpoint is not connected"
+msgstr "Кінцева транспортна точка не підключена"
+
+msgid ""
+"Cannot send after transport endpoint shutdown. This error is mapped to the "
+"exception :exc:`BrokenPipeError`."
+msgstr ""
+"Неможливо надіслати після завершення транспортної кінцевої точки. Ця помилка "
+"зіставляється з винятком :exc:`BrokenPipeError`."
+
+msgid "Too many references: cannot splice"
+msgstr "Забагато посилань: неможливо з’єднати"
+
+msgid ""
+"Connection timed out. This error is mapped to the exception :exc:"
+"`TimeoutError`."
+msgstr ""
+"Тайм-аут підключення. Ця помилка зіставляється з винятком :exc:"
+"`TimeoutError`."
+
+msgid ""
+"Connection refused. This error is mapped to the exception :exc:"
+"`ConnectionRefusedError`."
+msgstr ""
+"З'єднання відхилено. Ця помилка зіставляється з винятком :exc:"
+"`ConnectionRefusedError`."
+
+msgid "Host is down"
+msgstr "Хост не працює"
+
+msgid "No route to host"
+msgstr "Немає маршруту до хосту"
+
+msgid ""
+"Operation already in progress. This error is mapped to the exception :exc:"
+"`BlockingIOError`."
+msgstr ""
+"Операція вже триває. Ця помилка зіставляється з винятком :exc:"
+"`BlockingIOError`."
+
+msgid ""
+"Operation now in progress. This error is mapped to the exception :exc:"
+"`BlockingIOError`."
+msgstr ""
+"Зараз триває операція. Ця помилка зіставляється з винятком :exc:"
+"`BlockingIOError`."
+
+msgid "Stale NFS file handle"
+msgstr "Застарілий дескриптор файлу NFS"
+
+msgid "Structure needs cleaning"
+msgstr "Конструкція потребує очищення"
+
+msgid "Not a XENIX named type file"
+msgstr "Файл не має імені XENIX"
+
+msgid "No XENIX semaphores available"
+msgstr "Немає доступних семафорів XENIX"
+
+msgid "Is a named type file"
+msgstr "Це файл іменованого типу"
+
+msgid "Remote I/O error"
+msgstr "Помилка віддаленого введення-виведення"
+
+msgid "Quota exceeded"
+msgstr "Квоту перевищено"

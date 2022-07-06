@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:04+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Data Types"
+msgstr "Типи даних"
+
+msgid ""
+"The modules described in this chapter provide a variety of specialized data "
+"types such as dates and times, fixed-type arrays, heap queues, double-ended "
+"queues, and enumerations."
+msgstr ""
+"Модулі, описані в цьому розділі, надають різні спеціалізовані типи даних, "
+"такі як дати та час, масиви фіксованого типу, черги купи, двосторонні черги "
+"та перерахування."
+
+msgid ""
+"Python also provides some built-in data types, in particular, :class:"
+"`dict`, :class:`list`, :class:`set` and :class:`frozenset`, and :class:"
+"`tuple`.  The :class:`str` class is used to hold Unicode strings, and the :"
+"class:`bytes` and :class:`bytearray` classes are used to hold binary data."
+msgstr ""
+"Python також надає деякі вбудовані типи даних, зокрема :class:`dict`, :class:"
+"`list`, :class:`set` і :class:`frozenset` і :class:`tuple`. Клас :class:"
+"`str` використовується для зберігання рядків Unicode, а класи :class:`bytes` "
+"і :class:`bytearray` використовуються для зберігання двійкових даних."
+
+msgid "The following modules are documented in this chapter:"
+msgstr "У цьому розділі описано наступні модулі:"

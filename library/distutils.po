@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:04+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`distutils` --- Building and installing Python modules"
+msgstr ":mod:`distutils` --- Створення та встановлення модулів Python"
+
+msgid ""
+":mod:`distutils` is deprecated with removal planned for Python 3.12. See "
+"the :ref:`What's New <distutils-deprecated>` entry for more information."
+msgstr ""
+":mod:`distutils` не підтримується, планується видалення для Python 3.12. "
+"Перегляньте запис :ref:`Що нового <distutils-deprecated>` для отримання "
+"додаткової інформації."
+
+msgid ""
+"The :mod:`distutils` package provides support for building and installing "
+"additional modules into a Python installation.  The new modules may be "
+"either 100%-pure Python, or may be extension modules written in C, or may be "
+"collections of Python packages which include modules coded in both Python "
+"and C."
+msgstr ""
+"Пакет :mod:`distutils` забезпечує підтримку створення та встановлення "
+"додаткових модулів у інсталяцію Python. Нові модулі можуть бути або 100%-"
+"pure Python, або можуть бути модулями розширення, написаними на C, або "
+"можуть бути колекціями пакетів Python, які включають модулі, закодовані як "
+"на Python, так і на C."
+
+msgid ""
+"Most Python users will *not* want to use this module directly, but instead "
+"use the cross-version tools maintained by the Python Packaging Authority. In "
+"particular, `setuptools <https://setuptools.readthedocs.io/en/latest/>`__ is "
+"an enhanced alternative to :mod:`distutils` that provides:"
+msgstr ""
+"Більшість користувачів Python *не* захочуть використовувати цей модуль "
+"напряму, натомість скористаються крос-версійними інструментами, які "
+"підтримує Python Packaging Authority. Зокрема, `setuptools <https://"
+"setuptools.readthedocs.io/en/latest/>`__ є вдосконаленою альтернативою :mod:"
+"`distutils`, яка забезпечує:"
+
+msgid "support for declaring project dependencies"
+msgstr "підтримка оголошення залежностей проекту"
+
+msgid ""
+"additional mechanisms for configuring which files to include in source "
+"releases (including plugins for integration with version control systems)"
+msgstr ""
+"додаткові механізми для конфігурації файлів, які слід включати в вихідні "
+"версії (включаючи плагіни для інтеграції з системами контролю версій)"
+
+msgid ""
+"the ability to declare project \"entry points\", which can be used as the "
+"basis for application plugin systems"
+msgstr ""
+"можливість оголошувати \"точки входу\" проекту, які можна використовувати як "
+"основу для систем плагінів додатків"
+
+msgid ""
+"the ability to automatically generate Windows command line executables at "
+"installation time rather than needing to prebuild them"
+msgstr ""
+"можливість автоматично генерувати виконувані файли командного рядка Windows "
+"під час встановлення замість необхідності їх попереднього збирання"
+
+msgid "consistent behaviour across all supported Python versions"
+msgstr "узгоджена поведінка в усіх підтримуваних версіях Python"
+
+msgid ""
+"The recommended `pip <https://pip.pypa.io/>`__ installer runs all ``setup."
+"py`` scripts with ``setuptools``, even if the script itself only imports "
+"``distutils``. Refer to the `Python Packaging User Guide <https://packaging."
+"python.org>`_ for more information."
+msgstr ""
+"Рекомендований інсталятор `pip <https://pip.pypa.io/>`__ запускає всі "
+"сценарії ``setup.py`` з ``setuptools``, навіть якщо сам сценарій імпортує "
+"лише ``distutils``. Для отримання додаткової інформації зверніться до "
+"`Посібника користувача з пакування Python <https://packaging.python.org>`_."
+
+msgid ""
+"For the benefits of packaging tool authors and users seeking a deeper "
+"understanding of the details of the current packaging and distribution "
+"system, the legacy :mod:`distutils` based user documentation and API "
+"reference remain available:"
+msgstr ""
+"Для переваг авторів інструментів пакування та користувачів, які прагнуть "
+"глибшого розуміння деталей поточної системи пакування та розповсюдження, "
+"документація користувача на основі :mod:`distutils` та посилання на API "
+"залишаються доступними:"
+
+msgid ":ref:`install-index`"
+msgstr ":ref:`install-index`"
+
+msgid ":ref:`distutils-index`"
+msgstr ":ref:`distutils-index`"

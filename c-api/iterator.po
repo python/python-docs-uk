@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 00:49+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Iterator Objects"
+msgstr "Ітератор об'єктів"
+
+msgid ""
+"Python provides two general-purpose iterator objects.  The first, a sequence "
+"iterator, works with an arbitrary sequence supporting the :meth:"
+"`__getitem__` method.  The second works with a callable object and a "
+"sentinel value, calling the callable for each item in the sequence, and "
+"ending the iteration when the sentinel value is returned."
+msgstr ""
+"Python надає два об’єкти-ітератори загального призначення. Перший, ітератор "
+"послідовності, працює з довільною послідовністю, яка підтримує метод :meth:"
+"`__getitem__`. Другий працює з викликаним об’єктом і дозорним значенням, "
+"викликаючи викликаний для кожного елемента в послідовності та завершуючи "
+"ітерацію, коли повертається дозорне значення."
+
+msgid ""
+"Type object for iterator objects returned by :c:func:`PySeqIter_New` and the "
+"one-argument form of the :func:`iter` built-in function for built-in "
+"sequence types."
+msgstr ""
+"Об’єкт типу для об’єктів-ітераторів, які повертає :c:func:`PySeqIter_New`, і "
+"форма з одним аргументом вбудованої функції :func:`iter` для вбудованих "
+"типів послідовностей."
+
+msgid ""
+"Return true if the type of *op* is :c:data:`PySeqIter_Type`.  This function "
+"always succeeds."
+msgstr ""
+"Повертає true, якщо *op* має тип :c:data:`PySeqIter_Type`. Ця функція завжди "
+"успішна."
+
+msgid ""
+"Return an iterator that works with a general sequence object, *seq*.  The "
+"iteration ends when the sequence raises :exc:`IndexError` for the "
+"subscripting operation."
+msgstr ""
+"Повертає ітератор, який працює з об’єктом загальної послідовності *seq*. "
+"Ітерація завершується, коли послідовність викликає :exc:`IndexError` для "
+"операції підписання."
+
+msgid ""
+"Type object for iterator objects returned by :c:func:`PyCallIter_New` and "
+"the two-argument form of the :func:`iter` built-in function."
+msgstr ""
+"Об’єкт типу для об’єктів-ітераторів, що повертаються :c:func:"
+"`PyCallIter_New` і формою з двома аргументами вбудованої функції :func:"
+"`iter`."
+
+msgid ""
+"Return true if the type of *op* is :c:data:`PyCallIter_Type`.  This function "
+"always succeeds."
+msgstr ""
+"Повертає true, якщо тип *op* :c:data:`PyCallIter_Type`. Ця функція завжди "
+"успішна."
+
+msgid ""
+"Return a new iterator.  The first parameter, *callable*, can be any Python "
+"callable object that can be called with no parameters; each call to it "
+"should return the next item in the iteration.  When *callable* returns a "
+"value equal to *sentinel*, the iteration will be terminated."
+msgstr ""
+"Повернути новий ітератор. Перший параметр, *callable*, може бути будь-яким "
+"викликаним об’єктом Python, який можна викликати без параметрів; кожен "
+"виклик має повертати наступний елемент ітерації. Коли *callable* повертає "
+"значення, рівне *sentinel*, ітерація буде припинена."

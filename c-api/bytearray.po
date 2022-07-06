@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 00:47+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Byte Array Objects"
+msgstr "Об’єкти байтового масиву"
+
+msgid ""
+"This subtype of :c:type:`PyObject` represents a Python bytearray object."
+msgstr "Цей підтип :c:type:`PyObject` представляє об’єкт Python bytearray."
+
+msgid ""
+"This instance of :c:type:`PyTypeObject` represents the Python bytearray "
+"type; it is the same object as :class:`bytearray` in the Python layer."
+msgstr ""
+"Цей екземпляр :c:type:`PyTypeObject` представляє тип Python bytearray; це "
+"той самий об’єкт, що й :class:`bytearray` на рівні Python."
+
+msgid "Type check macros"
+msgstr "Макроси перевірки типу"
+
+msgid ""
+"Return true if the object *o* is a bytearray object or an instance of a "
+"subtype of the bytearray type.  This function always succeeds."
+msgstr ""
+"Повертає true, якщо об’єкт *o* є об’єктом bytearray або екземпляром підтипу "
+"типу bytearray. Ця функція завжди успішна."
+
+msgid ""
+"Return true if the object *o* is a bytearray object, but not an instance of "
+"a subtype of the bytearray type.  This function always succeeds."
+msgstr ""
+"Повертає true, якщо об’єкт *o* є об’єктом bytearray, але не екземпляром "
+"підтипу типу bytearray. Ця функція завжди успішна."
+
+msgid "Direct API functions"
+msgstr "Прямі функції API"
+
+msgid ""
+"Return a new bytearray object from any object, *o*, that implements the :ref:"
+"`buffer protocol <bufferobjects>`."
+msgstr ""
+"Повертає новий об’єкт bytearray з будь-якого об’єкта, *o*, який реалізує :"
+"ref:`протокол буфера <bufferobjects>`."
+
+msgid ""
+"Create a new bytearray object from *string* and its length, *len*.  On "
+"failure, ``NULL`` is returned."
+msgstr ""
+"Створіть новий об’єкт bytearray із *string* і його довжини *len*. У разі "
+"помилки повертається ``NULL``."
+
+msgid ""
+"Concat bytearrays *a* and *b* and return a new bytearray with the result."
+msgstr ""
+"Об’єднайте масиви байтів *a* і *b* та поверніть новий масив байтів із "
+"результатом."
+
+msgid "Return the size of *bytearray* after checking for a ``NULL`` pointer."
+msgstr "Повертає розмір *bytearray* після перевірки вказівника ``NULL``."
+
+msgid ""
+"Return the contents of *bytearray* as a char array after checking for a "
+"``NULL`` pointer.  The returned array always has an extra null byte appended."
+msgstr ""
+"Повертає вміст *bytearray* як масив char після перевірки вказівника "
+"``NULL``. Повернений масив завжди має додатковий нульовий байт."
+
+msgid "Resize the internal buffer of *bytearray* to *len*."
+msgstr "Змініть розмір внутрішнього буфера *bytearray* на *len*."
+
+msgid "Macros"
+msgstr "Макроси"
+
+msgid "These macros trade safety for speed and they don't check pointers."
+msgstr ""
+"Ці макроси замінюють безпеку на швидкість, і вони не перевіряють покажчики."
+
+msgid "Macro version of :c:func:`PyByteArray_AsString`."
+msgstr ""
+
+msgid "Macro version of :c:func:`PyByteArray_Size`."
+msgstr ""

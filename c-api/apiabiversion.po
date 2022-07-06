@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 00:47+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "API and ABI Versioning"
+msgstr "Керування версіями API та ABI"
+
+msgid ""
+"CPython exposes its version number in the following macros. Note that these "
+"correspond to the version code is **built** with, not necessarily the "
+"version used at **run time**."
+msgstr ""
+"CPython розкриває номер своєї версії в наступних макросах. Зауважте, що вони "
+"відповідають коду версії, з яким **зібрано**, не обов’язково версії, яка "
+"використовується під час **виконання**."
+
+msgid ""
+"See :ref:`stable` for a discussion of API and ABI stability across versions."
+msgstr ""
+"Перегляньте :ref:`stable` для обговорення стабільності API та ABI у різних "
+"версіях."
+
+msgid "The ``3`` in ``3.4.1a2``."
+msgstr "``3`` в ``3.4.1a2``."
+
+msgid "The ``4`` in ``3.4.1a2``."
+msgstr "``4`` в ``3.4.1a2``."
+
+msgid "The ``1`` in ``3.4.1a2``."
+msgstr "``1`` в ``3.4.1a2``."
+
+msgid ""
+"The ``a`` in ``3.4.1a2``. This can be ``0xA`` for alpha, ``0xB`` for beta, "
+"``0xC`` for release candidate or ``0xF`` for final."
+msgstr ""
+"``a`` в ``3.4.1a2``. Це може бути ``0xA`` для альфа-версії, ``0xB`` для бета-"
+"версії, ``0xC`` для кандидата на випуск або ``0xF`` для фіналу."
+
+msgid "The ``2`` in ``3.4.1a2``. Zero for final releases."
+msgstr "``2`` в ``3.4.1a2``. Нуль для остаточних випусків."
+
+msgid "The Python version number encoded in a single integer."
+msgstr "Номер версії Python, закодований одним цілим числом."
+
+msgid ""
+"The underlying version information can be found by treating it as a 32 bit "
+"number in the following manner:"
+msgstr ""
+"Базову інформацію про версію можна знайти, розглядаючи її як 32-розрядне "
+"число таким чином:"
+
+msgid "Bytes"
+msgstr "Байти"
+
+msgid "Bits (big endian order)"
+msgstr "Біти (великий порядок байтів)"
+
+msgid "Meaning"
+msgstr "Значення"
+
+msgid "Value for ``3.4.1a2``"
+msgstr "Значення для ``3.4.1a2``"
+
+msgid "1"
+msgstr "1"
+
+msgid "1-8"
+msgstr "1-8"
+
+msgid "``PY_MAJOR_VERSION``"
+msgstr "``PY_MAJOR_VERSION``"
+
+msgid "``0x03``"
+msgstr "``0x03``"
+
+msgid "2"
+msgstr "2"
+
+msgid "9-16"
+msgstr "9-16"
+
+msgid "``PY_MINOR_VERSION``"
+msgstr "``PY_MINOR_VERSION``"
+
+msgid "``0x04``"
+msgstr "``0x04``"
+
+msgid "3"
+msgstr "3"
+
+msgid "17-24"
+msgstr "17-24"
+
+msgid "``PY_MICRO_VERSION``"
+msgstr "``PY_MICRO_VERSION``"
+
+msgid "``0x01``"
+msgstr "``0x01``"
+
+msgid "4"
+msgstr "4"
+
+msgid "25-28"
+msgstr "25-28"
+
+msgid "``PY_RELEASE_LEVEL``"
+msgstr "``PY_RELEASE_LEVEL``"
+
+msgid "``0xA``"
+msgstr "``0xA``"
+
+msgid "29-32"
+msgstr "29-32"
+
+msgid "``PY_RELEASE_SERIAL``"
+msgstr "``PY_RELEASE_SERIAL``"
+
+msgid "``0x2``"
+msgstr "``0x2``"
+
+msgid ""
+"Thus ``3.4.1a2`` is hexversion ``0x030401a2`` and ``3.10.0`` is hexversion "
+"``0x030a00f0``."
+msgstr ""
+"Таким чином, ``3.4.1a2`` є шістнадцятковою версією ``0x030401a2``, а "
+"``3.10.0`` є шістнадцятковою версією ``0x030a00f0``."
+
+msgid "All the given macros are defined in :source:`Include/patchlevel.h`."
+msgstr "Усі вказані макроси визначено в :source:`Include/patchlevel.h`."

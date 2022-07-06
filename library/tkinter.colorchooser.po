@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.11\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-29 17:18+0300\n"
+"PO-Revision-Date: 2022-07-05 15:38+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`tkinter.colorchooser` --- Color choosing dialog"
+msgstr ":mod:`tkinter.colorchooser` --- Діалогове вікно вибору кольору"
+
+msgid "**Source code:** :source:`Lib/tkinter/colorchooser.py`"
+msgstr "**Вихідний код:** :source:`Lib/tkinter/colorchooser.py`"
+
+msgid ""
+"The :mod:`tkinter.colorchooser` module provides the :class:`Chooser` class "
+"as an interface to the native color picker dialog. ``Chooser`` implements a "
+"modal color choosing dialog window. The ``Chooser`` class inherits from the :"
+"class:`~tkinter.commondialog.Dialog` class."
+msgstr ""
+"Модуль :mod:`tkinter.colorchooser` надає клас :class:`Chooser` як інтерфейс "
+"до рідного діалогового вікна вибору кольорів. ``Chooser`` реалізує модальне "
+"діалогове вікно вибору кольору. Клас ``Chooser`` успадковує клас :class:"
+"`~tkinter.commondialog.Dialog`."
+
+msgid ""
+"Create a color choosing dialog. A call to this method will show the window, "
+"wait for the user to make a selection, and return the selected color (or "
+"``None``) to the caller."
+msgstr ""
+"Створіть діалогове вікно вибору кольору. Виклик цього методу покаже вікно, "
+"зачекає, доки користувач зробить вибір, і поверне вибраний колір (або "
+"``None``) абоненту."
+
+msgid "Module :mod:`tkinter.commondialog`"
+msgstr "Модуль :mod:`tkinter.commondialog`"
+
+msgid "Tkinter standard dialog module"
+msgstr "Стандартний діалоговий модуль Tkinter"

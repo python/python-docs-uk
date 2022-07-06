@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.11\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-29 17:18+0300\n"
+"PO-Revision-Date: 2022-07-05 15:39+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`tomllib` --- Parse TOML files"
+msgstr ":mod:`tomllib` --- Аналіз файлів TOML"
+
+msgid "**Source code:** :source:`Lib/tomllib`"
+msgstr "**Вихідний код:** :source:`Lib/tomllib`"
+
+msgid ""
+"This module provides an interface for parsing TOML (Tom's Obvious Minimal "
+"Language, `https://toml.io <https://toml.io/en/>`_). This module does not "
+"support writing TOML."
+msgstr ""
+"Цей модуль надає інтерфейс для синтаксичного аналізу TOML (мови Tom's "
+"Obvious Minimal Language, `https://toml.io <https://toml.io/en/>`_). Цей "
+"модуль не підтримує запис TOML."
+
+msgid ""
+"The `Tomli-W package <https://pypi.org/project/tomli-w/>`__ is a TOML writer "
+"that can be used in conjunction with this module, providing a write API "
+"familiar to users of the standard library :mod:`marshal` and :mod:`pickle` "
+"modules."
+msgstr ""
+"`Пакет Tomli-W <https://pypi.org/project/tomli-w/>`__ — це записувач TOML, "
+"який можна використовувати в поєднанні з цим модулем, надаючи API запису, "
+"знайомий користувачам модулів стандартної бібліотеки :mod:`marshal` і :mod:"
+"`pickle`."
+
+msgid ""
+"The `TOML Kit package <https://pypi.org/project/tomlkit/>`__ is a style-"
+"preserving TOML library with both read and write capability. It is a "
+"recommended replacement for this module for editing already existing TOML "
+"files."
+msgstr ""
+"`Пакет TOML Kit <https://pypi.org/project/tomlkit/>`__ — це бібліотека TOML "
+"зі збереженням стилю з можливістю читання та запису. Це рекомендована заміна "
+"цього модуля для редагування вже існуючих файлів TOML."
+
+msgid "This module defines the following functions:"
+msgstr "Цей модуль визначає такі функції:"
+
+msgid ""
+"Read a TOML file. The first argument should be a readable and binary file "
+"object. Return a :class:`dict`. Convert TOML types to Python using this :ref:"
+"`conversion table <toml-to-py-table>`."
+msgstr ""
+"Прочитайте файл TOML. Перший аргумент має бути доступним для читання "
+"двійковим файловим об’єктом. Повертає :class:`dict`. Перетворіть типи TOML "
+"на Python за допомогою цієї :ref:`таблиці перетворення <toml-to-py-table>`."
+
+msgid ""
+"*parse_float* will be called with the string of every TOML float to be "
+"decoded.  By default, this is equivalent to ``float(num_str)``. This can be "
+"used to use another datatype or parser for TOML floats (e.g. :class:`decimal."
+"Decimal`). The callable must not return a :class:`dict` or a :class:`list`, "
+"else a :exc:`ValueError` is raised."
+msgstr ""
+"*parse_float* буде викликано з рядком кожного TOML float для декодування. За "
+"замовчуванням це еквівалентно ``float(num_str)``. Це можна використовувати "
+"для використання іншого типу даних або синтаксичного аналізатора для числа з "
+"плаваючою точкою TOML (наприклад, :class:`decimal.Decimal`). Викликаний не "
+"повинен повертати :class:`dict` або :class:`list`, інакше виникає :exc:"
+"`ValueError`."
+
+msgid "A :exc:`TOMLDecodeError` will be raised on an invalid TOML document."
+msgstr ""
+"Помилка :exc:`TOMLDecodeError` буде викликана в недійсному документі TOML."
+
+msgid ""
+"Load TOML from a :class:`str` object. Return a :class:`dict`. Convert TOML "
+"types to Python using this :ref:`conversion table <toml-to-py-table>`. The "
+"*parse_float* argument has the same meaning as in :func:`load`."
+msgstr ""
+"Завантажте TOML з об’єкта :class:`str`. Повертає :class:`dict`. Перетворіть "
+"типи TOML на Python за допомогою цієї :ref:`таблиці перетворення <toml-to-py-"
+"table>`. Аргумент *parse_float* має те саме значення, що й у :func:`load`."
+
+msgid "The following exceptions are available:"
+msgstr "Доступні такі винятки:"
+
+msgid "Subclass of :exc:`ValueError`."
+msgstr "Підклас :exc:`ValueError`."
+
+msgid "Examples"
+msgstr "Приклади"
+
+msgid "Parsing a TOML file::"
+msgstr "Розбір файлу TOML::"
+
+msgid "Parsing a TOML string::"
+msgstr "Розбір рядка TOML::"
+
+msgid "Conversion Table"
+msgstr "Таблиця перетворення"
+
+msgid "TOML"
+msgstr "TOML"
+
+msgid "Python"
+msgstr "Python"
+
+msgid "table"
+msgstr "стіл"
+
+msgid "dict"
+msgstr "дикт"
+
+msgid "string"
+msgstr "рядок"
+
+msgid "str"
+msgstr "вул"
+
+msgid "integer"
+msgstr "ціле число"
+
+msgid "int"
+msgstr "внутр"
+
+msgid "float"
+msgstr "плавати"
+
+msgid "float (configurable with *parse_float*)"
+msgstr "float (налаштовується за допомогою *parse_float*)"
+
+msgid "boolean"
+msgstr "логічний"
+
+msgid "bool"
+msgstr "bool"
+
+msgid "offset date-time"
+msgstr "зміщення дати-часу"
+
+msgid ""
+"datetime.datetime (``tzinfo`` attribute set to an instance of ``datetime."
+"timezone``)"
+msgstr ""
+"datetime.datetime (атрибут ``tzinfo`` встановлено на екземпляр ``datetime."
+"timezone``)"
+
+msgid "local date-time"
+msgstr "місцева дата-час"
+
+msgid "datetime.datetime (``tzinfo`` attribute set to ``None``)"
+msgstr "datetime.datetime (атрибут ``tzinfo`` має значення ``None``)"
+
+msgid "local date"
+msgstr "місцева дата"
+
+msgid "datetime.date"
+msgstr "датачас.дата"
+
+msgid "local time"
+msgstr "місцевий час"
+
+msgid "datetime.time"
+msgstr "датачас.час"
+
+msgid "array"
+msgstr "масив"
+
+msgid "list"
+msgstr "список"

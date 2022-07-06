@@ -1,0 +1,677 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:07+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`http` --- HTTP modules"
+msgstr ":mod:`http` --- модулі HTTP"
+
+msgid "**Source code:** :source:`Lib/http/__init__.py`"
+msgstr "**Вихідний код:** :source:`Lib/http/__init__.py`"
+
+msgid ""
+":mod:`http` is a package that collects several modules for working with the "
+"HyperText Transfer Protocol:"
+msgstr ""
+":mod:`http` — пакет, який збирає кілька модулів для роботи з протоколом "
+"передачі гіпертексту:"
+
+msgid ""
+":mod:`http.client` is a low-level HTTP protocol client; for high-level URL "
+"opening use :mod:`urllib.request`"
+msgstr ""
+":mod:`http.client` є низькорівневим клієнтом протоколу HTTP; для відкриття "
+"URL високого рівня використовуйте :mod:`urllib.request`"
+
+msgid ""
+":mod:`http.server` contains basic HTTP server classes based on :mod:"
+"`socketserver`"
+msgstr ""
+":mod:`http.server` містить основні класи HTTP-серверів на основі :mod:"
+"`socketserver`"
+
+msgid ""
+":mod:`http.cookies` has utilities for implementing state management with "
+"cookies"
+msgstr ""
+":mod:`http.cookies` має утиліти для здійснення управління станом за "
+"допомогою файлів cookie"
+
+msgid ":mod:`http.cookiejar` provides persistence of cookies"
+msgstr ":mod:`http.cookiejar` забезпечує збереження файлів cookie"
+
+msgid ""
+":mod:`http` is also a module that defines a number of HTTP status codes and "
+"associated messages through the :class:`http.HTTPStatus` enum:"
+msgstr ""
+
+msgid ""
+"A subclass of :class:`enum.IntEnum` that defines a set of HTTP status codes, "
+"reason phrases and long descriptions written in English."
+msgstr ""
+"Підклас :class:`enum.IntEnum`, який визначає набір кодів стану HTTP, фраз "
+"причин і довгих описів, написаних англійською мовою."
+
+msgid "Usage::"
+msgstr "Використання::"
+
+msgid "HTTP status codes"
+msgstr "Коди стану HTTP"
+
+msgid ""
+"Supported, `IANA-registered <https://www.iana.org/assignments/http-status-"
+"codes/http-status-codes.xhtml>`_ status codes available in :class:`http."
+"HTTPStatus` are:"
+msgstr ""
+
+msgid "Code"
+msgstr "Код"
+
+msgid "Enum Name"
+msgstr "Назва переліку"
+
+msgid "Details"
+msgstr "Подробиці"
+
+msgid "``100``"
+msgstr "``100``"
+
+msgid "``CONTINUE``"
+msgstr "`` ПРОДОВЖИТИ``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.2.1"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.2.1"
+
+msgid "``101``"
+msgstr "``101``"
+
+msgid "``SWITCHING_PROTOCOLS``"
+msgstr "``SWITCHING_PROTOCOLS``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.2.2"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.2.2"
+
+msgid "``102``"
+msgstr "``102``"
+
+msgid "``PROCESSING``"
+msgstr "``ОБРОБКА``"
+
+msgid "WebDAV :rfc:`2518`, Section 10.1"
+msgstr "WebDAV :rfc:`2518`, Розділ 10.1"
+
+msgid "``103``"
+msgstr "``103``"
+
+msgid "``EARLY_HINTS``"
+msgstr "``EARLY_HINTS``"
+
+msgid "An HTTP Status Code for Indicating Hints :rfc:`8297`"
+msgstr "Код статусу HTTP для вказівки підказок :rfc:`8297`"
+
+msgid "``200``"
+msgstr "``200``"
+
+msgid "``OK``"
+msgstr "``ОК``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.3.1"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.3.1"
+
+msgid "``201``"
+msgstr "``201``"
+
+msgid "``CREATED``"
+msgstr "``СТВОРЕНО``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.3.2"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.3.2"
+
+msgid "``202``"
+msgstr "``202``"
+
+msgid "``ACCEPTED``"
+msgstr "`` ПРИЙНЯТО``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.3.3"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.3.3"
+
+msgid "``203``"
+msgstr "``203``"
+
+msgid "``NON_AUTHORITATIVE_INFORMATION``"
+msgstr "``НЕ_АВТОРИТАТИВНА_ІНФОРМАЦІЯ``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.3.4"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.3.4"
+
+msgid "``204``"
+msgstr "``204``"
+
+msgid "``NO_CONTENT``"
+msgstr "``БЕЗ_ВМІСТУ``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.3.5"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.3.5"
+
+msgid "``205``"
+msgstr "``205``"
+
+msgid "``RESET_CONTENT``"
+msgstr "``RESET_CONTENT``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.3.6"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.3.6"
+
+msgid "``206``"
+msgstr "``206``"
+
+msgid "``PARTIAL_CONTENT``"
+msgstr "``PARTIAL_CONTENT``"
+
+msgid "HTTP/1.1 :rfc:`7233`, Section 4.1"
+msgstr "HTTP/1.1 :rfc:`7233`, Розділ 4.1"
+
+msgid "``207``"
+msgstr "``207``"
+
+msgid "``MULTI_STATUS``"
+msgstr "``МУЛЬТИ_СТАТУС``"
+
+msgid "WebDAV :rfc:`4918`, Section 11.1"
+msgstr "WebDAV :rfc:`4918`, Розділ 11.1"
+
+msgid "``208``"
+msgstr "``208``"
+
+msgid "``ALREADY_REPORTED``"
+msgstr "``ВЖЕ_ПОВІДОМЛЕНО``"
+
+msgid "WebDAV Binding Extensions :rfc:`5842`, Section 7.1 (Experimental)"
+msgstr ""
+"Розширення зв’язування WebDAV :rfc:`5842`, розділ 7.1 (експериментальний)"
+
+msgid "``226``"
+msgstr "``226``"
+
+msgid "``IM_USED``"
+msgstr "``IM_USED``"
+
+msgid "Delta Encoding in HTTP :rfc:`3229`, Section 10.4.1"
+msgstr "Дельта-кодування в HTTP :rfc:`3229`, Розділ 10.4.1"
+
+msgid "``300``"
+msgstr "``300``"
+
+msgid "``MULTIPLE_CHOICES``"
+msgstr "``MULTIPLE_CHOICES``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.4.1"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.4.1"
+
+msgid "``301``"
+msgstr "``301``"
+
+msgid "``MOVED_PERMANENTLY``"
+msgstr "``ПЕРЕМІЩЕНО_ПОСТІЙНО``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.4.2"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.4.2"
+
+msgid "``302``"
+msgstr "``302``"
+
+msgid "``FOUND``"
+msgstr "``ЗНАЙДЕНО``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.4.3"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.4.3"
+
+msgid "``303``"
+msgstr "``303``"
+
+msgid "``SEE_OTHER``"
+msgstr "``SEE_OTHER``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.4.4"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.4.4"
+
+msgid "``304``"
+msgstr "``304``"
+
+msgid "``NOT_MODIFIED``"
+msgstr "``NOT_MODIFIED``"
+
+msgid "HTTP/1.1 :rfc:`7232`, Section 4.1"
+msgstr "HTTP/1.1 :rfc:`7232`, Розділ 4.1"
+
+msgid "``305``"
+msgstr "``305``"
+
+msgid "``USE_PROXY``"
+msgstr "``USE_PROXY``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.4.5"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.4.5"
+
+msgid "``307``"
+msgstr "``307``"
+
+msgid "``TEMPORARY_REDIRECT``"
+msgstr "``TEMPORARY_REDIRECT``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.4.7"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.4.7"
+
+msgid "``308``"
+msgstr "``308``"
+
+msgid "``PERMANENT_REDIRECT``"
+msgstr "``ПОСТІЙНЕ_ПЕРЕСПРАВЛЕННЯ``"
+
+msgid "Permanent Redirect :rfc:`7238`, Section 3 (Experimental)"
+msgstr "Постійне перенаправлення :rfc:`7238`, розділ 3 (експериментальний)"
+
+msgid "``400``"
+msgstr "``400``"
+
+msgid "``BAD_REQUEST``"
+msgstr "``BAD_REQUEST``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.1"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.1"
+
+msgid "``401``"
+msgstr "``401``"
+
+msgid "``UNAUTHORIZED``"
+msgstr "``НЕАВТОРИЗОВАНО``"
+
+msgid "HTTP/1.1 Authentication :rfc:`7235`, Section 3.1"
+msgstr "Автентифікація HTTP/1.1 :rfc:`7235`, Розділ 3.1"
+
+msgid "``402``"
+msgstr "``402``"
+
+msgid "``PAYMENT_REQUIRED``"
+msgstr "``PAYMENT_REQUIRED``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.2"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.2"
+
+msgid "``403``"
+msgstr "``403``"
+
+msgid "``FORBIDDEN``"
+msgstr "``ЗАБОРОНЕНО``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.3"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.3"
+
+msgid "``404``"
+msgstr "``404``"
+
+msgid "``NOT_FOUND``"
+msgstr "``НЕ_ЗНАЙДЕНО``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.4"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.4"
+
+msgid "``405``"
+msgstr "``405``"
+
+msgid "``METHOD_NOT_ALLOWED``"
+msgstr "``METHOD_NOT_ALLOWED``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.5"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.5"
+
+msgid "``406``"
+msgstr "``406``"
+
+msgid "``NOT_ACCEPTABLE``"
+msgstr "``NOT_ACCEPTABLE``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.6"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.6"
+
+msgid "``407``"
+msgstr "``407``"
+
+msgid "``PROXY_AUTHENTICATION_REQUIRED``"
+msgstr "``PROXY_AUTHENTICATION_REQUIRED``"
+
+msgid "HTTP/1.1 Authentication :rfc:`7235`, Section 3.2"
+msgstr "Автентифікація HTTP/1.1 :rfc:`7235`, Розділ 3.2"
+
+msgid "``408``"
+msgstr "``408``"
+
+msgid "``REQUEST_TIMEOUT``"
+msgstr "``REQUEST_TIMEOUT``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.7"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.7"
+
+msgid "``409``"
+msgstr "``409``"
+
+msgid "``CONFLICT``"
+msgstr "``КОНФЛІКТ``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.8"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.8"
+
+msgid "``410``"
+msgstr "``410``"
+
+msgid "``GONE``"
+msgstr "``ПІШЕЛ``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.9"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.9"
+
+msgid "``411``"
+msgstr "``411``"
+
+msgid "``LENGTH_REQUIRED``"
+msgstr "``LENGTH_REQUIRED``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.10"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.10"
+
+msgid "``412``"
+msgstr "``412``"
+
+msgid "``PRECONDITION_FAILED``"
+msgstr "``PRECONDITION_FAILED``"
+
+msgid "HTTP/1.1 :rfc:`7232`, Section 4.2"
+msgstr "HTTP/1.1 :rfc:`7232`, Розділ 4.2"
+
+msgid "``413``"
+msgstr "``413``"
+
+msgid "``REQUEST_ENTITY_TOO_LARGE``"
+msgstr "``REQUEST_ENTITY_TOO_LARGE``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.11"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.11"
+
+msgid "``414``"
+msgstr "``414``"
+
+msgid "``REQUEST_URI_TOO_LONG``"
+msgstr "``REQUEST_URI_TOO_LONG``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.12"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.12"
+
+msgid "``415``"
+msgstr "``415``"
+
+msgid "``UNSUPPORTED_MEDIA_TYPE``"
+msgstr "``UNSUPPORTED_MEDIA_TYPE``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.13"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.13"
+
+msgid "``416``"
+msgstr "``416``"
+
+msgid "``REQUESTED_RANGE_NOT_SATISFIABLE``"
+msgstr "``REQUESTED_RANGE_NOT_SATISFIABLE``"
+
+msgid "HTTP/1.1 Range Requests :rfc:`7233`, Section 4.4"
+msgstr "Запити діапазону HTTP/1.1 :rfc:`7233`, Розділ 4.4"
+
+msgid "``417``"
+msgstr "``417``"
+
+msgid "``EXPECTATION_FAILED``"
+msgstr "``EXPECTATION_FAILED``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.14"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.14"
+
+msgid "``418``"
+msgstr "``418``"
+
+msgid "``IM_A_TEAPOT``"
+msgstr "``Я_ЧАЙНИК``"
+
+msgid "HTCPCP/1.0 :rfc:`2324`, Section 2.3.2"
+msgstr "HTTPS/1.0 :rfc:`2324`, Розділ 2.3.2"
+
+msgid "``421``"
+msgstr "``421``"
+
+msgid "``MISDIRECTED_REQUEST``"
+msgstr "``MISDIRECTED_REQUEST``"
+
+msgid "HTTP/2 :rfc:`7540`, Section 9.1.2"
+msgstr "HTTP/2 :rfc:`7540`, Розділ 9.1.2"
+
+msgid "``422``"
+msgstr "``422``"
+
+msgid "``UNPROCESSABLE_ENTITY``"
+msgstr "``UNPROCESSABLE_ENTITY``"
+
+msgid "WebDAV :rfc:`4918`, Section 11.2"
+msgstr "WebDAV :rfc:`4918`, Розділ 11.2"
+
+msgid "``423``"
+msgstr "``423``"
+
+msgid "``LOCKED``"
+msgstr "``ЗАБЛОКУВАНО``"
+
+msgid "WebDAV :rfc:`4918`, Section 11.3"
+msgstr "WebDAV :rfc:`4918`, Розділ 11.3"
+
+msgid "``424``"
+msgstr "``424``"
+
+msgid "``FAILED_DEPENDENCY``"
+msgstr "``FAILED_DEPENDENCY``"
+
+msgid "WebDAV :rfc:`4918`, Section 11.4"
+msgstr "WebDAV :rfc:`4918`, Розділ 11.4"
+
+msgid "``425``"
+msgstr "``425``"
+
+msgid "``TOO_EARLY``"
+msgstr "``НАДАНТО_РАНО``"
+
+msgid "Using Early Data in HTTP :rfc:`8470`"
+msgstr "Використання ранніх даних у HTTP :rfc:`8470`"
+
+msgid "``426``"
+msgstr "``426``"
+
+msgid "``UPGRADE_REQUIRED``"
+msgstr "``UPGRADE_REQUIRED``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.5.15"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.5.15"
+
+msgid "``428``"
+msgstr "``428``"
+
+msgid "``PRECONDITION_REQUIRED``"
+msgstr "``PRECONDITION_REQUIRED``"
+
+msgid "Additional HTTP Status Codes :rfc:`6585`"
+msgstr "Додаткові коди стану HTTP :rfc:`6585`"
+
+msgid "``429``"
+msgstr "``429``"
+
+msgid "``TOO_MANY_REQUESTS``"
+msgstr "``TOO_MANY_REQUESTS``"
+
+msgid "``431``"
+msgstr "``431``"
+
+msgid "``REQUEST_HEADER_FIELDS_TOO_LARGE``"
+msgstr "``REQUEST_HEADER_FIELDS_TOO_LARGE``"
+
+msgid "``451``"
+msgstr "``451``"
+
+msgid "``UNAVAILABLE_FOR_LEGAL_REASONS``"
+msgstr "``НЕДОСТУПНИЙ_З_ЮРИДИЧНИХ_ПРИЧИН``"
+
+msgid "An HTTP Status Code to Report Legal Obstacles :rfc:`7725`"
+msgstr "Код статусу HTTP для повідомлення про юридичні перешкоди :rfc:`7725`"
+
+msgid "``500``"
+msgstr "``500``"
+
+msgid "``INTERNAL_SERVER_ERROR``"
+msgstr "``INTERNAL_SERVER_ERROR``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.6.1"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.6.1"
+
+msgid "``501``"
+msgstr "``501``"
+
+msgid "``NOT_IMPLEMENTED``"
+msgstr "``NOT_IMPLEMENTED``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.6.2"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.6.2"
+
+msgid "``502``"
+msgstr "``502``"
+
+msgid "``BAD_GATEWAY``"
+msgstr "``BAD_GATEWAY``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.6.3"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.6.3"
+
+msgid "``503``"
+msgstr "``503``"
+
+msgid "``SERVICE_UNAVAILABLE``"
+msgstr "``СЛУЖБА_НЕДОСТУПНА``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.6.4"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.6.4"
+
+msgid "``504``"
+msgstr "``504``"
+
+msgid "``GATEWAY_TIMEOUT``"
+msgstr "``GATEWAY_TIMEOUT``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.6.5"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.6.5"
+
+msgid "``505``"
+msgstr "``505``"
+
+msgid "``HTTP_VERSION_NOT_SUPPORTED``"
+msgstr "``HTTP_VERSION_NOT_SUPPORTED``"
+
+msgid "HTTP/1.1 :rfc:`7231`, Section 6.6.6"
+msgstr "HTTP/1.1 :rfc:`7231`, Розділ 6.6.6"
+
+msgid "``506``"
+msgstr "``506``"
+
+msgid "``VARIANT_ALSO_NEGOTIATES``"
+msgstr "``VARIANT_ALSO_NEGOTIATES``"
+
+msgid ""
+"Transparent Content Negotiation in HTTP :rfc:`2295`, Section 8.1 "
+"(Experimental)"
+msgstr ""
+"Узгодження прозорого вмісту в HTTP :rfc:`2295`, розділ 8.1 "
+"(експериментальний)"
+
+msgid "``507``"
+msgstr "``507``"
+
+msgid "``INSUFFICIENT_STORAGE``"
+msgstr "``INSUFFICIENT_STORAGE``"
+
+msgid "WebDAV :rfc:`4918`, Section 11.5"
+msgstr "WebDAV :rfc:`4918`, Розділ 11.5"
+
+msgid "``508``"
+msgstr "``508``"
+
+msgid "``LOOP_DETECTED``"
+msgstr "``LOOP_DETECTED``"
+
+msgid "WebDAV Binding Extensions :rfc:`5842`, Section 7.2 (Experimental)"
+msgstr ""
+"Розширення прив’язки WebDAV :rfc:`5842`, розділ 7.2 (експериментальний)"
+
+msgid "``510``"
+msgstr "``510``"
+
+msgid "``NOT_EXTENDED``"
+msgstr "``NOT_EXTENDED``"
+
+msgid "An HTTP Extension Framework :rfc:`2774`, Section 7 (Experimental)"
+msgstr "Фреймворк розширення HTTP :rfc:`2774`, Розділ 7 (Експериментальний)"
+
+msgid "``511``"
+msgstr "``511``"
+
+msgid "``NETWORK_AUTHENTICATION_REQUIRED``"
+msgstr "``NETWORK_AUTHENTICATION_REQUIRED``"
+
+msgid "Additional HTTP Status Codes :rfc:`6585`, Section 6"
+msgstr "Додаткові коди стану HTTP :rfc:`6585`, Розділ 6"
+
+msgid ""
+"In order to preserve backwards compatibility, enum values are also present "
+"in the :mod:`http.client` module in the form of constants. The enum name is "
+"equal to the constant name (i.e. ``http.HTTPStatus.OK`` is also available as "
+"``http.client.OK``)."
+msgstr ""
+"Щоб зберегти зворотну сумісність, значення enum також присутні в модулі :mod:"
+"`http.client` у формі констант. Назва переліку дорівнює імені константи "
+"(тобто ``http.HTTPStatus.OK`` також доступний як ``http.client.OK``)."
+
+msgid "Added ``421 MISDIRECTED_REQUEST`` status code."
+msgstr "Додано код статусу ``421 MISDIRECTED_REQUEST``."
+
+msgid "Added ``451 UNAVAILABLE_FOR_LEGAL_REASONS`` status code."
+msgstr "Додано код статусу ``451 UNAVAILABLE_FOR_LEGAL_REASONS``."
+
+msgid ""
+"Added ``103 EARLY_HINTS``, ``418 IM_A_TEAPOT`` and ``425 TOO_EARLY`` status "
+"codes."
+msgstr ""
+"Додано коди статусу ``103 EARLY_HINTS``, ``418 IM_A_TEAPOT`` і ``425 "
+"TOO_EARLY``."

@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 00:48+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Floating Point Objects"
+msgstr "Об'єкти з плаваючою комою"
+
+msgid ""
+"This subtype of :c:type:`PyObject` represents a Python floating point object."
+msgstr ""
+"Цей підтип :c:type:`PyObject` представляє об’єкт з плаваючою комою Python."
+
+msgid ""
+"This instance of :c:type:`PyTypeObject` represents the Python floating point "
+"type.  This is the same object as :class:`float` in the Python layer."
+msgstr ""
+"Цей екземпляр :c:type:`PyTypeObject` представляє тип Python з плаваючою "
+"комою. Це той самий об’єкт, що й :class:`float` на рівні Python."
+
+msgid ""
+"Return true if its argument is a :c:type:`PyFloatObject` or a subtype of :c:"
+"type:`PyFloatObject`.  This function always succeeds."
+msgstr ""
+"Повертає true, якщо його аргумент є :c:type:`PyFloatObject` або підтипом :c:"
+"type:`PyFloatObject`. Ця функція завжди успішна."
+
+msgid ""
+"Return true if its argument is a :c:type:`PyFloatObject`, but not a subtype "
+"of :c:type:`PyFloatObject`.  This function always succeeds."
+msgstr ""
+"Повертає true, якщо його аргумент є :c:type:`PyFloatObject`, але не "
+"підтипом :c:type:`PyFloatObject`. Ця функція завжди успішна."
+
+msgid ""
+"Create a :c:type:`PyFloatObject` object based on the string value in *str*, "
+"or ``NULL`` on failure."
+msgstr ""
+"Створіть об’єкт :c:type:`PyFloatObject` на основі рядкового значення в *str* "
+"або ``NULL`` у разі помилки."
+
+msgid ""
+"Create a :c:type:`PyFloatObject` object from *v*, or ``NULL`` on failure."
+msgstr ""
+"Створіть об’єкт :c:type:`PyFloatObject` з *v* або ``NULL`` у разі помилки."
+
+msgid ""
+"Return a C :c:type:`double` representation of the contents of *pyfloat*.  If "
+"*pyfloat* is not a Python floating point object but has a :meth:`__float__` "
+"method, this method will first be called to convert *pyfloat* into a float. "
+"If ``__float__()`` is not defined then it falls back to :meth:`__index__`. "
+"This method returns ``-1.0`` upon failure, so one should call :c:func:"
+"`PyErr_Occurred` to check for errors."
+msgstr ""
+"Повертає C :c:type:`double` представлення вмісту *pyfloat*. Якщо *pyfloat* "
+"не є об’єктом з плаваючою комою Python, але має метод :meth:`__float__`, цей "
+"метод спочатку буде викликаний для перетворення *pyfloat* на float. Якщо "
+"``__float__()`` не визначено, він повертається до :meth:`__index__`. Цей "
+"метод повертає ``-1.0`` у разі помилки, тому слід викликати :c:func:"
+"`PyErr_Occurred`, щоб перевірити наявність помилок."
+
+msgid "Use :meth:`__index__` if available."
+msgstr "Використовуйте :meth:`__index__`, якщо доступний."
+
+msgid ""
+"Return a C :c:type:`double` representation of the contents of *pyfloat*, but "
+"without error checking."
+msgstr ""
+"Повертає C :c:type:`double` представлення вмісту *pyfloat*, але без "
+"перевірки помилок."
+
+msgid ""
+"Return a structseq instance which contains information about the precision, "
+"minimum and maximum values of a float. It's a thin wrapper around the header "
+"file :file:`float.h`."
+msgstr ""
+"Повертає екземпляр structseq, який містить інформацію про точність, "
+"мінімальне та максимальне значення float. Це тонка обгортка навколо файлу "
+"заголовка :file:`float.h`."
+
+msgid ""
+"Return the maximum representable finite float *DBL_MAX* as C :c:type:"
+"`double`."
+msgstr ""
+"Повертає максимальний кінцевий float *DBL_MAX*, який можна представити, як "
+"C :c:type:`double`."
+
+msgid ""
+"Return the minimum normalized positive float *DBL_MIN* as C :c:type:`double`."
+msgstr ""
+"Повертає мінімальне нормалізоване позитивне значення *DBL_MIN* як C :c:type:"
+"`double`."

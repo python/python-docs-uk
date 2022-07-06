@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-29 13:04+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "What's New in Python"
+msgstr "Що нового в Python"
+
+msgid ""
+"The \"What's New in Python\" series of essays takes tours through the most "
+"important changes between major Python versions.  They are a \"must read\" "
+"for anyone wishing to stay up-to-date after a new release."
+msgstr ""
+"У серії есе \"Що нового в Python\" розповідається про найважливіші зміни між "
+"основними версіями Python. Вони є обов’язковими до прочитання для всіх, хто "
+"бажає бути в курсі подій після нового випуску."
+
+msgid ""
+"The \"Changelog\" is an HTML version of the `file built <https://pypi.org/"
+"project/blurb>`_ from the contents of the :source:`Misc/NEWS.d` directory "
+"tree, which contains *all* nontrivial changes to Python for the current "
+"version."
+msgstr ""
+"\"Журнал змін\" — це HTML-версія `файлу, створеного <https://pypi.org/"
+"project/blurb>`_ із вмісту дерева каталогів :source:`Misc/NEWS.d`, який "
+"містить *усі* нетривіальні зміни Python для поточної версії."

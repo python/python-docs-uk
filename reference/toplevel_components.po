@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:49+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Top-level components"
+msgstr "Компоненти верхнього рівня"
+
+msgid ""
+"The Python interpreter can get its input from a number of sources: from a "
+"script passed to it as standard input or as program argument, typed in "
+"interactively, from a module source file, etc.  This chapter gives the "
+"syntax used in these cases."
+msgstr ""
+"Інтерпретатор Python може отримувати вхідні дані з кількох джерел: зі "
+"сценарію, переданого йому як стандартний ввід, або як аргумент програми, "
+"введений інтерактивно, з вихідного файлу модуля тощо. У цій главі наведено "
+"синтаксис, який використовується в цих випадках."
+
+msgid "Complete Python programs"
+msgstr "Повні програми на Python"
+
+msgid ""
+"While a language specification need not prescribe how the language "
+"interpreter is invoked, it is useful to have a notion of a complete Python "
+"program.  A complete Python program is executed in a minimally initialized "
+"environment: all built-in and standard modules are available, but none have "
+"been initialized, except for :mod:`sys` (various system services), :mod:"
+"`builtins` (built-in functions, exceptions and ``None``) and :mod:"
+"`__main__`.  The latter is used to provide the local and global namespace "
+"for execution of the complete program."
+msgstr ""
+"Хоча в специфікації мови не обов’язково вказувати, як викликається "
+"інтерпретатор мови, корисно мати уявлення про повну програму Python. Повна "
+"програма Python виконується в мінімально ініціалізованому середовищі: усі "
+"вбудовані та стандартні модулі доступні, але жоден не ініціалізований, за "
+"винятком :mod:`sys` (різні системні служби), :mod:`builtins` (вбудований -in "
+"функції, винятки та ``None``) і :mod:`__main__`. Останній використовується "
+"для надання локального та глобального простору імен для виконання повної "
+"програми."
+
+msgid ""
+"The syntax for a complete Python program is that for file input, described "
+"in the next section."
+msgstr ""
+"Синтаксис повної програми на Python такий же, як і для введення файлів, "
+"описаний у наступному розділі."
+
+msgid ""
+"The interpreter may also be invoked in interactive mode; in this case, it "
+"does not read and execute a complete program but reads and executes one "
+"statement (possibly compound) at a time.  The initial environment is "
+"identical to that of a complete program; each statement is executed in the "
+"namespace of :mod:`__main__`."
+msgstr ""
+"Інтерпретатор також може бути викликаний в інтерактивному режимі; в цьому "
+"випадку він не читає і не виконує повну програму, а читає і виконує один "
+"оператор (можливо, складений) за раз. Початкове середовище ідентично повній "
+"програмі; кожен оператор виконується в просторі імен :mod:`__main__`."
+
+msgid ""
+"A complete program can be passed to the interpreter in three forms: with "
+"the :option:`-c` *string* command line option, as a file passed as the first "
+"command line argument, or as standard input.  If the file or standard input "
+"is a tty device, the interpreter enters interactive mode; otherwise, it "
+"executes the file as a complete program."
+msgstr ""
+"Повну програму можна передати інтерпретатору в трьох формах: за допомогою "
+"параметра командного рядка :option:`-c` *string*, як файл, переданий як "
+"перший аргумент командного рядка, або як стандартний ввід. Якщо файл або "
+"стандартний вхід є пристроєм tty, інтерпретатор переходить в інтерактивний "
+"режим; інакше він виконує файл як повну програму."
+
+msgid "File input"
+msgstr "Введення файлу"
+
+msgid "All input read from non-interactive files has the same form:"
+msgstr ""
+"Усі вхідні дані, зчитані з неінтерактивних файлів, мають однакову форму:"
+
+msgid "This syntax is used in the following situations:"
+msgstr "Цей синтаксис використовується в таких ситуаціях:"
+
+msgid "when parsing a complete Python program (from a file or from a string);"
+msgstr "при розборі повної програми Python (з файлу або з рядка);"
+
+msgid "when parsing a module;"
+msgstr "при розборі модуля;"
+
+msgid "when parsing a string passed to the :func:`exec` function;"
+msgstr "під час аналізу рядка, переданого функції :func:`exec`;"
+
+msgid "Interactive input"
+msgstr "Інтерактивне введення"
+
+msgid "Input in interactive mode is parsed using the following grammar:"
+msgstr "Введення в інтерактивному режимі аналізується за такою граматикою:"
+
+msgid ""
+"Note that a (top-level) compound statement must be followed by a blank line "
+"in interactive mode; this is needed to help the parser detect the end of the "
+"input."
+msgstr ""
+"Зауважте, що в інтерактивному режимі після складеного оператора (вищого "
+"рівня) має йти порожній рядок; це потрібно, щоб допомогти аналізатору "
+"визначити кінець введення."
+
+msgid "Expression input"
+msgstr "Введення виразу"
+
+msgid ""
+":func:`eval` is used for expression input.  It ignores leading whitespace. "
+"The string argument to :func:`eval` must have the following form:"
+msgstr ""
+":func:`eval` використовується для введення виразу. Він ігнорує початкові "
+"пробіли. Рядковий аргумент :func:`eval` повинен мати такий вигляд:"

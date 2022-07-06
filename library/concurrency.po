@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 00:57+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Concurrent Execution"
+msgstr "Паралельне виконання"
+
+msgid ""
+"The modules described in this chapter provide support for concurrent "
+"execution of code. The appropriate choice of tool will depend on the task to "
+"be executed (CPU bound vs IO bound) and preferred style of development "
+"(event driven cooperative multitasking vs preemptive multitasking). Here's "
+"an overview:"
+msgstr ""
+"Модулі, описані в цьому розділі, забезпечують підтримку одночасного "
+"виконання коду. Відповідний вибір інструменту залежатиме від завдання, яке "
+"потрібно виконати (прив’язка до процесора чи прив’язка до вводу-виводу) і "
+"бажаного стилю розробки (кооперативна багатозадачність, керована подіями, "
+"проти випереджальної багатозадачності). Ось огляд:"
+
+msgid "The following are support modules for some of the above services:"
+msgstr "Нижче наведено модулі підтримки для деяких із зазначених вище служб:"

@@ -1,0 +1,629 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 00:56+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`collections.abc` --- Abstract Base Classes for Containers"
+msgstr ":mod:`collections.abc` --- Абстрактні базові класи для контейнерів"
+
+msgid "Formerly, this module was part of the :mod:`collections` module."
+msgstr "Раніше цей модуль був частиною модуля :mod:`collections`."
+
+msgid "**Source code:** :source:`Lib/_collections_abc.py`"
+msgstr "**Вихідний код:** :source:`Lib/_collections_abc.py`"
+
+msgid ""
+"This module provides :term:`abstract base classes <abstract base class>` "
+"that can be used to test whether a class provides a particular interface; "
+"for example, whether it is hashable or whether it is a mapping."
+msgstr ""
+"Цей модуль надає :term:`абстрактні базові класи <abstract base class>`, які "
+"можна використовувати, щоб перевірити, чи надає клас певний інтерфейс; "
+"наприклад, чи є він хешованим, чи це відображення."
+
+msgid ""
+"An :func:`issubclass` or :func:`isinstance` test for an interface works in "
+"one of three ways."
+msgstr ""
+"Тест :func:`issubclass` або :func:`isinstance` для інтерфейсу працює одним "
+"із трьох способів."
+
+msgid ""
+"1) A newly written class can inherit directly from one of the abstract base "
+"classes.  The class must supply the required abstract methods.  The "
+"remaining mixin methods come from inheritance and can be overridden if "
+"desired.  Other methods may be added as needed:"
+msgstr ""
+"1) Щойно написаний клас може успадкувати безпосередньо від одного з "
+"абстрактних базових класів. Клас повинен надавати необхідні абстрактні "
+"методи. Решта методів mixin походять із успадкування та можуть бути замінені "
+"за бажанням. За потреби можна додати інші методи:"
+
+msgid ""
+"2) Existing classes and built-in classes can be registered as \"virtual "
+"subclasses\" of the ABCs.  Those classes should define the full API "
+"including all of the abstract methods and all of the mixin methods. This "
+"lets users rely on :func:`issubclass` or :func:`isinstance` tests to "
+"determine whether the full interface is supported.  The exception to this "
+"rule is for methods that are automatically inferred from the rest of the API:"
+msgstr ""
+"2) Існуючі класи та вбудовані класи можуть бути зареєстровані як "
+"\"віртуальні підкласи\" ABC. Ці класи повинні визначати повний API, "
+"включаючи всі абстрактні методи та всі методи mixin. Це дозволяє "
+"користувачам покладатися на тести :func:`issubclass` або :func:`isinstance`, "
+"щоб визначити, чи підтримується повний інтерфейс. Винятком із цього правила "
+"є методи, які автоматично виводяться з решти API:"
+
+msgid ""
+"In this example, class :class:`D` does not need to define ``__contains__``, "
+"``__iter__``, and ``__reversed__`` because the :ref:`in-operator "
+"<comparisons>`, the :term:`iteration <iterable>` logic, and the :func:"
+"`reversed` function automatically fall back to using ``__getitem__`` and "
+"``__len__``."
+msgstr ""
+"У цьому прикладі класу :class:`D` не потрібно визначати ``__contains__``, "
+"``__iter__`` і ``__reversed__``, оскільки :ref:`внутрішній оператор "
+"<comparisons>`, :term:`ітерація <iterable>` логіка, а функція :func:"
+"`reversed` автоматично повертається до використання ``__getitem__`` і "
+"``__len__``."
+
+msgid ""
+"3) Some simple interfaces are directly recognizable by the presence of the "
+"required methods (unless those methods have been set to :const:`None`):"
+msgstr ""
+"3) Деякі прості інтерфейси можна безпосередньо розпізнати за наявністю "
+"необхідних методів (якщо для цих методів не встановлено значення :const:"
+"`None`):"
+
+msgid ""
+"Complex interfaces do not support this last technique because an interface "
+"is more than just the presence of method names.  Interfaces specify "
+"semantics and relationships between methods that cannot be inferred solely "
+"from the presence of specific method names.  For example, knowing that a "
+"class supplies ``__getitem__``, ``__len__``, and ``__iter__`` is "
+"insufficient for distinguishing a :class:`Sequence` from a :class:`Mapping`."
+msgstr ""
+"Складні інтерфейси не підтримують цю останню техніку, оскільки інтерфейс — "
+"це більше, ніж просто наявність назв методів. Інтерфейси визначають "
+"семантику та зв’язки між методами, які не можуть бути виведені лише з "
+"наявності конкретних імен методів. Наприклад, відомості про те, що клас "
+"надає ``__getitem__``, ``__len__`` і ``__iter__``, недостатньо для того, щоб "
+"відрізнити :class:`Sequence` від :class:`Mapping`."
+
+msgid ""
+"These abstract classes now support ``[]``. See :ref:`types-genericalias` "
+"and :pep:`585`."
+msgstr ""
+"Ці абстрактні класи тепер підтримують ``[]``. Див. :ref:`types-genericalias` "
+"і :pep:`585`."
+
+msgid "Collections Abstract Base Classes"
+msgstr "Колекції Абстрактні базові класи"
+
+msgid ""
+"The collections module offers the following :term:`ABCs <abstract base "
+"class>`:"
+msgstr "Модуль колекцій пропонує наступне :term:`ABCs <abstract base class>`:"
+
+msgid "ABC"
+msgstr "ABC"
+
+msgid "Inherits from"
+msgstr "Успадковує від"
+
+msgid "Abstract Methods"
+msgstr "Методи реферату"
+
+msgid "Mixin Methods"
+msgstr "Методи Міксіна"
+
+msgid ":class:`Container` [1]_"
+msgstr ":class:`Container` [1]_"
+
+msgid "``__contains__``"
+msgstr "``__contains__``"
+
+msgid ":class:`Hashable` [1]_"
+msgstr ":class:`Hashable` [1]_"
+
+msgid "``__hash__``"
+msgstr "``__hash__``"
+
+msgid ":class:`Iterable` [1]_ [2]_"
+msgstr ":class:`Iterable` [1]_ [2]_"
+
+msgid "``__iter__``"
+msgstr "``__iter__``"
+
+msgid ":class:`Iterator` [1]_"
+msgstr ":class:`Iterator` [1]_"
+
+msgid ":class:`Iterable`"
+msgstr ":class:`Iterable`"
+
+msgid "``__next__``"
+msgstr "``__next__``"
+
+msgid ":class:`Reversible` [1]_"
+msgstr ":class:`Reversible` [1]_"
+
+msgid "``__reversed__``"
+msgstr "``__reversed__``"
+
+msgid ":class:`Generator`  [1]_"
+msgstr ":class:`Generator` [1]_"
+
+msgid ":class:`Iterator`"
+msgstr ":class:`Iterator`"
+
+msgid "``send``, ``throw``"
+msgstr "``відправити``, ``кинути``"
+
+msgid "``close``, ``__iter__``, ``__next__``"
+msgstr "``закрити``, ``__iter__``, ``__next__``"
+
+msgid ":class:`Sized`  [1]_"
+msgstr ":class:`Sized` [1]_"
+
+msgid "``__len__``"
+msgstr "``__len__``"
+
+msgid ":class:`Callable`  [1]_"
+msgstr ":class:`Callable` [1]_"
+
+msgid "``__call__``"
+msgstr "``__call__``"
+
+msgid ":class:`Collection`  [1]_"
+msgstr ":class:`Collection` [1]_"
+
+msgid ":class:`Sized`, :class:`Iterable`, :class:`Container`"
+msgstr ":class:`Sized`, :class:`Iterable`, :class:`Container`"
+
+msgid "``__contains__``, ``__iter__``, ``__len__``"
+msgstr "``__contains__``, ``__iter__``, ``__len__``"
+
+msgid ":class:`Sequence`"
+msgstr ":class:`Sequence`"
+
+msgid ":class:`Reversible`, :class:`Collection`"
+msgstr ":class:`Reversible`, :class:`Collection`"
+
+msgid "``__getitem__``, ``__len__``"
+msgstr "``__getitem__``, ``__len__``"
+
+msgid ""
+"``__contains__``, ``__iter__``, ``__reversed__``, ``index``, and ``count``"
+msgstr ""
+"``__contains__``, ``__iter__``, ``__reversed__``, ``index`` і ``count``"
+
+msgid ":class:`MutableSequence`"
+msgstr ":class:`MutableSequence`"
+
+msgid ""
+"``__getitem__``, ``__setitem__``, ``__delitem__``, ``__len__``, ``insert``"
+msgstr ""
+"``__getitem__``, ``__setitem__``, ``__delitem__``, ``__len__``, ``вставити``"
+
+msgid ""
+"Inherited :class:`Sequence` methods and ``append``, ``reverse``, ``extend``, "
+"``pop``, ``remove``, and ``__iadd__``"
+msgstr ""
+"Успадковані методи :class:`Sequence` і ``append``, ``reverse``, ``extend``, "
+"``pop``, ``remove`` і ``__iadd__``"
+
+msgid ":class:`ByteString`"
+msgstr ":class:`ByteString`"
+
+msgid "Inherited :class:`Sequence` methods"
+msgstr "Успадковані методи :class:`Sequence`"
+
+msgid ":class:`Set`"
+msgstr ":class:`Set`"
+
+msgid ":class:`Collection`"
+msgstr ":class:`Collection`"
+
+msgid ""
+"``__le__``, ``__lt__``, ``__eq__``, ``__ne__``, ``__gt__``, ``__ge__``, "
+"``__and__``, ``__or__``, ``__sub__``, ``__xor__``, and ``isdisjoint``"
+msgstr ""
+"``__le__``, ``__lt__``, ``__eq__``, ``__ne__``, ``__gt__``, ``__ge__``, "
+"``__and__``, ``__or__``, ``__sub__``, ``__xor__`` і ``isdisjoint``"
+
+msgid ":class:`MutableSet`"
+msgstr ":class:`MutableSet`"
+
+msgid "``__contains__``, ``__iter__``, ``__len__``, ``add``, ``discard``"
+msgstr "``__contains__``, ``__iter__``, ``__len__``, ``add``, ``discard``"
+
+msgid ""
+"Inherited :class:`Set` methods and ``clear``, ``pop``, ``remove``, "
+"``__ior__``, ``__iand__``, ``__ixor__``, and ``__isub__``"
+msgstr ""
+"Успадковані методи :class:`Set` і ``clear``, ``pop``, ``remove``, "
+"``__ior__``, ``__iand__``, ``__ixor__`` та ``__isub__``"
+
+msgid ":class:`Mapping`"
+msgstr ":class:`Mapping`"
+
+msgid "``__getitem__``, ``__iter__``, ``__len__``"
+msgstr "``__getitem__``, ``__iter__``, ``__len__``"
+
+msgid ""
+"``__contains__``, ``keys``, ``items``, ``values``, ``get``, ``__eq__``, and "
+"``__ne__``"
+msgstr ""
+"``__contains__``, ``keys``, ``items``, ``values``, ``get``, ``__eq__`` і "
+"``__ne__``"
+
+msgid ":class:`MutableMapping`"
+msgstr ":class:`MutableMapping`"
+
+msgid ""
+"``__getitem__``, ``__setitem__``, ``__delitem__``, ``__iter__``, ``__len__``"
+msgstr ""
+"``__getitem__``, ``__setitem__``, ``__delitem__``, ``__iter__``, ``__len__``"
+
+msgid ""
+"Inherited :class:`Mapping` methods and ``pop``, ``popitem``, ``clear``, "
+"``update``, and ``setdefault``"
+msgstr ""
+"Успадковані методи :class:`Mapping` і ``pop``, ``popitem``, ``clear``, "
+"``update`` і ``setdefault``"
+
+msgid ":class:`MappingView`"
+msgstr ":class:`MappingView`"
+
+msgid ":class:`Sized`"
+msgstr ":class:`Sized`"
+
+msgid ":class:`ItemsView`"
+msgstr ":class:`ItemsView`"
+
+msgid ":class:`MappingView`, :class:`Set`"
+msgstr ":class:`MappingView`, :class:`Set`"
+
+msgid "``__contains__``, ``__iter__``"
+msgstr "``__contains__``, ``__iter__``"
+
+msgid ":class:`KeysView`"
+msgstr ":class:`KeysView`"
+
+msgid ":class:`ValuesView`"
+msgstr ":class:`ValuesView`"
+
+msgid ":class:`MappingView`, :class:`Collection`"
+msgstr ":class:`MappingView`, :class:`Collection`"
+
+msgid ":class:`Awaitable` [1]_"
+msgstr ":class:`Awaitable` [1]_"
+
+msgid "``__await__``"
+msgstr "``__await__``"
+
+msgid ":class:`Coroutine` [1]_"
+msgstr ":class:`Coroutine` [1]_"
+
+msgid ":class:`Awaitable`"
+msgstr ":class:`Awaitable`"
+
+msgid "``close``"
+msgstr "``закрити``"
+
+msgid ":class:`AsyncIterable` [1]_"
+msgstr ":class:`AsyncIterable` [1]_"
+
+msgid "``__aiter__``"
+msgstr "``__aiter__``"
+
+msgid ":class:`AsyncIterator` [1]_"
+msgstr ":class:`AsyncIterator` [1]_"
+
+msgid ":class:`AsyncIterable`"
+msgstr ":class:`AsyncIterable`"
+
+msgid "``__anext__``"
+msgstr "``__anext__``"
+
+msgid ":class:`AsyncGenerator` [1]_"
+msgstr ":class:`AsyncGenerator` [1]_"
+
+msgid ":class:`AsyncIterator`"
+msgstr ":class:`AsyncIterator`"
+
+msgid "``asend``, ``athrow``"
+msgstr "``asend``, ``athrow``"
+
+msgid "``aclose``, ``__aiter__``, ``__anext__``"
+msgstr "``aclose``, ``__aiter__``, ``__anext__``"
+
+msgid "Footnotes"
+msgstr "Виноски"
+
+msgid ""
+"These ABCs override :meth:`object.__subclasshook__` to support testing an "
+"interface by verifying the required methods are present and have not been "
+"set to :const:`None`.  This only works for simple interfaces.  More complex "
+"interfaces require registration or direct subclassing."
+msgstr ""
+"Ці ABC замінюють :meth:`object.__subclasshook__` для підтримки тестування "
+"інтерфейсу шляхом перевірки наявності необхідних методів і не встановлено "
+"значення :const:`None`. Це працює лише для простих інтерфейсів. Більш "
+"складні інтерфейси вимагають реєстрації або прямого створення підкласів."
+
+msgid ""
+"Checking ``isinstance(obj, Iterable)`` detects classes that are registered "
+"as :class:`Iterable` or that have an :meth:`__iter__` method, but it does "
+"not detect classes that iterate with the :meth:`__getitem__` method.  The "
+"only reliable way to determine whether an object is :term:`iterable` is to "
+"call ``iter(obj)``."
+msgstr ""
+"Перевірка ``isinstance(obj, Iterable)`` виявляє класи, які зареєстровані як :"
+"class:`Iterable` або які мають метод :meth:`__iter__`, але не виявляє класи, "
+"які виконують ітерацію з :meth:`__getitem__` метод. Єдиний надійний спосіб "
+"визначити, чи є об’єкт :term:`iterable`, це викликати ``iter(obj)``."
+
+msgid "Collections Abstract Base Classes -- Detailed Descriptions"
+msgstr "Колекції абстрактних базових класів -- докладні описи"
+
+msgid "ABC for classes that provide the :meth:`__contains__` method."
+msgstr "ABC для класів, які забезпечують метод :meth:`__contains__`."
+
+msgid "ABC for classes that provide the :meth:`__hash__` method."
+msgstr "ABC для класів, які забезпечують метод :meth:`__hash__`."
+
+msgid "ABC for classes that provide the :meth:`__len__` method."
+msgstr "ABC для класів, які забезпечують метод :meth:`__len__`."
+
+msgid "ABC for classes that provide the :meth:`__call__` method."
+msgstr "ABC для класів, які забезпечують метод :meth:`__call__`."
+
+msgid "ABC for classes that provide the :meth:`__iter__` method."
+msgstr "ABC для класів, які забезпечують метод :meth:`__iter__`."
+
+msgid ""
+"Checking ``isinstance(obj, Iterable)`` detects classes that are registered "
+"as :class:`Iterable` or that have an :meth:`__iter__` method, but it does "
+"not detect classes that iterate with the :meth:`__getitem__` method. The "
+"only reliable way to determine whether an object is :term:`iterable` is to "
+"call ``iter(obj)``."
+msgstr ""
+"Перевірка ``isinstance(obj, Iterable)`` виявляє класи, які зареєстровані як :"
+"class:`Iterable` або які мають метод :meth:`__iter__`, але не виявляє класи, "
+"які виконують ітерацію з :meth:`__getitem__` метод. Єдиний надійний спосіб "
+"визначити, чи є об’єкт :term:`iterable`, це викликати ``iter(obj)``."
+
+msgid "ABC for sized iterable container classes."
+msgstr "ABC для класів ітерованих контейнерів розміру."
+
+msgid ""
+"ABC for classes that provide the :meth:`~iterator.__iter__` and :meth:"
+"`~iterator.__next__` methods.  See also the definition of :term:`iterator`."
+msgstr ""
+"ABC для класів, які забезпечують методи :meth:`~iterator.__iter__` і :meth:"
+"`~iterator.__next__`. Дивіться також визначення :term:`iterator`."
+
+msgid ""
+"ABC for iterable classes that also provide the :meth:`__reversed__` method."
+msgstr ""
+"ABC для ітерованих класів, які також забезпечують метод :meth:`__reversed__`."
+
+msgid ""
+"ABC for generator classes that implement the protocol defined in :pep:`342` "
+"that extends iterators with the :meth:`~generator.send`, :meth:`~generator."
+"throw` and :meth:`~generator.close` methods. See also the definition of :"
+"term:`generator`."
+msgstr ""
+"ABC для класів генераторів, які реалізують протокол, визначений у :pep:"
+"`342`, який розширює ітератори за допомогою :meth:`~generator.send`, :meth:"
+"`~generator.throw` і :meth:`~generator.close` методи. Дивіться також "
+"визначення :term:`generator`."
+
+msgid "ABCs for read-only and mutable :term:`sequences <sequence>`."
+msgstr ""
+"Азбука для доступних лише для читання та змінних :term:`послідовностей "
+"<sequence>`."
+
+msgid ""
+"Implementation note: Some of the mixin methods, such as :meth:`__iter__`, :"
+"meth:`__reversed__` and :meth:`index`, make repeated calls to the "
+"underlying :meth:`__getitem__` method. Consequently, if :meth:`__getitem__` "
+"is implemented with constant access speed, the mixin methods will have "
+"linear performance; however, if the underlying method is linear (as it would "
+"be with a linked list), the mixins will have quadratic performance and will "
+"likely need to be overridden."
+msgstr ""
+"Примітка щодо реалізації: деякі методи mixin, такі як :meth:`__iter__`, :"
+"meth:`__reversed__` і :meth:`index`, здійснюють повторні виклики основного "
+"методу :meth:`__getitem__`. Отже, якщо :meth:`__getitem__` реалізовано з "
+"постійною швидкістю доступу, методи mixin матимуть лінійну продуктивність; "
+"однак, якщо основний метод є лінійним (як це було б зі зв’язаним списком), "
+"міксини матимуть квадратичну продуктивність і, ймовірно, їх потрібно буде "
+"перевизначити."
+
+msgid "The index() method added support for *stop* and *start* arguments."
+msgstr "Метод index() додав підтримку аргументів *stop* і *start*."
+
+msgid "ABCs for read-only and mutable sets."
+msgstr "Азбука для доступних лише для читання та змінних наборів."
+
+msgid "ABCs for read-only and mutable :term:`mappings <mapping>`."
+msgstr "Азбука лише для читання та змінних :term:`відображення <mapping>`."
+
+msgid ""
+"ABCs for mapping, items, keys, and values :term:`views <dictionary view>`."
+msgstr ""
+"Азбука зіставлення, елементів, ключів і значень :term:`views <dictionary "
+"view>`."
+
+msgid ""
+"ABC for :term:`awaitable` objects, which can be used in :keyword:`await` "
+"expressions.  Custom implementations must provide the :meth:`__await__` "
+"method."
+msgstr ""
+"ABC для об’єктів :term:`awaitable`, які можна використовувати у виразах :"
+"keyword:`await`. Спеціальні реалізації повинні надавати метод :meth:"
+"`__await__`."
+
+msgid ""
+":term:`Coroutine <coroutine>` objects and instances of the :class:"
+"`~collections.abc.Coroutine` ABC are all instances of this ABC."
+msgstr ""
+":term:`Coroutine <coroutine>` об’єкти та екземпляри :class:`~collections.abc."
+"Coroutine` ABC є екземплярами цього ABC."
+
+msgid ""
+"In CPython, generator-based coroutines (generators decorated with :func:"
+"`types.coroutine` or :func:`asyncio.coroutine`) are *awaitables*, even "
+"though they do not have an :meth:`__await__` method. Using "
+"``isinstance(gencoro, Awaitable)`` for them will return ``False``. Use :func:"
+"`inspect.isawaitable` to detect them."
+msgstr ""
+
+msgid ""
+"ABC for coroutine compatible classes.  These implement the following "
+"methods, defined in :ref:`coroutine-objects`: :meth:`~coroutine.send`, :meth:"
+"`~coroutine.throw`, and :meth:`~coroutine.close`.  Custom implementations "
+"must also implement :meth:`__await__`.  All :class:`Coroutine` instances are "
+"also instances of :class:`Awaitable`.  See also the definition of :term:"
+"`coroutine`."
+msgstr ""
+"ABC для співпрограм сумісних класів. Вони реалізують такі методи, визначені "
+"в :ref:`coroutine-objects`: :meth:`~coroutine.send`, :meth:`~coroutine."
+"throw` і :meth:`~coroutine.close`. Спеціальні реалізації також мають "
+"реалізовувати :meth:`__await__`. Усі екземпляри :class:`Coroutine` також є "
+"екземплярами :class:`Awaitable`. Дивіться також визначення :term:`coroutine`."
+
+msgid ""
+"In CPython, generator-based coroutines (generators decorated with :func:"
+"`types.coroutine` or :func:`asyncio.coroutine`) are *awaitables*, even "
+"though they do not have an :meth:`__await__` method. Using "
+"``isinstance(gencoro, Coroutine)`` for them will return ``False``. Use :func:"
+"`inspect.isawaitable` to detect them."
+msgstr ""
+
+msgid ""
+"ABC for classes that provide ``__aiter__`` method.  See also the definition "
+"of :term:`asynchronous iterable`."
+msgstr ""
+"ABC для класів, які забезпечують метод ``__aiter__``. Дивіться також "
+"визначення :term:`asynchronous iterable`."
+
+msgid ""
+"ABC for classes that provide ``__aiter__`` and ``__anext__`` methods.  See "
+"also the definition of :term:`asynchronous iterator`."
+msgstr ""
+"ABC для класів, які надають методи ``__aiter__`` і ``__anext__``. Дивіться "
+"також визначення :term:`asynchronous iterator`."
+
+msgid ""
+"ABC for asynchronous generator classes that implement the protocol defined "
+"in :pep:`525` and :pep:`492`."
+msgstr ""
+"ABC для класів асинхронних генераторів, які реалізують протокол, визначений "
+"у :pep:`525` і :pep:`492`."
+
+msgid "Examples and Recipes"
+msgstr "Приклади та рецепти"
+
+msgid ""
+"ABCs allow us to ask classes or instances if they provide particular "
+"functionality, for example::"
+msgstr ""
+"ABC дозволяє нам запитувати класи чи екземпляри, чи надають вони певну "
+"функціональність, наприклад:"
+
+msgid ""
+"Several of the ABCs are also useful as mixins that make it easier to develop "
+"classes supporting container APIs.  For example, to write a class supporting "
+"the full :class:`Set` API, it is only necessary to supply the three "
+"underlying abstract methods: :meth:`__contains__`, :meth:`__iter__`, and :"
+"meth:`__len__`. The ABC supplies the remaining methods such as :meth:"
+"`__and__` and :meth:`isdisjoint`::"
+msgstr ""
+"Деякі з ABC також корисні як міксини, які спрощують розробку класів, що "
+"підтримують контейнерні API. Наприклад, щоб написати клас, який підтримує "
+"повний API :class:`Set`, необхідно лише надати три основні абстрактні "
+"методи: :meth:`__contains__`, :meth:`__iter__` і :meth:`__len__`. ABC надає "
+"інші методи, такі як :meth:`__and__` і :meth:`isdisjoint`::"
+
+msgid "Notes on using :class:`Set` and :class:`MutableSet` as a mixin:"
+msgstr ""
+"Примітки щодо використання :class:`Set` і :class:`MutableSet` як міксину:"
+
+msgid ""
+"Since some set operations create new sets, the default mixin methods need a "
+"way to create new instances from an iterable. The class constructor is "
+"assumed to have a signature in the form ``ClassName(iterable)``. That "
+"assumption is factored-out to an internal classmethod called :meth:"
+"`_from_iterable` which calls ``cls(iterable)`` to produce a new set. If the :"
+"class:`Set` mixin is being used in a class with a different constructor "
+"signature, you will need to override :meth:`_from_iterable` with a "
+"classmethod or regular method that can construct new instances from an "
+"iterable argument."
+msgstr ""
+"Оскільки деякі операції з наборами створюють нові набори, стандартні методи "
+"mixin потребують способу створення нових екземплярів із ітерованого. "
+"Передбачається, що конструктор класу має підпис у формі "
+"``ClassName(iterable)``. Це припущення віднесено до внутрішнього методу "
+"класу під назвою :meth:`_from_iterable`, який викликає ``cls(iterable)`` для "
+"створення нового набору. Якщо міксин :class:`Set` використовується в класі з "
+"іншою сигнатурою конструктора, вам потрібно буде замінити :meth:"
+"`_from_iterable` методом класу або звичайним методом, який може створювати "
+"нові екземпляри з ітерованого аргументу."
+
+msgid ""
+"To override the comparisons (presumably for speed, as the semantics are "
+"fixed), redefine :meth:`__le__` and :meth:`__ge__`, then the other "
+"operations will automatically follow suit."
+msgstr ""
+"Щоб перевизначити порівняння (мабуть, для швидкості, оскільки семантика "
+"фіксована), перевизначте :meth:`__le__` і :meth:`__ge__`, тоді інші операції "
+"автоматично наслідуватимуть цей приклад."
+
+msgid ""
+"The :class:`Set` mixin provides a :meth:`_hash` method to compute a hash "
+"value for the set; however, :meth:`__hash__` is not defined because not all "
+"sets are hashable or immutable.  To add set hashability using mixins, "
+"inherit from both :meth:`Set` and :meth:`Hashable`, then define ``__hash__ = "
+"Set._hash``."
+msgstr ""
+"Міксин :class:`Set` надає метод :meth:`_hash` для обчислення хеш-значення "
+"для набору; однак :meth:`__hash__` не визначено, тому що не всі набори "
+"хешуються або незмінні. Щоб додати хешованість набору за допомогою міксинів, "
+"успадкуйте від обох :meth:`Set` і :meth:`Hashable`, а потім визначте "
+"``__hash__ = Set._hash``."
+
+msgid ""
+"`OrderedSet recipe <https://code.activestate.com/recipes/576694/>`_ for an "
+"example built on :class:`MutableSet`."
+msgstr ""
+"`Рецепт OrderedSet <https://code.activestate.com/recipes/576694/>`_ для "
+"прикладу, побудованого на :class:`MutableSet`."
+
+msgid "For more about ABCs, see the :mod:`abc` module and :pep:`3119`."
+msgstr ""
+"Щоб дізнатися більше про ABC, перегляньте модуль :mod:`abc` і :pep:`3119`."

@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:15+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`tkinter.font` --- Tkinter font wrapper"
+msgstr ":mod:`tkinter.font` --- оболонка шрифту Tkinter"
+
+msgid "**Source code:** :source:`Lib/tkinter/font.py`"
+msgstr "**Вихідний код:** :source:`Lib/tkinter/font.py`"
+
+msgid ""
+"The :mod:`tkinter.font` module provides the :class:`Font` class for creating "
+"and using named fonts."
+msgstr ""
+"Модуль :mod:`tkinter.font` надає клас :class:`Font` для створення та "
+"використання іменованих шрифтів."
+
+msgid "The different font weights and slants are:"
+msgstr "Різні щільність і нахил шрифту:"
+
+msgid ""
+"The :class:`Font` class represents a named font. *Font* instances are given "
+"unique names and can be specified by their family, size, and style "
+"configuration. Named fonts are Tk's method of creating and identifying fonts "
+"as a single object, rather than specifying a font by its attributes with "
+"each occurrence."
+msgstr ""
+"Клас :class:`Font` представляє іменований шрифт. Екземплярам *Font* "
+"присвоюються унікальні імена, і їх можна вказати за їх сімейством, розміром "
+"і конфігурацією стилю. Іменовані шрифти — це метод Tk для створення та "
+"ідентифікації шрифтів як єдиного об’єкта, а не визначення шрифту за його "
+"атрибутами при кожному входженні."
+
+msgid "arguments:"
+msgstr "аргументи:"
+
+msgid "*font* - font specifier tuple (family, size, options)"
+msgstr "*font* - кортеж специфікатора шрифту (сімейство, розмір, параметри)"
+
+msgid "*name* - unique font name"
+msgstr "*name* - унікальна назва шрифту"
+
+msgid "*exists* - self points to existing named font if true"
+msgstr "*exists* - сам вказує на існуючий іменований шрифт, якщо істинно"
+
+msgid "additional keyword options (ignored if *font* is specified):"
+msgstr ""
+"додаткові параметри ключового слова (ігноруються, якщо вказано *font*):"
+
+msgid "*family* - font family i.e. Courier, Times"
+msgstr "*сімейство* - сімейство шрифтів, наприклад Courier, Times"
+
+msgid "*size* - font size"
+msgstr "*size* - розмір шрифту"
+
+msgid "If *size* is positive it is interpreted as size in points."
+msgstr "Якщо *size* є додатним, це інтерпретується як розмір у балах."
+
+msgid "If *size* is a negative number its absolute value is treated"
+msgstr "Якщо *розмір* є від’ємним числом, обробляється його абсолютне значення"
+
+msgid "as size in pixels."
+msgstr "як розмір у пікселях."
+
+msgid "*weight* - font emphasis (NORMAL, BOLD)"
+msgstr "*вага* - виділення шрифту (NORMAL, BOLD)"
+
+msgid "*slant* - ROMAN, ITALIC"
+msgstr "*нахил* - РИМСЬКИЙ, КУРСИВ"
+
+msgid "*underline* - font underlining (0 - none, 1 - underline)"
+msgstr "*підкреслення* - підкреслення шрифту (0 - немає, 1 - підкреслення)"
+
+msgid "*overstrike* - font strikeout (0 - none, 1 - strikeout)"
+msgstr "*overstrike* - закреслення шрифту (0 - немає, 1 - закреслення)"
+
+msgid "Return the attributes of the font."
+msgstr "Повертає атрибути шрифту."
+
+msgid "Retrieve an attribute of the font."
+msgstr "Отримати атрибут шрифту."
+
+msgid "Modify attributes of the font."
+msgstr "Змінити атрибути шрифту."
+
+msgid "Return new instance of the current font."
+msgstr "Повернути новий екземпляр поточного шрифту."
+
+msgid ""
+"Return amount of space the text would occupy on the specified display when "
+"formatted in the current font. If no display is specified then the main "
+"application window is assumed."
+msgstr ""
+"Повертає обсяг простору, який текст займав би на вказаному дисплеї за умови "
+"форматування поточним шрифтом. Якщо дисплей не вказано, передбачається, що "
+"головне вікно програми."
+
+msgid "Return font-specific data. Options include:"
+msgstr "Повертає дані про шрифт. Опції включають:"
+
+msgid "*ascent* - distance between baseline and highest point that a"
+msgstr "*підйом* - відстань між базовою лінією та найвищою точкою, що a"
+
+msgid "character of the font can occupy"
+msgstr "символ шрифту може займати"
+
+msgid "*descent* - distance between baseline and lowest point that a"
+msgstr "*спуск* - відстань між базовою лінією та найнижчою точкою, що a"
+
+msgid "*linespace* - minimum vertical separation necessary between any two"
+msgstr ""
+"*linespace* - мінімальний вертикальний відрив, необхідний між будь-якими "
+"двома"
+
+msgid "characters of the font that ensures no vertical overlap between lines."
+msgstr ""
+"символи шрифту, який забезпечує відсутність вертикального перекриття між "
+"рядками."
+
+msgid "*fixed* - 1 if font is fixed-width else 0"
+msgstr "*фіксований* - 1, якщо шрифт має фіксовану ширину, інакше 0"
+
+msgid "Return the different font families."
+msgstr "Повернути різні сімейства шрифтів."
+
+msgid "Return the names of defined fonts."
+msgstr "Повертає назви визначених шрифтів."
+
+msgid "Return a :class:`Font` representation of a tk named font."
+msgstr "Повертає :class:`Font` представлення tk названого шрифту."
+
+msgid "The *root* parameter was added."
+msgstr "Додано параметр *root*."

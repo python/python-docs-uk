@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:16+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`tty` --- Terminal control functions"
+msgstr ":mod:`tty` --- Функції керування терміналом"
+
+msgid "**Source code:** :source:`Lib/tty.py`"
+msgstr "**Вихідний код:** :source:`Lib/tty.py`"
+
+msgid ""
+"The :mod:`tty` module defines functions for putting the tty into cbreak and "
+"raw modes."
+msgstr ""
+"Модуль :mod:`tty` визначає функції для переведення tty в режими cbreak і raw."
+
+msgid ""
+"Because it requires the :mod:`termios` module, it will work only on Unix."
+msgstr ""
+"Оскільки для цього потрібен модуль :mod:`termios`, він працюватиме лише в "
+"Unix."
+
+msgid "The :mod:`tty` module defines the following functions:"
+msgstr "Модуль :mod:`tty` визначає такі функції:"
+
+msgid ""
+"Change the mode of the file descriptor *fd* to raw. If *when* is omitted, it "
+"defaults to :const:`termios.TCSAFLUSH`, and is passed to :func:`termios."
+"tcsetattr`."
+msgstr ""
+"Змініть режим файлового дескриптора *fd* на raw. Якщо *when* опущено, за "
+"замовчуванням використовується :const:`termios.TCSAFLUSH` і передається в :"
+"func:`termios.tcsetattr`."
+
+msgid ""
+"Change the mode of file descriptor *fd* to cbreak. If *when* is omitted, it "
+"defaults to :const:`termios.TCSAFLUSH`, and is passed to :func:`termios."
+"tcsetattr`."
+msgstr ""
+"Змініть режим файлового дескриптора *fd* на cbreak. Якщо *when* опущено, за "
+"замовчуванням використовується :const:`termios.TCSAFLUSH` і передається в :"
+"func:`termios.tcsetattr`."
+
+msgid "Module :mod:`termios`"
+msgstr "Модуль :mod:`termios`"
+
+msgid "Low-level terminal control interface."
+msgstr "Низькорівневий інтерфейс керування терміналом."

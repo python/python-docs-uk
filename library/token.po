@@ -1,0 +1,278 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:15+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`token` --- Constants used with Python parse trees"
+msgstr ""
+":mod:`token` --- Константи, що використовуються з деревами аналізу Python"
+
+msgid "**Source code:** :source:`Lib/token.py`"
+msgstr "**Вихідний код:** :source:`Lib/token.py`"
+
+msgid ""
+"This module provides constants which represent the numeric values of leaf "
+"nodes of the parse tree (terminal tokens).  Refer to the file :file:`Grammar/"
+"Tokens` in the Python distribution for the definitions of the names in the "
+"context of the language grammar.  The specific numeric values which the "
+"names map to may change between Python versions."
+msgstr ""
+"Цей модуль надає константи, які представляють числові значення листових "
+"вузлів дерева розбору (термінальні маркери). Зверніться до файлу :file:"
+"`Grammar/Tokens` у дистрибутиві Python для визначення імен у контексті "
+"граматики мови. Конкретні числові значення, на які зіставляються імена, "
+"можуть змінюватися між версіями Python."
+
+msgid ""
+"The module also provides a mapping from numeric codes to names and some "
+"functions.  The functions mirror definitions in the Python C header files."
+msgstr ""
+"Модуль також забезпечує відображення числових кодів імен і деяких функцій. "
+"Функції відображають визначення у файлах заголовків Python C."
+
+msgid ""
+"Dictionary mapping the numeric values of the constants defined in this "
+"module back to name strings, allowing more human-readable representation of "
+"parse trees to be generated."
+msgstr ""
+"Словник відображає числові значення констант, визначених у цьому модулі, на "
+"рядки імен, що дозволяє створити більш зрозуміле для людини представлення "
+"дерев розбору."
+
+msgid "Return ``True`` for terminal token values."
+msgstr "Повертає ``True`` для значень термінальних маркерів."
+
+msgid "Return ``True`` for non-terminal token values."
+msgstr "Повертає ``True`` для нетермінальних значень токенів."
+
+msgid "Return ``True`` if *x* is the marker indicating the end of input."
+msgstr "Повертає ``True``, якщо *x* є маркером кінця введення."
+
+msgid "The token constants are:"
+msgstr "Константи маркера:"
+
+msgid "Token value for ``\"(\"``."
+msgstr "Значення маркера для ``\"(\"``."
+
+msgid "Token value for ``\")\"``."
+msgstr "Значення маркера для ``)\"``."
+
+msgid "Token value for ``\"[\"``."
+msgstr "Значення маркера для ``\"[\"``."
+
+msgid "Token value for ``\"]\"``."
+msgstr "Значення маркера для ``\"]\"``."
+
+msgid "Token value for ``\":\"``."
+msgstr "Значення маркера для ``\":\"``."
+
+msgid "Token value for ``\",\"``."
+msgstr "Значення маркера для ``\",\"``."
+
+msgid "Token value for ``\";\"``."
+msgstr "Значення маркера для ``\";\"``."
+
+msgid "Token value for ``\"+\"``."
+msgstr "Значення маркера для ``\"+\"``."
+
+msgid "Token value for ``\"-\"``."
+msgstr "Значення маркера для ``\"-\"``."
+
+msgid "Token value for ``\"*\"``."
+msgstr "Значення маркера для ``\"*\"``."
+
+msgid "Token value for ``\"/\"``."
+msgstr "Значення маркера для ``\"/\"``."
+
+msgid "Token value for ``\"|\"``."
+msgstr "Значення маркера для ``\"|\"``."
+
+msgid "Token value for ``\"&\"``."
+msgstr "Значення маркера для ``\"&\"``."
+
+msgid "Token value for ``\"<\"``."
+msgstr "Значення маркера для ``\"<\"``."
+
+msgid "Token value for ``\">\"``."
+msgstr "Значення маркера для ``\">\"``."
+
+msgid "Token value for ``\"=\"``."
+msgstr "Значення маркера для ``\"=\"``."
+
+msgid "Token value for ``\".\"``."
+msgstr "Значення маркера для ``\".\"``."
+
+msgid "Token value for ``\"%\"``."
+msgstr "Значення маркера для ``\"%\"``."
+
+msgid "Token value for ``\"{\"``."
+msgstr "Значення маркера для ``\"{\"``."
+
+msgid "Token value for ``\"}\"``."
+msgstr "Значення маркера для ``\"}\"``."
+
+msgid "Token value for ``\"==\"``."
+msgstr "Значення маркера для ``\"==\"``."
+
+msgid "Token value for ``\"!=\"``."
+msgstr "Значення маркера для ``\"!=\"``."
+
+msgid "Token value for ``\"<=\"``."
+msgstr "Значення маркера для ``\"<=\"``."
+
+msgid "Token value for ``\">=\"``."
+msgstr "Значення маркера для ``\">=\"``."
+
+msgid "Token value for ``\"~\"``."
+msgstr "Значення маркера для ``\"~\"``."
+
+msgid "Token value for ``\"^\"``."
+msgstr "Значення маркера для ``\"^\"``."
+
+msgid "Token value for ``\"<<\"``."
+msgstr "Значення маркера для ``\"<<\"``."
+
+msgid "Token value for ``\">>\"``."
+msgstr "Значення маркера для ``\">>\"``."
+
+msgid "Token value for ``\"**\"``."
+msgstr "Значення маркера для ``\"**\"``."
+
+msgid "Token value for ``\"+=\"``."
+msgstr "Значення маркера для ``\"+=\"``."
+
+msgid "Token value for ``\"-=\"``."
+msgstr "Значення маркера для ``\"-=\"``."
+
+msgid "Token value for ``\"*=\"``."
+msgstr "Значення маркера для ``\"*=\"``."
+
+msgid "Token value for ``\"/=\"``."
+msgstr "Значення маркера для ``\"/=\"``."
+
+msgid "Token value for ``\"%=\"``."
+msgstr "Значення маркера для ``\"%=\"``."
+
+msgid "Token value for ``\"&=\"``."
+msgstr "Значення маркера для ``\"&=\"``."
+
+msgid "Token value for ``\"|=\"``."
+msgstr "Значення маркера для ``\"|=\"``."
+
+msgid "Token value for ``\"^=\"``."
+msgstr "Значення маркера для ``\"^=\"``."
+
+msgid "Token value for ``\"<<=\"``."
+msgstr "Значення маркера для ``\"<<=\"``."
+
+msgid "Token value for ``\">>=\"``."
+msgstr "Значення маркера для ``\">>=\"``."
+
+msgid "Token value for ``\"**=\"``."
+msgstr "Значення маркера для ``\"**=\"``."
+
+msgid "Token value for ``\"//\"``."
+msgstr "Значення маркера для ``\"//\"``."
+
+msgid "Token value for ``\"//=\"``."
+msgstr "Значення маркера для ``\"//=\"``."
+
+msgid "Token value for ``\"@\"``."
+msgstr "Значення маркера для ``\"@\"``."
+
+msgid "Token value for ``\"@=\"``."
+msgstr "Значення маркера для ``\"@=\"``."
+
+msgid "Token value for ``\"->\"``."
+msgstr "Значення маркера для ``\"->\"``."
+
+msgid "Token value for ``\"...\"``."
+msgstr "Значення маркера для ``\"....\"``."
+
+msgid "Token value for ``\":=\"``."
+msgstr "Значення маркера для ``\":=\"``."
+
+msgid ""
+"The following token type values aren't used by the C tokenizer but are "
+"needed for the :mod:`tokenize` module."
+msgstr ""
+"Наступні значення типу маркера не використовуються токенізатором C, але "
+"потрібні для модуля :mod:`tokenize`."
+
+msgid "Token value used to indicate a comment."
+msgstr "Значення маркера, що використовується для позначення коментаря."
+
+msgid ""
+"Token value used to indicate a non-terminating newline.  The :data:`NEWLINE` "
+"token indicates the end of a logical line of Python code; ``NL`` tokens are "
+"generated when a logical line of code is continued over multiple physical "
+"lines."
+msgstr ""
+"Значення маркера, яке використовується для вказівки незавершеного нового "
+"рядка. Маркер :data:`NEWLINE` вказує на кінець логічного рядка коду Python; "
+"Токени ``NL`` генеруються, коли логічний рядок коду продовжується на кількох "
+"фізичних рядках."
+
+msgid ""
+"Token value that indicates the encoding used to decode the source bytes into "
+"text. The first token returned by :func:`tokenize.tokenize` will always be "
+"an ``ENCODING`` token."
+msgstr ""
+"Значення маркера, яке вказує на кодування, яке використовується для "
+"декодування вихідних байтів у текст. Перший маркер, який повертає :func:"
+"`tokenize.tokenize`, завжди буде маркером ``ENCODING``."
+
+msgid ""
+"Token value indicating that a type comment was recognized.  Such tokens are "
+"only produced when :func:`ast.parse()` is invoked with "
+"``type_comments=True``."
+msgstr ""
+"Значення маркера, яке вказує, що коментар типу було розпізнано. Такі маркери "
+"створюються лише тоді, коли :func:`ast.parse()` викликається з "
+"``type_comments=True``."
+
+msgid "Added :data:`AWAIT` and :data:`ASYNC` tokens."
+msgstr "Додано маркери :data:`AWAIT` і :data:`ASYNC`."
+
+msgid "Added :data:`COMMENT`, :data:`NL` and :data:`ENCODING` tokens."
+msgstr "Додано маркери :data:`COMMENT`, :data:`NL` і :data:`ENCODING`."
+
+msgid ""
+"Removed :data:`AWAIT` and :data:`ASYNC` tokens. \"async\" and \"await\" are "
+"now tokenized as :data:`NAME` tokens."
+msgstr ""
+"Видалено маркери :data:`AWAIT` і :data:`ASYNC`. \"async\" і \"await\" тепер "
+"позначено як маркери :data:`NAME`."
+
+msgid ""
+"Added :data:`TYPE_COMMENT`, :data:`TYPE_IGNORE`, :data:`COLONEQUAL`. Added :"
+"data:`AWAIT` and :data:`ASYNC` tokens back (they're needed to support "
+"parsing older Python versions for :func:`ast.parse` with ``feature_version`` "
+"set to 6 or lower)."
+msgstr ""
+"Додано :data:`TYPE_COMMENT`, :data:`TYPE_IGNORE`, :data:`COLONEQUAL`. "
+"Повернуто маркери :data:`AWAIT` і :data:`ASYNC` (вони потрібні для підтримки "
+"розбору старих версій Python для :func:`ast.parse` з ``feature_version``, "
+"встановленим на 6 або нижче)."

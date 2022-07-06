@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 00:51+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Command Reference"
+msgstr "Довідник команд"
+
+msgid ""
+"This document is being retained solely until the ``setuptools`` "
+"documentation at https://setuptools.readthedocs.io/en/latest/setuptools.html "
+"independently covers all of the relevant information currently included here."
+msgstr ""
+"Цей документ зберігається лише до тих пір, поки документація ``setuptools`` "
+"за адресою https://setuptools.readthedocs.io/en/latest/setuptools.html "
+"окремо не охопить всю відповідну інформацію, яка зараз включена тут."
+
+msgid "Installing modules: the :command:`install` command family"
+msgstr "Встановлення модулів: сімейство команд :command:`install`"
+
+msgid ""
+"The install command ensures that the build commands have been run and then "
+"runs the subcommands :command:`install_lib`, :command:`install_data` and :"
+"command:`install_scripts`."
+msgstr ""
+"Команда інсталяції перевіряє виконання команд збірки, а потім запускає "
+"підкоманди :command:`install_lib`, :command:`install_data` і :command:"
+"`install_scripts`."
+
+msgid ":command:`install_data`"
+msgstr ":command:`install_data`"
+
+msgid "This command installs all data files provided with the distribution."
+msgstr ""
+"Ця команда інсталює всі файли даних, що надаються разом із дистрибутивом."
+
+msgid ":command:`install_scripts`"
+msgstr ":command:`install_scripts`"
+
+msgid "This command installs all (Python) scripts in the distribution."
+msgstr "Ця команда встановлює всі сценарії (Python) у дистрибутиві."
+
+msgid "Creating a source distribution: the :command:`sdist` command"
+msgstr "Створення вихідного дистрибутива: команда :command:`sdist`"
+
+msgid "The manifest template commands are:"
+msgstr "Команди шаблону маніфесту:"
+
+msgid "Command"
+msgstr "Команда"
+
+msgid "Description"
+msgstr "опис"
+
+msgid ":command:`include pat1 pat2 ...`"
+msgstr ":command:`include pat1 pat2 ...`"
+
+msgid "include all files matching any of the listed patterns"
+msgstr "включити всі файли, що відповідають будь-якому з перелічених шаблонів"
+
+msgid ":command:`exclude pat1 pat2 ...`"
+msgstr ":command:`виключити pat1 pat2 ...`"
+
+msgid "exclude all files matching any of the listed patterns"
+msgstr "виключити всі файли, що відповідають будь-якому з перелічених шаблонів"
+
+msgid ":command:`recursive-include dir pat1 pat2 ...`"
+msgstr ":command:`recursive-include dir pat1 pat2 ...`"
+
+msgid "include all files under *dir* matching any of the listed patterns"
+msgstr ""
+"включити всі файли в *dir*, які відповідають будь-якому з перелічених "
+"шаблонів"
+
+msgid ":command:`recursive-exclude dir pat1 pat2 ...`"
+msgstr ":command:`recursive-exclude dir pat1 pat2 ...`"
+
+msgid "exclude all files under *dir* matching any of the listed patterns"
+msgstr ""
+"виключити всі файли в *dir*, які відповідають будь-якому з перелічених "
+"шаблонів"
+
+msgid ":command:`global-include pat1 pat2 ...`"
+msgstr ":command:`global-include pat1 pat2 ...`"
+
+msgid ""
+"include all files anywhere in the source tree matching --- & any of the "
+"listed patterns"
+msgstr ""
+"включити всі файли будь-де в вихідному дереві, які відповідають --- і будь-"
+"якому з перелічених шаблонів"
+
+msgid ":command:`global-exclude pat1 pat2 ...`"
+msgstr ":command:`global-exclude pat1 pat2 ...`"
+
+msgid ""
+"exclude all files anywhere in the source tree matching --- & any of the "
+"listed patterns"
+msgstr ""
+"виключити всі файли будь-де у вихідному дереві, що відповідають --- та будь-"
+"якому з перелічених шаблонів"
+
+msgid ":command:`prune dir`"
+msgstr ":command:`prune dir`"
+
+msgid "exclude all files under *dir*"
+msgstr "виключити всі файли в *dir*"
+
+msgid ":command:`graft dir`"
+msgstr ":command:`graft dir`"
+
+msgid "include all files under *dir*"
+msgstr "включити всі файли в *dir*"
+
+msgid ""
+"The patterns here are Unix-style \"glob\" patterns: ``*`` matches any "
+"sequence of regular filename characters, ``?`` matches any single regular "
+"filename character, and ``[range]`` matches any of the characters in *range* "
+"(e.g., ``a-z``, ``a-zA-Z``, ``a-f0-9_.``).  The definition of \"regular "
+"filename character\" is platform-specific: on Unix it is anything except "
+"slash; on Windows anything except backslash or colon."
+msgstr ""
+"Шаблони тут є шаблонами \"glob\" у стилі Unix: ``*`` відповідає будь-якій "
+"послідовності звичайних символів назви файлу, ``?`` відповідає будь-якому "
+"окремому звичайному символу назви файлу, а ``[діапазон]`` відповідає будь-"
+"якому з символів у *діапазоні* (наприклад, ``a-z``, ``a-zA-Z``, ``a-f0-9_."
+"``). Визначення \"звичайного символу імені файлу\" залежить від платформи: в "
+"Unix це будь-що, крім скісної риски; у Windows будь-що, крім зворотної "
+"скісної риски або двокрапки."
