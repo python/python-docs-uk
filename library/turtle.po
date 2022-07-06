@@ -1,0 +1,2522 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:16+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`turtle` --- Turtle graphics"
+msgstr ":mod:`turtle` --- Графіка черепахи"
+
+msgid "**Source code:** :source:`Lib/turtle.py`"
+msgstr "**Вихідний код:** :source:`Lib/turtle.py`"
+
+msgid "Introduction"
+msgstr "Вступ"
+
+msgid ""
+"Turtle graphics is a popular way for introducing programming to kids.  It "
+"was part of the original Logo programming language developed by Wally "
+"Feurzeig, Seymour Papert and Cynthia Solomon in 1967."
+msgstr ""
+"Черепаша графіки є популярним способом знайомства з програмуванням для "
+"дітей. Він був частиною оригінальної мови програмування Logo, розробленої "
+"Уоллі Фьорцайгом, Сеймуром Пепертом і Синтією Соломон у 1967 році."
+
+msgid ""
+"Imagine a robotic turtle starting at (0, 0) in the x-y plane.  After an "
+"``import turtle``, give it the command ``turtle.forward(15)``, and it moves "
+"(on-screen!) 15 pixels in the direction it is facing, drawing a line as it "
+"moves.  Give it the command ``turtle.right(25)``, and it rotates in-place 25 "
+"degrees clockwise."
+msgstr ""
+"Уявіть собі роботизовану черепаху, що починається в (0, 0) у площині x-y. "
+"Після ``імпорту черепахи`` дайте їй команду ``turtle.forward(15)``, і вона "
+"переміститься (на екрані!) на 15 пікселів у напрямку, куди дивиться, малюючи "
+"лінію під час руху. Дайте йому команду ``turtle.right(25)``, і він "
+"повернеться на місці на 25 градусів за годинниковою стрілкою."
+
+msgid ""
+"Turtle can draw intricate shapes using programs that repeat simple moves."
+msgstr ""
+"Turtle може малювати складні фігури за допомогою програм, які повторюють "
+"прості рухи."
+
+msgid ""
+"By combining together these and similar commands, intricate shapes and "
+"pictures can easily be drawn."
+msgstr ""
+"Поєднуючи разом ці та подібні команди, можна легко малювати складні фігури "
+"та малюнки."
+
+msgid ""
+"The :mod:`turtle` module is an extended reimplementation of the same-named "
+"module from the Python standard distribution up to version Python 2.5."
+msgstr ""
+"Модуль :mod:`turtle` — це розширена повторна реалізація однойменного модуля "
+"зі стандартного дистрибутива Python до версії Python 2.5."
+
+msgid ""
+"It tries to keep the merits of the old turtle module and to be (nearly) 100% "
+"compatible with it.  This means in the first place to enable the learning "
+"programmer to use all the commands, classes and methods interactively when "
+"using the module from within IDLE run with the ``-n`` switch."
+msgstr ""
+"Він намагається зберегти переваги старого модуля Turtle і бути (майже) на "
+"100% сумісним з ним. Це означає, насамперед, надання можливості програмісту, "
+"який навчається, використовувати всі команди, класи та методи в "
+"інтерактивному режимі під час використання модуля всередині IDLE запуску з "
+"перемикачем ``-n``."
+
+msgid ""
+"The turtle module provides turtle graphics primitives, in both object-"
+"oriented and procedure-oriented ways.  Because it uses :mod:`tkinter` for "
+"the underlying graphics, it needs a version of Python installed with Tk "
+"support."
+msgstr ""
+"Модуль черепахи надає графічні примітиви черепахи як об’єктно-орієнтованим, "
+"так і процедурно-орієнтованим способом. Оскільки він використовує :mod:"
+"`tkinter` для основної графіки, йому потрібна версія Python, встановлена з "
+"підтримкою Tk."
+
+msgid "The object-oriented interface uses essentially two+two classes:"
+msgstr "Об’єктно-орієнтований інтерфейс використовує два+два класи:"
+
+msgid ""
+"The :class:`TurtleScreen` class defines graphics windows as a playground for "
+"the drawing turtles.  Its constructor needs a :class:`tkinter.Canvas` or a :"
+"class:`ScrolledCanvas` as argument.  It should be used when :mod:`turtle` is "
+"used as part of some application."
+msgstr ""
+"Клас :class:`TurtleScreen` визначає графічні вікна як майданчик для "
+"малювання черепах. Його конструктор потребує :class:`tkinter.Canvas` або :"
+"class:`ScrolledCanvas` як аргумент. Його слід використовувати, коли :mod:"
+"`turtle` використовується як частина програми."
+
+msgid ""
+"The function :func:`Screen` returns a singleton object of a :class:"
+"`TurtleScreen` subclass. This function should be used when :mod:`turtle` is "
+"used as a standalone tool for doing graphics. As a singleton object, "
+"inheriting from its class is not possible."
+msgstr ""
+"Функція :func:`Screen` повертає єдиний об’єкт підкласу :class:"
+"`TurtleScreen`. Цю функцію слід використовувати, коли :mod:`turtle` "
+"використовується як окремий інструмент для створення графіки. Оскільки "
+"об’єкт є єдиним елементом, успадкування від його класу неможливе."
+
+msgid ""
+"All methods of TurtleScreen/Screen also exist as functions, i.e. as part of "
+"the procedure-oriented interface."
+msgstr ""
+"Усі методи TurtleScreen/Screen також існують як функції, тобто як частина "
+"процедурно-орієнтованого інтерфейсу."
+
+msgid ""
+":class:`RawTurtle` (alias: :class:`RawPen`) defines Turtle objects which "
+"draw on a :class:`TurtleScreen`.  Its constructor needs a Canvas, "
+"ScrolledCanvas or TurtleScreen as argument, so the RawTurtle objects know "
+"where to draw."
+msgstr ""
+":class:`RawTurtle` (псевдонім: :class:`RawPen`) визначає об’єкти Turtle, які "
+"малюють на :class:`TurtleScreen`. Його конструктор потребує Canvas, "
+"ScrolledCanvas або TurtleScreen як аргумент, щоб об’єкти RawTurtle знали, де "
+"малювати."
+
+msgid ""
+"Derived from RawTurtle is the subclass :class:`Turtle` (alias: :class:"
+"`Pen`), which draws on \"the\" :class:`Screen` instance which is "
+"automatically created, if not already present."
+msgstr ""
+"Похідним від RawTurtle є підклас :class:`Turtle` (псевдонім: :class:`Pen`), "
+"який малює \"примірник\" :class:`Screen`, який створюється автоматично, якщо "
+"його ще немає."
+
+msgid ""
+"All methods of RawTurtle/Turtle also exist as functions, i.e. part of the "
+"procedure-oriented interface."
+msgstr ""
+"Усі методи RawTurtle/Turtle також існують як функції, тобто як частина "
+"процедурно-орієнтованого інтерфейсу."
+
+msgid ""
+"The procedural interface provides functions which are derived from the "
+"methods of the classes :class:`Screen` and :class:`Turtle`.  They have the "
+"same names as the corresponding methods.  A screen object is automatically "
+"created whenever a function derived from a Screen method is called.  An "
+"(unnamed) turtle object is automatically created whenever any of the "
+"functions derived from a Turtle method is called."
+msgstr ""
+"Процедурний інтерфейс надає функції, які є похідними від методів класів :"
+"class:`Screen` і :class:`Turtle`. Вони мають такі ж назви, як і відповідні "
+"методи. Екранний об’єкт створюється автоматично щоразу, коли викликається "
+"функція, похідна від методу Екран. Об’єкт черепахи (без назви) створюється "
+"автоматично щоразу, коли викликається будь-яка функція, похідна від методу "
+"черепашки."
+
+msgid ""
+"To use multiple turtles on a screen one has to use the object-oriented "
+"interface."
+msgstr ""
+"Щоб використовувати декілька черепашок на екрані, потрібно використовувати "
+"об’єктно-орієнтований інтерфейс."
+
+msgid ""
+"In the following documentation the argument list for functions is given. "
+"Methods, of course, have the additional first argument *self* which is "
+"omitted here."
+msgstr ""
+"У наступній документації подано список аргументів для функцій. Методи, "
+"звичайно, мають додатковий перший аргумент *self*, який тут опущено."
+
+msgid "Overview of available Turtle and Screen methods"
+msgstr "Огляд доступних методів Turtle та Screen"
+
+msgid "Turtle methods"
+msgstr "Методи черепахи"
+
+msgid "Turtle motion"
+msgstr "Рух черепахи"
+
+msgid "Move and draw"
+msgstr "Рухайтесь і малюйте"
+
+msgid ":func:`forward` | :func:`fd`"
+msgstr ":func:`forward` | :func:`fd`"
+
+msgid ":func:`backward` | :func:`bk` | :func:`back`"
+msgstr ":func:`backward` | :func:`bk` | :func:`back`"
+
+msgid ":func:`right` | :func:`rt`"
+msgstr ":func:`right` | :func:`rt`"
+
+msgid ":func:`left` | :func:`lt`"
+msgstr ":func:`left` | :func:`lt`"
+
+msgid ":func:`goto` | :func:`setpos` | :func:`setposition`"
+msgstr ":func:`goto` | :func:`setpos` | :func:`setposition`"
+
+msgid ":func:`setx`"
+msgstr ":func:`setx`"
+
+msgid ":func:`sety`"
+msgstr ":func:`sety`"
+
+msgid ":func:`setheading` | :func:`seth`"
+msgstr ":func:`setheading` | :func:`seth`"
+
+msgid ":func:`home`"
+msgstr ":func:`home`"
+
+msgid ":func:`circle`"
+msgstr ":func:`circle`"
+
+msgid ":func:`dot`"
+msgstr ":func:`dot`"
+
+msgid ":func:`stamp`"
+msgstr ":func:`stamp`"
+
+msgid ":func:`clearstamp`"
+msgstr ":func:`clearstamp`"
+
+msgid ":func:`clearstamps`"
+msgstr ":func:`clearstamps`"
+
+msgid ":func:`undo`"
+msgstr ":func:`undo`"
+
+msgid ":func:`speed`"
+msgstr ":func:`speed`"
+
+msgid "Tell Turtle's state"
+msgstr "Розкажіть про стан Черепахи"
+
+msgid ":func:`position` | :func:`pos`"
+msgstr ":func:`position` | :func:`pos`"
+
+msgid ":func:`towards`"
+msgstr ":func:`towards`"
+
+msgid ":func:`xcor`"
+msgstr ":func:`xcor`"
+
+msgid ":func:`ycor`"
+msgstr ":func:`ycor`"
+
+msgid ":func:`heading`"
+msgstr ":func:`heading`"
+
+msgid ":func:`distance`"
+msgstr ":func:`distance`"
+
+msgid "Setting and measurement"
+msgstr "Налаштування та вимірювання"
+
+msgid ":func:`degrees`"
+msgstr ":func:`degrees`"
+
+msgid ":func:`radians`"
+msgstr ":func:`radians`"
+
+msgid "Pen control"
+msgstr "Керування пером"
+
+msgid "Drawing state"
+msgstr "Стан малюнка"
+
+msgid ":func:`pendown` | :func:`pd` | :func:`down`"
+msgstr ":func:`pendown` | :func:`pd` | :func:`down`"
+
+msgid ":func:`penup` | :func:`pu` | :func:`up`"
+msgstr ":func:`penup` | :func:`pu` | :func:`up`"
+
+msgid ":func:`pensize` | :func:`width`"
+msgstr ":func:`pensize` | :func:`width`"
+
+msgid ":func:`pen`"
+msgstr ":func:`pen`"
+
+msgid ":func:`isdown`"
+msgstr ":func:`isdown`"
+
+msgid "Color control"
+msgstr "Контроль кольору"
+
+msgid ":func:`color`"
+msgstr ":func:`color`"
+
+msgid ":func:`pencolor`"
+msgstr ":func:`pencolor`"
+
+msgid ":func:`fillcolor`"
+msgstr ":func:`fillcolor`"
+
+msgid "Filling"
+msgstr "Наповнення"
+
+msgid ":func:`filling`"
+msgstr ":func:`filling`"
+
+msgid ":func:`begin_fill`"
+msgstr ":func:`begin_fill`"
+
+msgid ":func:`end_fill`"
+msgstr ":func:`end_fill`"
+
+msgid "More drawing control"
+msgstr "Більше контролю малювання"
+
+msgid ":func:`reset`"
+msgstr ":func:`reset`"
+
+msgid ":func:`clear`"
+msgstr ":func:`clear`"
+
+msgid ":func:`write`"
+msgstr ":func:`write`"
+
+msgid "Turtle state"
+msgstr "Держава черепахи"
+
+msgid "Visibility"
+msgstr "Видимість"
+
+msgid ":func:`showturtle` | :func:`st`"
+msgstr ":func:`showturtle` | :func:`st`"
+
+msgid ":func:`hideturtle` | :func:`ht`"
+msgstr ":func:`hideturtle` | :func:`ht`"
+
+msgid ":func:`isvisible`"
+msgstr ":func:`isvisible`"
+
+msgid "Appearance"
+msgstr "Зовнішній вигляд"
+
+msgid ":func:`shape`"
+msgstr ":func:`shape`"
+
+msgid ":func:`resizemode`"
+msgstr ":func:`resizemode`"
+
+msgid ":func:`shapesize` | :func:`turtlesize`"
+msgstr ":func:`shapesize` | :func:`turtlesize`"
+
+msgid ":func:`shearfactor`"
+msgstr ":func:`shearfactor`"
+
+msgid ":func:`settiltangle`"
+msgstr ":func:`settiltangle`"
+
+msgid ":func:`tiltangle`"
+msgstr ":func:`tiltangle`"
+
+msgid ":func:`tilt`"
+msgstr ":func:`tilt`"
+
+msgid ":func:`shapetransform`"
+msgstr ":func:`shapetransform`"
+
+msgid ":func:`get_shapepoly`"
+msgstr ":func:`get_shapepoly`"
+
+msgid "Using events"
+msgstr "Використання подій"
+
+msgid ":func:`onclick`"
+msgstr ":func:`onclick`"
+
+msgid ":func:`onrelease`"
+msgstr ":func:`onrelease`"
+
+msgid ":func:`ondrag`"
+msgstr ":func:`ondrag`"
+
+msgid "Special Turtle methods"
+msgstr "Спеціальні методи Черепахи"
+
+msgid ":func:`begin_poly`"
+msgstr ":func:`begin_poly`"
+
+msgid ":func:`end_poly`"
+msgstr ":func:`end_poly`"
+
+msgid ":func:`get_poly`"
+msgstr ":func:`get_poly`"
+
+msgid ":func:`clone`"
+msgstr ":func:`clone`"
+
+msgid ":func:`getturtle` | :func:`getpen`"
+msgstr ":func:`getturtle` | :func:`getpen`"
+
+msgid ":func:`getscreen`"
+msgstr ":func:`getscreen`"
+
+msgid ":func:`setundobuffer`"
+msgstr ":func:`setundobuffer`"
+
+msgid ":func:`undobufferentries`"
+msgstr ":func:`undobufferentries`"
+
+msgid "Methods of TurtleScreen/Screen"
+msgstr "Методи TurtleScreen/Screen"
+
+msgid "Window control"
+msgstr "Віконний контроль"
+
+msgid ":func:`bgcolor`"
+msgstr ":func:`bgcolor`"
+
+msgid ":func:`bgpic`"
+msgstr ":func:`bgpic`"
+
+msgid ":func:`clearscreen`"
+msgstr ":func:`clearscreen`"
+
+msgid ":func:`resetscreen`"
+msgstr ":func:`resetscreen`"
+
+msgid ":func:`screensize`"
+msgstr ":func:`screensize`"
+
+msgid ":func:`setworldcoordinates`"
+msgstr ":func:`setworldcoordinates`"
+
+msgid "Animation control"
+msgstr "Керування анімацією"
+
+msgid ":func:`delay`"
+msgstr ":func:`delay`"
+
+msgid ":func:`tracer`"
+msgstr ":func:`tracer`"
+
+msgid ":func:`update`"
+msgstr ":func:`update`"
+
+msgid "Using screen events"
+msgstr "Використання екранних подій"
+
+msgid ":func:`listen`"
+msgstr ":func:`listen`"
+
+msgid ":func:`onkey` | :func:`onkeyrelease`"
+msgstr ":func:`onkey` | :func:`onkeyrelease`"
+
+msgid ":func:`onkeypress`"
+msgstr ":func:`onkeypress`"
+
+msgid ":func:`onclick` | :func:`onscreenclick`"
+msgstr ":func:`onclick` | :func:`onscreenclick`"
+
+msgid ":func:`ontimer`"
+msgstr ":func:`ontimer`"
+
+msgid ":func:`mainloop` | :func:`done`"
+msgstr ":func:`mainloop` | :func:`done`"
+
+msgid "Settings and special methods"
+msgstr "Налаштування та спеціальні методи"
+
+msgid ":func:`mode`"
+msgstr ":func:`mode`"
+
+msgid ":func:`colormode`"
+msgstr ":func:`colormode`"
+
+msgid ":func:`getcanvas`"
+msgstr ":func:`getcanvas`"
+
+msgid ":func:`getshapes`"
+msgstr ":func:`getshapes`"
+
+msgid ":func:`register_shape` | :func:`addshape`"
+msgstr ":func:`register_shape` | :func:`addshape`"
+
+msgid ":func:`turtles`"
+msgstr ":func:`turtles`"
+
+msgid ":func:`window_height`"
+msgstr ":func:`висота_вікна`"
+
+msgid ":func:`window_width`"
+msgstr ":func:`ширина_вікна`"
+
+msgid "Input methods"
+msgstr "Методи введення"
+
+msgid ":func:`textinput`"
+msgstr ":func:`textinput`"
+
+msgid ":func:`numinput`"
+msgstr ":func:`numinput`"
+
+msgid "Methods specific to Screen"
+msgstr "Методи, специфічні для Screen"
+
+msgid ":func:`bye`"
+msgstr ":func:`bye`"
+
+msgid ":func:`exitonclick`"
+msgstr ":func:`exitonclick`"
+
+msgid ":func:`setup`"
+msgstr ":func:`setup`"
+
+msgid ":func:`title`"
+msgstr ":func:`title`"
+
+msgid "Methods of RawTurtle/Turtle and corresponding functions"
+msgstr "Методи RawTurtle/Turtle та відповідні функції"
+
+msgid ""
+"Most of the examples in this section refer to a Turtle instance called "
+"``turtle``."
+msgstr ""
+"Більшість прикладів у цьому розділі стосуються екземпляра Turtle під назвою "
+"``turtle``."
+
+msgid "Parameters"
+msgstr "Параметри"
+
+msgid "a number (integer or float)"
+msgstr "число (ціле чи з плаваючою точкою)"
+
+msgid ""
+"Move the turtle forward by the specified *distance*, in the direction the "
+"turtle is headed."
+msgstr ""
+"Перемістіть черепаху вперед на вказану *відстань*, у напрямку, куди прямує "
+"черепаха."
+
+msgid "a number"
+msgstr "число"
+
+msgid ""
+"Move the turtle backward by *distance*, opposite to the direction the turtle "
+"is headed.  Do not change the turtle's heading."
+msgstr ""
+"Перемістіть черепаху назад на *відстань*, протилежну напрямку руху черепахи. "
+"Не змінюйте напрямок черепахи."
+
+msgid ""
+"Turn turtle right by *angle* units.  (Units are by default degrees, but can "
+"be set via the :func:`degrees` and :func:`radians` functions.)  Angle "
+"orientation depends on the turtle mode, see :func:`mode`."
+msgstr ""
+"Поверніть черепаху праворуч на одиниці *кут*. (За замовчуванням одиницями є "
+"градуси, але їх можна встановити за допомогою функцій :func:`degrees` і :"
+"func:`radians`.) Кутова орієнтація залежить від режиму черепахи, див. :func:"
+"`mode`."
+
+msgid ""
+"Turn turtle left by *angle* units.  (Units are by default degrees, but can "
+"be set via the :func:`degrees` and :func:`radians` functions.)  Angle "
+"orientation depends on the turtle mode, see :func:`mode`."
+msgstr ""
+"Поверніть черепаху ліворуч на *кут*. (За замовчуванням одиницями є градуси, "
+"але їх можна встановити за допомогою функцій :func:`degrees` і :func:"
+"`radians`.) Кутова орієнтація залежить від режиму черепахи, див. :func:"
+"`mode`."
+
+msgid "a number or a pair/vector of numbers"
+msgstr "число або пара/вектор чисел"
+
+msgid "a number or ``None``"
+msgstr "число або ``Жодного``"
+
+msgid ""
+"If *y* is ``None``, *x* must be a pair of coordinates or a :class:`Vec2D` (e."
+"g. as returned by :func:`pos`)."
+msgstr ""
+"Якщо *y* має значення ``None``, *x* має бути парою координат або :class:"
+"`Vec2D` (наприклад, як повернуто :func:`pos`)."
+
+msgid ""
+"Move turtle to an absolute position.  If the pen is down, draw line.  Do not "
+"change the turtle's orientation."
+msgstr ""
+"Перемістіть черепаху в абсолютне положення. Якщо ручка опущена, намалюйте "
+"лінію. Не змінюйте орієнтацію черепахи."
+
+msgid ""
+"Set the turtle's first coordinate to *x*, leave second coordinate unchanged."
+msgstr "Встановіть першу координату черепахи на *x*, другу залиште без змін."
+
+msgid ""
+"Set the turtle's second coordinate to *y*, leave first coordinate unchanged."
+msgstr ""
+"Встановіть другу координату черепахи на *y*, залиште першу координату без "
+"змін."
+
+msgid ""
+"Set the orientation of the turtle to *to_angle*.  Here are some common "
+"directions in degrees:"
+msgstr ""
+"Встановіть орієнтацію черепахи на *to_angle*. Ось кілька поширених напрямків "
+"у градусах:"
+
+msgid "standard mode"
+msgstr "стандартний режим"
+
+msgid "logo mode"
+msgstr "режим логотипу"
+
+msgid "0 - east"
+msgstr "0 - схід"
+
+msgid "0 - north"
+msgstr "0 - північ"
+
+msgid "90 - north"
+msgstr "90 - півн"
+
+msgid "90 - east"
+msgstr "90 - сх"
+
+msgid "180 - west"
+msgstr "180 - зах"
+
+msgid "180 - south"
+msgstr "180 - півд"
+
+msgid "270 - south"
+msgstr "270 - півд"
+
+msgid "270 - west"
+msgstr "270 - зах"
+
+msgid ""
+"Move turtle to the origin -- coordinates (0,0) -- and set its heading to its "
+"start-orientation (which depends on the mode, see :func:`mode`)."
+msgstr ""
+"Перемістіть черепаху в початкову точку -- координати (0,0) -- і встановіть "
+"її напрям на початкову орієнтацію (яка залежить від режиму, див. :func:"
+"`mode`)."
+
+msgid "a number (or ``None``)"
+msgstr "число (або ``Жодного``)"
+
+msgid "an integer (or ``None``)"
+msgstr "ціле число (або ``Жодного``)"
+
+msgid ""
+"Draw a circle with given *radius*.  The center is *radius* units left of the "
+"turtle; *extent* -- an angle -- determines which part of the circle is "
+"drawn.  If *extent* is not given, draw the entire circle.  If *extent* is "
+"not a full circle, one endpoint of the arc is the current pen position.  "
+"Draw the arc in counterclockwise direction if *radius* is positive, "
+"otherwise in clockwise direction.  Finally the direction of the turtle is "
+"changed by the amount of *extent*."
+msgstr ""
+"Накресліть коло із заданим *радіусом*. Центр — *радіус* одиниць ліворуч від "
+"черепахи; *протяжність* -- кут -- визначає, яка частина кола буде "
+"намальована. Якщо *протяжність* не вказано, намалюйте все коло. Якщо "
+"*протяжність* не є повним колом, одна кінцева точка дуги є поточною позицією "
+"пера. Намалюйте дугу проти годинникової стрілки, якщо *радіус* додатний, "
+"інакше – за годинниковою стрілкою. Нарешті, напрямок черепахи змінюється на "
+"величину *протяжності*."
+
+msgid ""
+"As the circle is approximated by an inscribed regular polygon, *steps* "
+"determines the number of steps to use.  If not given, it will be calculated "
+"automatically.  May be used to draw regular polygons."
+msgstr ""
+"Оскільки коло апроксимується вписаним правильним багатокутником, *кроки* "
+"визначають кількість кроків для використання. Якщо не вказано, воно буде "
+"розраховано автоматично. Можна використовувати для малювання правильних "
+"багатокутників."
+
+msgid "an integer >= 1 (if given)"
+msgstr "ціле число >= 1 (якщо задано)"
+
+msgid "a colorstring or a numeric color tuple"
+msgstr "рядок кольорів або числовий кортеж кольорів"
+
+msgid ""
+"Draw a circular dot with diameter *size*, using *color*.  If *size* is not "
+"given, the maximum of pensize+4 and 2*pensize is used."
+msgstr ""
+"Намалюйте круглу точку діаметром *розмір*, використовуючи *колір*. Якщо "
+"*size* не вказано, використовується максимальний розмір pensize+4 і "
+"2*pensize."
+
+msgid ""
+"Stamp a copy of the turtle shape onto the canvas at the current turtle "
+"position.  Return a stamp_id for that stamp, which can be used to delete it "
+"by calling ``clearstamp(stamp_id)``."
+msgstr ""
+"Виштампуйте копію фігури черепахи на полотні в поточній позиції черепахи. "
+"Повертає stamp_id для цього штампа, який можна використати для його "
+"видалення, викликавши ``clearstamp(stamp_id)``."
+
+msgid "an integer, must be return value of previous :func:`stamp` call"
+msgstr ""
+"ціле число, має бути значенням, що повертається попереднім викликом :func:"
+"`stamp`"
+
+msgid "Delete stamp with given *stampid*."
+msgstr "Видалити штамп із заданим *stampid*."
+
+msgid ""
+"Delete all or first/last *n* of turtle's stamps.  If *n* is ``None``, delete "
+"all stamps, if *n* > 0 delete first *n* stamps, else if *n* < 0 delete last "
+"*n* stamps."
+msgstr ""
+"Видалити всі або перші/останні *n* штампів черепахи. Якщо *n* має значення "
+"``None``, видаліть усі позначки, якщо *n* > 0 видаліть перші *n* позначок, "
+"інакше, якщо *n* < 0, видаліть останні *n* позначок."
+
+msgid ""
+"Undo (repeatedly) the last turtle action(s).  Number of available undo "
+"actions is determined by the size of the undobuffer."
+msgstr ""
+"Скасувати (кілька разів) останні дії черепахи. Кількість доступних дій "
+"скасування визначається розміром буфера скасування."
+
+msgid "an integer in the range 0..10 or a speedstring (see below)"
+msgstr "ціле число в діапазоні 0..10 або швидкісний рядок (див. нижче)"
+
+msgid ""
+"Set the turtle's speed to an integer value in the range 0..10.  If no "
+"argument is given, return current speed."
+msgstr ""
+"Встановіть швидкість черепахи на ціле число в діапазоні 0..10. Якщо аргумент "
+"не вказано, повертає поточну швидкість."
+
+msgid ""
+"If input is a number greater than 10 or smaller than 0.5, speed is set to "
+"0.  Speedstrings are mapped to speedvalues as follows:"
+msgstr ""
+"Якщо введення є числом, більшим за 10 або меншим за 0,5, швидкість "
+"встановлюється на 0. Рядки швидкості зіставляються зі значеннями швидкості "
+"таким чином:"
+
+msgid "\"fastest\":  0"
+msgstr "\"найшвидший\": 0"
+
+msgid "\"fast\":  10"
+msgstr "\"швидко\": 10"
+
+msgid "\"normal\":  6"
+msgstr "\"нормальний\": 6"
+
+msgid "\"slow\":  3"
+msgstr "\"повільно\": 3"
+
+msgid "\"slowest\":  1"
+msgstr "\"найповільніший\": 1"
+
+msgid ""
+"Speeds from 1 to 10 enforce increasingly faster animation of line drawing "
+"and turtle turning."
+msgstr ""
+"Швидкості від 1 до 10 забезпечують дедалі швидшу анімацію малювання ліній і "
+"обертання черепахи."
+
+msgid ""
+"Attention: *speed* = 0 means that *no* animation takes place. forward/back "
+"makes turtle jump and likewise left/right make the turtle turn instantly."
+msgstr ""
+"Увага: *швидкість* = 0 означає, що *немає* анімації. вперед/назад змушує "
+"черепаху стрибати, а ліворуч/праворуч змушує черепаху миттєво повертатися."
+
+msgid ""
+"Return the turtle's current location (x,y) (as a :class:`Vec2D` vector)."
+msgstr ""
+"Повертає поточне розташування черепахи (x,y) (як вектор :class:`Vec2D`)."
+
+msgid "a number or a pair/vector of numbers or a turtle instance"
+msgstr "число або пара/вектор чисел або екземпляр черепахи"
+
+msgid "a number if *x* is a number, else ``None``"
+msgstr "число, якщо *x* є числом, інакше ``None``"
+
+msgid ""
+"Return the angle between the line from turtle position to position specified "
+"by (x,y), the vector or the other turtle.  This depends on the turtle's "
+"start orientation which depends on the mode - \"standard\"/\"world\" or "
+"\"logo\"."
+msgstr ""
+"Повертає кут між лінією від положення черепахи до положення, визначеного (x,"
+"y), вектором або іншою черепахою. Це залежить від початкової орієнтації "
+"черепахи, яка залежить від режиму - \"стандартний\"/\"світ\" або \"логотип\"."
+
+msgid "Return the turtle's x coordinate."
+msgstr "Поверніть координату x черепахи."
+
+msgid "Return the turtle's y coordinate."
+msgstr "Поверніть координату y черепахи."
+
+msgid ""
+"Return the turtle's current heading (value depends on the turtle mode, see :"
+"func:`mode`)."
+msgstr ""
+"Повертає поточний заголовок черепахи (значення залежить від режиму черепахи, "
+"див. :func:`mode`)."
+
+msgid ""
+"Return the distance from the turtle to (x,y), the given vector, or the given "
+"other turtle, in turtle step units."
+msgstr ""
+"Повертає відстань від черепахи до (x,y), даного вектора або даної іншої "
+"черепахи в одиницях кроку черепахи."
+
+msgid "Settings for measurement"
+msgstr "Налаштування для вимірювання"
+
+msgid ""
+"Set angle measurement units, i.e. set number of \"degrees\" for a full "
+"circle. Default value is 360 degrees."
+msgstr ""
+"Встановіть одиниці вимірювання кута, тобто встановіть кількість \"градусів\" "
+"для повного кола. Значення за замовчуванням – 360 градусів."
+
+msgid ""
+"Set the angle measurement units to radians.  Equivalent to ``degrees(2*math."
+"pi)``."
+msgstr ""
+"Установіть одиниці вимірювання кута в радіанах. Еквівалент ``градусів(2*math."
+"pi)``."
+
+msgid "Pull the pen down -- drawing when moving."
+msgstr "Потягніть ручку вниз -- малюйте під час руху."
+
+msgid "Pull the pen up -- no drawing when moving."
+msgstr "Потягніть ручку вгору - під час руху не буде малюнка."
+
+msgid "a positive number"
+msgstr "позитивне число"
+
+msgid ""
+"Set the line thickness to *width* or return it.  If resizemode is set to "
+"\"auto\" and turtleshape is a polygon, that polygon is drawn with the same "
+"line thickness.  If no argument is given, the current pensize is returned."
+msgstr ""
+"Встановіть товщину лінії на *width* або поверніть її. Якщо для параметра "
+"resizemode встановлено значення \"auto\" і turtleshape є багатокутником, цей "
+"багатокутник малюється з тією самою товщиною лінії. Якщо аргумент не задано, "
+"повертається поточний розмір пенсії."
+
+msgid "a dictionary with some or all of the below listed keys"
+msgstr "словник з деякими або всіма перерахованими нижче ключами"
+
+msgid "one or more keyword-arguments with the below listed keys as keywords"
+msgstr ""
+"один або більше ключових аргументів із зазначеними нижче ключами як "
+"ключовими словами"
+
+msgid ""
+"Return or set the pen's attributes in a \"pen-dictionary\" with the "
+"following key/value pairs:"
+msgstr ""
+"Повертайте або встановлюйте атрибути пера в \"словнику пера\" з такими "
+"парами ключ/значення:"
+
+msgid "\"shown\": True/False"
+msgstr "\"показано\": Правда/Невірно"
+
+msgid "\"pendown\": True/False"
+msgstr "\"pendown\": Правда/Невірно"
+
+msgid "\"pencolor\": color-string or color-tuple"
+msgstr "\"pencolor\": кольоровий рядок або колірний кортеж"
+
+msgid "\"fillcolor\": color-string or color-tuple"
+msgstr "\"fillcolor\": кольоровий рядок або колірний кортеж"
+
+msgid "\"pensize\": positive number"
+msgstr "\"pensize\": позитивне число"
+
+msgid "\"speed\": number in range 0..10"
+msgstr "\"швидкість\": число в діапазоні 0..10"
+
+msgid "\"resizemode\": \"auto\" or \"user\" or \"noresize\""
+msgstr "\"resizemode\": \"auto\" або \"user\" або \"noresize\""
+
+msgid "\"stretchfactor\": (positive number, positive number)"
+msgstr "\"stretchfactor\": (додатне число, додатне число)"
+
+msgid "\"outline\": positive number"
+msgstr "\"контур\": позитивне число"
+
+msgid "\"tilt\": number"
+msgstr "\"нахил\": число"
+
+msgid ""
+"This dictionary can be used as argument for a subsequent call to :func:`pen` "
+"to restore the former pen-state.  Moreover one or more of these attributes "
+"can be provided as keyword-arguments.  This can be used to set several pen "
+"attributes in one statement."
+msgstr ""
+"Цей словник можна використовувати як аргумент для наступного виклику :func:"
+"`pen` для відновлення попереднього стану пера. Крім того, один або декілька "
+"з цих атрибутів можна надати як ключові аргументи. Це можна використовувати "
+"для встановлення кількох атрибутів пера в одному операторі."
+
+msgid "Return ``True`` if pen is down, ``False`` if it's up."
+msgstr "Повертає ``True``, якщо ручка опущена, ``False``, якщо вона піднята."
+
+msgid "Return or set the pencolor."
+msgstr "Повернути або встановити колір пера."
+
+msgid "Four input formats are allowed:"
+msgstr "Дозволено чотири формати введення:"
+
+msgid "``pencolor()``"
+msgstr "``pencolor()``"
+
+msgid ""
+"Return the current pencolor as color specification string or as a tuple (see "
+"example).  May be used as input to another color/pencolor/fillcolor call."
+msgstr ""
+"Повертає поточний колір пера як рядок специфікації кольору або як кортеж "
+"(див. приклад). Може використовуватися як вхідні дані для іншого виклику "
+"color/pencolor/fillcolor."
+
+msgid "``pencolor(colorstring)``"
+msgstr "pencolor(кольоровий рядок)."
+
+msgid ""
+"Set pencolor to *colorstring*, which is a Tk color specification string, "
+"such as ``\"red\"``, ``\"yellow\"``, or ``\"#33cc8c\"``."
+msgstr ""
+"Встановіть колір пера на *colorstring*, який є рядком специфікації кольору "
+"Tk, наприклад ``\"red\"``, ``\"yellow\"`` або ``\"#33cc8c\"``."
+
+msgid "``pencolor((r, g, b))``"
+msgstr "`` pencolor ((r, g, b))``"
+
+msgid ""
+"Set pencolor to the RGB color represented by the tuple of *r*, *g*, and "
+"*b*.  Each of *r*, *g*, and *b* must be in the range 0..colormode, where "
+"colormode is either 1.0 or 255 (see :func:`colormode`)."
+msgstr ""
+"Встановіть колір пера на колір RGB, представлений кортежем *r*, *g* і *b*. "
+"Кожне з *r*, *g* і *b* має бути в діапазоні 0..colormode, де colormode "
+"дорівнює 1,0 або 255 (див. :func:`colormode`)."
+
+msgid "``pencolor(r, g, b)``"
+msgstr "``колір пера(r, g, b)``"
+
+msgid ""
+"Set pencolor to the RGB color represented by *r*, *g*, and *b*.  Each of "
+"*r*, *g*, and *b* must be in the range 0..colormode."
+msgstr ""
+"Встановіть колір пера на колір RGB, представлений *r*, *g* і *b*. Кожне з "
+"*r*, *g* і *b* має бути в діапазоні 0..colormode."
+
+msgid ""
+"If turtleshape is a polygon, the outline of that polygon is drawn with the "
+"newly set pencolor."
+msgstr ""
+"Якщо turtleshape є багатокутником, контур цього багатокутника малюється "
+"щойно встановленим кольором пера."
+
+msgid "Return or set the fillcolor."
+msgstr "Повернути або встановити колір заливки."
+
+msgid "``fillcolor()``"
+msgstr "``fillcolor()``"
+
+msgid ""
+"Return the current fillcolor as color specification string, possibly in "
+"tuple format (see example).  May be used as input to another color/pencolor/"
+"fillcolor call."
+msgstr ""
+"Повертає поточний колір заливки як рядок специфікації кольору, можливо, у "
+"форматі кортежу (див. приклад). Може використовуватися як вхідні дані для "
+"іншого виклику color/pencolor/fillcolor."
+
+msgid "``fillcolor(colorstring)``"
+msgstr "``fillcolor(colorstring)``"
+
+msgid ""
+"Set fillcolor to *colorstring*, which is a Tk color specification string, "
+"such as ``\"red\"``, ``\"yellow\"``, or ``\"#33cc8c\"``."
+msgstr ""
+"Встановіть колір заливки на *colorstring*, який є рядком специфікації "
+"кольору Tk, наприклад ``\"red\"``, ``\"yellow\"`` або ``\"#33cc8c\"``."
+
+msgid "``fillcolor((r, g, b))``"
+msgstr "``fillcolor((r, g, b))``"
+
+msgid ""
+"Set fillcolor to the RGB color represented by the tuple of *r*, *g*, and "
+"*b*.  Each of *r*, *g*, and *b* must be in the range 0..colormode, where "
+"colormode is either 1.0 or 255 (see :func:`colormode`)."
+msgstr ""
+"Встановіть колір заливки на колір RGB, представлений кортежем *r*, *g* і "
+"*b*. Кожне з *r*, *g* і *b* має бути в діапазоні 0..colormode, де colormode "
+"дорівнює 1,0 або 255 (див. :func:`colormode`)."
+
+msgid "``fillcolor(r, g, b)``"
+msgstr "``fillcolor(r, g, b)``"
+
+msgid ""
+"Set fillcolor to the RGB color represented by *r*, *g*, and *b*.  Each of "
+"*r*, *g*, and *b* must be in the range 0..colormode."
+msgstr ""
+"Встановіть колір заливки на колір RGB, представлений *r*, *g* і *b*. Кожне з "
+"*r*, *g* і *b* має бути в діапазоні 0..colormode."
+
+msgid ""
+"If turtleshape is a polygon, the interior of that polygon is drawn with the "
+"newly set fillcolor."
+msgstr ""
+"Якщо turtleshape є багатокутником, внутрішня частина цього багатокутника "
+"буде намальована новим кольором заливки."
+
+msgid "Return or set pencolor and fillcolor."
+msgstr "Повернути або встановити колір пера та колір заливки."
+
+msgid ""
+"Several input formats are allowed.  They use 0 to 3 arguments as follows:"
+msgstr ""
+"Допускається кілька форматів введення. Вони використовують від 0 до 3 "
+"аргументів наступним чином:"
+
+msgid "``color()``"
+msgstr "``колір()``"
+
+msgid ""
+"Return the current pencolor and the current fillcolor as a pair of color "
+"specification strings or tuples as returned by :func:`pencolor` and :func:"
+"`fillcolor`."
+msgstr ""
+"Повертає поточний колір пера та поточний колір заливки як пару рядків "
+"специфікації кольору або кортежів, які повертає :func:`pencolor` і :func:"
+"`fillcolor`."
+
+msgid "``color(colorstring)``, ``color((r,g,b))``, ``color(r,g,b)``"
+msgstr "``color(colorstring)``, ``color((r,g,b))``, ``color(r,g,b)``"
+
+msgid ""
+"Inputs as in :func:`pencolor`, set both, fillcolor and pencolor, to the "
+"given value."
+msgstr ""
+"Вхідні дані, як у :func:`pencolor`, встановіть для обох, заливки та кольору "
+"пера, вказане значення."
+
+msgid ""
+"``color(colorstring1, colorstring2)``, ``color((r1,g1,b1), (r2,g2,b2))``"
+msgstr ""
+"``color(colorstring1, colorstring2)``, ``color((r1,g1,b1), (r2,g2,b2))``"
+
+msgid ""
+"Equivalent to ``pencolor(colorstring1)`` and ``fillcolor(colorstring2)`` and "
+"analogously if the other input format is used."
+msgstr ""
+"Еквівалент ``pencolor(colorstring1)`` і ``fillcolor(colorstring2)`` і "
+"аналогічно, якщо використовується інший формат введення."
+
+msgid ""
+"If turtleshape is a polygon, outline and interior of that polygon is drawn "
+"with the newly set colors."
+msgstr ""
+"Якщо turtleshape є багатокутником, контур і внутрішня частина цього "
+"багатокутника малюються новими кольорами."
+
+msgid "See also: Screen method :func:`colormode`."
+msgstr "Дивіться також: Екранний метод :func:`colormode`."
+
+msgid "Return fillstate (``True`` if filling, ``False`` else)."
+msgstr "Повернути fillstate (``True``, якщо заповнення, ``False`` інакше)."
+
+msgid "To be called just before drawing a shape to be filled."
+msgstr ""
+"Викликається безпосередньо перед малюванням форми, яку потрібно заповнити."
+
+msgid "Fill the shape drawn after the last call to :func:`begin_fill`."
+msgstr ""
+"Заповніть форму, намальовану після останнього виклику :func:`begin_fill`."
+
+msgid ""
+"Whether or not overlap regions for self-intersecting polygons or multiple "
+"shapes are filled depends on the operating system graphics, type of overlap, "
+"and number of overlaps.  For example, the Turtle star above may be either "
+"all yellow or have some white regions."
+msgstr ""
+"Чи заповнюються області перекриття для багатокутників, що перетинаються між "
+"собою, або кількох фігур, залежить від графіки операційної системи, типу "
+"перекриття та кількості перекривань. Наприклад, зірка Черепахи вище може "
+"бути або повністю жовтою, або мати деякі білі області."
+
+msgid ""
+"Delete the turtle's drawings from the screen, re-center the turtle and set "
+"variables to the default values."
+msgstr ""
+"Видаліть малюнки черепахи з екрана, знову відцентруйте черепаху та "
+"встановіть для змінних значення за замовчуванням."
+
+msgid ""
+"Delete the turtle's drawings from the screen.  Do not move turtle.  State "
+"and position of the turtle as well as drawings of other turtles are not "
+"affected."
+msgstr ""
+"Видаліть малюнки черепахи з екрана. Не рухай черепаху. Стан і положення "
+"черепахи, а також малюнки інших черепах не впливають."
+
+msgid "object to be written to the TurtleScreen"
+msgstr "об’єкт для запису на TurtleScreen"
+
+msgid "True/False"
+msgstr "Правда/Неправда"
+
+msgid "one of the strings \"left\", \"center\" or right\""
+msgstr "один із рядків \"зліва\", \"по центру\" або справа\""
+
+msgid "a triple (fontname, fontsize, fonttype)"
+msgstr "трійка (назва шрифту, розмір шрифту, тип шрифту)"
+
+msgid ""
+"Write text - the string representation of *arg* - at the current turtle "
+"position according to *align* (\"left\", \"center\" or \"right\") and with "
+"the given font.  If *move* is true, the pen is moved to the bottom-right "
+"corner of the text.  By default, *move* is ``False``."
+msgstr ""
+"Напишіть текст - рядкове представлення *arg* - у поточній позиції черепашки "
+"відповідно до *align* (\"left\", \"center\" або \"right\") і з указаним "
+"шрифтом. Якщо *move* має значення true, перо переміщується в нижній правий "
+"кут тексту. За замовчуванням *move* має значення ``False``."
+
+msgid ""
+"Make the turtle invisible.  It's a good idea to do this while you're in the "
+"middle of doing some complex drawing, because hiding the turtle speeds up "
+"the drawing observably."
+msgstr ""
+"Зробіть черепаху невидимою. Бажано робити це, поки ви виконуєте якийсь "
+"складний малюнок, тому що приховання черепахи значно прискорює малювання."
+
+msgid "Make the turtle visible."
+msgstr "Зробіть черепаху видимою."
+
+msgid "Return ``True`` if the Turtle is shown, ``False`` if it's hidden."
+msgstr ""
+"Повертає ``True``, якщо черепаха показана, ``False``, якщо вона прихована."
+
+msgid "a string which is a valid shapename"
+msgstr "рядок, який є дійсним іменем форми"
+
+msgid ""
+"Set turtle shape to shape with given *name* or, if name is not given, return "
+"name of current shape.  Shape with *name* must exist in the TurtleScreen's "
+"shape dictionary.  Initially there are the following polygon shapes: "
+"\"arrow\", \"turtle\", \"circle\", \"square\", \"triangle\", \"classic\".  "
+"To learn about how to deal with shapes see Screen method :func:"
+"`register_shape`."
+msgstr ""
+"Установити фігуру черепахи у форму з заданим *ім’ям* або, якщо ім’я не "
+"вказано, повернути назву поточної форми. Фігура з *ім’ям* має існувати в "
+"словнику форм TurtleScreen. Спочатку є такі форми багатокутників: "
+"\"стрілка\", \"черепаха\", \"коло\", \"квадрат\", \"трикутник\", "
+"\"класика\". Щоб дізнатися про те, як працювати з фігурами, перегляньте "
+"метод екрану :func:`register_shape`."
+
+msgid "one of the strings \"auto\", \"user\", \"noresize\""
+msgstr "один із рядків \"auto\", \"user\", \"noresize\""
+
+msgid ""
+"Set resizemode to one of the values: \"auto\", \"user\", \"noresize\".  If "
+"*rmode* is not given, return current resizemode.  Different resizemodes have "
+"the following effects:"
+msgstr ""
+"Встановіть для режиму зміни розміру одне зі значень: \"авто\", "
+"\"користувач\", \"норесайз\". Якщо *rmode* не вказано, повертає поточний "
+"режим зміни розміру. Різні режими зміни розміру мають такі ефекти:"
+
+msgid ""
+"\"auto\": adapts the appearance of the turtle corresponding to the value of "
+"pensize."
+msgstr ""
+"\"авто\": адаптує зовнішній вигляд черепахи відповідно до значення pensize."
+
+msgid ""
+"\"user\": adapts the appearance of the turtle according to the values of "
+"stretchfactor and outlinewidth (outline), which are set by :func:`shapesize`."
+msgstr ""
+"\"user\": адаптує зовнішній вигляд черепахи відповідно до значень "
+"stretchfactor і outlinewidth (контур), які встановлюються :func:`shapesize`."
+
+msgid "\"noresize\": no adaption of the turtle's appearance takes place."
+msgstr "\"noresize\": адаптація зовнішнього вигляду черепахи не відбувається."
+
+msgid ""
+"``resizemode(\"user\")`` is called by :func:`shapesize` when used with "
+"arguments."
+msgstr ""
+"``resizemode(\"user\")`` викликається :func:`shapesize` при використанні з "
+"аргументами."
+
+msgid "positive number"
+msgstr "позитивне число"
+
+msgid ""
+"Return or set the pen's attributes x/y-stretchfactors and/or outline.  Set "
+"resizemode to \"user\".  If and only if resizemode is set to \"user\", the "
+"turtle will be displayed stretched according to its stretchfactors: "
+"*stretch_wid* is stretchfactor perpendicular to its orientation, "
+"*stretch_len* is stretchfactor in direction of its orientation, *outline* "
+"determines the width of the shapes's outline."
+msgstr ""
+"Повернути або встановити атрибути пера x/y-фактори розтягування та/або "
+"контур. Встановіть режим зміни розміру на \"користувач\". Якщо і тільки якщо "
+"resizemode встановлено на \"user\", черепаха відображатиметься розтягнутою "
+"відповідно до її коефіцієнтів розтягування: *stretch_wid* — це коефіцієнт "
+"розтягування, перпендикулярний до її орієнтації, *stretch_len* — це "
+"коефіцієнт розтягування в напрямку її орієнтації, *outline* визначає ширину "
+"контурів фігур."
+
+msgid "number (optional)"
+msgstr "номер (необов'язково)"
+
+msgid ""
+"Set or return the current shearfactor. Shear the turtleshape according to "
+"the given shearfactor shear, which is the tangent of the shear angle. Do "
+"*not* change the turtle's heading (direction of movement). If shear is not "
+"given: return the current shearfactor, i. e. the tangent of the shear angle, "
+"by which lines parallel to the heading of the turtle are sheared."
+msgstr ""
+"Встановити або повернути поточний коефіцієнт зсуву. Зрізайте форму черепахи "
+"відповідно до заданого коефіцієнта зсуву, який є тангенсом кута зсуву. *Не* "
+"змінюйте курс (напрямок руху) черепахи. Якщо зсув не вказано: повернути "
+"поточний коефіцієнт зсуву, тобто. д. тангенс кута зсуву, за яким зрізаються "
+"лінії, паралельні курсу черепахи."
+
+msgid ""
+"Rotate the turtleshape by *angle* from its current tilt-angle, but do *not* "
+"change the turtle's heading (direction of movement)."
+msgstr ""
+"Поверніть форму черепахи на *кут* від її поточного кута нахилу, але *не* "
+"змінюйте напрям черепахи (напрямок руху)."
+
+msgid ""
+"Rotate the turtleshape to point in the direction specified by *angle*, "
+"regardless of its current tilt-angle.  *Do not* change the turtle's heading "
+"(direction of movement)."
+msgstr ""
+"Обертайте фігуру черепахи, щоб вона вказувала в напрямку, визначеному "
+"*кутом*, незалежно від її поточного кута нахилу. *Не* змінюйте курс "
+"(напрямок руху) черепахи."
+
+msgid "a number (optional)"
+msgstr "число (необов'язково)"
+
+msgid ""
+"Set or return the current tilt-angle. If angle is given, rotate the "
+"turtleshape to point in the direction specified by angle, regardless of its "
+"current tilt-angle. Do *not* change the turtle's heading (direction of "
+"movement). If angle is not given: return the current tilt-angle, i. e. the "
+"angle between the orientation of the turtleshape and the heading of the "
+"turtle (its direction of movement)."
+msgstr ""
+"Встановити або повернути поточний кут нахилу. Якщо задано кут, обертайте "
+"фігуру черепахи в напрямку, визначеному кутом, незалежно від її поточного "
+"кута нахилу. *Не* змінюйте курс (напрямок руху) черепахи. Якщо кут не "
+"вказано: повернути поточний кут нахилу, тобто. д. кут між орієнтацією фігури "
+"черепахи та курсом черепахи (напрямок її руху)."
+
+msgid "Set or return the current transformation matrix of the turtle shape."
+msgstr "Встановити або повернути поточну матрицю перетворення фігури черепахи."
+
+msgid ""
+"If none of the matrix elements are given, return the transformation matrix "
+"as a tuple of 4 elements. Otherwise set the given elements and transform the "
+"turtleshape according to the matrix consisting of first row t11, t12 and "
+"second row t21, t22. The determinant t11 * t22 - t12 * t21 must not be zero, "
+"otherwise an error is raised. Modify stretchfactor, shearfactor and "
+"tiltangle according to the given matrix."
+msgstr ""
+"Якщо жоден з елементів матриці не задано, поверніть матрицю перетворення як "
+"кортеж із 4 елементів. В іншому випадку встановіть задані елементи та "
+"перетворіть форму черепахи відповідно до матриці, що складається з першого "
+"рядка t11, t12 і другого рядка t21, t22. Визначник t11 * t22 - t12 * t21 не "
+"повинен дорівнювати нулю, інакше виникає помилка. Змініть коефіцієнт "
+"розтягування, коефіцієнт зсуву та кут нахилу відповідно до заданої матриці."
+
+msgid ""
+"Return the current shape polygon as tuple of coordinate pairs. This can be "
+"used to define a new shape or components of a compound shape."
+msgstr ""
+"Повертає поточний полігон форми як кортеж пар координат. Це можна "
+"використовувати для визначення нової форми або компонентів складеної форми."
+
+msgid ""
+"a function with two arguments which will be called with the coordinates of "
+"the clicked point on the canvas"
+msgstr ""
+"функція з двома аргументами, яка буде викликана з координатами вибраної "
+"точки на полотні"
+
+msgid "number of the mouse-button, defaults to 1 (left mouse button)"
+msgstr "номер кнопки миші, за замовчуванням 1 (ліва кнопка миші)"
+
+msgid ""
+"``True`` or ``False`` -- if ``True``, a new binding will be added, otherwise "
+"it will replace a former binding"
+msgstr ""
+"``True`` або ``False`` - якщо ``True``, буде додано нове прив'язування, "
+"інакше воно замінить попереднє прив'язування"
+
+msgid ""
+"Bind *fun* to mouse-click events on this turtle.  If *fun* is ``None``, "
+"existing bindings are removed.  Example for the anonymous turtle, i.e. the "
+"procedural way:"
+msgstr ""
+"Прив’яжіть *fun* до подій клацання миші на цій черепахі. Якщо *fun* має "
+"значення ``None``, існуючі прив’язки видаляються. Приклад для анонімної "
+"черепахи, тобто процедурний спосіб:"
+
+msgid ""
+"Bind *fun* to mouse-button-release events on this turtle.  If *fun* is "
+"``None``, existing bindings are removed."
+msgstr ""
+"Прив’яжіть *fun* до подій натискання кнопки миші на цій черепашці. Якщо "
+"*fun* має значення ``None``, існуючі прив’язки видаляються."
+
+msgid ""
+"Bind *fun* to mouse-move events on this turtle.  If *fun* is ``None``, "
+"existing bindings are removed."
+msgstr ""
+"Прив’яжіть *fun* до подій руху миші на цій черепахі. Якщо *fun* має значення "
+"``None``, існуючі прив’язки видаляються."
+
+msgid ""
+"Remark: Every sequence of mouse-move-events on a turtle is preceded by a "
+"mouse-click event on that turtle."
+msgstr ""
+"Примітка: кожній послідовності подій переміщення миші на черепахі передує "
+"подія клацання миші на цій черепашці."
+
+msgid ""
+"Subsequently, clicking and dragging the Turtle will move it across the "
+"screen thereby producing handdrawings (if pen is down)."
+msgstr ""
+"Згодом, клацання та перетягування Черепахи переміщуватиме її по екрану, "
+"таким чином створюючи малюнки (якщо ручка опущена)."
+
+msgid ""
+"Start recording the vertices of a polygon.  Current turtle position is first "
+"vertex of polygon."
+msgstr ""
+"Почніть записувати вершини багатокутника. Поточна позиція черепахи є першою "
+"вершиною багатокутника."
+
+msgid ""
+"Stop recording the vertices of a polygon.  Current turtle position is last "
+"vertex of polygon.  This will be connected with the first vertex."
+msgstr ""
+"Припинення запису вершин багатокутника. Поточна позиція черепахи є останньою "
+"вершиною багатокутника. Це буде пов'язано з першою вершиною."
+
+msgid "Return the last recorded polygon."
+msgstr "Повернути останній записаний багатокутник."
+
+msgid ""
+"Create and return a clone of the turtle with same position, heading and "
+"turtle properties."
+msgstr ""
+"Створити та повернути клон черепахи з такими ж властивостями положення, "
+"заголовка та черепахи."
+
+msgid ""
+"Return the Turtle object itself.  Only reasonable use: as a function to "
+"return the \"anonymous turtle\":"
+msgstr ""
+"Поверніть сам об'єкт Черепаха. Лише розумне використання: як функція для "
+"повернення \"анонімної черепахи\":"
+
+msgid ""
+"Return the :class:`TurtleScreen` object the turtle is drawing on. "
+"TurtleScreen methods can then be called for that object."
+msgstr ""
+"Повертає об’єкт :class:`TurtleScreen`, на якому малює черепаха. Тоді для "
+"цього об’єкта можна викликати методи TurtleScreen."
+
+msgid "an integer or ``None``"
+msgstr "ціле число або ``Жодного``"
+
+msgid ""
+"Set or disable undobuffer.  If *size* is an integer, an empty undobuffer of "
+"given size is installed.  *size* gives the maximum number of turtle actions "
+"that can be undone by the :func:`undo` method/function.  If *size* is "
+"``None``, the undobuffer is disabled."
+msgstr ""
+"Встановити або вимкнути undobuffer. Якщо *size* є цілим числом, "
+"встановлюється порожній undobuffer заданого розміру. *size* визначає "
+"максимальну кількість дій черепахи, які можна скасувати за допомогою методу/"
+"функції :func:`undo`. Якщо *size* має значення ``None``, undobuffer вимкнено."
+
+msgid "Return number of entries in the undobuffer."
+msgstr "Повертає кількість записів у undobuffer."
+
+msgid "Compound shapes"
+msgstr "Складені форми"
+
+msgid ""
+"To use compound turtle shapes, which consist of several polygons of "
+"different color, you must use the helper class :class:`Shape` explicitly as "
+"described below:"
+msgstr ""
+"Щоб використовувати складені форми черепахи, які складаються з кількох "
+"багатокутників різного кольору, ви повинні використовувати допоміжний клас :"
+"class:`Shape` явно, як описано нижче:"
+
+msgid "Create an empty Shape object of type \"compound\"."
+msgstr "Створіть порожній об'єкт Shape типу \"compound\"."
+
+msgid ""
+"Add as many components to this object as desired, using the :meth:"
+"`addcomponent` method."
+msgstr ""
+"Додайте скільки завгодно компонентів до цього об’єкта за допомогою методу :"
+"meth:`addcomponent`."
+
+msgid "For example:"
+msgstr "Наприклад:"
+
+msgid "Now add the Shape to the Screen's shapelist and use it:"
+msgstr "Тепер додайте форму до списку форм екрана та використовуйте її:"
+
+msgid ""
+"The :class:`Shape` class is used internally by the :func:`register_shape` "
+"method in different ways.  The application programmer has to deal with the "
+"Shape class *only* when using compound shapes like shown above!"
+msgstr ""
+"Клас :class:`Shape` використовується внутрішньо методом :func:"
+"`register_shape` різними способами. Програміст прикладної програми має "
+"працювати з класом Shape *тільки* під час використання складених фігур, як "
+"показано вище!"
+
+msgid "Methods of TurtleScreen/Screen and corresponding functions"
+msgstr "Методи TurtleScreen/Screen та відповідні функції"
+
+msgid ""
+"Most of the examples in this section refer to a TurtleScreen instance called "
+"``screen``."
+msgstr ""
+"Більшість прикладів у цьому розділі стосуються екземпляра TurtleScreen під "
+"назвою ``screen``."
+
+msgid ""
+"a color string or three numbers in the range 0..colormode or a 3-tuple of "
+"such numbers"
+msgstr ""
+"кольоровий рядок або три числа в діапазоні 0..colormode або 3-кортеж таких "
+"чисел"
+
+msgid "Set or return background color of the TurtleScreen."
+msgstr "Встановити або повернути фоновий колір TurtleScreen."
+
+msgid "a string, name of a gif-file or ``\"nopic\"``, or ``None``"
+msgstr "рядок, назва gif-файлу або ``\"nopic\"``, або ``None``"
+
+msgid ""
+"Set background image or return name of current backgroundimage.  If "
+"*picname* is a filename, set the corresponding image as background.  If "
+"*picname* is ``\"nopic\"``, delete background image, if present.  If "
+"*picname* is ``None``, return the filename of the current backgroundimage. ::"
+msgstr ""
+"Установити фонове зображення або повернути назву поточного фонового "
+"зображення. Якщо *picname* є назвою файлу, встановіть відповідне зображення "
+"як фонове зображення. Якщо *picname* має значення ``\"nopic\"``, видаліть "
+"фонове зображення, якщо воно є. Якщо *picname* має значення ``None``, "
+"повертає назву файлу поточного фонового зображення. ::"
+
+msgid ""
+"This TurtleScreen method is available as a global function only under the "
+"name ``clearscreen``.  The global function ``clear`` is a different one "
+"derived from the Turtle method ``clear``."
+msgstr ""
+"Цей метод TurtleScreen доступний як глобальна функція лише під назвою "
+"``clearscreen``. Глобальна функція ``clear`` є іншою, похідною від методу "
+"Turtle ``clear``."
+
+msgid ""
+"Delete all drawings and all turtles from the TurtleScreen.  Reset the now "
+"empty TurtleScreen to its initial state: white background, no background "
+"image, no event bindings and tracing on."
+msgstr ""
+"Видаліть усі малюнки та всіх черепах із TurtleScreen. Скиньте тепер порожній "
+"TurtleScreen до початкового стану: білий фон, без фонового зображення, без "
+"прив’язок подій і трасування."
+
+msgid ""
+"This TurtleScreen method is available as a global function only under the "
+"name ``resetscreen``.  The global function ``reset`` is another one derived "
+"from the Turtle method ``reset``."
+msgstr ""
+"Цей метод TurtleScreen доступний як глобальна функція лише під назвою "
+"``resetscreen``. Глобальна функція ``reset`` є ще однією похідною від методу "
+"Turtle ``reset``."
+
+msgid "Reset all Turtles on the Screen to their initial state."
+msgstr "Скинути всіх Черепашок на екрані до початкового стану."
+
+msgid "positive integer, new width of canvas in pixels"
+msgstr "додатне ціле число, нова ширина полотна в пікселях"
+
+msgid "positive integer, new height of canvas in pixels"
+msgstr "натуральне число, нова висота полотна в пікселях"
+
+msgid "colorstring or color-tuple, new background color"
+msgstr "рядок кольорів або кортеж кольорів, новий колір тла"
+
+msgid ""
+"If no arguments are given, return current (canvaswidth, canvasheight).  Else "
+"resize the canvas the turtles are drawing on.  Do not alter the drawing "
+"window.  To observe hidden parts of the canvas, use the scrollbars. With "
+"this method, one can make visible those parts of a drawing which were "
+"outside the canvas before."
+msgstr ""
+"Якщо аргументи не вказано, повертає поточний (ширина полотна, висота "
+"полотна). Інакше змініть розмір полотна, на якому малюють черепахи. Не "
+"змінюйте вікно малювання. Щоб спостерігати за прихованими частинами полотна, "
+"використовуйте смуги прокрутки. За допомогою цього методу можна зробити "
+"видимими ті частини малюнка, які раніше були за межами полотна."
+
+msgid "e.g. to search for an erroneously escaped turtle ;-)"
+msgstr "напр. шукати черепаху, яка помилково втекла ;-)"
+
+msgid "a number, x-coordinate of lower left corner of canvas"
+msgstr "число, х-координата нижнього лівого кута полотна"
+
+msgid "a number, y-coordinate of lower left corner of canvas"
+msgstr "число, y-координата нижнього лівого кута полотна"
+
+msgid "a number, x-coordinate of upper right corner of canvas"
+msgstr "число, х-координата верхнього правого кута полотна"
+
+msgid "a number, y-coordinate of upper right corner of canvas"
+msgstr "число, y-координата верхнього правого кута полотна"
+
+msgid ""
+"Set up user-defined coordinate system and switch to mode \"world\" if "
+"necessary.  This performs a ``screen.reset()``.  If mode \"world\" is "
+"already active, all drawings are redrawn according to the new coordinates."
+msgstr ""
+"Налаштуйте визначену користувачем систему координат і за необхідності "
+"перейдіть у режим \"світ\". Це виконує ``screen.reset()``. Якщо режим "
+"\"світ\" вже активний, то всі малюнки перемальовуються відповідно до нових "
+"координат."
+
+msgid ""
+"**ATTENTION**: in user-defined coordinate systems angles may appear "
+"distorted."
+msgstr ""
+"**УВАГА**: у визначених користувачем системах координат кути можуть "
+"виглядати спотвореними."
+
+msgid "positive integer"
+msgstr "натуральне число"
+
+msgid ""
+"Set or return the drawing *delay* in milliseconds.  (This is approximately "
+"the time interval between two consecutive canvas updates.)  The longer the "
+"drawing delay, the slower the animation."
+msgstr ""
+"Встановити або повернути *затримку* малювання в мілісекундах. (Це приблизно "
+"інтервал часу між двома послідовними оновленнями полотна.) Що довша затримка "
+"малювання, то повільніша анімація."
+
+msgid "Optional argument:"
+msgstr "Необов'язковий аргумент:"
+
+msgid "nonnegative integer"
+msgstr "ціле невід’ємне число"
+
+msgid ""
+"Turn turtle animation on/off and set delay for update drawings.  If *n* is "
+"given, only each n-th regular screen update is really performed.  (Can be "
+"used to accelerate the drawing of complex graphics.)  When called without "
+"arguments, returns the currently stored value of n. Second argument sets "
+"delay value (see :func:`delay`)."
+msgstr ""
+"Увімкніть/вимкніть анімацію черепахи та встановіть затримку для оновлення "
+"малюнків. Якщо задано *n*, дійсно виконується лише кожне n-е регулярне "
+"оновлення екрана. (Можна використовувати для прискорення малювання складної "
+"графіки.) При виклику без аргументів повертає поточне збережене значення n. "
+"Другий аргумент встановлює значення затримки (див. :func:`delay`)."
+
+msgid "Perform a TurtleScreen update. To be used when tracer is turned off."
+msgstr ""
+"Виконайте оновлення TurtleScreen. Використовується, коли трасувальник "
+"вимкнено."
+
+msgid "See also the RawTurtle/Turtle method :func:`speed`."
+msgstr "Дивіться також метод RawTurtle/Turtle :func:`speed`."
+
+msgid ""
+"Set focus on TurtleScreen (in order to collect key-events).  Dummy arguments "
+"are provided in order to be able to pass :func:`listen` to the onclick "
+"method."
+msgstr ""
+"Встановити фокус на TurtleScreen (щоб збирати ключові події). Фіктивні "
+"аргументи надаються, щоб можна було передати :func:`listen` методу onclick."
+
+msgid "a function with no arguments or ``None``"
+msgstr "функція без аргументів або ``None``"
+
+msgid "a string: key (e.g. \"a\") or key-symbol (e.g. \"space\")"
+msgstr ""
+"рядок: клавіша (наприклад, \"a\") або клавіша-символ (наприклад, \"пробіл\")"
+
+msgid ""
+"Bind *fun* to key-release event of key.  If *fun* is ``None``, event "
+"bindings are removed. Remark: in order to be able to register key-events, "
+"TurtleScreen must have the focus. (See method :func:`listen`.)"
+msgstr ""
+"Прив’яжіть *fun* до події звільнення ключа ключа. Якщо *fun* має значення "
+"``None``, прив’язки подій видаляються. Примітка: щоб мати можливість "
+"реєструвати ключові події, TurtleScreen повинен мати фокус. (Див. метод :"
+"func:`listen`.)"
+
+msgid ""
+"Bind *fun* to key-press event of key if key is given, or to any key-press-"
+"event if no key is given. Remark: in order to be able to register key-"
+"events, TurtleScreen must have focus. (See method :func:`listen`.)"
+msgstr ""
+"Прив’яжіть *fun* до події натискання клавіші key, якщо клавішу вказано, або "
+"до будь-якої події натискання клавіші, якщо клавіша не вказана. Примітка: "
+"щоб мати можливість реєструвати ключові події, TurtleScreen повинен мати "
+"фокус. (Див. метод :func:`listen`.)"
+
+msgid ""
+"Bind *fun* to mouse-click events on this screen.  If *fun* is ``None``, "
+"existing bindings are removed."
+msgstr ""
+"Прив’яжіть *fun* до подій клацання миші на цьому екрані. Якщо *fun* має "
+"значення ``None``, існуючі прив’язки видаляються."
+
+msgid ""
+"Example for a TurtleScreen instance named ``screen`` and a Turtle instance "
+"named ``turtle``:"
+msgstr ""
+"Приклад екземпляра TurtleScreen під назвою ``screen`` і примірника Turtle "
+"під назвою ``turtle``:"
+
+msgid ""
+"This TurtleScreen method is available as a global function only under the "
+"name ``onscreenclick``.  The global function ``onclick`` is another one "
+"derived from the Turtle method ``onclick``."
+msgstr ""
+"Цей метод TurtleScreen доступний як глобальна функція лише під назвою "
+"``onscreenclick``. Глобальна функція ``onclick`` є ще однією похідною від "
+"методу Turtle ``onclick``."
+
+msgid "a function with no arguments"
+msgstr "функція без аргументів"
+
+msgid "a number >= 0"
+msgstr "число >= 0"
+
+msgid "Install a timer that calls *fun* after *t* milliseconds."
+msgstr "Встановіть таймер, який викликає *fun* через *t* мілісекунд."
+
+msgid ""
+"Starts event loop - calling Tkinter's mainloop function. Must be the last "
+"statement in a turtle graphics program. Must *not* be used if a script is "
+"run from within IDLE in -n mode (No subprocess) - for interactive use of "
+"turtle graphics. ::"
+msgstr ""
+"Запускає цикл подій - виклик функції основного циклу Tkinter. Має бути "
+"останнім оператором у графічній програмі Turtle. Його *не* можна "
+"використовувати, якщо сценарій запускається з IDLE у режимі -n (без "
+"підпроцесу) — для інтерактивного використання черепахової графіки. ::"
+
+msgid "string"
+msgstr "рядок"
+
+msgid ""
+"Pop up a dialog window for input of a string. Parameter title is the title "
+"of the dialog window, prompt is a text mostly describing what information to "
+"input. Return the string input. If the dialog is canceled, return "
+"``None``. ::"
+msgstr ""
+"Відкрити діалогове вікно для введення рядка. Заголовок параметра — це "
+"заголовок діалогового вікна, підказка — це текст, який переважно описує, яку "
+"інформацію потрібно ввести. Повернути введений рядок. Якщо діалогове вікно "
+"скасовано, поверніть ``None``. ::"
+
+msgid ""
+"Pop up a dialog window for input of a number. title is the title of the "
+"dialog window, prompt is a text mostly describing what numerical information "
+"to input. default: default value, minval: minimum value for input, maxval: "
+"maximum value for input The number input must be in the range minval .. "
+"maxval if these are given. If not, a hint is issued and the dialog remains "
+"open for correction. Return the number input. If the dialog is canceled,  "
+"return ``None``. ::"
+msgstr ""
+
+msgid "one of the strings \"standard\", \"logo\" or \"world\""
+msgstr "один із рядків \"standard\", \"logo\" або \"world\""
+
+msgid ""
+"Set turtle mode (\"standard\", \"logo\" or \"world\") and perform reset.  If "
+"mode is not given, current mode is returned."
+msgstr ""
+"Встановіть режим черепахи (\"стандартний\", \"логотип\" або \"світ\") і "
+"виконайте скидання. Якщо режим не вказано, повертається поточний режим."
+
+msgid ""
+"Mode \"standard\" is compatible with old :mod:`turtle`.  Mode \"logo\" is "
+"compatible with most Logo turtle graphics.  Mode \"world\" uses user-defined "
+"\"world coordinates\". **Attention**: in this mode angles appear distorted "
+"if ``x/y`` unit-ratio doesn't equal 1."
+msgstr ""
+"Режим \"стандартний\" сумісний зі старим :mod:`turtle`. Режим \"логотип\" "
+"сумісний із більшістю зображень логотипів черепахи. Режим \"світ\" "
+"використовує визначені користувачем \"світові координати\". **Увага**: у "
+"цьому режимі кути виглядають спотвореними, якщо одиничне співвідношення ``x/"
+"y`` не дорівнює 1."
+
+msgid "Mode"
+msgstr "Режим"
+
+msgid "Initial turtle heading"
+msgstr "Початковий курс черепахи"
+
+msgid "positive angles"
+msgstr "позитивні кути"
+
+msgid "\"standard\""
+msgstr "\"стандарт\""
+
+msgid "to the right (east)"
+msgstr "праворуч (схід)"
+
+msgid "counterclockwise"
+msgstr "проти годинникової стрілки"
+
+msgid "\"logo\""
+msgstr "\"логотип\""
+
+msgid "upward    (north)"
+msgstr "вгору (на північ)"
+
+msgid "clockwise"
+msgstr "за годинниковою стрілкою"
+
+msgid "one of the values 1.0 or 255"
+msgstr "одне зі значень 1,0 або 255"
+
+msgid ""
+"Return the colormode or set it to 1.0 or 255.  Subsequently *r*, *g*, *b* "
+"values of color triples have to be in the range 0..\\ *cmode*."
+msgstr ""
+
+msgid ""
+"Return the Canvas of this TurtleScreen.  Useful for insiders who know what "
+"to do with a Tkinter Canvas."
+msgstr ""
+"Поверніть Canvas цього TurtleScreen. Корисно для інсайдерів, які знають, що "
+"робити з Tkinter Canvas."
+
+msgid "Return a list of names of all currently available turtle shapes."
+msgstr "Повертає список імен усіх наявних на даний момент форм черепахи."
+
+msgid "There are three different ways to call this function:"
+msgstr "Існує три різні способи виклику цієї функції:"
+
+msgid ""
+"*name* is the name of a gif-file and *shape* is ``None``: Install the "
+"corresponding image shape. ::"
+msgstr ""
+"*name* — це ім’я gif-файлу, а *shape* — ``None``: установіть відповідну "
+"форму зображення. ::"
+
+msgid ""
+"Image shapes *do not* rotate when turning the turtle, so they do not display "
+"the heading of the turtle!"
+msgstr ""
+"Фігури зображень *не* обертаються під час повороту черепахи, тому вони не "
+"відображають напрямок черепахи!"
+
+msgid ""
+"*name* is an arbitrary string and *shape* is a tuple of pairs of "
+"coordinates: Install the corresponding polygon shape."
+msgstr ""
+"*name* — це довільний рядок, а *shape* — кортеж пар координат: установіть "
+"відповідну форму багатокутника."
+
+msgid ""
+"*name* is an arbitrary string and shape is a (compound) :class:`Shape` "
+"object: Install the corresponding compound shape."
+msgstr ""
+
+msgid ""
+"Add a turtle shape to TurtleScreen's shapelist.  Only thusly registered "
+"shapes can be used by issuing the command ``shape(shapename)``."
+msgstr ""
+"Додайте форму черепахи до списку форм TurtleScreen. Тільки таким чином "
+"зареєстровані форми можна використовувати за допомогою команди "
+"``shape(shapename)``."
+
+msgid "Return the list of turtles on the screen."
+msgstr "Поверніть список черепах на екран."
+
+msgid "Return the height of the turtle window. ::"
+msgstr "Поверніть висоту вікна черепахи. ::"
+
+msgid "Return the width of the turtle window. ::"
+msgstr "Поверніть ширину вікна черепахи. ::"
+
+msgid "Methods specific to Screen, not inherited from TurtleScreen"
+msgstr "Методи, специфічні для Screen, не успадковані від TurtleScreen"
+
+msgid "Shut the turtlegraphics window."
+msgstr "Закрийте вікно turtlegraphics."
+
+msgid "Bind ``bye()`` method to mouse clicks on the Screen."
+msgstr "Прив’яжіть метод ``bye()`` до клацань миші на екрані."
+
+msgid ""
+"If the value \"using_IDLE\" in the configuration dictionary is ``False`` "
+"(default value), also enter mainloop.  Remark: If IDLE with the ``-n`` "
+"switch (no subprocess) is used, this value should be set to ``True`` in :"
+"file:`turtle.cfg`.  In this case IDLE's own mainloop is active also for the "
+"client script."
+msgstr ""
+"Якщо значення \"using_IDLE\" у словнику конфігурації має значення ``False`` "
+"(значення за замовчуванням), також введіть mainloop. Примітка: якщо "
+"використовується IDLE з перемикачем ``-n`` (без підпроцесу), це значення має "
+"бути встановлено на ``True`` у :file:`turtle.cfg`. У цьому випадку основний "
+"цикл IDLE також активний для клієнтського сценарію."
+
+msgid ""
+"Set the size and position of the main window.  Default values of arguments "
+"are stored in the configuration dictionary and can be changed via a :file:"
+"`turtle.cfg` file."
+msgstr ""
+"Встановіть розмір і положення головного вікна. Стандартні значення "
+"аргументів зберігаються у словнику конфігурації та можуть бути змінені за "
+"допомогою файлу :file:`turtle.cfg`."
+
+msgid ""
+"if an integer, a size in pixels, if a float, a fraction of the screen; "
+"default is 50% of screen"
+msgstr ""
+"якщо ціле число, то розмір у пікселях, якщо число з плаваючою точкою, то "
+"частка екрана; за замовчуванням 50% екрана"
+
+msgid ""
+"if an integer, the height in pixels, if a float, a fraction of the screen; "
+"default is 75% of screen"
+msgstr ""
+"якщо ціле число, то висота в пікселях, якщо число з плаваючою точкою, то "
+"частка екрана; за замовчуванням 75% екрана"
+
+msgid ""
+"if positive, starting position in pixels from the left edge of the screen, "
+"if negative from the right edge, if ``None``, center window horizontally"
+msgstr ""
+"якщо позитивне, початкова позиція в пікселях від лівого краю екрана, якщо "
+"негативне від правого краю, якщо ``None``, центр вікна по горизонталі"
+
+msgid ""
+"if positive, starting position in pixels from the top edge of the screen, if "
+"negative from the bottom edge, if ``None``, center window vertically"
+msgstr ""
+"якщо додатне, початкова позиція в пікселях від верхнього краю екрана, якщо "
+"негативне від нижнього краю, якщо ``None``, центр вікна по вертикалі"
+
+msgid "a string that is shown in the titlebar of the turtle graphics window"
+msgstr "рядок, який відображається в рядку заголовка графічного вікна Turtle"
+
+msgid "Set title of turtle window to *titlestring*."
+msgstr "Встановіть назву вікна Turtle на *titlestring*."
+
+msgid "Public classes"
+msgstr "Публічні заняття"
+
+msgid ""
+"a :class:`tkinter.Canvas`, a :class:`ScrolledCanvas` or a :class:"
+"`TurtleScreen`"
+msgstr ""
+":class:`tkinter.Canvas`, :class:`ScrolledCanvas` або :class:`TurtleScreen`"
+
+msgid ""
+"Create a turtle.  The turtle has all methods described above as \"methods of "
+"Turtle/RawTurtle\"."
+msgstr ""
+"Створіть черепаху. Черепаха має всі методи, описані вище як \"методи Turtle/"
+"RawTurtle\"."
+
+msgid ""
+"Subclass of RawTurtle, has the same interface but draws on a default :class:"
+"`Screen` object created automatically when needed for the first time."
+msgstr ""
+"Підклас RawTurtle має той самий інтерфейс, але використовує стандартний "
+"об’єкт :class:`Screen`, створений автоматично, коли це потрібно вперше."
+
+msgid "a :class:`tkinter.Canvas`"
+msgstr "a :class:`tkinter.Canvas`"
+
+msgid ""
+"Provides screen oriented methods like :func:`setbg` etc. that are described "
+"above."
+msgstr ""
+"Надає екранно-орієнтовані методи, як-от :func:`setbg` тощо, описані вище."
+
+msgid ""
+"Subclass of TurtleScreen, with :ref:`four methods added <screenspecific>`."
+msgstr ""
+"Підклас TurtleScreen із :ref:`чотирма доданими методами <screenspecific>`."
+
+msgid ""
+"some Tkinter widget to contain the ScrolledCanvas, i.e. a Tkinter-canvas "
+"with scrollbars added"
+msgstr ""
+"деякий віджет Tkinter, який містить ScrolledCanvas, тобто Tkinter-полотно з "
+"доданими смугами прокрутки"
+
+msgid ""
+"Used by class Screen, which thus automatically provides a ScrolledCanvas as "
+"playground for the turtles."
+msgstr ""
+"Використовується класом Screen, який таким чином автоматично надає "
+"ScrolledCanvas як ігровий майданчик для черепах."
+
+msgid "one of the strings \"polygon\", \"image\", \"compound\""
+msgstr "один із рядків \"polygon\", \"image\", \"compound\""
+
+msgid ""
+"Data structure modeling shapes.  The pair ``(type_, data)`` must follow this "
+"specification:"
+msgstr ""
+"Форми моделювання структури даних. Пара ``(тип_, дані)`` має відповідати цій "
+"специфікації:"
+
+msgid "*type_*"
+msgstr "*тип_*"
+
+msgid "*data*"
+msgstr "*дані*"
+
+msgid "\"polygon\""
+msgstr "\"багатокутник\""
+
+msgid "a polygon-tuple, i.e. a tuple of pairs of coordinates"
+msgstr "полігон-кортеж, тобто кортеж пар координат"
+
+msgid "\"image\""
+msgstr "\"зображення\""
+
+msgid "an image  (in this form only used internally!)"
+msgstr "зображення (у цій формі використовується лише внутрішньо!)"
+
+msgid "\"compound\""
+msgstr "\"з'єднання\""
+
+msgid ""
+"``None`` (a compound shape has to be constructed using the :meth:"
+"`addcomponent` method)"
+msgstr ""
+"``None`` (складена форма має бути створена за допомогою методу :meth:"
+"`addcomponent`)"
+
+msgid "a polygon, i.e. a tuple of pairs of numbers"
+msgstr "багатокутник, тобто кортеж пар чисел"
+
+msgid "a color the *poly* will be filled with"
+msgstr "колір, яким буде заповнено *poly*"
+
+msgid "a color for the poly's outline (if given)"
+msgstr "колір контуру поля (якщо вказано)"
+
+msgid "Example:"
+msgstr "приклад:"
+
+msgid "See :ref:`compoundshapes`."
+msgstr "Дивіться :ref:`compoundshapes`."
+
+msgid ""
+"A two-dimensional vector class, used as a helper class for implementing "
+"turtle graphics.  May be useful for turtle graphics programs too.  Derived "
+"from tuple, so a vector is a tuple!"
+msgstr ""
+"Двовимірний векторний клас, який використовується як допоміжний клас для "
+"реалізації графіки черепахи. Також може бути корисним для графічних програм "
+"черепах. Походить від кортежу, тому вектор є кортежем!"
+
+msgid "Provides (for *a*, *b* vectors, *k* number):"
+msgstr "Надає (для *a*, *b* векторів, *k* числа):"
+
+msgid "``a + b`` vector addition"
+msgstr "``a + b`` додавання вектора"
+
+msgid "``a - b`` vector subtraction"
+msgstr "Віднімання вектора ``a - b``"
+
+msgid "``a * b`` inner product"
+msgstr "``a * b`` скалярний добуток"
+
+msgid "``k * a`` and ``a * k`` multiplication with scalar"
+msgstr "Множення ``k * a`` і ``a * k`` на скаляр"
+
+msgid "``abs(a)`` absolute value of a"
+msgstr "``abs(a)`` абсолютне значення a"
+
+msgid "``a.rotate(angle)`` rotation"
+msgstr "``a.rotate(angle)`` обертання"
+
+msgid "Help and configuration"
+msgstr "Допомога та налаштування"
+
+msgid "How to use help"
+msgstr "Як користуватися довідкою"
+
+msgid ""
+"The public methods of the Screen and Turtle classes are documented "
+"extensively via docstrings.  So these can be used as online-help via the "
+"Python help facilities:"
+msgstr ""
+"Загальнодоступні методи класів Screen і Turtle широко задокументовані в "
+"рядках документації. Тож їх можна використовувати як онлайн-довідку через "
+"засоби довідки Python:"
+
+msgid ""
+"When using IDLE, tooltips show the signatures and first lines of the "
+"docstrings of typed in function-/method calls."
+msgstr ""
+"Під час використання IDLE підказки показують підписи та перші рядки рядків "
+"документації введених викликів функцій/методів."
+
+msgid "Calling :func:`help` on methods or functions displays the docstrings::"
+msgstr ""
+"Виклик :func:`help` для методів або функцій відображає рядки документів::"
+
+msgid ""
+"The docstrings of the functions which are derived from methods have a "
+"modified form::"
+msgstr ""
+"Документаційні рядки функцій, які є похідними від методів, мають змінену "
+"форму:"
+
+msgid ""
+"These modified docstrings are created automatically together with the "
+"function definitions that are derived from the methods at import time."
+msgstr ""
+"Ці змінені рядки документації створюються автоматично разом із визначеннями "
+"функцій, отриманими з методів під час імпорту."
+
+msgid "Translation of docstrings into different languages"
+msgstr "Переклад рядків документів різними мовами"
+
+msgid ""
+"There is a utility to create a dictionary the keys of which are the method "
+"names and the values of which are the docstrings of the public methods of "
+"the classes Screen and Turtle."
+msgstr ""
+"Існує утиліта для створення словника, ключами якого є імена методів, а "
+"значеннями яких є рядки документів відкритих методів класів Screen і Turtle."
+
+msgid "a string, used as filename"
+msgstr "рядок, який використовується як ім'я файлу"
+
+msgid ""
+"Create and write docstring-dictionary to a Python script with the given "
+"filename.  This function has to be called explicitly (it is not used by the "
+"turtle graphics classes).  The docstring dictionary will be written to the "
+"Python script :file:`{filename}.py`.  It is intended to serve as a template "
+"for translation of the docstrings into different languages."
+msgstr ""
+"Створіть і запишіть docstring-dictionary у сценарій Python із вказаною "
+"назвою файлу. Цю функцію потрібно викликати явно (вона не використовується "
+"графічними класами turtle). Словник рядків документів буде записаний у "
+"сценарій Python :file:`{filename}.py`. Він призначений для того, щоб служити "
+"шаблоном для перекладу рядків документів різними мовами."
+
+msgid ""
+"If you (or your students) want to use :mod:`turtle` with online help in your "
+"native language, you have to translate the docstrings and save the resulting "
+"file as e.g. :file:`turtle_docstringdict_german.py`."
+msgstr ""
+"Якщо ви (або ваші студенти) бажаєте використовувати :mod:`turtle` з онлайн-"
+"довідкою вашою рідною мовою, вам потрібно перекласти рядки документації та "
+"зберегти отриманий файл як, напр. :file:`turtle_docstringdict_german.py`."
+
+msgid ""
+"If you have an appropriate entry in your :file:`turtle.cfg` file this "
+"dictionary will be read in at import time and will replace the original "
+"English docstrings."
+msgstr ""
+"Якщо у вашому файлі :file:`turtle.cfg` є відповідний запис, цей словник буде "
+"зчитано під час імпортування та замінить оригінальні англійські рядки "
+"документів."
+
+msgid ""
+"At the time of this writing there are docstring dictionaries in German and "
+"in Italian.  (Requests please to glingl@aon.at.)"
+msgstr ""
+"На момент написання цієї статті існують словники docstring німецькою та "
+"італійською мовами. (Запити надсилайте на glingl@aon.at.)"
+
+msgid "How to configure Screen and Turtles"
+msgstr "Як налаштувати екран і черепахи"
+
+msgid ""
+"The built-in default configuration mimics the appearance and behaviour of "
+"the old turtle module in order to retain best possible compatibility with it."
+msgstr ""
+"Вбудована конфігурація за замовчуванням імітує зовнішній вигляд і поведінку "
+"старого модуля Turtle, щоб зберегти найкращу сумісність із ним."
+
+msgid ""
+"If you want to use a different configuration which better reflects the "
+"features of this module or which better fits to your needs, e.g. for use in "
+"a classroom, you can prepare a configuration file ``turtle.cfg`` which will "
+"be read at import time and modify the configuration according to its "
+"settings."
+msgstr ""
+"Якщо ви хочете використовувати іншу конфігурацію, яка краще відображає "
+"функції цього модуля або яка краще відповідає вашим потребам, напр. для "
+"використання в класі ви можете підготувати файл конфігурації ``turtle.cfg``, "
+"який буде прочитано під час імпорту та змінено конфігурацію відповідно до "
+"його параметрів."
+
+msgid ""
+"The built in configuration would correspond to the following turtle.cfg::"
+msgstr "Вбудована конфігурація відповідатиме наступному turtle.cfg::"
+
+msgid "Short explanation of selected entries:"
+msgstr "Коротке пояснення вибраних записів:"
+
+msgid ""
+"The first four lines correspond to the arguments of the :meth:`Screen.setup` "
+"method."
+msgstr ""
+"Перші чотири рядки відповідають аргументам методу :meth:`Screen.setup`."
+
+msgid ""
+"Line 5 and 6 correspond to the arguments of the method :meth:`Screen."
+"screensize`."
+msgstr "Рядки 5 і 6 відповідають аргументам методу :meth:`Screen.screensize`."
+
+msgid ""
+"*shape* can be any of the built-in shapes, e.g: arrow, turtle, etc.  For "
+"more info try ``help(shape)``."
+msgstr ""
+"*shape* може бути будь-якою вбудованою формою, наприклад: стрілка, черепаха "
+"тощо. Щоб дізнатися більше, спробуйте ``help(shape)``."
+
+msgid ""
+"If you want to use no fillcolor (i.e. make the turtle transparent), you have "
+"to write ``fillcolor = \"\"`` (but all nonempty strings must not have quotes "
+"in the cfg-file)."
+msgstr ""
+"Якщо ви не хочете використовувати колір заливки (тобто зробити черепаху "
+"прозорою), вам потрібно написати ``fillcolor = \"\"`` (але всі непорожні "
+"рядки не повинні містити лапок у файлі cfg)."
+
+msgid ""
+"If you want to reflect the turtle its state, you have to use ``resizemode = "
+"auto``."
+msgstr ""
+"Якщо ви хочете відобразити черепаху в її стані, ви повинні використовувати "
+"``resizemode = auto``."
+
+msgid ""
+"If you set e.g. ``language = italian`` the docstringdict :file:"
+"`turtle_docstringdict_italian.py` will be loaded at import time (if present "
+"on the import path, e.g. in the same directory as :mod:`turtle`."
+msgstr ""
+
+msgid ""
+"The entries *exampleturtle* and *examplescreen* define the names of these "
+"objects as they occur in the docstrings.  The transformation of method-"
+"docstrings to function-docstrings will delete these names from the "
+"docstrings."
+msgstr ""
+"Записи *exampleturtle* і *examplescreen* визначають імена цих об’єктів, як "
+"вони зустрічаються в рядках документації. Трансформація method-docstrings у "
+"function-docstrings видалить ці імена з docstrings."
+
+msgid ""
+"*using_IDLE*: Set this to ``True`` if you regularly work with IDLE and its -"
+"n switch (\"no subprocess\").  This will prevent :func:`exitonclick` to "
+"enter the mainloop."
+msgstr ""
+
+msgid ""
+"There can be a :file:`turtle.cfg` file in the directory where :mod:`turtle` "
+"is stored and an additional one in the current working directory.  The "
+"latter will override the settings of the first one."
+msgstr ""
+"У каталозі, де зберігається :mod:`turtle`, може бути файл :file:`turtle.cfg` "
+"і додатковий у поточному робочому каталозі. Останній замінить налаштування "
+"першого."
+
+msgid ""
+"The :file:`Lib/turtledemo` directory contains a :file:`turtle.cfg` file.  "
+"You can study it as an example and see its effects when running the demos "
+"(preferably not from within the demo-viewer)."
+msgstr ""
+"Каталог :file:`Lib/turtledemo` містить файл :file:`turtle.cfg`. Ви можете "
+"вивчити його як приклад і побачити його вплив під час запуску демонстрацій "
+"(бажано не з програми перегляду демонстрацій)."
+
+msgid ":mod:`turtledemo` --- Demo scripts"
+msgstr ":mod:`turtledemo` --- Демонстраційні скрипти"
+
+msgid ""
+"The :mod:`turtledemo` package includes a set of demo scripts.  These scripts "
+"can be run and viewed using the supplied demo viewer as follows::"
+msgstr ""
+"Пакет :mod:`turtledemo` містить набір демонстраційних скриптів. Ці сценарії "
+"можна запускати та переглядати за допомогою демонстраційного засобу "
+"перегляду, що входить до комплекту, наступним чином:"
+
+msgid ""
+"Alternatively, you can run the demo scripts individually.  For example, ::"
+msgstr ""
+"Крім того, ви можете запускати демонстраційні сценарії окремо. Наприклад, ::"
+
+msgid "The :mod:`turtledemo` package directory contains:"
+msgstr "Каталог пакунків :mod:`turtledemo` містить:"
+
+msgid ""
+"A demo viewer :file:`__main__.py` which can be used to view the sourcecode "
+"of the scripts and run them at the same time."
+msgstr ""
+"Демо-переглядач :file:`__main__.py`, який можна використовувати для "
+"перегляду вихідного коду сценаріїв і запуску їх одночасно."
+
+msgid ""
+"Multiple scripts demonstrating different features of the :mod:`turtle` "
+"module.  Examples can be accessed via the Examples menu.  They can also be "
+"run standalone."
+msgstr ""
+"Кілька сценаріїв, що демонструють різні функції модуля :mod:`turtle`. Доступ "
+"до прикладів можна отримати через меню \"Приклади\". Їх також можна "
+"запускати автономно."
+
+msgid ""
+"A :file:`turtle.cfg` file which serves as an example of how to write and use "
+"such files."
+msgstr ""
+"Файл :file:`turtle.cfg`, який служить прикладом того, як писати та "
+"використовувати такі файли."
+
+msgid "The demo scripts are:"
+msgstr "Демонстраційні сценарії:"
+
+msgid "Name"
+msgstr "Ім'я"
+
+msgid "Description"
+msgstr "опис"
+
+msgid "Features"
+msgstr "особливості"
+
+msgid "bytedesign"
+msgstr "bytedesign"
+
+msgid "complex classical turtle graphics pattern"
+msgstr "складний класичний графічний візерунок черепахи"
+
+msgid ":func:`tracer`, delay, :func:`update`"
+msgstr ":func:`tracer`, затримка, :func:`update`"
+
+msgid "chaos"
+msgstr "хаос"
+
+msgid ""
+"graphs Verhulst dynamics, shows that computer's computations can generate "
+"results sometimes against the common sense expectations"
+msgstr ""
+"графіки динаміки Верхульста показують, що комп’ютерні обчислення можуть "
+"генерувати результати, іноді проти очікувань здорового глузду"
+
+msgid "world coordinates"
+msgstr "світові координати"
+
+msgid "clock"
+msgstr "годинник"
+
+msgid "analog clock showing time of your computer"
+msgstr "аналоговий годинник, який показує час вашого комп'ютера"
+
+msgid "turtles as clock's hands, ontimer"
+msgstr "черепахи як стрілки годинника, онтаймер"
+
+msgid "colormixer"
+msgstr "colormixer"
+
+msgid "experiment with r, g, b"
+msgstr "дослід з r, g, b"
+
+msgid "forest"
+msgstr "ліс"
+
+msgid "3 breadth-first trees"
+msgstr "3 дерева в ширину"
+
+msgid "randomization"
+msgstr "рандомізація"
+
+msgid "fractalcurves"
+msgstr "фрактальні криві"
+
+msgid "Hilbert & Koch curves"
+msgstr "Криві Гільберта і Коха"
+
+msgid "recursion"
+msgstr "рекурсія"
+
+msgid "lindenmayer"
+msgstr "лінденмайер"
+
+msgid "ethnomathematics (indian kolams)"
+msgstr "етноматематика (індійські колами)"
+
+msgid "L-System"
+msgstr "L-система"
+
+msgid "minimal_hanoi"
+msgstr "minimal_hanoi"
+
+msgid "Towers of Hanoi"
+msgstr "Ханойські вежі"
+
+msgid "Rectangular Turtles as Hanoi discs (shape, shapesize)"
+msgstr "Прямокутні черепахи як ханойські диски (форма, розмір)"
+
+msgid "nim"
+msgstr "нім"
+
+msgid ""
+"play the classical nim game with three heaps of sticks against the computer."
+msgstr "грати в класичну гру nim з трьома купами палиць проти комп'ютера."
+
+msgid "turtles as nimsticks, event driven (mouse, keyboard)"
+msgstr "черепахи як німки, керовані подіями (миша, клавіатура)"
+
+msgid "paint"
+msgstr "фарба"
+
+msgid "super minimalistic drawing program"
+msgstr "супер мінімалістична програма для малювання"
+
+msgid "peace"
+msgstr "мир"
+
+msgid "elementary"
+msgstr "елементарний"
+
+msgid "turtle: appearance and animation"
+msgstr "черепаха: зовнішній вигляд і анімація"
+
+msgid "penrose"
+msgstr "Пенроуз"
+
+msgid "aperiodic tiling with kites and darts"
+msgstr "аперіодичне укладання з повітряними зміями та дротиками"
+
+msgid "planet_and_moon"
+msgstr "планета_і_місяць"
+
+msgid "simulation of gravitational system"
+msgstr "моделювання гравітаційної системи"
+
+msgid "compound shapes, :class:`Vec2D`"
+msgstr "складені форми, :class:`Vec2D`"
+
+msgid "round_dance"
+msgstr "хоровод"
+
+msgid "dancing turtles rotating pairwise in opposite direction"
+msgstr "танцюючі черепахи, що обертаються попарно в протилежному напрямку"
+
+msgid "compound shapes, clone shapesize, tilt, get_shapepoly, update"
+msgstr "складені форми, клон shapesize, нахил, get_shapepoly, оновлення"
+
+msgid "sorting_animate"
+msgstr "sorting_animate"
+
+msgid "visual demonstration of different sorting methods"
+msgstr "наочна демонстрація різних методів сортування"
+
+msgid "simple alignment, randomization"
+msgstr "просте вирівнювання, рандомізація"
+
+msgid "tree"
+msgstr "дерево"
+
+msgid "a (graphical) breadth first tree (using generators)"
+msgstr "(графічне) дерево в ширину (з використанням генераторів)"
+
+msgid "two_canvases"
+msgstr "два_полотна"
+
+msgid "simple design"
+msgstr "простий дизайн"
+
+msgid "turtles on two canvases"
+msgstr "черепахи на двох полотнах"
+
+msgid "wikipedia"
+msgstr "вікіпедія"
+
+msgid "a pattern from the wikipedia article on turtle graphics"
+msgstr "зразок зі статті у Вікіпедії про черепахову графіку"
+
+msgid ":func:`clone`, :func:`undo`"
+msgstr ":func:`clone`, :func:`undo`"
+
+msgid "yinyang"
+msgstr "Інь Янь"
+
+msgid "another elementary example"
+msgstr "ще один елементарний приклад"
+
+msgid "Have fun!"
+msgstr "весело провести час!"
+
+msgid "Changes since Python 2.6"
+msgstr "Зміни з Python 2.6"
+
+msgid ""
+"The methods :meth:`Turtle.tracer`, :meth:`Turtle.window_width` and :meth:"
+"`Turtle.window_height` have been eliminated. Methods with these names and "
+"functionality are now available only as methods of :class:`Screen`. The "
+"functions derived from these remain available. (In fact already in Python "
+"2.6 these methods were merely duplications of the corresponding :class:"
+"`TurtleScreen`/:class:`Screen`-methods.)"
+msgstr ""
+"Методи :meth:`Turtle.tracer`, :meth:`Turtle.window_width` і :meth:`Turtle."
+"window_height` було видалено. Методи з такими назвами та функціями тепер "
+"доступні лише як методи :class:`Screen`. Похідні від них функції залишаються "
+"доступними. (Насправді вже в Python 2.6 ці методи були просто дублікатами "
+"відповідних методів :class:`TurtleScreen`/:class:`Screen`.)"
+
+msgid ""
+"The method :meth:`Turtle.fill` has been eliminated. The behaviour of :meth:"
+"`begin_fill` and :meth:`end_fill` have changed slightly: now  every filling-"
+"process must be completed with an ``end_fill()`` call."
+msgstr ""
+"Метод :meth:`Turtle.fill` було видалено. Поведінка :meth:`begin_fill` і :"
+"meth:`end_fill` дещо змінилася: тепер кожен процес заповнення має "
+"завершуватися викликом ``end_fill()``."
+
+msgid ""
+"A method :meth:`Turtle.filling` has been added. It returns a boolean value: "
+"``True`` if a filling process is under way, ``False`` otherwise. This "
+"behaviour corresponds to a ``fill()`` call without arguments in Python 2.6."
+msgstr ""
+"Додано метод :meth:`Turtle.filling`. Він повертає логічне значення: "
+"``True``, якщо триває процес заповнення, ``False`` інакше. Така поведінка "
+"відповідає виклику ``fill()`` без аргументів у Python 2.6."
+
+msgid "Changes since Python 3.0"
+msgstr "Зміни з Python 3.0"
+
+msgid ""
+"The methods :meth:`Turtle.shearfactor`, :meth:`Turtle.shapetransform` and :"
+"meth:`Turtle.get_shapepoly` have been added. Thus the full range of regular "
+"linear transforms is now available for transforming turtle shapes. :meth:"
+"`Turtle.tiltangle` has been enhanced in functionality: it now can be used to "
+"get or set the tiltangle. :meth:`Turtle.settiltangle` has been deprecated."
+msgstr ""
+"Додано методи :meth:`Turtle.shearfactor`, :meth:`Turtle.shapetransform` і :"
+"meth:`Turtle.get_shapepoly`. Таким чином, для трансформації фігур черепахи "
+"тепер доступний повний набір звичайних лінійних перетворень. "
+"Функціональність :meth:`Turtle.tiltangle` покращено: тепер його можна "
+"використовувати для отримання або встановлення tiltangle. :meth:`Turtle."
+"settiltangle` застаріло."
+
+msgid ""
+"The method :meth:`Screen.onkeypress` has been added as a complement to :meth:"
+"`Screen.onkey` which in fact binds actions to the keyrelease event. "
+"Accordingly the latter has got an alias: :meth:`Screen.onkeyrelease`."
+msgstr ""
+"Метод :meth:`Screen.onkeypress` додано як доповнення до :meth:`Screen."
+"onkey`, який фактично прив’язує дії до події keyrelease. Відповідно, "
+"останній отримав псевдонім: :meth:`Screen.onkeyrelease`."
+
+msgid ""
+"The method  :meth:`Screen.mainloop` has been added. So when working only "
+"with Screen and Turtle objects one must not additionally import :func:"
+"`mainloop` anymore."
+msgstr ""
+"Додано метод :meth:`Screen.mainloop`. Таким чином, коли ви працюєте лише з "
+"об’єктами Screen і Turtle, більше не потрібно додатково імпортувати :func:"
+"`mainloop`."
+
+msgid ""
+"Two input methods has been added :meth:`Screen.textinput` and :meth:`Screen."
+"numinput`. These popup input dialogs and return strings and numbers "
+"respectively."
+msgstr ""
+"Додано два методи введення: :meth:`Screen.textinput` і :meth:`Screen."
+"numinput`. Ці спливаючі діалогові вікна введення та повертають рядки та "
+"числа відповідно."
+
+msgid ""
+"Two example scripts :file:`tdemo_nim.py` and :file:`tdemo_round_dance.py` "
+"have been added to the :file:`Lib/turtledemo` directory."
+msgstr ""
+"Два приклади сценаріїв :file:`tdemo_nim.py` і :file:`tdemo_round_dance.py` "
+"додано до каталогу :file:`Lib/turtledemo`."

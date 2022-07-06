@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:03+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`copyreg` --- Register :mod:`pickle` support functions"
+msgstr ":mod:`copyreg` --- Реєстрація функцій підтримки :mod:`pickle`"
+
+msgid "**Source code:** :source:`Lib/copyreg.py`"
+msgstr "**Вихідний код:** :source:`Lib/copyreg.py`"
+
+msgid ""
+"The :mod:`copyreg` module offers a way to define functions used while "
+"pickling specific objects.  The :mod:`pickle` and :mod:`copy` modules use "
+"those functions when pickling/copying those objects.  The module provides "
+"configuration information about object constructors which are not classes. "
+"Such constructors may be factory functions or class instances."
+msgstr ""
+"Модуль :mod:`copyreg` пропонує спосіб визначення функцій, які "
+"використовуються під час маринування конкретних об’єктів. Модулі :mod:"
+"`pickle` і :mod:`copy` використовують ці функції під час маринування/"
+"копіювання цих об’єктів. Модуль надає конфігураційну інформацію про "
+"конструктори об’єктів, які не є класами. Такими конструкторами можуть бути "
+"фабричні функції або екземпляри класу."
+
+msgid ""
+"Declares *object* to be a valid constructor.  If *object* is not callable "
+"(and hence not valid as a constructor), raises :exc:`TypeError`."
+msgstr ""
+"Оголошує *object* як дійсний конструктор. Якщо *object* не можна викликати "
+"(і, отже, недійсний як конструктор), викликає :exc:`TypeError`."
+
+msgid ""
+"Declares that *function* should be used as a \"reduction\" function for "
+"objects of type *type*.  *function* should return either a string or a tuple "
+"containing two or three elements."
+msgstr ""
+"Оголошує, що *function* слід використовувати як функцію \"зменшення\" для "
+"об’єктів типу *type*. *функція* має повертати або рядок, або кортеж, що "
+"містить два чи три елементи."
+
+msgid ""
+"The optional *constructor* parameter, if provided, is a callable object "
+"which can be used to reconstruct the object when called with the tuple of "
+"arguments returned by *function* at pickling time.  A :exc:`TypeError` is "
+"raised if the *constructor* is not callable."
+msgstr ""
+"Необов’язковий параметр *constructor*, якщо він надається, є викликаним "
+"об’єктом, який можна використовувати для реконструкції об’єкта під час "
+"виклику з кортежем аргументів, які повертає *функція* під час травлення. "
+"Помилка :exc:`TypeError` виникає, якщо *конструктор* не можна викликати."
+
+msgid ""
+"See the :mod:`pickle` module for more details on the interface expected of "
+"*function* and *constructor*.  Note that the :attr:`~pickle.Pickler."
+"dispatch_table` attribute of a pickler object or subclass of :class:`pickle."
+"Pickler` can also be used for declaring reduction functions."
+msgstr ""
+"Перегляньте модуль :mod:`pickle`, щоб дізнатися більше про інтерфейс, "
+"очікуваний від *функції* та *конструктора*. Зауважте, що атрибут :attr:"
+"`~pickle.Pickler.dispatch_table` об’єкта pickler або підкласу :class:`pickle."
+"Pickler` також можна використовувати для оголошення функцій скорочення."
+
+msgid "Example"
+msgstr "приклад"
+
+msgid ""
+"The example below would like to show how to register a pickle function and "
+"how it will be used:"
+msgstr ""
+"Наведений нижче приклад показує, як зареєструвати функцію pickle і як вона "
+"буде використовуватися:"

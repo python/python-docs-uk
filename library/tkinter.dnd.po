@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.11\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-29 17:18+0300\n"
+"PO-Revision-Date: 2022-07-05 15:40+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`tkinter.dnd` --- Drag and drop support"
+msgstr ":mod:`tkinter.dnd` --- Підтримка перетягування"
+
+msgid "**Source code:** :source:`Lib/tkinter/dnd.py`"
+msgstr "**Вихідний код:** :source:`Lib/tkinter/dnd.py`"
+
+msgid ""
+"This is experimental and due to be deprecated when it is replaced with the "
+"Tk DND."
+msgstr ""
+"Це є експериментальним і має бути застарілим, коли його буде замінено на Tk "
+"DND."
+
+msgid ""
+"The :mod:`tkinter.dnd` module provides drag-and-drop support for objects "
+"within a single application, within the same window or between windows. To "
+"enable an object to be dragged, you must create an event binding for it that "
+"starts the drag-and-drop process. Typically, you bind a ButtonPress event to "
+"a callback function that you write (see :ref:`Bindings-and-Events`). The "
+"function should call :func:`dnd_start`, where 'source' is the object to be "
+"dragged, and 'event' is the event that invoked the call (the argument to "
+"your callback function)."
+msgstr ""
+"Модуль :mod:`tkinter.dnd` забезпечує підтримку перетягування об’єктів в "
+"одній програмі, в одному вікні або між вікнами. Щоб увімкнути перетягування "
+"об’єкта, необхідно створити для нього прив’язку події, яка запускає процес "
+"перетягування. Як правило, ви прив’язуєте подію ButtonPress до функції "
+"зворотного виклику, яку ви пишете (див. :ref:`Bindings-and-Events`). Функція "
+"має викликати :func:`dnd_start`, де \"source\" — це об’єкт, який потрібно "
+"перетягнути, а \"event\" — це подія, яка викликала виклик (аргумент вашої "
+"функції зворотного виклику)."
+
+msgid "Selection of a target object occurs as follows:"
+msgstr "Вибір цільового об'єкта відбувається наступним чином:"
+
+msgid "Top-down search of area under mouse for target widget"
+msgstr "Пошук зверху вниз області під курсором миші для цільового віджета"
+
+msgid "Target widget should have a callable *dnd_accept* attribute"
+msgstr ""
+"Цільовий віджет повинен мати атрибут *dnd_accept*, який можна викликати"
+
+msgid ""
+"If *dnd_accept* is not present or returns None, search moves to parent widget"
+msgstr ""
+"Якщо *dnd_accept* відсутній або повертає None, пошук переходить до "
+"батьківського віджета"
+
+msgid "If no target widget is found, then the target object is None"
+msgstr "Якщо цільовий віджет не знайдено, то цільовим об’єктом є None"
+
+msgid "Call to *<old_target>.dnd_leave(source, event)*"
+msgstr "Виклик * <old_target> .dnd_leave(джерело, подія)*"
+
+msgid "Call to *<new_target>.dnd_enter(source, event)*"
+msgstr "Виклик * <new_target> .dnd_enter(джерело, подія)*"
+
+msgid "Call to *<target>.dnd_commit(source, event)* to notify of drop"
+msgstr ""
+"Зателефонуйте на номер * <target> .dnd_commit(джерело, подія)*, щоб "
+"повідомити про скидання"
+
+msgid ""
+"Call to *<source>.dnd_end(target, event)* to signal end of drag-and-drop"
+msgstr ""
+"Виклик * <source> .dnd_end(target, event)*, щоб повідомити про закінчення "
+"перетягування"
+
+msgid ""
+"The *DndHandler* class handles drag-and-drop events tracking Motion and "
+"ButtonRelease events on the root of the event widget."
+msgstr ""
+"Клас *DndHandler* обробляє події перетягування та відстеження подій Motion і "
+"ButtonRelease у корені віджета події."
+
+msgid "Cancel the drag-and-drop process."
+msgstr "Скасуйте процес перетягування."
+
+msgid "Execute end of drag-and-drop functions."
+msgstr "Виконати кінець функцій перетягування."
+
+msgid "Inspect area below mouse for target objects while drag is performed."
+msgstr ""
+"Під час перетягування перевірте область під мишею на наявність цільових "
+"об’єктів."
+
+msgid "Signal end of drag when the release pattern is triggered."
+msgstr "Сигнал про кінець перетягування, коли спрацьовує схема випуску."
+
+msgid "Factory function for drag-and-drop process."
+msgstr "Заводська функція для процесу перетягування."
+
+msgid ":ref:`Bindings-and-Events`"
+msgstr ":ref:`Bindings-and-Events`"

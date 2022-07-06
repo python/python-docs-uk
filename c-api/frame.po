@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.11\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-29 17:18+0300\n"
+"PO-Revision-Date: 2022-07-05 14:51+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Frame Objects"
+msgstr "Рамкові об’єкти"
+
+msgid "The C structure of the objects used to describe frame objects."
+msgstr "Структура C об’єктів, яка використовується для опису об’єктів кадру."
+
+msgid "There are no public members in this structure."
+msgstr "У цій структурі немає громадських учасників."
+
+msgid ""
+"The members of this structure were removed from the public C API. Refer to "
+"the :ref:`What's New entry <pyframeobject-3.11-hiding>` for details."
+msgstr ""
+"Членів цієї структури було видалено з загальнодоступного C API. Зверніться "
+"до запису :ref:`Що нового <pyframeobject-3.11-hiding>`, щоб дізнатися більше."
+
+msgid ""
+"The :c:func:`PyEval_GetFrame` and :c:func:`PyThreadState_GetFrame` functions "
+"can be used to get a frame object."
+msgstr ""
+"Функції :c:func:`PyEval_GetFrame` і :c:func:`PyThreadState_GetFrame` можна "
+"використовувати для отримання об’єкта фрейму."
+
+msgid "See also :ref:`Reflection <reflection>`."
+msgstr "Дивіться також :ref:`Reflection <reflection>`."
+
+msgid "Get the *frame* next outer frame."
+msgstr "Отримайте *рамку* наступну зовнішню рамку."
+
+msgid ""
+"Return a :term:`strong reference`, or ``NULL`` if *frame* has no outer frame."
+msgstr ""
+"Повертає :term:`strong reference` або ``NULL``, якщо *frame* не має "
+"зовнішнього кадру."
+
+msgid "Get the *frame*'s ``f_builtins`` attribute."
+msgstr "Отримайте атрибут ``f_builtins`` *frame*."
+
+msgid "Return a :term:`strong reference`. The result cannot be ``NULL``."
+msgstr "Повертає :term:`strong reference`. Результат не може бути ``NULL``."
+
+msgid "Get the *frame* code."
+msgstr "Отримайте код *frame*."
+
+msgid "Return a :term:`strong reference`."
+msgstr "Повертає :term:`strong reference`."
+
+msgid "The result (frame code) cannot be ``NULL``."
+msgstr "Результат (код кадру) не може бути ``NULL``."
+
+msgid ""
+"Get the generator, coroutine, or async generator that owns this frame, or "
+"``NULL`` if this frame is not owned by a generator. Does not raise an "
+"exception, even if the return value is ``NULL``."
+msgstr ""
+"Отримайте генератор, співпрограму або асинхронний генератор, якому належить "
+"цей кадр, або ``NULL``, якщо цей кадр не належить генератору. Не створює "
+"винятку, навіть якщо повертається значення ``NULL``."
+
+msgid "Return a :term:`strong reference`, or ``NULL``."
+msgstr "Повертає :term:`strong reference` або ``NULL``."
+
+msgid "Get the *frame*'s ``f_globals`` attribute."
+msgstr "Отримайте атрибут ``f_globals`` *frame*."
+
+msgid "Get the *frame*'s ``f_lasti`` attribute."
+msgstr "Отримайте атрибут ``f_lasti`` *frame*."
+
+msgid "Returns -1 if ``frame.f_lasti`` is ``None``."
+msgstr "Повертає -1, якщо ``frame.f_lasti`` має значення ``None``."
+
+msgid "Get the *frame*'s ``f_locals`` attribute (:class:`dict`)."
+msgstr "Отримайте атрибут ``f_locals`` *frame* (:class:`dict`)."
+
+msgid "Return the line number that *frame* is currently executing."
+msgstr "Повертає номер рядка, який *frame* зараз виконує."

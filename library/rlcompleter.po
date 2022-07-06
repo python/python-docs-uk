@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:12+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`rlcompleter` --- Completion function for GNU readline"
+msgstr ":mod:`rlcompleter` --- Функція завершення рядка читання GNU"
+
+msgid "**Source code:** :source:`Lib/rlcompleter.py`"
+msgstr "**Вихідний код:** :source:`Lib/rlcompleter.py`"
+
+msgid ""
+"The :mod:`rlcompleter` module defines a completion function suitable for "
+"the :mod:`readline` module by completing valid Python identifiers and "
+"keywords."
+msgstr ""
+"Модуль :mod:`rlcompleter` визначає функцію завершення, придатну для модуля :"
+"mod:`readline` шляхом заповнення дійсних ідентифікаторів і ключових слів "
+"Python."
+
+msgid ""
+"When this module is imported on a Unix platform with the :mod:`readline` "
+"module available, an instance of the :class:`Completer` class is "
+"automatically created and its :meth:`complete` method is set as the :mod:"
+"`readline` completer."
+msgstr ""
+"Коли цей модуль імпортується на платформу Unix із доступним модулем :mod:"
+"`readline`, екземпляр класу :class:`Completer` створюється автоматично, а "
+"його метод :meth:`complete` встановлюється як завершувач :mod:`readline`."
+
+msgid "Example::"
+msgstr "Приклад::"
+
+msgid ""
+"The :mod:`rlcompleter` module is designed for use with Python's :ref:"
+"`interactive mode <tut-interactive>`.  Unless Python is run with the :option:"
+"`-S` option, the module is automatically imported and configured (see :ref:"
+"`rlcompleter-config`)."
+msgstr ""
+"Модуль :mod:`rlcompleter` призначений для використання з :ref:`інтерактивним "
+"режимом Python <tut-interactive>`. Якщо Python не запускається з параметром :"
+"option:`-S`, модуль автоматично імпортується та налаштовується (див. :ref:"
+"`rlcompleter-config`)."
+
+msgid ""
+"On platforms without :mod:`readline`, the :class:`Completer` class defined "
+"by this module can still be used for custom purposes."
+msgstr ""
+"На платформах без :mod:`readline` клас :class:`Completer`, визначений цим "
+"модулем, усе ще можна використовувати для спеціальних цілей."
+
+msgid "Completer Objects"
+msgstr "Повні об'єкти"
+
+msgid "Completer objects have the following method:"
+msgstr "Повні об’єкти мають такий метод:"
+
+msgid "Return the *state*\\ th completion for *text*."
+msgstr "Повернути *стан*\\ завершення для *тексту*."
+
+msgid ""
+"If called for *text* that doesn't include a period character (``'.'``), it "
+"will complete from names currently defined in :mod:`__main__`, :mod:"
+"`builtins` and keywords (as defined by the :mod:`keyword` module)."
+msgstr ""
+"Якщо викликати *текст*, який не містить символ крапки (``'.''``), він "
+"завершуватиметься іменами, визначеними в :mod:`__main__`, :mod:`builtins` та "
+"ключовими словами (як визначено) за допомогою модуля :mod:`keyword`)."
+
+msgid ""
+"If called for a dotted name, it will try to evaluate anything without "
+"obvious side-effects (functions will not be evaluated, but it can generate "
+"calls to :meth:`__getattr__`) up to the last part, and find matches for the "
+"rest via the :func:`dir` function.  Any exception raised during the "
+"evaluation of the expression is caught, silenced and :const:`None` is "
+"returned."
+msgstr ""
+"Якщо викликати назву з крапками, вона намагатиметься оцінити будь-що без "
+"очевидних побічних ефектів (функції не оцінюватимуться, але вона може "
+"генерувати виклики :meth:`__getattr__`) до останньої частини та знаходити "
+"збіги для решти за допомогою функції :func:`dir`. Будь-які винятки, "
+"викликані під час оцінки виразу, перехоплюються, мовчаться та повертається :"
+"const:`None`."
