@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:08+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Networking and Interprocess Communication"
+msgstr "Мережа та міжпроцесна комунікація"
+
+msgid ""
+"The modules described in this chapter provide mechanisms for networking and "
+"inter-processes communication."
+msgstr ""
+"Модулі, описані в цьому розділі, надають механізми для мереж і зв’язку між "
+"процесами."
+
+msgid ""
+"Some modules only work for two processes that are on the same machine, e.g. :"
+"mod:`signal` and :mod:`mmap`.  Other modules support networking protocols "
+"that two or more processes can use to communicate across machines."
+msgstr ""
+"Деякі модулі працюють лише для двох процесів, які знаходяться на одній "
+"машині, напр. :mod:`signal` і :mod:`mmap`. Інші модулі підтримують мережеві "
+"протоколи, які два або більше процесів можуть використовувати для обміну "
+"даними між машинами."
+
+msgid "The list of modules described in this chapter is:"
+msgstr "Перелік модулів, описаних у цьому розділі:"

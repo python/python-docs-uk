@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:51+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Using Python on Unix platforms"
+msgstr "Використання Python на платформах Unix"
+
+msgid "Getting and installing the latest version of Python"
+msgstr "Отримання та встановлення останньої версії Python"
+
+msgid "On Linux"
+msgstr "На Linux"
+
+msgid ""
+"Python comes preinstalled on most Linux distributions, and is available as a "
+"package on all others.  However there are certain features you might want to "
+"use that are not available on your distro's package.  You can easily compile "
+"the latest version of Python from source."
+msgstr ""
+"Python попередньо встановлено на більшості дистрибутивів Linux і доступний у "
+"вигляді пакета на всіх інших. Однак є певні функції, які ви можете "
+"використати, але недоступні в пакеті вашого дистрибутива. Ви можете легко "
+"скомпілювати останню версію Python із початкового коду."
+
+msgid ""
+"In the event that Python doesn't come preinstalled and isn't in the "
+"repositories as well, you can easily make packages for your own distro.  "
+"Have a look at the following links:"
+msgstr ""
+"У випадку, якщо Python не попередньо встановлений і його також немає в "
+"репозиторіях, ви можете легко створити пакунки для свого власного "
+"дистрибутива. Перегляньте наступні посилання:"
+
+msgid "https://www.debian.org/doc/manuals/maint-guide/first.en.html"
+msgstr "https://www.debian.org/doc/manuals/maint-guide/first.en.html"
+
+msgid "for Debian users"
+msgstr "для користувачів Debian"
+
+msgid "https://en.opensuse.org/Portal:Packaging"
+msgstr "https://en.opensuse.org/Portal:Packaging"
+
+msgid "for OpenSuse users"
+msgstr "для користувачів OpenSuse"
+
+msgid ""
+"https://docs-old.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/"
+"RPM_Guide/ch-creating-rpms.html"
+msgstr ""
+"https://docs-old.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/"
+"RPM_Guide/ch-creating-rpms.html"
+
+msgid "for Fedora users"
+msgstr "для користувачів Fedora"
+
+msgid "http://www.slackbook.org/html/package-management-making-packages.html"
+msgstr "http://www.slackbook.org/html/package-management-making-packages.html"
+
+msgid "for Slackware users"
+msgstr "для користувачів Slackware"
+
+msgid "On FreeBSD and OpenBSD"
+msgstr "На FreeBSD і OpenBSD"
+
+msgid "FreeBSD users, to add the package use::"
+msgstr "Користувачі FreeBSD, щоб додати пакет, використовуйте::"
+
+msgid "OpenBSD users, to add the package use::"
+msgstr "Користувачі OpenBSD, щоб додати пакет, використовуйте::"
+
+msgid "For example i386 users get the 2.5.1 version of Python using::"
+msgstr ""
+"Наприклад, користувачі i386 отримують версію Python 2.5.1 за допомогою:"
+
+msgid "On OpenSolaris"
+msgstr "На OpenSolaris"
+
+msgid ""
+"You can get Python from `OpenCSW <https://www.opencsw.org/>`_.  Various "
+"versions of Python are available and can be installed with e.g. ``pkgutil -i "
+"python27``."
+msgstr ""
+"Ви можете отримати Python з `OpenCSW <https://www.opencsw.org/>`_. Доступні "
+"різні версії Python, які можна встановити, напр. ``pkgutil -i python27``."
+
+msgid "Building Python"
+msgstr "Створення Python"
+
+msgid ""
+"If you want to compile CPython yourself, first thing you should do is get "
+"the `source <https://www.python.org/downloads/source/>`_. You can download "
+"either the latest release's source or just grab a fresh `clone <https://"
+"devguide.python.org/setup/#getting-the-source-code>`_.  (If you want to "
+"contribute patches, you will need a clone.)"
+msgstr ""
+"Якщо ви хочете скомпілювати CPython самостійно, перше, що вам слід зробити, "
+"це отримати `джерело <https://www.python.org/downloads/source/>`_. Ви можете "
+"завантажити вихідний код останнього випуску або просто отримати новий `клон "
+"<https://devguide.python.org/setup/#getting-the-source-code>`_. (Якщо ви "
+"хочете додати патчі, вам знадобиться клон.)"
+
+msgid "The build process consists of the usual commands::"
+msgstr "Процес збирання складається зі звичайних команд:"
+
+msgid ""
+":ref:`Configuration options <configure-options>` and caveats for specific "
+"Unix platforms are extensively documented in the :source:`README.rst` file "
+"in the root of the Python source tree."
+msgstr ""
+":ref:`Параметри конфігурації <configure-options>` і застереження для "
+"конкретних платформ Unix детально задокументовані у файлі :source:`README."
+"rst` у корені дерева вихідних кодів Python."
+
+msgid ""
+"``make install`` can overwrite or masquerade the :file:`python3` binary. "
+"``make altinstall`` is therefore recommended instead of ``make install`` "
+"since it only installs :file:`{exec_prefix}/bin/python{version}`."
+msgstr ""
+"``make install`` може перезаписати або маскувати двійковий файл :file:"
+"`python3`. Таким чином, ``make altinstall`` рекомендується замість ``make "
+"install``, оскільки він встановлює лише :file:`{exec_prefix}/bin/"
+"python{version}`."
+
+msgid "Python-related paths and files"
+msgstr "Шляхи та файли, пов’язані з Python"
+
+msgid ""
+"These are subject to difference depending on local installation "
+"conventions; :envvar:`prefix` (``${prefix}``) and :envvar:`exec_prefix` (``"
+"${exec_prefix}``) are installation-dependent and should be interpreted as "
+"for GNU software; they may be the same."
+msgstr ""
+"Вони можуть відрізнятися залежно від місцевих умов встановлення; :envvar:"
+"`prefix` (``${prefix}``) і :envvar:`exec_prefix` (``${exec_prefix}``) "
+"залежать від інсталяції та мають інтерпретуватися як програмне забезпечення "
+"GNU; вони можуть бути однаковими."
+
+msgid ""
+"For example, on most Linux systems, the default for both is :file:`/usr`."
+msgstr "Наприклад, у більшості систем Linux типовим для обох є :file:`/usr`."
+
+msgid "File/directory"
+msgstr "Файл/каталог"
+
+msgid "Meaning"
+msgstr "Значення"
+
+msgid ":file:`{exec_prefix}/bin/python3`"
+msgstr ":file:`{exec_prefix}/bin/python3`"
+
+msgid "Recommended location of the interpreter."
+msgstr "Рекомендоване місце розташування перекладача."
+
+msgid ""
+":file:`{prefix}/lib/python{version}`, :file:`{exec_prefix}/lib/"
+"python{version}`"
+msgstr ""
+":file:`{prefix}/lib/python{version}`, :file:`{exec_prefix}/lib/"
+"python{version}`"
+
+msgid ""
+"Recommended locations of the directories containing the standard modules."
+msgstr "Рекомендоване розташування каталогів, що містять стандартні модулі."
+
+msgid ""
+":file:`{prefix}/include/python{version}`, :file:`{exec_prefix}/include/"
+"python{version}`"
+msgstr ""
+":file:`{prefix}/include/python{version}`, :file:`{exec_prefix}/include/"
+"python{version}`"
+
+msgid ""
+"Recommended locations of the directories containing the include files needed "
+"for developing Python extensions and embedding the interpreter."
+msgstr ""
+"Рекомендовані розташування каталогів, що містять файли включення, необхідні "
+"для розробки розширень Python і вбудовування інтерпретатора."
+
+msgid "Miscellaneous"
+msgstr "Різне"
+
+msgid ""
+"To easily use Python scripts on Unix, you need to make them executable, e.g. "
+"with"
+msgstr ""
+"Щоб легко використовувати сценарії Python в Unix, вам потрібно зробити їх "
+"виконуваними, напр. з"
+
+msgid ""
+"and put an appropriate Shebang line at the top of the script.  A good choice "
+"is usually ::"
+msgstr ""
+"і помістіть відповідний рядок Shebang у верхній частині сценарію. Зазвичай "
+"хороший вибір:"
+
+msgid ""
+"which searches for the Python interpreter in the whole :envvar:`PATH`.  "
+"However, some Unices may not have the :program:`env` command, so you may "
+"need to hardcode ``/usr/bin/python3`` as the interpreter path."
+msgstr ""
+"який шукає інтерпретатор Python у всьому :envvar:`PATH`. Однак деякі Unix "
+"можуть не мати команди :program:`env`, тому вам може знадобитися жорстко "
+"закодувати ``/usr/bin/python3`` як шлях інтерпретатора."
+
+msgid ""
+"To use shell commands in your Python scripts, look at the :mod:`subprocess` "
+"module."
+msgstr ""
+"Щоб використовувати команди оболонки у ваших сценаріях Python, подивіться на "
+"модуль :mod:`subprocess`."
+
+msgid "Custom OpenSSL"
+msgstr "Спеціальний OpenSSL"
+
+msgid ""
+"To use your vendor's OpenSSL configuration and system trust store, locate "
+"the directory with ``openssl.cnf`` file or symlink in ``/etc``. On most "
+"distribution the file is either in ``/etc/ssl`` or ``/etc/pki/tls``. The "
+"directory should also contain a ``cert.pem`` file and/or a ``certs`` "
+"directory."
+msgstr ""
+"Щоб використовувати конфігурацію OpenSSL і сховище довіри системи вашого "
+"постачальника, знайдіть каталог із файлом ``openssl.cnf`` або символічним "
+"посиланням у ``/etc``. У більшості дистрибутивів файл знаходиться або в ``/"
+"etc/ssl``, або ``/etc/pki/tls``. Каталог також має містити файл ``cert.pem`` "
+"та/або каталог ``certs``."
+
+msgid ""
+"Download, build, and install OpenSSL. Make sure you use ``install_sw`` and "
+"not ``install``. The ``install_sw`` target does not override ``openssl.cnf``."
+msgstr ""
+"Завантажте, створіть і встановіть OpenSSL. Переконайтеся, що ви "
+"використовуєте ``install_sw``, а не ``install``. Ціль ``install_sw`` не "
+"перевизначає ``openssl.cnf``."
+
+msgid ""
+"Build Python with custom OpenSSL (see the configure `--with-openssl` and `--"
+"with-openssl-rpath` options)"
+msgstr ""
+"Створюйте Python із спеціальним OpenSSL (перегляньте параметри налаштування "
+"`--with-openssl` і `--with-openssl-rpath`)"
+
+msgid ""
+"Patch releases of OpenSSL have a backwards compatible ABI. You don't need to "
+"recompile Python to update OpenSSL. It's sufficient to replace the custom "
+"OpenSSL installation with a newer version."
+msgstr ""
+"Патчі OpenSSL мають зворотну сумісність ABI. Вам не потрібно перекомпілювати "
+"Python, щоб оновити OpenSSL. Досить замінити спеціальну установку OpenSSL на "
+"новішу версію."
