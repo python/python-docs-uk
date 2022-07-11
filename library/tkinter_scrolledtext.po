@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:15+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`tkinter.scrolledtext` --- Scrolled Text Widget"
+msgstr ":mod:`tkinter.scrolledtext` --- Віджет прокрученого тексту"
+
+msgid "**Source code:** :source:`Lib/tkinter/scrolledtext.py`"
+msgstr "**Вихідний код:** :source:`Lib/tkinter/scrolledtext.py`"
+
+msgid ""
+"The :mod:`tkinter.scrolledtext` module provides a class of the same name "
+"which implements a basic text widget which has a vertical scroll bar "
+"configured to do the \"right thing.\"  Using the :class:`ScrolledText` class "
+"is a lot easier than setting up a text widget and scroll bar directly."
+msgstr ""
+"Модуль :mod:`tkinter.scrolledtext` надає однойменний клас, який реалізує "
+"базовий текстовий віджет, який має вертикальну смугу прокручування, "
+"налаштовану на \"правильну дію\". Використовувати клас :class:`ScrolledText` "
+"набагато легше, ніж безпосередньо налаштовувати текстовий віджет і смугу "
+"прокрутки."
+
+msgid ""
+"The text widget and scrollbar are packed together in a :class:`Frame`, and "
+"the methods of the :class:`Grid` and :class:`Pack` geometry managers are "
+"acquired from the :class:`Frame` object.  This allows the :class:"
+"`ScrolledText` widget to be used directly to achieve most normal geometry "
+"management behavior."
+msgstr ""
+"Текстовий віджет і смуга прокрутки упаковані разом у :class:`Frame`, а "
+"методи менеджерів геометрії :class:`Grid` і :class:`Pack` отримані з "
+"об’єкта :class:`Frame`. Це дозволяє безпосередньо використовувати віджет :"
+"class:`ScrolledText` для досягнення найбільш нормальної поведінки керування "
+"геометрією."
+
+msgid ""
+"Should more specific control be necessary, the following attributes are "
+"available:"
+msgstr "Якщо потрібен більш конкретний контроль, доступні такі атрибути:"
+
+msgid "The frame which surrounds the text and scroll bar widgets."
+msgstr "Рамка, яка оточує текст і віджети смуги прокрутки."
+
+msgid "The scroll bar widget."
+msgstr "Віджет смуги прокрутки."
