@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2024, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"PO-Revision-Date: 2022-11-05 19:48+0000\n"
+"Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: ../../c-api/frame.rst:4
+msgid "Frame Objects"
+msgstr ""
+
+#: ../../c-api/frame.rst:8
+msgid "The C structure of the objects used to describe frame objects."
+msgstr ""
+
+#: ../../c-api/frame.rst:10
+msgid "There are no public members in this structure."
+msgstr ""
+
+#: ../../c-api/frame.rst:12
+msgid ""
+"The members of this structure were removed from the public C API. Refer to "
+"the :ref:`What's New entry <pyframeobject-3.11-hiding>` for details."
+msgstr ""
+
+#: ../../c-api/frame.rst:17
+msgid ""
+"The :c:func:`PyEval_GetFrame` and :c:func:`PyThreadState_GetFrame` functions"
+" can be used to get a frame object."
+msgstr ""
+
+#: ../../c-api/frame.rst:20
+msgid "See also :ref:`Reflection <reflection>`."
+msgstr ""
+
+#: ../../c-api/frame.rst:24
+msgid ""
+"The type of frame objects. It is the same object as "
+":py:class:`types.FrameType` in the Python layer."
+msgstr ""
+
+#: ../../c-api/frame.rst:29
+msgid ""
+"Previously, this type was only available after including "
+"``<frameobject.h>``."
+msgstr ""
+
+#: ../../c-api/frame.rst:34
+msgid "Return non-zero if *obj* is a frame object."
+msgstr ""
+
+#: ../../c-api/frame.rst:38
+msgid ""
+"Previously, this function was only available after including "
+"``<frameobject.h>``."
+msgstr ""
+
+#: ../../c-api/frame.rst:43
+msgid "Get the *frame* next outer frame."
+msgstr ""
+
+#: ../../c-api/frame.rst:45
+msgid ""
+"Return a :term:`strong reference`, or ``NULL`` if *frame* has no outer "
+"frame."
+msgstr ""
+
+#: ../../c-api/frame.rst:53
+msgid "Get the *frame*'s :attr:`~frame.f_builtins` attribute."
+msgstr ""
+
+#: ../../c-api/frame.rst:55 ../../c-api/frame.rst:86
+msgid "Return a :term:`strong reference`. The result cannot be ``NULL``."
+msgstr ""
+
+#: ../../c-api/frame.rst:62
+msgid "Get the *frame* code."
+msgstr ""
+
+#: ../../c-api/frame.rst:64 ../../c-api/frame.rst:130
+msgid "Return a :term:`strong reference`."
+msgstr ""
+
+#: ../../c-api/frame.rst:66
+msgid "The result (frame code) cannot be ``NULL``."
+msgstr ""
+
+#: ../../c-api/frame.rst:73
+msgid ""
+"Get the generator, coroutine, or async generator that owns this frame, or "
+"``NULL`` if this frame is not owned by a generator. Does not raise an "
+"exception, even if the return value is ``NULL``."
+msgstr ""
+
+#: ../../c-api/frame.rst:77
+msgid "Return a :term:`strong reference`, or ``NULL``."
+msgstr ""
+
+#: ../../c-api/frame.rst:84
+msgid "Get the *frame*'s :attr:`~frame.f_globals` attribute."
+msgstr ""
+
+#: ../../c-api/frame.rst:93
+msgid "Get the *frame*'s :attr:`~frame.f_lasti` attribute."
+msgstr ""
+
+#: ../../c-api/frame.rst:95
+msgid "Returns -1 if ``frame.f_lasti`` is ``None``."
+msgstr ""
+
+#: ../../c-api/frame.rst:102
+msgid "Get the variable *name* of *frame*."
+msgstr ""
+
+#: ../../c-api/frame.rst:104
+msgid "Return a :term:`strong reference` to the variable value on success."
+msgstr ""
+
+#: ../../c-api/frame.rst:105
+msgid ""
+"Raise :exc:`NameError` and return ``NULL`` if the variable does not exist."
+msgstr ""
+
+#: ../../c-api/frame.rst:106
+msgid "Raise an exception and return ``NULL`` on error."
+msgstr ""
+
+#: ../../c-api/frame.rst:108
+msgid "*name* type must be a :class:`str`."
+msgstr ""
+
+#: ../../c-api/frame.rst:115
+msgid ""
+"Similar to :c:func:`PyFrame_GetVar`, but the variable name is a C string "
+"encoded in UTF-8."
+msgstr ""
+
+#: ../../c-api/frame.rst:123
+msgid ""
+"Get the *frame*'s :attr:`~frame.f_locals` attribute. If the frame refers to "
+"an :term:`optimized scope`, this returns a write-through proxy object that "
+"allows modifying the locals. In all other cases (classes, modules, "
+":func:`exec`, :func:`eval`) it returns the mapping representing the frame "
+"locals directly (as described for :func:`locals`)."
+msgstr ""
+
+#: ../../c-api/frame.rst:134
+msgid "As part of :pep:`667`, return a proxy object for optimized scopes."
+msgstr ""
+
+#: ../../c-api/frame.rst:140
+msgid "Return the line number that *frame* is currently executing."
+msgstr ""
+
+#: ../../c-api/frame.rst:145
+msgid "Internal Frames"
+msgstr ""
+
+#: ../../c-api/frame.rst:147
+msgid "Unless using :pep:`523`, you will not need this."
+msgstr ""
+
+#: ../../c-api/frame.rst:151
+msgid "The interpreter's internal frame representation."
+msgstr ""
+
+#: ../../c-api/frame.rst:157
+msgid "Return a :term:`strong reference` to the code object for the frame."
+msgstr ""
+
+#: ../../c-api/frame.rst:164
+msgid "Return the byte offset into the last executed instruction."
+msgstr ""
+
+#: ../../c-api/frame.rst:171
+msgid ""
+"Return the currently executing line number, or -1 if there is no line "
+"number."
+msgstr ""
