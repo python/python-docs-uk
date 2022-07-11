@@ -1,0 +1,651 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2024, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dmytro Kazanzhy, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"PO-Revision-Date: 2021-06-28 01:05+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: ../../library/errno.rst:2
+msgid ":mod:`!errno` --- Standard errno system symbols"
+msgstr ""
+
+#: ../../library/errno.rst:9
+msgid ""
+"This module makes available standard ``errno`` system symbols. The value of "
+"each symbol is the corresponding integer value. The names and descriptions "
+"are borrowed from :file:`linux/include/errno.h`, which should be all-"
+"inclusive."
+msgstr ""
+"Цей модуль робить доступними стандартні системні символи ``errno``. Значення"
+" кожного символу є відповідним цілим значенням. Назви та описи запозичені з "
+":file:`linux/include/errno.h`, який має бути повним."
+
+#: ../../library/errno.rst:17
+msgid ""
+"Dictionary providing a mapping from the errno value to the string name in "
+"the underlying system.  For instance, ``errno.errorcode[errno.EPERM]`` maps "
+"to ``'EPERM'``."
+msgstr ""
+"Словник, що забезпечує зіставлення значення errno з іменем рядка в базовій "
+"системі. Наприклад, ``errno.errorcode[errno.EPERM]`` відповідає "
+"``'EPERM''``."
+
+#: ../../library/errno.rst:21
+msgid ""
+"To translate a numeric error code to an error message, use "
+":func:`os.strerror`."
+msgstr ""
+"Щоб перетворити числовий код помилки на повідомлення про помилку, "
+"використовуйте :func:`os.strerror`."
+
+#: ../../library/errno.rst:23
+msgid ""
+"Of the following list, symbols that are not used on the current platform are"
+" not defined by the module.  The specific list of defined symbols is "
+"available as ``errno.errorcode.keys()``.  Symbols available can include:"
+msgstr ""
+"З наведеного нижче списку символи, які не використовуються на поточній "
+"платформі, не визначені модулем. Конкретний список визначених символів "
+"доступний як ``errno.errorcode.keys()``. Доступні символи можуть включати:"
+
+#: ../../library/errno.rst:30
+msgid ""
+"Operation not permitted. This error is mapped to the exception "
+":exc:`PermissionError`."
+msgstr ""
+"Операція не дозволена. Ця помилка зіставляється з винятком "
+":exc:`PermissionError`."
+
+#: ../../library/errno.rst:36
+msgid ""
+"No such file or directory. This error is mapped to the exception "
+":exc:`FileNotFoundError`."
+msgstr ""
+"Такого файлу чи каталогу немає. Ця помилка зіставляється з винятком "
+":exc:`FileNotFoundError`."
+
+#: ../../library/errno.rst:42
+msgid ""
+"No such process. This error is mapped to the exception "
+":exc:`ProcessLookupError`."
+msgstr ""
+"Такого процесу немає. Ця помилка зіставляється з винятком "
+":exc:`ProcessLookupError`."
+
+#: ../../library/errno.rst:48
+msgid ""
+"Interrupted system call. This error is mapped to the exception "
+":exc:`InterruptedError`."
+msgstr ""
+"Перерваний системний виклик. Ця помилка зіставляється з винятком "
+":exc:`InterruptedError`."
+
+#: ../../library/errno.rst:54
+msgid "I/O error"
+msgstr "Помилка введення/виведення"
+
+#: ../../library/errno.rst:59
+msgid "No such device or address"
+msgstr "Немає такого пристрою чи адреси"
+
+#: ../../library/errno.rst:64
+msgid "Arg list too long"
+msgstr "Список аргументів задовгий"
+
+#: ../../library/errno.rst:69
+msgid "Exec format error"
+msgstr "Помилка формату Exec"
+
+#: ../../library/errno.rst:74
+msgid "Bad file number"
+msgstr "Неправильний номер файлу"
+
+#: ../../library/errno.rst:79
+msgid ""
+"No child processes. This error is mapped to the exception "
+":exc:`ChildProcessError`."
+msgstr ""
+"Немає дочірніх процесів. Ця помилка зіставляється з винятком "
+":exc:`ChildProcessError`."
+
+#: ../../library/errno.rst:85
+msgid ""
+"Try again. This error is mapped to the exception :exc:`BlockingIOError`."
+msgstr ""
+"Спробуйте знову. Ця помилка зіставляється з винятком :exc:`BlockingIOError`."
+
+#: ../../library/errno.rst:90
+msgid "Out of memory"
+msgstr "Недостатньо помяті"
+
+#: ../../library/errno.rst:95
+msgid ""
+"Permission denied.  This error is mapped to the exception "
+":exc:`PermissionError`."
+msgstr ""
+"У дозволі відмовлено. Ця помилка зіставляється з винятком "
+":exc:`PermissionError`."
+
+#: ../../library/errno.rst:101
+msgid "Bad address"
+msgstr "Погана адреса"
+
+#: ../../library/errno.rst:106
+msgid "Block device required"
+msgstr "Потрібен блоковий пристрій"
+
+#: ../../library/errno.rst:111
+msgid "Device or resource busy"
+msgstr "Пристрій або ресурс зайняті"
+
+#: ../../library/errno.rst:116
+msgid ""
+"File exists. This error is mapped to the exception :exc:`FileExistsError`."
+msgstr ""
+"Файл існує. Ця помилка зіставляється з винятком :exc:`FileExistsError`."
+
+#: ../../library/errno.rst:122
+msgid "Cross-device link"
+msgstr "Зв’язок між пристроями"
+
+#: ../../library/errno.rst:127
+msgid "No such device"
+msgstr "Немає такого пристрою"
+
+#: ../../library/errno.rst:132
+msgid ""
+"Not a directory. This error is mapped to the exception "
+":exc:`NotADirectoryError`."
+msgstr ""
+"Не каталог. Ця помилка зіставляється з винятком :exc:`NotADirectoryError`."
+
+#: ../../library/errno.rst:138
+msgid ""
+"Is a directory. This error is mapped to the exception "
+":exc:`IsADirectoryError`."
+msgstr ""
+"Це каталог. Ця помилка зіставляється з винятком :exc:`IsADirectoryError`."
+
+#: ../../library/errno.rst:144
+msgid "Invalid argument"
+msgstr "Недійсний аргумент"
+
+#: ../../library/errno.rst:149
+msgid "File table overflow"
+msgstr "Переповнення таблиці файлів"
+
+#: ../../library/errno.rst:154
+msgid "Too many open files"
+msgstr "Забагато відкритих файлів"
+
+#: ../../library/errno.rst:159
+msgid "Not a typewriter"
+msgstr "Не друкарська машинка"
+
+#: ../../library/errno.rst:164
+msgid "Text file busy"
+msgstr "Текстовий файл зайнятий"
+
+#: ../../library/errno.rst:169
+msgid "File too large"
+msgstr "Файл завеликий"
+
+#: ../../library/errno.rst:174
+msgid "No space left on device"
+msgstr "На пристрої не залишилося місця"
+
+#: ../../library/errno.rst:179
+msgid "Illegal seek"
+msgstr "Незаконний пошук"
+
+#: ../../library/errno.rst:184
+msgid "Read-only file system"
+msgstr "Файлова система лише для читання"
+
+#: ../../library/errno.rst:189
+msgid "Too many links"
+msgstr "Забагато посилань"
+
+#: ../../library/errno.rst:194
+msgid ""
+"Broken pipe. This error is mapped to the exception :exc:`BrokenPipeError`."
+msgstr ""
+"Розбита труба. Ця помилка зіставляється з винятком :exc:`BrokenPipeError`."
+
+#: ../../library/errno.rst:200
+msgid "Math argument out of domain of func"
+msgstr "Математичний аргумент поза областю функ"
+
+#: ../../library/errno.rst:205
+msgid "Math result not representable"
+msgstr "Математичний результат неможливо представити"
+
+#: ../../library/errno.rst:210
+msgid "Resource deadlock would occur"
+msgstr "Виникне блокування ресурсів"
+
+#: ../../library/errno.rst:215
+msgid "File name too long"
+msgstr "Назва файлу задовга"
+
+#: ../../library/errno.rst:220
+msgid "No record locks available"
+msgstr "Немає доступних блокувань записів"
+
+#: ../../library/errno.rst:225
+msgid "Function not implemented"
+msgstr "Функція не реалізована"
+
+#: ../../library/errno.rst:230
+msgid "Directory not empty"
+msgstr "Каталог не порожній"
+
+#: ../../library/errno.rst:235
+msgid "Too many symbolic links encountered"
+msgstr "Знайдено забагато символічних посилань"
+
+#: ../../library/errno.rst:240
+msgid ""
+"Operation would block. This error is mapped to the exception "
+":exc:`BlockingIOError`."
+msgstr ""
+"Операція буде заблокована. Ця помилка зіставляється з винятком "
+":exc:`BlockingIOError`."
+
+#: ../../library/errno.rst:246
+msgid "No message of desired type"
+msgstr "Немає повідомлень потрібного типу"
+
+#: ../../library/errno.rst:251
+msgid "Identifier removed"
+msgstr "Ідентифікатор видалено"
+
+#: ../../library/errno.rst:256
+msgid "Channel number out of range"
+msgstr "Номер каналу поза діапазоном"
+
+#: ../../library/errno.rst:261
+msgid "Level 2 not synchronized"
+msgstr "Рівень 2 не синхронізовано"
+
+#: ../../library/errno.rst:266
+msgid "Level 3 halted"
+msgstr "Рівень 3 зупинено"
+
+#: ../../library/errno.rst:271
+msgid "Level 3 reset"
+msgstr "Скидання рівня 3"
+
+#: ../../library/errno.rst:276
+msgid "Link number out of range"
+msgstr "Номер посилання поза діапазоном"
+
+#: ../../library/errno.rst:281
+msgid "Protocol driver not attached"
+msgstr "Драйвер протоколу не підключено"
+
+#: ../../library/errno.rst:286
+msgid "No CSI structure available"
+msgstr "Немає доступної структури CSI"
+
+#: ../../library/errno.rst:291
+msgid "Level 2 halted"
+msgstr "Рівень 2 зупинено"
+
+#: ../../library/errno.rst:296
+msgid "Invalid exchange"
+msgstr "Недійсний обмін"
+
+#: ../../library/errno.rst:301
+msgid "Invalid request descriptor"
+msgstr "Недійсний дескриптор запиту"
+
+#: ../../library/errno.rst:306
+msgid "Exchange full"
+msgstr "Обмін повний"
+
+#: ../../library/errno.rst:311
+msgid "No anode"
+msgstr "Без анода"
+
+#: ../../library/errno.rst:316
+msgid "Invalid request code"
+msgstr "Недійсний код запиту"
+
+#: ../../library/errno.rst:321
+msgid "Invalid slot"
+msgstr "Недійсний слот"
+
+#: ../../library/errno.rst:326
+msgid "File locking deadlock error"
+msgstr "Помилка взаємоблокування блокування файлу"
+
+#: ../../library/errno.rst:331
+msgid "Bad font file format"
+msgstr "Неправильний формат файлу шрифту"
+
+#: ../../library/errno.rst:336
+msgid "Device not a stream"
+msgstr "Пристрій не є потоком"
+
+#: ../../library/errno.rst:341
+msgid "No data available"
+msgstr "Немає даних"
+
+#: ../../library/errno.rst:346
+msgid "Timer expired"
+msgstr "Таймер закінчився"
+
+#: ../../library/errno.rst:351
+msgid "Out of streams resources"
+msgstr "Ресурси поза потоками"
+
+#: ../../library/errno.rst:356
+msgid "Machine is not on the network"
+msgstr "Машина не в мережі"
+
+#: ../../library/errno.rst:361
+msgid "Package not installed"
+msgstr "Пакет не встановлено"
+
+#: ../../library/errno.rst:366
+msgid "Object is remote"
+msgstr "Об'єкт віддалений"
+
+#: ../../library/errno.rst:371
+msgid "Link has been severed"
+msgstr "Посилання розірвано"
+
+#: ../../library/errno.rst:376
+msgid "Advertise error"
+msgstr "Помилка реклами"
+
+#: ../../library/errno.rst:381
+msgid "Srmount error"
+msgstr "Помилка Srmount"
+
+#: ../../library/errno.rst:386
+msgid "Communication error on send"
+msgstr "Помилка зв’язку під час надсилання"
+
+#: ../../library/errno.rst:391
+msgid "Protocol error"
+msgstr "Помилка протоколу"
+
+#: ../../library/errno.rst:396
+msgid "Multihop attempted"
+msgstr "Спроба кількох стрибків"
+
+#: ../../library/errno.rst:401
+msgid "RFS specific error"
+msgstr "Специфічна помилка RFS"
+
+#: ../../library/errno.rst:406
+msgid "Not a data message"
+msgstr "Не повідомлення даних"
+
+#: ../../library/errno.rst:411
+msgid "Value too large for defined data type"
+msgstr "Значення завелике для визначеного типу даних"
+
+#: ../../library/errno.rst:416
+msgid "Name not unique on network"
+msgstr "Ім'я не унікальне в мережі"
+
+#: ../../library/errno.rst:421
+msgid "File descriptor in bad state"
+msgstr "Дескриптор файлу в поганому стані"
+
+#: ../../library/errno.rst:426
+msgid "Remote address changed"
+msgstr "Змінено віддалену адресу"
+
+#: ../../library/errno.rst:431
+msgid "Can not access a needed shared library"
+msgstr "Неможливо отримати доступ до необхідної спільної бібліотеки"
+
+#: ../../library/errno.rst:436
+msgid "Accessing a corrupted shared library"
+msgstr "Доступ до пошкодженої спільної бібліотеки"
+
+#: ../../library/errno.rst:441
+msgid ".lib section in a.out corrupted"
+msgstr "Розділ .lib у файлі a.out пошкоджено"
+
+#: ../../library/errno.rst:446
+msgid "Attempting to link in too many shared libraries"
+msgstr "Спроба зв’язатися із занадто великою кількістю спільних бібліотек"
+
+#: ../../library/errno.rst:451
+msgid "Cannot exec a shared library directly"
+msgstr "Неможливо виконати спільну бібліотеку безпосередньо"
+
+#: ../../library/errno.rst:456
+msgid "Illegal byte sequence"
+msgstr "Недопустима послідовність байтів"
+
+#: ../../library/errno.rst:461
+msgid "Interrupted system call should be restarted"
+msgstr "Перерваний системний виклик слід розпочати заново"
+
+#: ../../library/errno.rst:466
+msgid "Streams pipe error"
+msgstr "Помилка каналу потоків"
+
+#: ../../library/errno.rst:471
+msgid "Too many users"
+msgstr "Забагато користувачів"
+
+#: ../../library/errno.rst:476
+msgid "Socket operation on non-socket"
+msgstr "Робота сокета на несокеті"
+
+#: ../../library/errno.rst:481
+msgid "Destination address required"
+msgstr "Потрібна адреса призначення"
+
+#: ../../library/errno.rst:486
+msgid "Message too long"
+msgstr "Повідомлення задовге"
+
+#: ../../library/errno.rst:491
+msgid "Protocol wrong type for socket"
+msgstr "Неправильний тип протоколу для сокета"
+
+#: ../../library/errno.rst:496
+msgid "Protocol not available"
+msgstr "Протокол недоступний"
+
+#: ../../library/errno.rst:501
+msgid "Protocol not supported"
+msgstr "Протокол не підтримується"
+
+#: ../../library/errno.rst:506
+msgid "Socket type not supported"
+msgstr "Тип розетки не підтримується"
+
+#: ../../library/errno.rst:511
+msgid "Operation not supported on transport endpoint"
+msgstr "Операція не підтримується на транспортній кінцевій точці"
+
+#: ../../library/errno.rst:516
+msgid "Operation not supported"
+msgstr ""
+
+#: ../../library/errno.rst:523
+msgid "Protocol family not supported"
+msgstr "Сімейство протоколів не підтримується"
+
+#: ../../library/errno.rst:528
+msgid "Address family not supported by protocol"
+msgstr "Сімейство адрес не підтримується протоколом"
+
+#: ../../library/errno.rst:533
+msgid "Address already in use"
+msgstr "Адреса вже використовується"
+
+#: ../../library/errno.rst:538
+msgid "Cannot assign requested address"
+msgstr "Неможливо призначити запитану адресу"
+
+#: ../../library/errno.rst:543
+msgid "Network is down"
+msgstr "Мережа не працює"
+
+#: ../../library/errno.rst:548
+msgid "Network is unreachable"
+msgstr "Мережа недоступна"
+
+#: ../../library/errno.rst:553
+msgid "Network dropped connection because of reset"
+msgstr "З’єднання з мережею перервано через скидання"
+
+#: ../../library/errno.rst:558
+msgid ""
+"Software caused connection abort. This error is mapped to the exception "
+":exc:`ConnectionAbortedError`."
+msgstr ""
+"Програмне забезпечення спричинило переривання підключення. Ця помилка "
+"зіставляється з винятком :exc:`ConnectionAbortedError`."
+
+#: ../../library/errno.rst:564
+msgid ""
+"Connection reset by peer. This error is mapped to the exception "
+":exc:`ConnectionResetError`."
+msgstr ""
+"Підключення скинуто іншим комп'ютером. Ця помилка зіставляється з винятком "
+":exc:`ConnectionResetError`."
+
+#: ../../library/errno.rst:570
+msgid "No buffer space available"
+msgstr "Немає буферного простору"
+
+#: ../../library/errno.rst:575
+msgid "Transport endpoint is already connected"
+msgstr "Транспортна кінцева точка вже підключена"
+
+#: ../../library/errno.rst:580
+msgid "Transport endpoint is not connected"
+msgstr "Кінцева транспортна точка не підключена"
+
+#: ../../library/errno.rst:585
+msgid ""
+"Cannot send after transport endpoint shutdown. This error is mapped to the "
+"exception :exc:`BrokenPipeError`."
+msgstr ""
+"Неможливо надіслати після завершення транспортної кінцевої точки. Ця помилка"
+" зіставляється з винятком :exc:`BrokenPipeError`."
+
+#: ../../library/errno.rst:591
+msgid "Too many references: cannot splice"
+msgstr "Забагато посилань: неможливо з’єднати"
+
+#: ../../library/errno.rst:596
+msgid ""
+"Connection timed out. This error is mapped to the exception "
+":exc:`TimeoutError`."
+msgstr ""
+"Тайм-аут підключення. Ця помилка зіставляється з винятком "
+":exc:`TimeoutError`."
+
+#: ../../library/errno.rst:602
+msgid ""
+"Connection refused. This error is mapped to the exception "
+":exc:`ConnectionRefusedError`."
+msgstr ""
+"З'єднання відхилено. Ця помилка зіставляється з винятком "
+":exc:`ConnectionRefusedError`."
+
+#: ../../library/errno.rst:608
+msgid "Host is down"
+msgstr "Хост не працює"
+
+#: ../../library/errno.rst:613
+msgid "No route to host"
+msgstr "Немає маршруту до хосту"
+
+#: ../../library/errno.rst:618
+msgid ""
+"Operation already in progress. This error is mapped to the exception "
+":exc:`BlockingIOError`."
+msgstr ""
+"Операція вже триває. Ця помилка зіставляється з винятком "
+":exc:`BlockingIOError`."
+
+#: ../../library/errno.rst:624
+msgid ""
+"Operation now in progress. This error is mapped to the exception "
+":exc:`BlockingIOError`."
+msgstr ""
+"Зараз триває операція. Ця помилка зіставляється з винятком "
+":exc:`BlockingIOError`."
+
+#: ../../library/errno.rst:630
+msgid "Stale NFS file handle"
+msgstr "Застарілий дескриптор файлу NFS"
+
+#: ../../library/errno.rst:635
+msgid "Structure needs cleaning"
+msgstr "Конструкція потребує очищення"
+
+#: ../../library/errno.rst:640
+msgid "Not a XENIX named type file"
+msgstr "Файл не має імені XENIX"
+
+#: ../../library/errno.rst:645
+msgid "No XENIX semaphores available"
+msgstr "Немає доступних семафорів XENIX"
+
+#: ../../library/errno.rst:650
+msgid "Is a named type file"
+msgstr "Це файл іменованого типу"
+
+#: ../../library/errno.rst:655
+msgid "Remote I/O error"
+msgstr "Помилка віддаленого введення-виведення"
+
+#: ../../library/errno.rst:660
+msgid "Quota exceeded"
+msgstr "Квоту перевищено"
+
+#: ../../library/errno.rst:664
+msgid "Interface output queue is full"
+msgstr ""
+
+#: ../../library/errno.rst:670
+msgid ""
+"Capabilities insufficient. This error is mapped to the exception "
+":exc:`PermissionError`."
+msgstr ""
+
+#: ../../library/errno.rst:673
+msgid "Availability"
+msgstr ""
+
+#: ../../library/errno.rst:680
+msgid "Operation canceled"
+msgstr ""
+
+#: ../../library/errno.rst:687
+msgid "Owner died"
+msgstr ""
+
+#: ../../library/errno.rst:694
+msgid "State not recoverable"
+msgstr ""
