@@ -26,7 +26,7 @@ CPYTHON_CURRENT_COMMIT := eec8e61992fb654d4cf58de4d727c18622b8303e
 CPYTHON_PATH := ../cpython/
 
 LANGUAGE := uk
-BRANCH := 3.11
+BRANCH := 3.12
 
 EXCLUDED := whatsnew/ c-api/
 

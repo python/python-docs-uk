@@ -1,0 +1,3327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2024, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yuliia Shevchenko, 2024
+# Dmytro Kazanzhy, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-12 08:36+0000\n"
+"PO-Revision-Date: 2021-06-28 01:19+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2024\n"
+"Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: ../../reference/compound_stmts.rst:5
+msgid "Compound statements"
+msgstr "Складені висловлювання"
+
+#: ../../reference/compound_stmts.rst:9
+msgid ""
+"Compound statements contain (groups of) other statements; they affect or "
+"control the execution of those other statements in some way.  In general, "
+"compound statements span multiple lines, although in simple incarnations a "
+"whole compound statement may be contained in one line."
+msgstr ""
+"Складені висловлювання містять (групи) інші висловлювання; вони певним чином"
+" впливають або контролюють виконання цих інших операторів. Загалом складені "
+"висловлювання охоплюють кілька рядків, хоча в простих варіантах ціле "
+"складене висловлювання може міститися в одному рядку."
+
+#: ../../reference/compound_stmts.rst:14
+msgid ""
+"The :keyword:`if`, :keyword:`while` and :keyword:`for` statements implement "
+"traditional control flow constructs.  :keyword:`try` specifies exception "
+"handlers and/or cleanup code for a group of statements, while the "
+":keyword:`with` statement allows the execution of initialization and "
+"finalization code around a block of code.  Function and class definitions "
+"are also syntactically compound statements."
+msgstr ""
+"Оператори :keyword:`if`, :keyword:`while` і :keyword:`for` реалізують "
+"традиційні конструкції потоку керування. :keyword:`try` визначає обробники "
+"винятків та/або код очищення для групи операторів, тоді як оператор "
+":keyword:`with` дозволяє виконувати код ініціалізації та фіналізації навколо"
+" блоку коду. Визначення функцій і класів також є синтаксично складеними "
+"висловлюваннями."
+
+#: ../../reference/compound_stmts.rst:26
+msgid ""
+"A compound statement consists of one or more 'clauses.'  A clause consists "
+"of a header and a 'suite.'  The clause headers of a particular compound "
+"statement are all at the same indentation level. Each clause header begins "
+"with a uniquely identifying keyword and ends with a colon.  A suite is a "
+"group of statements controlled by a clause.  A suite can be one or more "
+"semicolon-separated simple statements on the same line as the header, "
+"following the header's colon, or it can be one or more indented statements "
+"on subsequent lines.  Only the latter form of a suite can contain nested "
+"compound statements; the following is illegal, mostly because it wouldn't be"
+" clear to which :keyword:`if` clause a following :keyword:`else` clause "
+"would belong::"
+msgstr ""
+"Складений оператор складається з одного або кількох \"речень\". Речення "
+"складається із заголовка та \"набору\". Усі заголовки речень певного "
+"складеного оператора мають однаковий рівень відступу. Кожен заголовок "
+"пропозиції починається з унікального ключового слова та закінчується "
+"двокрапкою. Набір — це група висловлювань, керованих реченням. Набір може "
+"складатися з одного або кількох простих операторів, розділених крапкою з "
+"комою, у тому самому рядку, що й заголовок, після двокрапки заголовка, або "
+"це може бути один чи більше операторів із відступом у наступних рядках. Лише"
+" остання форма набору може містити вкладені складені оператори; наступне є "
+"незаконним, здебільшого тому, що було б незрозуміло, до якого пункту "
+":keyword:`if` належало б таке положення :keyword:`else`::"
+
+#: ../../reference/compound_stmts.rst:37
+msgid "if test1: if test2: print(x)"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:39
+msgid ""
+"Also note that the semicolon binds tighter than the colon in this context, "
+"so that in the following example, either all or none of the :func:`print` "
+"calls are executed::"
+msgstr ""
+"Також зауважте, що в цьому контексті крапка з комою зв’язується сильніше, "
+"ніж двокрапка, тому в наступному прикладі виконуються або всі, або жоден із "
+"викликів :func:`print`::"
+
+#: ../../reference/compound_stmts.rst:43
+msgid "if x < y < z: print(x); print(y); print(z)"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:45
+msgid "Summarizing:"
+msgstr "Підведення підсумків:"
+
+#: ../../reference/compound_stmts.rst:69
+msgid ""
+"Note that statements always end in a ``NEWLINE`` possibly followed by a "
+"``DEDENT``.  Also note that optional continuation clauses always begin with "
+"a keyword that cannot start a statement, thus there are no ambiguities (the "
+"'dangling :keyword:`else`' problem is solved in Python by requiring nested "
+":keyword:`if` statements to be indented)."
+msgstr ""
+"Зауважте, що оператори завжди закінчуються на ``NEWLINE``, після якого, "
+"можливо, йде ``DEDENT``. Також зауважте, що необов’язкові речення "
+"продовження завжди починаються з ключового слова, яке не може розпочинати "
+"оператор, тому немає ніяких двозначностей (проблему \"висячих "
+":keyword:`else`\" вирішено в Python, вимагаючи вкладених операторів "
+":keyword:`if` з відступом)."
+
+#: ../../reference/compound_stmts.rst:75
+msgid ""
+"The formatting of the grammar rules in the following sections places each "
+"clause on a separate line for clarity."
+msgstr ""
+"Форматування правил граматики в наступних розділах розміщує кожне речення в "
+"окремому рядку для ясності."
+
+#: ../../reference/compound_stmts.rst:84
+msgid "The :keyword:`!if` statement"
+msgstr "Оператор :keyword:`!if`"
+
+#: ../../reference/compound_stmts.rst:92
+msgid "The :keyword:`if` statement is used for conditional execution:"
+msgstr "Оператор :keyword:`if` використовується для умовного виконання:"
+
+#: ../../reference/compound_stmts.rst:99
+msgid ""
+"It selects exactly one of the suites by evaluating the expressions one by "
+"one until one is found to be true (see section :ref:`booleans` for the "
+"definition of true and false); then that suite is executed (and no other "
+"part of the :keyword:`if` statement is executed or evaluated).  If all "
+"expressions are false, the suite of the :keyword:`else` clause, if present, "
+"is executed."
+msgstr ""
+"Він вибирає точно один із наборів, обчислюючи вирази один за іншим, доки "
+"один не буде визнаний істинним (див. розділ :ref:`booleans` для визначення "
+"істинного та хибного); тоді цей набір виконується (і жодна інша частина "
+"оператора :keyword:`if` не виконується і не оцінюється). Якщо всі вирази "
+"хибні, виконується набір пропозиції :keyword:`else`, якщо вона є."
+
+#: ../../reference/compound_stmts.rst:109
+msgid "The :keyword:`!while` statement"
+msgstr "Оператор :keyword:`!while`"
+
+#: ../../reference/compound_stmts.rst:117
+msgid ""
+"The :keyword:`while` statement is used for repeated execution as long as an "
+"expression is true:"
+msgstr ""
+"Інструкція :keyword:`while` використовується для повторного виконання, доки "
+"вираз є істинним:"
+
+#: ../../reference/compound_stmts.rst:124
+msgid ""
+"This repeatedly tests the expression and, if it is true, executes the first "
+"suite; if the expression is false (which may be the first time it is tested)"
+" the suite of the :keyword:`!else` clause, if present, is executed and the "
+"loop terminates."
+msgstr ""
+"Це багаторазово перевіряє вираз і, якщо воно вірне, виконує перший набір; "
+"якщо вираз є хибним (що може бути першим, коли його перевіряють), набір "
+"пропозиції :keyword:`!else` виконується, і цикл припиняється."
+
+#: ../../reference/compound_stmts.rst:133
+msgid ""
+"A :keyword:`break` statement executed in the first suite terminates the loop"
+" without executing the :keyword:`!else` clause's suite.  A "
+":keyword:`continue` statement executed in the first suite skips the rest of "
+"the suite and goes back to testing the expression."
+msgstr ""
+"Інструкція :keyword:`break`, виконана в першому наборі, завершує цикл без "
+"виконання набору речень :keyword:`!else`. Інструкція :keyword:`continue`, "
+"виконана в першому наборі, пропускає решту пакета і повертається до "
+"перевірки виразу."
+
+#: ../../reference/compound_stmts.rst:142
+msgid "The :keyword:`!for` statement"
+msgstr "Оператор :keyword:`!for`"
+
+#: ../../reference/compound_stmts.rst:153
+msgid ""
+"The :keyword:`for` statement is used to iterate over the elements of a "
+"sequence (such as a string, tuple or list) or other iterable object:"
+msgstr ""
+"Оператор :keyword:`for` використовується для повторення елементів "
+"послідовності (таких як рядок, кортеж або список) або іншого ітерованого "
+"об’єкта:"
+
+#: ../../reference/compound_stmts.rst:160
+msgid ""
+"The ``starred_list`` expression is evaluated once; it should yield an "
+":term:`iterable` object.  An :term:`iterator` is created for that iterable. "
+"The first item provided by the iterator is then assigned to the target list "
+"using the standard rules for assignments (see :ref:`assignment`), and the "
+"suite is executed.  This repeats for each item provided by the iterator.  "
+"When the iterator is exhausted, the suite in the :keyword:`!else` clause, if"
+" present, is executed, and the loop terminates."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:173
+msgid ""
+"A :keyword:`break` statement executed in the first suite terminates the loop"
+" without executing the :keyword:`!else` clause's suite.  A "
+":keyword:`continue` statement executed in the first suite skips the rest of "
+"the suite and continues with the next item, or with the :keyword:`!else` "
+"clause if there is no next item."
+msgstr ""
+"Інструкція :keyword:`break`, виконана в першому наборі, завершує цикл без "
+"виконання набору речень :keyword:`!else`. Інструкція :keyword:`continue`, "
+"виконана в першому наборі, пропускає решту набору і продовжує з наступним "
+"елементом або з пропозицією :keyword:`!else`, якщо наступного елемента "
+"немає."
+
+#: ../../reference/compound_stmts.rst:179
+msgid ""
+"The for-loop makes assignments to the variables in the target list. This "
+"overwrites all previous assignments to those variables including those made "
+"in the suite of the for-loop::"
+msgstr ""
+"Цикл for виконує призначення змінним у цільовому списку. Це перезаписує всі "
+"попередні призначення цим змінним, включаючи ті, що зроблені в наборі циклу "
+"for::"
+
+#: ../../reference/compound_stmts.rst:183
+msgid ""
+"for i in range(10):\n"
+"    print(i)\n"
+"    i = 5             # this will not affect the for-loop\n"
+"                      # because i will be overwritten with the next\n"
+"                      # index in the range"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:193
+msgid ""
+"Names in the target list are not deleted when the loop is finished, but if "
+"the sequence is empty, they will not have been assigned to at all by the "
+"loop.  Hint: the built-in type :func:`range` represents immutable arithmetic"
+" sequences of integers. For instance, iterating ``range(3)`` successively "
+"yields 0, 1, and then 2."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:198
+msgid "Starred elements are now allowed in the expression list."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:205
+msgid "The :keyword:`!try` statement"
+msgstr "Оператор :keyword:`!try`"
+
+#: ../../reference/compound_stmts.rst:215
+msgid ""
+"The :keyword:`!try` statement specifies exception handlers and/or cleanup "
+"code for a group of statements:"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:231
+msgid ""
+"Additional information on exceptions can be found in section "
+":ref:`exceptions`, and information on using the :keyword:`raise` statement "
+"to generate exceptions may be found in section :ref:`raise`."
+msgstr ""
+"Додаткову інформацію про винятки можна знайти в розділі :ref:`exceptions`, а"
+" інформацію про використання оператора :keyword:`raise` для створення "
+"винятків можна знайти в розділі :ref:`raise`."
+
+#: ../../reference/compound_stmts.rst:239
+msgid ":keyword:`!except` clause"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:241
+msgid ""
+"The :keyword:`!except` clause(s) specify one or more exception handlers. "
+"When no exception occurs in the :keyword:`try` clause, no exception handler "
+"is executed. When an exception occurs in the :keyword:`!try` suite, a search"
+" for an exception handler is started. This search inspects the "
+":keyword:`!except` clauses in turn until one is found that matches the "
+"exception. An expression-less :keyword:`!except` clause, if present, must be"
+" last; it matches any exception."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:249
+msgid ""
+"For an :keyword:`!except` clause with an expression, the expression must "
+"evaluate to an exception type or a tuple of exception types. The raised "
+"exception matches an :keyword:`!except` clause whose expression evaluates to"
+" the class or a :term:`non-virtual base class <abstract base class>` of the "
+"exception object, or to a tuple that contains such a class."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:255
+msgid ""
+"If no :keyword:`!except` clause matches the exception, the search for an "
+"exception handler continues in the surrounding code and on the invocation "
+"stack.  [#]_"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:259
+msgid ""
+"If the evaluation of an expression in the header of an :keyword:`!except` "
+"clause raises an exception, the original search for a handler is canceled "
+"and a search starts for the new exception in the surrounding code and on the"
+" call stack (it is treated as if the entire :keyword:`try` statement raised "
+"the exception)."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:267
+msgid ""
+"When a matching :keyword:`!except` clause is found, the exception is "
+"assigned to the target specified after the :keyword:`!as` keyword in that "
+":keyword:`!except` clause, if present, and the :keyword:`!except` clause's "
+"suite is executed. All :keyword:`!except` clauses must have an executable "
+"block. When the end of this block is reached, execution continues normally "
+"after the entire :keyword:`try` statement. (This means that if two nested "
+"handlers exist for the same exception, and the exception occurs in the "
+":keyword:`!try` clause of the inner handler, the outer handler will not "
+"handle the exception.)"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:278
+msgid ""
+"When an exception has been assigned using ``as target``, it is cleared at "
+"the end of the :keyword:`!except` clause.  This is as if ::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:281
+msgid ""
+"except E as N:\n"
+"    foo"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:284
+msgid "was translated to ::"
+msgstr "було перекладено на::"
+
+#: ../../reference/compound_stmts.rst:286
+msgid ""
+"except E as N:\n"
+"    try:\n"
+"        foo\n"
+"    finally:\n"
+"        del N"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:292
+msgid ""
+"This means the exception must be assigned to a different name to be able to "
+"refer to it after the :keyword:`!except` clause. Exceptions are cleared "
+"because with the traceback attached to them, they form a reference cycle "
+"with the stack frame, keeping all locals in that frame alive until the next "
+"garbage collection occurs."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:302
+msgid ""
+"Before an :keyword:`!except` clause's suite is executed, the exception is "
+"stored in the :mod:`sys` module, where it can be accessed from within the "
+"body of the :keyword:`!except` clause by calling :func:`sys.exception`. When"
+" leaving an exception handler, the exception stored in the :mod:`sys` module"
+" is reset to its previous value::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:308
+msgid ""
+">>> print(sys.exception())\n"
+"None\n"
+">>> try:\n"
+"...     raise TypeError\n"
+"... except:\n"
+"...     print(repr(sys.exception()))\n"
+"...     try:\n"
+"...          raise ValueError\n"
+"...     except:\n"
+"...         print(repr(sys.exception()))\n"
+"...     print(repr(sys.exception()))\n"
+"...\n"
+"TypeError()\n"
+"ValueError()\n"
+"TypeError()\n"
+">>> print(sys.exception())\n"
+"None"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:333
+msgid ":keyword:`!except*` clause"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:335
+msgid ""
+"The :keyword:`!except*` clause(s) are used for handling "
+":exc:`ExceptionGroup`\\s. The exception type for matching is interpreted as "
+"in the case of :keyword:`except`, but in the case of exception groups we can"
+" have partial matches when the type matches some of the exceptions in the "
+"group. This means that multiple :keyword:`!except*` clauses can execute, "
+"each handling part of the exception group. Each clause executes at most once"
+" and handles an exception group of all matching exceptions.  Each exception "
+"in the group is handled by at most one :keyword:`!except*` clause, the first"
+" that matches it. ::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:345
+msgid ""
+">>> try:\n"
+"...     raise ExceptionGroup(\"eg\",\n"
+"...         [ValueError(1), TypeError(2), OSError(3), OSError(4)])\n"
+"... except* TypeError as e:\n"
+"...     print(f'caught {type(e)} with nested {e.exceptions}')\n"
+"... except* OSError as e:\n"
+"...     print(f'caught {type(e)} with nested {e.exceptions}')\n"
+"...\n"
+"caught <class 'ExceptionGroup'> with nested (TypeError(2),)\n"
+"caught <class 'ExceptionGroup'> with nested (OSError(3), OSError(4))\n"
+"  + Exception Group Traceback (most recent call last):\n"
+"  |   File \"<stdin>\", line 2, in <module>\n"
+"  | ExceptionGroup: eg\n"
+"  +-+---------------- 1 ----------------\n"
+"    | ValueError: 1\n"
+"    +------------------------------------"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:363
+msgid ""
+"Any remaining exceptions that were not handled by any :keyword:`!except*` "
+"clause are re-raised at the end, along with all exceptions that were raised "
+"from within the :keyword:`!except*` clauses. If this list contains more than"
+" one exception to reraise, they are combined into an exception group."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:369
+msgid ""
+"If the raised exception is not an exception group and its type matches one "
+"of the :keyword:`!except*` clauses, it is caught and wrapped by an exception"
+" group with an empty message string. ::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:373
+msgid ""
+">>> try:\n"
+"...     raise BlockingIOError\n"
+"... except* BlockingIOError as e:\n"
+"...     print(repr(e))\n"
+"...\n"
+"ExceptionGroup('', (BlockingIOError()))"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:380
+msgid ""
+"An :keyword:`!except*` clause must have a matching expression; it cannot be "
+"``except*:``. Furthermore, this expression cannot contain exception group "
+"types, because that would have ambiguous semantics."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:384
+msgid ""
+"It is not possible to mix :keyword:`except` and :keyword:`!except*` in the "
+"same :keyword:`try`. :keyword:`break`, :keyword:`continue` and "
+":keyword:`return` cannot appear in an :keyword:`!except*` clause."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:399
+msgid ":keyword:`!else` clause"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:401
+msgid ""
+"The optional :keyword:`!else` clause is executed if the control flow leaves "
+"the :keyword:`try` suite, no exception was raised, and no :keyword:`return`,"
+" :keyword:`continue`, or :keyword:`break` statement was executed.  "
+"Exceptions in the :keyword:`!else` clause are not handled by the preceding "
+":keyword:`except` clauses."
+msgstr ""
+"Необов’язкова пропозиція :keyword:`!else` виконується, якщо потік керування "
+"виходить із набору :keyword:`try`, не було викликано винятків і немає "
+":keyword:`return`, :keyword:`continue` або Інструкція :keyword:`break` була "
+"виконана. Винятки в пункті :keyword:`!else` не обробляються попередніми "
+"пунктами :keyword:`except`."
+
+#: ../../reference/compound_stmts.rst:413
+msgid ":keyword:`!finally` clause"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:415
+msgid ""
+"If :keyword:`!finally` is present, it specifies a 'cleanup' handler.  The "
+":keyword:`try` clause is executed, including any :keyword:`except` and "
+":keyword:`else` clauses.  If an exception occurs in any of the clauses and "
+"is not handled, the exception is temporarily saved. The :keyword:`!finally` "
+"clause is executed.  If there is a saved exception it is re-raised at the "
+"end of the :keyword:`!finally` clause.  If the :keyword:`!finally` clause "
+"raises another exception, the saved exception is set as the context of the "
+"new exception. If the :keyword:`!finally` clause executes a "
+":keyword:`return`, :keyword:`break` or :keyword:`continue` statement, the "
+"saved exception is discarded::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:425
+msgid ""
+">>> def f():\n"
+"...     try:\n"
+"...         1/0\n"
+"...     finally:\n"
+"...         return 42\n"
+"...\n"
+">>> f()\n"
+"42"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:434
+msgid ""
+"The exception information is not available to the program during execution "
+"of the :keyword:`!finally` clause."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:442
+msgid ""
+"When a :keyword:`return`, :keyword:`break` or :keyword:`continue` statement "
+"is executed in the :keyword:`try` suite of a :keyword:`!try`...\\ "
+":keyword:`!finally` statement, the :keyword:`!finally` clause is also "
+"executed 'on the way out.'"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:446
+msgid ""
+"The return value of a function is determined by the last :keyword:`return` "
+"statement executed.  Since the :keyword:`!finally` clause always executes, a"
+" :keyword:`!return` statement executed in the :keyword:`!finally` clause "
+"will always be the last one executed::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:451
+msgid ""
+">>> def foo():\n"
+"...     try:\n"
+"...         return 'try'\n"
+"...     finally:\n"
+"...         return 'finally'\n"
+"...\n"
+">>> foo()\n"
+"'finally'"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:460
+msgid ""
+"Prior to Python 3.8, a :keyword:`continue` statement was illegal in the "
+":keyword:`!finally` clause due to a problem with the implementation."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:469
+msgid "The :keyword:`!with` statement"
+msgstr "Оператор :keyword:`!with`"
+
+#: ../../reference/compound_stmts.rst:478
+msgid ""
+"The :keyword:`with` statement is used to wrap the execution of a block with "
+"methods defined by a context manager (see section :ref:`context-managers`). "
+"This allows common :keyword:`try`...\\ :keyword:`except`...\\ "
+":keyword:`finally` usage patterns to be encapsulated for convenient reuse."
+msgstr ""
+"Оператор :keyword:`with` використовується для обгортання виконання блоку "
+"методами, визначеними контекстним менеджером (див. розділ :ref:`context-"
+"managers`). Це дозволяє інкапсулювати загальні :keyword:`try`...\\ "
+":keyword:`except`...\\ :keyword:`finally` моделі використання для зручного "
+"повторного використання."
+
+#: ../../reference/compound_stmts.rst:488
+msgid ""
+"The execution of the :keyword:`with` statement with one \"item\" proceeds as"
+" follows:"
+msgstr ""
+"Виконання оператора :keyword:`with` з одним \"елементом\" відбувається "
+"наступним чином:"
+
+#: ../../reference/compound_stmts.rst:490
+msgid ""
+"The context expression (the expression given in the :token:`~python-"
+"grammar:with_item`) is evaluated to obtain a context manager."
+msgstr ""
+"Контекстний вираз (вираз, поданий у :token:`~python-grammar:with_item`) "
+"обчислюється для отримання контекстного менеджера."
+
+#: ../../reference/compound_stmts.rst:493
+msgid ""
+"The context manager's :meth:`~object.__enter__` is loaded for later use."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:495
+msgid ""
+"The context manager's :meth:`~object.__exit__` is loaded for later use."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:497
+msgid "The context manager's :meth:`~object.__enter__` method is invoked."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:499
+msgid ""
+"If a target was included in the :keyword:`with` statement, the return value "
+"from :meth:`~object.__enter__` is assigned to it."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:504
+msgid ""
+"The :keyword:`with` statement guarantees that if the "
+":meth:`~object.__enter__` method returns without an error, then "
+":meth:`~object.__exit__` will always be called. Thus, if an error occurs "
+"during the assignment to the target list, it will be treated the same as an "
+"error occurring within the suite would be. See step 7 below."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:510
+msgid "The suite is executed."
+msgstr "Сюїта виконана."
+
+#: ../../reference/compound_stmts.rst:512
+msgid ""
+"The context manager's :meth:`~object.__exit__` method is invoked.  If an "
+"exception caused the suite to be exited, its type, value, and traceback are "
+"passed as arguments to :meth:`~object.__exit__`. Otherwise, three "
+":const:`None` arguments are supplied."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:517
+msgid ""
+"If the suite was exited due to an exception, and the return value from the "
+":meth:`~object.__exit__` method was false, the exception is reraised.  If "
+"the return value was true, the exception is suppressed, and execution "
+"continues with the statement following the :keyword:`with` statement."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:522
+msgid ""
+"If the suite was exited for any reason other than an exception, the return "
+"value from :meth:`~object.__exit__` is ignored, and execution proceeds at "
+"the normal location for the kind of exit that was taken."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:526
+#: ../../reference/compound_stmts.rst:1544
+#: ../../reference/compound_stmts.rst:1585
+msgid "The following code::"
+msgstr "Наступний код::"
+
+#: ../../reference/compound_stmts.rst:528
+msgid ""
+"with EXPRESSION as TARGET:\n"
+"    SUITE"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:531
+#: ../../reference/compound_stmts.rst:553
+#: ../../reference/compound_stmts.rst:1590
+msgid "is semantically equivalent to::"
+msgstr "семантично еквівалентний::"
+
+#: ../../reference/compound_stmts.rst:533
+msgid ""
+"manager = (EXPRESSION)\n"
+"enter = type(manager).__enter__\n"
+"exit = type(manager).__exit__\n"
+"value = enter(manager)\n"
+"\n"
+"try:\n"
+"    TARGET = value\n"
+"    SUITE\n"
+"except:\n"
+"    if not exit(manager, *sys.exc_info()):\n"
+"        raise\n"
+"else:\n"
+"    exit(manager, None, None, None)"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:547
+msgid ""
+"With more than one item, the context managers are processed as if multiple "
+":keyword:`with` statements were nested::"
+msgstr ""
+"З більш ніж одним елементом менеджери контексту обробляються так, ніби "
+"кілька операторів :keyword:`with` були вкладеними::"
+
+#: ../../reference/compound_stmts.rst:550
+msgid ""
+"with A() as a, B() as b:\n"
+"    SUITE"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:555
+msgid ""
+"with A() as a:\n"
+"    with B() as b:\n"
+"        SUITE"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:559
+msgid ""
+"You can also write multi-item context managers in multiple lines if the "
+"items are surrounded by parentheses. For example::"
+msgstr ""
+"Ви також можете писати багатоелементні контекстні менеджери в кілька рядків,"
+" якщо елементи оточені дужками. Наприклад::"
+
+#: ../../reference/compound_stmts.rst:562
+msgid ""
+"with (\n"
+"    A() as a,\n"
+"    B() as b,\n"
+"):\n"
+"    SUITE"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:568
+msgid "Support for multiple context expressions."
+msgstr "Підтримка кількох контекстних виразів."
+
+#: ../../reference/compound_stmts.rst:571
+msgid ""
+"Support for using grouping parentheses to break the statement in multiple "
+"lines."
+msgstr ""
+"Підтримка використання групування дужок для розбиття оператора на кілька "
+"рядків."
+
+#: ../../reference/compound_stmts.rst:576
+msgid ":pep:`343` - The \"with\" statement"
+msgstr ":pep:`343` - оператор \"з\"."
+
+#: ../../reference/compound_stmts.rst:577
+msgid ""
+"The specification, background, and examples for the Python :keyword:`with` "
+"statement."
+msgstr ""
+"Специфікація, передумови та приклади оператора Python :keyword:`with`."
+
+#: ../../reference/compound_stmts.rst:583
+msgid "The :keyword:`!match` statement"
+msgstr "Оператор :keyword:`!match`"
+
+#: ../../reference/compound_stmts.rst:597
+msgid "The match statement is used for pattern matching.  Syntax:"
+msgstr "Оператор match використовується для зіставлення шаблону. Синтаксис:"
+
+#: ../../reference/compound_stmts.rst:606
+msgid ""
+"This section uses single quotes to denote :ref:`soft keywords <soft-"
+"keywords>`."
+msgstr ""
+"У цьому розділі використовуються одинарні лапки для позначення :ref:`м’яких "
+"ключових слів <soft-keywords>`."
+
+#: ../../reference/compound_stmts.rst:609
+msgid ""
+"Pattern matching takes a pattern as input (following ``case``) and a subject"
+" value (following ``match``).  The pattern (which may contain subpatterns) "
+"is matched against the subject value.  The outcomes are:"
+msgstr ""
+"Зіставлення шаблону приймає шаблон як вхідні дані (після ``case``) і "
+"значення теми (після ``match``). Шаблон (який може містити підшаблони) "
+"зіставляється зі значенням теми. Результати:"
+
+#: ../../reference/compound_stmts.rst:613
+msgid "A match success or failure (also termed a pattern success or failure)."
+msgstr ""
+"Успіх або невдача збігу (також називається успішним або невдалим шаблоном)."
+
+#: ../../reference/compound_stmts.rst:615
+msgid ""
+"Possible binding of matched values to a name.  The prerequisites for this "
+"are further discussed below."
+msgstr ""
+"Можливе прив’язування відповідних значень до імені. Передумови для цього "
+"обговорюються нижче."
+
+#: ../../reference/compound_stmts.rst:618
+msgid ""
+"The ``match`` and ``case`` keywords are :ref:`soft keywords <soft-"
+"keywords>`."
+msgstr ""
+"Ключові слова ``match`` і ``case`` є :ref:`м'якими ключовими словами <soft-"
+"keywords>`."
+
+#: ../../reference/compound_stmts.rst:622
+#: ../../reference/compound_stmts.rst:1179
+msgid ":pep:`634` -- Structural Pattern Matching: Specification"
+msgstr ":pep:`634` -- Зіставлення структурних шаблонів: Специфікація"
+
+#: ../../reference/compound_stmts.rst:623
+#: ../../reference/compound_stmts.rst:1180
+msgid ":pep:`636` -- Structural Pattern Matching: Tutorial"
+msgstr ":pep:`636` -- Зіставлення структурних шаблонів: підручник"
+
+#: ../../reference/compound_stmts.rst:627
+msgid "Overview"
+msgstr "Огляд"
+
+#: ../../reference/compound_stmts.rst:629
+msgid "Here's an overview of the logical flow of a match statement:"
+msgstr "Ось огляд логічної послідовності оператора збігу:"
+
+#: ../../reference/compound_stmts.rst:632
+msgid ""
+"The subject expression ``subject_expr`` is evaluated and a resulting subject"
+" value obtained. If the subject expression contains a comma, a tuple is "
+"constructed using :ref:`the standard rules <typesseq-tuple>`."
+msgstr ""
+"Вираз суб’єкта ``subject_expr`` обчислюється та отримується результуюче "
+"значення предмета. Якщо вираз теми містить кому, кортеж створюється за "
+"допомогою :ref:`стандартних правил <typesseq-tuple>`."
+
+#: ../../reference/compound_stmts.rst:636
+msgid ""
+"Each pattern in a ``case_block`` is attempted to match with the subject "
+"value. The specific rules for success or failure are described below. The "
+"match attempt can also bind some or all of the standalone names within the "
+"pattern. The precise pattern binding rules vary per pattern type and are "
+"specified below.  **Name bindings made during a successful pattern match "
+"outlive the executed block and can be used after the match statement**."
+msgstr ""
+"Кожен шаблон у ``case_block`` намагається зіставити зі значенням теми. "
+"Конкретні правила успіху чи невдачі описані нижче. Спроба збігу також може "
+"пов’язати деякі або всі окремі імена в шаблоні. Точні правила зв’язування "
+"шаблону залежать від типу шаблону та вказані нижче. **Прив’язки імен, "
+"зроблені під час успішного збігу шаблону, переживають виконаний блок і "
+"можуть використовуватися після оператора збігу**."
+
+#: ../../reference/compound_stmts.rst:645
+msgid ""
+"During failed pattern matches, some subpatterns may succeed.  Do not rely on"
+" bindings being made for a failed match.  Conversely, do not rely on "
+"variables remaining unchanged after a failed match.  The exact behavior is "
+"dependent on implementation and may vary.  This is an intentional decision "
+"made to allow different implementations to add optimizations."
+msgstr ""
+"Під час невдалих збігів шаблонів деякі підшаблони можуть бути успішними. Не "
+"покладайтеся на прив’язки, зроблені для невдалого матчу. І навпаки, не "
+"покладайтеся на те, що змінні залишаться незмінними після невдалого збігу. "
+"Точна поведінка залежить від реалізації та може відрізнятися. Це навмисне "
+"рішення, яке дозволяє оптимізувати різні реалізації."
+
+#: ../../reference/compound_stmts.rst:652
+msgid ""
+"If the pattern succeeds, the corresponding guard (if present) is evaluated. "
+"In this case all name bindings are guaranteed to have happened."
+msgstr ""
+"Якщо шаблон успішний, відповідний охоронець (якщо присутній) оцінюється. У "
+"цьому випадку всі прив’язки імен гарантовано відбулися."
+
+#: ../../reference/compound_stmts.rst:655
+msgid ""
+"If the guard evaluates as true or is missing, the ``block`` inside "
+"``case_block`` is executed."
+msgstr ""
+"Якщо guard оцінює як true або відсутній, виконується ``block`` всередині "
+"``case_block``."
+
+#: ../../reference/compound_stmts.rst:658
+msgid "Otherwise, the next ``case_block`` is attempted as described above."
+msgstr "Інакше виконується спроба наступного ``case_block``, як описано вище."
+
+#: ../../reference/compound_stmts.rst:660
+msgid "If there are no further case blocks, the match statement is completed."
+msgstr "Якщо немає інших блоків регістру, оператор збігу завершується."
+
+#: ../../reference/compound_stmts.rst:664
+msgid ""
+"Users should generally never rely on a pattern being evaluated.  Depending "
+"on implementation, the interpreter may cache values or use other "
+"optimizations which skip repeated evaluations."
+msgstr ""
+"Зазвичай користувачі ніколи не повинні покладатися на шаблон, що оцінюється."
+" Залежно від реалізації, інтерпретатор може кешувати значення або "
+"використовувати інші оптимізації, які пропускають повторні оцінки."
+
+#: ../../reference/compound_stmts.rst:668
+msgid "A sample match statement::"
+msgstr "Зразок заяви про відповідність::"
+
+#: ../../reference/compound_stmts.rst:670
+msgid ""
+">>> flag = False\n"
+">>> match (100, 200):\n"
+"...    case (100, 300):  # Mismatch: 200 != 300\n"
+"...        print('Case 1')\n"
+"...    case (100, 200) if flag:  # Successful match, but guard fails\n"
+"...        print('Case 2')\n"
+"...    case (100, y):  # Matches and binds y to 200\n"
+"...        print(f'Case 3, y: {y}')\n"
+"...    case _:  # Pattern not attempted\n"
+"...        print('Case 4, I match anything!')\n"
+"...\n"
+"Case 3, y: 200"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:684
+msgid ""
+"In this case, ``if flag`` is a guard.  Read more about that in the next "
+"section."
+msgstr ""
+"У цьому випадку ``if flag`` є охороною. Докладніше про це читайте в "
+"наступному розділі."
+
+#: ../../reference/compound_stmts.rst:687
+msgid "Guards"
+msgstr "Охоронці"
+
+#: ../../reference/compound_stmts.rst:694
+msgid ""
+"A ``guard`` (which is part of the ``case``) must succeed for code inside the"
+" ``case`` block to execute.  It takes the form: :keyword:`if` followed by an"
+" expression."
+msgstr ""
+"``guard`` (який є частиною ``case``) має бути успішним для виконання коду "
+"всередині блоку ``case``. Він приймає форму: :keyword:`if`, після якого йде "
+"вираз."
+
+#: ../../reference/compound_stmts.rst:699
+msgid "The logical flow of a ``case`` block with a ``guard`` follows:"
+msgstr "Логічний послідовність блоку ``case`` з ``guard`` наступна:"
+
+#: ../../reference/compound_stmts.rst:701
+msgid ""
+"Check that the pattern in the ``case`` block succeeded.  If the pattern "
+"failed, the ``guard`` is not evaluated and the next ``case`` block is "
+"checked."
+msgstr ""
+"Переконайтеся, що шаблон у блоці ``case`` виконано успішно. Якщо шаблон не "
+"вдається, ``guard`` не оцінюється, і перевіряється наступний ``case`` блок."
+
+#: ../../reference/compound_stmts.rst:705
+msgid "If the pattern succeeded, evaluate the ``guard``."
+msgstr "Якщо шаблон вдався, оцініть ``guard``."
+
+#: ../../reference/compound_stmts.rst:707
+msgid ""
+"If the ``guard`` condition evaluates as true, the case block is selected."
+msgstr ""
+"Якщо умова ``guard`` оцінюється як істинна, вибирається блок регістру."
+
+#: ../../reference/compound_stmts.rst:710
+msgid ""
+"If the ``guard`` condition evaluates as false, the case block is not "
+"selected."
+msgstr "Якщо умова ``guard`` оцінюється як false, блок регістру не вибрано."
+
+#: ../../reference/compound_stmts.rst:713
+msgid ""
+"If the ``guard`` raises an exception during evaluation, the exception "
+"bubbles up."
+msgstr ""
+"Якщо ``охоронець`` викликає виняток під час оцінки, виняток з'являється."
+
+#: ../../reference/compound_stmts.rst:716
+msgid ""
+"Guards are allowed to have side effects as they are expressions.  Guard "
+"evaluation must proceed from the first to the last case block, one at a "
+"time, skipping case blocks whose pattern(s) don't all succeed. (I.e., guard "
+"evaluation must happen in order.) Guard evaluation must stop once a case "
+"block is selected."
+msgstr ""
+"Охоронцям дозволено мати побічні ефекти, оскільки вони є виразами. Оцінка "
+"Guard повинна проходити від першого до останнього блоку регістрів, по "
+"одному, пропускаючи блоки регістрів, шаблон(и) яких не всі є успішними. "
+"(Тобто оцінка охорони має відбуватися в порядку.) Оцінка охорони має "
+"припинитися, коли вибрано блок справи."
+
+#: ../../reference/compound_stmts.rst:726
+msgid "Irrefutable Case Blocks"
+msgstr "Незаперечні блоки випадків"
+
+#: ../../reference/compound_stmts.rst:730
+msgid ""
+"An irrefutable case block is a match-all case block.  A match statement may "
+"have at most one irrefutable case block, and it must be last."
+msgstr ""
+"Незаперечний блок регістрів — це блок регістрів, що відповідає всім "
+"регістрам. Інструкція збігу може мати щонайбільше один неспростовний блок "
+"регістру, і він має бути останнім."
+
+#: ../../reference/compound_stmts.rst:733
+msgid ""
+"A case block is considered irrefutable if it has no guard and its pattern is"
+" irrefutable.  A pattern is considered irrefutable if we can prove from its "
+"syntax alone that it will always succeed.  Only the following patterns are "
+"irrefutable:"
+msgstr ""
+"Блок футляра вважається незаперечним, якщо він не має захисного елемента і "
+"його візерунок є неспростовним. Патерн вважається неспростовним, якщо ми "
+"можемо довести лише з його синтаксису, що він завжди матиме успіх. "
+"Незаперечними є лише такі закономірності:"
+
+#: ../../reference/compound_stmts.rst:738
+msgid ":ref:`as-patterns` whose left-hand side is irrefutable"
+msgstr ":ref:`as-patterns`, ліва сторона якого неспростовна"
+
+#: ../../reference/compound_stmts.rst:740
+msgid ":ref:`or-patterns` containing at least one irrefutable pattern"
+msgstr ":ref:`or-patterns`, що містить принаймні один неспростовний шаблон"
+
+#: ../../reference/compound_stmts.rst:742
+msgid ":ref:`capture-patterns`"
+msgstr ":ref:`capture-patterns`"
+
+#: ../../reference/compound_stmts.rst:744
+msgid ":ref:`wildcard-patterns`"
+msgstr ":ref:`wildcard-patterns`"
+
+#: ../../reference/compound_stmts.rst:746
+msgid "parenthesized irrefutable patterns"
+msgstr "в дужках неспростовні закономірності"
+
+#: ../../reference/compound_stmts.rst:750
+msgid "Patterns"
+msgstr "Візерунки"
+
+#: ../../reference/compound_stmts.rst:757
+msgid "This section uses grammar notations beyond standard EBNF:"
+msgstr ""
+"У цьому розділі використовуються граматичні нотації поза стандартними EBNF:"
+
+#: ../../reference/compound_stmts.rst:759
+msgid "the notation ``SEP.RULE+`` is shorthand for ``RULE (SEP RULE)*``"
+msgstr "позначення ``SEP.RULE+`` є скороченням для ``RULE (SEP RULE)*``"
+
+#: ../../reference/compound_stmts.rst:761
+msgid "the notation ``!RULE`` is shorthand for a negative lookahead assertion"
+msgstr ""
+"нотація ``!RULE`` є скороченням для негативного твердження попереднього "
+"перегляду"
+
+#: ../../reference/compound_stmts.rst:764
+msgid "The top-level syntax for ``patterns`` is:"
+msgstr "Синтаксис верхнього рівня для ``патернів`` такий:"
+
+#: ../../reference/compound_stmts.rst:778
+msgid ""
+"The descriptions below will include a description \"in simple terms\" of "
+"what a pattern does for illustration purposes (credits to Raymond Hettinger "
+"for a document that inspired most of the descriptions). Note that these "
+"descriptions are purely for illustration purposes and **may not** reflect "
+"the underlying implementation.  Furthermore, they do not cover all valid "
+"forms."
+msgstr ""
+"Наведені нижче описи включатимуть опис \"у простих термінах\" того, що "
+"робить шаблон для цілей ілюстрації (заслуга Реймонда Геттінгера за документ,"
+" який надихнув більшість описів). Зауважте, що ці описи наведено лише для "
+"ілюстрації та **можуть** не відображати базову реалізацію. Крім того, вони "
+"не охоплюють усіх дійсних форм."
+
+#: ../../reference/compound_stmts.rst:788
+msgid "OR Patterns"
+msgstr "АБО Шаблони"
+
+#: ../../reference/compound_stmts.rst:790
+msgid ""
+"An OR pattern is two or more patterns separated by vertical bars ``|``.  "
+"Syntax:"
+msgstr ""
+"Шаблон АБО — це два або більше шаблонів, розділених вертикальними рисками "
+"``|``. Синтаксис:"
+
+#: ../../reference/compound_stmts.rst:796
+msgid ""
+"Only the final subpattern may be :ref:`irrefutable <irrefutable_case>`, and "
+"each subpattern must bind the same set of names to avoid ambiguity."
+msgstr ""
+"Лише остаточний підшаблон може бути :ref:`irrefutable <irrefutable_case>`, і"
+" кожен підшаблон повинен пов’язувати однаковий набір імен, щоб уникнути "
+"двозначності."
+
+#: ../../reference/compound_stmts.rst:799
+msgid ""
+"An OR pattern matches each of its subpatterns in turn to the subject value, "
+"until one succeeds.  The OR pattern is then considered successful.  "
+"Otherwise, if none of the subpatterns succeed, the OR pattern fails."
+msgstr ""
+"Шаблон АБО зіставляє кожен зі своїх підшаблонів по черзі зі значенням "
+"суб’єкта, поки один не досягне успіху. Потім шаблон АБО вважається успішним."
+" В іншому випадку, якщо жоден із підшаблонів не вдасться, шаблон АБО буде "
+"невдалим."
+
+#: ../../reference/compound_stmts.rst:803
+msgid ""
+"In simple terms, ``P1 | P2 | ...`` will try to match ``P1``, if it fails it "
+"will try to match ``P2``, succeeding immediately if any succeeds, failing "
+"otherwise."
+msgstr ""
+"Простіше кажучи, ``P1 | P2 | ...`` намагатиметься знайти відповідність "
+"``P1``, якщо це не вдасться, вона спробує знайти ``P2``, успішно негайно, "
+"якщо будь-який з них вдасться, інакше не вдасться."
+
+#: ../../reference/compound_stmts.rst:809
+msgid "AS Patterns"
+msgstr "AS Patterns"
+
+#: ../../reference/compound_stmts.rst:811
+msgid ""
+"An AS pattern matches an OR pattern on the left of the :keyword:`as` keyword"
+" against a subject.  Syntax:"
+msgstr ""
+"Шаблон AS відповідає шаблону АБО ліворуч від ключового слова :keyword:`as` "
+"щодо теми. Синтаксис:"
+
+#: ../../reference/compound_stmts.rst:817
+msgid ""
+"If the OR pattern fails, the AS pattern fails.  Otherwise, the AS pattern "
+"binds the subject to the name on the right of the as keyword and succeeds. "
+"``capture_pattern`` cannot be a ``_``."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:821
+msgid ""
+"In simple terms ``P as NAME`` will match with ``P``, and on success it will "
+"set ``NAME = <subject>``."
+msgstr ""
+"Простіше кажучи, ``P as NAME`` співпадатиме з ``P``, і в разі успіху буде "
+"встановлено ``NAME = <subject>``."
+
+#: ../../reference/compound_stmts.rst:828
+msgid "Literal Patterns"
+msgstr "Літеральні візерунки"
+
+#: ../../reference/compound_stmts.rst:830
+msgid ""
+"A literal pattern corresponds to most :ref:`literals <literals>` in Python."
+"  Syntax:"
+msgstr ""
+"Шаблон літералів відповідає більшості :ref:`літералів <literals>` у Python. "
+"Синтаксис:"
+
+#: ../../reference/compound_stmts.rst:843
+msgid ""
+"The rule ``strings`` and the token ``NUMBER`` are defined in the "
+":doc:`standard Python grammar <./grammar>`.  Triple-quoted strings are "
+"supported.  Raw strings and byte strings are supported.  :ref:`f-strings` "
+"are not supported."
+msgstr ""
+"Правило ``рядки`` і токен ``ЧИСЛО`` визначено в :doc:`стандартній граматиці "
+"Python <./grammar>`. Підтримуються рядки в потрійних лапках. Підтримуються "
+"необроблені рядки та рядки байтів. :ref:`f-strings` не підтримуються."
+
+#: ../../reference/compound_stmts.rst:848
+msgid ""
+"The forms ``signed_number '+' NUMBER`` and ``signed_number '-' NUMBER`` are "
+"for expressing :ref:`complex numbers <imaginary>`; they require a real "
+"number on the left and an imaginary number on the right. E.g. ``3 + 4j``."
+msgstr ""
+"Форми ``число_знак '+' ЧИСЛО`` і ``число_знак '-' ЧИСЛО`` призначені для "
+"вираження :ref:`комплексних чисел <imaginary>`; вони вимагають дійсного "
+"числа зліва та уявного числа справа. наприклад ``3 + 4j``."
+
+#: ../../reference/compound_stmts.rst:852
+msgid ""
+"In simple terms, ``LITERAL`` will succeed only if ``<subject> == LITERAL``. "
+"For the singletons ``None``, ``True`` and ``False``, the :keyword:`is` "
+"operator is used."
+msgstr ""
+"Простіше кажучи, ``LITERAL`` буде успішним, лише якщо ``<subject> == "
+"LITERAL``. Для синглтонів ``None``, ``True`` і ``False`` використовується "
+"оператор :keyword:`is`."
+
+#: ../../reference/compound_stmts.rst:858
+msgid "Capture Patterns"
+msgstr "Захоплення шаблонів"
+
+#: ../../reference/compound_stmts.rst:860
+msgid "A capture pattern binds the subject value to a name. Syntax:"
+msgstr "Шаблон захоплення прив’язує значення теми до імені. Синтаксис:"
+
+#: ../../reference/compound_stmts.rst:866
+msgid ""
+"A single underscore ``_`` is not a capture pattern (this is what ``!'_'`` "
+"expresses). It is instead treated as a :token:`~python-"
+"grammar:wildcard_pattern`."
+msgstr ""
+"Одне підкреслення ``_`` не є шаблоном захоплення (це те, що ``!'_''`` "
+"виражає). Натомість він розглядається як :token:`~python-"
+"grammar:wildcard_pattern`."
+
+#: ../../reference/compound_stmts.rst:870
+msgid ""
+"In a given pattern, a given name can only be bound once.  E.g. ``case x, x: "
+"...`` is invalid while ``case [x] | x: ...`` is allowed."
+msgstr ""
+"У заданому шаблоні дане ім’я може бути пов’язане лише один раз. наприклад "
+"``case x, x: ...`` недійсний, тоді як ``case [x] | x: ...`` дозволено."
+
+#: ../../reference/compound_stmts.rst:873
+msgid ""
+"Capture patterns always succeed.  The binding follows scoping rules "
+"established by the assignment expression operator in :pep:`572`; the name "
+"becomes a local variable in the closest containing function scope unless "
+"there's an applicable :keyword:`global` or :keyword:`nonlocal` statement."
+msgstr ""
+"Захоплення шаблонів завжди вдається. Зв’язування відповідає правилам області"
+" видимості, встановленим оператором виразу присвоєння в :pep:`572`; ім'я "
+"стає локальною змінною в найближчій області видимості функції, якщо немає "
+"відповідного оператора :keyword:`global` або :keyword:`nonlocal`."
+
+#: ../../reference/compound_stmts.rst:878
+msgid ""
+"In simple terms ``NAME`` will always succeed and it will set ``NAME = "
+"<subject>``."
+msgstr ""
+"Простіше кажучи, ``NAME`` завжди матиме успіх і встановлюватиме ``NAME = "
+"<subject>``."
+
+#: ../../reference/compound_stmts.rst:883
+msgid "Wildcard Patterns"
+msgstr "Шаблони підстановок"
+
+#: ../../reference/compound_stmts.rst:885
+msgid ""
+"A wildcard pattern always succeeds (matches anything) and binds no name.  "
+"Syntax:"
+msgstr ""
+"Шаблон підстановки завжди успішний (відповідає будь-чому) і не прив’язує "
+"жодного імені. Синтаксис:"
+
+#: ../../reference/compound_stmts.rst:891
+msgid ""
+"``_`` is a :ref:`soft keyword <soft-keywords>` within any pattern, but only "
+"within patterns.  It is an identifier, as usual, even within ``match`` "
+"subject expressions, ``guard``\\ s, and ``case`` blocks."
+msgstr ""
+"``_`` є :ref:`м'яким ключовим словом <soft-keywords>` у будь-якому шаблоні, "
+"але лише всередині шаблонів. Це ідентифікатор, як зазвичай, навіть у виразах"
+" теми ``match``, ``guard``\\ s і ``case`` блоків."
+
+#: ../../reference/compound_stmts.rst:895
+msgid "In simple terms, ``_`` will always succeed."
+msgstr "Простіше кажучи, ``_`` завжди матиме успіх."
+
+#: ../../reference/compound_stmts.rst:900
+msgid "Value Patterns"
+msgstr "Шаблони цінностей"
+
+#: ../../reference/compound_stmts.rst:902
+msgid "A value pattern represents a named value in Python. Syntax:"
+msgstr "Шаблон значення представляє іменоване значення в Python. Синтаксис:"
+
+#: ../../reference/compound_stmts.rst:910
+msgid ""
+"The dotted name in the pattern is looked up using standard Python :ref:`name"
+" resolution rules <resolve_names>`.  The pattern succeeds if the value found"
+" compares equal to the subject value (using the ``==`` equality operator)."
+msgstr ""
+"Пунктирна назва в шаблоні шукається за допомогою стандартних Python "
+":ref:`правил розпізнавання імен <resolve_names>`. Шаблон виконується "
+"успішно, якщо знайдене значення порівнюється зі значенням предмета (з "
+"використанням оператора рівності ``==``)."
+
+#: ../../reference/compound_stmts.rst:915
+msgid ""
+"In simple terms ``NAME1.NAME2`` will succeed only if ``<subject> == "
+"NAME1.NAME2``"
+msgstr ""
+"Простіше кажучи, ``NAME1.NAME2`` буде успішним, лише якщо ``<subject> == "
+"NAME1.NAME2``"
+
+#: ../../reference/compound_stmts.rst:919
+msgid ""
+"If the same value occurs multiple times in the same match statement, the "
+"interpreter may cache the first value found and reuse it rather than repeat "
+"the same lookup.  This cache is strictly tied to a given execution of a "
+"given match statement."
+msgstr ""
+"Якщо те саме значення зустрічається кілька разів у тому самому операторі "
+"збігу, інтерпретатор може кешувати перше знайдене значення та "
+"використовувати його повторно, а не повторювати той самий пошук. Цей кеш "
+"суворо прив’язаний до заданого виконання даного оператора відповідності."
+
+#: ../../reference/compound_stmts.rst:927
+msgid "Group Patterns"
+msgstr "Шаблони груп"
+
+#: ../../reference/compound_stmts.rst:929
+msgid ""
+"A group pattern allows users to add parentheses around patterns to emphasize"
+" the intended grouping.  Otherwise, it has no additional syntax. Syntax:"
+msgstr ""
+"Груповий шаблон дозволяє користувачам додавати дужки навколо шаблонів, щоб "
+"підкреслити передбачуване групування. В іншому випадку він не має "
+"додаткового синтаксису. Синтаксис:"
+
+#: ../../reference/compound_stmts.rst:936
+msgid "In simple terms ``(P)`` has the same effect as ``P``."
+msgstr "Простіше кажучи, ``(P)`` має той самий ефект, що ``P``."
+
+#: ../../reference/compound_stmts.rst:941
+msgid "Sequence Patterns"
+msgstr "Шаблони послідовності"
+
+#: ../../reference/compound_stmts.rst:943
+msgid ""
+"A sequence pattern contains several subpatterns to be matched against "
+"sequence elements. The syntax is similar to the unpacking of a list or "
+"tuple."
+msgstr ""
+"Шаблон послідовності містить кілька підшаблонів, які потрібно зіставити з "
+"елементами послідовності. Синтаксис подібний до розпакування списку або "
+"кортежу."
+
+#: ../../reference/compound_stmts.rst:954
+msgid ""
+"There is no difference if parentheses  or square brackets are used for "
+"sequence patterns (i.e. ``(...)`` vs ``[...]`` )."
+msgstr ""
+"Немає різниці, якщо дужки або квадратні дужки використовуються для шаблонів "
+"послідовності (тобто ``(...)`` проти ``[...]`` )."
+
+#: ../../reference/compound_stmts.rst:958
+msgid ""
+"A single pattern enclosed in parentheses without a trailing comma (e.g. ``(3"
+" | 4)``) is a :ref:`group pattern <group-patterns>`. While a single pattern "
+"enclosed in square brackets (e.g. ``[3 | 4]``) is still a sequence pattern."
+msgstr ""
+"Один шаблон, укладений у дужки без кінцевої коми (наприклад, ``(3 | 4)``), є"
+" :ref:`груповим шаблоном <group-patterns>`. У той час як один шаблон, "
+"укладений у квадратні дужки (наприклад, ``[3 | 4]``), все ще є шаблоном "
+"послідовності."
+
+#: ../../reference/compound_stmts.rst:963
+msgid ""
+"At most one star subpattern may be in a sequence pattern.  The star "
+"subpattern may occur in any position. If no star subpattern is present, the "
+"sequence pattern is a fixed-length sequence pattern; otherwise it is a "
+"variable-length sequence pattern."
+msgstr ""
+"Щонайбільше один зірковий підшаблон може бути в шаблоні послідовності. "
+"Підшаблон зірки може з’являтися в будь-якій позиції. Якщо підшаблон зірки "
+"відсутній, шаблон послідовності є шаблоном послідовності фіксованої довжини;"
+" інакше це шаблон послідовності змінної довжини."
+
+#: ../../reference/compound_stmts.rst:968
+msgid ""
+"The following is the logical flow for matching a sequence pattern against a "
+"subject value:"
+msgstr ""
+"Нижче наведено логічний потік для зіставлення шаблону послідовності зі "
+"значенням предмета:"
+
+#: ../../reference/compound_stmts.rst:971
+msgid ""
+"If the subject value is not a sequence [#]_, the sequence pattern fails."
+msgstr ""
+"Якщо значення теми не є послідовністю [#]_, шаблон послідовності не "
+"виконується."
+
+#: ../../reference/compound_stmts.rst:974
+msgid ""
+"If the subject value is an instance of ``str``, ``bytes`` or ``bytearray`` "
+"the sequence pattern fails."
+msgstr ""
+"Якщо значення теми є екземпляром ``str``, ``bytes`` або ``bytearray``, "
+"шаблон послідовності не виконується."
+
+#: ../../reference/compound_stmts.rst:977
+msgid ""
+"The subsequent steps depend on whether the sequence pattern is fixed or "
+"variable-length."
+msgstr ""
+"Подальші кроки залежать від того, чи є шаблон послідовності фіксованою чи "
+"змінною довжиною."
+
+#: ../../reference/compound_stmts.rst:980
+msgid "If the sequence pattern is fixed-length:"
+msgstr "Якщо шаблон послідовності має фіксовану довжину:"
+
+#: ../../reference/compound_stmts.rst:982
+msgid ""
+"If the length of the subject sequence is not equal to the number of "
+"subpatterns, the sequence pattern fails"
+msgstr ""
+"Якщо довжина предметної послідовності не дорівнює кількості підшаблонів, "
+"шаблон послідовності не вдається"
+
+#: ../../reference/compound_stmts.rst:985
+msgid ""
+"Subpatterns in the sequence pattern are matched to their corresponding items"
+" in the subject sequence from left to right.  Matching stops as soon as a "
+"subpattern fails.  If all subpatterns succeed in matching their "
+"corresponding item, the sequence pattern succeeds."
+msgstr ""
+"Підшаблони в шаблоні послідовності зіставляються з відповідними елементами в"
+" послідовності предметів зліва направо. Зіставлення припиняється, як тільки "
+"підшаблон не вдається. Якщо всі підшаблони успішно відповідають їхньому "
+"відповідному елементу, шаблон послідовності вдається."
+
+#: ../../reference/compound_stmts.rst:990
+msgid "Otherwise, if the sequence pattern is variable-length:"
+msgstr "В іншому випадку, якщо шаблон послідовності має змінну довжину:"
+
+#: ../../reference/compound_stmts.rst:992
+msgid ""
+"If the length of the subject sequence is less than the number of non-star "
+"subpatterns, the sequence pattern fails."
+msgstr ""
+"Якщо довжина предметної послідовності менша за кількість незіркових "
+"підшаблонів, шаблон послідовності не вдається."
+
+#: ../../reference/compound_stmts.rst:995
+msgid ""
+"The leading non-star subpatterns are matched to their corresponding items as"
+" for fixed-length sequences."
+msgstr ""
+"Провідні незіркові підшаблони зіставляються з відповідними елементами, як "
+"для послідовностей фіксованої довжини."
+
+#: ../../reference/compound_stmts.rst:998
+msgid ""
+"If the previous step succeeds, the star subpattern matches a list formed of "
+"the remaining subject items, excluding the remaining items corresponding to "
+"non-star subpatterns following the star subpattern."
+msgstr ""
+"Якщо попередній крок виконано успішно, підшаблон зірочки збігається зі "
+"списком, сформованим із решти предметних елементів, за винятком решти "
+"елементів, що відповідають підшаблонам без зірочки, які слідують за "
+"підшаблоном зірочки."
+
+#: ../../reference/compound_stmts.rst:1002
+msgid ""
+"Remaining non-star subpatterns are matched to their corresponding subject "
+"items, as for a fixed-length sequence."
+msgstr ""
+"Решта підшаблонів без зірок зіставляються з відповідними предметними "
+"елементами, як для послідовності фіксованої довжини."
+
+#: ../../reference/compound_stmts.rst:1005
+msgid ""
+"The length of the subject sequence is obtained via :func:`len` (i.e. via the"
+" :meth:`__len__` protocol).  This length may be cached by the interpreter in"
+" a similar manner as :ref:`value patterns <value-patterns>`."
+msgstr ""
+"Довжина предметної послідовності визначається через :func:`len` (тобто через"
+" :meth:`__len__` протокол). Ця довжина може бути кешована інтерпретатором "
+"подібним чином, як :ref:`шаблони значень <value-patterns>`."
+
+#: ../../reference/compound_stmts.rst:1011
+msgid ""
+"In simple terms ``[P1, P2, P3,`` ... ``, P<N>]`` matches only if all the "
+"following happens:"
+msgstr ""
+"Простіше кажучи, ``[P1, P2, P3,`` ... ``, P <N> ]`` збігається, лише якщо "
+"відбувається все наступне:"
+
+#: ../../reference/compound_stmts.rst:1014
+msgid "check ``<subject>`` is a sequence"
+msgstr "перевірка ``<subject>`` є послідовністю"
+
+#: ../../reference/compound_stmts.rst:1015
+msgid "``len(subject) == <N>``"
+msgstr "``len(subject) == <N>``"
+
+#: ../../reference/compound_stmts.rst:1016
+msgid ""
+"``P1`` matches ``<subject>[0]`` (note that this match can also bind names)"
+msgstr ""
+"``P1`` відповідає ``<subject> [0]`` (зауважте, що цей збіг також може "
+"пов’язувати імена)"
+
+#: ../../reference/compound_stmts.rst:1017
+msgid ""
+"``P2`` matches ``<subject>[1]`` (note that this match can also bind names)"
+msgstr ""
+"``P2`` відповідає ``<subject> [1]`` (зауважте, що цей збіг також може "
+"пов’язувати імена)"
+
+#: ../../reference/compound_stmts.rst:1018
+msgid "... and so on for the corresponding pattern/element."
+msgstr "... і так далі для відповідного шаблону/елемента."
+
+#: ../../reference/compound_stmts.rst:1023
+msgid "Mapping Patterns"
+msgstr "Шаблони відображення"
+
+#: ../../reference/compound_stmts.rst:1025
+msgid ""
+"A mapping pattern contains one or more key-value patterns.  The syntax is "
+"similar to the construction of a dictionary. Syntax:"
+msgstr ""
+"Шаблон зіставлення містить один або кілька шаблонів ключ-значення. Синтаксис"
+" подібний до побудови словника. Синтаксис:"
+
+#: ../../reference/compound_stmts.rst:1036
+msgid ""
+"At most one double star pattern may be in a mapping pattern.  The double "
+"star pattern must be the last subpattern in the mapping pattern."
+msgstr ""
+"Щонайбільше один шаблон подвійної зірки може бути в шаблоні відображення. "
+"Шаблон подвійної зірки має бути останнім підшаблоном у шаблоні відображення."
+
+#: ../../reference/compound_stmts.rst:1039
+msgid ""
+"Duplicate keys in mapping patterns are disallowed. Duplicate literal keys "
+"will raise a :exc:`SyntaxError`. Two keys that otherwise have the same value"
+" will raise a :exc:`ValueError` at runtime."
+msgstr ""
+"Дублікати ключів у шаблонах зіставлення заборонені. Повторювані ключі "
+"літералів викличуть :exc:`SyntaxError`. Два ключі, які інакше мають однакові"
+" значення, викликають :exc:`ValueError` під час виконання."
+
+#: ../../reference/compound_stmts.rst:1043
+msgid ""
+"The following is the logical flow for matching a mapping pattern against a "
+"subject value:"
+msgstr ""
+"Нижче наведено логічний потік для зіставлення шаблону зіставлення зі "
+"значенням предмета:"
+
+#: ../../reference/compound_stmts.rst:1046
+msgid "If the subject value is not a mapping [#]_,the mapping pattern fails."
+msgstr ""
+"Якщо значення предмета не є відображенням [#]_, шаблон відображення не "
+"виконується."
+
+#: ../../reference/compound_stmts.rst:1048
+msgid ""
+"If every key given in the mapping pattern is present in the subject mapping,"
+" and the pattern for each key matches the corresponding item of the subject "
+"mapping, the mapping pattern succeeds."
+msgstr ""
+"Якщо кожен ключ, поданий у шаблоні відображення, присутній у відображенні "
+"предмета, і шаблон для кожного ключа збігається з відповідним елементом "
+"відображення предмета, шаблон відображення є успішним."
+
+#: ../../reference/compound_stmts.rst:1052
+msgid ""
+"If duplicate keys are detected in the mapping pattern, the pattern is "
+"considered invalid. A :exc:`SyntaxError` is raised for duplicate literal "
+"values; or a :exc:`ValueError` for named keys of the same value."
+msgstr ""
+"Якщо в шаблоні відображення виявлено повторювані ключі, шаблон вважається "
+"недійсним. :exc:`SyntaxError` виникає для повторюваних літеральних значень; "
+"або :exc:`ValueError` для іменованих ключів з тим самим значенням."
+
+#: ../../reference/compound_stmts.rst:1056
+msgid ""
+"Key-value pairs are matched using the two-argument form of the mapping "
+"subject's ``get()`` method.  Matched key-value pairs must already be present"
+" in the mapping, and not created on-the-fly via :meth:`__missing__` or "
+":meth:`~object.__getitem__`."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1061
+msgid ""
+"In simple terms ``{KEY1: P1, KEY2: P2, ... }`` matches only if all the "
+"following happens:"
+msgstr ""
+"Простіше кажучи, ``{KEY1: P1, KEY2: P2, ... }`` відповідає, лише якщо "
+"відбувається все наступне:"
+
+#: ../../reference/compound_stmts.rst:1064
+msgid "check ``<subject>`` is a mapping"
+msgstr "перевірка ``<subject>`` є відображенням"
+
+#: ../../reference/compound_stmts.rst:1065
+msgid "``KEY1 in <subject>``"
+msgstr "``KEY1 in <subject>``"
+
+#: ../../reference/compound_stmts.rst:1066
+msgid "``P1`` matches ``<subject>[KEY1]``"
+msgstr "``P1`` відповідає ``<subject>[KEY1]``"
+
+#: ../../reference/compound_stmts.rst:1067
+msgid "... and so on for the corresponding KEY/pattern pair."
+msgstr "... і так далі для відповідної пари КЛЮЧ/шаблон."
+
+#: ../../reference/compound_stmts.rst:1073
+msgid "Class Patterns"
+msgstr "Шаблони класів"
+
+#: ../../reference/compound_stmts.rst:1075
+msgid ""
+"A class pattern represents a class and its positional and keyword arguments "
+"(if any).  Syntax:"
+msgstr ""
+"Шаблон класу представляє клас і його позиційні та ключові аргументи (якщо "
+"такі є). Синтаксис:"
+
+#: ../../reference/compound_stmts.rst:1086
+msgid "The same keyword should not be repeated in class patterns."
+msgstr "Те саме ключове слово не повинно повторюватися в шаблонах класів."
+
+#: ../../reference/compound_stmts.rst:1088
+msgid ""
+"The following is the logical flow for matching a class pattern against a "
+"subject value:"
+msgstr ""
+"Нижче наведено логічний потік для зіставлення шаблону класу зі значенням "
+"предмета:"
+
+#: ../../reference/compound_stmts.rst:1091
+msgid ""
+"If ``name_or_attr`` is not an instance of the builtin :class:`type` , raise "
+":exc:`TypeError`."
+msgstr ""
+"Якщо ``name_or_attr`` не є екземпляром вбудованого :class:`type` , викликати"
+" :exc:`TypeError`."
+
+#: ../../reference/compound_stmts.rst:1094
+msgid ""
+"If the subject value is not an instance of ``name_or_attr`` (tested via "
+":func:`isinstance`), the class pattern fails."
+msgstr ""
+"Якщо значення теми не є екземпляром ``name_or_attr`` (перевірено через "
+":func:`isinstance`), шаблон класу не вдається."
+
+#: ../../reference/compound_stmts.rst:1097
+msgid ""
+"If no pattern arguments are present, the pattern succeeds.  Otherwise, the "
+"subsequent steps depend on whether keyword or positional argument patterns "
+"are present."
+msgstr ""
+"Якщо аргументи шаблону відсутні, шаблон виконується успішно. В іншому "
+"випадку наступні кроки залежать від того, чи присутні шаблони ключових слів "
+"або позиційних аргументів."
+
+#: ../../reference/compound_stmts.rst:1101
+msgid ""
+"For a number of built-in types (specified below), a single positional "
+"subpattern is accepted which will match the entire subject; for these types "
+"keyword patterns also work as for other types."
+msgstr ""
+"Для ряду вбудованих типів (зазначених нижче) приймається один позиційний "
+"підшаблон, який відповідатиме всьому об’єкту; для цих типів шаблони ключових"
+" слів також працюють, як і для інших типів."
+
+#: ../../reference/compound_stmts.rst:1105
+msgid ""
+"If only keyword patterns are present, they are processed as follows, one by "
+"one:"
+msgstr ""
+"Якщо присутні лише шаблони ключових слів, вони обробляються таким чином, "
+"один за іншим:"
+
+#: ../../reference/compound_stmts.rst:1108
+msgid "I. The keyword is looked up as an attribute on the subject."
+msgstr "I. Ключове слово шукається як атрибут теми."
+
+#: ../../reference/compound_stmts.rst:1110
+msgid ""
+"If this raises an exception other than :exc:`AttributeError`, the exception "
+"bubbles up."
+msgstr ""
+"Якщо це викликає виняток, відмінний від :exc:`AttributeError`, виняток "
+"з’являється."
+
+#: ../../reference/compound_stmts.rst:1113
+msgid "If this raises :exc:`AttributeError`, the class pattern has failed."
+msgstr ""
+"Якщо це викликає помилку :exc:`AttributeError`, шаблон класу стався невдало."
+
+#: ../../reference/compound_stmts.rst:1115
+msgid ""
+"Else, the subpattern associated with the keyword pattern is matched against "
+"the subject's attribute value.  If this fails, the class pattern fails; if "
+"this succeeds, the match proceeds to the next keyword."
+msgstr ""
+"В іншому випадку підшаблон, пов’язаний із шаблоном ключового слова, "
+"зіставляється зі значенням атрибута суб’єкта. Якщо це не вдається, шаблон "
+"класу не працює; якщо це вдається, відповідність переходить до наступного "
+"ключового слова."
+
+#: ../../reference/compound_stmts.rst:1120
+msgid "II. If all keyword patterns succeed, the class pattern succeeds."
+msgstr "II. Якщо всі шаблони ключових слів успішні, шаблон класу успішний."
+
+#: ../../reference/compound_stmts.rst:1122
+msgid ""
+"If any positional patterns are present, they are converted to keyword "
+"patterns using the :data:`~object.__match_args__` attribute on the class "
+"``name_or_attr`` before matching:"
+msgstr ""
+"Якщо присутні будь-які позиційні шаблони, вони перетворюються на шаблони "
+"ключових слів за допомогою атрибута :data:`~object.__match_args__` класу "
+"``name_or_attr`` перед відповідністю:"
+
+#: ../../reference/compound_stmts.rst:1126
+msgid "I. The equivalent of ``getattr(cls, \"__match_args__\", ())`` is called."
+msgstr "I. Викликається еквівалент ``getattr(cls, \"__match_args__\", ())``."
+
+#: ../../reference/compound_stmts.rst:1128
+msgid "If this raises an exception, the exception bubbles up."
+msgstr "Якщо це викликає виняток, виняток з’являється."
+
+#: ../../reference/compound_stmts.rst:1130
+msgid ""
+"If the returned value is not a tuple, the conversion fails and "
+":exc:`TypeError` is raised."
+msgstr ""
+"Якщо повернуте значення не є кортежем, перетворення не вдається, і виникає "
+":exc:`TypeError`."
+
+#: ../../reference/compound_stmts.rst:1133
+msgid ""
+"If there are more positional patterns than ``len(cls.__match_args__)``, "
+":exc:`TypeError` is raised."
+msgstr ""
+"Якщо є більше позиційних шаблонів, ніж ``len(cls.__match_args__)``, виникає "
+":exc:`TypeError`."
+
+#: ../../reference/compound_stmts.rst:1136
+msgid ""
+"Otherwise, positional pattern ``i`` is converted to a keyword pattern using "
+"``__match_args__[i]`` as the keyword.  ``__match_args__[i]`` must be a "
+"string; if not :exc:`TypeError` is raised."
+msgstr ""
+"В іншому випадку позиційний шаблон ``i`` перетворюється на шаблон ключового "
+"слова з використанням ``__match_args__[i]`` як ключове слово. "
+"``__match_args__[i]`` має бути рядком; якщо ні, виникає :exc:`TypeError`."
+
+#: ../../reference/compound_stmts.rst:1140
+msgid "If there are duplicate keywords, :exc:`TypeError` is raised."
+msgstr "Якщо є повторювані ключові слова, виникає :exc:`TypeError`."
+
+#: ../../reference/compound_stmts.rst:1142
+msgid ":ref:`class-pattern-matching`"
+msgstr ":ref:`class-pattern-matching`"
+
+#: ../../reference/compound_stmts.rst:1144
+msgid ""
+"II. Once all positional patterns have been converted to keyword patterns,"
+msgstr "II. Коли всі позиційні моделі буде перетворено на ключові слова,"
+
+#: ../../reference/compound_stmts.rst:1145
+msgid "the match proceeds as if there were only keyword patterns."
+msgstr "відповідність відбувається так, якби були лише шаблони ключових слів."
+
+#: ../../reference/compound_stmts.rst:1147
+msgid ""
+"For the following built-in types the handling of positional subpatterns is "
+"different:"
+msgstr ""
+"Для наступних вбудованих типів обробка позиційних підшаблонів відрізняється:"
+
+#: ../../reference/compound_stmts.rst:1150
+msgid ":class:`bool`"
+msgstr ":class:`bool`"
+
+#: ../../reference/compound_stmts.rst:1151
+msgid ":class:`bytearray`"
+msgstr ":class:`bytearray`"
+
+#: ../../reference/compound_stmts.rst:1152
+msgid ":class:`bytes`"
+msgstr ":class:`bytes`"
+
+#: ../../reference/compound_stmts.rst:1153
+msgid ":class:`dict`"
+msgstr ":class:`dict`"
+
+#: ../../reference/compound_stmts.rst:1154
+msgid ":class:`float`"
+msgstr ":class:`float`"
+
+#: ../../reference/compound_stmts.rst:1155
+msgid ":class:`frozenset`"
+msgstr ":class:`frozenset`"
+
+#: ../../reference/compound_stmts.rst:1156
+msgid ":class:`int`"
+msgstr ":class:`int`"
+
+#: ../../reference/compound_stmts.rst:1157
+#: ../../reference/compound_stmts.rst:1875
+msgid ":class:`list`"
+msgstr ":class:`list`"
+
+#: ../../reference/compound_stmts.rst:1158
+msgid ":class:`set`"
+msgstr ":class:`set`"
+
+#: ../../reference/compound_stmts.rst:1159
+msgid ":class:`str`"
+msgstr ":class:`str`"
+
+#: ../../reference/compound_stmts.rst:1160
+#: ../../reference/compound_stmts.rst:1878
+msgid ":class:`tuple`"
+msgstr ":class:`tuple`"
+
+#: ../../reference/compound_stmts.rst:1162
+msgid ""
+"These classes accept a single positional argument, and the pattern there is "
+"matched against the whole object rather than an attribute. For example "
+"``int(0|1)`` matches the value ``0``, but not the value ``0.0``."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1166
+msgid ""
+"In simple terms ``CLS(P1, attr=P2)`` matches only if the following happens:"
+msgstr ""
+"Простіше кажучи, ``CLS(P1, attr=P2)`` збігається, лише якщо відбувається "
+"таке:"
+
+#: ../../reference/compound_stmts.rst:1168
+msgid "``isinstance(<subject>, CLS)``"
+msgstr "``isinstance( <subject> , CLS)``"
+
+#: ../../reference/compound_stmts.rst:1169
+msgid "convert ``P1`` to a keyword pattern using ``CLS.__match_args__``"
+msgstr ""
+"перетворити ``P1`` на шаблон ключового слова за допомогою "
+"``CLS.__match_args__``"
+
+#: ../../reference/compound_stmts.rst:1170
+msgid "For each keyword argument ``attr=P2``:"
+msgstr "Для кожного аргументу ключового слова ``attr=P2``:"
+
+#: ../../reference/compound_stmts.rst:1172
+msgid "``hasattr(<subject>, \"attr\")``"
+msgstr "``hasattr( <subject> , \"attr\")``"
+
+#: ../../reference/compound_stmts.rst:1173
+msgid "``P2`` matches ``<subject>.attr``"
+msgstr "``P2`` відповідає ``<subject> .attr``"
+
+#: ../../reference/compound_stmts.rst:1175
+msgid "... and so on for the corresponding keyword argument/pattern pair."
+msgstr "... і так далі для відповідної пари ключового слова аргумент/шаблон."
+
+#: ../../reference/compound_stmts.rst:1190
+msgid "Function definitions"
+msgstr "Визначення функцій"
+
+#: ../../reference/compound_stmts.rst:1205
+msgid ""
+"A function definition defines a user-defined function object (see section "
+":ref:`types`):"
+msgstr ""
+"Визначення функції визначає об’єкт функції, визначений користувачем (див. "
+"розділ :ref:`types`):"
+
+#: ../../reference/compound_stmts.rst:1225
+msgid ""
+"A function definition is an executable statement.  Its execution binds the "
+"function name in the current local namespace to a function object (a wrapper"
+" around the executable code for the function).  This function object "
+"contains a reference to the current global namespace as the global namespace"
+" to be used when the function is called."
+msgstr ""
+"Визначення функції - це виконуваний оператор. Його виконання прив’язує назву"
+" функції в поточному локальному просторі імен до об’єкта функції (обгортка "
+"навколо виконуваного коду для функції). Цей об’єкт функції містить посилання"
+" на поточний глобальний простір імен як глобальний простір імен, який буде "
+"використано під час виклику функції."
+
+#: ../../reference/compound_stmts.rst:1231
+msgid ""
+"The function definition does not execute the function body; this gets "
+"executed only when the function is called. [#]_"
+msgstr ""
+"Визначення функції не виконує тіло функції; це виконується лише під час "
+"виклику функції. [#]_"
+
+#: ../../reference/compound_stmts.rst:1237
+msgid ""
+"A function definition may be wrapped by one or more :term:`decorator` "
+"expressions. Decorator expressions are evaluated when the function is "
+"defined, in the scope that contains the function definition.  The result "
+"must be a callable, which is invoked with the function object as the only "
+"argument. The returned value is bound to the function name instead of the "
+"function object.  Multiple decorators are applied in nested fashion. For "
+"example, the following code ::"
+msgstr ""
+"Визначення функції може бути обгорнуте одним або кількома виразами "
+":term:`decorator`. Вирази декоратора обчислюються, коли функція визначена в "
+"області видимості, яка містить визначення функції. Результат має бути "
+"викликаним, який викликається з об’єктом функції як єдиним аргументом. "
+"Повернене значення прив’язується до імені функції замість об’єкта функції. "
+"Кілька декораторів застосовуються вкладеним способом. Наприклад, такий код::"
+
+#: ../../reference/compound_stmts.rst:1244
+msgid ""
+"@f1(arg)\n"
+"@f2\n"
+"def func(): pass"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1248
+#: ../../reference/compound_stmts.rst:1443
+msgid "is roughly equivalent to ::"
+msgstr "приблизно еквівалентно ::"
+
+#: ../../reference/compound_stmts.rst:1250
+msgid ""
+"def func(): pass\n"
+"func = f1(arg)(f2(func))"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1253
+msgid ""
+"except that the original function is not temporarily bound to the name "
+"``func``."
+msgstr ""
+"за винятком того, що вихідна функція тимчасово не прив’язана до імені "
+"``func``."
+
+#: ../../reference/compound_stmts.rst:1255
+msgid ""
+"Functions may be decorated with any valid :token:`~python-"
+"grammar:assignment_expression`. Previously, the grammar was much more "
+"restrictive; see :pep:`614` for details."
+msgstr ""
+"Функції можуть бути прикрашені будь-яким дійсним :token:`~python-"
+"grammar:assignment_expression`. Раніше граматика була набагато більш "
+"обмежувальною; подробиці див. :pep:`614`."
+
+#: ../../reference/compound_stmts.rst:1260
+msgid ""
+"A list of :ref:`type parameters <type-params>` may be given in square "
+"brackets between the function's name and the opening parenthesis for its "
+"parameter list. This indicates to static type checkers that the function is "
+"generic. At runtime, the type parameters can be retrieved from the "
+"function's :attr:`~function.__type_params__` attribute. See :ref:`generic-"
+"functions` for more."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1267
+#: ../../reference/compound_stmts.rst:1462
+msgid "Type parameter lists are new in Python 3.12."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1275
+msgid ""
+"When one or more :term:`parameters <parameter>` have the form *parameter* "
+"``=`` *expression*, the function is said to have \"default parameter "
+"values.\"  For a parameter with a default value, the corresponding "
+":term:`argument` may be omitted from a call, in which case the parameter's "
+"default value is substituted.  If a parameter has a default value, all "
+"following parameters up until the \"``*``\" must also have a default value "
+"--- this is a syntactic restriction that is not expressed by the grammar."
+msgstr ""
+"Коли один або більше :term:`параметрів <parameter>` мають форму *параметр* "
+"``=`` *вираз*, кажуть, що функція має \"значення параметрів за "
+"замовчуванням\". Для параметра зі значенням за замовчуванням відповідний "
+":term:`argument` може бути пропущений у виклику, у цьому випадку значення "
+"параметра за замовчуванням замінюється. Якщо параметр має значення за "
+"замовчуванням, усі наступні параметри до \"``*``\" також повинні мати "
+"значення за замовчуванням --- це синтаксичне обмеження, яке не виражається "
+"граматикою."
+
+#: ../../reference/compound_stmts.rst:1283
+msgid ""
+"**Default parameter values are evaluated from left to right when the "
+"function definition is executed.** This means that the expression is "
+"evaluated once, when the function is defined, and that the same \"pre-"
+"computed\" value is used for each call.  This is especially important to "
+"understand when a default parameter value is a mutable object, such as a "
+"list or a dictionary: if the function modifies the object (e.g. by appending"
+" an item to a list), the default parameter value is in effect modified.  "
+"This is generally not what was intended.  A way around this is to use "
+"``None`` as the default, and explicitly test for it in the body of the "
+"function, e.g.::"
+msgstr ""
+"**Значення параметрів за замовчуванням обчислюються зліва направо, коли "
+"виконується визначення функції.** Це означає, що вираз обчислюється один "
+"раз, коли визначається функція, і що те саме \"попередньо обчислене\" "
+"значення використовується для кожного виклику . Це особливо важливо "
+"розуміти, коли значення параметра за замовчуванням є змінним об’єктом, таким"
+" як список або словник: якщо функція змінює об’єкт (наприклад, шляхом "
+"додавання елемента до списку), значення параметра за замовчуванням фактично "
+"змінюється. Загалом це не те, що передбачалося. Щоб обійти це, використайте "
+"``None`` за умовчанням і явним чином перевірте його в тілі функції, "
+"наприклад::"
+
+#: ../../reference/compound_stmts.rst:1293
+msgid ""
+"def whats_on_the_telly(penguin=None):\n"
+"    if penguin is None:\n"
+"        penguin = []\n"
+"    penguin.append(\"property of the zoo\")\n"
+"    return penguin"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1304
+msgid ""
+"Function call semantics are described in more detail in section "
+":ref:`calls`. A function call always assigns values to all parameters "
+"mentioned in the parameter list, either from positional arguments, from "
+"keyword arguments, or from default values.  If the form \"``*identifier``\" "
+"is present, it is initialized to a tuple receiving any excess positional "
+"parameters, defaulting to the empty tuple. If the form \"``**identifier``\" "
+"is present, it is initialized to a new ordered mapping receiving any excess "
+"keyword arguments, defaulting to a new empty mapping of the same type.  "
+"Parameters after \"``*``\" or \"``*identifier``\" are keyword-only "
+"parameters and may only be passed by keyword arguments.  Parameters before "
+"\"``/``\" are positional-only parameters and may only be passed by "
+"positional arguments."
+msgstr ""
+"Більш детально семантика виклику функції описана в розділі :ref:`calls`. "
+"Виклик функції завжди призначає значення всім параметрам, згаданим у списку "
+"параметрів, або з позиційних аргументів, з ключових аргументів, або зі "
+"значень за замовчуванням. Якщо присутня форма \"``*identifier``\", вона "
+"ініціалізується кортежем, що отримує будь-які надлишкові позиційні "
+"параметри, за умовчанням порожній кортеж. Якщо присутня форма "
+"\"``*identifier``\", вона ініціалізується новим упорядкованим відображенням,"
+" отримуючи будь-які надлишкові аргументи ключового слова, за умовчанням до "
+"нового порожнього відображення того самого типу. Параметри після \"``*``\" "
+"або \"``*identifier``\" є параметрами лише для ключових слів і можуть "
+"передаватися лише аргументами ключових слів. Параметри перед \"``/``\" є "
+"лише позиційними параметрами і можуть передаватися лише позиційними "
+"аргументами."
+
+#: ../../reference/compound_stmts.rst:1316
+msgid ""
+"The ``/`` function parameter syntax may be used to indicate positional-only "
+"parameters. See :pep:`570` for details."
+msgstr ""
+"Синтаксис параметра функції ``/`` може використовуватися для позначення лише"
+" позиційних параметрів. Подробиці див. :pep:`570`."
+
+#: ../../reference/compound_stmts.rst:1325
+msgid ""
+"Parameters may have an :term:`annotation <function annotation>` of the form "
+"\"``: expression``\" following the parameter name.  Any parameter may have "
+"an annotation, even those of the form ``*identifier`` or ``**identifier``. "
+"(As a special case, parameters of the form ``*identifier`` may have an "
+"annotation \"``: *expression``\".) Functions may have \"return\" annotation "
+"of the form \"``-> expression``\" after the parameter list.  These "
+"annotations can be any valid Python expression.  The presence of annotations"
+" does not change the semantics of a function.  The annotation values are "
+"available as values of a dictionary keyed by the parameters' names in the "
+":attr:`__annotations__` attribute of the function object.  If the "
+"``annotations`` import from :mod:`__future__` is used, annotations are "
+"preserved as strings at runtime which enables postponed evaluation.  "
+"Otherwise, they are evaluated when the function definition is executed.  In "
+"this case annotations may be evaluated in a different order than they appear"
+" in the source code."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1339
+msgid ""
+"Parameters of the form \"``*identifier``\" may have an annotation \"``: "
+"*expression``\". See :pep:`646`."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1345
+msgid ""
+"It is also possible to create anonymous functions (functions not bound to a "
+"name), for immediate use in expressions.  This uses lambda expressions, "
+"described in section :ref:`lambda`.  Note that the lambda expression is "
+"merely a shorthand for a simplified function definition; a function defined "
+"in a \":keyword:`def`\" statement can be passed around or assigned to "
+"another name just like a function defined by a lambda expression.  The "
+"\":keyword:`!def`\" form is actually more powerful since it allows the "
+"execution of multiple statements and annotations."
+msgstr ""
+"Також можна створювати анонімні функції (функції, не прив’язані до імені) "
+"для негайного використання у виразах. Тут використовуються лямбда-вирази, "
+"описані в розділі :ref:`lambda`. Зауважте, що лямбда-вираз — це лише "
+"скорочення спрощеного визначення функції; функція, визначена в операторі "
+"\":keyword:`def`\", може бути передана або присвоєна іншому імені так само, "
+"як функція, визначена лямбда-виразом. Форма \":keyword:`!def`\" насправді є "
+"потужнішою, оскільки вона дозволяє виконувати кілька операторів і анотацій."
+
+#: ../../reference/compound_stmts.rst:1353
+msgid ""
+"**Programmer's note:** Functions are first-class objects.  A \"``def``\" "
+"statement executed inside a function definition defines a local function "
+"that can be returned or passed around.  Free variables used in the nested "
+"function can access the local variables of the function containing the def."
+"  See section :ref:`naming` for details."
+msgstr ""
+"**Примітка програміста:** Функції є об’єктами першого класу. Оператор "
+"\"``def``\", який виконується всередині визначення функції, визначає "
+"локальну функцію, яку можна повертати або передавати. Вільні змінні, які "
+"використовуються у вкладеній функції, можуть отримати доступ до локальних "
+"змінних функції, що містить def. Перегляньте розділ :ref:`naming` для "
+"деталей."
+
+#: ../../reference/compound_stmts.rst:1361
+msgid ":pep:`3107` - Function Annotations"
+msgstr ":pep:`3107` - Анотації функцій"
+
+#: ../../reference/compound_stmts.rst:1362
+msgid "The original specification for function annotations."
+msgstr "Оригінальна специфікація для анотацій функцій."
+
+#: ../../reference/compound_stmts.rst:1364
+msgid ":pep:`484` - Type Hints"
+msgstr ":pep:`484` - підказки типу"
+
+#: ../../reference/compound_stmts.rst:1365
+msgid "Definition of a standard meaning for annotations: type hints."
+msgstr "Визначення стандартного значення для анотацій: тип підказок."
+
+#: ../../reference/compound_stmts.rst:1367
+msgid ":pep:`526` - Syntax for Variable Annotations"
+msgstr ":pep:`526` - Синтаксис для анотацій змінних"
+
+#: ../../reference/compound_stmts.rst:1368
+msgid ""
+"Ability to type hint variable declarations, including class variables and "
+"instance variables."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1371
+msgid ":pep:`563` - Postponed Evaluation of Annotations"
+msgstr ":pep:`563` - Відкладена оцінка анотацій"
+
+#: ../../reference/compound_stmts.rst:1372
+msgid ""
+"Support for forward references within annotations by preserving annotations "
+"in a string form at runtime instead of eager evaluation."
+msgstr ""
+"Підтримка прямих посилань в анотаціях завдяки збереженню анотацій у формі "
+"рядка під час виконання замість нетерплячої оцінки."
+
+#: ../../reference/compound_stmts.rst:1375
+msgid ":pep:`318` - Decorators for Functions and Methods"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1376
+msgid ""
+"Function and method decorators were introduced. Class decorators were "
+"introduced in :pep:`3129`."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1382
+msgid "Class definitions"
+msgstr "Визначення класів"
+
+#: ../../reference/compound_stmts.rst:1397
+msgid "A class definition defines a class object (see section :ref:`types`):"
+msgstr "Визначення класу визначає об’єкт класу (див. розділ :ref:`types`):"
+
+#: ../../reference/compound_stmts.rst:1404
+msgid ""
+"A class definition is an executable statement.  The inheritance list usually"
+" gives a list of base classes (see :ref:`metaclasses` for more advanced "
+"uses), so each item in the list should evaluate to a class object which "
+"allows subclassing.  Classes without an inheritance list inherit, by "
+"default, from the base class :class:`object`; hence, ::"
+msgstr ""
+"Визначення класу є виконуваним оператором. Список успадкування зазвичай "
+"надає список базових класів (див. :ref:`metaclasses` для більш просунутого "
+"використання), тому кожен елемент у списку повинен оцінюватися як об’єкт "
+"класу, який дозволяє створювати підкласи. Класи без списку успадкування "
+"успадковують, за замовчуванням, від базового класу :class:`object`; отже, ::"
+
+#: ../../reference/compound_stmts.rst:1410
+msgid ""
+"class Foo:\n"
+"    pass"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1413
+msgid "is equivalent to ::"
+msgstr "еквівалентно ::"
+
+#: ../../reference/compound_stmts.rst:1415
+msgid ""
+"class Foo(object):\n"
+"    pass"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1418
+msgid ""
+"The class's suite is then executed in a new execution frame (see "
+":ref:`naming`), using a newly created local namespace and the original "
+"global namespace. (Usually, the suite contains mostly function definitions.)"
+"  When the class's suite finishes execution, its execution frame is "
+"discarded but its local namespace is saved. [#]_ A class object is then "
+"created using the inheritance list for the base classes and the saved local "
+"namespace for the attribute dictionary.  The class name is bound to this "
+"class object in the original local namespace."
+msgstr ""
+"Потім набір класів виконується в новому фреймі виконання (див. "
+":ref:`naming`), використовуючи щойно створений локальний простір імен і "
+"оригінальний глобальний простір імен. (Зазвичай набір містить в основному "
+"визначення функцій.) Коли набір класу завершує виконання, його кадр "
+"виконання відкидається, але його локальний простір імен зберігається. [#]_ "
+"Потім створюється об’єкт класу з використанням списку успадкування для "
+"базових класів і збереженого локального простору імен для словника "
+"атрибутів. Ім'я класу прив'язане до цього об'єкта класу в оригінальному "
+"локальному просторі імен."
+
+#: ../../reference/compound_stmts.rst:1427
+msgid ""
+"The order in which attributes are defined in the class body is preserved in "
+"the new class's :attr:`~type.__dict__`.  Note that this is reliable only "
+"right after the class is created and only for classes that were defined "
+"using the definition syntax."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1432
+msgid ""
+"Class creation can be customized heavily using :ref:`metaclasses "
+"<metaclasses>`."
+msgstr ""
+"Створення класів можна значно налаштувати за допомогою :ref:`metaclasses "
+"<metaclasses>`."
+
+#: ../../reference/compound_stmts.rst:1437
+msgid "Classes can also be decorated: just like when decorating functions, ::"
+msgstr "Класи також можна декорувати: як і при декоруванні функцій, ::"
+
+#: ../../reference/compound_stmts.rst:1439
+msgid ""
+"@f1(arg)\n"
+"@f2\n"
+"class Foo: pass"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1445
+msgid ""
+"class Foo: pass\n"
+"Foo = f1(arg)(f2(Foo))"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1448
+msgid ""
+"The evaluation rules for the decorator expressions are the same as for "
+"function decorators.  The result is then bound to the class name."
+msgstr ""
+"Правила оцінки для виразів декоратора такі ж, як і для декораторів функцій. "
+"Потім результат прив’язується до імені класу."
+
+#: ../../reference/compound_stmts.rst:1451
+msgid ""
+"Classes may be decorated with any valid :token:`~python-"
+"grammar:assignment_expression`. Previously, the grammar was much more "
+"restrictive; see :pep:`614` for details."
+msgstr ""
+"Класи можуть бути прикрашені будь-яким дійсним :token:`~python-"
+"grammar:assignment_expression`. Раніше граматика була набагато більш "
+"обмежувальною; подробиці див. :pep:`614`."
+
+#: ../../reference/compound_stmts.rst:1456
+msgid ""
+"A list of :ref:`type parameters <type-params>` may be given in square "
+"brackets immediately after the class's name. This indicates to static type "
+"checkers that the class is generic. At runtime, the type parameters can be "
+"retrieved from the class's :attr:`~type.__type_params__` attribute. See "
+":ref:`generic-classes` for more."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1465
+msgid ""
+"**Programmer's note:** Variables defined in the class definition are class "
+"attributes; they are shared by instances.  Instance attributes can be set in"
+" a method with ``self.name = value``.  Both class and instance attributes "
+"are accessible through the notation \"``self.name``\", and an instance "
+"attribute hides a class attribute with the same name when accessed in this "
+"way.  Class attributes can be used as defaults for instance attributes, but "
+"using mutable values there can lead to unexpected results.  "
+":ref:`Descriptors <descriptors>` can be used to create instance variables "
+"with different implementation details."
+msgstr ""
+"**Примітка програміста:** Змінні, визначені у визначенні класу, є атрибутами"
+" класу; їх ділять інстанції. Атрибути екземпляра можна встановити в методі "
+"за допомогою ``self.name = value``. Як атрибути класу, так і атрибути "
+"екземпляра доступні через нотацію \"``self.name``\", а атрибут екземпляра "
+"приховує атрибут класу з таким самим іменем, коли до нього звертаються таким"
+" чином. Атрибути класу можна використовувати як значення за замовчуванням "
+"для атрибутів екземплярів, але використання там змінних значень може "
+"призвести до неочікуваних результатів. :ref:`Дескриптори <descriptors>` "
+"можна використовувати для створення змінних екземпляра з різними деталями "
+"реалізації."
+
+#: ../../reference/compound_stmts.rst:1477
+msgid ":pep:`3115` - Metaclasses in Python 3000"
+msgstr ":pep:`3115` - Метакласи в Python 3000"
+
+#: ../../reference/compound_stmts.rst:1478
+msgid ""
+"The proposal that changed the declaration of metaclasses to the current "
+"syntax, and the semantics for how classes with metaclasses are constructed."
+msgstr ""
+"Пропозиція, яка змінила оголошення метакласів на поточний синтаксис і "
+"семантику того, як будуються класи з метакласами."
+
+#: ../../reference/compound_stmts.rst:1482
+msgid ":pep:`3129` - Class Decorators"
+msgstr ":pep:`3129` - Декоратори класу"
+
+#: ../../reference/compound_stmts.rst:1483
+msgid ""
+"The proposal that added class decorators.  Function and method decorators "
+"were introduced in :pep:`318`."
+msgstr ""
+"Пропозиція, яка додала декоратори класу. Декоратори функцій і методів були "
+"представлені в :pep:`318`."
+
+#: ../../reference/compound_stmts.rst:1490
+msgid "Coroutines"
+msgstr "Співпрограми"
+
+#: ../../reference/compound_stmts.rst:1498
+msgid "Coroutine function definition"
+msgstr "Визначення функції співпрограми"
+
+#: ../../reference/compound_stmts.rst:1508
+msgid ""
+"Execution of Python coroutines can be suspended and resumed at many points "
+"(see :term:`coroutine`). :keyword:`await` expressions, :keyword:`async for` "
+"and :keyword:`async with` can only be used in the body of a coroutine "
+"function."
+msgstr ""
+"Виконання співпрограм Python можна призупинити та відновити в багатьох "
+"точках (див. :term:`coroutine`). Вирази :keyword:`await`, :keyword:`async "
+"for` і :keyword:`async with` можна використовувати лише в тілі функції "
+"співпрограми."
+
+#: ../../reference/compound_stmts.rst:1512
+msgid ""
+"Functions defined with ``async def`` syntax are always coroutine functions, "
+"even if they do not contain ``await`` or ``async`` keywords."
+msgstr ""
+"Функції, визначені за допомогою синтаксису ``async def``, завжди є функціями"
+" співпрограми, навіть якщо вони не містять ключових слів ``await`` або "
+"``async``."
+
+#: ../../reference/compound_stmts.rst:1515
+msgid ""
+"It is a :exc:`SyntaxError` to use a ``yield from`` expression inside the "
+"body of a coroutine function."
+msgstr ""
+"Використання виразу ``yield from`` всередині тіла функції співпрограми є "
+":exc:`SyntaxError`."
+
+#: ../../reference/compound_stmts.rst:1518
+msgid "An example of a coroutine function::"
+msgstr "Приклад функції співпрограми::"
+
+#: ../../reference/compound_stmts.rst:1520
+msgid ""
+"async def func(param1, param2):\n"
+"    do_stuff()\n"
+"    await some_coroutine()"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1524
+msgid ""
+"``await`` and ``async`` are now keywords; previously they were only treated "
+"as such inside the body of a coroutine function."
+msgstr ""
+"``await`` і ``async`` тепер є ключовими словами; раніше вони розглядалися як"
+" такі лише всередині тіла співпрограми."
+
+#: ../../reference/compound_stmts.rst:1532
+msgid "The :keyword:`!async for` statement"
+msgstr "Оператор :keyword:`!async for`"
+
+#: ../../reference/compound_stmts.rst:1537
+msgid ""
+"An :term:`asynchronous iterable` provides an ``__aiter__`` method that "
+"directly returns an :term:`asynchronous iterator`, which can call "
+"asynchronous code in its ``__anext__`` method."
+msgstr ""
+":term:`asynchronous iterable` надає метод ``__aiter__``, який безпосередньо "
+"повертає :term:`asynchronous iterator`, який може викликати асинхронний код "
+"у своєму методі ``__anext__``."
+
+#: ../../reference/compound_stmts.rst:1541
+msgid ""
+"The ``async for`` statement allows convenient iteration over asynchronous "
+"iterables."
+msgstr ""
+"Оператор ``async for`` дозволяє зручно виконувати ітерації над асинхронними "
+"ітераціями."
+
+#: ../../reference/compound_stmts.rst:1546
+msgid ""
+"async for TARGET in ITER:\n"
+"    SUITE\n"
+"else:\n"
+"    SUITE2"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1551
+msgid "Is semantically equivalent to::"
+msgstr "Семантично еквівалентний::"
+
+#: ../../reference/compound_stmts.rst:1553
+msgid ""
+"iter = (ITER)\n"
+"iter = type(iter).__aiter__(iter)\n"
+"running = True\n"
+"\n"
+"while running:\n"
+"    try:\n"
+"        TARGET = await type(iter).__anext__(iter)\n"
+"    except StopAsyncIteration:\n"
+"        running = False\n"
+"    else:\n"
+"        SUITE\n"
+"else:\n"
+"    SUITE2"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1567
+msgid ""
+"See also :meth:`~object.__aiter__` and :meth:`~object.__anext__` for "
+"details."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1569
+msgid ""
+"It is a :exc:`SyntaxError` to use an ``async for`` statement outside the "
+"body of a coroutine function."
+msgstr ""
+"Це :exc:`SyntaxError`, якщо використовувати оператор ``async for`` поза "
+"тілом функції співпрограми."
+
+#: ../../reference/compound_stmts.rst:1577
+msgid "The :keyword:`!async with` statement"
+msgstr "Оператор :keyword:`!async with`"
+
+#: ../../reference/compound_stmts.rst:1582
+msgid ""
+"An :term:`asynchronous context manager` is a :term:`context manager` that is"
+" able to suspend execution in its *enter* and *exit* methods."
+msgstr ""
+"Асинхронний менеджер контексту (:term:`asynchronous context manager`) — це "
+"менеджер контексту (:term:`context manager`),який може призупинити виконання"
+" своїх методів *enter* і *exit*."
+
+#: ../../reference/compound_stmts.rst:1587
+msgid ""
+"async with EXPRESSION as TARGET:\n"
+"    SUITE"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1592
+msgid ""
+"manager = (EXPRESSION)\n"
+"aenter = type(manager).__aenter__\n"
+"aexit = type(manager).__aexit__\n"
+"value = await aenter(manager)\n"
+"hit_except = False\n"
+"\n"
+"try:\n"
+"    TARGET = value\n"
+"    SUITE\n"
+"except:\n"
+"    hit_except = True\n"
+"    if not await aexit(manager, *sys.exc_info()):\n"
+"        raise\n"
+"finally:\n"
+"    if not hit_except:\n"
+"        await aexit(manager, None, None, None)"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1609
+msgid ""
+"See also :meth:`~object.__aenter__` and :meth:`~object.__aexit__` for "
+"details."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1611
+msgid ""
+"It is a :exc:`SyntaxError` to use an ``async with`` statement outside the "
+"body of a coroutine function."
+msgstr ""
+"Це :exc:`SyntaxError`, якщо використовувати оператор ``async with`` поза "
+"тілом функції співпрограми."
+
+#: ../../reference/compound_stmts.rst:1616
+msgid ":pep:`492` - Coroutines with async and await syntax"
+msgstr ":pep:`492` - Співпрограми з синтаксисом async і await"
+
+#: ../../reference/compound_stmts.rst:1617
+msgid ""
+"The proposal that made coroutines a proper standalone concept in Python, and"
+" added supporting syntax."
+msgstr ""
+"Пропозиція, яка зробила співпрограми справжньою автономною концепцією в "
+"Python і додала допоміжний синтаксис."
+
+#: ../../reference/compound_stmts.rst:1623
+msgid "Type parameter lists"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1627
+msgid "Support for default values was added (see :pep:`696`)."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1640
+msgid ""
+":ref:`Functions <def>` (including :ref:`coroutines <async def>`), "
+":ref:`classes <class>` and :ref:`type aliases <type>` may contain a type "
+"parameter list::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1644
+msgid ""
+"def max[T](args: list[T]) -> T:\n"
+"    ...\n"
+"\n"
+"async def amax[T](args: list[T]) -> T:\n"
+"    ...\n"
+"\n"
+"class Bag[T]:\n"
+"    def __iter__(self) -> Iterator[T]:\n"
+"        ...\n"
+"\n"
+"    def add(self, arg: T) -> None:\n"
+"        ...\n"
+"\n"
+"type ListOrSet[T] = list[T] | set[T]"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1659
+msgid ""
+"Semantically, this indicates that the function, class, or type alias is "
+"generic over a type variable. This information is primarily used by static "
+"type checkers, and at runtime, generic objects behave much like their non-"
+"generic counterparts."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1664
+msgid ""
+"Type parameters are declared in square brackets (``[]``) immediately after "
+"the name of the function, class, or type alias. The type parameters are "
+"accessible within the scope of the generic object, but not elsewhere. Thus, "
+"after a declaration ``def func[T](): pass``, the name ``T`` is not available"
+" in the module scope. Below, the semantics of generic objects are described "
+"with more precision. The scope of type parameters is modeled with a special "
+"function (technically, an :ref:`annotation scope <annotation-scopes>`) that "
+"wraps the creation of the generic object."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1673
+msgid ""
+"Generic functions, classes, and type aliases have a "
+":attr:`~definition.__type_params__` attribute listing their type parameters."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1676
+msgid "Type parameters come in three kinds:"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1678
+msgid ""
+":data:`typing.TypeVar`, introduced by a plain name (e.g., ``T``). "
+"Semantically, this represents a single type to a type checker."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1680
+msgid ""
+":data:`typing.TypeVarTuple`, introduced by a name prefixed with a single "
+"asterisk (e.g., ``*Ts``). Semantically, this stands for a tuple of any "
+"number of types."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1683
+msgid ""
+":data:`typing.ParamSpec`, introduced by a name prefixed with two asterisks "
+"(e.g., ``**P``). Semantically, this stands for the parameters of a callable."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1686
+msgid ""
+":data:`typing.TypeVar` declarations can define *bounds* and *constraints* "
+"with a colon (``:``) followed by an expression. A single expression after "
+"the colon indicates a bound (e.g. ``T: int``). Semantically, this means that"
+" the :data:`!typing.TypeVar` can only represent types that are a subtype of "
+"this bound. A parenthesized tuple of expressions after the colon indicates a"
+" set of constraints (e.g. ``T: (str, bytes)``). Each member of the tuple "
+"should be a type (again, this is not enforced at runtime). Constrained type "
+"variables can only take on one of the types in the list of constraints."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1695
+msgid ""
+"For :data:`!typing.TypeVar`\\ s declared using the type parameter list "
+"syntax, the bound and constraints are not evaluated when the generic object "
+"is created, but only when the value is explicitly accessed through the "
+"attributes ``__bound__`` and ``__constraints__``. To accomplish this, the "
+"bounds or constraints are evaluated in a separate :ref:`annotation scope "
+"<annotation-scopes>`."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1701
+msgid ""
+":data:`typing.TypeVarTuple`\\ s and :data:`typing.ParamSpec`\\ s cannot have"
+" bounds or constraints."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1704
+msgid ""
+"All three flavors of type parameters can also have a *default value*, which "
+"is used when the type parameter is not explicitly provided. This is added by"
+" appending a single equals sign (``=``) followed by an expression. Like the "
+"bounds and constraints of type variables, the default value is not evaluated"
+" when the object is created, but only when the type parameter's "
+"``__default__`` attribute is accessed. To this end, the default value is "
+"evaluated in a separate :ref:`annotation scope <annotation-scopes>`. If no "
+"default value is specified for a type parameter, the ``__default__`` "
+"attribute is set to the special sentinel object :data:`typing.NoDefault`."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1714
+msgid ""
+"The following example indicates the full set of allowed type parameter "
+"declarations::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1716
+msgid ""
+"def overly_generic[\n"
+"   SimpleTypeVar,\n"
+"   TypeVarWithDefault = int,\n"
+"   TypeVarWithBound: int,\n"
+"   TypeVarWithConstraints: (str, bytes),\n"
+"   *SimpleTypeVarTuple = (int, float),\n"
+"   **SimpleParamSpec = (str, bytearray),\n"
+"](\n"
+"   a: SimpleTypeVar,\n"
+"   b: TypeVarWithDefault,\n"
+"   c: TypeVarWithBound,\n"
+"   d: Callable[SimpleParamSpec, TypeVarWithConstraints],\n"
+"   *e: SimpleTypeVarTuple,\n"
+"): ..."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1734
+msgid "Generic functions"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1736
+msgid "Generic functions are declared as follows::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1738
+msgid "def func[T](arg: T): ..."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1740
+#: ../../reference/compound_stmts.rst:1800
+msgid "This syntax is equivalent to::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1742
+msgid ""
+"annotation-def TYPE_PARAMS_OF_func():\n"
+"    T = typing.TypeVar(\"T\")\n"
+"    def func(arg: T): ...\n"
+"    func.__type_params__ = (T,)\n"
+"    return func\n"
+"func = TYPE_PARAMS_OF_func()"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1749
+msgid ""
+"Here ``annotation-def`` indicates an :ref:`annotation scope <annotation-"
+"scopes>`, which is not actually bound to any name at runtime. (One other "
+"liberty is taken in the translation: the syntax does not go through "
+"attribute access on the :mod:`typing` module, but creates an instance of "
+":data:`typing.TypeVar` directly.)"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1755
+msgid ""
+"The annotations of generic functions are evaluated within the annotation "
+"scope used for declaring the type parameters, but the function's defaults "
+"and decorators are not."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1759
+msgid ""
+"The following example illustrates the scoping rules for these cases, as well"
+" as for additional flavors of type parameters::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1762
+msgid ""
+"@decorator\n"
+"def func[T: int, *Ts, **P](*args: *Ts, arg: Callable[P, T] = some_default):\n"
+"    ..."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1766
+msgid ""
+"Except for the :ref:`lazy evaluation <lazy-evaluation>` of the "
+":class:`~typing.TypeVar` bound, this is equivalent to::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1769
+msgid ""
+"DEFAULT_OF_arg = some_default\n"
+"\n"
+"annotation-def TYPE_PARAMS_OF_func():\n"
+"\n"
+"    annotation-def BOUND_OF_T():\n"
+"        return int\n"
+"    # In reality, BOUND_OF_T() is evaluated only on demand.\n"
+"    T = typing.TypeVar(\"T\", bound=BOUND_OF_T())\n"
+"\n"
+"    Ts = typing.TypeVarTuple(\"Ts\")\n"
+"    P = typing.ParamSpec(\"P\")\n"
+"\n"
+"    def func(*args: *Ts, arg: Callable[P, T] = DEFAULT_OF_arg):\n"
+"        ...\n"
+"\n"
+"    func.__type_params__ = (T, Ts, P)\n"
+"    return func\n"
+"func = decorator(TYPE_PARAMS_OF_func())"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1788
+msgid ""
+"The capitalized names like ``DEFAULT_OF_arg`` are not actually bound at "
+"runtime."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1794
+msgid "Generic classes"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1796
+msgid "Generic classes are declared as follows::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1798
+msgid "class Bag[T]: ..."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1802
+msgid ""
+"annotation-def TYPE_PARAMS_OF_Bag():\n"
+"    T = typing.TypeVar(\"T\")\n"
+"    class Bag(typing.Generic[T]):\n"
+"        __type_params__ = (T,)\n"
+"        ...\n"
+"    return Bag\n"
+"Bag = TYPE_PARAMS_OF_Bag()"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1810
+msgid ""
+"Here again ``annotation-def`` (not a real keyword) indicates an "
+":ref:`annotation scope <annotation-scopes>`, and the name "
+"``TYPE_PARAMS_OF_Bag`` is not actually bound at runtime."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1814
+msgid ""
+"Generic classes implicitly inherit from :data:`typing.Generic`. The base "
+"classes and keyword arguments of generic classes are evaluated within the "
+"type scope for the type parameters, and decorators are evaluated outside "
+"that scope. This is illustrated by this example::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1820
+msgid ""
+"@decorator\n"
+"class Bag(Base[T], arg=T): ..."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1823
+msgid "This is equivalent to::"
+msgstr "Це еквівалентно::"
+
+#: ../../reference/compound_stmts.rst:1825
+msgid ""
+"annotation-def TYPE_PARAMS_OF_Bag():\n"
+"    T = typing.TypeVar(\"T\")\n"
+"    class Bag(Base[T], typing.Generic[T], arg=T):\n"
+"        __type_params__ = (T,)\n"
+"        ...\n"
+"    return Bag\n"
+"Bag = decorator(TYPE_PARAMS_OF_Bag())"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1836
+msgid "Generic type aliases"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1838
+msgid ""
+"The :keyword:`type` statement can also be used to create a generic type "
+"alias::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1840
+msgid "type ListOrSet[T] = list[T] | set[T]"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1842
+msgid ""
+"Except for the :ref:`lazy evaluation <lazy-evaluation>` of the value, this "
+"is equivalent to::"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1845
+msgid ""
+"annotation-def TYPE_PARAMS_OF_ListOrSet():\n"
+"    T = typing.TypeVar(\"T\")\n"
+"\n"
+"    annotation-def VALUE_OF_ListOrSet():\n"
+"        return list[T] | set[T]\n"
+"    # In reality, the value is lazily evaluated\n"
+"    return typing.TypeAliasType(\"ListOrSet\", VALUE_OF_ListOrSet(), type_params=(T,))\n"
+"ListOrSet = TYPE_PARAMS_OF_ListOrSet()"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1854
+msgid ""
+"Here, ``annotation-def`` (not a real keyword) indicates an :ref:`annotation "
+"scope <annotation-scopes>`. The capitalized names like "
+"``TYPE_PARAMS_OF_ListOrSet`` are not actually bound at runtime."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1859
+msgid "Footnotes"
+msgstr "Виноски"
+
+#: ../../reference/compound_stmts.rst:1860
+msgid ""
+"The exception is propagated to the invocation stack unless there is a "
+":keyword:`finally` clause which happens to raise another exception. That new"
+" exception causes the old one to be lost."
+msgstr ""
+"Виняток поширюється на стек викликів, якщо немає пункту :keyword:`finally`, "
+"який викликає інший виняток. Цей новий виняток призводить до втрати старого."
+
+#: ../../reference/compound_stmts.rst:1864
+msgid "In pattern matching, a sequence is defined as one of the following:"
+msgstr ""
+"У відповідності за зразком послідовність визначається як одне з наступного:"
+
+#: ../../reference/compound_stmts.rst:1866
+msgid "a class that inherits from :class:`collections.abc.Sequence`"
+msgstr "клас, який успадковує :class:`collections.abc.Sequence`"
+
+#: ../../reference/compound_stmts.rst:1867
+msgid ""
+"a Python class that has been registered as :class:`collections.abc.Sequence`"
+msgstr "клас Python, зареєстрований як :class:`collections.abc.Sequence`"
+
+#: ../../reference/compound_stmts.rst:1868
+msgid ""
+"a builtin class that has its (CPython) :c:macro:`Py_TPFLAGS_SEQUENCE` bit "
+"set"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1869
+#: ../../reference/compound_stmts.rst:1888
+msgid "a class that inherits from any of the above"
+msgstr "клас, який успадковує будь-який з перерахованих вище"
+
+#: ../../reference/compound_stmts.rst:1871
+msgid "The following standard library classes are sequences:"
+msgstr "Наступні стандартні бібліотечні класи є послідовностями:"
+
+#: ../../reference/compound_stmts.rst:1873
+msgid ":class:`array.array`"
+msgstr ":class:`array.array`"
+
+#: ../../reference/compound_stmts.rst:1874
+msgid ":class:`collections.deque`"
+msgstr ":class:`collections.deque`"
+
+#: ../../reference/compound_stmts.rst:1876
+msgid ":class:`memoryview`"
+msgstr ":class:`memoryview`"
+
+#: ../../reference/compound_stmts.rst:1877
+msgid ":class:`range`"
+msgstr ":class:`range`"
+
+#: ../../reference/compound_stmts.rst:1880
+msgid ""
+"Subject values of type ``str``, ``bytes``, and ``bytearray`` do not match "
+"sequence patterns."
+msgstr ""
+"Значення суб’єктів типу ``str``, ``bytes`` і ``bytearray`` не відповідають "
+"шаблонам послідовності."
+
+#: ../../reference/compound_stmts.rst:1883
+msgid "In pattern matching, a mapping is defined as one of the following:"
+msgstr ""
+"У відповідності за шаблоном відображення визначається як одне з наступного:"
+
+#: ../../reference/compound_stmts.rst:1885
+msgid "a class that inherits from :class:`collections.abc.Mapping`"
+msgstr "клас, який успадковує :class:`collections.abc.Mapping`"
+
+#: ../../reference/compound_stmts.rst:1886
+msgid ""
+"a Python class that has been registered as :class:`collections.abc.Mapping`"
+msgstr "клас Python, зареєстрований як :class:`collections.abc.Mapping`"
+
+#: ../../reference/compound_stmts.rst:1887
+msgid ""
+"a builtin class that has its (CPython) :c:macro:`Py_TPFLAGS_MAPPING` bit set"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1890
+msgid ""
+"The standard library classes :class:`dict` and "
+":class:`types.MappingProxyType` are mappings."
+msgstr ""
+"Класи стандартної бібліотеки :class:`dict` і :class:`types.MappingProxyType`"
+" є відображеннями."
+
+#: ../../reference/compound_stmts.rst:1893
+msgid ""
+"A string literal appearing as the first statement in the function body is "
+"transformed into the function's :attr:`~function.__doc__` attribute and "
+"therefore the function's :term:`docstring`."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1897
+msgid ""
+"A string literal appearing as the first statement in the class body is "
+"transformed into the namespace's :attr:`~type.__doc__` item and therefore "
+"the class's :term:`docstring`."
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:7
+msgid "compound"
+msgstr "з'єднання"
+
+#: ../../reference/compound_stmts.rst:7 ../../reference/compound_stmts.rst:86
+#: ../../reference/compound_stmts.rst:111
+#: ../../reference/compound_stmts.rst:129
+#: ../../reference/compound_stmts.rst:144
+#: ../../reference/compound_stmts.rst:169
+#: ../../reference/compound_stmts.rst:207
+#: ../../reference/compound_stmts.rst:390
+#: ../../reference/compound_stmts.rst:437
+#: ../../reference/compound_stmts.rst:471
+#: ../../reference/compound_stmts.rst:585
+#: ../../reference/compound_stmts.rst:1192
+#: ../../reference/compound_stmts.rst:1384
+#: ../../reference/compound_stmts.rst:1494
+#: ../../reference/compound_stmts.rst:1528
+#: ../../reference/compound_stmts.rst:1573
+msgid "statement"
+msgstr "заява"
+
+#: ../../reference/compound_stmts.rst:21
+msgid "clause"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:21
+msgid "suite"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:21
+msgid "; (semicolon)"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:64
+msgid "NEWLINE token"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:64
+msgid "DEDENT token"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:64
+msgid "dangling"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:64 ../../reference/compound_stmts.rst:86
+#: ../../reference/compound_stmts.rst:111
+#: ../../reference/compound_stmts.rst:144
+#: ../../reference/compound_stmts.rst:207
+#: ../../reference/compound_stmts.rst:390
+msgid "else"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:86
+#: ../../reference/compound_stmts.rst:585
+msgid "if"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:86
+#: ../../reference/compound_stmts.rst:111
+#: ../../reference/compound_stmts.rst:144
+#: ../../reference/compound_stmts.rst:207
+#: ../../reference/compound_stmts.rst:327
+#: ../../reference/compound_stmts.rst:390
+#: ../../reference/compound_stmts.rst:408
+#: ../../reference/compound_stmts.rst:471
+#: ../../reference/compound_stmts.rst:585
+#: ../../reference/compound_stmts.rst:1504
+msgid "keyword"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:86
+msgid "elif"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:86
+#: ../../reference/compound_stmts.rst:111
+#: ../../reference/compound_stmts.rst:144
+#: ../../reference/compound_stmts.rst:207
+#: ../../reference/compound_stmts.rst:471
+#: ../../reference/compound_stmts.rst:585
+#: ../../reference/compound_stmts.rst:1192
+#: ../../reference/compound_stmts.rst:1320
+#: ../../reference/compound_stmts.rst:1384
+msgid ": (colon)"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:86
+#: ../../reference/compound_stmts.rst:111
+#: ../../reference/compound_stmts.rst:144
+#: ../../reference/compound_stmts.rst:207
+#: ../../reference/compound_stmts.rst:471
+#: ../../reference/compound_stmts.rst:585
+#: ../../reference/compound_stmts.rst:1192
+#: ../../reference/compound_stmts.rst:1384
+msgid "compound statement"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:111
+msgid "while"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:111
+#: ../../reference/compound_stmts.rst:144
+msgid "loop"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:129
+#: ../../reference/compound_stmts.rst:169
+#: ../../reference/compound_stmts.rst:390
+#: ../../reference/compound_stmts.rst:437
+msgid "break"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:129
+#: ../../reference/compound_stmts.rst:169
+#: ../../reference/compound_stmts.rst:390
+#: ../../reference/compound_stmts.rst:437
+msgid "continue"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:144
+msgid "for"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:144
+msgid "in"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:144
+msgid "target"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:144
+msgid "list"
+msgstr "список"
+
+#: ../../reference/compound_stmts.rst:144
+#: ../../reference/compound_stmts.rst:298
+#: ../../reference/compound_stmts.rst:1192
+#: ../../reference/compound_stmts.rst:1384
+msgid "object"
+msgstr "об'єкт"
+
+#: ../../reference/compound_stmts.rst:144
+msgid "sequence"
+msgstr "послідовність"
+
+#: ../../reference/compound_stmts.rst:190
+msgid "built-in function"
+msgstr "вбудована функція"
+
+#: ../../reference/compound_stmts.rst:190
+msgid "range"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:207
+msgid "try"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:207
+msgid "except"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:207
+#: ../../reference/compound_stmts.rst:408
+msgid "finally"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:207
+#: ../../reference/compound_stmts.rst:265
+#: ../../reference/compound_stmts.rst:471
+#: ../../reference/compound_stmts.rst:585
+msgid "as"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:265
+msgid "except clause"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:298
+msgid "module"
+msgstr "модуль"
+
+#: ../../reference/compound_stmts.rst:298
+msgid "sys"
+msgstr "система"
+
+#: ../../reference/compound_stmts.rst:298
+msgid "traceback"
+msgstr "traceback"
+
+#: ../../reference/compound_stmts.rst:327
+msgid "except_star"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:390
+#: ../../reference/compound_stmts.rst:437
+msgid "return"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:471
+msgid "with"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:471
+msgid "with statement"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:471
+#: ../../reference/compound_stmts.rst:1192
+#: ../../reference/compound_stmts.rst:1384
+msgid ", (comma)"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:585
+msgid "match"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:585
+msgid "case"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:585
+msgid "pattern matching"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:585
+msgid "match statement"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:689
+msgid "guard"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:728
+msgid "irrefutable case block"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:728
+msgid "case block"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:752
+msgid "! patterns"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:752
+msgid "AS pattern, OR pattern, capture pattern, wildcard pattern"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1183
+#: ../../reference/compound_stmts.rst:1270
+msgid "parameter"
+msgstr "параметр"
+
+#: ../../reference/compound_stmts.rst:1183
+#: ../../reference/compound_stmts.rst:1192
+#: ../../reference/compound_stmts.rst:1234
+#: ../../reference/compound_stmts.rst:1270
+#: ../../reference/compound_stmts.rst:1299
+msgid "function definition"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1192
+msgid "def"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1192
+#: ../../reference/compound_stmts.rst:1320
+msgid "function"
+msgstr "функція"
+
+#: ../../reference/compound_stmts.rst:1192
+#: ../../reference/compound_stmts.rst:1384
+msgid "definition"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1192
+#: ../../reference/compound_stmts.rst:1384
+msgid "name"
+msgstr "name"
+
+#: ../../reference/compound_stmts.rst:1192
+#: ../../reference/compound_stmts.rst:1384
+msgid "binding"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1192
+msgid "user-defined function"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1192
+#: ../../reference/compound_stmts.rst:1384
+msgid "() (parentheses)"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1192
+msgid "parameter list"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1234
+#: ../../reference/compound_stmts.rst:1434
+msgid "@ (at)"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1270
+msgid "default"
+msgstr "за замовчуванням"
+
+#: ../../reference/compound_stmts.rst:1270
+msgid "value"
+msgstr "значення"
+
+#: ../../reference/compound_stmts.rst:1270
+msgid "argument"
+msgstr "аргумент"
+
+#: ../../reference/compound_stmts.rst:1270
+msgid "= (equals)"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1299
+msgid "/ (slash)"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1299
+msgid "* (asterisk)"
+msgstr "* (зірочка)"
+
+#: ../../reference/compound_stmts.rst:1299
+msgid "**"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1320
+msgid "annotations"
+msgstr "анотації"
+
+#: ../../reference/compound_stmts.rst:1320
+msgid "->"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1320
+msgid "function annotations"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1343
+msgid "lambda"
+msgstr "лямбда"
+
+#: ../../reference/compound_stmts.rst:1343
+msgid "expression"
+msgstr "вираз"
+
+#: ../../reference/compound_stmts.rst:1384
+msgid "class"
+msgstr "клас"
+
+#: ../../reference/compound_stmts.rst:1384
+msgid "execution"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1384
+msgid "frame"
+msgstr "frame"
+
+#: ../../reference/compound_stmts.rst:1384
+msgid "inheritance"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1384
+msgid "docstring"
+msgstr "рядок документації"
+
+#: ../../reference/compound_stmts.rst:1384
+#: ../../reference/compound_stmts.rst:1434
+msgid "class definition"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1384
+msgid "expression list"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1494
+msgid "async def"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1504
+msgid "async"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1504
+msgid "await"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1528
+msgid "async for"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1573
+msgid "async with"
+msgstr ""
+
+#: ../../reference/compound_stmts.rst:1630
+msgid "type parameters"
+msgstr ""
