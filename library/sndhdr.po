@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.11\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-12 16:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:13+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`sndhdr` --- Determine type of sound file"
+msgstr ":mod:`sndhdr` --- Визначити тип звукового файлу"
+
+msgid "**Source code:** :source:`Lib/sndhdr.py`"
+msgstr "**Вихідний код:** :source:`Lib/sndhdr.py`"
+
+msgid ""
+"The :mod:`sndhdr` module is deprecated (see :pep:`PEP 594 <594#sndhdr>` for "
+"details and alternatives)."
+msgstr ""
+"Модуль :mod:`sndhdr` є застарілим (перегляньте :pep:`PEP 594 <594#sndhdr>` "
+"для деталей та альтернатив)."
+
+msgid ""
+"The :mod:`sndhdr` provides utility functions which attempt to determine the "
+"type of sound data which is in a file.  When these functions are able to "
+"determine what type of sound data is stored in a file, they return a :func:"
+"`~collections.namedtuple`, containing five attributes: (``filetype``, "
+"``framerate``, ``nchannels``, ``nframes``, ``sampwidth``). The value for "
+"*type* indicates the data type and will be one of the strings ``'aifc'``, "
+"``'aiff'``, ``'au'``, ``'hcom'``, ``'sndr'``, ``'sndt'``, ``'voc'``, "
+"``'wav'``, ``'8svx'``, ``'sb'``, ``'ub'``, or ``'ul'``.  The *sampling_rate* "
+"will be either the actual value or ``0`` if unknown or difficult to decode.  "
+"Similarly, *channels* will be either the number of channels or ``0`` if it "
+"cannot be determined or if the value is difficult to decode.  The value for "
+"*frames* will be either the number of frames or ``-1``.  The last item in "
+"the tuple, *bits_per_sample*, will either be the sample size in bits or "
+"``'A'`` for A-LAW or ``'U'`` for u-LAW."
+msgstr ""
+":mod:`sndhdr` надає службові функції, які намагаються визначити тип звукових "
+"даних у файлі. Коли ці функції можуть визначити, який тип звукових даних "
+"зберігається у файлі, вони повертають :func:`~collections.namedtuple`, що "
+"містить п’ять атрибутів: (``filetype``, ``framerate``, ``nchannels``, "
+"``nframes``, ``sampwidth``). Значення *type* вказує на тип даних і буде "
+"одним із рядків ``'aifc'``, ``'aiff'``, ``'au'``, ``'hcom'``, ``'sndr'``, "
+"``'sndt'``, ``'voc'``, ``'wav'``, ``'8svx'``, ``'sb'``, ``' ub''`` або "
+"``'ul''``. *Sampling_rate* буде або фактичним значенням, або ``0``, якщо "
+"невідомо або його важко декодувати. Так само *channels* буде або кількістю "
+"каналів, або ``0``, якщо його неможливо визначити або якщо значення важко "
+"декодувати. Значення *frames* буде або кількістю кадрів, або \"-1\". "
+"Останній елемент у кортежі, *bits_per_sample*, буде або розміром вибірки в "
+"бітах, або ``'A'`` для A-LAW або ``'U'`` для u-LAW."
+
+msgid ""
+"Determines the type of sound data stored in the file *filename* using :func:"
+"`whathdr`.  If it succeeds, returns a namedtuple as described above, "
+"otherwise ``None`` is returned."
+msgstr ""
+"Визначає тип звукових даних, що зберігаються у файлі *filename* за "
+"допомогою :func:`whathdr`. Якщо це вдається, повертає іменований кортеж, як "
+"описано вище, інакше повертається ``None``."
+
+msgid "Result changed from a tuple to a namedtuple."
+msgstr "Результат змінено з кортежу на іменований кортеж."
+
+msgid ""
+"Determines the type of sound data stored in a file based on the file  "
+"header. The name of the file is given by *filename*.  This function returns "
+"a namedtuple as described above on success, or ``None``."
+msgstr ""
+"Визначає тип звукових даних, що зберігаються у файлі, на основі заголовка "
+"файлу. Ім'я файлу задається *ім'я файлу*. Ця функція повертає іменований "
+"кортеж, як описано вище, у разі успіху або ``None``."
+
+msgid ""
+"The following sound header types are recognized, as listed below with the "
+"return value from :func:`whathdr`: and :func:`what`:"
+msgstr ""
+
+msgid "Value"
+msgstr "Значення"
+
+msgid "Sound header format"
+msgstr ""
+
+msgid "``'aifc'``"
+msgstr ""
+
+msgid "Compressed Audio Interchange Files"
+msgstr ""
+
+msgid "``'aiff'``"
+msgstr ""
+
+msgid "Audio Interchange Files"
+msgstr ""
+
+msgid "``'au'``"
+msgstr ""
+
+msgid "Au Files"
+msgstr ""
+
+msgid "``'hcom'``"
+msgstr ""
+
+msgid "HCOM Files"
+msgstr ""
+
+msgid "``'sndt'``"
+msgstr ""
+
+msgid "Sndtool Sound Files"
+msgstr ""
+
+msgid "``'voc'``"
+msgstr ""
+
+msgid "Creative Labs Audio Files"
+msgstr ""
+
+msgid "``'wav'``"
+msgstr ""
+
+msgid "Waveform Audio File Format Files"
+msgstr ""
+
+msgid "``'8svx'``"
+msgstr ""
+
+msgid "8-Bit Sampled Voice Files"
+msgstr ""
+
+msgid "``'sb'``"
+msgstr ""
+
+msgid "Signed Byte Audio Data Files"
+msgstr ""
+
+msgid "``'ub'``"
+msgstr ""
+
+msgid "UB Files"
+msgstr ""
+
+msgid "``'ul'``"
+msgstr ""
+
+msgid "uLAW Audio Files"
+msgstr ""
+
+msgid ""
+"A list of functions performing the individual tests.  Each function takes "
+"two arguments: the byte-stream and an open file-like object. When :func:"
+"`what` is called with a byte-stream, the file-like object will be ``None``."
+msgstr ""
+"Перелік функцій, які виконують окремі тести. Кожна функція приймає два "
+"аргументи: потік байтів і відкритий файлоподібний об’єкт. Коли :func:`what` "
+"викликається потоком байтів, файлоподібний об’єкт матиме значення ``None``."
+
+msgid ""
+"The test function should return a string describing the image type if the "
+"test succeeded, or ``None`` if it failed."
+msgstr ""
+"Функція тестування має повертати рядок із описом типу зображення, якщо тест "
+"пройшов успішно, або ``None``, якщо він не вдався."
+
+msgid "Example:"
+msgstr "приклад:"
