@@ -1,0 +1,1213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2024, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dmytro Kazanzhy, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"PO-Revision-Date: 2021-06-28 01:17+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2024\n"
+"Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: ../../library/winreg.rst:2
+msgid ":mod:`!winreg` --- Windows registry access"
+msgstr ""
+
+#: ../../library/winreg.rst:12
+msgid ""
+"These functions expose the Windows registry API to Python.  Instead of using"
+" an integer as the registry handle, a :ref:`handle object <handle-object>` "
+"is used to ensure that the handles are closed correctly, even if the "
+"programmer neglects to explicitly close them."
+msgstr ""
+"Ці функції надають Python API реєстру Windows. Замість використання цілого "
+"числа як дескриптора реєстру :ref:`об’єкт дескриптора <handle-object>` "
+"використовується для забезпечення правильного закриття дескрипторів, навіть "
+"якщо програміст нехтує їх явним закриттям."
+
+#: ../../library/winreg.rst:19
+msgid ""
+"Several functions in this module used to raise a :exc:`WindowsError`, which "
+"is now an alias of :exc:`OSError`."
+msgstr ""
+"Кілька функцій у цьому модулі викликали помилку :exc:`WindowsError`, яка "
+"тепер є псевдонімом :exc:`OSError`."
+
+#: ../../library/winreg.rst:26
+msgid "Functions"
+msgstr "Функції"
+
+#: ../../library/winreg.rst:28
+msgid "This module offers the following functions:"
+msgstr "Цей модуль пропонує такі функції:"
+
+#: ../../library/winreg.rst:33
+msgid ""
+"Closes a previously opened registry key.  The *hkey* argument specifies a "
+"previously opened key."
+msgstr ""
+"Закриває раніше відкритий розділ реєстру. Аргумент *hkey* визначає раніше "
+"відкритий ключ."
+
+#: ../../library/winreg.rst:38
+msgid ""
+"If *hkey* is not closed using this method (or via :meth:`hkey.Close() "
+"<PyHKEY.Close>`), it is closed when the *hkey* object is destroyed by "
+"Python."
+msgstr ""
+"Якщо *hkey* не закривається за допомогою цього методу (або через "
+":meth:`hkey.Close() <PyHKEY.Close>`), він закривається, коли об’єкт *hkey* "
+"знищується Python."
+
+#: ../../library/winreg.rst:45
+msgid ""
+"Establishes a connection to a predefined registry handle on another "
+"computer, and returns a :ref:`handle object <handle-object>`."
+msgstr ""
+"Встановлює підключення до попередньо визначеного дескриптора реєстру на "
+"іншому комп’ютері та повертає :ref:`об’єкт дескриптора <handle-object>`."
+
+#: ../../library/winreg.rst:48
+msgid ""
+"*computer_name* is the name of the remote computer, of the form "
+"``r\"\\\\computername\"``.  If ``None``, the local computer is used."
+msgstr ""
+"*ім’я_комп’ютера* — це ім’я віддаленого комп’ютера у формі ``r\"\\\\ім’я "
+"комп’ютера``. Якщо ``None``, використовується локальний комп’ютер."
+
+#: ../../library/winreg.rst:51
+msgid "*key* is the predefined handle to connect to."
+msgstr "*key* — це попередньо визначений маркер для підключення."
+
+#: ../../library/winreg.rst:53 ../../library/winreg.rst:77
+#: ../../library/winreg.rst:109
+msgid ""
+"The return value is the handle of the opened key. If the function fails, an "
+":exc:`OSError` exception is raised."
+msgstr ""
+"Поверненим значенням є дескриптор відкритого ключа. Якщо функція не "
+"виконується, виникає виняток :exc:`OSError`."
+
+#: ../../library/winreg.rst:56
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.ConnectRegistry`` with "
+"arguments ``computer_name``, ``key``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.ConnectRegistry`` з "
+"аргументами ``computer_name``, ``key``."
+
+#: ../../library/winreg.rst:58 ../../library/winreg.rst:84
+#: ../../library/winreg.rst:118 ../../library/winreg.rst:139
+#: ../../library/winreg.rst:172 ../../library/winreg.rst:203
+#: ../../library/winreg.rst:238 ../../library/winreg.rst:329
+msgid "See :ref:`above <exception-changed>`."
+msgstr "Дивіться :ref:`вище <exception-changed>`."
+
+#: ../../library/winreg.rst:64 ../../library/winreg.rst:90
+msgid ""
+"Creates or opens the specified key, returning a :ref:`handle object <handle-"
+"object>`."
+msgstr ""
+"Створює або відкриває вказаний ключ, повертаючи :ref:`об’єкт дескриптора "
+"<handle-object>`."
+
+#: ../../library/winreg.rst:67 ../../library/winreg.rst:93
+#: ../../library/winreg.rst:126 ../../library/winreg.rst:147
+#: ../../library/winreg.rst:180 ../../library/winreg.rst:192
+#: ../../library/winreg.rst:211 ../../library/winreg.rst:260
+#: ../../library/winreg.rst:307 ../../library/winreg.rst:337
+#: ../../library/winreg.rst:363 ../../library/winreg.rst:383
+#: ../../library/winreg.rst:407 ../../library/winreg.rst:432
+#: ../../library/winreg.rst:460 ../../library/winreg.rst:491
+#: ../../library/winreg.rst:508 ../../library/winreg.rst:523
+msgid ""
+"*key* is an already open key, or one of the predefined :ref:`HKEY_* "
+"constants <hkey-constants>`."
+msgstr ""
+"*key* — це вже відкритий ключ або одна з попередньо визначених :ref:`HKEY_* "
+"констант <hkey-constants>`."
+
+#: ../../library/winreg.rst:70 ../../library/winreg.rst:96
+msgid "*sub_key* is a string that names the key this method opens or creates."
+msgstr ""
+"*sub_key* — це рядок, який називає ключ, який відкриває або створює цей "
+"метод."
+
+#: ../../library/winreg.rst:72 ../../library/winreg.rst:104
+msgid ""
+"If *key* is one of the predefined keys, *sub_key* may be ``None``. In that "
+"case, the handle returned is the same key handle passed in to the function."
+msgstr ""
+"Якщо *key* є одним із попередньо визначених ключів, *sub_key* може мати "
+"значення ``None``. У цьому випадку повернутий дескриптор є тим самим "
+"дескриптором ключа, переданим у функцію."
+
+#: ../../library/winreg.rst:75 ../../library/winreg.rst:107
+msgid "If the key already exists, this function opens the existing key."
+msgstr "Якщо ключ уже існує, ця функція відкриває наявний ключ."
+
+#: ../../library/winreg.rst:80 ../../library/winreg.rst:112
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.CreateKey`` with "
+"arguments ``key``, ``sub_key``, ``access``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.CreateKey`` з аргументами "
+"``key``, ``sub_key``, ``access``."
+
+#: ../../library/winreg.rst:82 ../../library/winreg.rst:114
+#: ../../library/winreg.rst:324
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.OpenKey/result`` with "
+"argument ``key``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.OpenKey/result`` з "
+"аргументом ``key``."
+
+#: ../../library/winreg.rst:98 ../../library/winreg.rst:154
+msgid ""
+"*reserved* is a reserved integer, and must be zero. The default is zero."
+msgstr ""
+"*reserved* є зарезервованим цілим числом і має дорівнювати нулю. За "
+"умовчанням дорівнює нулю."
+
+#: ../../library/winreg.rst:100
+msgid ""
+"*access* is an integer that specifies an access mask that describes the "
+"desired security access for the key.  Default is :const:`KEY_WRITE`.  See "
+":ref:`Access Rights <access-rights>` for other allowed values."
+msgstr ""
+"*access* — це ціле число, що вказує маску доступу, яка описує бажаний доступ"
+" безпеки для ключа. Типовим є :const:`KEY_WRITE`. Перегляньте :ref:`Права "
+"доступу <access-rights>` для інших дозволених значень."
+
+#: ../../library/winreg.rst:124 ../../library/winreg.rst:145
+msgid "Deletes the specified key."
+msgstr "Видаляє вказаний ключ."
+
+#: ../../library/winreg.rst:129
+msgid ""
+"*sub_key* is a string that must be a subkey of the key identified by the "
+"*key* parameter.  This value must not be ``None``, and the key may not have "
+"subkeys."
+msgstr ""
+"*sub_key* – це рядок, який має бути підключем ключа, визначеного параметром "
+"*key*. Це значення не має бути ``None``, і ключ не може мати підключів."
+
+#: ../../library/winreg.rst:132 ../../library/winreg.rst:161
+msgid "*This method can not delete keys with subkeys.*"
+msgstr "*Цей метод не може видалити ключі з підключами.*"
+
+#: ../../library/winreg.rst:134 ../../library/winreg.rst:163
+msgid ""
+"If the method succeeds, the entire key, including all of its values, is "
+"removed. If the method fails, an :exc:`OSError` exception is raised."
+msgstr ""
+"Якщо метод завершується успішно, весь ключ, включаючи всі його значення, "
+"видаляється. Якщо метод не вдається, виникає виняток :exc:`OSError`."
+
+#: ../../library/winreg.rst:137 ../../library/winreg.rst:168
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.DeleteKey`` with "
+"arguments ``key``, ``sub_key``, ``access``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.DeleteKey`` з аргументами "
+"``key``, ``sub_key``, ``access``."
+
+#: ../../library/winreg.rst:150
+msgid ""
+"*sub_key* is a string that must be a subkey of the key identified by the "
+"*key* parameter. This value must not be ``None``, and the key may not have "
+"subkeys."
+msgstr ""
+"*sub_key* – це рядок, який має бути підключем ключа, визначеного параметром "
+"*key*. Це значення не має бути ``None``, і ключ не може мати підключів."
+
+#: ../../library/winreg.rst:156
+msgid ""
+"*access* is an integer that specifies an access mask that describes the "
+"desired security access for the key.  Default is :const:`KEY_WOW64_64KEY`. "
+"On 32-bit Windows, the WOW64 constants are ignored. See :ref:`Access Rights "
+"<access-rights>` for other allowed values."
+msgstr ""
+
+#: ../../library/winreg.rst:166
+msgid "On unsupported Windows versions, :exc:`NotImplementedError` is raised."
+msgstr "У непідтримуваних версіях Windows виникає :exc:`NotImplementedError`."
+
+#: ../../library/winreg.rst:178
+msgid "Removes a named value from a registry key."
+msgstr "Видаляє назване значення з розділу реєстру."
+
+#: ../../library/winreg.rst:183
+msgid "*value* is a string that identifies the value to remove."
+msgstr "*value* — це рядок, який визначає значення, яке потрібно видалити."
+
+#: ../../library/winreg.rst:185
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.DeleteValue`` with "
+"arguments ``key``, ``value``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.DeleteValue`` з аргументами"
+" ``key``, ``value``."
+
+#: ../../library/winreg.rst:190
+msgid "Enumerates subkeys of an open registry key, returning a string."
+msgstr "Перераховує підрозділи відкритого ключа реєстру, повертаючи рядок."
+
+#: ../../library/winreg.rst:195
+msgid ""
+"*index* is an integer that identifies the index of the key to retrieve."
+msgstr ""
+"*index* — це ціле число, яке визначає індекс ключа, який потрібно отримати."
+
+#: ../../library/winreg.rst:197
+msgid ""
+"The function retrieves the name of one subkey each time it is called.  It is"
+" typically called repeatedly until an :exc:`OSError` exception is raised, "
+"indicating, no more values are available."
+msgstr ""
+"Функція отримує ім'я одного підключа під час кожного виклику. Зазвичай він "
+"викликається неодноразово, доки не виникне виняток :exc:`OSError`, що вказує"
+" на відсутність більше доступних значень."
+
+#: ../../library/winreg.rst:201
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.EnumKey`` with arguments"
+" ``key``, ``index``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.EnumKey`` з аргументами "
+"``key``, ``index``."
+
+#: ../../library/winreg.rst:209
+msgid "Enumerates values of an open registry key, returning a tuple."
+msgstr "Перераховує значення відкритого ключа реєстру, повертаючи кортеж."
+
+#: ../../library/winreg.rst:214
+msgid ""
+"*index* is an integer that identifies the index of the value to retrieve."
+msgstr ""
+"*index* — це ціле число, яке визначає індекс значення, яке потрібно "
+"отримати."
+
+#: ../../library/winreg.rst:216
+msgid ""
+"The function retrieves the name of one subkey each time it is called. It is "
+"typically called repeatedly, until an :exc:`OSError` exception is raised, "
+"indicating no more values."
+msgstr ""
+"Функція отримує ім'я одного підключа під час кожного виклику. Зазвичай він "
+"викликається неодноразово, доки не буде викликано виняток :exc:`OSError`, що"
+" вказує на відсутність більше значень."
+
+#: ../../library/winreg.rst:220 ../../library/winreg.rst:340
+msgid "The result is a tuple of 3 items:"
+msgstr "Результатом є кортеж із 3 елементів:"
+
+#: ../../library/winreg.rst:223 ../../library/winreg.rst:343
+#: ../../library/winreg.rst:391
+msgid "Index"
+msgstr "Індекс"
+
+#: ../../library/winreg.rst:223 ../../library/winreg.rst:343
+#: ../../library/winreg.rst:391
+msgid "Meaning"
+msgstr "Значення"
+
+#: ../../library/winreg.rst:225 ../../library/winreg.rst:345
+#: ../../library/winreg.rst:393
+msgid "``0``"
+msgstr "``0``"
+
+#: ../../library/winreg.rst:225
+msgid "A string that identifies the value name"
+msgstr "Рядок, який ідентифікує назву значення"
+
+#: ../../library/winreg.rst:227 ../../library/winreg.rst:348
+#: ../../library/winreg.rst:395
+msgid "``1``"
+msgstr "``1``"
+
+#: ../../library/winreg.rst:227
+msgid ""
+"An object that holds the value data, and whose type depends on the "
+"underlying registry type"
+msgstr ""
+"Об’єкт, який містить дані значення, тип якого залежить від базового типу "
+"реєстру"
+
+#: ../../library/winreg.rst:231 ../../library/winreg.rst:351
+msgid "``2``"
+msgstr "``2``"
+
+#: ../../library/winreg.rst:231
+msgid ""
+"An integer that identifies the type of the value data (see table in docs for"
+" :meth:`SetValueEx`)"
+msgstr ""
+"Ціле число, яке визначає тип даних значення (див. таблицю в документах для "
+":meth:`SetValueEx`)"
+
+#: ../../library/winreg.rst:236
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.EnumValue`` with "
+"arguments ``key``, ``index``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.EnumValue`` з аргументами "
+"``key``, ``index``."
+
+#: ../../library/winreg.rst:247
+msgid ""
+"Expands environment variable placeholders ``%NAME%`` in strings like "
+":const:`REG_EXPAND_SZ`::"
+msgstr ""
+"Розгортає заповнювачі змінної середовища ``%NAME%`` у рядках на зразок "
+":const:`REG_EXPAND_SZ`::"
+
+#: ../../library/winreg.rst:250
+msgid ""
+">>> ExpandEnvironmentStrings('%windir%')\n"
+"'C:\\\\Windows'"
+msgstr ""
+
+#: ../../library/winreg.rst:253
+msgid ""
+"Raises an :ref:`auditing event <auditing>` "
+"``winreg.ExpandEnvironmentStrings`` with argument ``str``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.ExpandEnvironmentStrings`` "
+"з аргументом ``str``."
+
+#: ../../library/winreg.rst:258
+msgid "Writes all the attributes of a key to the registry."
+msgstr "Записує всі атрибути ключа до реєстру."
+
+#: ../../library/winreg.rst:263
+msgid ""
+"It is not necessary to call :func:`FlushKey` to change a key. Registry "
+"changes are flushed to disk by the registry using its lazy flusher.  "
+"Registry changes are also flushed to disk at system shutdown.  Unlike "
+":func:`CloseKey`, the :func:`FlushKey` method returns only when all the data"
+" has been written to the registry. An application should only call "
+":func:`FlushKey` if it requires absolute certainty that registry changes are"
+" on disk."
+msgstr ""
+"Щоб змінити ключ, не потрібно викликати :func:`FlushKey`. Зміни реєстру "
+"скидаються на диск реєстром за допомогою відкладеного очищувача. Зміни "
+"реєстру також скидаються на диск під час завершення роботи системи. На "
+"відміну від :func:`CloseKey`, метод :func:`FlushKey` повертається лише тоді,"
+" коли всі дані були записані до реєстру. Програма має викликати "
+":func:`FlushKey`, лише якщо вона вимагає абсолютної впевненості, що зміни "
+"реєстру є на диску."
+
+#: ../../library/winreg.rst:272
+msgid ""
+"If you don't know whether a :func:`FlushKey` call is required, it probably "
+"isn't."
+msgstr "Якщо ви не знаєте, чи потрібен виклик :func:`FlushKey`, можливо, ні."
+
+#: ../../library/winreg.rst:278
+msgid ""
+"Creates a subkey under the specified key and stores registration information"
+" from a specified file into that subkey."
+msgstr ""
+"Створює підрозділ у вказаному розділі та зберігає реєстраційну інформацію з "
+"указаного файлу в цьому підрозділі."
+
+#: ../../library/winreg.rst:281
+msgid ""
+"*key* is a handle returned by :func:`ConnectRegistry` or one of the "
+"constants :const:`HKEY_USERS` or :const:`HKEY_LOCAL_MACHINE`."
+msgstr ""
+"*key* — це дескриптор, який повертає :func:`ConnectRegistry` або одна з "
+"констант :const:`HKEY_USERS` або :const:`HKEY_LOCAL_MACHINE`."
+
+#: ../../library/winreg.rst:284
+msgid "*sub_key* is a string that identifies the subkey to load."
+msgstr "*sub_key* — це рядок, який визначає підключ для завантаження."
+
+#: ../../library/winreg.rst:286
+msgid ""
+"*file_name* is the name of the file to load registry data from. This file "
+"must have been created with the :func:`SaveKey` function. Under the file "
+"allocation table (FAT) file system, the filename may not have an extension."
+msgstr ""
+"*ім’я_файлу* — це ім’я файлу, з якого потрібно завантажити дані реєстру. Цей"
+" файл має бути створено за допомогою функції :func:`SaveKey`. У файловій "
+"системі таблиці розподілу файлів (FAT) назва файлу може не мати розширення."
+
+#: ../../library/winreg.rst:290
+msgid ""
+"A call to :func:`LoadKey` fails if the calling process does not have the "
+":c:data:`!SE_RESTORE_PRIVILEGE` privilege.  Note that privileges are "
+"different from permissions -- see the `RegLoadKey documentation "
+"<https://msdn.microsoft.com/en-us/library/ms724889%28v=VS.85%29.aspx>`__ for"
+" more details."
+msgstr ""
+
+#: ../../library/winreg.rst:296
+msgid ""
+"If *key* is a handle returned by :func:`ConnectRegistry`, then the path "
+"specified in *file_name* is relative to the remote computer."
+msgstr ""
+"Якщо *key* — це дескриптор, повернутий :func:`ConnectRegistry`, тоді шлях, "
+"указаний у *file_name*, є відносно віддаленого комп’ютера."
+
+#: ../../library/winreg.rst:299
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.LoadKey`` with arguments"
+" ``key``, ``sub_key``, ``file_name``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.LoadKey`` з аргументами "
+"``key``, ``sub_key``, ``file_name``."
+
+#: ../../library/winreg.rst:305
+msgid ""
+"Opens the specified key, returning a :ref:`handle object <handle-object>`."
+msgstr ""
+"Відкриває вказаний ключ, повертаючи :ref:`об’єкт дескриптора <handle-"
+"object>`."
+
+#: ../../library/winreg.rst:310
+msgid "*sub_key* is a string that identifies the sub_key to open."
+msgstr "*sub_key* — це рядок, який визначає sub_key, який потрібно відкрити."
+
+#: ../../library/winreg.rst:312
+msgid ""
+"*reserved* is a reserved integer, and must be zero.  The default is zero."
+msgstr ""
+"*reserved* є зарезервованим цілим числом і має дорівнювати нулю. За "
+"умовчанням дорівнює нулю."
+
+#: ../../library/winreg.rst:314
+msgid ""
+"*access* is an integer that specifies an access mask that describes the "
+"desired security access for the key.  Default is :const:`KEY_READ`.  See "
+":ref:`Access Rights <access-rights>` for other allowed values."
+msgstr ""
+"*access* — це ціле число, що вказує маску доступу, яка описує бажаний доступ"
+" безпеки для ключа. Типовим є :const:`KEY_READ`. Перегляньте :ref:`Права "
+"доступу <access-rights>` для інших дозволених значень."
+
+#: ../../library/winreg.rst:318
+msgid "The result is a new handle to the specified key."
+msgstr "Результатом є новий дескриптор зазначеного ключа."
+
+#: ../../library/winreg.rst:320
+msgid "If the function fails, :exc:`OSError` is raised."
+msgstr "Якщо функція не виконується, виникає :exc:`OSError`."
+
+#: ../../library/winreg.rst:322
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.OpenKey`` with arguments"
+" ``key``, ``sub_key``, ``access``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.OpenKey`` з аргументами "
+"``key``, ``sub_key``, ``access``."
+
+#: ../../library/winreg.rst:326
+msgid "Allow the use of named arguments."
+msgstr "Дозволити використання іменованих аргументів."
+
+#: ../../library/winreg.rst:335
+msgid "Returns information about a key, as a tuple."
+msgstr "Повертає інформацію про ключ у вигляді кортежу."
+
+#: ../../library/winreg.rst:345
+msgid "An integer giving the number of sub keys this key has."
+msgstr "Ціле число, що вказує кількість підключів, які має цей ключ."
+
+#: ../../library/winreg.rst:348
+msgid "An integer giving the number of values this key has."
+msgstr "Ціле число, що вказує кількість значень, які має цей ключ."
+
+#: ../../library/winreg.rst:351
+msgid ""
+"An integer giving when the key was last modified (if available) as 100's of "
+"nanoseconds since Jan 1, 1601."
+msgstr ""
+"Ціле число, яке вказує дату останньої зміни ключа (якщо доступно) як 100 "
+"наносекунд з 1 січня 1601 року."
+
+#: ../../library/winreg.rst:356
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.QueryInfoKey`` with "
+"argument ``key``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.QueryInfoKey`` з аргументом"
+" ``key``."
+
+#: ../../library/winreg.rst:361
+msgid "Retrieves the unnamed value for a key, as a string."
+msgstr "Отримує безіменне значення для ключа у вигляді рядка."
+
+#: ../../library/winreg.rst:366
+msgid ""
+"*sub_key* is a string that holds the name of the subkey with which the value"
+" is associated.  If this parameter is ``None`` or empty, the function "
+"retrieves the value set by the :func:`SetValue` method for the key "
+"identified by *key*."
+msgstr ""
+"*sub_key* — це рядок, який містить назву підрозділу, з яким пов’язане "
+"значення. Якщо цей параметр ``None`` або порожній, функція отримує значення,"
+" встановлене методом :func:`SetValue` для ключа, визначеного *key*."
+
+#: ../../library/winreg.rst:370
+msgid ""
+"Values in the registry have name, type, and data components. This method "
+"retrieves the data for a key's first value that has a ``NULL`` name. But the"
+" underlying API call doesn't return the type, so always use "
+":func:`QueryValueEx` if possible."
+msgstr ""
+"Значення в реєстрі мають назву, тип і компоненти даних. Цей метод отримує "
+"дані для першого значення ключа, яке має назву ``NULL``. Але основний виклик"
+" API не повертає тип, тому завжди використовуйте :func:`QueryValueEx`, якщо "
+"це можливо."
+
+#: ../../library/winreg.rst:375 ../../library/winreg.rst:400
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.QueryValue`` with "
+"arguments ``key``, ``sub_key``, ``value_name``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.QueryValue`` з аргументами "
+"``key``, ``sub_key``, ``value_name``."
+
+#: ../../library/winreg.rst:380
+msgid ""
+"Retrieves the type and data for a specified value name associated with an "
+"open registry key."
+msgstr ""
+"Отримує тип і дані для вказаного імені значення, пов’язаного з відкритим "
+"розділом реєстру."
+
+#: ../../library/winreg.rst:386
+msgid "*value_name* is a string indicating the value to query."
+msgstr "*value_name* — це рядок, що вказує на значення для запиту."
+
+#: ../../library/winreg.rst:388
+msgid "The result is a tuple of 2 items:"
+msgstr "Результатом є кортеж із 2 елементів:"
+
+#: ../../library/winreg.rst:393
+msgid "The value of the registry item."
+msgstr "Значення елемента реєстру."
+
+#: ../../library/winreg.rst:395
+msgid ""
+"An integer giving the registry type for this value (see table in docs for "
+":meth:`SetValueEx`)"
+msgstr ""
+"Ціле число, що вказує тип реєстру для цього значення (див. таблицю в "
+"документах для :meth:`SetValueEx`)"
+
+#: ../../library/winreg.rst:405
+msgid "Saves the specified key, and all its subkeys to the specified file."
+msgstr "Зберігає вказаний ключ і всі його підключі у вказаний файл."
+
+#: ../../library/winreg.rst:410
+msgid ""
+"*file_name* is the name of the file to save registry data to.  This file "
+"cannot already exist. If this filename includes an extension, it cannot be "
+"used on file allocation table (FAT) file systems by the :meth:`LoadKey` "
+"method."
+msgstr ""
+"*ім’я_файлу* — це ім’я файлу, у який потрібно зберегти дані реєстру. Цей "
+"файл уже не може існувати. Якщо це ім’я файлу містить розширення, його не "
+"можна використовувати у файлових системах таблиці розподілу файлів (FAT) "
+"методом :meth:`LoadKey`."
+
+#: ../../library/winreg.rst:415
+msgid ""
+"If *key* represents a key on a remote computer, the path described by "
+"*file_name* is relative to the remote computer. The caller of this method "
+"must possess the **SeBackupPrivilege** security privilege.  Note that "
+"privileges are different than permissions -- see the `Conflicts Between User"
+" Rights and Permissions documentation <https://msdn.microsoft.com/en-"
+"us/library/ms724878%28v=VS.85%29.aspx>`__ for more details."
+msgstr ""
+
+#: ../../library/winreg.rst:423
+msgid "This function passes ``NULL`` for *security_attributes* to the API."
+msgstr "Ця функція передає ``NULL`` для *security_attributes* в API."
+
+#: ../../library/winreg.rst:425
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.SaveKey`` with arguments"
+" ``key``, ``file_name``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.SaveKey`` з аргументами "
+"``key``, ``file_name``."
+
+#: ../../library/winreg.rst:430
+msgid "Associates a value with a specified key."
+msgstr "Пов’язує значення з указаним ключем."
+
+#: ../../library/winreg.rst:435
+msgid ""
+"*sub_key* is a string that names the subkey with which the value is "
+"associated."
+msgstr ""
+"*sub_key* — це рядок, що називає підрозділ, з яким пов’язане значення."
+
+#: ../../library/winreg.rst:437
+msgid ""
+"*type* is an integer that specifies the type of the data. Currently this "
+"must be :const:`REG_SZ`, meaning only strings are supported.  Use the "
+":func:`SetValueEx` function for support for other data types."
+msgstr ""
+"*type* — це ціле число, яке визначає тип даних. Наразі це має бути "
+":const:`REG_SZ`, тобто підтримуються лише рядки. Використовуйте функцію "
+":func:`SetValueEx` для підтримки інших типів даних."
+
+#: ../../library/winreg.rst:441 ../../library/winreg.rst:471
+msgid "*value* is a string that specifies the new value."
+msgstr "*value* — це рядок, який визначає нове значення."
+
+#: ../../library/winreg.rst:443
+msgid ""
+"If the key specified by the *sub_key* parameter does not exist, the SetValue"
+" function creates it."
+msgstr ""
+"Якщо ключ, визначений параметром *sub_key*, не існує, функція SetValue "
+"створює його."
+
+#: ../../library/winreg.rst:446 ../../library/winreg.rst:479
+msgid ""
+"Value lengths are limited by available memory. Long values (more than 2048 "
+"bytes) should be stored as files with the filenames stored in the "
+"configuration registry.  This helps the registry perform efficiently."
+msgstr ""
+"Довжина значень обмежена доступною пам'яттю. Довгі значення (понад 2048 "
+"байт) слід зберігати як файли з іменами файлів, які зберігаються в реєстрі "
+"конфігурації. Це сприяє ефективній роботі реєстру."
+
+#: ../../library/winreg.rst:450
+msgid ""
+"The key identified by the *key* parameter must have been opened with "
+":const:`KEY_SET_VALUE` access."
+msgstr ""
+"Ключ, визначений параметром *key*, має бути відкритий із доступом "
+":const:`KEY_SET_VALUE`."
+
+#: ../../library/winreg.rst:453 ../../library/winreg.rst:483
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.SetValue`` with "
+"arguments ``key``, ``sub_key``, ``type``, ``value``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.SetValue`` з аргументами "
+"``key``, ``sub_key``, ``type``, ``value``."
+
+#: ../../library/winreg.rst:458
+msgid "Stores data in the value field of an open registry key."
+msgstr "Зберігає дані в полі значення відкритого ключа реєстру."
+
+#: ../../library/winreg.rst:463
+msgid ""
+"*value_name* is a string that names the subkey with which the value is "
+"associated."
+msgstr ""
+"*value_name* — це рядок, що називає підрозділ, з яким пов’язане значення."
+
+#: ../../library/winreg.rst:466
+msgid "*reserved* can be anything -- zero is always passed to the API."
+msgstr "*reserved* може бути будь-яким - нуль завжди передається в API."
+
+#: ../../library/winreg.rst:468
+msgid ""
+"*type* is an integer that specifies the type of the data. See :ref:`Value "
+"Types <value-types>` for the available types."
+msgstr ""
+"*type* — це ціле число, яке визначає тип даних. Перегляньте :ref:`Типи "
+"значень <value-types>` для доступних типів."
+
+#: ../../library/winreg.rst:473
+msgid ""
+"This method can also set additional value and type information for the "
+"specified key.  The key identified by the key parameter must have been "
+"opened with :const:`KEY_SET_VALUE` access."
+msgstr ""
+"Цей метод також може встановити додаткове значення та інформацію про тип для"
+" вказаного ключа. Ключ, визначений параметром ключа, має бути відкрито з "
+"доступом :const:`KEY_SET_VALUE`."
+
+#: ../../library/winreg.rst:477
+msgid "To open the key, use the :func:`CreateKey` or :func:`OpenKey` methods."
+msgstr ""
+"Щоб відкрити ключ, використовуйте методи :func:`CreateKey` або "
+":func:`OpenKey`."
+
+#: ../../library/winreg.rst:488
+msgid ""
+"Disables registry reflection for 32-bit processes running on a 64-bit "
+"operating system."
+msgstr ""
+"Вимикає відображення реєстру для 32-розрядних процесів, запущених у "
+"64-розрядній операційній системі."
+
+#: ../../library/winreg.rst:494 ../../library/winreg.rst:511
+#: ../../library/winreg.rst:528
+msgid ""
+"Will generally raise :exc:`NotImplementedError` if executed on a 32-bit "
+"operating system."
+msgstr ""
+"Зазвичай викликає помилку :exc:`NotImplementedError`, якщо її виконувати в "
+"32-розрядній операційній системі."
+
+#: ../../library/winreg.rst:497
+msgid ""
+"If the key is not on the reflection list, the function succeeds but has no "
+"effect.  Disabling reflection for a key does not affect reflection of any "
+"subkeys."
+msgstr ""
+"Якщо ключ відсутній у списку відображення, функція виконується успішно, але "
+"не має ефекту. Вимкнення відображення для ключа не впливає на відображення "
+"будь-яких підключів."
+
+#: ../../library/winreg.rst:501
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.DisableReflectionKey`` "
+"with argument ``key``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.DisableReflectionKey`` з "
+"аргументом ``key``."
+
+#: ../../library/winreg.rst:506
+msgid "Restores registry reflection for the specified disabled key."
+msgstr "Відновлює відображення реєстру для вказаного вимкненого ключа."
+
+#: ../../library/winreg.rst:514
+msgid ""
+"Restoring reflection for a key does not affect reflection of any subkeys."
+msgstr ""
+"Відновлення відображення для ключа не впливає на відображення будь-яких "
+"підключів."
+
+#: ../../library/winreg.rst:516
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.EnableReflectionKey`` "
+"with argument ``key``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.EnableReflectionKey`` з "
+"аргументом ``key``."
+
+#: ../../library/winreg.rst:521
+msgid "Determines the reflection state for the specified key."
+msgstr "Визначає стан відображення для вказаного ключа."
+
+#: ../../library/winreg.rst:526
+msgid "Returns ``True`` if reflection is disabled."
+msgstr "Повертає ``True``, якщо відображення вимкнено."
+
+#: ../../library/winreg.rst:531
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.QueryReflectionKey`` "
+"with argument ``key``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.QueryReflectionKey`` з "
+"аргументом ``key``."
+
+#: ../../library/winreg.rst:537
+msgid "Constants"
+msgstr "Константи"
+
+#: ../../library/winreg.rst:539
+msgid ""
+"The following constants are defined for use in many :mod:`winreg` functions."
+msgstr ""
+
+#: ../../library/winreg.rst:544
+msgid "HKEY_* Constants"
+msgstr "HKEY_* Константи"
+
+#: ../../library/winreg.rst:548
+msgid ""
+"Registry entries subordinate to this key define types (or classes) of "
+"documents and the properties associated with those types. Shell and COM "
+"applications use the information stored under this key."
+msgstr ""
+"Записи реєстру, підпорядковані цьому ключу, визначають типи (або класи) "
+"документів і властивості, пов’язані з цими типами. Додатки Shell і COM "
+"використовують інформацію, що зберігається під цим ключем."
+
+#: ../../library/winreg.rst:555
+msgid ""
+"Registry entries subordinate to this key define the preferences of the "
+"current user. These preferences include the settings of environment "
+"variables, data about program groups, colors, printers, network connections,"
+" and application preferences."
+msgstr ""
+"Записи реєстру, підпорядковані цьому ключу, визначають уподобання поточного "
+"користувача. Ці параметри включають параметри змінних середовища, дані про "
+"групи програм, кольори, принтери, мережеві підключення та параметри "
+"програми."
+
+#: ../../library/winreg.rst:562
+msgid ""
+"Registry entries subordinate to this key define the physical state of the "
+"computer, including data about the bus type, system memory, and installed "
+"hardware and software."
+msgstr ""
+"Записи реєстру, підпорядковані цьому ключу, визначають фізичний стан "
+"комп'ютера, включаючи дані про тип шини, системну пам'ять, а також "
+"встановлене обладнання та програмне забезпечення."
+
+#: ../../library/winreg.rst:568
+msgid ""
+"Registry entries subordinate to this key define the default user "
+"configuration for new users on the local computer and the user configuration"
+" for the current user."
+msgstr ""
+"Записи реєстру, підпорядковані цьому розділу, визначають конфігурацію "
+"користувача за замовчуванням для нових користувачів на локальному комп’ютері"
+" та конфігурацію користувача для поточного користувача."
+
+#: ../../library/winreg.rst:574
+msgid ""
+"Registry entries subordinate to this key allow you to access performance "
+"data. The data is not actually stored in the registry; the registry "
+"functions cause the system to collect the data from its source."
+msgstr ""
+"Записи реєстру, підпорядковані цьому ключу, дозволяють отримати доступ до "
+"даних продуктивності. Дані фактично не зберігаються в реєстрі; функції "
+"реєстру змушують систему збирати дані з джерела."
+
+#: ../../library/winreg.rst:582
+msgid ""
+"Contains information about the current hardware profile of the local "
+"computer system."
+msgstr ""
+"Містить інформацію про поточний профіль апаратного забезпечення локальної "
+"комп’ютерної системи."
+
+#: ../../library/winreg.rst:587
+msgid "This key is not used in versions of Windows after 98."
+msgstr "Цей ключ не використовується у версіях Windows після 98."
+
+#: ../../library/winreg.rst:593
+msgid "Access Rights"
+msgstr "Права доступу"
+
+#: ../../library/winreg.rst:595
+msgid ""
+"For more information, see `Registry Key Security and Access "
+"<https://msdn.microsoft.com/en-us/library/ms724878%28v=VS.85%29.aspx>`__."
+msgstr ""
+"Щоб отримати додаткові відомості, перегляньте `Безпека ключа реєстру та "
+"доступ <https://msdn.microsoft.com/en-"
+"us/library/ms724878%28v=VS.85%29.aspx>`__."
+
+#: ../../library/winreg.rst:600
+msgid ""
+"Combines the STANDARD_RIGHTS_REQUIRED, :const:`KEY_QUERY_VALUE`, "
+":const:`KEY_SET_VALUE`, :const:`KEY_CREATE_SUB_KEY`, "
+":const:`KEY_ENUMERATE_SUB_KEYS`, :const:`KEY_NOTIFY`, and "
+":const:`KEY_CREATE_LINK` access rights."
+msgstr ""
+"Поєднує права доступу STANDARD_RIGHTS_REQUIRED, :const:`KEY_QUERY_VALUE`, "
+":const:`KEY_SET_VALUE`, :const:`KEY_CREATE_SUB_KEY`, "
+":const:`KEY_ENUMERATE_SUB_KEYS`, :const:`KEY_NOTIFY` і "
+":const:`KEY_CREATE_LINK`."
+
+#: ../../library/winreg.rst:607
+msgid ""
+"Combines the STANDARD_RIGHTS_WRITE, :const:`KEY_SET_VALUE`, and "
+":const:`KEY_CREATE_SUB_KEY` access rights."
+msgstr ""
+"Поєднує права доступу STANDARD_RIGHTS_WRITE, :const:`KEY_SET_VALUE` і "
+":const:`KEY_CREATE_SUB_KEY`."
+
+#: ../../library/winreg.rst:612
+msgid ""
+"Combines the STANDARD_RIGHTS_READ, :const:`KEY_QUERY_VALUE`, "
+":const:`KEY_ENUMERATE_SUB_KEYS`, and :const:`KEY_NOTIFY` values."
+msgstr ""
+"Поєднує значення STANDARD_RIGHTS_READ, :const:`KEY_QUERY_VALUE`, "
+":const:`KEY_ENUMERATE_SUB_KEYS` і :const:`KEY_NOTIFY`."
+
+#: ../../library/winreg.rst:617
+msgid "Equivalent to :const:`KEY_READ`."
+msgstr "Еквівалент :const:`KEY_READ`."
+
+#: ../../library/winreg.rst:621
+msgid "Required to query the values of a registry key."
+msgstr "Необхідний для запиту значень розділу реєстру."
+
+#: ../../library/winreg.rst:625
+msgid "Required to create, delete, or set a registry value."
+msgstr ""
+"Необхідний для створення, видалення або встановлення значення реєстру."
+
+#: ../../library/winreg.rst:629
+msgid "Required to create a subkey of a registry key."
+msgstr "Необхідний для створення підрозділу розділу реєстру."
+
+#: ../../library/winreg.rst:633
+msgid "Required to enumerate the subkeys of a registry key."
+msgstr "Необхідний для перерахування підрозділів розділу реєстру."
+
+#: ../../library/winreg.rst:637
+msgid ""
+"Required to request change notifications for a registry key or for subkeys "
+"of a registry key."
+msgstr ""
+"Необхідний для запиту сповіщень про зміни для розділу реєстру або для "
+"підрозділів розділу реєстру."
+
+#: ../../library/winreg.rst:642
+msgid "Reserved for system use."
+msgstr "Зарезервовано для системного використання."
+
+#: ../../library/winreg.rst:648
+msgid "64-bit Specific"
+msgstr "Спеціально для 64-біт"
+
+#: ../../library/winreg.rst:650
+msgid ""
+"For more information, see `Accessing an Alternate Registry View "
+"<https://msdn.microsoft.com/en-us/library/aa384129(v=VS.85).aspx>`__."
+msgstr ""
+"Для отримання додаткової інформації див. `Доступ до альтернативного подання "
+"реєстру <https://msdn.microsoft.com/en-"
+"us/library/aa384129(v=VS.85).aspx>`__."
+
+#: ../../library/winreg.rst:655
+msgid ""
+"Indicates that an application on 64-bit Windows should operate on the 64-bit"
+" registry view. On 32-bit Windows, this constant is ignored."
+msgstr ""
+
+#: ../../library/winreg.rst:660
+msgid ""
+"Indicates that an application on 64-bit Windows should operate on the 32-bit"
+" registry view. On 32-bit Windows, this constant is ignored."
+msgstr ""
+
+#: ../../library/winreg.rst:666
+msgid "Value Types"
+msgstr "Типи значень"
+
+#: ../../library/winreg.rst:668
+msgid ""
+"For more information, see `Registry Value Types "
+"<https://msdn.microsoft.com/en-us/library/ms724884%28v=VS.85%29.aspx>`__."
+msgstr ""
+"Щоб отримати додаткові відомості, перегляньте `Типи значень реєстру "
+"<https://msdn.microsoft.com/en-us/library/ms724884%28v=VS.85%29.aspx>`__."
+
+#: ../../library/winreg.rst:673
+msgid "Binary data in any form."
+msgstr "Двійкові дані в довільній формі."
+
+#: ../../library/winreg.rst:677
+msgid "32-bit number."
+msgstr "32-розрядне число."
+
+#: ../../library/winreg.rst:681
+msgid ""
+"A 32-bit number in little-endian format. Equivalent to :const:`REG_DWORD`."
+msgstr ""
+"32-розрядне число у форматі little-endian. Еквівалент :const:`REG_DWORD`."
+
+#: ../../library/winreg.rst:685
+msgid "A 32-bit number in big-endian format."
+msgstr "32-розрядне число у форматі старшого порядку."
+
+#: ../../library/winreg.rst:689
+msgid ""
+"Null-terminated string containing references to environment variables "
+"(``%PATH%``)."
+msgstr ""
+"Рядок із нульовим завершенням, що містить посилання на змінні середовища "
+"(``%PATH%``)."
+
+#: ../../library/winreg.rst:694
+msgid "A Unicode symbolic link."
+msgstr "Символьне посилання Unicode."
+
+#: ../../library/winreg.rst:698
+msgid ""
+"A sequence of null-terminated strings, terminated by two null characters. "
+"(Python handles this termination automatically.)"
+msgstr ""
+"Послідовність рядків із закінченням нулем, що завершується двома символами "
+"нуль. (Python обробляє це завершення автоматично.)"
+
+#: ../../library/winreg.rst:703
+msgid "No defined value type."
+msgstr "Немає визначеного типу значення."
+
+#: ../../library/winreg.rst:707
+msgid "A 64-bit number."
+msgstr "64-розрядне число."
+
+#: ../../library/winreg.rst:713
+msgid ""
+"A 64-bit number in little-endian format. Equivalent to :const:`REG_QWORD`."
+msgstr ""
+"64-розрядне число у форматі little-endian. Еквівалент :const:`REG_QWORD`."
+
+#: ../../library/winreg.rst:719
+msgid "A device-driver resource list."
+msgstr "Список ресурсів драйверів пристроїв."
+
+#: ../../library/winreg.rst:723
+msgid "A hardware setting."
+msgstr "Налаштування обладнання."
+
+#: ../../library/winreg.rst:727
+msgid "A hardware resource list."
+msgstr "Список апаратних ресурсів."
+
+#: ../../library/winreg.rst:731
+msgid "A null-terminated string."
+msgstr "Рядок із закінченням нулем."
+
+#: ../../library/winreg.rst:737
+msgid "Registry Handle Objects"
+msgstr "Об’єкти обробки реєстру"
+
+#: ../../library/winreg.rst:739
+msgid ""
+"This object wraps a Windows HKEY object, automatically closing it when the "
+"object is destroyed.  To guarantee cleanup, you can call either the "
+":meth:`~PyHKEY.Close` method on the object, or the :func:`CloseKey` "
+"function."
+msgstr ""
+"Цей об’єкт огортає об’єкт HKEY Windows, автоматично закриваючи його, коли "
+"об’єкт знищується. Щоб гарантувати очищення, ви можете викликати або метод "
+":meth:`~PyHKEY.Close` для об’єкта, або функцію :func:`CloseKey`."
+
+#: ../../library/winreg.rst:743
+msgid "All registry functions in this module return one of these objects."
+msgstr "Усі функції реєстру в цьому модулі повертають один із цих об’єктів."
+
+#: ../../library/winreg.rst:745
+msgid ""
+"All registry functions in this module which accept a handle object also "
+"accept an integer, however, use of the handle object is encouraged."
+msgstr ""
+"Усі функції реєстру в цьому модулі, які приймають об’єкт-дескриптор, також "
+"приймають ціле число, проте використання об’єкта-дескриптора заохочується."
+
+#: ../../library/winreg.rst:748
+msgid ""
+"Handle objects provide semantics for :meth:`~object.__bool__` -- thus ::"
+msgstr ""
+
+#: ../../library/winreg.rst:750
+msgid ""
+"if handle:\n"
+"    print(\"Yes\")"
+msgstr ""
+
+#: ../../library/winreg.rst:753
+msgid ""
+"will print ``Yes`` if the handle is currently valid (has not been closed or "
+"detached)."
+msgstr ""
+"надрукує ``Так``, якщо дескриптор наразі дійсний (не був закритий або "
+"від’єднаний)."
+
+#: ../../library/winreg.rst:756
+msgid ""
+"The object also support comparison semantics, so handle objects will compare"
+" true if they both reference the same underlying Windows handle value."
+msgstr ""
+"Об’єкт також підтримує семантику порівняння, тому об’єкти-дескриптори "
+"порівнюватимуться як істинні, якщо вони обидва посилаються на одне базове "
+"значення маркера Windows."
+
+#: ../../library/winreg.rst:759
+msgid ""
+"Handle objects can be converted to an integer (e.g., using the built-in "
+":func:`int` function), in which case the underlying Windows handle value is "
+"returned.  You can also use the :meth:`~PyHKEY.Detach` method to return the "
+"integer handle, and also disconnect the Windows handle from the handle "
+"object."
+msgstr ""
+"Об’єкти дескриптора можна перетворити на ціле число (наприклад, за допомогою"
+" вбудованої функції :func:`int`), у цьому випадку повертається базове "
+"значення дескриптора Windows. Ви також можете використати метод "
+":meth:`~PyHKEY.Detach`, щоб повернути цілочисельний дескриптор, а також "
+"від’єднати дескриптор Windows від об’єкта дескриптора."
+
+#: ../../library/winreg.rst:767
+msgid "Closes the underlying Windows handle."
+msgstr "Закриває основний маркер Windows."
+
+#: ../../library/winreg.rst:769
+msgid "If the handle is already closed, no error is raised."
+msgstr "Якщо ручка вже закрита, помилка не виникає."
+
+#: ../../library/winreg.rst:774
+msgid "Detaches the Windows handle from the handle object."
+msgstr "Від’єднує маркер Windows від об’єкта маркера."
+
+#: ../../library/winreg.rst:776
+msgid ""
+"The result is an integer that holds the value of the handle before it is "
+"detached.  If the handle is already detached or closed, this will return "
+"zero."
+msgstr ""
+"Результатом є ціле число, яке містить значення дескриптора до його "
+"від’єднання. Якщо ручка вже від'єднана або закрита, це поверне нуль."
+
+#: ../../library/winreg.rst:780
+msgid ""
+"After calling this function, the handle is effectively invalidated, but the "
+"handle is not closed.  You would call this function when you need the "
+"underlying Win32 handle to exist beyond the lifetime of the handle object."
+msgstr ""
+"Після виклику цієї функції дескриптор фактично стає недійсним, але "
+"дескриптор не закривається. Ви можете викликати цю функцію, якщо вам "
+"потрібно, щоб основний дескриптор Win32 існував після закінчення терміну "
+"служби об’єкта дескриптора."
+
+#: ../../library/winreg.rst:784
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``winreg.PyHKEY.Detach`` with "
+"argument ``key``."
+msgstr ""
+"Викликає :ref:`подію аудиту <auditing>` ``winreg.PyHKEY.Detach`` з "
+"аргументом ``key``."
+
+#: ../../library/winreg.rst:790
+msgid ""
+"The HKEY object implements :meth:`~object.__enter__` and "
+":meth:`~object.__exit__` and thus supports the context protocol for the "
+":keyword:`with` statement::"
+msgstr ""
+"Об’єкт HKEY реалізує :meth:`~object.__enter__` і :meth:`~object.__exit__` і "
+"таким чином підтримує контекстний протокол для оператора :keyword:`with`::"
+
+#: ../../library/winreg.rst:794
+msgid ""
+"with OpenKey(HKEY_LOCAL_MACHINE, \"foo\") as key:\n"
+"    ...  # work with key"
+msgstr ""
+
+#: ../../library/winreg.rst:797
+msgid ""
+"will automatically close *key* when control leaves the :keyword:`with` "
+"block."
+msgstr ""
+"автоматично закриє *key*, коли керування залишить блок :keyword:`with`."
+
+#: ../../library/winreg.rst:242
+msgid "% (percent)"
+msgstr ""
+
+#: ../../library/winreg.rst:242
+msgid "environment variables expansion (Windows)"
+msgstr ""
