@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2025, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-11 14:19+0000\n"
+"PO-Revision-Date: 2021-06-28 01:05+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`!email.errors`: Exception and Defect classes"
+msgstr ""
+
+msgid "**Source code:** :source:`Lib/email/errors.py`"
+msgstr "**Вихідний код:** :source:`Lib/email/errors.py`"
+
+msgid ""
+"The following exception classes are defined in the :mod:`email.errors` "
+"module:"
+msgstr "Наступні класи винятків визначено в модулі :mod:`email.errors`:"
+
+msgid ""
+"This is the base class for all exceptions that the :mod:`email` package can "
+"raise.  It is derived from the standard :exc:`Exception` class and defines "
+"no additional methods."
+msgstr ""
+"Це базовий клас для всіх винятків, які може створити пакет :mod:`email`. Він "
+"походить від стандартного класу :exc:`Exception` і не визначає додаткових "
+"методів."
+
+msgid ""
+"This is the base class for exceptions raised by the :class:`~email.parser."
+"Parser` class.  It is derived from :exc:`MessageError`.  This class is also "
+"used internally by the parser used by :mod:`~email.headerregistry`."
+msgstr ""
+"Це базовий клас для винятків, викликаних класом :class:`~email.parser."
+"Parser`. Він походить від :exc:`MessageError`. Цей клас також "
+"використовується внутрішньо аналізатором, який використовує :mod:`~email."
+"headerregistry`."
+
+msgid ""
+"Raised under some error conditions when parsing the :rfc:`5322` headers of a "
+"message, this class is derived from :exc:`MessageParseError`.  The :meth:"
+"`~email.message.EmailMessage.set_boundary` method will raise this error if "
+"the content type is unknown when the method is called. :class:`~email.header."
+"Header` may raise this error for certain base64 decoding errors, and when an "
+"attempt is made to create a header that appears to contain an embedded "
+"header (that is, there is what is supposed to be a continuation line that "
+"has no leading whitespace and looks like a header)."
+msgstr ""
+"Виникає за деяких умов помилки під час аналізу заголовків :rfc:`5322` "
+"повідомлення, цей клас походить від :exc:`MessageParseError`. Метод :meth:"
+"`~email.message.EmailMessage.set_boundary` викличе цю помилку, якщо під час "
+"виклику методу тип вмісту невідомий. :class:`~email.header.Header` може "
+"викликати цю помилку для певних помилок декодування base64, а також коли "
+"робиться спроба створити заголовок, який, здається, містить вбудований "
+"заголовок (тобто, є те, що має бути рядок продовження, який не має "
+"початкових пробілів і виглядає як заголовок)."
+
+msgid "Deprecated and no longer used."
+msgstr "Застарілий і більше не використовується."
+
+msgid ""
+"Raised if the :meth:`~email.message.Message.attach` method is called on an "
+"instance of a class derived from :class:`~email.mime.nonmultipart."
+"MIMENonMultipart` (e.g. :class:`~email.mime.image.MIMEImage`). :exc:"
+"`MultipartConversionError` multiply inherits from :exc:`MessageError` and "
+"the built-in :exc:`TypeError`."
+msgstr ""
+
+msgid ""
+"Raised when an error occurs when the :mod:`~email.generator` outputs headers."
+msgstr ""
+
+msgid ""
+"This is the base class for all defects found when parsing email messages. It "
+"is derived from :exc:`ValueError`."
+msgstr ""
+
+msgid ""
+"This is the base class for all defects found when parsing email headers. It "
+"is derived from :exc:`MessageDefect`."
+msgstr ""
+
+msgid ""
+"Here is the list of the defects that the :class:`~email.parser.FeedParser` "
+"can find while parsing messages.  Note that the defects are added to the "
+"message where the problem was found, so for example, if a message nested "
+"inside a :mimetype:`multipart/alternative` had a malformed header, that "
+"nested message object would have a defect, but the containing messages would "
+"not."
+msgstr ""
+"Ось список дефектів, які :class:`~email.parser.FeedParser` може знайти під "
+"час аналізу повідомлень. Зауважте, що дефекти додаються до повідомлення, у "
+"якому виявлено проблему, тому, наприклад, якщо повідомлення, вкладене в :"
+"mimetype:`multipart/alternative`, мало неправильний заголовок, цей вкладений "
+"об’єкт повідомлення мав би дефект, але містив би повідомлення не будуть."
+
+msgid ""
+"All defect classes are subclassed from :class:`email.errors.MessageDefect`."
+msgstr "Усі класи дефектів є підкласами :class:`email.errors.MessageDefect`."
+
+msgid ""
+"A message claimed to be a multipart, but had no :mimetype:`boundary` "
+"parameter."
+msgstr ""
+
+msgid ""
+"The start boundary claimed in the :mailheader:`Content-Type` header was "
+"never found."
+msgstr ""
+
+msgid ""
+"A start boundary was found, but no corresponding close boundary was ever "
+"found."
+msgstr ""
+
+msgid "The message had a continuation line as its first header line."
+msgstr ""
+
+msgid "A \"Unix From\" header was found in the middle of a header block."
+msgstr ""
+
+msgid ""
+"A line was found while parsing headers that had no leading white space but "
+"contained no ':'.  Parsing continues assuming that the line represents the "
+"first line of the body."
+msgstr ""
+
+msgid ""
+"A header was found that was missing a colon, or was otherwise malformed."
+msgstr ""
+
+msgid "This defect has not been used for several Python versions."
+msgstr "Цей дефект не використовувався для кількох версій Python."
+
+msgid ""
+"A message claimed to be a :mimetype:`multipart`, but no subparts were found. "
+"Note that when a message has this defect, its :meth:`~email.message.Message."
+"is_multipart` method may return ``False`` even though its content type "
+"claims to be :mimetype:`multipart`."
+msgstr ""
+
+msgid ""
+"When decoding a block of base64 encoded bytes, the padding was not correct. "
+"Enough padding is added to perform the decode, but the resulting decoded "
+"bytes may be invalid."
+msgstr ""
+
+msgid ""
+"When decoding a block of base64 encoded bytes, characters outside the base64 "
+"alphabet were encountered.  The characters are ignored, but the resulting "
+"decoded bytes may be invalid."
+msgstr ""
+
+msgid ""
+"When decoding a block of base64 encoded bytes, the number of non-padding "
+"base64 characters was invalid (1 more than a multiple of 4).  The encoded "
+"block was kept as-is."
+msgstr ""
+
+msgid ""
+"When decoding an invalid or unparsable date field.  The original value is "
+"kept as-is."
+msgstr ""
