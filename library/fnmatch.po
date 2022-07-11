@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2024, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dmytro Kazanzhy, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-08 14:16+0000\n"
+"PO-Revision-Date: 2021-06-28 01:06+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2024\n"
+"Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: ../../library/fnmatch.rst:2
+msgid ":mod:`!fnmatch` --- Unix filename pattern matching"
+msgstr ":mod:`!fnmatch` --- зіставлення імен файлів у Unix"
+
+#: ../../library/fnmatch.rst:7
+msgid "**Source code:** :source:`Lib/fnmatch.py`"
+msgstr "**Вихідний код:** :source:`Lib/fnmatch.py`"
+
+#: ../../library/fnmatch.rst:15
+msgid ""
+"This module provides support for Unix shell-style wildcards, which are *not*"
+" the same as regular expressions (which are documented in the :mod:`re` "
+"module).  The special characters used in shell-style wildcards are:"
+msgstr ""
+"Цей модуль підтримує символи підстановки у стилі оболонки Unix, які які *не*"
+" відповідають регулярним виразам (що задокументовані в модулі :mod:`re`). "
+"Спеціальні символи, які використовуються в символах підстановки у стилі "
+"оболонки:"
+
+#: ../../library/fnmatch.rst:27
+msgid "Pattern"
+msgstr "Візерунок"
+
+#: ../../library/fnmatch.rst:27
+msgid "Meaning"
+msgstr "Значення"
+
+#: ../../library/fnmatch.rst:29
+msgid "``*``"
+msgstr "``*``"
+
+#: ../../library/fnmatch.rst:29
+msgid "matches everything"
+msgstr "відповідає всьому"
+
+#: ../../library/fnmatch.rst:31
+msgid "``?``"
+msgstr "``?``"
+
+#: ../../library/fnmatch.rst:31
+msgid "matches any single character"
+msgstr "відповідає будь-якому окремому символу"
+
+#: ../../library/fnmatch.rst:33
+msgid "``[seq]``"
+msgstr "``[seq]``"
+
+#: ../../library/fnmatch.rst:33
+msgid "matches any character in *seq*"
+msgstr "відповідає будь-якому символу в *seq*"
+
+#: ../../library/fnmatch.rst:35
+msgid "``[!seq]``"
+msgstr "``[!seq]``"
+
+#: ../../library/fnmatch.rst:35
+msgid "matches any character not in *seq*"
+msgstr "відповідає будь-якому символу не в *seq*"
+
+#: ../../library/fnmatch.rst:38
+msgid ""
+"For a literal match, wrap the meta-characters in brackets. For example, "
+"``'[?]'`` matches the character ``'?'``."
+msgstr ""
+"Для буквального збігу заберіть метасимволи в дужки. Наприклад, ``''[?]'`` "
+"відповідає символу ``''?'``."
+
+#: ../../library/fnmatch.rst:43
+msgid ""
+"Note that the filename separator (``'/'`` on Unix) is *not* special to this "
+"module.  See module :mod:`glob` for pathname expansion (:mod:`glob` uses "
+":func:`.filter` to match pathname segments).  Similarly, filenames starting "
+"with a period are not special for this module, and are matched by the ``*`` "
+"and ``?`` patterns."
+msgstr ""
+"Зауважте, що роздільник імен файлів (``'/'`` в Unix) *не* є особливим для "
+"цього модуля. Дивіться модуль :mod:`glob` для розширення імені шляху "
+"(:mod:`glob` використовує :func:`.filter` для відповідності сегментам імені "
+"шляху). Подібним чином назви файлів, що починаються з крапки, не є "
+"спеціальними для цього модуля та відповідають шаблонам ``*`` і ``?``."
+
+#: ../../library/fnmatch.rst:49
+msgid ""
+"Also note that :func:`functools.lru_cache` with the *maxsize* of 32768 is "
+"used to cache the compiled regex patterns in the following functions: "
+":func:`fnmatch`, :func:`fnmatchcase`, :func:`.filter`."
+msgstr ""
+
+#: ../../library/fnmatch.rst:55
+msgid ""
+"Test whether the filename string *name* matches the pattern string *pat*, "
+"returning ``True`` or ``False``.  Both parameters are case-normalized using "
+":func:`os.path.normcase`. :func:`fnmatchcase` can be used to perform a case-"
+"sensitive comparison, regardless of whether that's standard for the "
+"operating system."
+msgstr ""
+
+#: ../../library/fnmatch.rst:61
+msgid ""
+"This example will print all file names in the current directory with the "
+"extension ``.txt``::"
+msgstr ""
+"У цьому прикладі буде надруковано всі імена файлів у поточному каталозі з "
+"розширенням ``.txt``::"
+
+#: ../../library/fnmatch.rst:64
+msgid ""
+"import fnmatch\n"
+"import os\n"
+"\n"
+"for file in os.listdir('.'):\n"
+"    if fnmatch.fnmatch(file, '*.txt'):\n"
+"        print(file)"
+msgstr ""
+
+#: ../../library/fnmatch.rst:74
+msgid ""
+"Test whether the filename string *name* matches the pattern string *pat*, "
+"returning ``True`` or ``False``; the comparison is case-sensitive and does "
+"not apply :func:`os.path.normcase`."
+msgstr ""
+
+#: ../../library/fnmatch.rst:81
+msgid ""
+"Construct a list from those elements of the :term:`iterable` *names* that "
+"match pattern *pat*. It is the same as ``[n for n in names if fnmatch(n, "
+"pat)]``, but implemented more efficiently."
+msgstr ""
+
+#: ../../library/fnmatch.rst:89
+msgid ""
+"Return the shell-style pattern *pat* converted to a regular expression for "
+"using with :func:`re.match`."
+msgstr ""
+
+#: ../../library/fnmatch.rst:92
+msgid "Example:"
+msgstr "Приклад:"
+
+#: ../../library/fnmatch.rst:106
+msgid "Module :mod:`glob`"
+msgstr "Модуль :mod:`glob`"
+
+#: ../../library/fnmatch.rst:107
+msgid "Unix shell-style path expansion."
+msgstr "Розширення шляху у стилі оболонки Unix."
+
+#: ../../library/fnmatch.rst:9
+msgid "filenames"
+msgstr "назви файлів"
+
+#: ../../library/fnmatch.rst:9
+msgid "wildcard expansion"
+msgstr "розширення символів підстановки"
+
+#: ../../library/fnmatch.rst:11 ../../library/fnmatch.rst:41
+msgid "module"
+msgstr "модуль"
+
+#: ../../library/fnmatch.rst:11
+msgid "re"
+msgstr "re"
+
+#: ../../library/fnmatch.rst:19
+msgid "* (asterisk)"
+msgstr "* (зірочка)"
+
+#: ../../library/fnmatch.rst:19
+msgid "in glob-style wildcards"
+msgstr "символами узагальнення у стилі glob"
+
+#: ../../library/fnmatch.rst:19
+msgid "? (question mark)"
+msgstr "? (знак питання)"
+
+#: ../../library/fnmatch.rst:19
+msgid "[] (square brackets)"
+msgstr "[] (квадратні дужки)"
+
+#: ../../library/fnmatch.rst:19
+msgid "! (exclamation)"
+msgstr "! (знак оклику)"
+
+#: ../../library/fnmatch.rst:19
+msgid "- (minus)"
+msgstr "- (мінус)"
+
+#: ../../library/fnmatch.rst:41
+msgid "glob"
+msgstr "glob"
