@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:11+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid ":mod:`pipes` --- Interface to shell pipelines"
+msgstr ":mod:`pipes` --- Інтерфейс до конвеєрів оболонки"
+
+msgid "**Source code:** :source:`Lib/pipes.py`"
+msgstr "**Вихідний код:** :source:`Lib/pipes.py`"
+
+msgid ""
+"The :mod:`pipes` module is deprecated (see :pep:`PEP 594 <594#pipes>` for "
+"details). Please use the :mod:`subprocess` module instead."
+msgstr ""
+"Модуль :mod:`pipes` є застарілим (докладніше див. :pep:`PEP 594 "
+"<594#pipes>`). Натомість використовуйте модуль :mod:`subprocess`."
+
+msgid ""
+"The :mod:`pipes` module defines a class to abstract the concept of a "
+"*pipeline* --- a sequence of converters from one file to  another."
+msgstr ""
+"Модуль :mod:`pipes` визначає клас для абстрагування концепції *конвеєра* --- "
+"послідовності конвертерів з одного файлу в інший."
+
+msgid ""
+"Because the module uses :program:`/bin/sh` command lines, a POSIX or "
+"compatible shell for :func:`os.system` and :func:`os.popen` is required."
+msgstr ""
+"Оскільки модуль використовує командні рядки :program:`/bin/sh`, потрібна "
+"POSIX або сумісна оболонка для :func:`os.system` і :func:`os.popen`."
+
+msgid ":ref:`Availability <availability>`: Unix. Not available on VxWorks."
+msgstr ":ref:`Наявність <availability>`: Unix. Недоступно на VxWorks."
+
+msgid "The :mod:`pipes` module defines the following class:"
+msgstr "Модуль :mod:`pipes` визначає такий клас:"
+
+msgid "An abstraction of a pipeline."
+msgstr "Абстракція трубопроводу."
+
+msgid "Example::"
+msgstr "Приклад::"
+
+msgid "Template Objects"
+msgstr "Об'єкти шаблону"
+
+msgid "Template objects following methods:"
+msgstr "Об'єкти шаблону наступні методи:"
+
+msgid "Restore a pipeline template to its initial state."
+msgstr "Відновлення шаблону конвеєра до початкового стану."
+
+msgid "Return a new, equivalent, pipeline template."
+msgstr "Поверніть новий еквівалентний шаблон конвеєра."
+
+msgid ""
+"If *flag* is true, turn debugging on. Otherwise, turn debugging off. When "
+"debugging is on, commands to be executed are printed, and the shell is given "
+"``set -x`` command to be more verbose."
+msgstr ""
+"Якщо *flag* має значення true, увімкніть налагодження. В іншому випадку "
+"вимкніть налагодження. Коли налагодження ввімкнено, команди, які потрібно "
+"виконати, друкуються, а оболонкі надається команда ``set -x``, щоб бути "
+"більш детальною."
+
+msgid ""
+"Append a new action at the end. The *cmd* variable must be a valid bourne "
+"shell command. The *kind* variable consists of two letters."
+msgstr ""
+"Додайте нову дію в кінці. Змінна *cmd* має бути дійсною командою оболонки "
+"bourne. Змінна *kind* складається з двох літер."
+
+msgid ""
+"The first letter can be either of ``'-'`` (which means the command reads its "
+"standard input), ``'f'`` (which means the commands reads a given file on the "
+"command line) or ``'.'`` (which means the commands reads no input, and hence "
+"must be first.)"
+msgstr ""
+"Першою літерою може бути ``'-'`` (що означає, що команда читає стандартний "
+"ввід), ``'f'`` (що означає, що команда читає заданий файл у командному "
+"рядку) або ``' .''`` (це означає, що команди не читають введених даних, а "
+"отже, мають бути першими.)"
+
+msgid ""
+"Similarly, the second letter can be either of ``'-'`` (which means  the "
+"command writes to standard output), ``'f'`` (which means the  command writes "
+"a file on the command line) or ``'.'`` (which means the command does not "
+"write anything, and hence must be last.)"
+msgstr ""
+"Подібним чином друга літера може мати значення ``'-'`` (що означає, що "
+"команда записує в стандартний вивід), ``'f'`` (що означає, що команда "
+"записує файл у командний рядок) або ``'.'`` (що означає, що команда нічого "
+"не записує, тому має бути останньою.)"
+
+msgid ""
+"Add a new action at the beginning. See :meth:`append` for explanations of "
+"the arguments."
+msgstr ""
+"Додайте нову дію на початку. Перегляньте :meth:`append` для пояснення "
+"аргументів."
+
+msgid ""
+"Return a file-like object, open to *file*, but read from or written to by "
+"the pipeline.  Note that only one of ``'r'``, ``'w'`` may be given."
+msgstr ""
+"Повертає файлоподібний об’єкт, відкритий у *file*, але зчитований або "
+"записаний конвеєром. Зауважте, що можна вказати лише одне з ``'r'``, ``'w'``."
+
+msgid "Copy *infile* to *outfile* through the pipe."
+msgstr "Скопіюйте *infile* до *outfile* через канал."

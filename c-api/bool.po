@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 00:47+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Boolean Objects"
+msgstr "Логічні об'єкти"
+
+msgid ""
+"Booleans in Python are implemented as a subclass of integers.  There are "
+"only two booleans, :const:`Py_False` and :const:`Py_True`.  As such, the "
+"normal creation and deletion functions don't apply to booleans.  The "
+"following macros are available, however."
+msgstr ""
+"Логічні значення в Python реалізовані як підклас цілих чисел. Є лише два "
+"логічних значення: :const:`Py_False` і :const:`Py_True`. Таким чином, "
+"звичайні функції створення та видалення не застосовуються до логічних "
+"значень. Однак наступні макроси доступні."
+
+msgid ""
+"Return true if *o* is of type :c:data:`PyBool_Type`.  This function always "
+"succeeds."
+msgstr ""
+"Повертає true, якщо *o* має тип :c:data:`PyBool_Type`. Ця функція завжди "
+"успішна."
+
+msgid ""
+"The Python ``False`` object.  This object has no methods.  It needs to be "
+"treated just like any other object with respect to reference counts."
+msgstr ""
+"Об'єкт Python ``False``. Цей об’єкт не має методів. З ним потрібно "
+"поводитися так само, як і з будь-яким іншим об’єктом щодо кількості посилань."
+
+msgid ""
+"The Python ``True`` object.  This object has no methods.  It needs to be "
+"treated just like any other object with respect to reference counts."
+msgstr ""
+"Об’єкт Python ``True``. Цей об’єкт не має методів. З ним потрібно поводитися "
+"так само, як і з будь-яким іншим об’єктом щодо кількості посилань."
+
+msgid ""
+"Return :const:`Py_False` from a function, properly incrementing its "
+"reference count."
+msgstr ""
+"Повертає :const:`Py_False` із функції, правильно збільшуючи її кількість "
+"посилань."
+
+msgid ""
+"Return :const:`Py_True` from a function, properly incrementing its reference "
+"count."
+msgstr ""
+"Повертає :const:`Py_True` з функції, правильно збільшуючи її кількість "
+"посилань."
+
+msgid ""
+"Return a new reference to :const:`Py_True` or :const:`Py_False` depending on "
+"the truth value of *v*."
+msgstr ""
+"Повертає нове посилання на :const:`Py_True` або :const:`Py_False` залежно "
+"від значення істинності *v*."
