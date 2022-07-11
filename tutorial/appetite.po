@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2024, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dmytro Kazanzhy, 2022
+# Nadiia Gorash <nmaiboroda@gmail.com>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"PO-Revision-Date: 2021-06-28 01:49+0000\n"
+"Last-Translator: Nadiia Gorash <nmaiboroda@gmail.com>, 2022\n"
+"Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: ../../tutorial/appetite.rst:5
+msgid "Whetting Your Appetite"
+msgstr "Розпалювання апетиту"
+
+#: ../../tutorial/appetite.rst:7
+msgid ""
+"If you do much work on computers, eventually you find that there's some task"
+" you'd like to automate.  For example, you may wish to perform a search-and-"
+"replace over a large number of text files, or rename and rearrange a bunch "
+"of photo files in a complicated way. Perhaps you'd like to write a small "
+"custom database, or a specialized GUI application, or a simple game."
+msgstr ""
+"Якщо ви багато працюєте за комп’ютером, зрештою ви виявите, що є завдання, "
+"які ви хотіли б автоматизувати. Наприклад, ви можете виконати пошук і заміну"
+" у великій кількості текстових файлів або перейменувати та змінити порядок "
+"файлів фотографій у складний спосіб. Можливо, ви захочете написати невелику "
+"спеціальну базу даних, або спеціалізований додаток з графічним інтерфейсом "
+"користувача, або просту гру."
+
+#: ../../tutorial/appetite.rst:13
+msgid ""
+"If you're a professional software developer, you may have to work with "
+"several C/C++/Java libraries but find the usual write/compile/test/re-"
+"compile cycle is too slow.  Perhaps you're writing a test suite for such a "
+"library and find writing the testing code a tedious task.  Or maybe you've "
+"written a program that could use an extension language, and you don't want "
+"to design and implement a whole new language for your application."
+msgstr ""
+"Якщо ви професійний розробник програмного забезпечення, можливо, вам "
+"доведеться працювати з кількома бібліотеками C/C++/Java, але звичайний цикл "
+"запису/компіляції/тестування/повторної компіляції занадто повільний. "
+"Можливо, ви пишете набір тестів для такої бібліотеки і вважаєте написання "
+"тестового коду виснажливим завданням. Або, можливо, ви написали програму, "
+"яка може використовувати мову розширення, і ви не хочете розробляти та "
+"впроваджувати абсолютно нову мову для своєї програми."
+
+#: ../../tutorial/appetite.rst:20
+msgid "Python is just the language for you."
+msgstr "Python — це саме ваша мова."
+
+#: ../../tutorial/appetite.rst:22
+msgid ""
+"You could write a Unix shell script or Windows batch files for some of these"
+" tasks, but shell scripts are best at moving around files and changing text "
+"data, not well-suited for GUI applications or games. You could write a "
+"C/C++/Java program, but it can take a lot of development time to get even a "
+"first-draft program.  Python is simpler to use, available on Windows, macOS,"
+" and Unix operating systems, and will help you get the job done more "
+"quickly."
+msgstr ""
+"Ви можете написати сценарій оболонки Unix або пакетні файли Windows для "
+"деяких із цих завдань, але сценарії оболонки найкраще підходять для "
+"переміщення файлів і зміни текстових даних, не дуже підходять для програм із"
+" графічним інтерфейсом користувача чи ігор. Ви можете написати програму "
+"C/C++/Java, але розробка може зайняти багато часу, щоб отримати навіть першу"
+" чернетку програми. Python простіший у використанні, доступний в операційних"
+" системах Windows, macOS і Unix і допоможе швидше виконувати роботу."
+
+#: ../../tutorial/appetite.rst:29
+msgid ""
+"Python is simple to use, but it is a real programming language, offering "
+"much more structure and support for large programs than shell scripts or "
+"batch files can offer.  On the other hand, Python also offers much more "
+"error checking than C, and, being a *very-high-level language*, it has high-"
+"level data types built in, such as flexible arrays and dictionaries.  "
+"Because of its more general data types Python is applicable to a much larger"
+" problem domain than Awk or even Perl, yet many things are at least as easy "
+"in Python as in those languages."
+msgstr ""
+"Python простий у використанні, але це справжня мова програмування, яка "
+"пропонує набагато більше структури та підтримки для великих програм, ніж "
+"сценарії оболонки або пакетні файли. З іншого боку, Python також пропонує "
+"набагато більше перевірки помилок, ніж C, і, будучи мовою *дуже високого "
+"рівня*, він має вбудовані типи даних високого рівня, такі як гнучкі масиви "
+"та словники. Завдяки більш загальним типам даних Python застосовний до "
+"значно більшої проблемної області, ніж Awk або навіть Perl, але багато речей"
+" у Python принаймні так само прості, як і в цих мовах."
+
+#: ../../tutorial/appetite.rst:37
+msgid ""
+"Python allows you to split your program into modules that can be reused in "
+"other Python programs.  It comes with a large collection of standard modules"
+" that you can use as the basis of your programs --- or as examples to start "
+"learning to program in Python.  Some of these modules provide things like "
+"file I/O, system calls, sockets, and even interfaces to graphical user "
+"interface toolkits like Tk."
+msgstr ""
+"Python дозволяє вам розділити вашу програму на модулі, які можна повторно "
+"використовувати в інших програмах Python. Він постачається з великою "
+"колекцією стандартних модулів, які ви можете використовувати як основу своїх"
+" програм --- або як приклади, щоб розпочати навчання програмуванню на "
+"Python. Деякі з цих модулів надають такі речі, як файловий ввід/вивід, "
+"системні виклики, сокети та навіть інтерфейси для наборів інструментів "
+"графічного інтерфейсу користувача, таких як Tk."
+
+#: ../../tutorial/appetite.rst:44
+msgid ""
+"Python is an interpreted language, which can save you considerable time "
+"during program development because no compilation and linking is necessary."
+"  The interpreter can be used interactively, which makes it easy to "
+"experiment with features of the language, to write throw-away programs, or "
+"to test functions during bottom-up program development. It is also a handy "
+"desk calculator."
+msgstr ""
+"Python — це інтерпретована мова, яка може заощадити вам значний час під час "
+"розробки програми, оскільки не потрібні компіляція та зв’язування. "
+"Інтерпретатор можна використовувати в інтерактивному режимі, що дозволяє "
+"легко експериментувати з особливостями мови, писати одноразові програми або "
+"тестувати функції під час розробки програми знизу вгору. Це також зручний "
+"настільний калькулятор."
+
+#: ../../tutorial/appetite.rst:50
+msgid ""
+"Python enables programs to be written compactly and readably.  Programs "
+"written in Python are typically much shorter than equivalent C,  C++, or "
+"Java programs, for several reasons:"
+msgstr ""
+"Python дозволяє писати програми компактно та зрозуміло. Програми, написані "
+"на Python, зазвичай набагато коротші, ніж еквівалентні програми на C, C++ "
+"або Java, з кількох причин:"
+
+#: ../../tutorial/appetite.rst:54
+msgid ""
+"the high-level data types allow you to express complex operations in a "
+"single statement;"
+msgstr ""
+"типи даних високого рівня дозволяють виражати складні операції в одному "
+"операторі;"
+
+#: ../../tutorial/appetite.rst:57
+msgid ""
+"statement grouping is done by indentation instead of beginning and ending "
+"brackets;"
+msgstr ""
+"групування тверджень здійснюється за допомогою відступів замість початкових "
+"і кінцевих дужок;"
+
+#: ../../tutorial/appetite.rst:60
+msgid "no variable or argument declarations are necessary."
+msgstr "не потрібні оголошення змінних або аргументів."
+
+#: ../../tutorial/appetite.rst:62
+msgid ""
+"Python is *extensible*: if you know how to program in C it is easy to add a "
+"new built-in function or module to the interpreter, either to perform "
+"critical operations at maximum speed, or to link Python programs to "
+"libraries that may only be available in binary form (such as a vendor-"
+"specific graphics library). Once you are really hooked, you can link the "
+"Python interpreter into an application written in C and use it as an "
+"extension or command language for that application."
+msgstr ""
+"Python є *розширюваним*: якщо ви знаєте, як програмувати на C, ви можете "
+"легко додати нову вбудовану функцію чи модуль до інтерпретатора, щоб "
+"виконувати критичні операції з максимальною швидкістю або пов’язувати "
+"програми Python із бібліотеками, які можуть лише бути доступним у двійковій "
+"формі (наприклад, графічна бібліотека виробника). Коли ви справді "
+"захопитеся, ви зможете зв’язати інтерпретатор Python із програмою, написаною"
+" мовою C, і використовувати її як розширення або мову команд для цієї "
+"програми."
+
+#: ../../tutorial/appetite.rst:70
+msgid ""
+"By the way, the language is named after the BBC show \"Monty Python's Flying"
+" Circus\" and has nothing to do with reptiles.  Making references to Monty "
+"Python skits in documentation is not only allowed, it is encouraged!"
+msgstr ""
+"До речі, мова названа на честь шоу BBC \"Летючий цирк Монті Пайтона\" і не "
+"має нічого спільного з рептиліями. Посилання на сценки Monty Python у "
+"документації не тільки дозволено, але й заохочується!"
+
+#: ../../tutorial/appetite.rst:74
+msgid ""
+"Now that you are all excited about Python, you'll want to examine it in some"
+" more detail.  Since the best way to learn a language is to use it, the "
+"tutorial invites you to play with the Python interpreter as you read."
+msgstr ""
+"Тепер, коли ви всі в захваті від Python, ви захочете вивчити його більш "
+"детально. Оскільки найкращий спосіб вивчити мову – це використовувати її, "
+"підручник запрошує вас грати з інтерпретатором Python під час читання."
+
+#: ../../tutorial/appetite.rst:78
+msgid ""
+"In the next chapter, the mechanics of using the interpreter are explained.  "
+"This is rather mundane information, but essential for trying out the "
+"examples shown later."
+msgstr ""
+"У наступному розділі пояснюється механізм використання інтерпретатора. Це "
+"досить повсякденна інформація, але важлива для випробування прикладів, "
+"показаних пізніше."
+
+#: ../../tutorial/appetite.rst:82
+msgid ""
+"The rest of the tutorial introduces various features of the Python language "
+"and system through examples, beginning with simple expressions, statements "
+"and data types, through functions and modules, and finally touching upon "
+"advanced concepts like exceptions and user-defined classes."
+msgstr ""
+"Решта підручника знайомить із різними функціями мови та системи Python через"
+" приклади, починаючи з простих виразів, інструкцій і типів даних, через "
+"функції та модулі, і, нарешті, торкаючись розширених концепцій, таких як "
+"винятки та визначені користувачем класи."
