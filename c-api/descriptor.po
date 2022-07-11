@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 00:48+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Descriptor Objects"
+msgstr "Об'єкти-дескриптори"
+
+msgid ""
+"\"Descriptors\" are objects that describe some attribute of an object. They "
+"are found in the dictionary of type objects."
+msgstr ""
+"\"Дескриптори\" - це об'єкти, які описують деякі атрибути об'єкта. Вони "
+"знаходяться в словнику об'єктів типу."
+
+msgid "The type object for the built-in descriptor types."
+msgstr "Об’єкт типу для вбудованих типів дескрипторів."
+
+msgid ""
+"Return non-zero if the descriptor objects *descr* describes a data "
+"attribute, or ``0`` if it describes a method.  *descr* must be a descriptor "
+"object; there is no error checking."
+msgstr ""
+"Повертає ненульове значення, якщо об’єкти дескриптора *descr* описують "
+"атрибут даних, або ``0``, якщо він описує метод. *descr* має бути об’єктом "
+"дескриптора; немає перевірки помилок."

@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 00:47+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "This Page"
+msgstr "Ця сторінка"
+
+msgid "Report a Bug"
+msgstr "Повідомити про помилку"
+
+msgid "Show Source"
+msgstr "Показати джерело"
+
+msgid "CPython implementation detail:"
+msgstr "Деталі реалізації CPython:"
+
+msgid ""
+"Deprecated since version {deprecated}, will be removed in version {removed}"
+msgstr "Застаріло з версії {deprecated}, буде видалено у версії {removed}"
+
+msgid "Deprecated since version {deprecated}, removed in version {removed}"
+msgstr "Застаріло з версії {deprecated}, видалено у версії {removed}"
+
+msgid "in development"
+msgstr "в розробці"
+
+msgid "pre-release"
+msgstr "попередній випуск"
+
+msgid "stable"
+msgstr "стабільний"
+
+msgid "security-fixes"
+msgstr "виправлення безпеки"
+
+msgid "EOL"
+msgstr "EOL"
+
+msgid "Welcome! This is the official documentation for Python %(release)s."
+msgstr "Ласкаво просимо! Це офіційна документація для Python %(release)s."
+
+msgid "Parts of the documentation:"
+msgstr "Частини документації:"
+
+msgid "What's new in Python %(version)s?"
+msgstr "Що нового в Python %(version)s?"
+
+msgid ""
+"or <a href=\"%(whatsnew_index)s\">all \"What's new\" documents</a> since 2.0"
+msgstr ""
+"або <a href=\"%(whatsnew_index)s\"> усі документи \"Що нового\" </a> "
+"починаючи з 2.0"
+
+msgid "Tutorial"
+msgstr "Підручник"
+
+msgid "start here"
+msgstr "почніть тут"
+
+msgid "Library Reference"
+msgstr "Довідка бібліотеки"
+
+msgid "keep this under your pillow"
+msgstr "тримай це під подушкою"
+
+msgid "Language Reference"
+msgstr "Довідник мови"
+
+msgid "describes syntax and language elements"
+msgstr "описує елементи синтаксису та мови"
+
+msgid "Python Setup and Usage"
+msgstr "Налаштування та використання Python"
+
+msgid "how to use Python on different platforms"
+msgstr "як використовувати Python на різних платформах"
+
+msgid "Python HOWTOs"
+msgstr "Python HOWTO"
+
+msgid "in-depth documents on specific topics"
+msgstr "детальні документи з конкретних тем"
+
+msgid "Installing Python Modules"
+msgstr "Встановлення модулів Python"
+
+msgid "installing from the Python Package Index &amp; other sources"
+msgstr "встановлення з індексу пакетів Python &amp; інших джерел"
+
+msgid "Distributing Python Modules"
+msgstr "Розповсюдження модулів Python"
+
+msgid "publishing modules for installation by others"
+msgstr "модулі публікації для встановлення іншими"
+
+msgid "Extending and Embedding"
+msgstr "Розширення та вбудовування"
+
+msgid "tutorial for C/C++ programmers"
+msgstr "підручник для програмістів C/C++"
+
+msgid "Python/C API"
+msgstr "API Python/C"
+
+msgid "reference for C/C++ programmers"
+msgstr "довідник для програмістів C/C++"
+
+msgid "FAQs"
+msgstr "Поширені запитання"
+
+msgid "frequently asked questions (with answers!)"
+msgstr "поширені запитання (з відповідями!)"
+
+msgid "Indices and tables:"
+msgstr "Індекси та таблиці:"
+
+msgid "Global Module Index"
+msgstr "Глобальний індекс модулів"
+
+msgid "quick access to all modules"
+msgstr "швидкий доступ до всіх модулів"
+
+msgid "General Index"
+msgstr "Загальний покажчик"
+
+msgid "all functions, classes, terms"
+msgstr "всі функції, класи, терміни"
+
+msgid "Glossary"
+msgstr "Глосарій"
+
+msgid "the most important terms explained"
+msgstr "пояснення найважливіших термінів"
+
+msgid "Search page"
+msgstr "Сторінка пошуку"
+
+msgid "search this documentation"
+msgstr "шукайте цю документацію"
+
+msgid "Complete Table of Contents"
+msgstr "Повний зміст"
+
+msgid "lists all sections and subsections"
+msgstr "містить список усіх розділів і підрозділів"
+
+msgid "Meta information:"
+msgstr "Метаінформація:"
+
+msgid "Reporting bugs"
+msgstr "Повідомлення про помилки"
+
+msgid "Contributing to Docs"
+msgstr "Внесок у Документацію"
+
+msgid "About the documentation"
+msgstr "Про документацію"
+
+msgid "History and License of Python"
+msgstr "Історія та ліцензія Python"
+
+msgid "Copyright"
+msgstr "Авторське право"
+
+msgid "Download"
+msgstr "Завантажити"
+
+msgid "Download these documents"
+msgstr "Завантажте ці документи"
+
+msgid "Docs by version"
+msgstr "Документи за версіями"
+
+msgid "Stable"
+msgstr "Стабільний"
+
+msgid "In development"
+msgstr "В розробці"
+
+msgid "All versions"
+msgstr "Всі версії"
+
+msgid "Other resources"
+msgstr "Інші ресурси"
+
+msgid "PEP Index"
+msgstr "Індекс PEP"
+
+msgid "Beginner's Guide"
+msgstr "Посібник для початківців"
+
+msgid "Book List"
+msgstr "Список книг"
+
+msgid "Audio/Visual Talks"
+msgstr "Аудіо/візуальні бесіди"
+
+msgid "Python Developer’s Guide"
+msgstr "Посібник розробника Python"
+
+msgid ""
+"This document is for an old version of Python that is no longer supported.\n"
+"    You should upgrade, and read the "
+msgstr ""
+"Цей документ стосується старої версії Python, яка більше не підтримується.\n"
+"    Ви повинні оновити та прочитати"
+
+msgid " Python documentation for the current stable release"
+msgstr " Документація Python для поточного стабільного релізу"

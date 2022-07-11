@@ -1,0 +1,1141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2022, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Dmytro Kazanzhy, 2022
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 06:28+0000\n"
+"PO-Revision-Date: 2021-06-28 01:50+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
+"uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Configure Python"
+msgstr "Налаштувати Python"
+
+msgid "Configure Options"
+msgstr "Налаштувати параметри"
+
+msgid "List all ``./configure`` script options using::"
+msgstr "Перелічіть усі параметри сценарію ``./configure`` за допомогою::"
+
+msgid ""
+"See also the :file:`Misc/SpecialBuilds.txt` in the Python source "
+"distribution."
+msgstr ""
+"Дивіться також :file:`Misc/SpecialBuilds.txt` у вихідному дистрибутиві "
+"Python."
+
+msgid "General Options"
+msgstr "Загальні параметри"
+
+msgid ""
+"Support loadable extensions in the :mod:`_sqlite` extension module (default "
+"is no)."
+msgstr ""
+"Підтримка завантажуваних розширень у модулі розширення :mod:`_sqlite` (за "
+"замовчуванням ні)."
+
+msgid ""
+"See the :meth:`sqlite3.Connection.enable_load_extension` method of the :mod:"
+"`sqlite3` module."
+msgstr ""
+"Перегляньте метод :meth:`sqlite3.Connection.enable_load_extension` модуля :"
+"mod:`sqlite3`."
+
+msgid ""
+"Disable IPv6 support (enabled by default if supported), see the :mod:"
+"`socket` module."
+msgstr ""
+"Вимкніть підтримку IPv6 (увімкнено за замовчуванням, якщо підтримується), "
+"перегляньте модуль :mod:`socket`."
+
+msgid "Define the size in bits of Python :class:`int` digits: 15 or 30 bits."
+msgstr "Визначте розмір у бітах цифр Python :class:`int`: 15 або 30 біт."
+
+msgid ""
+"By default, the number of bits is selected depending on ``sizeof(void*)``: "
+"30 bits if ``void*`` size is 64-bit or larger, 15 bits otherwise."
+msgstr ""
+
+msgid "Define the ``PYLONG_BITS_IN_DIGIT`` to ``15`` or ``30``."
+msgstr "Визначте ``PYLONG_BITS_IN_DIGIT`` як ``15`` або ``30``."
+
+msgid "See :data:`sys.int_info.bits_per_digit <sys.int_info>`."
+msgstr "Див. :data:`sys.int_info.bits_per_digit <sys.int_info>`."
+
+msgid ""
+"Compile the Python ``main()`` function and link Python executable with C++ "
+"compiler: ``$CXX``, or *COMPILER* if specified."
+msgstr ""
+"Скомпілюйте функцію ``main()`` Python і зв’яжіть виконуваний файл Python із "
+"компілятором C++: ``$CXX`` або *COMPILER*, якщо вказано."
+
+msgid "Set the Python executable suffix to *SUFFIX*."
+msgstr "Установіть для виконуваного файлу Python суфікс *SUFFIX*."
+
+msgid ""
+"The default suffix is ``.exe`` on Windows and macOS (``python.exe`` "
+"executable), and an empty string on other platforms (``python`` executable)."
+msgstr ""
+
+msgid ""
+"Select the default time zone search path for :data:`zoneinfo.TZPATH`. See "
+"the :ref:`Compile-time configuration <zoneinfo_data_compile_time_config>` of "
+"the :mod:`zoneinfo` module."
+msgstr ""
+"Виберіть шлях пошуку часового поясу за умовчанням для :data:`zoneinfo."
+"TZPATH`. Перегляньте :ref:`конфігурацію під час компіляції "
+"<zoneinfo_data_compile_time_config>` модуля :mod:`zoneinfo`."
+
+msgid ""
+"Default: ``/usr/share/zoneinfo:/usr/lib/zoneinfo:/usr/share/lib/zoneinfo:/"
+"etc/zoneinfo``."
+msgstr ""
+"За замовчуванням: ``/usr/share/zoneinfo:/usr/lib/zoneinfo:/usr/share/lib/"
+"zoneinfo:/etc/zoneinfo``."
+
+msgid "See :data:`os.pathsep` path separator."
+msgstr "Дивіться роздільник шляхів :data:`os.pathsep`."
+
+msgid ""
+"Build the ``_decimal`` extension module using a thread-local context rather "
+"than a coroutine-local context (default), see the :mod:`decimal` module."
+msgstr ""
+"Створіть модуль розширення ``_decimal``, використовуючи локальний контекст "
+"потоку, а не локальний контекст співпрограми (за замовчуванням), дивіться "
+"модуль :mod:`decimal`."
+
+msgid "See :data:`decimal.HAVE_CONTEXTVAR` and the :mod:`contextvars` module."
+msgstr ""
+"Перегляньте :data:`decimal.HAVE_CONTEXTVAR` і модуль :mod:`contextvars`."
+
+msgid "Override order to check db backends for the :mod:`dbm` module"
+msgstr ""
+"Порядок перевизначення, щоб перевірити серверні частини бази даних для "
+"модуля :mod:`dbm`"
+
+msgid ""
+"A valid value is a colon (``:``) separated string with the backend names:"
+msgstr ""
+"Дійсним значенням є розділений двокрапкою (``:``) рядок із іменами серверної "
+"частини:"
+
+msgid "``ndbm``;"
+msgstr "``ndbm``;"
+
+msgid "``gdbm``;"
+msgstr "``gdbm``;"
+
+msgid "``bdb``."
+msgstr "``bdb``."
+
+msgid "Disable C locale coercion to a UTF-8 based locale (enabled by default)."
+msgstr ""
+"Вимкнути приведення локалі C до локалі на основі UTF-8 (увімкнено за "
+"умовчанням)."
+
+msgid "Don't define the ``PY_COERCE_C_LOCALE`` macro."
+msgstr "Не визначайте макрос ``PY_COERCE_C_LOCALE``."
+
+msgid "See :envvar:`PYTHONCOERCECLOCALE` and the :pep:`538`."
+msgstr "Перегляньте :envvar:`PYTHONCOERCECLOCALE` і :pep:`538`."
+
+msgid "Python library directory name (default is ``lib``)."
+msgstr "Ім’я каталогу бібліотеки Python (за замовчуванням – ``lib``)."
+
+msgid "Fedora and SuSE use ``lib64`` on 64-bit platforms."
+msgstr "Fedora та SuSE використовують ``lib64`` на 64-розрядних платформах."
+
+msgid "See :data:`sys.platlibdir`."
+msgstr "Перегляньте :data:`sys.platlibdir`."
+
+msgid ""
+"Directory of wheel packages used by the :mod:`ensurepip` module (none by "
+"default)."
+msgstr ""
+"Каталог пакетів коліс, які використовуються модулем :mod:`ensurepip` (за "
+"умовчанням немає)."
+
+msgid ""
+"Some Linux distribution packaging policies recommend against bundling "
+"dependencies. For example, Fedora installs wheel packages in the ``/usr/"
+"share/python-wheels/`` directory and don't install the :mod:`ensurepip."
+"_bundled` package."
+msgstr ""
+"Деякі політики упаковки дистрибутивів Linux рекомендують не об’єднувати "
+"залежності. Наприклад, Fedora встановлює пакунки коліс у каталог ``/usr/"
+"share/python-wheels/`` і не встановлює пакунок :mod:`ensurepip._bundled`."
+
+msgid "Install Options"
+msgstr "Параметри встановлення"
+
+msgid ""
+"Don't build nor install test modules, like the :mod:`test` package or the :"
+"mod:`_testcapi` extension module (built and installed by default)."
+msgstr ""
+"Не створюйте та не встановлюйте тестові модулі, наприклад пакет :mod:`test` "
+"або модуль розширення :mod:`_testcapi` (створений і встановлений за "
+"замовчуванням)."
+
+msgid "Select the :mod:`ensurepip` command run on Python installation:"
+msgstr ""
+"Виберіть команду :mod:`ensurepip`, запущену під час встановлення Python:"
+
+msgid ""
+"``upgrade`` (default): run ``python -m ensurepip --altinstall --upgrade`` "
+"command."
+msgstr ""
+"``оновлення`` (за замовчуванням): запустіть команду ``python -m securepip --"
+"altinstall --upgrade``."
+
+msgid "``install``: run ``python -m ensurepip --altinstall`` command;"
+msgstr ""
+"``встановити``: запустіть команду ``python -m securepip --altinstall``;"
+
+msgid "``no``: don't run ensurepip;"
+msgstr "``ні``: не запускати securepip;"
+
+msgid "Performance options"
+msgstr "Параметри виконання"
+
+msgid ""
+"Configuring Python using ``--enable-optimizations --with-lto`` (PGO + LTO) "
+"is recommended for best performance."
+msgstr ""
+"Для найкращої продуктивності рекомендується налаштувати Python за допомогою "
+"``--enable-optimizations --with-lto`` (PGO + LTO)."
+
+msgid ""
+"Enable Profile Guided Optimization (PGO) using :envvar:`PROFILE_TASK` "
+"(disabled by default)."
+msgstr ""
+"Увімкніть керовану оптимізацію профілю (PGO) за допомогою :envvar:"
+"`PROFILE_TASK` (вимкнено за умовчанням)."
+
+msgid ""
+"The C compiler Clang requires ``llvm-profdata`` program for PGO. On macOS, "
+"GCC also requires it: GCC is just an alias to Clang on macOS."
+msgstr ""
+"Компілятор C Clang вимагає програми ``llvm-profdata`` для PGO. У macOS GCC "
+"також вимагає цього: GCC — це просто псевдонім Clang у macOS."
+
+msgid ""
+"Disable also semantic interposition in libpython if ``--enable-shared`` and "
+"GCC is used: add ``-fno-semantic-interposition`` to the compiler and linker "
+"flags."
+msgstr ""
+"Вимкніть також семантичне вставлення в libpython, якщо ``--enable-shared`` і "
+"GCC використовуються: додайте ``-fno-semantic-interposition`` до позначок "
+"компілятора та компонувальника."
+
+msgid "Use ``-fno-semantic-interposition`` on GCC."
+msgstr "Використовуйте ``-fno-semantic-interposition`` на GCC."
+
+msgid ""
+"Environment variable used in the Makefile: Python command line arguments for "
+"the PGO generation task."
+msgstr ""
+"Змінна середовища, яка використовується в Makefile: аргументи командного "
+"рядка Python для завдання створення PGO."
+
+msgid "Default: ``-m test --pgo --timeout=$(TESTTIMEOUT)``."
+msgstr "За замовчуванням: ``-m test --pgo --timeout=$(TESTTIMEOUT)``."
+
+msgid "Enable Link Time Optimization (LTO) in any build (disabled by default)."
+msgstr ""
+"Увімкніть оптимізацію часу підключення (LTO) у будь-якій збірці (за "
+"умовчанням вимкнено)."
+
+msgid ""
+"The C compiler Clang requires ``llvm-ar`` for LTO (``ar`` on macOS), as well "
+"as an LTO-aware linker (``ld.gold`` or ``lld``)."
+msgstr ""
+"Для компілятора C Clang потрібен ``llvm-ar`` для LTO (``ar`` для macOS), а "
+"також компонувальник, що підтримує LTO (``ld.gold`` або ``lld``)."
+
+msgid ""
+"Enable computed gotos in evaluation loop (enabled by default on supported "
+"compilers)."
+msgstr ""
+"Увімкнути обчислені gotos у циклі оцінки (увімкнено за замовчуванням у "
+"підтримуваних компіляторах)."
+
+msgid ""
+"Disable the specialized Python memory allocator :ref:`pymalloc <pymalloc>` "
+"(enabled by default)."
+msgstr ""
+"Вимкніть спеціалізований розподільник пам’яті Python :ref:`pymalloc "
+"<pymalloc>` (увімкнено за замовчуванням)."
+
+msgid "See also :envvar:`PYTHONMALLOC` environment variable."
+msgstr "Дивіться також змінну середовища :envvar:`PYTHONMALLOC`."
+
+msgid ""
+"Disable static documentation strings to reduce the memory footprint (enabled "
+"by default). Documentation strings defined in Python are not affected."
+msgstr ""
+"Вимкніть статичні рядки документації, щоб зменшити обсяг пам’яті (увімкнено "
+"за замовчуванням). Це не впливає на рядки документації, визначені в Python."
+
+msgid "Don't define the ``WITH_DOC_STRINGS`` macro."
+msgstr "Не визначайте макрос ``WITH_DOC_STRINGS``."
+
+msgid "See the ``PyDoc_STRVAR()`` macro."
+msgstr "Перегляньте макрос ``PyDoc_STRVAR()``."
+
+msgid "Enable C-level code profiling with ``gprof`` (disabled by default)."
+msgstr ""
+"Увімкніть профілювання коду рівня C за допомогою ``gprof`` (вимкнено за "
+"умовчанням)."
+
+msgid "Python Debug Build"
+msgstr "Збірка налагодження Python"
+
+msgid ""
+"A debug build is Python built with the :option:`--with-pydebug` configure "
+"option."
+msgstr ""
+"Збірка для налагодження — це Python, створений із параметром налаштування :"
+"option:`--with-pydebug`."
+
+msgid "Effects of a debug build:"
+msgstr "Наслідки збірки налагодження:"
+
+msgid ""
+"Display all warnings by default: the list of default warning filters is "
+"empty in the :mod:`warnings` module."
+msgstr ""
+"Відображати всі попередження за замовчуванням: список стандартних фільтрів "
+"попереджень порожній у модулі :mod:`warnings`."
+
+msgid "Add ``d`` to :data:`sys.abiflags`."
+msgstr "Додайте ``d`` до :data:`sys.abiflags`."
+
+msgid "Add :func:`sys.gettotalrefcount` function."
+msgstr "Додайте функцію :func:`sys.gettotalrefcount`."
+
+msgid "Add :option:`-X showrefcount <-X>` command line option."
+msgstr "Додайте параметр командного рядка :option:`-X showrefcount <-X>`."
+
+msgid "Add :envvar:`PYTHONTHREADDEBUG` environment variable."
+msgstr "Додайте змінну середовища :envvar:`PYTHONTHREADDEBUG`."
+
+msgid ""
+"Add support for the ``__ltrace__`` variable: enable low-level tracing in the "
+"bytecode evaluation loop if the variable is defined."
+msgstr ""
+
+msgid ""
+"Install :ref:`debug hooks on memory allocators <default-memory-allocators>` "
+"to detect buffer overflow and other memory errors."
+msgstr ""
+"Встановіть :ref:`debug хуки на розподільники пам’яті <default-memory-"
+"allocators>`, щоб виявити переповнення буфера та інші помилки пам’яті."
+
+msgid "Define ``Py_DEBUG`` and ``Py_REF_DEBUG`` macros."
+msgstr "Визначте макроси ``Py_DEBUG`` і ``Py_REF_DEBUG``."
+
+msgid ""
+"Add runtime checks: code surroundeded by ``#ifdef Py_DEBUG`` and ``#endif``. "
+"Enable ``assert(...)`` and ``_PyObject_ASSERT(...)`` assertions: don't set "
+"the ``NDEBUG`` macro (see also the :option:`--with-assertions` configure "
+"option). Main runtime checks:"
+msgstr ""
+
+msgid "Add sanity checks on the function arguments."
+msgstr "Додайте перевірку правильності аргументів функції."
+
+msgid ""
+"Unicode and int objects are created with their memory filled with a pattern "
+"to detect usage of uninitialized objects."
+msgstr ""
+"Об’єкти Unicode та int створюються з пам’яттю, заповненою шаблоном для "
+"виявлення використання неініціалізованих об’єктів."
+
+msgid ""
+"Ensure that functions which can clear or replace the current exception are "
+"not called with an exception raised."
+msgstr ""
+"Переконайтеся, що функції, які можуть очистити або замінити поточний "
+"виняток, не викликаються з викликом виключення."
+
+msgid ""
+"The garbage collector (:func:`gc.collect` function) runs some basic checks "
+"on objects consistency."
+msgstr ""
+"Збирач сміття (:func:`gc.collect` функція) запускає деякі базові перевірки "
+"узгодженості об’єктів."
+
+msgid ""
+"The :c:macro:`Py_SAFE_DOWNCAST()` macro checks for integer underflow and "
+"overflow when downcasting from wide types to narrow types."
+msgstr ""
+"Макрос :c:macro:`Py_SAFE_DOWNCAST()` перевіряє цілочисельне переповнення та "
+"переповнення під час переходу від широких типів до вузьких."
+
+msgid ""
+"See also the :ref:`Python Development Mode <devmode>` and the :option:`--"
+"with-trace-refs` configure option."
+msgstr ""
+"Дивіться також :ref:`Режим розробки Python <devmode>` і параметр "
+"налаштування :option:`--with-trace-refs`."
+
+msgid ""
+"Release builds and debug builds are now ABI compatible: defining the "
+"``Py_DEBUG`` macro no longer implies the ``Py_TRACE_REFS`` macro (see the :"
+"option:`--with-trace-refs` option), which introduces the only ABI "
+"incompatibility."
+msgstr ""
+"Збірки випусків і збірки для налагодження тепер сумісні з ABI: визначення "
+"макросу ``Py_DEBUG`` більше не передбачає макрос ``Py_TRACE_REFS`` (див. "
+"параметр :option:`--with-trace-refs`), який вводить єдиний Несумісність ABI."
+
+msgid "Debug options"
+msgstr "Параметри налагодження"
+
+msgid ""
+":ref:`Build Python in debug mode <debug-build>`: define the ``Py_DEBUG`` "
+"macro (disabled by default)."
+msgstr ""
+":ref:`Збірка Python у режимі налагодження <debug-build>`: визначте макрос "
+"``Py_DEBUG`` (вимкнено за замовчуванням)."
+
+msgid "Enable tracing references for debugging purpose (disabled by default)."
+msgstr ""
+"Увімкнути посилання на трасування для налагодження (вимкнено за умовчанням)."
+
+msgid "Effects:"
+msgstr "Ефекти:"
+
+msgid "Define the ``Py_TRACE_REFS`` macro."
+msgstr "Визначте макрос ``Py_TRACE_REFS``."
+
+msgid "Add :func:`sys.getobjects` function."
+msgstr "Додайте функцію :func:`sys.getobjects`."
+
+msgid "Add :envvar:`PYTHONDUMPREFS` environment variable."
+msgstr "Додайте змінну середовища :envvar:`PYTHONDUMPREFS`."
+
+msgid ""
+"This build is not ABI compatible with release build (default build) or debug "
+"build (``Py_DEBUG`` and ``Py_REF_DEBUG`` macros)."
+msgstr ""
+"Ця збірка не сумісна з ABI зі збіркою випуску (складання за замовчуванням) "
+"або збіркою налагодження (макроси ``Py_DEBUG`` і ``Py_REF_DEBUG``)."
+
+msgid ""
+"Build with C assertions enabled (default is no): ``assert(...);`` and "
+"``_PyObject_ASSERT(...);``."
+msgstr ""
+"Збірка з увімкненими твердженнями C (за замовчуванням ні): ``assert(...);`` "
+"і ``_PyObject_ASSERT(...);``."
+
+msgid ""
+"If set, the ``NDEBUG`` macro is not defined in the :envvar:`OPT` compiler "
+"variable."
+msgstr ""
+"Якщо встановлено, макрос ``NDEBUG`` не визначено в змінній компілятора :"
+"envvar:`OPT`."
+
+msgid ""
+"See also the :option:`--with-pydebug` option (:ref:`debug build <debug-"
+"build>`) which also enables assertions."
+msgstr ""
+"Дивіться також опцію :option:`--with-pydebug` (:ref:`debug build <debug-"
+"build>`), яка також вмикає твердження."
+
+msgid "Enable Valgrind support (default is no)."
+msgstr "Увімкнути підтримку Valgrind (за замовчуванням ні)."
+
+msgid "Enable DTrace support (default is no)."
+msgstr "Увімкнути підтримку DTrace (за замовчуванням ні)."
+
+msgid ""
+"See :ref:`Instrumenting CPython with DTrace and SystemTap <instrumentation>`."
+msgstr ""
+"Перегляньте :ref:`Інструментування CPython за допомогою DTrace і SystemTap "
+"<instrumentation>`."
+
+msgid ""
+"Enable AddressSanitizer memory error detector, ``asan`` (default is no)."
+msgstr ""
+"Увімкнути детектор помилок пам’яті AddressSanitizer, ``asan`` (за умовчанням "
+"ні)."
+
+msgid ""
+"Enable MemorySanitizer allocation error detector, ``msan`` (default is no)."
+msgstr ""
+"Увімкнути детектор помилок розподілу MemorySanitizer, ``msan`` (за "
+"умовчанням ні)."
+
+msgid ""
+"Enable UndefinedBehaviorSanitizer undefined behaviour detector, ``ubsan`` "
+"(default is no)."
+msgstr ""
+"Увімкнути невизначений детектор поведінки UndefinedBehaviorSanitizer, "
+"``ubsan`` (за умовчанням ні)."
+
+msgid "Linker options"
+msgstr "Параметри компонувальника"
+
+msgid "Enable building a shared Python library: ``libpython`` (default is no)."
+msgstr ""
+"Увімкнути створення спільної бібліотеки Python: ``libpython`` (за "
+"замовчуванням ні)."
+
+msgid ""
+"Do not build ``libpythonMAJOR.MINOR.a`` and do not install ``python.o`` "
+"(built and enabled by default)."
+msgstr ""
+"Не створюйте ``libpythonMAJOR.MINOR.a`` і не встановлюйте ``python.o`` "
+"(зібрано та ввімкнено за замовчуванням)."
+
+msgid "Libraries options"
+msgstr "Параметри бібліотек"
+
+msgid "Link against additional libraries (default is no)."
+msgstr "Посилання на додаткові бібліотеки (за замовчуванням ні)."
+
+msgid ""
+"Build the :mod:`pyexpat` module using an installed ``expat`` library "
+"(default is no)."
+msgstr ""
+"Зберіть модуль :mod:`pyexpat` за допомогою встановленої бібліотеки ``expat`` "
+"(за замовчуванням ні)."
+
+msgid ""
+"Build the :mod:`_ctypes` extension module using an installed ``ffi`` "
+"library, see the :mod:`ctypes` module (default is system-dependent)."
+msgstr ""
+"Створіть модуль розширення :mod:`_ctypes` за допомогою встановленої "
+"бібліотеки ``ffi``, дивіться модуль :mod:`ctypes` (за замовчуванням залежить "
+"від системи)."
+
+msgid ""
+"Build the ``_decimal`` extension module using an installed ``mpdec`` "
+"library, see the :mod:`decimal` module (default is no)."
+msgstr ""
+"Створіть модуль розширення ``_decimal`` за допомогою встановленої бібліотеки "
+"``mpdec``, дивіться модуль :mod:`decimal` (за замовчуванням ні)."
+
+msgid "Use ``editline`` library for backend of the :mod:`readline` module."
+msgstr ""
+"Використовуйте бібліотеку ``editline`` для серверної частини модуля :mod:"
+"`readline`."
+
+msgid "Define the ``WITH_EDITLINE`` macro."
+msgstr "Визначте макрос ``WITH_EDITLINE``."
+
+msgid "Don't build the :mod:`readline` module (built by default)."
+msgstr "Не створюйте модуль :mod:`readline` (створено за замовчуванням)."
+
+msgid "Don't define the ``HAVE_LIBREADLINE`` macro."
+msgstr "Не визначайте макрос ``HAVE_LIBREADLINE``."
+
+msgid "Override search for Tcl and Tk include files."
+msgstr ""
+
+msgid "Override search for Tcl and Tk libraries."
+msgstr ""
+
+msgid ""
+"Override ``libm`` math library to *STRING* (default is system-dependent)."
+msgstr ""
+"Замінити математичну бібліотеку ``libm`` на *STRING* (за замовчуванням "
+"залежить від системи)."
+
+msgid "Override ``libc`` C library to *STRING* (default is system-dependent)."
+msgstr ""
+"Замінити бібліотеку C ``libc`` на *STRING* (за замовчуванням залежить від "
+"системи)."
+
+msgid "Root of the OpenSSL directory."
+msgstr "Корінь каталогу OpenSSL."
+
+msgid "Set runtime library directory (rpath) for OpenSSL libraries:"
+msgstr ""
+"Встановити каталог бібліотеки середовища виконання (rpath) для бібліотек "
+"OpenSSL:"
+
+msgid "``no`` (default): don't set rpath;"
+msgstr "``ні`` (за замовчуванням): не встановлювати rpath;"
+
+msgid ""
+"``auto``: auto-detect rpath from :option:`--with-openssl` and ``pkg-config``;"
+msgstr ""
+"``auto``: автоматичне визначення rpath з :option:`--with-openssl` і ``pkg-"
+"config``;"
+
+msgid "*DIR*: set an explicit rpath."
+msgstr "*DIR*: встановити явний rpath."
+
+msgid "Security Options"
+msgstr "Параметри безпеки"
+
+msgid "Select hash algorithm for use in ``Python/pyhash.c``:"
+msgstr "Виберіть алгоритм хешування для використання в ``Python/pyhash.c``:"
+
+msgid "``siphash24`` (default)."
+msgstr ""
+
+msgid "``fnv``;"
+msgstr ""
+
+msgid "Built-in hash modules:"
+msgstr "Вбудовані хеш-модулі:"
+
+msgid "``md5``;"
+msgstr "``md5``;"
+
+msgid "``sha1``;"
+msgstr "``sha1``;"
+
+msgid "``sha256``;"
+msgstr "``sha256``;"
+
+msgid "``sha512``;"
+msgstr "``sha512``;"
+
+msgid "``sha3`` (with shake);"
+msgstr "``sha3`` (зі струшуванням);"
+
+msgid "``blake2``."
+msgstr "``blake2``."
+
+msgid "Override the OpenSSL default cipher suites string:"
+msgstr "Перевизначте стандартний рядок наборів шифрів OpenSSL:"
+
+msgid "``python`` (default): use Python's preferred selection;"
+msgstr ""
+"``python`` (за замовчуванням): використовувати пріоритетний вибір Python;"
+
+msgid "``openssl``: leave OpenSSL's defaults untouched;"
+msgstr "``openssl``: залишити стандартні параметри OpenSSL без змін;"
+
+msgid "*STRING*: use a custom string"
+msgstr "*STRING*: використовуйте спеціальний рядок"
+
+msgid "See the :mod:`ssl` module."
+msgstr "Перегляньте модуль :mod:`ssl`."
+
+msgid ""
+"The settings ``python`` and *STRING* also set TLS 1.2 as minimum protocol "
+"version."
+msgstr ""
+"Налаштування ``python`` і *STRING* також встановлюють TLS 1.2 як мінімальну "
+"версію протоколу."
+
+msgid "macOS Options"
+msgstr "Параметри macOS"
+
+msgid "See ``Mac/README.rst``."
+msgstr "Перегляньте ``Mac/README.rst``."
+
+msgid ""
+"Create a universal binary build. *SDKDIR* specifies which macOS SDK should "
+"be used to perform the build (default is no)."
+msgstr ""
+"Створіть універсальну двійкову збірку. *SDKDIR* визначає, який macOS SDK "
+"слід використовувати для виконання збірки (за замовчуванням ні)."
+
+msgid ""
+"Create a Python.framework rather than a traditional Unix install. Optional "
+"*INSTALLDIR* specifies the installation path (default is no)."
+msgstr ""
+"Створіть Python.framework замість традиційної інсталяції Unix. Додатково "
+"*INSTALLDIR* визначає шлях інсталяції (за замовчуванням ні)."
+
+msgid ""
+"Specify the kind of universal binary that should be created. This option is "
+"only valid when :option:`--enable-universalsdk` is set."
+msgstr ""
+"Укажіть тип універсального двійкового файлу, який потрібно створити. Цей "
+"параметр дійсний, лише якщо встановлено :option:`--enable-universalsdk`."
+
+msgid "Options:"
+msgstr "Опції:"
+
+msgid "``universal2``;"
+msgstr "``універсальний2``;"
+
+msgid "``32-bit``;"
+msgstr "``32-розрядний``;"
+
+msgid "``64-bit``;"
+msgstr "``64-розрядний``;"
+
+msgid "``3-way``;"
+msgstr "``3-сторонній``;"
+
+msgid "``intel``;"
+msgstr "``intel``;"
+
+msgid "``intel-32``;"
+msgstr "``intel-32``;"
+
+msgid "``intel-64``;"
+msgstr "``intel-64``;"
+
+msgid "``all``."
+msgstr "``все``."
+
+msgid ""
+"Specify the name for the python framework on macOS only valid when :option:"
+"`--enable-framework` is set (default: ``Python``)."
+msgstr ""
+"Укажіть назву для фреймворку python у macOS, дійсну лише тоді, коли "
+"встановлено :option:`--enable-framework` (за замовчуванням: ``Python``)."
+
+msgid "Python Build System"
+msgstr "Система збірки Python"
+
+msgid "Main files of the build system"
+msgstr "Основні файли системи збірки"
+
+msgid ":file:`configure.ac` => :file:`configure`;"
+msgstr ":file:`configure.ac` => :file:`configure`;"
+
+msgid ""
+":file:`Makefile.pre.in` => :file:`Makefile` (created by :file:`configure`);"
+msgstr ""
+":file:`Makefile.pre.in` => :file:`Makefile` (створений :file:`configure`);"
+
+msgid ":file:`pyconfig.h` (created by :file:`configure`);"
+msgstr ":file:`pyconfig.h` (створений :file:`configure`);"
+
+msgid ""
+":file:`Modules/Setup`: C extensions built by the Makefile using :file:"
+"`Module/makesetup` shell script;"
+msgstr ""
+":file:`Modules/Setup`: розширення C, створені Makefile за допомогою сценарію "
+"оболонки :file:`Module/makesetup`;"
+
+msgid ":file:`setup.py`: C extensions built using the :mod:`distutils` module."
+msgstr ""
+":file:`setup.py`: розширення C, створені за допомогою модуля :mod:"
+"`distutils`."
+
+msgid "Main build steps"
+msgstr "Основні етапи побудови"
+
+msgid "C files (``.c``) are built as object files (``.o``)."
+msgstr "Файли C (``.c``) створюються як об’єктні файли (``.o``)."
+
+msgid "A static ``libpython`` library (``.a``) is created from objects files."
+msgstr "Статична бібліотека libpython (``.a``) створюється з файлів об’єктів."
+
+msgid ""
+"``python.o`` and the static ``libpython`` library are linked into the final "
+"``python`` program."
+msgstr ""
+"``python.o`` і статична бібліотека ``libpython`` пов’язані в остаточну "
+"програму ``python``."
+
+msgid ""
+"C extensions are built by the Makefile (see :file:`Modules/Setup`) and "
+"``python setup.py build``."
+msgstr ""
+"Розширення C створено за допомогою Makefile (див. :file:`Modules/Setup`) і "
+"``python setup.py build``."
+
+msgid "Main Makefile targets"
+msgstr "Основні цілі Makefile"
+
+msgid "``make``: Build Python with the standard library."
+msgstr "``make``: Збірка Python зі стандартною бібліотекою."
+
+msgid ""
+"``make platform:``: build the ``python`` program, but don't build the "
+"standard library extension modules."
+msgstr ""
+"``make platform:``: створіть програму ``python``, але не створюйте "
+"стандартні модулі розширення бібліотеки."
+
+msgid ""
+"``make profile-opt``: build Python using Profile Guided Optimization (PGO). "
+"You can use the configure :option:`--enable-optimizations` option to make "
+"this the default target of the ``make`` command (``make all`` or just "
+"``make``)."
+msgstr ""
+"``make profile-opt``: створіть Python за допомогою Керованої оптимізації "
+"профілю (PGO). Ви можете використати опцію configure :option:`--enable-"
+"optimizations`, щоб зробити це типовим цільовою командою ``make`` (``make "
+"all`` або лише ``make``)."
+
+msgid ""
+"``make buildbottest``: Build Python and run the Python test suite, the same "
+"way than buildbots test Python. Set ``TESTTIMEOUT`` variable (in seconds) to "
+"change the test timeout (1200 by default: 20 minutes)."
+msgstr ""
+"``make buildbottest``: створіть Python і запустіть набір тестів Python так "
+"само, як buildbots тестують Python. Встановіть змінну ``TESTTIMEOUT`` (у "
+"секундах), щоб змінити час очікування тесту (1200 за замовчуванням: 20 "
+"хвилин)."
+
+msgid "``make install``: Build and install Python."
+msgstr "``make install``: Створення та встановлення Python."
+
+msgid ""
+"``make regen-all``: Regenerate (almost) all generated files; ``make regen-"
+"stdlib-module-names`` and ``autoconf`` must be run separately for the "
+"remaining generated files."
+msgstr ""
+"``make regen-all``: повторно генерувати (майже) всі згенеровані файли; "
+"``make regen-stdlib-module-names`` і ``autoconf`` потрібно запускати окремо "
+"для решти згенерованих файлів."
+
+msgid "``make clean``: Remove built files."
+msgstr "``make clean``: Видалити зібрані файли."
+
+msgid ""
+"``make distclean``: Same than ``make clean``, but remove also files created "
+"by the configure script."
+msgstr ""
+"``make distclean``: Те саме, що ``make clean``, але також видаляє файли, "
+"створені сценарієм конфігурації."
+
+msgid "C extensions"
+msgstr "C розширення"
+
+msgid ""
+"Some C extensions are built as built-in modules, like the ``sys`` module. "
+"They are built with the ``Py_BUILD_CORE_BUILTIN`` macro defined. Built-in "
+"modules have no ``__file__`` attribute::"
+msgstr ""
+"Деякі розширення C створено як вбудовані модулі, як-от модуль ``sys``. Вони "
+"створені за допомогою визначеного макросу ``Py_BUILD_CORE_BUILTIN``. "
+"Вбудовані модулі не мають атрибута ``__file__``::"
+
+msgid ""
+"Other C extensins are built as dynamic libraries, like the ``_asyncio`` "
+"module. They are built with the ``Py_BUILD_CORE_MODULE`` macro defined. "
+"Example on Linux x86-64::"
+msgstr ""
+
+msgid ""
+":file:`Modules/Setup` is used to generate Makefile targets to build C "
+"extensions. At the beginning of the files, C extensions are built as built-"
+"in modules. Extensions defined after the ``*shared*`` marker are built as "
+"dynamic libraries."
+msgstr ""
+":file:`Modules/Setup` використовується для створення цілей Makefile для "
+"створення розширень C. На початку файлів розширення C побудовані як "
+"вбудовані модулі. Розширення, визначені після маркера ``*shared*``, "
+"будуються як динамічні бібліотеки."
+
+msgid ""
+"The :file:`setup.py` script only builds C extensions as shared libraries "
+"using the :mod:`distutils` module."
+msgstr ""
+"Сценарій :file:`setup.py` створює лише розширення C як спільні бібліотеки за "
+"допомогою модуля :mod:`distutils`."
+
+msgid ""
+"The :c:macro:`PyAPI_FUNC()`, :c:macro:`PyAPI_API()` and :c:macro:"
+"`PyMODINIT_FUNC()` macros of :file:`Include/pyport.h` are defined "
+"differently depending if the ``Py_BUILD_CORE_MODULE`` macro is defined:"
+msgstr ""
+"Макроси :c:macro:`PyAPI_FUNC()`, :c:macro:`PyAPI_API()` та :c:macro:"
+"`PyMODINIT_FUNC()` :file:`Include/pyport.h` визначаються по-різному залежно "
+"від того, чи визначено макрос ``Py_BUILD_CORE_MODULE``:"
+
+msgid "Use ``Py_EXPORTED_SYMBOL`` if the ``Py_BUILD_CORE_MODULE`` is defined"
+msgstr ""
+"Використовуйте ``Py_EXPORTED_SYMBOL``, якщо ``Py_BUILD_CORE_MODULE`` "
+"визначено"
+
+msgid "Use ``Py_IMPORTED_SYMBOL`` otherwise."
+msgstr "В іншому випадку використовуйте ``Py_IMPORTED_SYMBOL``."
+
+msgid ""
+"If the ``Py_BUILD_CORE_BUILTIN`` macro is used by mistake on a C extension "
+"built as a shared library, its ``PyInit_xxx()`` function is not exported, "
+"causing an :exc:`ImportError` on import."
+msgstr ""
+"Якщо макрос ``Py_BUILD_CORE_BUILTIN`` використовується помилково в "
+"розширенні C, створеному як спільна бібліотека, його функція "
+"``PyInit_xxx()`` не експортується, що спричиняє :exc:`ImportError` під час "
+"імпорту."
+
+msgid "Compiler and linker flags"
+msgstr "Прапори компілятора та компонувальника"
+
+msgid ""
+"Options set by the ``./configure`` script and environment variables and used "
+"by ``Makefile``."
+msgstr ""
+"Параметри, встановлені сценарієм ``./configure`` і змінними середовища та "
+"використовуються ``Makefile``."
+
+msgid "Preprocessor flags"
+msgstr "Прапори препроцесора"
+
+msgid ""
+"Value of :envvar:`CPPFLAGS` variable passed to the ``./configure`` script."
+msgstr ""
+"Значення змінної :envvar:`CPPFLAGS` передається до сценарію ``./configure``."
+
+msgid ""
+"(Objective) C/C++ preprocessor flags, e.g. ``-I<include dir>`` if you have "
+"headers in a nonstandard directory ``<include dir>``."
+msgstr ""
+"(Мета) Прапори препроцесора C/C++, напр. ``-I <include dir>``, якщо у вас є "
+"заголовки в нестандартному каталозі ``<include dir>``."
+
+msgid ""
+"Both :envvar:`CPPFLAGS` and :envvar:`LDFLAGS` need to contain the shell's "
+"value for setup.py to be able to build extension modules using the "
+"directories specified in the environment variables."
+msgstr ""
+"І :envvar:`CPPFLAGS`, і :envvar:`LDFLAGS` повинні містити значення оболонки "
+"для setup.py, щоб мати можливість створювати модулі розширення за допомогою "
+"каталогів, указаних у змінних середовища."
+
+msgid ""
+"Extra preprocessor flags added for building the interpreter object files."
+msgstr ""
+"Для побудови об’єктних файлів інтерпретатора додано додаткові позначки "
+"препроцесора."
+
+msgid ""
+"Default: ``$(BASECPPFLAGS) -I. -I$(srcdir)/Include $(CONFIGURE_CPPFLAGS) "
+"$(CPPFLAGS)``."
+msgstr ""
+"Типове значення: ``$(BASECPPFLAGS) -I. -I$(srcdir)/Включити "
+"$(CONFIGURE_CPPFLAGS) $(CPPFLAGS)``."
+
+msgid "Compiler flags"
+msgstr "Прапори компілятора"
+
+msgid "C compiler command."
+msgstr "Команда компілятора C."
+
+msgid "Example: ``gcc -pthread``."
+msgstr "Приклад: ``gcc -pthread``."
+
+msgid ""
+"C compiler command used to build the ``main()`` function of programs like "
+"``python``."
+msgstr ""
+"Команда компілятора C, яка використовується для побудови функції ``main()`` "
+"таких програм, як ``python``."
+
+msgid ""
+"Variable set by the :option:`--with-cxx-main` option of the configure script."
+msgstr ""
+"Змінна, встановлена параметром :option:`--with-cxx-main` сценарію "
+"конфігурації."
+
+msgid "Default: ``$(CC)``."
+msgstr "Типове значення: ``$(CC)``."
+
+msgid "C++ compiler command."
+msgstr "Команда компілятора C++."
+
+msgid "Used if the :option:`--with-cxx-main` option is used."
+msgstr ""
+"Використовується, якщо використовується параметр :option:`--with-cxx-main`."
+
+msgid "Example: ``g++ -pthread``."
+msgstr "Приклад: ``g++ -pthread``."
+
+msgid "C compiler flags."
+msgstr "Прапори компілятора C."
+
+msgid ""
+":envvar:`CFLAGS_NODIST` is used for building the interpreter and stdlib C "
+"extensions.  Use it when a compiler flag should *not* be part of the "
+"distutils :envvar:`CFLAGS` once Python is installed (:issue:`21121`)."
+msgstr ""
+":envvar:`CFLAGS_NODIST` використовується для створення інтерпретатора та "
+"розширень stdlib C. Використовуйте його, коли прапор компілятора *не* "
+"повинен бути частиною distutils :envvar:`CFLAGS` після встановлення Python (:"
+"issue:`21121`)."
+
+msgid "Extra C compiler flags."
+msgstr "Додаткові позначки компілятора C."
+
+msgid ""
+"Value of :envvar:`CFLAGS` variable passed to the ``./configure`` script."
+msgstr ""
+"Значення змінної :envvar:`CFLAGS` передається до сценарію ``./configure``."
+
+msgid ""
+"Value of :envvar:`CFLAGS_NODIST` variable passed to the ``./configure`` "
+"script."
+msgstr ""
+"Значення змінної :envvar:`CFLAGS_NODIST` передається до сценарію ``./"
+"configure``."
+
+msgid "Base compiler flags."
+msgstr "Базові прапори компілятора."
+
+msgid "Optimization flags."
+msgstr "Прапори оптимізації."
+
+msgid "Strict or non-strict aliasing flags used to compile ``Python/dtoa.c``."
+msgstr ""
+"Суворі або нестрогі прапорці псевдонімів, які використовуються для "
+"компіляції ``Python/dtoa.c``."
+
+msgid "Compiler flags used to build a shared library."
+msgstr ""
+"Прапори компілятора, які використовуються для створення спільної бібліотеки."
+
+msgid "For example, ``-fPIC`` is used on Linux and on BSD."
+msgstr "Наприклад, ``-fPIC`` використовується в Linux і BSD."
+
+msgid "Extra C flags added for building the interpreter object files."
+msgstr ""
+"Для побудови об’єктних файлів інтерпретатора додано додаткові позначки C."
+
+msgid ""
+"Default: ``$(CCSHARED)`` when :option:`--enable-shared` is used, or an empty "
+"string otherwise."
+msgstr ""
+"Типове значення: ``$(CCSHARED)``, коли :option:`--enable-shared` "
+"використовується, або порожній рядок в інших випадках."
+
+msgid ""
+"Default: ``$(BASECFLAGS) $(OPT) $(CONFIGURE_CFLAGS) $(CFLAGS) "
+"$(EXTRA_CFLAGS)``."
+msgstr ""
+"Типове значення: ``$(BASECFLAGS) $(OPT) $(CONFIGURE_CFLAGS) $(CFLAGS) "
+"$(EXTRA_CFLAGS)``."
+
+msgid ""
+"Default: ``$(CONFIGURE_CFLAGS_NODIST) $(CFLAGS_NODIST) -I$(srcdir)/Include/"
+"internal``."
+msgstr ""
+"Типове значення: ``$(CONFIGURE_CFLAGS_NODIST) $(CFLAGS_NODIST) -I$(srcdir)/"
+"Include/internal``."
+
+msgid "C flags used for building the interpreter object files."
+msgstr ""
+"Прапорці C, які використовуються для побудови об'єктних файлів "
+"інтерпретатора."
+
+msgid ""
+"Default: ``$(PY_CFLAGS) $(PY_CFLAGS_NODIST) $(PY_CPPFLAGS) "
+"$(CFLAGSFORSHARED)``."
+msgstr ""
+"Типове значення: ``$(PY_CFLAGS) $(PY_CFLAGS_NODIST) $(PY_CPPFLAGS) "
+"$(CFLAGSFORSHARED)``."
+
+msgid "Default: ``$(PY_STDMODULE_CFLAGS) -DPy_BUILD_CORE``."
+msgstr "Типове значення: ``$(PY_STDMODULE_CFLAGS) -DPy_BUILD_CORE``."
+
+msgid ""
+"Compiler flags to build a standard library extension module as a built-in "
+"module, like the :mod:`posix` module."
+msgstr ""
+"Прапори компілятора для створення стандартного модуля розширення бібліотеки "
+"як вбудованого модуля, як-от модуль :mod:`posix`."
+
+msgid "Default: ``$(PY_STDMODULE_CFLAGS) -DPy_BUILD_CORE_BUILTIN``."
+msgstr "Типове значення: ``$(PY_STDMODULE_CFLAGS) -DPy_BUILD_CORE_BUILTIN``."
+
+msgid "Purify command. Purify is a memory debugger program."
+msgstr "Команда очищення. Purify — це програма для налагодження пам'яті."
+
+msgid "Default: empty string (not used)."
+msgstr "За замовчуванням: порожній рядок (не використовується)."
+
+msgid "Linker flags"
+msgstr "Прапори компонувальника"
+
+msgid ""
+"Linker command used to build programs like ``python`` and ``_testembed``."
+msgstr ""
+"Команда компонувальника, яка використовується для створення таких програм, "
+"як ``python`` і ``_testembed``."
+
+msgid "Default: ``$(PURIFY) $(MAINCC)``."
+msgstr "Типове значення: ``$(PURIFY) $(MAINCC)``."
+
+msgid ""
+"Value of :envvar:`LDFLAGS` variable passed to the ``./configure`` script."
+msgstr ""
+"Значення змінної :envvar:`LDFLAGS` передається до сценарію ``./configure``."
+
+msgid ""
+"Avoid assigning :envvar:`CFLAGS`, :envvar:`LDFLAGS`, etc. so users can use "
+"them on the command line to append to these values without stomping the pre-"
+"set values."
+msgstr ""
+"Уникайте призначення :envvar:`CFLAGS`, :envvar:`LDFLAGS` тощо, щоб "
+"користувачі могли використовувати їх у командному рядку для додавання до цих "
+"значень без порушення попередньо встановлених значень."
+
+msgid ""
+":envvar:`LDFLAGS_NODIST` is used in the same manner as :envvar:"
+"`CFLAGS_NODIST`.  Use it when a linker flag should *not* be part of the "
+"distutils :envvar:`LDFLAGS` once Python is installed (:issue:`35257`)."
+msgstr ""
+":envvar:`LDFLAGS_NODIST` використовується так само, як :envvar:"
+"`CFLAGS_NODIST`. Використовуйте його, коли прапор компонувальника *не* "
+"повинен бути частиною distutils :envvar:`LDFLAGS` після встановлення Python "
+"(:issue:`35257`)."
+
+msgid ""
+"Value of :envvar:`LDFLAGS_NODIST` variable passed to the ``./configure`` "
+"script."
+msgstr ""
+"Значення змінної :envvar:`LDFLAGS_NODIST` передається до сценарію ``./"
+"configure``."
+
+msgid ""
+"Linker flags, e.g. ``-L<lib dir>`` if you have libraries in a nonstandard "
+"directory ``<lib dir>``."
+msgstr ""
+"Прапори компонування, напр. ``-L <lib dir>``, якщо у вас є бібліотеки в "
+"нестандартному каталозі ``<lib dir>``."
+
+msgid ""
+"Linker flags to pass libraries to the linker when linking the Python "
+"executable."
+msgstr ""
+"Прапорці компонувальника для передачі бібліотек компонувальнику під час "
+"компонування виконуваного файлу Python."
+
+msgid "Example: ``-lrt``."
+msgstr "Приклад: ``-lrt``."
+
+msgid "Command to build a shared library."
+msgstr "Команда для створення спільної бібліотеки."
+
+msgid "Default: ``@LDSHARED@ $(PY_LDFLAGS)``."
+msgstr "Типове значення: ``@LDSHARED@ $(PY_LDFLAGS)``."
+
+msgid "Command to build ``libpython`` shared library."
+msgstr "Команда для створення спільної бібліотеки ``libpython``."
+
+msgid "Default: ``@BLDSHARED@ $(PY_CORE_LDFLAGS)``."
+msgstr "За замовчуванням: ``@BLDSHARED@ $(PY_CORE_LDFLAGS)``."
+
+msgid "Default: ``$(CONFIGURE_LDFLAGS) $(LDFLAGS)``."
+msgstr "Типове значення: ``$(CONFIGURE_LDFLAGS) $(LDFLAGS)``."
+
+msgid "Default: ``$(CONFIGURE_LDFLAGS_NODIST) $(LDFLAGS_NODIST)``."
+msgstr "Типове значення: ``$(CONFIGURE_LDFLAGS_NODIST) $(LDFLAGS_NODIST)``."
+
+msgid "Linker flags used for building the interpreter object files."
+msgstr ""
+"Прапори компонувальника, які використовуються для створення файлів об’єктів "
+"інтерпретатора."
