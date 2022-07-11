@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2024, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dmytro Kazanzhy, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"PO-Revision-Date: 2021-06-28 01:14+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2023\n"
+"Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: ../../library/termios.rst:2
+msgid ":mod:`!termios` --- POSIX style tty control"
+msgstr ""
+
+#: ../../library/termios.rst:14
+msgid ""
+"This module provides an interface to the POSIX calls for tty I/O control. "
+"For a complete description of these calls, see :manpage:`termios(3)` Unix "
+"manual page.  It is only available for those Unix versions that support "
+"POSIX *termios* style tty I/O control configured during installation."
+msgstr ""
+"Цей модуль надає інтерфейс для викликів POSIX для керування tty I/O. Щоб "
+"отримати повний опис цих викликів, перегляньте :manpage:`termios(3)` "
+"сторінку посібника Unix. Він доступний лише для тих версій Unix, які "
+"підтримують POSIX *termios* стиль tty I/O control, налаштований під час "
+"встановлення."
+
+#: ../../library/termios.rst:19
+msgid "Availability"
+msgstr ""
+
+#: ../../library/termios.rst:21
+msgid ""
+"All functions in this module take a file descriptor *fd* as their first "
+"argument.  This can be an integer file descriptor, such as returned by "
+"``sys.stdin.fileno()``, or a :term:`file object`, such as ``sys.stdin`` "
+"itself."
+msgstr ""
+"Усі функції в цьому модулі приймають файловий дескриптор *fd* як перший "
+"аргумент. Це може бути цілочисельний дескриптор файлу, наприклад, повернутий"
+" ``sys.stdin.fileno()``, або :term:`file object`, наприклад ``sys.stdin``."
+
+#: ../../library/termios.rst:25
+msgid ""
+"This module also defines all the constants needed to work with the functions"
+" provided here; these have the same name as their counterparts in C.  Please"
+" refer to your system documentation for more information on using these "
+"terminal control interfaces."
+msgstr ""
+"Цей модуль також визначає всі константи, необхідні для роботи з наданими тут"
+" функціями; вони мають ті самі назви, що й відповідники на C. Будь ласка, "
+"зверніться до системної документації, щоб дізнатися більше про використання "
+"цих інтерфейсів керування терміналами."
+
+#: ../../library/termios.rst:30
+msgid "The module defines the following functions:"
+msgstr "Модуль визначає такі функції:"
+
+#: ../../library/termios.rst:35
+msgid ""
+"Return a list containing the tty attributes for file descriptor *fd*, as "
+"follows: ``[iflag, oflag, cflag, lflag, ispeed, ospeed, cc]`` where *cc* is "
+"a list of the tty special characters (each a string of length 1, except the "
+"items with indices :const:`VMIN` and :const:`VTIME`, which are integers when"
+" these fields are defined).  The interpretation of the flags and the speeds "
+"as well as the indexing in the *cc* array must be done using the symbolic "
+"constants defined in the :mod:`termios` module."
+msgstr ""
+"Повертає список, що містить атрибути tty для файлового дескриптора *fd*, "
+"таким чином: ``[iflag, oflag, cflag, lflag, ispeed, ospeed, cc]``, де *cc* —"
+" це список спеціальних символів tty (кожен рядок довжиною 1, за винятком "
+"елементів з індексами :const:`VMIN` і :const:`VTIME`, які є цілими числами, "
+"коли ці поля визначені). Інтерпретація прапорів і швидкостей, а також "
+"індексування в масиві *cc* мають виконуватися за допомогою символічних "
+"констант, визначених у модулі :mod:`termios`."
+
+#: ../../library/termios.rst:46
+msgid ""
+"Set the tty attributes for file descriptor *fd* from the *attributes*, which"
+" is a list like the one returned by :func:`tcgetattr`.  The *when* argument "
+"determines when the attributes are changed:"
+msgstr ""
+
+#: ../../library/termios.rst:52
+msgid "Change attributes immediately."
+msgstr ""
+
+#: ../../library/termios.rst:56
+msgid "Change attributes after transmitting all queued output."
+msgstr ""
+
+#: ../../library/termios.rst:60
+msgid ""
+"Change attributes after transmitting all queued output and discarding all "
+"queued input."
+msgstr ""
+
+#: ../../library/termios.rst:66
+msgid ""
+"Send a break on file descriptor *fd*.  A zero *duration* sends a break for "
+"0.25--0.5 seconds; a nonzero *duration* has a system dependent meaning."
+msgstr ""
+"Надіслати перерву на файловий дескриптор *fd*. Нульова *тривалість* посилає "
+"перерву на 0,25--0,5 секунди; ненульова *тривалість* має системно-залежне "
+"значення."
+
+#: ../../library/termios.rst:72
+msgid ""
+"Wait until all output written to file descriptor *fd* has been transmitted."
+msgstr ""
+"Зачекайте, доки не буде передано весь вихід, записаний у файловий дескриптор"
+" *fd*."
+
+#: ../../library/termios.rst:77
+msgid ""
+"Discard queued data on file descriptor *fd*.  The *queue* selector specifies"
+" which queue: :const:`TCIFLUSH` for the input queue, :const:`TCOFLUSH` for "
+"the output queue, or :const:`TCIOFLUSH` for both queues."
+msgstr ""
+"Відкинути дані з черги на файловий дескриптор *fd*. Селектор *queue* вказує,"
+" яка черга: :const:`TCIFLUSH` для черги введення, :const:`TCOFLUSH` для "
+"черги виведення або :const:`TCIOFLUSH` для обох черг."
+
+#: ../../library/termios.rst:84
+msgid ""
+"Suspend or resume input or output on file descriptor *fd*.  The *action* "
+"argument can be :const:`TCOOFF` to suspend output, :const:`TCOON` to restart"
+" output, :const:`TCIOFF` to suspend input, or :const:`TCION` to restart "
+"input."
+msgstr ""
+"Призупинити або відновити введення або виведення на файловий дескриптор "
+"*fd*. Аргументом *action* може бути :const:`TCOOFF`, щоб призупинити "
+"виведення, :const:`TCOON`, щоб перезапустити виведення, :const:`TCIOFF`, щоб"
+" призупинити введення, або :const:`TCION`, щоб перезапустити введення."
+
+#: ../../library/termios.rst:91
+msgid ""
+"Return a tuple ``(ws_row, ws_col)`` containing the tty window size for file "
+"descriptor *fd*. Requires :const:`termios.TIOCGWINSZ` or "
+":const:`termios.TIOCGSIZE`."
+msgstr ""
+
+#: ../../library/termios.rst:100
+msgid ""
+"Set the tty window size for file descriptor *fd* from *winsize*, which is a "
+"two-item tuple ``(ws_row, ws_col)`` like the one returned by "
+":func:`tcgetwinsize`. Requires at least one of the pairs "
+"(:const:`termios.TIOCGWINSZ`, :const:`termios.TIOCSWINSZ`); "
+"(:const:`termios.TIOCGSIZE`, :const:`termios.TIOCSSIZE`) to be defined."
+msgstr ""
+
+#: ../../library/termios.rst:111
+msgid "Module :mod:`tty`"
+msgstr "Модуль :mod:`tty`"
+
+#: ../../library/termios.rst:112
+msgid "Convenience functions for common terminal control operations."
+msgstr "Функції зручності для звичайних операцій керування терміналом."
+
+#: ../../library/termios.rst:118
+msgid "Example"
+msgstr "приклад"
+
+#: ../../library/termios.rst:120
+msgid ""
+"Here's a function that prompts for a password with echoing turned off.  Note"
+" the technique using a separate :func:`tcgetattr` call and a :keyword:`try` "
+"... :keyword:`finally` statement to ensure that the old tty attributes are "
+"restored exactly no matter what happens::"
+msgstr ""
+"Ось функція, яка запитує пароль із вимкненим відлунням. Зверніть увагу на "
+"техніку використання окремого виклику :func:`tcgetattr` і оператора "
+":keyword:`try` ... :keyword:`finally`, щоб переконатися, що старі атрибути "
+"tty точно відновлюються незалежно від того, що трапиться::"
+
+#: ../../library/termios.rst:125
+msgid ""
+"def getpass(prompt=\"Password: \"):\n"
+"    import termios, sys\n"
+"    fd = sys.stdin.fileno()\n"
+"    old = termios.tcgetattr(fd)\n"
+"    new = termios.tcgetattr(fd)\n"
+"    new[3] = new[3] & ~termios.ECHO          # lflags\n"
+"    try:\n"
+"        termios.tcsetattr(fd, termios.TCSADRAIN, new)\n"
+"        passwd = input(prompt)\n"
+"    finally:\n"
+"        termios.tcsetattr(fd, termios.TCSADRAIN, old)\n"
+"    return passwd"
+msgstr ""
+
+#: ../../library/termios.rst:8
+msgid "POSIX"
+msgstr "POSIX"
+
+#: ../../library/termios.rst:8
+msgid "I/O control"
+msgstr ""
+
+#: ../../library/termios.rst:8
+msgid "tty"
+msgstr ""
