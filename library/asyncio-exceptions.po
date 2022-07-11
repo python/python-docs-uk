@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2024, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dmytro Kazanzhy, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"PO-Revision-Date: 2021-06-28 00:54+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2024\n"
+"Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: ../../library/asyncio-exceptions.rst:8
+msgid "Exceptions"
+msgstr "Винятки"
+
+#: ../../library/asyncio-exceptions.rst:10
+msgid "**Source code:** :source:`Lib/asyncio/exceptions.py`"
+msgstr "**Вихідний код:** :source:`Lib/asyncio/exceptions.py`"
+
+#: ../../library/asyncio-exceptions.rst:16
+msgid ""
+"A deprecated alias of :exc:`TimeoutError`, raised when the operation has "
+"exceeded the given deadline."
+msgstr ""
+
+#: ../../library/asyncio-exceptions.rst:21
+msgid "This class was made an alias of :exc:`TimeoutError`."
+msgstr "Цей клас отримав псевдонім :exc:`TimeoutError`."
+
+#: ../../library/asyncio-exceptions.rst:26
+msgid "The operation has been cancelled."
+msgstr "Операцію скасовано."
+
+#: ../../library/asyncio-exceptions.rst:28
+msgid ""
+"This exception can be caught to perform custom operations when asyncio Tasks"
+" are cancelled.  In almost all situations the exception must be re-raised."
+msgstr ""
+"Цей виняток можна перехопити для виконання спеціальних операцій, коли "
+"асинхронні завдання скасовуються. Майже в усіх ситуаціях виняток потрібно "
+"підняти повторно."
+
+#: ../../library/asyncio-exceptions.rst:34
+msgid ""
+":exc:`CancelledError` is now a subclass of :class:`BaseException` rather "
+"than :class:`Exception`."
+msgstr ""
+
+#: ../../library/asyncio-exceptions.rst:39
+msgid "Invalid internal state of :class:`Task` or :class:`Future`."
+msgstr "Недійсний внутрішній стан :class:`Task` або :class:`Future`."
+
+#: ../../library/asyncio-exceptions.rst:41
+msgid ""
+"Can be raised in situations like setting a result value for a *Future* "
+"object that already has a result value set."
+msgstr ""
+"Може бути викликано в таких ситуаціях, як встановлення значення результату "
+"для об’єкта *Future*, для якого вже встановлено значення результату."
+
+#: ../../library/asyncio-exceptions.rst:47
+msgid ""
+"The \"sendfile\" syscall is not available for the given socket or file type."
+msgstr ""
+"Системний виклик \"sendfile\" недоступний для даного сокета або типу файлу."
+
+#: ../../library/asyncio-exceptions.rst:50
+msgid "A subclass of :exc:`RuntimeError`."
+msgstr "Підклас :exc:`RuntimeError`."
+
+#: ../../library/asyncio-exceptions.rst:55
+msgid "The requested read operation did not complete fully."
+msgstr "Запитана операція читання не завершена повністю."
+
+#: ../../library/asyncio-exceptions.rst:57
+msgid "Raised by the :ref:`asyncio stream APIs<asyncio-streams>`."
+msgstr "Створено :ref:`asyncio stream API <asyncio-streams>`."
+
+#: ../../library/asyncio-exceptions.rst:59
+msgid "This exception is a subclass of :exc:`EOFError`."
+msgstr "Цей виняток є підкласом :exc:`EOFError`."
+
+#: ../../library/asyncio-exceptions.rst:63
+msgid "The total number (:class:`int`) of expected bytes."
+msgstr "Загальна кількість (:class:`int`) очікуваних байтів."
+
+#: ../../library/asyncio-exceptions.rst:67
+msgid "A string of :class:`bytes` read before the end of stream was reached."
+msgstr "Рядок із :class:`bytes` прочитано до кінця потоку."
+
+#: ../../library/asyncio-exceptions.rst:72
+msgid "Reached the buffer size limit while looking for a separator."
+msgstr "Досягнуто обмеження розміру буфера під час пошуку роздільника."
+
+#: ../../library/asyncio-exceptions.rst:74
+msgid "Raised by the :ref:`asyncio stream APIs <asyncio-streams>`."
+msgstr "Створено :ref:`asyncio stream API <asyncio-streams>`."
+
+#: ../../library/asyncio-exceptions.rst:78
+msgid "The total number of to be consumed bytes."
+msgstr "Загальна кількість спожитих байтів."
