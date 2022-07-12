@@ -65,10 +65,10 @@ jobs:
       - uses: actions/checkout@master
         with:
           ref: ${{ matrix.version }}
-          path: Doc/locales/uk/LC_MESSAGES
+          path: Doc/locales/uk_UA/LC_MESSAGES
       - run: git pull
-        working-directory: ./Doc/locales/uk/LC_MESSAGES
-      - run: make -e SPHINXOPTS="-D language='uk' -D gettext_compact=0" SPHINXERRORHANDLING="" ${{ matrix.format }}
+        working-directory: ./Doc/locales/uk_UA/LC_MESSAGES
+      - run: make -e SPHINXOPTS="-D language='uk_UA' -D gettext_compact=0" SPHINXERRORHANDLING="" ${{ matrix.format }}
         working-directory: ./Doc
       - uses: actions/upload-artifact@master
         with:
