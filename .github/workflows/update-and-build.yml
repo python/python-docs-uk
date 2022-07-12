@@ -68,7 +68,7 @@ jobs:
           path: Doc/locales/uk/LC_MESSAGES
       - run: git pull
         working-directory: ./Doc/locales/uk/LC_MESSAGES
-      - run: make -e SPHINXOPTS="-D language='uk' -D gettext_compact=0 -W --keep-going" ${{ matrix.format }}
+      - run: make -e SPHINXOPTS="-D language='uk' -D gettext_compact=0" SPHINXERRORHANDLING="" ${{ matrix.format }}
         working-directory: ./Doc
       - uses: actions/upload-artifact@master
         with:
@@ -86,7 +86,7 @@ jobs:
           name: build-${{ matrix.version }}-latex
       - run: sudo apt-get update
       - run: sudo apt-get install -y latexmk texlive-xetex fonts-freefont-otf xindy
-      - run: make
+      - run: make -i
       - uses: actions/upload-artifact@master
         with:
           name: build-${{ matrix.version }}-pdf
