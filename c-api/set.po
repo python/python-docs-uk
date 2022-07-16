@@ -5,6 +5,7 @@
 #
 # Translators:
 # Dmytro Kazanzhy, 2022
+# Olga Tomakhina, 2022
 #
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-16 06:28+0000\n"
 "PO-Revision-Date: 2021-06-28 00:50+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Last-Translator: Olga Tomakhina, 2022\n"
 "Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
 "uk/)\n"
 "MIME-Version: 1.0\n"
@@ -130,7 +131,7 @@ msgid ""
 "Return true if *p* is a :class:`frozenset` object but not an instance of a "
 "subtype.  This function always succeeds."
 msgstr ""
-"Повертає true, якщо *p* є об’єктом :class:`frozenset`, але не екземпляром "
+"Повертає true, якщо *p* є об’єктом :class:`frozenset`, але не є екземпляром "
 "підтипу. Ця функція завжди успішна."
 
 msgid ""
