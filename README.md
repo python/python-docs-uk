@@ -59,5 +59,5 @@ Python Software Foundation [по ліцензії CC0](https://creativecommons.o
 | Перекладач      | Кількість документів |  
 |:----------------|:--------------------:|  
 |Dmytro Kazanzhy|490|
+|Olga Tomakhina|2|
 |serhii pavlenko|1|
-|Olga Tomakhina|1|
