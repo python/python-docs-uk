@@ -5,6 +5,7 @@
 #
 # Translators:
 # Dmytro Kazanzhy, 2022
+# Olga Tomakhina, 2022
 #
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-16 06:28+0000\n"
 "PO-Revision-Date: 2021-06-28 00:48+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Last-Translator: Olga Tomakhina, 2022\n"
 "Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
 "uk/)\n"
 "MIME-Version: 1.0\n"
@@ -64,6 +65,10 @@ msgid ""
 "directly can bind you to a precise Python version since the definition of "
 "the bytecode changes often."
 msgstr ""
+"Повертає новий обьект коду. Якщо вам потрібен порожній об’єкт для створення "
+"фрейму, використовуйте :c:func:`PyCode_NewEmpty`. Виклик :c:func:"
+"`PyCode_New` напряму може прив'язати вс до конкретної версії Python в той "
+"час як байткод змінюється дуже часто."
 
 msgid ""
 "Similar to :c:func:`PyCode_New`, but with an extra \"posonlyargcount\" for "
