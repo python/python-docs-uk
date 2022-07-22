@@ -579,6 +579,8 @@ msgid ""
 "For some :exc:`SyntaxError`\\ s, Python displays the character position of "
 "the syntax error, using a ``^`` marker::"
 msgstr ""
+"Для деяких :exc:`SyntaxError`, Python вказує намісце синтаксичної помилки "
+"використовуючи маркер ``^`` ::"
 
 msgid ""
 "Since the lines showing the position of the error come before the exception "
