@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# Dmytro Kazanzhy, 2022
 # Olga Tomakhina, 2022
+# Dmytro Kazanzhy, 2022
 #
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-16 06:28+0000\n"
 "PO-Revision-Date: 2021-06-28 00:55+0000\n"
-"Last-Translator: Olga Tomakhina, 2022\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
 "uk/)\n"
 "MIME-Version: 1.0\n"
@@ -75,16 +75,16 @@ msgstr ""
 "виконанням;"
 
 msgid "perform :ref:`network IO and IPC <asyncio-streams>`;"
-msgstr "виконувати :ref:`network IO and IPC 1`;"
+msgstr "виконувати :ref:`мережевий IO та IPC <asyncio-streams>`;"
 
 msgid "control :ref:`subprocesses <asyncio-subprocess>`;"
-msgstr "керування :ref:`підпроцеси <asyncio-subprocess>`;"
+msgstr "керування :ref:`підпроцесами <asyncio-subprocess>`;"
 
 msgid "distribute tasks via :ref:`queues <asyncio-queues>`;"
 msgstr "розподіляти завдання через :ref:`черги <asyncio-queues>`;"
 
 msgid ":ref:`synchronize <asyncio-sync>` concurrent code;"
-msgstr ":ref:`synchronize <asyncio-sync>` одночасний код;"
+msgstr ":ref:`синхронізувати <asyncio-sync>` конкурентний код;"
 
 msgid ""
 "Additionally, there are **low-level** APIs for *library and framework "
