@@ -1317,6 +1317,8 @@ msgid ""
 "The same as :meth:`http_error_301`, but called for the 'temporary redirect' "
 "response."
 msgstr ""
+"Подібний до :meth:`http_error_301`, але викликається для 'тимчасово "
+"перенаправленої' відповіді."
 
 msgid "HTTPCookieProcessor Objects"
 msgstr "Об’єкти HTTPCookieProcessor"
