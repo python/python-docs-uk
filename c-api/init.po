@@ -224,6 +224,8 @@ msgstr ""
 
 msgid "Private flag used by ``_freeze_importlib`` and ``frozenmain`` programs."
 msgstr ""
+"Приватні флаги використовуються програмами ``_freeze_importlib`` та "
+"``frozenmain``."
 
 msgid ""
 "Set to ``1`` if the :envvar:`PYTHONHASHSEED` environment variable is set to "

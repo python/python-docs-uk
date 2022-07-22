@@ -5,6 +5,7 @@
 #
 # Translators:
 # Dmytro Kazanzhy, 2022
+# Tetiana Agarkova, 2022
 #
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-16 06:28+0000\n"
 "PO-Revision-Date: 2021-06-28 00:47+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Last-Translator: Tetiana Agarkova, 2022\n"
 "Language-Team: Ukrainian (https://www.transifex.com/python-doc/teams/5390/"
 "uk/)\n"
 "MIME-Version: 1.0\n"
@@ -1557,6 +1558,12 @@ msgid ""
 "`collections.defaultdict`, :class:`collections.OrderedDict` and :class:"
 "`collections.Counter`."
 msgstr ""
+"Контейнерний об’єкт, який підтримує довільний пошук ключів і реалізує "
+"методи, визначені в :class:`~collections.abc.Mapping` або :class:"
+"`~collections.abc.MutableMapping` :ref:`абстрактних базових класах "
+"<collections-abstract-base-classes>`. Приклади: :class:`dict`, :class:"
+"`collections.defaultdict`, :class:`collections.OrderedDict` і :class:"
+"`collections.Counter`."
 
 msgid "meta path finder"
 msgstr "мета-шлях пошуку"
@@ -2122,6 +2129,11 @@ msgid ""
 "function that programmers can call to return the reference count for a "
 "particular object."
 msgstr ""
+"Кількість посилань на об'єкт. Коли кількість посилань на об’єкт падає до "
+"нуля, він звільняється. Підрахунок посилань зазвичай не відображається в "
+"коді Python, але це ключовий елемент реалізації :term:`CPython`. Модуль :mod:"
+"`sys` визначає функцію :func:`~sys.getrefcount`, яку програмісти можуть "
+"викликати, щоб повернути кількість посилань для певного об’єкта"
 
 msgid "regular package"
 msgstr "звичайний пакет"
