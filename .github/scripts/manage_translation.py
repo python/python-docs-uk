@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# This python file contains utility scripts to manage Python docs Polish translation.
+# This python file contains utility scripts to manage Python docs Ukrainian translation.
 # It has to be run inside the python-docs-uk git root directory.
 #
 # Inspired by django-docs-translations script by claudep.
@@ -20,14 +20,18 @@ from subprocess import call, run
 import sys
 
 LANGUAGE = 'uk'
-
+RESOURCE_NAME_MAP = {'glossary_': 'glossary'}
+TX_ORGANISATION = 'python-doc'
+TX_PROJECT = 'python-newest'
+GH_ORGANISATION = 'python'
+GH_PROJECT = 'python-docs-uk'
 
 def fetch():
     """
     Fetch translations from Transifex, remove source lines.
     """
     if call("tx --version", shell=True) != 0:
-        sys.stderr.write("The Transifex client app is required (pip install transifex-client).\n")
+        sys.stderr.write("The Transifex client app is required (https://developers.transifex.com/docs/cli).\n")
         exit(1)
     lang = LANGUAGE
     pull_returncode = call(f'tx pull -l {lang} --minimum-perc=1 --force --skip', shell=True)
@@ -40,11 +44,6 @@ def fetch():
             po_path = os.path.join(root, po_file)
             call(f'msgcat --no-location -o {po_path} {po_path}', shell=True)
 
-
-RESOURCE_NAME_MAP = {'glossary_': 'glossary'}
-TX_ORGANISATION = 'python-doc'
-TX_PROJECT = 'python-newest'
-GH_ORGANISATION = 'python'
 
 def recreate_tx_config():
     """
@@ -144,13 +143,13 @@ def recreate_readme():
             f'''\
 Український переклад документації Python
 ========================================
-![build](https://github.com/{GH_ORGANISATION}/python-docs-uk/workflows/.github/workflows/update-and-build.yml/badge.svg)
+![build](https://github.com/{GH_ORGANISATION}/{GH_PROJECT}/workflows/.github/workflows/update-and-build.yml/badge.svg)
 ![{language_switcher_status:.2f}% прогрес перекладу](https://img.shields.io/badge/прогрес_перекладу-{language_switcher_status:.2f}%25-0.svg)
 ![хід перекладу всієї документації](https://img.shields.io/badge/dynamic/json.svg?label=всього&query=$.{LANGUAGE}&url=http://gce.zhsj.me/python/newest)
 ![{number_of_translators} перекладачів](https://img.shields.io/badge/перекладачів-{number_of_translators}-0.svg)
 
 Якщо ви знайшли помилку або маєте пропозицію,
-[додати issue](https://github.com/{GH_ORGANISATION}/python-docs-uk/issues) у цьому проекті або запропонуйте зміни:
+[додати issue](https://github.com/{GH_ORGANISATION}/{GH_PROJECT}/issues) у цьому проекті або запропонуйте зміни:
 
 * Зареєструйтесь на платформі [Transifex](https://www.transifex.com/) 
 * Перейдіть на сторінку [документації Python](https://www.transifex.com/{TX_ORGANISATION}/{TX_PROJECT}/).
