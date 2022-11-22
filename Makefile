@@ -102,6 +102,11 @@ ensure_prerequisites:
 	    exit 1; \
 	fi
 
+.PHONY: sphinx-lint
+sphinx-lint:
+	@echo "Checking all files using sphinx-lint..."
+	@sphinx-lint --enable all --disable line-too-long *.po */*.po
+
 .PHONY: serve
 serve:
 	$(MAKE) -C $(CPYTHON_PATH)/Doc/ serve
