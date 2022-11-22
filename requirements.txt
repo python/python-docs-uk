@@ -1,0 +1,2 @@
+poutils==0.13.0
+sphinx-lint
