@@ -63,6 +63,6 @@ Python Software Foundation [по ліцензії CC0](https://creativecommons.o
 |Olga Tomakhina|5|
 |Nadiia Gorash <nmaiboroda@gmail.com>|4|
 |Taras Kuzyo <kuzyo.taras@gmail.com>|2|
+|Stanislav Silin|1|
 |serhii pavlenko|1|
 |hellowfacey|1|
-|Stanislav Silin|1|

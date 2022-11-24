@@ -423,8 +423,8 @@ msgid "Using :class:`BZ2Compressor` for incremental compression:"
 msgstr "Використання :class:`BZ2Compressor` для поступового стиснення:"
 
 msgid ""
-"The example above uses a very \"nonrandom\" stream of data (a stream of ``b"
-"\"z\"`` chunks).  Random data tends to compress poorly, while ordered, "
+"The example above uses a very \"nonrandom\" stream of data (a stream of "
+"``b\"z\"`` chunks).  Random data tends to compress poorly, while ordered, "
 "repetitive data usually yields a high compression ratio."
 msgstr ""
 
