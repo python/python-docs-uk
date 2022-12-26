@@ -1,7 +1,7 @@
 Український переклад документації Python
 ========================================
 ![build](https://github.com/python/python-docs-uk/workflows/.github/workflows/update-and-build.yml/badge.svg)
-![94.09% прогрес перекладу](https://img.shields.io/badge/прогрес_перекладу-94.09%25-0.svg)
+![93.96% прогрес перекладу](https://img.shields.io/badge/прогрес_перекладу-93.96%25-0.svg)
 ![хід перекладу всієї документації](https://img.shields.io/badge/dynamic/json.svg?label=всього&query=$.uk&url=http://gce.zhsj.me/python/newest)
 ![8 перекладачів](https://img.shields.io/badge/перекладачів-8-0.svg)
 
