@@ -64,5 +64,5 @@ Python Software Foundation [по ліцензії CC0](https://creativecommons.o
 |Nadiia Gorash <nmaiboroda@gmail.com>|4|
 |Taras Kuzyo <kuzyo.taras@gmail.com>|2|
 |Stanislav Silin|1|
-|hellowfacey|1|
 |serhii pavlenko|1|
+|hellowfacey|1|
