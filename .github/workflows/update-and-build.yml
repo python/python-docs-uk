@@ -71,6 +71,7 @@ jobs:
         working-directory: ./Doc/locales/uk/LC_MESSAGES
       - run: make -e SPHINXOPTS="-D language='uk' -D gettext_compact=0" SPHINXERRORHANDLING="" ${{ matrix.format }}
         working-directory: ./Doc
+      - run: make sphinx-lint
       - uses: actions/upload-artifact@master
         with:
           name: build-${{ matrix.version }}-${{ matrix.format }}
