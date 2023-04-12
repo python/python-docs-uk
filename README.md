@@ -1,9 +1,6 @@
 Український переклад документації Python
 ========================================
 ![build](https://github.com/python/python-docs-uk/workflows/.github/workflows/update-and-build.yml/badge.svg)
-![97.03% прогрес перекладу](https://img.shields.io/badge/прогрес_перекладу-97.03%25-0.svg)
-![хід перекладу всієї документації](https://img.shields.io/badge/dynamic/json.svg?label=всього&query=$.uk&url=http://gce.zhsj.me/python/newest)
-![1 перекладачів](https://img.shields.io/badge/перекладачів-1-0.svg)
 
 Якщо ви знайшли помилку або маєте пропозицію,
 [додати issue](https://github.com/python/python-docs-uk/issues) у цьому проєкті або запропонуйте зміни:
@@ -12,6 +9,7 @@
 * Перейдіть на сторінку [документації Python](https://www.transifex.com/python-doc/python-newest/).
 * Натисніть кнопку „Join Team”, оберіть українську (uk) мову та натисніть „Join”, щоб приєднатися до команди.
 * Приєднавшись до команди, виберіть ресурс, що хочете виправити/оновити.
+* Ваш прогрес буде відображатися у файлі [TEAM.md](TEAM.md).
 
 Додаткову інформацію про використання Transifex дивіться [в документації](https://docs.transifex.com/getting-started-1/translators).
 
@@ -19,11 +17,12 @@
 * `bugs`,
 * всі ресурси в каталозі `tutorial`,
 * `library/functions`.
+Поточний прогрес у файлі [RESOURCE.md](RESOURCE.md)  
 
 **Як переглянути останню збірку документації?**
 
 Завантажте останню створену документацію зі списку артефактів в останній дії GitHub (вкладка Actions).
-Переклади завантажуються з Transifex до цього репозиторію приблизно кожні півгодини.
+Переклади завантажуються з Transifex до цього репозиторію щодня.
 Документація на python.org оновлюється приблизно раз на день.
 
 **Канали зв'язку**
@@ -39,13 +38,20 @@ Python Software Foundation [по ліцензії CC0](https://creativecommons.o
 Натомість ви побачите, що ви є перекладачем тієї частини, яку ви переклали.
 Ви висловлюєте свою згоду з цією угодою, надаючи свою роботу для включення в документацію.
 
+**Налаштування**
+* `pip install transifex-python`
+* Згенерувати [ключ API](https://app.transifex.com/user/settings/api/) та зберегти локально
+* `export TX_TOKEN=token_from_previous_step`
+
+**Оновлення статистики**
+* `.github/scripts/manage_translation.py recreate_resource_stats`
+* `.github/scripts/manage_translation.py recreate_team_stats`
+
 **Оновлення локального перекладу**
-* `.github/scripts/manage_translation.py recreate_tx_config`
-* `.github/scripts/manage_translation.py fetch`
-* `.github/scripts/manage_translation.py recreate_readme`
+* `.github/scripts/manage_translation.py recreate_config`
+* `.github/scripts/manage_translation.py fetch_translations`
 
 **Подяка**
 * Maciej Olko - Polish team
 * Julien Palard - French team
 * Tomo Cocoa - Japanese team
-

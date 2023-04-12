@@ -1,8 +1,9 @@
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 6 * * *'
   push:
     branches: ['main']
+  workflow_dispatch:
 
 jobs:
   update-translation:
@@ -17,24 +18,19 @@ jobs:
       - uses: actions/setup-python@master
         with:
           python-version: 3
-      - run: sudo apt-get install -y gettext
       - run: curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
         working-directory: /usr/local/bin
-      - run: pip install requests
+      - run: pip install transifex-python
       - uses: actions/checkout@master
         with:
           ref: ${{ matrix.version }}
-      - run: .github/scripts/manage_translation.py recreate_tx_config
+      - run: .github/scripts/manage_translation.py recreate_config
         env:
           TX_TOKEN: ${{ secrets.TX_TOKEN }}
-      - run: .github/scripts/manage_translation.py fetch
+      - run: .github/scripts/manage_translation.py fetch_translations
         env:
           TX_TOKEN: ${{ secrets.TX_TOKEN }}
-      - run: .github/scripts/manage_translation.py recreate_readme
-        env:
-          TX_TOKEN: ${{ secrets.TX_TOKEN }}
-      - run: git config --local user.email 'dkazanzhy@gmail.com'
-        name: Run git config --local user.email '…'
+      - run: git config --local user.email github-actions@github.com
       - run: git config --local user.name "GitHub Action's update-translation job"
       - run: git add .
       - run: git commit -m 'Update translation from Transifex' || true
@@ -56,7 +52,7 @@ jobs:
     steps:
       - uses: actions/setup-python@master
         with:
-          python-version: '3.10'
+          python-version: 3
       - uses: actions/checkout@master
         with:
           repository: python/cpython
