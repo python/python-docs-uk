@@ -88,3 +88,20 @@ jobs:
         with:
           name: build-${{ matrix.version }}-pdf
           path: .
+  lint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
+      fail-fast: false
+    needs: ['update-translation']
+    steps:
+      - uses: actions/setup-python@master
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@master
+        with:
+          ref: ${{ matrix.version }}
+      - run: pip install sphinx-lint
+      - uses: rffontenelle/sphinx-lint-problem-matcher@1
+      - run: sphinx-lint
