@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-03 17:40+0000\n"
+"POT-Creation-Date: 2025-02-14 14:17+0000\n"
 "PO-Revision-Date: 2024-07-20 00:54+0000\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -70,10 +70,18 @@ msgid ""
 msgstr ""
 
 #: ../../deprecations/pending-removal-in-3.15.rst:32
-msgid ":class:`locale`:"
+msgid ":mod:`importlib`:"
 msgstr ""
 
 #: ../../deprecations/pending-removal-in-3.15.rst:34
+msgid "``load_module()`` method: use ``exec_module()`` instead."
+msgstr ""
+
+#: ../../deprecations/pending-removal-in-3.15.rst:36
+msgid ":class:`locale`:"
+msgstr ""
+
+#: ../../deprecations/pending-removal-in-3.15.rst:38
 msgid ""
 "The :func:`~locale.getdefaultlocale` function has been deprecated since "
 "Python 3.11. Its removal was originally planned for Python 3.13 "
@@ -83,32 +91,32 @@ msgid ""
 ":gh:`111187`.)"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:42
+#: ../../deprecations/pending-removal-in-3.15.rst:46
 msgid ":mod:`pathlib`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:44
+#: ../../deprecations/pending-removal-in-3.15.rst:48
 msgid ""
 ":meth:`.PurePath.is_reserved` has been deprecated since Python 3.13. Use "
 ":func:`os.path.isreserved` to detect reserved paths on Windows."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:48
+#: ../../deprecations/pending-removal-in-3.15.rst:52
 msgid ":mod:`platform`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:50
+#: ../../deprecations/pending-removal-in-3.15.rst:54
 msgid ""
 ":func:`~platform.java_ver` has been deprecated since Python 3.13. This "
 "function is only useful for Jython support, has a confusing API, and is "
 "largely untested."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:54
+#: ../../deprecations/pending-removal-in-3.15.rst:58
 msgid ":mod:`threading`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:56
+#: ../../deprecations/pending-removal-in-3.15.rst:60
 msgid ""
 ":func:`~threading.RLock` will take no arguments in Python 3.15. Passing any "
 "arguments has been deprecated since Python 3.14, as the  Python version does"
@@ -116,11 +124,11 @@ msgid ""
 " or keyword arguments, ignoring every argument."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:62
+#: ../../deprecations/pending-removal-in-3.15.rst:66
 msgid ":mod:`types`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:64
+#: ../../deprecations/pending-removal-in-3.15.rst:68
 msgid ""
 ":class:`types.CodeType`: Accessing :attr:`~codeobject.co_lnotab` was "
 "deprecated in :pep:`626` since 3.10 and was planned to be removed in 3.12, "
@@ -128,11 +136,11 @@ msgid ""
 "in 3.15. (Contributed by Nikita Sobolev in :gh:`101866`.)"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:71
+#: ../../deprecations/pending-removal-in-3.15.rst:75
 msgid ":mod:`typing`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:73
+#: ../../deprecations/pending-removal-in-3.15.rst:77
 msgid ""
 "The undocumented keyword argument syntax for creating "
 ":class:`~typing.NamedTuple` classes (e.g. ``Point = NamedTuple(\"Point\", "
@@ -140,18 +148,18 @@ msgid ""
 "syntax or the functional syntax instead."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:79
+#: ../../deprecations/pending-removal-in-3.15.rst:83
 msgid ""
 "The :func:`typing.no_type_check_decorator` decorator function has been "
 "deprecated since Python 3.13. After eight years in the :mod:`typing` module,"
 " it has yet to be supported by any major type checker."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:84
+#: ../../deprecations/pending-removal-in-3.15.rst:88
 msgid ":mod:`wave`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:86
+#: ../../deprecations/pending-removal-in-3.15.rst:90
 msgid ""
 "The :meth:`~wave.Wave_read.getmark`, :meth:`!setmark`, and "
 ":meth:`~wave.Wave_read.getmarkers` methods of the :class:`~wave.Wave_read` "
