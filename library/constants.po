@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"POT-Creation-Date: 2025-03-21 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 00:57+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -82,19 +82,19 @@ msgstr "Перегляньте приклади :ref:`implementing-the-arithmeti
 
 #: ../../library/constants.rst:51
 msgid ""
-"``NotImplementedError`` and :data:`!NotImplemented` are not interchangeable,"
-" even though they have similar names and purposes. See "
-":exc:`NotImplementedError` for details on when to use it."
+":data:`!NotImplemented` and :exc:`!NotImplementedError` are not "
+"interchangeable. This constant should only be used as described above; see "
+":exc:`NotImplementedError` for details on correct usage of the exception."
 msgstr ""
 
-#: ../../library/constants.rst:55
+#: ../../library/constants.rst:56
 msgid ""
 "Evaluating :data:`!NotImplemented` in a boolean context is deprecated. While"
 " it currently evaluates as true, it will emit a :exc:`DeprecationWarning`. "
 "It will raise a :exc:`TypeError` in a future version of Python."
 msgstr ""
 
-#: ../../library/constants.rst:64
+#: ../../library/constants.rst:65
 msgid ""
 "The same as the ellipsis literal \"``...``\". Special value used mostly in "
 "conjunction with extended slicing syntax for user-defined container data "
@@ -106,7 +106,7 @@ msgstr ""
 "визначених користувачем типів даних контейнера. ``Ellipsis`` є єдиним "
 "екземпляром типу :data:`types.EllipsisType`."
 
-#: ../../library/constants.rst:71
+#: ../../library/constants.rst:72
 msgid ""
 "This constant is true if Python was not started with an :option:`-O` option."
 " See also the :keyword:`assert` statement."
@@ -114,7 +114,7 @@ msgstr ""
 "Ця константа є істинною, якщо Python не було запущено з параметром "
 ":option:`-O`. Дивіться також оператор :keyword:`assert`."
 
-#: ../../library/constants.rst:77
+#: ../../library/constants.rst:78
 msgid ""
 "The names :data:`None`, :data:`False`, :data:`True` and :data:`__debug__` "
 "cannot be reassigned (assignments to them, even as an attribute name, raise "
@@ -124,11 +124,11 @@ msgstr ""
 " перепризначити (присвоєння їм, навіть як імені атрибута, викликає "
 ":exc:`SyntaxError` ), тому їх можна вважати \"справжніми\" константами."
 
-#: ../../library/constants.rst:85
+#: ../../library/constants.rst:86
 msgid "Constants added by the :mod:`site` module"
 msgstr "Константи, додані модулем :mod:`site`"
 
-#: ../../library/constants.rst:87
+#: ../../library/constants.rst:88
 msgid ""
 "The :mod:`site` module (which is imported automatically during startup, "
 "except if the :option:`-S` command-line option is given) adds several "
@@ -141,7 +141,7 @@ msgstr ""
 "інтерактивної оболонки інтерпретатора і не повинні використовуватися в "
 "програмах."
 
-#: ../../library/constants.rst:95
+#: ../../library/constants.rst:96
 msgid ""
 "Objects that when printed, print a message like \"Use quit() or Ctrl-D (i.e."
 " EOF) to exit\", and when called, raise :exc:`SystemExit` with the specified"
@@ -151,14 +151,14 @@ msgstr ""
 "quit() або Ctrl-D (тобто EOF) для виходу\", а під час виклику викликають "
 ":exc:`SystemExit` із зазначеним кодом виходу."
 
-#: ../../library/constants.rst:102
+#: ../../library/constants.rst:103
 msgid ""
 "Object that when printed, prints the message \"Type help() for interactive "
 "help, or help(object) for help about object.\", and when called, acts as "
 "described :func:`elsewhere <help>`."
 msgstr ""
 
-#: ../../library/constants.rst:109
+#: ../../library/constants.rst:110
 msgid ""
 "Objects that when printed or called, print the text of copyright or credits,"
 " respectively."
@@ -166,7 +166,7 @@ msgstr ""
 "Об'єкти, які під час друку або виклику друкують текст авторських прав або "
 "кредитів відповідно."
 
-#: ../../library/constants.rst:114
+#: ../../library/constants.rst:115
 msgid ""
 "Object that when printed, prints the message \"Type license() to see the "
 "full license text\", and when called, displays the full license text in a "
@@ -176,10 +176,10 @@ msgstr ""
 "побачити повний текст ліцензії\", а під час виклику відображає повний текст "
 "ліцензії у вигляді пейджера (по одному екрану)."
 
-#: ../../library/constants.rst:61
+#: ../../library/constants.rst:62
 msgid "..."
 msgstr ""
 
-#: ../../library/constants.rst:61
+#: ../../library/constants.rst:62
 msgid "ellipsis literal"
 msgstr ""

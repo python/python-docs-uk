@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"POT-Creation-Date: 2025-03-28 14:18+0000\n"
 "PO-Revision-Date: 2024-05-11 01:08+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -452,20 +452,20 @@ msgid ""
 msgstr ""
 
 #: ../../using/ios.rst:295
-msgid ":c:member:`UTF-8 mode <PyPreConfig.utf8_mode>` is *enabled*;"
+msgid "UTF-8 mode (:c:member:`PyPreConfig.utf8_mode`) is *enabled*;"
 msgstr ""
 
 #: ../../using/ios.rst:296
-msgid ":c:member:`Buffered stdio <PyConfig.buffered_stdio>` is *disabled*;"
+msgid "Buffered stdio (:c:member:`PyConfig.buffered_stdio`) is *disabled*;"
 msgstr ""
 
 #: ../../using/ios.rst:297
-msgid ":c:member:`Writing bytecode <PyConfig.write_bytecode>` is *disabled*;"
+msgid "Writing bytecode (:c:member:`PyConfig.write_bytecode`) is *disabled*;"
 msgstr ""
 
 #: ../../using/ios.rst:298
 msgid ""
-":c:member:`Signal handlers <PyConfig.install_signal_handlers>` are "
+"Signal handlers (:c:member:`PyConfig.install_signal_handlers`) are "
 "*enabled*;"
 msgstr ""
 
@@ -528,10 +528,77 @@ msgid ""
 msgstr ""
 
 #: ../../using/ios.rst:328
-msgid "App Store Compliance"
+msgid "Testing a Python package"
 msgstr ""
 
 #: ../../using/ios.rst:330
+msgid ""
+"The CPython source tree contains :source:`a testbed project <iOS/testbed>` "
+"that is used to run the CPython test suite on the iOS simulator. This "
+"testbed can also be used as a testbed project for running your Python "
+"library's test suite on iOS."
+msgstr ""
+
+#: ../../using/ios.rst:334
+msgid ""
+"After building or obtaining an iOS XCFramework (See :source:`iOS/README.rst`"
+" for details), create a clone of the Python iOS testbed project by running:"
+msgstr ""
+
+#: ../../using/ios.rst:337
+msgid ""
+"$ python iOS/testbed clone --framework <path/to/Python.xcframework> --app "
+"<path/to/module1> --app <path/to/module2> app-testbed"
+msgstr ""
+
+#: ../../using/ios.rst:341
+msgid ""
+"You will need to modify the ``iOS/testbed`` reference to point to that "
+"directory in the CPython source tree; any folders specified with the "
+"``--app`` flag will be copied into the cloned testbed project. The resulting"
+" testbed will be created in the ``app-testbed`` folder. In this example, the"
+" ``module1`` and ``module2`` would be importable modules at runtime. If your"
+" project has additional dependencies, they can be installed into the ``app-"
+"testbed/iOSTestbed/app_packages`` folder (using ``pip install --target app-"
+"testbed/iOSTestbed/app_packages`` or similar)."
+msgstr ""
+
+#: ../../using/ios.rst:350
+msgid ""
+"You can then use the ``app-testbed`` folder to run the test suite for your "
+"app, For example, if ``module1.tests`` was the entry point to your test "
+"suite, you could run:"
+msgstr ""
+
+#: ../../using/ios.rst:354
+msgid "$ python app-testbed run -- module1.tests"
+msgstr ""
+
+#: ../../using/ios.rst:358
+msgid ""
+"This is the equivalent of running ``python -m module1.tests`` on a desktop "
+"Python build. Any arguments after the ``--`` will be passed to the testbed "
+"as if they were arguments to ``python -m`` on a desktop machine."
+msgstr ""
+
+#: ../../using/ios.rst:362
+msgid "You can also open the testbed project in Xcode by running:"
+msgstr ""
+
+#: ../../using/ios.rst:364
+msgid "$ open app-testbed/iOSTestbed.xcodeproj"
+msgstr ""
+
+#: ../../using/ios.rst:368
+msgid ""
+"This will allow you to use the full Xcode suite of tools for debugging."
+msgstr ""
+
+#: ../../using/ios.rst:371
+msgid "App Store Compliance"
+msgstr ""
+
+#: ../../using/ios.rst:373
 msgid ""
 "The only mechanism for distributing apps to third-party iOS devices is to "
 "submit the app to the iOS App Store; apps submitted for distribution must "
@@ -540,7 +607,7 @@ msgid ""
 "problematic code."
 msgstr ""
 
-#: ../../using/ios.rst:335
+#: ../../using/ios.rst:378
 msgid ""
 "The Python standard library contains some code that is known to violate "
 "these automated rules. While these violations appear to be false positives, "
@@ -548,7 +615,7 @@ msgid ""
 " Python standard library for an app to pass App Store review."
 msgstr ""
 
-#: ../../using/ios.rst:340
+#: ../../using/ios.rst:383
 msgid ""
 "The Python source tree contains :source:`a patch file <Mac/Resources/app-"
 "store-compliance.patch>` that will remove all code that is known to cause "

@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"POT-Creation-Date: 2025-03-14 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 00:47+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -172,87 +172,91 @@ msgid ""
 msgstr ""
 
 #: ../../tools/templates/dummy.html:6
+msgid "Availability"
+msgstr ""
+
+#: ../../tools/templates/dummy.html:10
+msgid "Part of the"
+msgstr ""
+
+#: ../../tools/templates/dummy.html:11
+msgid "Limited API"
+msgstr ""
+
+#: ../../tools/templates/dummy.html:12
+msgid "Stable ABI"
+msgstr ""
+
+#: ../../tools/templates/dummy.html:13
+msgid "(as an opaque struct)"
+msgstr ""
+
+#: ../../tools/templates/dummy.html:14
+msgid "(including all members)"
+msgstr ""
+
+#: ../../tools/templates/dummy.html:15
+msgid "since version %s"
+msgstr ""
+
+#: ../../tools/templates/dummy.html:16
+msgid "(Only some members are part of the stable ABI.)"
+msgstr ""
+
+#: ../../tools/templates/dummy.html:17
+msgid "This is"
+msgstr ""
+
+#: ../../tools/templates/dummy.html:18
+msgid "Unstable API"
+msgstr ""
+
+#: ../../tools/templates/dummy.html:19
+msgid ". It may change without warning in minor releases."
+msgstr ""
+
+#: ../../tools/templates/dummy.html:20
+msgid "Return value: Always NULL."
+msgstr ""
+
+#: ../../tools/templates/dummy.html:21
+msgid "Return value: New reference."
+msgstr ""
+
+#: ../../tools/templates/dummy.html:22
+msgid "Return value: Borrowed reference."
+msgstr ""
+
+#: ../../tools/templates/dummy.html:26
 msgid "CPython implementation detail:"
 msgstr "Деталі реалізації CPython:"
 
-#: ../../tools/templates/dummy.html:7
+#: ../../tools/templates/dummy.html:30
 msgid ""
 "Deprecated since version {deprecated}, will be removed in version {removed}"
 msgstr "Застаріло з версії {deprecated}, буде видалено у версії {removed}"
 
-#: ../../tools/templates/dummy.html:8
+#: ../../tools/templates/dummy.html:31
 msgid "Deprecated since version {deprecated}, removed in version {removed}"
 msgstr "Застаріло з версії {deprecated}, видалено у версії {removed}"
 
-#: ../../tools/templates/dummy.html:12
-msgid "Part of the"
-msgstr ""
-
-#: ../../tools/templates/dummy.html:13
-msgid "Limited API"
-msgstr ""
-
-#: ../../tools/templates/dummy.html:14
-msgid "Stable ABI"
-msgstr ""
-
-#: ../../tools/templates/dummy.html:15
-msgid "(as an opaque struct)"
-msgstr ""
-
-#: ../../tools/templates/dummy.html:16
-msgid "(including all members)"
-msgstr ""
-
-#: ../../tools/templates/dummy.html:17
-msgid "since version %s"
-msgstr ""
-
-#: ../../tools/templates/dummy.html:18
-msgid "(Only some members are part of the stable ABI.)"
-msgstr ""
-
-#: ../../tools/templates/dummy.html:19
-msgid "This is"
-msgstr ""
-
-#: ../../tools/templates/dummy.html:20
-msgid "Unstable API"
-msgstr ""
-
-#: ../../tools/templates/dummy.html:21
-msgid ". It may change without warning in minor releases."
-msgstr ""
-
-#: ../../tools/templates/dummy.html:22
-msgid "Return value: Always NULL."
-msgstr ""
-
-#: ../../tools/templates/dummy.html:23
-msgid "Return value: New reference."
-msgstr ""
-
-#: ../../tools/templates/dummy.html:24
-msgid "Return value: Borrowed reference."
-msgstr ""
-
-#: ../../tools/templates/dummy.html:28
+#: ../../tools/templates/dummy.html:35
 msgid "in development"
 msgstr "в розробці"
 
-#: ../../tools/templates/dummy.html:29
+#: ../../tools/templates/dummy.html:36
 msgid "pre-release"
 msgstr "попередній випуск"
 
-#: ../../tools/templates/dummy.html:30
+#: ../../tools/templates/dummy.html:37
 msgid "stable"
 msgstr "стабільний"
 
-#: ../../tools/templates/dummy.html:31
+#: ../../tools/templates/dummy.html:38
 msgid "security-fixes"
 msgstr "виправлення безпеки"
 
-#: ../../tools/templates/dummy.html:32
+#: ../../tools/templates/dummy.html:39
 msgid "EOL"
 msgstr "EOL"
 
