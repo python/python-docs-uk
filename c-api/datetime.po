@@ -1,19 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Dmytro Kazanzhy, 2022
+# Dmytro Kazanzhy, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"POT-Creation-Date: 2025-04-04 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 00:48+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Last-Translator: Dmytro Kazanzhy, 2025\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,22 +38,24 @@ msgstr ""
 
 #: ../../c-api/datetime.rst:18
 msgid "This subtype of :c:type:`PyObject` represents a Python date object."
-msgstr ""
+msgstr "Цей підтип :c:type:`PyObject` представляє об'єкт date в Python."
 
 #: ../../c-api/datetime.rst:22
 msgid ""
 "This subtype of :c:type:`PyObject` represents a Python datetime object."
-msgstr ""
+msgstr "Цей підтип :c:type:`PyObject` представляє об'єкт datetime в Python."
 
 #: ../../c-api/datetime.rst:26
 msgid "This subtype of :c:type:`PyObject` represents a Python time object."
-msgstr ""
+msgstr "Цей підтип :c:type:`PyObject` представляє об'єкт time в Python."
 
 #: ../../c-api/datetime.rst:30
 msgid ""
 "This subtype of :c:type:`PyObject` represents the difference between two "
 "datetime values."
 msgstr ""
+"Цей підтип :c:type:`PyObject` представляє різницю між двома значеннями "
+"datetime."
 
 #: ../../c-api/datetime.rst:34
 msgid ""

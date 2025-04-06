@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-03-21 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -916,22 +916,11 @@ msgid ""
 "transmit any :mailheader:`Bcc` or :mailheader:`Resent-Bcc` headers that may "
 "appear in *msg*.  If any of the addresses in *from_addr* and *to_addrs* "
 "contain non-ASCII characters and the server does not advertise ``SMTPUTF8`` "
-"support, an :exc:`SMTPNotSupported` error is raised.  Otherwise the "
+"support, an :exc:`SMTPNotSupportedError` is raised.  Otherwise the "
 "``Message`` is serialized with a clone of its :mod:`~email.policy` with the "
 ":attr:`~email.policy.EmailPolicy.utf8` attribute set to ``True``, and "
 "``SMTPUTF8`` and ``BODY=8BITMIME`` are added to *mail_options*."
 msgstr ""
-"``send_message`` серіалізує *msg* за допомогою "
-":class:`~email.generator.BytesGenerator` з ``\\r\\n`` як *linesep*, і "
-"викликає :meth:`sendmail` для передачі отриманого повідомлення. Незалежно "
-"від значень *from_addr* і *to_addrs*, ``send_message`` не передає жодних "
-"заголовків :mailheader:`Bcc` або :mailheader:`Resent-Bcc`, які можуть "
-"відображатися в *msg*. Якщо будь-яка з адрес у *from_addr* і *to_addrs* "
-"містить символи, відмінні від ASCII, і сервер не рекламує підтримку "
-"``SMTPUTF8``, виникає помилка :exc:`SMTPNotSupported`. В іншому випадку "
-"``Message`` серіалізується за допомогою клону його :mod:`~email.policy` з "
-":attr:`~email.policy.EmailPolicy.utf8` атрибутом ``True`` і ``SMTPUTF8`` і "
-"``BODY=8BITMIME`` додаються до *mail_options*."
 
 #: ../../library/smtplib.rst:534
 msgid "Support for internationalized addresses (``SMTPUTF8``)."

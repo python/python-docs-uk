@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-03-28 14:18+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1409,7 +1409,7 @@ msgid ""
 "LOAD_CONST (100)\n"
 "BINARY_ADD (23)\n"
 "RETURN_VALUE (83)\n"
-">>> bytecode.dis().splitlines()       \n"
+">>> bytecode.dis().splitlines()\n"
 "['  1           0 LOAD_FAST                0 (x)',\n"
 " '      -->     3 LOAD_CONST               1 (1)',\n"
 " '              6 BINARY_ADD',\n"
@@ -1886,7 +1886,7 @@ msgstr ""
 
 #: ../../whatsnew/3.4.rst:997
 msgid ""
-":mod:`importlib.util` now has a :data:`~importlib.util.MAGIC_NUMBER` "
+":mod:`importlib.util` now has a :const:`~importlib.util.MAGIC_NUMBER` "
 "attribute providing access to the bytecode version number.  This replaces "
 "the :func:`!get_magic` function in the deprecated :mod:`!imp` module. "
 "(Contributed by Brett Cannon in :issue:`18192`.)"
@@ -3778,15 +3778,11 @@ msgstr ""
 
 #: ../../whatsnew/3.4.rst:1982
 msgid ""
-"A new opcode, :opcode:`LOAD_CLASSDEREF`, has been added to fix a bug in the "
-"loading of free variables in class bodies that could be triggered by certain"
-" uses of :ref:`__prepare__ <prepare>`.  (Contributed by Benjamin Peterson in"
-" :issue:`17853`.)"
+"A new opcode, :opcode:`!LOAD_CLASSDEREF`, has been added to fix a bug in the"
+" loading of free variables in class bodies that could be triggered by "
+"certain uses of :ref:`__prepare__ <prepare>`.  (Contributed by Benjamin "
+"Peterson in :issue:`17853`.)"
 msgstr ""
-"Додано новий код операції, :opcode:`LOAD_CLASSDEREF`, щоб виправити помилку "
-"під час завантаження вільних змінних у тілах класів, яка могла бути "
-"викликана певним використанням :ref:`__prepare__ <prepare>`. (Надав "
-"Бенджамін Петерсон у :issue:`17853`.)"
 
 #: ../../whatsnew/3.4.rst:1987
 msgid ""
