@@ -1,3 +1,5 @@
+name: Translation and Linting Workflow
+
 on:
   schedule:
     - cron: '0 6 * * *'
@@ -9,6 +11,7 @@ jobs:
   update-translation:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
     steps:
@@ -18,9 +21,10 @@ jobs:
       - uses: actions/setup-python@master
         with:
           python-version: 3
+      - run: sudo apt-get install -y gettext
       - run: curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
         working-directory: /usr/local/bin
-      - run: pip install requests cogapp polib transifex-python sphinx-intl blurb six
+      - run: pip install requests cogapp polib transifex-python sphinx-lint sphinx-intl blurb six
       - uses: actions/checkout@master
         with:
           ref: ${{ matrix.version }}
@@ -40,11 +44,16 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - uses: peter-evans/repository-dispatch@main
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          event-type: translation-updated
+          python-version: 3
+      - uses: actions/checkout@master
+        with:
+          ref: ${{ matrix.version }}
+      - uses: rffontenelle/sphinx-lint-problem-matcher@v1.0.0
+      - run: sphinx-lint
   build-translation:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
         format: [html, latex]
@@ -52,7 +61,7 @@ jobs:
     steps:
       - uses: actions/setup-python@master
         with:
-          python-version: 3
+          python-version: 3.12  # pin for Sphinx 3.4.3 in 3.10 branch (see #63)
       - uses: actions/checkout@master
         with:
           repository: python/cpython
@@ -65,7 +74,8 @@ jobs:
           path: Doc/locales/uk/LC_MESSAGES
       - run: git pull
         working-directory: ./Doc/locales/uk/LC_MESSAGES
-      - run: make -e SPHINXOPTS="-D language='uk' -D gettext_compact=0" SPHINXERRORHANDLING="" ${{ matrix.format }}
+      - uses: sphinx-doc/github-problem-matcher@v1.1
+      - run: make -e SPHINXOPTS=" -D language='uk' -W --keep-going" ${{ matrix.format }}
         working-directory: ./Doc
       - uses: actions/upload-artifact@master
         with:
@@ -74,6 +84,7 @@ jobs:
   output-pdf:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
     needs: ['build-translation']
