@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-03-28 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 00:55+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -111,45 +111,46 @@ msgstr "Дивіться також підрозділ `Examples`_."
 msgid "Creating Subprocesses"
 msgstr "Створення підпроцесів"
 
-#: ../../library/asyncio-subprocess.rst:67
+#: ../../library/asyncio-subprocess.rst:68
 msgid "Create a subprocess."
 msgstr "Створіть підпроцес."
 
-#: ../../library/asyncio-subprocess.rst:69
-#: ../../library/asyncio-subprocess.rst:87
+#: ../../library/asyncio-subprocess.rst:70
+#: ../../library/asyncio-subprocess.rst:89
 msgid ""
 "The *limit* argument sets the buffer limit for :class:`StreamReader` "
-"wrappers for :attr:`Process.stdout` and :attr:`Process.stderr` (if "
-":const:`subprocess.PIPE` is passed to *stdout* and *stderr* arguments)."
+"wrappers for :attr:`~asyncio.subprocess.Process.stdout` and "
+":attr:`~asyncio.subprocess.Process.stderr` (if :const:`subprocess.PIPE` is "
+"passed to *stdout* and *stderr* arguments)."
 msgstr ""
 
-#: ../../library/asyncio-subprocess.rst:73
-#: ../../library/asyncio-subprocess.rst:91
+#: ../../library/asyncio-subprocess.rst:74
+#: ../../library/asyncio-subprocess.rst:93
 msgid "Return a :class:`~asyncio.subprocess.Process` instance."
 msgstr "Повертає екземпляр :class:`~asyncio.subprocess.Process`."
 
-#: ../../library/asyncio-subprocess.rst:75
+#: ../../library/asyncio-subprocess.rst:76
 msgid ""
 "See the documentation of :meth:`loop.subprocess_exec` for other parameters."
 msgstr ""
 "Перегляньте документацію :meth:`loop.subprocess_exec` для інших параметрів."
 
-#: ../../library/asyncio-subprocess.rst:78
-#: ../../library/asyncio-subprocess.rst:105
+#: ../../library/asyncio-subprocess.rst:79
+#: ../../library/asyncio-subprocess.rst:107
 msgid "Removed the *loop* parameter."
 msgstr "Видалено параметр *loop*."
 
-#: ../../library/asyncio-subprocess.rst:85
+#: ../../library/asyncio-subprocess.rst:87
 msgid "Run the *cmd* shell command."
 msgstr "Виконайте команду оболонки *cmd*."
 
-#: ../../library/asyncio-subprocess.rst:93
+#: ../../library/asyncio-subprocess.rst:95
 msgid ""
 "See the documentation of :meth:`loop.subprocess_shell` for other parameters."
 msgstr ""
 "Перегляньте документацію :meth:`loop.subprocess_shell` для інших параметрів."
 
-#: ../../library/asyncio-subprocess.rst:98
+#: ../../library/asyncio-subprocess.rst:100
 msgid ""
 "It is the application's responsibility to ensure that all whitespace and "
 "special characters are quoted appropriately to avoid `shell injection "
@@ -165,7 +166,7 @@ msgstr ""
 "пробілів і спеціальних символів оболонки в рядках, які використовуватимуться"
 " для створення команд оболонки."
 
-#: ../../library/asyncio-subprocess.rst:110
+#: ../../library/asyncio-subprocess.rst:112
 msgid ""
 "Subprocesses are available for Windows if a :class:`ProactorEventLoop` is "
 "used. See :ref:`Subprocess Support on Windows <asyncio-windows-subprocess>` "
@@ -175,7 +176,7 @@ msgstr ""
 ":class:`ProactorEventLoop`. Дивіться :ref:`Підтримку підпроцесів у Windows "
 "<asyncio-windows-subprocess>`, щоб дізнатися більше."
 
-#: ../../library/asyncio-subprocess.rst:116
+#: ../../library/asyncio-subprocess.rst:118
 msgid ""
 "asyncio also has the following *low-level* APIs to work with subprocesses: "
 ":meth:`loop.subprocess_exec`, :meth:`loop.subprocess_shell`, "
@@ -189,37 +190,30 @@ msgstr ""
 ":ref:`Транспорти підпроцесів <asyncio-subprocess-transports>` і "
 ":ref:`Протоколи підпроцесів <asyncio-subprocess-protocols>`."
 
-#: ../../library/asyncio-subprocess.rst:124
+#: ../../library/asyncio-subprocess.rst:126
 msgid "Constants"
 msgstr "Константи"
 
-#: ../../library/asyncio-subprocess.rst:129
+#: ../../library/asyncio-subprocess.rst:131
 msgid "Can be passed to the *stdin*, *stdout* or *stderr* parameters."
 msgstr "Можна передати в параметри *stdin*, *stdout* або *stderr*."
 
-#: ../../library/asyncio-subprocess.rst:131
+#: ../../library/asyncio-subprocess.rst:133
 msgid ""
 "If *PIPE* is passed to *stdin* argument, the :attr:`Process.stdin "
 "<asyncio.subprocess.Process.stdin>` attribute will point to a "
-":class:`StreamWriter` instance."
+":class:`~asyncio.StreamWriter` instance."
 msgstr ""
-"Якщо *PIPE* передано аргументу *stdin*, атрибут :attr:`Process.stdin "
-"<asyncio.subprocess.Process.stdin>` вказуватиме на примірник "
-":class:`StreamWriter`."
 
-#: ../../library/asyncio-subprocess.rst:135
+#: ../../library/asyncio-subprocess.rst:137
 msgid ""
 "If *PIPE* is passed to *stdout* or *stderr* arguments, the "
 ":attr:`Process.stdout <asyncio.subprocess.Process.stdout>` and "
 ":attr:`Process.stderr <asyncio.subprocess.Process.stderr>` attributes will "
-"point to :class:`StreamReader` instances."
+"point to :class:`~asyncio.StreamReader` instances."
 msgstr ""
-"Якщо *PIPE* передано аргументам *stdout* або *stderr*, атрибути "
-":attr:`Process.stdout <asyncio.subprocess.Process.stdout>` і "
-":attr:`Process.stderr <asyncio.subprocess.Process.stderr>` вказуватимуть на "
-"екземпляри :class:`StreamReader`."
 
-#: ../../library/asyncio-subprocess.rst:143
+#: ../../library/asyncio-subprocess.rst:145
 msgid ""
 "Special value that can be used as the *stderr* argument and indicates that "
 "standard error should be redirected into standard output."
@@ -227,7 +221,7 @@ msgstr ""
 "Спеціальне значення, яке можна використовувати як аргумент *stderr* і вказує"
 " на те, що стандартну помилку слід перенаправляти в стандартний вивід."
 
-#: ../../library/asyncio-subprocess.rst:149
+#: ../../library/asyncio-subprocess.rst:151
 msgid ""
 "Special value that can be used as the *stdin*, *stdout* or *stderr* argument"
 " to process creation functions.  It indicates that the special file "
@@ -237,11 +231,11 @@ msgstr ""
 " або *stderr* для функцій створення процесу. Це вказує, що спеціальний файл "
 ":data:`os.devnull` буде використано для відповідного потоку підпроцесу."
 
-#: ../../library/asyncio-subprocess.rst:155
+#: ../../library/asyncio-subprocess.rst:157
 msgid "Interacting with Subprocesses"
 msgstr "Взаємодія з підпроцесами"
 
-#: ../../library/asyncio-subprocess.rst:157
+#: ../../library/asyncio-subprocess.rst:159
 msgid ""
 "Both :func:`create_subprocess_exec` and :func:`create_subprocess_shell` "
 "functions return instances of the *Process* class.  *Process* is a high-"
@@ -253,16 +247,14 @@ msgstr ""
 "*Process* — це високорівнева оболонка, яка дозволяє спілкуватися з "
 "підпроцесами та спостерігати за їх завершенням."
 
-#: ../../library/asyncio-subprocess.rst:165
+#: ../../library/asyncio-subprocess.rst:167
 msgid ""
 "An object that wraps OS processes created by the "
-":func:`create_subprocess_exec` and :func:`create_subprocess_shell` "
-"functions."
+":func:`~asyncio.create_subprocess_exec` and "
+":func:`~asyncio.create_subprocess_shell` functions."
 msgstr ""
-"Об’єкт, який обгортає процеси ОС, створені функціями "
-":func:`create_subprocess_exec` і :func:`create_subprocess_shell`."
 
-#: ../../library/asyncio-subprocess.rst:169
+#: ../../library/asyncio-subprocess.rst:171
 msgid ""
 "This class is designed to have a similar API to the "
 ":class:`subprocess.Popen` class, but there are some notable differences:"
@@ -270,7 +262,7 @@ msgstr ""
 "Цей клас розроблено таким чином, щоб мати API, подібний до класу "
 ":class:`subprocess.Popen`, але є деякі помітні відмінності:"
 
-#: ../../library/asyncio-subprocess.rst:173
+#: ../../library/asyncio-subprocess.rst:175
 msgid ""
 "unlike Popen, Process instances do not have an equivalent to the "
 ":meth:`~subprocess.Popen.poll` method;"
@@ -278,14 +270,14 @@ msgstr ""
 "на відміну від Popen, екземпляри Process не мають еквівалента методу "
 ":meth:`~subprocess.Popen.poll`;"
 
-#: ../../library/asyncio-subprocess.rst:176
+#: ../../library/asyncio-subprocess.rst:178
 msgid ""
 "the :meth:`~asyncio.subprocess.Process.communicate` and "
 ":meth:`~asyncio.subprocess.Process.wait` methods don't have a *timeout* "
 "parameter: use the :func:`~asyncio.wait_for` function;"
 msgstr ""
 
-#: ../../library/asyncio-subprocess.rst:180
+#: ../../library/asyncio-subprocess.rst:182
 msgid ""
 "the :meth:`Process.wait() <asyncio.subprocess.Process.wait>` method is "
 "asynchronous, whereas :meth:`subprocess.Popen.wait` method is implemented as"
@@ -295,15 +287,15 @@ msgstr ""
 "асинхронним, тоді як метод :meth:`subprocess.Popen.wait` реалізовано як "
 "блокуючий цикл зайнятості;"
 
-#: ../../library/asyncio-subprocess.rst:184
+#: ../../library/asyncio-subprocess.rst:186
 msgid "the *universal_newlines* parameter is not supported."
 msgstr "параметр *universal_newlines* не підтримується."
 
-#: ../../library/asyncio-subprocess.rst:186
+#: ../../library/asyncio-subprocess.rst:188
 msgid "This class is :ref:`not thread safe <asyncio-multithreading>`."
 msgstr "Цей клас :ref:`не потоково безпечний <asyncio-multithreading>`."
 
-#: ../../library/asyncio-subprocess.rst:188
+#: ../../library/asyncio-subprocess.rst:190
 msgid ""
 "See also the :ref:`Subprocess and Threads <asyncio-subprocess-threads>` "
 "section."
@@ -311,15 +303,15 @@ msgstr ""
 "Дивіться також розділ :ref:`Підпроцеси та потоки <asyncio-subprocess-"
 "threads>`."
 
-#: ../../library/asyncio-subprocess.rst:193
+#: ../../library/asyncio-subprocess.rst:196
 msgid "Wait for the child process to terminate."
 msgstr "Дочекайтеся завершення дочірнього процесу."
 
-#: ../../library/asyncio-subprocess.rst:195
+#: ../../library/asyncio-subprocess.rst:198
 msgid "Set and return the :attr:`returncode` attribute."
 msgstr "Установіть і поверніть атрибут :attr:`returncode`."
 
-#: ../../library/asyncio-subprocess.rst:199
+#: ../../library/asyncio-subprocess.rst:202
 msgid ""
 "This method can deadlock when using ``stdout=PIPE`` or ``stderr=PIPE`` and "
 "the child process generates so much output that it blocks waiting for the OS"
@@ -332,27 +324,27 @@ msgstr ""
 " даних. Використовуйте метод :meth:`communicate` під час використання "
 "каналів, щоб уникнути цієї ситуації."
 
-#: ../../library/asyncio-subprocess.rst:207
+#: ../../library/asyncio-subprocess.rst:211
 msgid "Interact with process:"
 msgstr "Взаємодія з процесом:"
 
-#: ../../library/asyncio-subprocess.rst:209
+#: ../../library/asyncio-subprocess.rst:213
 msgid "send data to *stdin* (if *input* is not ``None``);"
 msgstr "надсилати дані на *stdin* (якщо *input* не ``None``);"
 
-#: ../../library/asyncio-subprocess.rst:210
+#: ../../library/asyncio-subprocess.rst:214
 msgid "closes *stdin*;"
 msgstr ""
 
-#: ../../library/asyncio-subprocess.rst:211
+#: ../../library/asyncio-subprocess.rst:215
 msgid "read data from *stdout* and *stderr*, until EOF is reached;"
 msgstr "читати дані з *stdout* і *stderr*, доки не буде досягнуто EOF;"
 
-#: ../../library/asyncio-subprocess.rst:212
+#: ../../library/asyncio-subprocess.rst:216
 msgid "wait for process to terminate."
 msgstr "дочекайтеся завершення процесу."
 
-#: ../../library/asyncio-subprocess.rst:214
+#: ../../library/asyncio-subprocess.rst:218
 msgid ""
 "The optional *input* argument is the data (:class:`bytes` object) that will "
 "be sent to the child process."
@@ -360,11 +352,11 @@ msgstr ""
 "Додатковий *вхідний* аргумент — це дані (об’єкт :class:`bytes`), які будуть "
 "надіслані дочірньому процесу."
 
-#: ../../library/asyncio-subprocess.rst:217
+#: ../../library/asyncio-subprocess.rst:221
 msgid "Return a tuple ``(stdout_data, stderr_data)``."
 msgstr "Повертає кортеж ``(stdout_data, stderr_data)``."
 
-#: ../../library/asyncio-subprocess.rst:219
+#: ../../library/asyncio-subprocess.rst:223
 msgid ""
 "If either :exc:`BrokenPipeError` or :exc:`ConnectionResetError` exception is"
 " raised when writing *input* into *stdin*, the exception is ignored.  This "
@@ -376,7 +368,7 @@ msgstr ""
 " Ця умова виникає, коли процес завершується до того, як усі дані будуть "
 "записані в *stdin*."
 
-#: ../../library/asyncio-subprocess.rst:224
+#: ../../library/asyncio-subprocess.rst:228
 msgid ""
 "If it is desired to send data to the process' *stdin*, the process needs to "
 "be created with ``stdin=PIPE``.  Similarly, to get anything other than "
@@ -388,7 +380,7 @@ msgstr ""
 " щось інше, окрім ``None``, процес має бути створений з аргументами "
 "``stdout=PIPE`` та/або ``stderr=PIPE``."
 
-#: ../../library/asyncio-subprocess.rst:230
+#: ../../library/asyncio-subprocess.rst:234
 msgid ""
 "Note, that the data read is buffered in memory, so do not use this method if"
 " the data size is large or unlimited."
@@ -396,15 +388,15 @@ msgstr ""
 "Зауважте, що зчитані дані буферизуються в пам’яті, тому не використовуйте "
 "цей метод, якщо розмір даних великий або необмежений."
 
-#: ../../library/asyncio-subprocess.rst:235
-msgid "*stdin* gets closed when `input=None` too."
+#: ../../library/asyncio-subprocess.rst:239
+msgid "*stdin* gets closed when ``input=None`` too."
 msgstr ""
 
-#: ../../library/asyncio-subprocess.rst:239
+#: ../../library/asyncio-subprocess.rst:243
 msgid "Sends the signal *signal* to the child process."
 msgstr "Надсилає сигнал *signal* дочірньому процесу."
 
-#: ../../library/asyncio-subprocess.rst:243
+#: ../../library/asyncio-subprocess.rst:247
 msgid ""
 "On Windows, :py:const:`~signal.SIGTERM` is an alias for :meth:`terminate`. "
 "``CTRL_C_EVENT`` and ``CTRL_BREAK_EVENT`` can be sent to processes started "
@@ -412,61 +404,55 @@ msgid ""
 "``CREATE_NEW_PROCESS_GROUP``."
 msgstr ""
 
-#: ../../library/asyncio-subprocess.rst:250
+#: ../../library/asyncio-subprocess.rst:254
 msgid "Stop the child process."
 msgstr "Зупиніть дочірній процес."
 
-#: ../../library/asyncio-subprocess.rst:252
+#: ../../library/asyncio-subprocess.rst:256
 msgid ""
 "On POSIX systems this method sends :py:const:`~signal.SIGTERM` to the child "
 "process."
 msgstr ""
 
-#: ../../library/asyncio-subprocess.rst:255
+#: ../../library/asyncio-subprocess.rst:259
 msgid ""
 "On Windows the Win32 API function :c:func:`!TerminateProcess` is called to "
 "stop the child process."
 msgstr ""
 
-#: ../../library/asyncio-subprocess.rst:260
+#: ../../library/asyncio-subprocess.rst:264
 msgid "Kill the child process."
 msgstr "Закрийте дочірній процес."
 
-#: ../../library/asyncio-subprocess.rst:262
+#: ../../library/asyncio-subprocess.rst:266
 msgid ""
-"On POSIX systems this method sends :py:data:`SIGKILL` to the child process."
+"On POSIX systems this method sends :py:data:`~signal.SIGKILL` to the child "
+"process."
 msgstr ""
-"У системах POSIX цей метод надсилає :py:data:`SIGKILL` дочірньому процесу."
 
-#: ../../library/asyncio-subprocess.rst:265
+#: ../../library/asyncio-subprocess.rst:269
 msgid "On Windows this method is an alias for :meth:`terminate`."
 msgstr "У Windows цей метод є псевдонімом для :meth:`terminate`."
 
-#: ../../library/asyncio-subprocess.rst:269
+#: ../../library/asyncio-subprocess.rst:273
 msgid ""
-"Standard input stream (:class:`StreamWriter`) or ``None`` if the process was"
-" created with ``stdin=None``."
+"Standard input stream (:class:`~asyncio.StreamWriter`) or ``None`` if the "
+"process was created with ``stdin=None``."
 msgstr ""
-"Стандартний вхідний потік (:class:`StreamWriter`) або ``None``, якщо процес "
-"було створено за допомогою ``stdin=None``."
 
-#: ../../library/asyncio-subprocess.rst:274
+#: ../../library/asyncio-subprocess.rst:278
 msgid ""
-"Standard output stream (:class:`StreamReader`) or ``None`` if the process "
-"was created with ``stdout=None``."
+"Standard output stream (:class:`~asyncio.StreamReader`) or ``None`` if the "
+"process was created with ``stdout=None``."
 msgstr ""
-"Стандартний вихідний потік (:class:`StreamReader`) або ``None``, якщо процес"
-" було створено за допомогою ``stdout=None``."
 
-#: ../../library/asyncio-subprocess.rst:279
+#: ../../library/asyncio-subprocess.rst:283
 msgid ""
-"Standard error stream (:class:`StreamReader`) or ``None`` if the process was"
-" created with ``stderr=None``."
+"Standard error stream (:class:`~asyncio.StreamReader`) or ``None`` if the "
+"process was created with ``stderr=None``."
 msgstr ""
-"Стандартний потік помилок (:class:`StreamReader`) або ``None``, якщо процес "
-"було створено за допомогою ``stderr=None``."
 
-#: ../../library/asyncio-subprocess.rst:284
+#: ../../library/asyncio-subprocess.rst:288
 msgid ""
 "Use the :meth:`communicate` method rather than :attr:`process.stdin.write() "
 "<stdin>`, :attr:`await process.stdout.read() <stdout>` or :attr:`await "
@@ -479,27 +465,26 @@ msgstr ""
 "уникнути взаємоблокувань через те, що потоки призупиняють читання або запис "
 "і блокують дочірній процес."
 
-#: ../../library/asyncio-subprocess.rst:293
+#: ../../library/asyncio-subprocess.rst:297
 msgid "Process identification number (PID)."
 msgstr "Ідентифікаційний номер процесу (PID)."
 
-#: ../../library/asyncio-subprocess.rst:295
+#: ../../library/asyncio-subprocess.rst:299
 msgid ""
-"Note that for processes created by the :func:`create_subprocess_shell` "
-"function, this attribute is the PID of the spawned shell."
+"Note that for processes created by the "
+":func:`~asyncio.create_subprocess_shell` function, this attribute is the PID"
+" of the spawned shell."
 msgstr ""
-"Зауважте, що для процесів, створених функцією "
-":func:`create_subprocess_shell`, цей атрибут є PID створеної оболонки."
 
-#: ../../library/asyncio-subprocess.rst:300
+#: ../../library/asyncio-subprocess.rst:304
 msgid "Return code of the process when it exits."
 msgstr "Код повернення процесу під час його завершення."
 
-#: ../../library/asyncio-subprocess.rst:302
+#: ../../library/asyncio-subprocess.rst:306
 msgid "A ``None`` value indicates that the process has not terminated yet."
 msgstr "Значення ``None`` вказує на те, що процес ще не завершено."
 
-#: ../../library/asyncio-subprocess.rst:304
+#: ../../library/asyncio-subprocess.rst:308
 msgid ""
 "A negative value ``-N`` indicates that the child was terminated by signal "
 "``N`` (POSIX only)."
@@ -507,11 +492,11 @@ msgstr ""
 "Від’ємне значення ``-N`` вказує на те, що дочірній елемент було завершено "
 "сигналом ``N`` (лише POSIX)."
 
-#: ../../library/asyncio-subprocess.rst:311
+#: ../../library/asyncio-subprocess.rst:315
 msgid "Subprocess and Threads"
 msgstr "Підпроцеси та потоки"
 
-#: ../../library/asyncio-subprocess.rst:313
+#: ../../library/asyncio-subprocess.rst:317
 msgid ""
 "Standard asyncio event loop supports running subprocesses from different "
 "threads by default."
@@ -519,7 +504,7 @@ msgstr ""
 "Стандартний асинхронний цикл подій за замовчуванням підтримує виконання "
 "підпроцесів з різних потоків."
 
-#: ../../library/asyncio-subprocess.rst:316
+#: ../../library/asyncio-subprocess.rst:320
 msgid ""
 "On Windows subprocesses are provided by :class:`ProactorEventLoop` only "
 "(default), :class:`SelectorEventLoop` has no subprocess support."
@@ -527,7 +512,7 @@ msgstr ""
 "У Windows підпроцеси надаються лише :class:`ProactorEventLoop` (за "
 "замовчуванням), :class:`SelectorEventLoop` не підтримує підпроцеси."
 
-#: ../../library/asyncio-subprocess.rst:319
+#: ../../library/asyncio-subprocess.rst:323
 msgid ""
 "On UNIX *child watchers* are used for subprocess finish waiting, see "
 ":ref:`asyncio-watchers` for more info."
@@ -536,7 +521,7 @@ msgstr ""
 "підпроцесу, див. :ref:`asyncio-watchers` для отримання додаткової "
 "інформації."
 
-#: ../../library/asyncio-subprocess.rst:325
+#: ../../library/asyncio-subprocess.rst:329
 msgid ""
 "UNIX switched to use :class:`ThreadedChildWatcher` for spawning subprocesses"
 " from different threads without any limitation."
@@ -544,7 +529,7 @@ msgstr ""
 "UNIX перейшла на використання :class:`ThreadedChildWatcher` для створення "
 "підпроцесів з різних потоків без будь-яких обмежень."
 
-#: ../../library/asyncio-subprocess.rst:328
+#: ../../library/asyncio-subprocess.rst:332
 msgid ""
 "Spawning a subprocess with *inactive* current child watcher raises "
 ":exc:`RuntimeError`."
@@ -552,7 +537,7 @@ msgstr ""
 "Створення підпроцесу з *неактивним* поточним дочірнім спостерігачем викликає"
 " :exc:`RuntimeError`."
 
-#: ../../library/asyncio-subprocess.rst:331
+#: ../../library/asyncio-subprocess.rst:335
 msgid ""
 "Note that alternative event loop implementations might have own limitations;"
 " please refer to their documentation."
@@ -560,7 +545,7 @@ msgstr ""
 "Зауважте, що альтернативні реалізації циклу подій можуть мати власні "
 "обмеження; зверніться до їх документації."
 
-#: ../../library/asyncio-subprocess.rst:336
+#: ../../library/asyncio-subprocess.rst:340
 msgid ""
 "The :ref:`Concurrency and multithreading in asyncio <asyncio-"
 "multithreading>` section."
@@ -568,11 +553,11 @@ msgstr ""
 "Розділ :ref:`Параллельність і багатопотоковість в asyncio <asyncio-"
 "multithreading>`."
 
-#: ../../library/asyncio-subprocess.rst:341
+#: ../../library/asyncio-subprocess.rst:345
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../library/asyncio-subprocess.rst:343
+#: ../../library/asyncio-subprocess.rst:347
 msgid ""
 "An example using the :class:`~asyncio.subprocess.Process` class to control a"
 " subprocess and the :class:`StreamReader` class to read from its standard "
@@ -582,12 +567,12 @@ msgstr ""
 "керування підпроцесом і класу :class:`StreamReader` для читання зі "
 "стандартного виводу."
 
-#: ../../library/asyncio-subprocess.rst:349
+#: ../../library/asyncio-subprocess.rst:353
 msgid ""
 "The subprocess is created by the :func:`create_subprocess_exec` function::"
 msgstr "Підпроцес створюється функцією :func:`create_subprocess_exec`::"
 
-#: ../../library/asyncio-subprocess.rst:352
+#: ../../library/asyncio-subprocess.rst:356
 msgid ""
 "import asyncio\n"
 "import sys\n"
@@ -613,7 +598,7 @@ msgid ""
 "print(f\"Current date: {date}\")"
 msgstr ""
 
-#: ../../library/asyncio-subprocess.rst:376
+#: ../../library/asyncio-subprocess.rst:380
 msgid ""
 "See also the :ref:`same example <asyncio_example_subprocess_proto>` written "
 "using low-level APIs."

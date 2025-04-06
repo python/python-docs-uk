@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"POT-Creation-Date: 2025-03-28 14:18+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -4744,19 +4744,15 @@ msgstr "Зміни байт-коду CPython"
 
 #: ../../whatsnew/3.7.rst:2479
 msgid ""
-"There are two new opcodes: :opcode:`LOAD_METHOD` and :opcode:`CALL_METHOD`. "
-"(Contributed by Yury Selivanov and INADA Naoki in :issue:`26110`.)"
+"There are two new opcodes: :opcode:`LOAD_METHOD` and :opcode:`!CALL_METHOD`."
+" (Contributed by Yury Selivanov and INADA Naoki in :issue:`26110`.)"
 msgstr ""
-"Є два нові коди операції: :opcode:`LOAD_METHOD` і :opcode:`CALL_METHOD`. "
-"(Надано Юрієм Селівановим та INADA Naoki у :issue:`26110`.)"
 
 #: ../../whatsnew/3.7.rst:2482
 msgid ""
-"The :opcode:`STORE_ANNOTATION` opcode has been removed. (Contributed by Mark"
-" Shannon in :issue:`32550`.)"
+"The :opcode:`!STORE_ANNOTATION` opcode has been removed. (Contributed by "
+"Mark Shannon in :issue:`32550`.)"
 msgstr ""
-"Код операції :opcode:`STORE_ANNOTATION` видалено. (Надав Марк Шеннон у "
-":issue:`32550`.)"
 
 #: ../../whatsnew/3.7.rst:2489
 msgid ""

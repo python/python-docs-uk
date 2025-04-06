@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"POT-Creation-Date: 2025-03-28 14:18+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -4322,15 +4322,11 @@ msgstr ""
 
 #: ../../whatsnew/3.6.rst:2369
 msgid ""
-"The new :opcode:`FORMAT_VALUE` and :opcode:`BUILD_STRING` opcodes as part of"
-" the  :ref:`formatted string literal <whatsnew36-pep498>` implementation. "
+"The new :opcode:`!FORMAT_VALUE` and :opcode:`BUILD_STRING` opcodes as part "
+"of the  :ref:`formatted string literal <whatsnew36-pep498>` implementation. "
 "(Contributed by Eric Smith in :issue:`25483` and Serhiy Storchaka in "
 ":issue:`27078`.)"
 msgstr ""
-"Нові коди операцій :opcode:`FORMAT_VALUE` і :opcode:`BUILD_STRING` як "
-"частина реалізації літералу :ref:`форматованого рядка <whatsnew36-pep498>`. "
-"(Надано Еріком Смітом у :issue:`25483` та Сергієм Сторчакою у "
-":issue:`27078`.)"
 
 #: ../../whatsnew/3.6.rst:2374
 msgid ""
@@ -4345,31 +4341,20 @@ msgstr ""
 msgid ""
 "The function call opcodes have been heavily reworked for better performance "
 "and simpler implementation. The :opcode:`MAKE_FUNCTION`, "
-":opcode:`CALL_FUNCTION`, :opcode:`CALL_FUNCTION_KW` and "
-":opcode:`BUILD_MAP_UNPACK_WITH_CALL` opcodes have been modified, the new "
-":opcode:`CALL_FUNCTION_EX` and :opcode:`BUILD_TUPLE_UNPACK_WITH_CALL` have "
+":opcode:`!CALL_FUNCTION`, :opcode:`!CALL_FUNCTION_KW` and "
+":opcode:`!BUILD_MAP_UNPACK_WITH_CALL` opcodes have been modified, the new "
+":opcode:`CALL_FUNCTION_EX` and :opcode:`!BUILD_TUPLE_UNPACK_WITH_CALL` have "
 "been added, and ``CALL_FUNCTION_VAR``, ``CALL_FUNCTION_VAR_KW`` and "
 "``MAKE_CLOSURE`` opcodes have been removed. (Contributed by Demur Rumed in "
 ":issue:`27095`, and Serhiy Storchaka in :issue:`27213`, :issue:`28257`.)"
 msgstr ""
-"Коди операцій виклику функцій були значно перероблені для кращої "
-"продуктивності та простішої реалізації. Коди операцій "
-":opcode:`MAKE_FUNCTION`, :opcode:`CALL_FUNCTION`, :opcode:`CALL_FUNCTION_KW`"
-" і :opcode:`BUILD_MAP_UNPACK_WITH_CALL` змінено, нові "
-":opcode:`CALL_FUNCTION_EX` і :opcode:`BUILD_TUPLE_UNPACK_WITH_CALL` додано, "
-"а коди операцій ``CALL_FUNCTION_VAR``, ``CALL_FUNCTION_VAR_KW`` і "
-"``MAKE_CLOSURE`` видалено. (Надано Демуром Румедом у :issue:`27095` та "
-"Сергієм Сторчакою у :issue:`27213`, :issue:`28257`.)"
 
 #: ../../whatsnew/3.6.rst:2389
 msgid ""
-"The new :opcode:`SETUP_ANNOTATIONS` and :opcode:`STORE_ANNOTATION` opcodes "
+"The new :opcode:`SETUP_ANNOTATIONS` and :opcode:`!STORE_ANNOTATION` opcodes "
 "have been added to support the new :term:`variable annotation` syntax. "
 "(Contributed by Ivan Levkivskyi in :issue:`27985`.)"
 msgstr ""
-"Нові коди операцій :opcode:`SETUP_ANNOTATIONS` і :opcode:`STORE_ANNOTATION` "
-"додано для підтримки нового синтаксису :term:`variable annotation`. (Надав "
-"Іван Левківський у :issue:`27985`.)"
 
 #: ../../whatsnew/3.6.rst:2395
 msgid "Notable changes in Python 3.6.2"

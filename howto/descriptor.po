@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"POT-Creation-Date: 2025-03-28 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 00:53+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -115,11 +115,9 @@ msgstr "Простий приклад: дескриптор, який повер
 
 #: ../../howto/descriptor.rst:45
 msgid ""
-"The :class:`Ten` class is a descriptor whose :meth:`__get__` method always "
-"returns the constant ``10``:"
+"The :class:`!Ten` class is a descriptor whose :meth:`~object.__get__` method"
+" always returns the constant ``10``:"
 msgstr ""
-"Клас :class:`Ten` — це дескриптор, чий метод :meth:`__get__` завжди повертає"
-" константу ``10``:"
 
 #: ../../howto/descriptor.rst:48
 msgid ""
@@ -247,17 +245,12 @@ msgstr ""
 #: ../../howto/descriptor.rst:122
 msgid ""
 "Besides showing how descriptors can run computations, this example also "
-"reveals the purpose of the parameters to :meth:`__get__`.  The *self* "
-"parameter is *size*, an instance of *DirectorySize*.  The *obj* parameter is"
-" either *g* or *s*, an instance of *Directory*.  It is the *obj* parameter "
-"that lets the :meth:`__get__` method learn the target directory.  The "
-"*objtype* parameter is the class *Directory*."
+"reveals the purpose of the parameters to :meth:`~object.__get__`.  The "
+"*self* parameter is *size*, an instance of *DirectorySize*.  The *obj* "
+"parameter is either *g* or *s*, an instance of *Directory*.  It is the *obj*"
+" parameter that lets the :meth:`~object.__get__` method learn the target "
+"directory.  The *objtype* parameter is the class *Directory*."
 msgstr ""
-"Крім показу того, як дескриптори можуть запускати обчислення, цей приклад "
-"також показує призначення параметрів для :meth:`__get__`. Параметр *self* — "
-"це *size*, екземпляр *DirectorySize*. Параметр *obj* — це або *g*, або *s*, "
-"екземпляр *Directory*. Саме параметр *obj* дозволяє методу :meth:`__get__` "
-"вивчати цільовий каталог. Параметр *objtype* є класом *Directory*."
 
 #: ../../howto/descriptor.rst:131
 msgid "Managed attributes"
@@ -268,14 +261,9 @@ msgid ""
 "A popular use for descriptors is managing access to instance data.  The "
 "descriptor is assigned to a public attribute in the class dictionary while "
 "the actual data is stored as a private attribute in the instance dictionary."
-"  The descriptor's :meth:`__get__` and :meth:`__set__` methods are triggered"
-" when the public attribute is accessed."
+"  The descriptor's :meth:`~object.__get__` and :meth:`~object.__set__` "
+"methods are triggered when the public attribute is accessed."
 msgstr ""
-"Популярним використанням дескрипторів є керування доступом до даних "
-"екземплярів. Дескриптор призначається публічному атрибуту в словнику класу, "
-"а фактичні дані зберігаються як приватний атрибут у словнику екземпляра. "
-"Методи дескриптора :meth:`__get__` і :meth:`__set__` запускаються під час "
-"доступу до публічного атрибута."
 
 #: ../../howto/descriptor.rst:139
 msgid ""
@@ -376,16 +364,12 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:218
 msgid ""
-"In this example, the :class:`Person` class has two descriptor instances, "
-"*name* and *age*.  When the :class:`Person` class is defined, it makes a "
-"callback to :meth:`__set_name__` in *LoggedAccess* so that the field names "
-"can be recorded, giving each descriptor its own *public_name* and "
+"In this example, the :class:`!Person` class has two descriptor instances, "
+"*name* and *age*.  When the :class:`!Person` class is defined, it makes a "
+"callback to :meth:`~object.__set_name__` in *LoggedAccess* so that the field"
+" names can be recorded, giving each descriptor its own *public_name* and "
 "*private_name*:"
 msgstr ""
-"У цьому прикладі клас :class:`Person` має два екземпляри дескриптора, *name*"
-" і *age*. Коли визначено клас :class:`Person`, він здійснює зворотний виклик"
-" до :meth:`__set_name__` у *LoggedAccess*, щоб можна було записати назви "
-"полів, надаючи кожному дескриптору власні *public_name* і *private_name*:"
 
 #: ../../howto/descriptor.rst:223
 msgid ""
@@ -423,13 +407,10 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:256
 msgid ""
-"An interactive session shows that the :class:`Person` class has called "
-":meth:`__set_name__` so that the field names would be recorded.  Here we "
-"call :func:`vars` to look up the descriptor without triggering it:"
+"An interactive session shows that the :class:`!Person` class has called "
+":meth:`~object.__set_name__` so that the field names would be recorded.  "
+"Here we call :func:`vars` to look up the descriptor without triggering it:"
 msgstr ""
-"Інтерактивний сеанс показує, що клас :class:`Person` викликав "
-":meth:`__set_name__`, щоб назви полів були записані. Тут ми викликаємо "
-":func:`vars` для пошуку дескриптора без його запуску:"
 
 #: ../../howto/descriptor.rst:260
 msgid ""
@@ -472,23 +453,17 @@ msgstr "Закриття думок"
 #: ../../howto/descriptor.rst:297
 msgid ""
 "A :term:`descriptor` is what we call any object that defines "
-":meth:`__get__`, :meth:`__set__`, or :meth:`__delete__`."
+":meth:`~object.__get__`, :meth:`~object.__set__`, or "
+":meth:`~object.__delete__`."
 msgstr ""
-":term:`descriptor` — це те, що ми називаємо будь-яким об’єктом, який "
-"визначає :meth:`__get__`, :meth:`__set__` або :meth:`__delete__`."
 
 #: ../../howto/descriptor.rst:300
 msgid ""
-"Optionally, descriptors can have a :meth:`__set_name__` method.  This is "
-"only used in cases where a descriptor needs to know either the class where "
-"it was created or the name of class variable it was assigned to.  (This "
-"method, if present, is called even if the class is not a descriptor.)"
+"Optionally, descriptors can have a :meth:`~object.__set_name__` method.  "
+"This is only used in cases where a descriptor needs to know either the class"
+" where it was created or the name of class variable it was assigned to.  "
+"(This method, if present, is called even if the class is not a descriptor.)"
 msgstr ""
-"Додатково дескриптори можуть мати метод :meth:`__set_name__`. Це "
-"використовується лише у випадках, коли дескриптору потрібно знати або клас, "
-"у якому він був створений, або назву змінної класу, якій він був "
-"призначений. (Цей метод, якщо він присутній, викликається, навіть якщо клас "
-"не є дескриптором.)"
 
 #: ../../howto/descriptor.rst:305
 msgid ""
@@ -571,11 +546,9 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:340
 msgid ""
-"This :class:`Validator` class is both an :term:`abstract base class` and a "
+"This :class:`!Validator` class is both an :term:`abstract base class` and a "
 "managed attribute descriptor:"
 msgstr ""
-"Цей клас :class:`Validator` є водночас :term:`abstract base class` і "
-"дескриптором керованих атрибутів:"
 
 #: ../../howto/descriptor.rst:343
 msgid ""
@@ -600,11 +573,9 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:363
 msgid ""
-"Custom validators need to inherit from :class:`Validator` and must supply a "
-":meth:`validate` method to test various restrictions as needed."
+"Custom validators need to inherit from :class:`!Validator` and must supply a"
+" :meth:`!validate` method to test various restrictions as needed."
 msgstr ""
-"Спеціальні валідатори повинні успадкувати :class:`Validator` і надати метод "
-":meth:`validate` для перевірки різноманітних обмежень за потреби."
 
 #: ../../howto/descriptor.rst:368
 msgid "Custom validators"
@@ -616,32 +587,23 @@ msgstr "Ось три практичні утиліти перевірки да�
 
 #: ../../howto/descriptor.rst:372
 msgid ""
-":class:`OneOf` verifies that a value is one of a restricted set of options."
+":class:`!OneOf` verifies that a value is one of a restricted set of options."
 msgstr ""
-":class:`OneOf` перевіряє, чи значення є одним із обмеженого набору "
-"параметрів."
 
 #: ../../howto/descriptor.rst:374
 msgid ""
-":class:`Number` verifies that a value is either an :class:`int` or "
+":class:`!Number` verifies that a value is either an :class:`int` or "
 ":class:`float`.  Optionally, it verifies that a value is between a given "
 "minimum or maximum."
 msgstr ""
-":class:`Number` перевіряє, чи значення є або :class:`int`, або "
-":class:`float`. За бажанням він перевіряє, чи значення знаходиться між "
-"заданим мінімумом або максимумом."
 
 #: ../../howto/descriptor.rst:378
 msgid ""
-":class:`String` verifies that a value is a :class:`str`.  Optionally, it "
+":class:`!String` verifies that a value is a :class:`str`.  Optionally, it "
 "validates a given minimum or maximum length.  It can validate a user-defined"
 " `predicate <https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)>`_"
 " as well."
 msgstr ""
-":class:`String` перевіряє, що значення є :class:`str`. За бажанням він "
-"перевіряє задану мінімальну або максимальну довжину. Він також може "
-"перевірити визначений користувачем `предикат "
-"<https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)>`_."
 
 #: ../../howto/descriptor.rst:383
 msgid ""
@@ -789,14 +751,10 @@ msgstr "Визначення та вступ"
 #: ../../howto/descriptor.rst:503
 msgid ""
 "In general, a descriptor is an attribute value that has one of the methods "
-"in the descriptor protocol.  Those methods are :meth:`__get__`, "
-":meth:`__set__`, and :meth:`__delete__`.  If any of those methods are "
-"defined for an attribute, it is said to be a :term:`descriptor`."
+"in the descriptor protocol.  Those methods are :meth:`~object.__get__`, "
+":meth:`~object.__set__`, and :meth:`~object.__delete__`.  If any of those "
+"methods are defined for an attribute, it is said to be a :term:`descriptor`."
 msgstr ""
-"Загалом, дескриптор — це значення атрибута, яке має один із методів у "
-"протоколі дескриптора. Ці методи: :meth:`__get__`, :meth:`__set__` і "
-":meth:`__delete__`. Якщо будь-який із цих методів визначено для атрибута, "
-"він називається :term:`descriptor`."
 
 #: ../../howto/descriptor.rst:508
 msgid ""
@@ -855,15 +813,11 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:537
 msgid ""
-"If an object defines :meth:`__set__` or :meth:`__delete__`, it is considered"
-" a data descriptor.  Descriptors that only define :meth:`__get__` are called"
-" non-data descriptors (they are often used for methods but other uses are "
-"possible)."
+"If an object defines :meth:`~object.__set__` or :meth:`~object.__delete__`, "
+"it is considered a data descriptor.  Descriptors that only define "
+":meth:`~object.__get__` are called non-data descriptors (they are often used"
+" for methods but other uses are possible)."
 msgstr ""
-"Якщо об’єкт визначає :meth:`__set__` або :meth:`__delete__`, він вважається "
-"дескриптором даних. Дескриптори, які визначають лише :meth:`__get__`, "
-"називаються дескрипторами не даних (вони часто використовуються для методів,"
-" але можливі й інші способи використання)."
 
 #: ../../howto/descriptor.rst:542
 msgid ""
@@ -881,15 +835,12 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:548
 msgid ""
-"To make a read-only data descriptor, define both :meth:`__get__` and "
-":meth:`__set__` with the :meth:`__set__` raising an :exc:`AttributeError` "
-"when called.  Defining the :meth:`__set__` method with an exception raising "
-"placeholder is enough to make it a data descriptor."
+"To make a read-only data descriptor, define both :meth:`~object.__get__` and"
+" :meth:`~object.__set__` with the :meth:`~object.__set__` raising an "
+":exc:`AttributeError` when called.  Defining the :meth:`~object.__set__` "
+"method with an exception raising placeholder is enough to make it a data "
+"descriptor."
 msgstr ""
-"Щоб створити дескриптор даних лише для читання, визначте :meth:`__get__` і "
-":meth:`__set__` з :meth:`__set__`, що викликає :exc:`AttributeError` під час"
-" виклику. Щоб зробити його дескриптором даних, достатньо визначити метод "
-":meth:`__set__` із заповнювачем, що викликає винятки."
 
 #: ../../howto/descriptor.rst:555
 msgid "Overview of descriptor invocation"
@@ -934,13 +885,9 @@ msgstr "Виклик із екземпляра"
 msgid ""
 "Instance lookup scans through a chain of namespaces giving data descriptors "
 "the highest priority, followed by instance variables, then non-data "
-"descriptors, then class variables, and lastly :meth:`__getattr__` if it is "
-"provided."
+"descriptors, then class variables, and lastly :meth:`~object.__getattr__` if"
+" it is provided."
 msgstr ""
-"Пошук екземплярів сканує ланцюжок просторів імен, надаючи найвищий пріоритет"
-" дескрипторам даних, потім змінним екземплярів, потім дескрипторам, що не є "
-"даними, потім змінним класу, і нарешті :meth:`__getattr__`, якщо він "
-"надається."
 
 #: ../../howto/descriptor.rst:580
 msgid ""
@@ -988,24 +935,20 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:722
 msgid ""
-"Note, there is no :meth:`__getattr__` hook in the :meth:`__getattribute__` "
-"code.  That is why calling :meth:`__getattribute__` directly or with "
-"``super().__getattribute__`` will bypass :meth:`__getattr__` entirely."
+"Note, there is no :meth:`~object.__getattr__` hook in the "
+":meth:`~object.__getattribute__` code.  That is why calling "
+":meth:`~object.__getattribute__` directly or with "
+"``super().__getattribute__`` will bypass :meth:`~object.__getattr__` "
+"entirely."
 msgstr ""
-"Зауважте, що в коді :meth:`__getattribute__` немає хука :meth:`__getattr__`."
-" Ось чому виклик :meth:`__getattribute__` безпосередньо або за допомогою "
-"``super().__getattribute__`` повністю обійде :meth:`__getattr__`."
 
 #: ../../howto/descriptor.rst:726
 msgid ""
 "Instead, it is the dot operator and the :func:`getattr` function that are "
-"responsible for invoking :meth:`__getattr__` whenever "
-":meth:`__getattribute__` raises an :exc:`AttributeError`.  Their logic is "
-"encapsulated in a helper function:"
+"responsible for invoking :meth:`~object.__getattr__` whenever "
+":meth:`~object.__getattribute__` raises an :exc:`AttributeError`.  Their "
+"logic is encapsulated in a helper function:"
 msgstr ""
-"Натомість це оператор крапки та функція :func:`getattr`, які відповідають за"
-" виклик :meth:`__getattr__` щоразу, коли :meth:`__getattribute__` викликає "
-":exc:`AttributeError`. Їхня логіка інкапсульована в допоміжній функції:"
 
 #: ../../howto/descriptor.rst:731
 msgid ""
@@ -1026,14 +969,10 @@ msgstr "Виклик із класу"
 #: ../../howto/descriptor.rst:778
 msgid ""
 "The logic for a dotted lookup such as ``A.x`` is in "
-":meth:`type.__getattribute__`.  The steps are similar to those for "
-":meth:`object.__getattribute__` but the instance dictionary lookup is "
+":meth:`!type.__getattribute__`.  The steps are similar to those for "
+":meth:`!object.__getattribute__` but the instance dictionary lookup is "
 "replaced by a search through the class's :term:`method resolution order`."
 msgstr ""
-"Логіка пошуку з пунктиром, наприклад ``A.x``, знаходиться в "
-":meth:`type.__getattribute__`. Кроки подібні до кроків для "
-":meth:`object.__getattribute__`, але пошук у словнику екземпляра замінюється"
-" пошуком у :term:`method resolution order` класу."
 
 #: ../../howto/descriptor.rst:783
 msgid ""
@@ -1054,8 +993,9 @@ msgstr "Заклик від супер"
 
 #: ../../howto/descriptor.rst:792
 msgid ""
-"The logic for super's dotted lookup is in the :meth:`__getattribute__` "
-"method for object returned by :func:`super`."
+"The logic for super's dotted lookup is in the "
+":meth:`~object.__getattribute__` method for object returned by "
+":func:`super`."
 msgstr ""
 
 #: ../../howto/descriptor.rst:795
@@ -1084,8 +1024,9 @@ msgstr "Короткий опис логіки виклику"
 
 #: ../../howto/descriptor.rst:809
 msgid ""
-"The mechanism for descriptors is embedded in the :meth:`__getattribute__` "
-"methods for :class:`object`, :class:`type`, and :func:`super`."
+"The mechanism for descriptors is embedded in the "
+":meth:`~object.__getattribute__` methods for :class:`object`, :class:`type`,"
+" and :func:`super`."
 msgstr ""
 
 #: ../../howto/descriptor.rst:812
@@ -1093,8 +1034,9 @@ msgid "The important points to remember are:"
 msgstr "Важливо пам’ятати:"
 
 #: ../../howto/descriptor.rst:814
-msgid "Descriptors are invoked by the :meth:`__getattribute__` method."
-msgstr "Дескриптори викликаються методом :meth:`__getattribute__`."
+msgid ""
+"Descriptors are invoked by the :meth:`~object.__getattribute__` method."
+msgstr ""
 
 #: ../../howto/descriptor.rst:816
 msgid ""
@@ -1106,22 +1048,17 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:819
 msgid ""
-"Overriding :meth:`__getattribute__` prevents automatic descriptor calls "
-"because all the descriptor logic is in that method."
+"Overriding :meth:`~object.__getattribute__` prevents automatic descriptor "
+"calls because all the descriptor logic is in that method."
 msgstr ""
-"Перевизначення :meth:`__getattribute__` запобігає автоматичним викликам "
-"дескриптора, оскільки вся логіка дескриптора міститься в цьому методі."
 
 #: ../../howto/descriptor.rst:822
 msgid ""
-":meth:`object.__getattribute__` and :meth:`type.__getattribute__` make "
-"different calls to :meth:`__get__`.  The first includes the instance and may"
-" include the class.  The second puts in ``None`` for the instance and always"
-" includes the class."
+":meth:`!object.__getattribute__` and :meth:`!type.__getattribute__` make "
+"different calls to :meth:`~object.__get__`.  The first includes the instance"
+" and may include the class.  The second puts in ``None`` for the instance "
+"and always includes the class."
 msgstr ""
-":meth:`object.__getattribute__` і :meth:`type.__getattribute__` здійснюють "
-"різні виклики :meth:`__get__`. Перший включає екземпляр і може включати "
-"клас. Другий ставить ``None`` для екземпляра та завжди включає клас."
 
 #: ../../howto/descriptor.rst:827
 msgid "Data descriptors always override instance dictionaries."
@@ -1142,16 +1079,10 @@ msgid ""
 "Sometimes it is desirable for a descriptor to know what class variable name "
 "it was assigned to.  When a new class is created, the :class:`type` "
 "metaclass scans the dictionary of the new class.  If any of the entries are "
-"descriptors and if they define :meth:`__set_name__`, that method is called "
-"with two arguments.  The *owner* is the class where the descriptor is used, "
-"and the *name* is the class variable the descriptor was assigned to."
+"descriptors and if they define :meth:`~object.__set_name__`, that method is "
+"called with two arguments.  The *owner* is the class where the descriptor is"
+" used, and the *name* is the class variable the descriptor was assigned to."
 msgstr ""
-"Іноді дескриптору бажано знати, яке ім'я змінної класу було призначено. Коли"
-" створюється новий клас, метаклас :class:`type` сканує словник нового класу."
-" Якщо будь-який із записів є дескрипторами та якщо вони визначають "
-":meth:`__set_name__`, цей метод викликається з двома аргументами. *Власник* "
-"— це клас, де використовується дескриптор, а *ім’я* — це змінна класу, якій "
-"призначено дескриптор."
 
 #: ../../howto/descriptor.rst:842
 msgid ""
@@ -1161,13 +1092,10 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:845
 msgid ""
-"Since the update logic is in :meth:`type.__new__`, notifications only take "
+"Since the update logic is in :meth:`!type.__new__`, notifications only take "
 "place at the time of class creation.  If descriptors are added to the class "
-"afterwards, :meth:`__set_name__` will need to be called manually."
+"afterwards, :meth:`~object.__set_name__` will need to be called manually."
 msgstr ""
-"Оскільки логіка оновлення знаходиться в :meth:`type.__new__`, сповіщення "
-"надходять лише під час створення класу. Якщо дескриптори додаються до класу "
-"пізніше, :meth:`__set_name__` потрібно буде викликати вручну."
 
 #: ../../howto/descriptor.rst:851
 msgid "ORM example"
@@ -1208,13 +1136,10 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:876
 msgid ""
-"We can use the :class:`Field` class to define `models "
+"We can use the :class:`!Field` class to define `models "
 "<https://en.wikipedia.org/wiki/Database_model>`_ that describe the schema "
 "for each table in a database:"
 msgstr ""
-"Ми можемо використовувати клас :class:`Field`, щоб визначити `моделі "
-"<https://en.wikipedia.org/wiki/Database_model>`_, які описують схему для "
-"кожної таблиці в базі даних:"
 
 #: ../../howto/descriptor.rst:880
 msgid ""
@@ -1411,11 +1336,9 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:1143
 msgid ""
-"Either the built-in :func:`property` or our :func:`Property` equivalent "
+"Either the built-in :func:`property` or our :func:`!Property` equivalent "
 "would work in this example."
 msgstr ""
-"У цьому прикладі працюватиме або вбудований :func:`property`, або наш "
-"еквівалент :func:`Property`."
 
 #: ../../howto/descriptor.rst:1148
 msgid "Functions and methods"
@@ -1483,14 +1406,10 @@ msgstr ""
 #: ../../howto/descriptor.rst:1189
 msgid ""
 "To support automatic creation of methods, functions include the "
-":meth:`__get__` method for binding methods during attribute access.  This "
-"means that functions are non-data descriptors that return bound methods "
-"during dotted lookup from an instance.  Here's how it works:"
+":meth:`~object.__get__` method for binding methods during attribute access."
+"  This means that functions are non-data descriptors that return bound "
+"methods during dotted lookup from an instance.  Here's how it works:"
 msgstr ""
-"Щоб підтримувати автоматичне створення методів, функції включають метод "
-":meth:`__get__` для зв’язування методів під час доступу до атрибутів. Це "
-"означає, що функції є дескрипторами, не пов’язаними з даними, які повертають"
-" пов’язані методи під час пошуку з пунктиром з екземпляра. Ось як це працює:"
 
 #: ../../howto/descriptor.rst:1194
 msgid ""
@@ -1537,10 +1456,9 @@ msgstr ""
 #: ../../howto/descriptor.rst:1233
 msgid ""
 "Accessing the function through the class dictionary does not invoke "
-":meth:`__get__`.  Instead, it just returns the underlying function object::"
+":meth:`~object.__get__`.  Instead, it just returns the underlying function "
+"object::"
 msgstr ""
-"Доступ до функції через словник класу не викликає :meth:`__get__`. Замість "
-"цього він просто повертає базовий об’єкт функції::"
 
 #: ../../howto/descriptor.rst:1236
 msgid ""
@@ -1550,11 +1468,9 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:1239
 msgid ""
-"Dotted access from a class calls :meth:`__get__` which just returns the "
-"underlying function unchanged::"
+"Dotted access from a class calls :meth:`~object.__get__` which just returns "
+"the underlying function unchanged::"
 msgstr ""
-"Пунктирний доступ із класу викликає :meth:`__get__`, який просто повертає "
-"базову функцію без змін::"
 
 #: ../../howto/descriptor.rst:1242
 msgid ""
@@ -1565,11 +1481,9 @@ msgstr ""
 #: ../../howto/descriptor.rst:1245
 msgid ""
 "The interesting behavior occurs during dotted access from an instance.  The "
-"dotted lookup calls :meth:`__get__` which returns a bound method object::"
+"dotted lookup calls :meth:`~object.__get__` which returns a bound method "
+"object::"
 msgstr ""
-"Цікава поведінка відбувається під час доступу з екземпляра з пунктиром. "
-"Пошук із пунктиром викликає :meth:`__get__`, який повертає пов’язаний об’єкт"
-" методу::"
 
 #: ../../howto/descriptor.rst:1248
 msgid ""
@@ -1616,15 +1530,11 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:1271
 msgid ""
-"To recap, functions have a :meth:`__get__` method so that they can be "
-"converted to a method when accessed as attributes.  The non-data descriptor "
-"transforms an ``obj.f(*args)`` call into ``f(obj, *args)``.  Calling "
-"``cls.f(*args)`` becomes ``f(*args)``."
+"To recap, functions have a :meth:`~object.__get__` method so that they can "
+"be converted to a method when accessed as attributes.  The non-data "
+"descriptor transforms an ``obj.f(*args)`` call into ``f(obj, *args)``.  "
+"Calling ``cls.f(*args)`` becomes ``f(*args)``."
 msgstr ""
-"Підсумовуючи, функції мають метод :meth:`__get__`, щоб їх можна було "
-"перетворити на метод, коли вони доступні як атрибути. Дескриптор без даних "
-"перетворює виклик ``obj.f(*args)`` на ``f(obj, *args)``. Виклик "
-"``cls.f(*args)`` перетворюється на ``f(*args)``."
 
 #: ../../howto/descriptor.rst:1276
 msgid "This chart summarizes the binding and its two most useful variants:"
@@ -2057,11 +1967,9 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:1670
 msgid ""
-"The :meth:`type.__new__` method takes care of adding member objects to class"
-" variables:"
+"The :meth:`!type.__new__` method takes care of adding member objects to "
+"class variables:"
 msgstr ""
-"Метод :meth:`type.__new__` піклується про додавання об’єктів-членів до "
-"змінних класу:"
 
 #: ../../howto/descriptor.rst:1673
 msgid ""
@@ -2121,11 +2029,9 @@ msgstr ""
 
 #: ../../howto/descriptor.rst:1721
 msgid ""
-"To use the simulation in a real class, just inherit from :class:`Object` and"
-" set the :term:`metaclass` to :class:`Type`:"
+"To use the simulation in a real class, just inherit from :class:`!Object` "
+"and set the :term:`metaclass` to :class:`Type`:"
 msgstr ""
-"Щоб використовувати симуляцію в реальному класі, просто успадкуйте від "
-":class:`Object` і встановіть :term:`metaclass` на :class:`Type`:"
 
 #: ../../howto/descriptor.rst:1724
 msgid ""
