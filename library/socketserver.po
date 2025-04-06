@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-03-21 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -431,13 +431,14 @@ msgstr "Очистити сервер. Може бути перевизначе�
 
 #: ../../library/socketserver.rst:263
 msgid ""
-"The family of protocols to which the server's socket belongs. Common "
-"examples are :const:`socket.AF_INET` and :const:`socket.AF_UNIX`."
+"The family of protocols to which the server's socket belongs.  Common "
+"examples are :const:`socket.AF_INET`, :const:`socket.AF_INET6`, and "
+":const:`socket.AF_UNIX`.  Subclass the TCP or UDP server classes in this "
+"module with class attribute ``address_family = AF_INET6`` set if you want "
+"IPv6 server classes."
 msgstr ""
-"Сімейство протоколів, до якого належить сокет сервера. Типовими прикладами є"
-" :const:`socket.AF_INET` і :const:`socket.AF_UNIX`."
 
-#: ../../library/socketserver.rst:269
+#: ../../library/socketserver.rst:272
 msgid ""
 "The user-provided request handler class; an instance of this class is "
 "created for each request."
@@ -445,7 +446,7 @@ msgstr ""
 "Клас обробника запитів, наданий користувачем; екземпляр цього класу "
 "створюється для кожного запиту."
 
-#: ../../library/socketserver.rst:275
+#: ../../library/socketserver.rst:278
 msgid ""
 "The address on which the server is listening.  The format of addresses "
 "varies depending on the protocol family; see the documentation for the "
@@ -458,16 +459,16 @@ msgstr ""
 "модуля :mod:`socket`. Для інтернет-протоколів це кортеж, що містить рядок, "
 "що вказує адресу, і цілий номер порту: ``('127.0.0.1', 80)``, наприклад."
 
-#: ../../library/socketserver.rst:284
+#: ../../library/socketserver.rst:287
 msgid ""
 "The socket object on which the server will listen for incoming requests."
 msgstr "Об’єкт сокета, на якому сервер прослуховуватиме вхідні запити."
 
-#: ../../library/socketserver.rst:287
+#: ../../library/socketserver.rst:290
 msgid "The server classes support the following class variables:"
 msgstr "Класи сервера підтримують наступні змінні класу:"
 
-#: ../../library/socketserver.rst:293
+#: ../../library/socketserver.rst:296
 msgid ""
 "Whether the server will allow the reuse of an address.  This defaults to "
 ":const:`False`, and can be set in subclasses to change the policy."
@@ -475,7 +476,7 @@ msgstr ""
 "Чи дозволить сервер повторне використання адреси. За умовчанням це "
 ":const:`False`, і його можна встановити в підкласах, щоб змінити політику."
 
-#: ../../library/socketserver.rst:299
+#: ../../library/socketserver.rst:302
 msgid ""
 "The size of the request queue.  If it takes a long time to process a single "
 "request, any requests that arrive while the server is busy are placed into a"
@@ -489,7 +490,7 @@ msgstr ""
 "від клієнтів отримуватимуть помилку \"З’єднання відмовлено\". Значення за "
 "замовчуванням зазвичай дорівнює 5, але це може бути замінено підкласами."
 
-#: ../../library/socketserver.rst:308
+#: ../../library/socketserver.rst:311
 msgid ""
 "The type of socket used by the server; :const:`socket.SOCK_STREAM` and "
 ":const:`socket.SOCK_DGRAM` are two common values."
@@ -497,7 +498,7 @@ msgstr ""
 "Тип сокета, який використовує сервер; :const:`socket.SOCK_STREAM` і "
 ":const:`socket.SOCK_DGRAM` є двома загальними значеннями."
 
-#: ../../library/socketserver.rst:314
+#: ../../library/socketserver.rst:317
 msgid ""
 "Timeout duration, measured in seconds, or :const:`None` if no timeout is "
 "desired.  If :meth:`handle_request` receives no incoming requests within the"
@@ -507,7 +508,7 @@ msgstr ""
 "аут не потрібний. Якщо :meth:`handle_request` не отримує вхідних запитів "
 "протягом періоду очікування, викликається метод :meth:`handle_timeout`."
 
-#: ../../library/socketserver.rst:319
+#: ../../library/socketserver.rst:322
 msgid ""
 "There are various server methods that can be overridden by subclasses of "
 "base server classes like :class:`TCPServer`; these methods aren't useful to "
@@ -517,7 +518,7 @@ msgstr ""
 "класів серверів, наприклад :class:`TCPServer`; ці методи не корисні "
 "зовнішнім користувачам серверного об’єкта."
 
-#: ../../library/socketserver.rst:328
+#: ../../library/socketserver.rst:331
 msgid ""
 "Actually processes the request by instantiating :attr:`RequestHandlerClass` "
 "and calling its :meth:`~BaseRequestHandler.handle` method."
@@ -525,7 +526,7 @@ msgstr ""
 "Фактично обробляє запит, створюючи екземпляр :attr:`RequestHandlerClass` і "
 "викликаючи його метод :meth:`~BaseRequestHandler.handle`."
 
-#: ../../library/socketserver.rst:334
+#: ../../library/socketserver.rst:337
 msgid ""
 "Must accept a request from the socket, and return a 2-tuple containing the "
 "*new* socket object to be used to communicate with the client, and the "
@@ -535,7 +536,7 @@ msgstr ""
 " об’єкт сокета, який буде використовуватися для зв’язку з клієнтом, і адресу"
 " клієнта."
 
-#: ../../library/socketserver.rst:341
+#: ../../library/socketserver.rst:344
 msgid ""
 "This function is called if the :meth:`~BaseRequestHandler.handle` method of "
 "a :attr:`RequestHandlerClass` instance raises an exception.  The default "
@@ -547,12 +548,12 @@ msgstr ""
 "замовчуванням полягає в тому, щоб надрукувати відстеження стандартної "
 "помилки та продовжити обробку подальших запитів."
 
-#: ../../library/socketserver.rst:346
+#: ../../library/socketserver.rst:349
 msgid ""
 "Now only called for exceptions derived from the :exc:`Exception` class."
 msgstr "Тепер викликаються лише винятки, похідні від класу :exc:`Exception`."
 
-#: ../../library/socketserver.rst:353
+#: ../../library/socketserver.rst:356
 msgid ""
 "This function is called when the :attr:`timeout` attribute has been set to a"
 " value other than :const:`None` and the timeout period has passed with no "
@@ -566,7 +567,7 @@ msgstr ""
 "статусу будь-яких дочірніх процесів, які вийшли, тоді як у потокових "
 "серверах цей метод не робить нічого."
 
-#: ../../library/socketserver.rst:362
+#: ../../library/socketserver.rst:365
 msgid ""
 "Calls :meth:`finish_request` to create an instance of the "
 ":attr:`RequestHandlerClass`.  If desired, this function can create a new "
@@ -578,7 +579,7 @@ msgstr ""
 "процес або потік для обробки запиту; це роблять класи :class:`ForkingMixIn` "
 "і :class:`ThreadingMixIn`."
 
-#: ../../library/socketserver.rst:374
+#: ../../library/socketserver.rst:377
 msgid ""
 "Called by the server's constructor to activate the server.  The default "
 "behavior for a TCP server just invokes :meth:`~socket.socket.listen` on the "
@@ -588,7 +589,7 @@ msgstr ""
 "замовчуванням для TCP-сервера просто викликає :meth:`~socket.socket.listen` "
 "у сокеті сервера. Може бути перевизначено."
 
-#: ../../library/socketserver.rst:381
+#: ../../library/socketserver.rst:384
 msgid ""
 "Called by the server's constructor to bind the socket to the desired "
 "address. May be overridden."
@@ -596,7 +597,7 @@ msgstr ""
 "Викликається конструктором сервера, щоб прив’язати сокет до потрібної "
 "адреси. Може бути перевизначено."
 
-#: ../../library/socketserver.rst:387
+#: ../../library/socketserver.rst:390
 msgid ""
 "Must return a Boolean value; if the value is :const:`True`, the request will"
 " be processed, and if it's :const:`False`, the request will be denied.  This"
@@ -608,7 +609,7 @@ msgstr ""
 "можна замінити, щоб реалізувати контроль доступу до сервера. Стандартна "
 "реалізація завжди повертає :const:`True`."
 
-#: ../../library/socketserver.rst:393
+#: ../../library/socketserver.rst:396
 msgid ""
 "Support for the :term:`context manager` protocol was added.  Exiting the "
 "context manager is equivalent to calling :meth:`server_close`."
@@ -616,11 +617,11 @@ msgstr ""
 "Додано підтримку протоколу :term:`context manager`. Вихід із контекстного "
 "менеджера еквівалентний виклику :meth:`server_close`."
 
-#: ../../library/socketserver.rst:399
+#: ../../library/socketserver.rst:402
 msgid "Request Handler Objects"
 msgstr "Об’єкти обробки запитів"
 
-#: ../../library/socketserver.rst:403
+#: ../../library/socketserver.rst:406
 msgid ""
 "This is the superclass of all request handler objects.  It defines the "
 "interface, given below.  A concrete request handler subclass must define a "
@@ -632,7 +633,7 @@ msgstr ""
 "новий метод :meth:`handle` і може перевизначати будь-які інші методи. Для "
 "кожного запиту створюється новий екземпляр підкласу."
 
-#: ../../library/socketserver.rst:412
+#: ../../library/socketserver.rst:415
 msgid ""
 "Called before the :meth:`handle` method to perform any initialization "
 "actions required.  The default implementation does nothing."
@@ -640,7 +641,7 @@ msgstr ""
 "Викликається перед методом :meth:`handle` для виконання будь-яких необхідних"
 " дій ініціалізації. Стандартна реалізація нічого не робить."
 
-#: ../../library/socketserver.rst:418
+#: ../../library/socketserver.rst:421
 msgid ""
 "This function must do all the work required to service a request.  The "
 "default implementation does nothing.  Several instance attributes are "
@@ -649,14 +650,14 @@ msgid ""
 ":attr:`server`, in case it needs access to per-server information."
 msgstr ""
 
-#: ../../library/socketserver.rst:424
+#: ../../library/socketserver.rst:427
 msgid ""
 "The type of :attr:`request` is different for datagram or stream services.  "
 "For stream services, :attr:`request` is a socket object; for datagram "
 "services, :attr:`request` is a pair of string and socket."
 msgstr ""
 
-#: ../../library/socketserver.rst:431
+#: ../../library/socketserver.rst:434
 msgid ""
 "Called after the :meth:`handle` method to perform any clean-up actions "
 "required.  The default implementation does nothing.  If :meth:`setup` raises"
@@ -666,58 +667,58 @@ msgstr ""
 "дій очищення. Стандартна реалізація нічого не робить. Якщо :meth:`setup` "
 "викликає виняток, ця функція не буде викликана."
 
-#: ../../library/socketserver.rst:438
+#: ../../library/socketserver.rst:441
 msgid ""
 "The *new* :class:`socket.socket` object to be used to communicate with the "
 "client."
 msgstr ""
 
-#: ../../library/socketserver.rst:444
+#: ../../library/socketserver.rst:447
 msgid "Client address returned by :meth:`BaseServer.get_request`."
 msgstr ""
 
-#: ../../library/socketserver.rst:449
+#: ../../library/socketserver.rst:452
 msgid ":class:`BaseServer` object used for handling the request."
 msgstr ""
 
-#: ../../library/socketserver.rst:455
+#: ../../library/socketserver.rst:458
 msgid ""
 "These :class:`BaseRequestHandler` subclasses override the "
 ":meth:`~BaseRequestHandler.setup` and :meth:`~BaseRequestHandler.finish` "
 "methods, and provide :attr:`rfile` and :attr:`wfile` attributes."
 msgstr ""
 
-#: ../../library/socketserver.rst:461
+#: ../../library/socketserver.rst:464
 msgid ""
 "A file object from which receives the request is read. Support the "
 ":class:`io.BufferedIOBase` readable interface."
 msgstr ""
 
-#: ../../library/socketserver.rst:466
+#: ../../library/socketserver.rst:469
 msgid ""
 "A file object to which the reply is written. Support the "
 ":class:`io.BufferedIOBase` writable interface"
 msgstr ""
 
-#: ../../library/socketserver.rst:470
+#: ../../library/socketserver.rst:473
 msgid ""
 ":attr:`wfile` also supports the :class:`io.BufferedIOBase` writable "
 "interface."
 msgstr ""
 
-#: ../../library/socketserver.rst:476
+#: ../../library/socketserver.rst:479
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../library/socketserver.rst:479
+#: ../../library/socketserver.rst:482
 msgid ":class:`socketserver.TCPServer` Example"
 msgstr ":class:`socketserver.TCPServer` Приклад"
 
-#: ../../library/socketserver.rst:481 ../../library/socketserver.rst:581
+#: ../../library/socketserver.rst:484 ../../library/socketserver.rst:595
 msgid "This is the server side::"
 msgstr "Це сторона сервера::"
 
-#: ../../library/socketserver.rst:483
+#: ../../library/socketserver.rst:486
 msgid ""
 "import socketserver\n"
 "\n"
@@ -732,11 +733,17 @@ msgid ""
 "\n"
 "    def handle(self):\n"
 "        # self.request is the TCP socket connected to the client\n"
-"        self.data = self.request.recv(1024).strip()\n"
-"        print(\"Received from {}:\".format(self.client_address[0]))\n"
-"        print(self.data)\n"
+"        pieces = [b'']\n"
+"        total = 0\n"
+"        while b'\\n' not in pieces[-1] and total < 10_000:\n"
+"            pieces.append(self.request.recv(2000))\n"
+"            total += len(pieces[-1])\n"
+"        self.data = b''.join(pieces)\n"
+"        print(f\"Received from {self.client_address[0]}:\")\n"
+"        print(self.data.decode(\"utf-8\"))\n"
 "        # just send back the same data, but upper-cased\n"
 "        self.request.sendall(self.data.upper())\n"
+"        # after we return, the socket will be closed.\n"
 "\n"
 "if __name__ == \"__main__\":\n"
 "    HOST, PORT = \"localhost\", 9999\n"
@@ -748,7 +755,7 @@ msgid ""
 "        server.serve_forever()"
 msgstr ""
 
-#: ../../library/socketserver.rst:511
+#: ../../library/socketserver.rst:520
 msgid ""
 "An alternative request handler class that makes use of streams (file-like "
 "objects that simplify communication by providing the standard file "
@@ -758,35 +765,39 @@ msgstr ""
 "(файлоподібні об’єкти, які спрощують зв’язок, надаючи стандартний файловий "
 "інтерфейс):"
 
-#: ../../library/socketserver.rst:514
+#: ../../library/socketserver.rst:523
 msgid ""
 "class MyTCPHandler(socketserver.StreamRequestHandler):\n"
 "\n"
 "    def handle(self):\n"
-"        # self.rfile is a file-like object created by the handler;\n"
-"        # we can now use e.g. readline() instead of raw recv() calls\n"
-"        self.data = self.rfile.readline().strip()\n"
-"        print(\"{} wrote:\".format(self.client_address[0]))\n"
-"        print(self.data)\n"
+"        # self.rfile is a file-like object created by the handler.\n"
+"        # We can now use e.g. readline() instead of raw recv() calls.\n"
+"        # We limit ourselves to 10000 bytes to avoid abuse by the sender.\n"
+"        self.data = self.rfile.readline(10000).rstrip()\n"
+"        print(f\"{self.client_address[0]} wrote:\")\n"
+"        print(self.data.decode(\"utf-8\"))\n"
 "        # Likewise, self.wfile is a file-like object used to write back\n"
 "        # to the client\n"
 "        self.wfile.write(self.data.upper())"
 msgstr ""
 
-#: ../../library/socketserver.rst:526
+#: ../../library/socketserver.rst:536
 msgid ""
 "The difference is that the ``readline()`` call in the second handler will "
 "call ``recv()`` multiple times until it encounters a newline character, "
-"while the single ``recv()`` call in the first handler will just return what "
-"has been received so far from the client's ``sendall()`` call (typically all"
-" of it, but this is not guaranteed by the TCP protocol)."
+"while the the first handler had to use a ``recv()`` loop to accumulate data "
+"until a newline itself.  If it had just used a single ``recv()`` without the"
+" loop it would just have returned what has been received so far from the "
+"client. TCP is stream based: data arrives in the order it was sent, but "
+"there no correlation between client ``send()`` or ``sendall()`` calls and "
+"the number of ``recv()`` calls on the server required to receive it."
 msgstr ""
 
-#: ../../library/socketserver.rst:533 ../../library/socketserver.rst:605
+#: ../../library/socketserver.rst:546 ../../library/socketserver.rst:619
 msgid "This is the client side::"
 msgstr "Це сторона клієнта::"
 
-#: ../../library/socketserver.rst:535
+#: ../../library/socketserver.rst:548
 msgid ""
 "import socket\n"
 "import sys\n"
@@ -798,24 +809,25 @@ msgid ""
 "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:\n"
 "    # Connect to server and send data\n"
 "    sock.connect((HOST, PORT))\n"
-"    sock.sendall(bytes(data + \"\\n\", \"utf-8\"))\n"
+"    sock.sendall(bytes(data, \"utf-8\"))\n"
+"    sock.sendall(b\"\\n\")\n"
 "\n"
 "    # Receive data from the server and shut down\n"
 "    received = str(sock.recv(1024), \"utf-8\")\n"
 "\n"
-"print(\"Sent:     {}\".format(data))\n"
-"print(\"Received: {}\".format(received))"
+"print(\"Sent:    \", data)\n"
+"print(\"Received:\", received)"
 msgstr ""
 
-#: ../../library/socketserver.rst:554 ../../library/socketserver.rst:680
+#: ../../library/socketserver.rst:568 ../../library/socketserver.rst:694
 msgid "The output of the example should look something like this:"
 msgstr "Результат прикладу має виглядати приблизно так:"
 
-#: ../../library/socketserver.rst:556
+#: ../../library/socketserver.rst:570
 msgid "Server:"
 msgstr "сервер:"
 
-#: ../../library/socketserver.rst:558
+#: ../../library/socketserver.rst:572
 msgid ""
 "$ python TCPServer.py\n"
 "127.0.0.1 wrote:\n"
@@ -824,11 +836,11 @@ msgid ""
 "b'python is nice'"
 msgstr ""
 
-#: ../../library/socketserver.rst:566
+#: ../../library/socketserver.rst:580
 msgid "Client:"
 msgstr "Клієнт:"
 
-#: ../../library/socketserver.rst:568
+#: ../../library/socketserver.rst:582
 msgid ""
 "$ python TCPClient.py hello world with TCP\n"
 "Sent:     hello world with TCP\n"
@@ -838,11 +850,11 @@ msgid ""
 "Received: PYTHON IS NICE"
 msgstr ""
 
-#: ../../library/socketserver.rst:579
+#: ../../library/socketserver.rst:593
 msgid ":class:`socketserver.UDPServer` Example"
 msgstr ":class:`socketserver.UDPServer` Приклад"
 
-#: ../../library/socketserver.rst:583
+#: ../../library/socketserver.rst:597
 msgid ""
 "import socketserver\n"
 "\n"
@@ -857,7 +869,7 @@ msgid ""
 "    def handle(self):\n"
 "        data = self.request[0].strip()\n"
 "        socket = self.request[1]\n"
-"        print(\"{} wrote:\".format(self.client_address[0]))\n"
+"        print(f\"{self.client_address[0]} wrote:\")\n"
 "        print(data)\n"
 "        socket.sendto(data.upper(), self.client_address)\n"
 "\n"
@@ -867,7 +879,7 @@ msgid ""
 "        server.serve_forever()"
 msgstr ""
 
-#: ../../library/socketserver.rst:607
+#: ../../library/socketserver.rst:621
 msgid ""
 "import socket\n"
 "import sys\n"
@@ -883,11 +895,11 @@ msgid ""
 "sock.sendto(bytes(data + \"\\n\", \"utf-8\"), (HOST, PORT))\n"
 "received = str(sock.recv(1024), \"utf-8\")\n"
 "\n"
-"print(\"Sent:     {}\".format(data))\n"
-"print(\"Received: {}\".format(received))"
+"print(\"Sent:    \", data)\n"
+"print(\"Received:\", received)"
 msgstr ""
 
-#: ../../library/socketserver.rst:624
+#: ../../library/socketserver.rst:638
 msgid ""
 "The output of the example should look exactly like for the TCP server "
 "example."
@@ -895,11 +907,11 @@ msgstr ""
 "Вихідні дані прикладу мають виглядати точно так само, як для прикладу "
 "сервера TCP."
 
-#: ../../library/socketserver.rst:628
+#: ../../library/socketserver.rst:642
 msgid "Asynchronous Mixins"
 msgstr "Асинхронні міксини"
 
-#: ../../library/socketserver.rst:630
+#: ../../library/socketserver.rst:644
 msgid ""
 "To build asynchronous handlers, use the :class:`ThreadingMixIn` and "
 ":class:`ForkingMixIn` classes."
@@ -907,11 +919,11 @@ msgstr ""
 "Для створення асинхронних обробників використовуйте класи "
 ":class:`ThreadingMixIn` і :class:`ForkingMixIn`."
 
-#: ../../library/socketserver.rst:633
+#: ../../library/socketserver.rst:647
 msgid "An example for the :class:`ThreadingMixIn` class::"
 msgstr "Приклад класу :class:`ThreadingMixIn`::"
 
-#: ../../library/socketserver.rst:635
+#: ../../library/socketserver.rst:649
 msgid ""
 "import socket\n"
 "import threading\n"
@@ -958,7 +970,7 @@ msgid ""
 "        server.shutdown()"
 msgstr ""
 
-#: ../../library/socketserver.rst:682
+#: ../../library/socketserver.rst:696
 msgid ""
 "$ python ThreadedTCPServer.py\n"
 "Server loop running in thread: Thread-1\n"
@@ -967,7 +979,7 @@ msgid ""
 "Received: Thread-4: Hello World 3"
 msgstr ""
 
-#: ../../library/socketserver.rst:691
+#: ../../library/socketserver.rst:705
 msgid ""
 "The :class:`ForkingMixIn` class is used in the same way, except that the "
 "server will spawn a new process for each request. Available only on POSIX "

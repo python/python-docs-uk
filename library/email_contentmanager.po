@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"POT-Creation-Date: 2025-03-21 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -293,12 +293,19 @@ msgstr ""
 #: ../../library/email.contentmanager.rst:159
 msgid ""
 "For ``str`` objects, if *cte* is not set use heuristics to determine the "
-"most compact encoding."
+"most compact encoding.  Prior to encoding, :meth:`str.splitlines` is used to"
+" normalize all line boundaries, ensuring that each line of the payload is "
+"terminated by the current policy's :data:`~email.policy.Policy.linesep` "
+"property (even if the original string did not end with one)."
 msgstr ""
-"Для об’єктів ``str``, якщо *cte* не встановлено, використовуйте евристику "
-"для визначення найбільш компактного кодування."
 
-#: ../../library/email.contentmanager.rst:161
+#: ../../library/email.contentmanager.rst:165
+msgid ""
+"For ``bytes`` objects, *cte* is taken to be base64 if not set, and the "
+"aforementioned newline translation is not performed."
+msgstr ""
+
+#: ../../library/email.contentmanager.rst:167
 msgid ""
 "For :class:`~email.message.EmailMessage`, per :rfc:`2046`, raise an error if"
 " a *cte* of ``quoted-printable`` or ``base64`` is requested for *subtype* "
@@ -313,7 +320,7 @@ msgstr ""
 "``8bit``, якщо *cte* не вказано. Для всіх інших значень *subtype* "
 "використовуйте ``7bit``."
 
-#: ../../library/email.contentmanager.rst:168
+#: ../../library/email.contentmanager.rst:174
 msgid ""
 "A *cte* of ``binary`` does not actually work correctly yet. The "
 "``EmailMessage`` object as modified by ``set_content`` is correct, but "
@@ -323,7 +330,7 @@ msgstr ""
 "``EmailMessage``, змінений ``set_content`` є правильним, але "
 ":class:`~email.generator.BytesGenerator` не серіалізує його правильно."
 
-#: ../../library/email.contentmanager.rst:173
+#: ../../library/email.contentmanager.rst:179
 msgid ""
 "If *disposition* is set, use it as the value of the :mailheader:`Content-"
 "Disposition` header.  If not specified, and *filename* is specified, add the"
@@ -337,7 +344,7 @@ msgstr ""
 " і *filename* також не вказано, не додавайте заголовок. Єдиними дійсними "
 "значеннями для *disposition* є ``attachment`` і ``inline``."
 
-#: ../../library/email.contentmanager.rst:180
+#: ../../library/email.contentmanager.rst:186
 msgid ""
 "If *filename* is specified, use it as the value of the ``filename`` "
 "parameter of the :mailheader:`Content-Disposition` header."
@@ -345,7 +352,7 @@ msgstr ""
 "Якщо вказано *filename*, використовуйте його як значення параметра "
 "``filename`` заголовка :mailheader:`Content-Disposition`."
 
-#: ../../library/email.contentmanager.rst:183
+#: ../../library/email.contentmanager.rst:189
 msgid ""
 "If *cid* is specified, add a :mailheader:`Content-ID` header with *cid* as "
 "its value."
@@ -353,7 +360,7 @@ msgstr ""
 "Якщо вказано *cid*, додайте заголовок :mailheader:`Content-ID` зі значенням "
 "*cid*."
 
-#: ../../library/email.contentmanager.rst:186
+#: ../../library/email.contentmanager.rst:192
 msgid ""
 "If *params* is specified, iterate its ``items`` method and use the resulting"
 " ``(key, value)`` pairs to set additional parameters on the "
@@ -363,7 +370,7 @@ msgstr ""
 "отримані пари ``(key, value)``, щоб установити додаткові параметри в "
 "заголовку :mailheader:`Content-Type`."
 
-#: ../../library/email.contentmanager.rst:190
+#: ../../library/email.contentmanager.rst:196
 msgid ""
 "If *headers* is specified and is a list of strings of the form ``headername:"
 " headervalue`` or a list of ``header`` objects (distinguished from strings "
@@ -373,11 +380,11 @@ msgstr ""
 "значення заголовка`` або список об’єктів ``заголовка`` (відрізняються від "
 "рядків наявністю атрибута ``назва``), додайте заголовки на *повідомлення*."
 
-#: ../../library/email.contentmanager.rst:197
+#: ../../library/email.contentmanager.rst:203
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../library/email.contentmanager.rst:198
+#: ../../library/email.contentmanager.rst:204
 msgid ""
 "Originally added in 3.4 as a :term:`provisional module <provisional "
 "package>`"
