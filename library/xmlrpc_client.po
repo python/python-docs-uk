@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-03-21 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:18+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -109,37 +109,29 @@ msgid ""
 "may be passed to calls. The *headers* parameter is an optional sequence of "
 "HTTP headers to send with each request, expressed as a sequence of 2-tuples "
 "representing the header name and value. (e.g. ``[('Header-Name', "
-"'value')]``). The obsolete *use_datetime* flag is similar to "
+"'value')]``). If an HTTPS URL is provided, *context* may be "
+":class:`ssl.SSLContext` and configures the SSL settings of the underlying "
+"HTTPS connection. The obsolete *use_datetime* flag is similar to "
 "*use_builtin_types* but it applies only to date/time values."
 msgstr ""
 
-#: ../../library/xmlrpc.client.rst:67 ../../library/xmlrpc.client.rst:549
+#: ../../library/xmlrpc.client.rst:69 ../../library/xmlrpc.client.rst:549
 msgid "The *use_builtin_types* flag was added."
 msgstr "Додано прапорець *use_builtin_types*."
 
-#: ../../library/xmlrpc.client.rst:70
+#: ../../library/xmlrpc.client.rst:72
 msgid "The *headers* parameter was added."
 msgstr "Додано параметр *headers*."
 
-#: ../../library/xmlrpc.client.rst:73
+#: ../../library/xmlrpc.client.rst:75
 msgid ""
 "Both the HTTP and HTTPS transports support the URL syntax extension for HTTP"
 " Basic Authentication: ``http://user:pass@host:port/path``.  The  "
 "``user:pass`` portion will be base64-encoded as an HTTP 'Authorization' "
 "header, and sent to the remote server as part of the connection process when"
 " invoking an XML-RPC method.  You only need to use this if the remote server"
-" requires a Basic Authentication user and password. If an HTTPS URL is "
-"provided, *context* may be :class:`ssl.SSLContext` and configures the SSL "
-"settings of the underlying HTTPS connection."
+" requires a Basic Authentication user and password."
 msgstr ""
-"Обидва транспорти HTTP і HTTPS підтримують розширення синтаксису URL для "
-"базової автентифікації HTTP: ``http://user:pass@host:port/path``. Частина "
-"``user:pass`` буде закодована в base64 як HTTP-заголовок \"Authorization\" і"
-" надіслана на віддалений сервер як частина процесу підключення під час "
-"виклику методу XML-RPC. Використовувати це потрібно, лише якщо віддалений "
-"сервер потребує користувача та пароль базової автентифікації. Якщо надано "
-"URL-адресу HTTPS, *context* може бути :class:`ssl.SSLContext` і налаштовує "
-"параметри SSL основного з’єднання HTTPS."
 
 #: ../../library/xmlrpc.client.rst:82
 msgid ""
