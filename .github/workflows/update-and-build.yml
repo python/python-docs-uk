@@ -5,9 +5,12 @@ on:
     - cron: '0 6 * * *'
   push:
     branches: ['main']
+  pull_request:
+    branches: ['main']
   workflow_dispatch:
 
 jobs:
+
   update-translation:
     runs-on: ubuntu-latest
     strategy:
@@ -21,7 +24,6 @@ jobs:
       - uses: actions/setup-python@master
         with:
           python-version: 3
-      - run: sudo apt-get install -y gettext
       - run: curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
         working-directory: /usr/local/bin
       - run: pip install requests cogapp polib transifex-python sphinx-lint sphinx-intl blurb six
@@ -42,14 +44,26 @@ jobs:
         with:
           branch: ${{ matrix.version }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: peter-evans/repository-dispatch@main
+
+  lint-translation:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
+    needs: [ 'update-translation' ]
+    continue-on-error: true
+    steps:
+      - uses: actions/setup-python@master
         with:
           python-version: 3
+      - run: pip install sphinx-lint
       - uses: actions/checkout@master
         with:
           ref: ${{ matrix.version }}
       - uses: rffontenelle/sphinx-lint-problem-matcher@v1.0.0
       - run: sphinx-lint
+
   build-translation:
     runs-on: ubuntu-latest
     strategy:
@@ -81,6 +95,7 @@ jobs:
         with:
           name: build-${{ matrix.version }}-${{ matrix.format }}
           path: Doc/build/${{ matrix.format }}
+
   output-pdf:
     runs-on: ubuntu-latest
     strategy:
