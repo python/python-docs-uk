@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-03-28 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -555,10 +555,10 @@ msgstr "Ось приклад:"
 msgid ""
 ">>> import ssl\n"
 ">>> timestamp = ssl.cert_time_to_seconds(\"Jan  5 09:34:43 2018 GMT\")\n"
-">>> timestamp  \n"
+">>> timestamp\n"
 "1515144883\n"
 ">>> from datetime import datetime\n"
-">>> print(datetime.utcfromtimestamp(timestamp))  \n"
+">>> print(datetime.utcfromtimestamp(timestamp))\n"
 "2018-01-05 09:34:43"
 msgstr ""
 
@@ -2934,14 +2934,9 @@ msgstr ""
 msgid ""
 "A :class:`TLSVersion` enum member representing the highest supported TLS "
 "version. The value defaults to :attr:`TLSVersion.MAXIMUM_SUPPORTED`. The "
-"attribute is read-only for protocols other than :attr:`PROTOCOL_TLS`, "
-":attr:`PROTOCOL_TLS_CLIENT`, and :attr:`PROTOCOL_TLS_SERVER`."
+"attribute is read-only for protocols other than :const:`PROTOCOL_TLS`, "
+":const:`PROTOCOL_TLS_CLIENT`, and :const:`PROTOCOL_TLS_SERVER`."
 msgstr ""
-"Член переліку :class:`TLSVersion` представляє найвищу підтримувану версію "
-"TLS. Значенням за замовчуванням є :attr:`TLSVersion.MAXIMUM_SUPPORTED`. "
-"Атрибут доступний лише для читання для інших протоколів, ніж "
-":attr:`PROTOCOL_TLS`, :attr:`PROTOCOL_TLS_CLIENT` і "
-":attr:`PROTOCOL_TLS_SERVER`."
 
 #: ../../library/ssl.rst:1937
 msgid ""
@@ -2972,12 +2967,9 @@ msgstr ""
 #: ../../library/ssl.rst:1957
 msgid ""
 "Control the number of TLS 1.3 session tickets of a "
-":attr:`PROTOCOL_TLS_SERVER` context. The setting has no impact on TLS 1.0 to"
-" 1.2 connections."
+":const:`PROTOCOL_TLS_SERVER` context. The setting has no impact on TLS 1.0 "
+"to 1.2 connections."
 msgstr ""
-"Контролюйте кількість квитків сесії TLS 1.3 контексту "
-":attr:`PROTOCOL_TLS_SERVER`. Параметр не впливає на підключення TLS 1.0 до "
-"1.2."
 
 #: ../../library/ssl.rst:1965
 msgid ""
@@ -3834,16 +3826,12 @@ msgstr ""
 #: ../../library/ssl.rst:2510
 msgid ""
 "The :mod:`asyncio` module supports :ref:`non-blocking SSL sockets <ssl-"
-"nonblocking>` and provides a higher level API. It polls for events using the"
-" :mod:`selectors` module and handles :exc:`SSLWantWriteError`, "
-":exc:`SSLWantReadError` and :exc:`BlockingIOError` exceptions. It runs the "
-"SSL handshake asynchronously as well."
+"nonblocking>` and provides a higher level :ref:`Streams API <asyncio-"
+"streams>`. It polls for events using the :mod:`selectors` module and handles"
+" :exc:`SSLWantWriteError`, :exc:`SSLWantReadError` and "
+":exc:`BlockingIOError` exceptions. It runs the SSL handshake asynchronously "
+"as well."
 msgstr ""
-"Модуль :mod:`asyncio` підтримує :ref:`неблокуючі сокети SSL <ssl-"
-"nonblocking>` і забезпечує API вищого рівня. Він опитує події за допомогою "
-"модуля :mod:`selectors` і обробляє винятки :exc:`SSLWantWriteError`, "
-":exc:`SSLWantReadError` і :exc:`BlockingIOError`. Він також запускає "
-"рукостискання SSL асинхронно."
 
 #: ../../library/ssl.rst:2519
 msgid "Memory BIO Support"

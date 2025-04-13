@@ -1,21 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Dmytro Kazanzhy, 2022
 # Olga Tomakhina, 2022
-# Yuliia Shevchenko, 2024
+# Dmytro Kazanzhy, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"POT-Creation-Date: 2025-04-11 14:19+0000\n"
 "PO-Revision-Date: 2021-06-28 01:49+0000\n"
-"Last-Translator: Yuliia Shevchenko, 2024\n"
+"Last-Translator: Dmytro Kazanzhy, 2025\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +36,7 @@ msgid ""
 "interpreter is supported on all platforms with minimal line control "
 "capabilities."
 msgstr ""
-"Існує два варіанти інтерактивного :term:REPL. Класичний базовий "
+"Існує два варіанти інтерактивного :term:`REPL`. Класичний базовий "
 "інтерпретатор підтримується на всіх платформах з мінімальними можливостями "
 "керування рядками. "
 

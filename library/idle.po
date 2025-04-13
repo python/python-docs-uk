@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-04-04 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:07+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -21,27 +21,27 @@ msgstr ""
 "Language: uk\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-#: ../../library/idle.rst:4 ../../library/idle.rst:10
-msgid "IDLE"
-msgstr "IDLE"
+#: ../../library/idle.rst:4
+msgid "IDLE --- Python editor and shell"
+msgstr ""
 
 #: ../../library/idle.rst:8
 msgid "**Source code:** :source:`Lib/idlelib/`"
 msgstr "**Вихідний код:** :source:`Lib/idlelib/`"
 
-#: ../../library/idle.rst:17
+#: ../../library/idle.rst:20
 msgid "IDLE is Python's Integrated Development and Learning Environment."
 msgstr "IDLE — це інтегроване середовище розробки та навчання Python."
 
-#: ../../library/idle.rst:19
+#: ../../library/idle.rst:22
 msgid "IDLE has the following features:"
 msgstr "IDLE має такі особливості:"
 
-#: ../../library/idle.rst:21
+#: ../../library/idle.rst:24
 msgid "cross-platform: works mostly the same on Windows, Unix, and macOS"
 msgstr "кросплатформенність: працює майже однаково на Windows, Unix і macOS"
 
-#: ../../library/idle.rst:23
+#: ../../library/idle.rst:26
 msgid ""
 "Python shell window (interactive interpreter) with colorizing of code input,"
 " output, and error messages"
@@ -49,7 +49,7 @@ msgstr ""
 "Вікно оболонки Python (інтерактивний інтерпретатор) із розфарбуванням "
 "введення, виведення коду та повідомлень про помилки"
 
-#: ../../library/idle.rst:26
+#: ../../library/idle.rst:29
 msgid ""
 "multi-window text editor with multiple undo, Python colorizing, smart "
 "indent, call tips, auto completion, and other features"
@@ -58,7 +58,7 @@ msgstr ""
 " Python, розумним відступом, підказками щодо виклику, автозавершенням та "
 "іншими функціями"
 
-#: ../../library/idle.rst:29
+#: ../../library/idle.rst:32
 msgid ""
 "search within any window, replace within editor windows, and search through "
 "multiple files (grep)"
@@ -66,7 +66,7 @@ msgstr ""
 "пошук у будь-якому вікні, заміна у вікнах редактора та пошук у кількох "
 "файлах (grep)"
 
-#: ../../library/idle.rst:32
+#: ../../library/idle.rst:35
 msgid ""
 "debugger with persistent breakpoints, stepping, and viewing of global and "
 "local namespaces"
@@ -74,15 +74,15 @@ msgstr ""
 "налагоджувач із постійними точками зупинки, кроками та переглядом глобальних"
 " і локальних просторів імен"
 
-#: ../../library/idle.rst:35
+#: ../../library/idle.rst:38
 msgid "configuration, browsers, and other dialogs"
 msgstr "налаштування, браузери та інші діалоги"
 
-#: ../../library/idle.rst:38
+#: ../../library/idle.rst:41
 msgid "Menus"
 msgstr "Меню"
 
-#: ../../library/idle.rst:40
+#: ../../library/idle.rst:43
 msgid ""
 "IDLE has two main window types, the Shell window and the Editor window.  It "
 "is possible to have multiple editor windows simultaneously.  On Windows and "
@@ -94,7 +94,7 @@ msgstr ""
 "власне верхнє меню. Кожне меню, описане нижче, вказує, з яким типом вікна "
 "воно пов’язане."
 
-#: ../../library/idle.rst:45
+#: ../../library/idle.rst:48
 msgid ""
 "Output windows, such as used for Edit => Find in Files, are a subtype of "
 "editor window.  They currently have the same top menu but a different "
@@ -104,7 +104,7 @@ msgstr ""
 "підтипом вікна редактора. Наразі вони мають те саме верхнє меню, але інший "
 "заголовок і контекстне меню за замовчуванням."
 
-#: ../../library/idle.rst:49
+#: ../../library/idle.rst:52
 msgid ""
 "On macOS, there is one application menu.  It dynamically changes according "
 "to the window currently selected.  It has an IDLE menu, and some entries "
@@ -114,47 +114,47 @@ msgstr ""
 "поточного вибраного вікна. Він має меню IDLE, і деякі записи, описані нижче,"
 " переміщено відповідно до вказівок Apple."
 
-#: ../../library/idle.rst:54
+#: ../../library/idle.rst:57
 msgid "File menu (Shell and Editor)"
 msgstr "Меню \"Файл\" (Shell і Editor)"
 
-#: ../../library/idle.rst:56
+#: ../../library/idle.rst:59
 msgid "New File"
 msgstr "Новий файл"
 
-#: ../../library/idle.rst:57
+#: ../../library/idle.rst:60
 msgid "Create a new file editing window."
 msgstr "Створіть нове вікно редагування файлу."
 
-#: ../../library/idle.rst:59
+#: ../../library/idle.rst:62
 msgid "Open..."
 msgstr "ВІДЧИНЕНО..."
 
-#: ../../library/idle.rst:60
+#: ../../library/idle.rst:63
 msgid "Open an existing file with an Open dialog."
 msgstr "Відкрийте існуючий файл за допомогою діалогового вікна \"Відкрити\"."
 
-#: ../../library/idle.rst:62
+#: ../../library/idle.rst:65
 msgid "Open Module..."
 msgstr "Відкрити модуль..."
 
-#: ../../library/idle.rst:63
+#: ../../library/idle.rst:66
 msgid "Open an existing module (searches sys.path)."
 msgstr "Відкрийте наявний модуль (пошук sys.path)."
 
-#: ../../library/idle.rst:65
+#: ../../library/idle.rst:68
 msgid "Recent Files"
 msgstr "Останні файли"
 
-#: ../../library/idle.rst:66
+#: ../../library/idle.rst:69
 msgid "Open a list of recent files.  Click one to open it."
 msgstr "Відкрийте список останніх файлів. Натисніть один, щоб відкрити його."
 
-#: ../../library/idle.rst:72
+#: ../../library/idle.rst:75
 msgid "Module Browser"
 msgstr ""
 
-#: ../../library/idle.rst:73
+#: ../../library/idle.rst:76
 msgid ""
 "Show functions, classes, and methods in the current Editor file in a tree "
 "structure.  In the shell, open a module first."
@@ -162,11 +162,11 @@ msgstr ""
 "Показати функції, класи та методи в поточному файлі редактора у вигляді "
 "дерева. В оболонці спочатку відкрийте модуль."
 
-#: ../../library/idle.rst:76
+#: ../../library/idle.rst:79
 msgid "Path Browser"
 msgstr "Переглядач шляху"
 
-#: ../../library/idle.rst:77
+#: ../../library/idle.rst:80
 msgid ""
 "Show sys.path directories, modules, functions, classes and methods in a tree"
 " structure."
@@ -174,11 +174,11 @@ msgstr ""
 "Показати каталоги, модулі, функції, класи та методи sys.path у структурі "
 "дерева."
 
-#: ../../library/idle.rst:80
+#: ../../library/idle.rst:83
 msgid "Save"
 msgstr "зберегти"
 
-#: ../../library/idle.rst:81
+#: ../../library/idle.rst:84
 msgid ""
 "Save the current window to the associated file, if there is one.  Windows "
 "that have been changed since being opened or last saved have a \\* before "
@@ -190,11 +190,11 @@ msgstr ""
 "заголовка вікна. Якщо пов’язаного файлу немає, виконайте натомість "
 "\"Зберегти як\"."
 
-#: ../../library/idle.rst:86
+#: ../../library/idle.rst:89
 msgid "Save As..."
 msgstr "Зберегти як..."
 
-#: ../../library/idle.rst:87
+#: ../../library/idle.rst:90
 msgid ""
 "Save the current window with a Save As dialog.  The file saved becomes the "
 "new associated file for the window. (If your file namager is set to hide "
@@ -203,29 +203,29 @@ msgid ""
 "text files, except that on macOS Aqua,'.py' is added for all files.)"
 msgstr ""
 
-#: ../../library/idle.rst:93
+#: ../../library/idle.rst:96
 msgid "Save Copy As..."
 msgstr "Зберегти копію як..."
 
-#: ../../library/idle.rst:94
+#: ../../library/idle.rst:97
 msgid ""
 "Save the current window to different file without changing the associated "
 "file.  (See Save As note above about filename extensions.)"
 msgstr ""
 
-#: ../../library/idle.rst:97
+#: ../../library/idle.rst:100
 msgid "Print Window"
 msgstr "Вікно друку"
 
-#: ../../library/idle.rst:98
+#: ../../library/idle.rst:101
 msgid "Print the current window to the default printer."
 msgstr "Роздрукувати поточне вікно на принтері за замовчуванням."
 
-#: ../../library/idle.rst:100
+#: ../../library/idle.rst:103
 msgid "Close Window"
 msgstr "Закрити вікно"
 
-#: ../../library/idle.rst:101
+#: ../../library/idle.rst:104
 msgid ""
 "Close the current window (if an unsaved editor, ask to save; if an unsaved "
 "Shell, ask to quit execution).  Calling ``exit()`` or ``close()`` in the "
@@ -236,25 +236,25 @@ msgstr ""
 "``close()`` у вікні Shell також закриває Shell. Якщо це єдине вікно, також "
 "вийдіть з IDLE."
 
-#: ../../library/idle.rst:105
+#: ../../library/idle.rst:108
 msgid "Exit IDLE"
 msgstr "Вийти з IDLE"
 
-#: ../../library/idle.rst:106
+#: ../../library/idle.rst:109
 msgid "Close all windows and quit IDLE (ask to save unsaved edit windows)."
 msgstr ""
 "Закрийте всі вікна та вийдіть з IDLE (попросіть зберегти незбережені вікна "
 "редагування)."
 
-#: ../../library/idle.rst:109
+#: ../../library/idle.rst:112
 msgid "Edit menu (Shell and Editor)"
 msgstr "Меню редагування (оболонка та редактор)"
 
-#: ../../library/idle.rst:111
+#: ../../library/idle.rst:114
 msgid "Undo"
 msgstr "Скасувати"
 
-#: ../../library/idle.rst:112
+#: ../../library/idle.rst:115
 msgid ""
 "Undo the last change to the current window.  A maximum of 1000 changes may "
 "be undone."
@@ -262,103 +262,103 @@ msgstr ""
 "Скасувати останню зміну в поточному вікні. Можна скасувати не більше 1000 "
 "змін."
 
-#: ../../library/idle.rst:115
+#: ../../library/idle.rst:118
 msgid "Redo"
 msgstr "Повторити"
 
-#: ../../library/idle.rst:116
+#: ../../library/idle.rst:119
 msgid "Redo the last undone change to the current window."
 msgstr "Повторити останню скасовану зміну в поточному вікні."
 
-#: ../../library/idle.rst:118
+#: ../../library/idle.rst:121
 msgid "Select All"
 msgstr "Вибрати все"
 
-#: ../../library/idle.rst:119
+#: ../../library/idle.rst:122
 msgid "Select the entire contents of the current window."
 msgstr "Виділіть увесь вміст поточного вікна."
 
-#: ../../library/idle.rst:121 ../../library/idle.rst:353
-#: ../../library/idle.rst:367
+#: ../../library/idle.rst:124 ../../library/idle.rst:356
+#: ../../library/idle.rst:370
 msgid "Cut"
 msgstr "Вирізати"
 
-#: ../../library/idle.rst:122 ../../library/idle.rst:368
+#: ../../library/idle.rst:125 ../../library/idle.rst:371
 msgid ""
 "Copy selection into the system-wide clipboard; then delete the selection."
 msgstr ""
 "Копіювати виділення в загальносистемний буфер обміну; потім видаліть "
 "виділення."
 
-#: ../../library/idle.rst:124 ../../library/idle.rst:353
-#: ../../library/idle.rst:370
+#: ../../library/idle.rst:127 ../../library/idle.rst:356
+#: ../../library/idle.rst:373
 msgid "Copy"
 msgstr "Копія"
 
-#: ../../library/idle.rst:125 ../../library/idle.rst:371
+#: ../../library/idle.rst:128 ../../library/idle.rst:374
 msgid "Copy selection into the system-wide clipboard."
 msgstr "Копіювати виділення в загальносистемний буфер обміну."
 
-#: ../../library/idle.rst:127 ../../library/idle.rst:353
-#: ../../library/idle.rst:373
+#: ../../library/idle.rst:130 ../../library/idle.rst:356
+#: ../../library/idle.rst:376
 msgid "Paste"
 msgstr "Вставити"
 
-#: ../../library/idle.rst:128 ../../library/idle.rst:374
+#: ../../library/idle.rst:131 ../../library/idle.rst:377
 msgid "Insert contents of the system-wide clipboard into the current window."
 msgstr "Вставити вміст загальносистемного буфера обміну в поточне вікно."
 
-#: ../../library/idle.rst:130
+#: ../../library/idle.rst:133
 msgid "The clipboard functions are also available in context menus."
 msgstr "Функції буфера обміну також доступні в контекстних меню."
 
-#: ../../library/idle.rst:132
+#: ../../library/idle.rst:135
 msgid "Find..."
 msgstr "знайти..."
 
-#: ../../library/idle.rst:133
+#: ../../library/idle.rst:136
 msgid "Open a search dialog with many options"
 msgstr "Відкрийте діалогове вікно пошуку з багатьма параметрами"
 
-#: ../../library/idle.rst:135
+#: ../../library/idle.rst:138
 msgid "Find Again"
 msgstr "Знайти знову"
 
-#: ../../library/idle.rst:136
+#: ../../library/idle.rst:139
 msgid "Repeat the last search, if there is one."
 msgstr "Повторіть останній пошук, якщо він є."
 
-#: ../../library/idle.rst:138
+#: ../../library/idle.rst:141
 msgid "Find Selection"
 msgstr "Знайти виділення"
 
-#: ../../library/idle.rst:139
+#: ../../library/idle.rst:142
 msgid "Search for the currently selected string, if there is one."
 msgstr "Пошук поточного вибраного рядка, якщо він є."
 
-#: ../../library/idle.rst:141
+#: ../../library/idle.rst:144
 msgid "Find in Files..."
 msgstr "Знайти у файлах..."
 
-#: ../../library/idle.rst:142
+#: ../../library/idle.rst:145
 msgid "Open a file search dialog.  Put results in a new output window."
 msgstr ""
 "Відкрити діалогове вікно пошуку файлів. Помістіть результати в нове вікно "
 "виводу."
 
-#: ../../library/idle.rst:144
+#: ../../library/idle.rst:147
 msgid "Replace..."
 msgstr "Замінити..."
 
-#: ../../library/idle.rst:145
+#: ../../library/idle.rst:148
 msgid "Open a search-and-replace dialog."
 msgstr "Відкрийте діалогове вікно пошуку та заміни."
 
-#: ../../library/idle.rst:147
+#: ../../library/idle.rst:150
 msgid "Go to Line"
 msgstr "Перейдіть до лінії"
 
-#: ../../library/idle.rst:148
+#: ../../library/idle.rst:151
 msgid ""
 "Move the cursor to the beginning of the line requested and make that line "
 "visible.  A request past the end of the file goes to the end. Clear any "
@@ -368,11 +368,11 @@ msgstr ""
 " Запит після кінця файлу переходить до кінця. Зніміть вибір і оновіть статус"
 " рядка та стовпця."
 
-#: ../../library/idle.rst:152
+#: ../../library/idle.rst:155
 msgid "Show Completions"
 msgstr "Показати завершення"
 
-#: ../../library/idle.rst:153
+#: ../../library/idle.rst:156
 msgid ""
 "Open a scrollable list allowing selection of existing names. See "
 ":ref:`Completions <completions>` in the Editing and navigation section "
@@ -382,11 +382,11 @@ msgstr ""
 "Перегляньте :ref:`Completions <completions>` у розділі \"Редагування та "
 "навігація\" нижче."
 
-#: ../../library/idle.rst:156
+#: ../../library/idle.rst:159
 msgid "Expand Word"
 msgstr "Розгорніть Word"
 
-#: ../../library/idle.rst:157
+#: ../../library/idle.rst:160
 msgid ""
 "Expand a prefix you have typed to match a full word in the same window; "
 "repeat to get a different expansion."
@@ -394,11 +394,11 @@ msgstr ""
 "Розгорніть введений префікс, щоб відповідати повному слову в тому ж вікні; "
 "повторіть, щоб отримати інше розширення."
 
-#: ../../library/idle.rst:160
+#: ../../library/idle.rst:163
 msgid "Show Call Tip"
 msgstr ""
 
-#: ../../library/idle.rst:161
+#: ../../library/idle.rst:164
 msgid ""
 "After an unclosed parenthesis for a function, open a small window with "
 "function parameter hints.  See :ref:`Calltips <calltips>` in the Editing and"
@@ -408,23 +408,23 @@ msgstr ""
 " параметрів функції. Див. :ref:`Calltips <calltips>` у розділі \"Редагування"
 " та навігація\" нижче."
 
-#: ../../library/idle.rst:165
+#: ../../library/idle.rst:168
 msgid "Show Surrounding Parens"
 msgstr ""
 
-#: ../../library/idle.rst:166
+#: ../../library/idle.rst:169
 msgid "Highlight the surrounding parenthesis."
 msgstr "Виділіть оточуючі дужки."
 
-#: ../../library/idle.rst:171
+#: ../../library/idle.rst:174
 msgid "Format menu (Editor window only)"
 msgstr "Меню \"Формат\" (лише вікно редактора)"
 
-#: ../../library/idle.rst:173
+#: ../../library/idle.rst:176
 msgid "Format Paragraph"
 msgstr "Формат абзацу"
 
-#: ../../library/idle.rst:174
+#: ../../library/idle.rst:177
 msgid ""
 "Reformat the current blank-line-delimited paragraph in comment block or "
 "multiline string or selected line in a string.  All lines in the paragraph "
@@ -434,47 +434,47 @@ msgstr ""
 " або багаторядковий рядок або виділений рядок у рядку. Усі рядки в абзаці "
 "будуть відформатовані до N стовпців, де N за умовчанням дорівнює 72."
 
-#: ../../library/idle.rst:178
+#: ../../library/idle.rst:181
 msgid "Indent Region"
 msgstr "Область відступу"
 
-#: ../../library/idle.rst:179
+#: ../../library/idle.rst:182
 msgid "Shift selected lines right by the indent width (default 4 spaces)."
 msgstr ""
 "Зсунути виділені рядки праворуч на ширину відступу (за замовчуванням 4 "
 "пробіли)."
 
-#: ../../library/idle.rst:181
+#: ../../library/idle.rst:184
 msgid "Dedent Region"
 msgstr "Дедентська область"
 
-#: ../../library/idle.rst:182
+#: ../../library/idle.rst:185
 msgid "Shift selected lines left by the indent width (default 4 spaces)."
 msgstr ""
 "Зсунути вибрані рядки вліво на ширину відступу (за замовчуванням 4 "
 "інтервали)."
 
-#: ../../library/idle.rst:184
+#: ../../library/idle.rst:187
 msgid "Comment Out Region"
 msgstr "Регіон коментарів"
 
-#: ../../library/idle.rst:185
+#: ../../library/idle.rst:188
 msgid "Insert ## in front of selected lines."
 msgstr "Вставте ## перед виділеними рядками."
 
-#: ../../library/idle.rst:187
+#: ../../library/idle.rst:190
 msgid "Uncomment Region"
 msgstr "Розкоментуйте регіон"
 
-#: ../../library/idle.rst:188
+#: ../../library/idle.rst:191
 msgid "Remove leading # or ## from selected lines."
 msgstr "Видалити початковий # або ## з вибраних рядків."
 
-#: ../../library/idle.rst:190
+#: ../../library/idle.rst:193
 msgid "Tabify Region"
 msgstr "Регіон Tabify"
 
-#: ../../library/idle.rst:191
+#: ../../library/idle.rst:194
 msgid ""
 "Turn *leading* stretches of spaces into tabs. (Note: We recommend using 4 "
 "space blocks to indent Python code.)"
@@ -482,29 +482,29 @@ msgstr ""
 "Перетворіть *початкові* ділянки пробілів на вкладки. (Примітка: ми "
 "рекомендуємо використовувати 4 блоки пробілу для відступу коду Python.)"
 
-#: ../../library/idle.rst:194
+#: ../../library/idle.rst:197
 msgid "Untabify Region"
 msgstr "Розблокувати регіон"
 
-#: ../../library/idle.rst:195
+#: ../../library/idle.rst:198
 msgid "Turn *all* tabs into the correct number of spaces."
 msgstr "Перетворіть *усі* вкладки на правильну кількість пробілів."
 
-#: ../../library/idle.rst:197
+#: ../../library/idle.rst:200
 msgid "Toggle Tabs"
 msgstr "Перемикати вкладки"
 
-#: ../../library/idle.rst:198
+#: ../../library/idle.rst:201
 msgid "Open a dialog to switch between indenting with spaces and tabs."
 msgstr ""
 "Відкрийте діалогове вікно для перемикання між відступами за допомогою "
 "пробілів і табуляції."
 
-#: ../../library/idle.rst:200
+#: ../../library/idle.rst:203
 msgid "New Indent Width"
 msgstr "Нова ширина відступу"
 
-#: ../../library/idle.rst:201
+#: ../../library/idle.rst:204
 msgid ""
 "Open a dialog to change indent width. The accepted default by the Python "
 "community is 4 spaces."
@@ -512,11 +512,11 @@ msgstr ""
 "Відкрийте діалогове вікно, щоб змінити ширину відступу. Спільнота Python за "
 "замовчуванням приймає 4 пробіли."
 
-#: ../../library/idle.rst:204
+#: ../../library/idle.rst:207
 msgid "Strip Trailing Chitespace"
 msgstr ""
 
-#: ../../library/idle.rst:205
+#: ../../library/idle.rst:208
 msgid ""
 "Remove trailing space and other whitespace characters after the last non-"
 "whitespace character of a line by applying str.rstrip to each line, "
@@ -528,15 +528,15 @@ msgstr ""
 "багаторядкових рядках. За винятком вікон Shell, видаліть зайві нові рядки в "
 "кінці файлу."
 
-#: ../../library/idle.rst:214
+#: ../../library/idle.rst:217
 msgid "Run menu (Editor window only)"
 msgstr "Меню \"Виконати\" (лише вікно редактора)"
 
-#: ../../library/idle.rst:218
+#: ../../library/idle.rst:221
 msgid "Run Module"
 msgstr "Запустити модуль"
 
-#: ../../library/idle.rst:219
+#: ../../library/idle.rst:222
 msgid ""
 "Do :ref:`Check Module <check-module>`.  If no error, restart the shell to "
 "clean the environment, then execute the module.  Output is displayed in the "
@@ -553,11 +553,11 @@ msgstr ""
 "досліджувати результат виконання. Це схоже на виконання файлу за допомогою "
 "``python -i file`` у командному рядку."
 
-#: ../../library/idle.rst:229
+#: ../../library/idle.rst:232
 msgid "Run... Customized"
 msgstr "Запуск... Налаштований"
 
-#: ../../library/idle.rst:230
+#: ../../library/idle.rst:233
 msgid ""
 "Same as :ref:`Run Module <run-module>`, but run the module with customized "
 "settings.  *Command Line Arguments* extend :data:`sys.argv` as if passed on "
@@ -568,11 +568,11 @@ msgstr ""
 ":data:`sys.argv` так, ніби передано в командному рядку. Модуль можна "
 "запускати в Shell без перезавантаження."
 
-#: ../../library/idle.rst:236
+#: ../../library/idle.rst:239
 msgid "Check Module"
 msgstr "Перевірте модуль"
 
-#: ../../library/idle.rst:237
+#: ../../library/idle.rst:240
 msgid ""
 "Check the syntax of the module currently open in the Editor window. If the "
 "module has not been saved IDLE will either prompt the user to save or "
@@ -586,31 +586,31 @@ msgstr ""
 "\"Параметри очікування\". Якщо є синтаксична помилка, у вікні редактора "
 "вказується приблизне розташування."
 
-#: ../../library/idle.rst:245
+#: ../../library/idle.rst:248
 msgid "Python Shell"
 msgstr "Python Shell"
 
-#: ../../library/idle.rst:246
+#: ../../library/idle.rst:249
 msgid "Open or wake up the Python Shell window."
 msgstr "Відкрийте або виведіть з режиму сну вікно Python Shell."
 
-#: ../../library/idle.rst:250
+#: ../../library/idle.rst:253
 msgid "Shell menu (Shell window only)"
 msgstr "Меню оболонки (лише вікно оболонки)"
 
-#: ../../library/idle.rst:252
+#: ../../library/idle.rst:255
 msgid "View Last Restart"
 msgstr "Переглянути останній перезапуск"
 
-#: ../../library/idle.rst:253
+#: ../../library/idle.rst:256
 msgid "Scroll the shell window to the last Shell restart."
 msgstr "Прокрутіть вікно оболонки до останнього перезапуску оболонки."
 
-#: ../../library/idle.rst:255
+#: ../../library/idle.rst:258
 msgid "Restart Shell"
 msgstr "Перезапустіть Shell"
 
-#: ../../library/idle.rst:256
+#: ../../library/idle.rst:259
 msgid ""
 "Restart the shell to clean the environment and reset display and exception "
 "handling."
@@ -618,42 +618,42 @@ msgstr ""
 "Перезапустіть оболонку, щоб очистити середовище та скинути відображення та "
 "обробку винятків."
 
-#: ../../library/idle.rst:258
+#: ../../library/idle.rst:261
 msgid "Previous History"
 msgstr "Попередня історія"
 
-#: ../../library/idle.rst:259
+#: ../../library/idle.rst:262
 msgid ""
 "Cycle through earlier commands in history which match the current entry."
 msgstr ""
 "Переглядайте попередні команди в історії, які відповідають поточному запису."
 
-#: ../../library/idle.rst:261
+#: ../../library/idle.rst:264
 msgid "Next History"
 msgstr "Наступна історія"
 
-#: ../../library/idle.rst:262
+#: ../../library/idle.rst:265
 msgid "Cycle through later commands in history which match the current entry."
 msgstr ""
 "Переглядайте наступні команди в історії, які відповідають поточному запису."
 
-#: ../../library/idle.rst:264
+#: ../../library/idle.rst:267
 msgid "Interrupt Execution"
 msgstr "Перервати виконання"
 
-#: ../../library/idle.rst:265
+#: ../../library/idle.rst:268
 msgid "Stop a running program."
 msgstr "Зупинка запущеної програми."
 
-#: ../../library/idle.rst:268
+#: ../../library/idle.rst:271
 msgid "Debug menu (Shell window only)"
 msgstr "Меню налагодження (лише вікно оболонки)"
 
-#: ../../library/idle.rst:270
+#: ../../library/idle.rst:273
 msgid "Go to File/Line"
 msgstr "Перейдіть до Файл/Рядок"
 
-#: ../../library/idle.rst:271
+#: ../../library/idle.rst:274
 msgid ""
 "Look on the current line. with the cursor, and the line above for a filename"
 " and line number.  If found, open the file if not already open, and show the"
@@ -668,11 +668,11 @@ msgstr ""
 "знайдені за допомогою функції \"Знайти у файлах\". Також доступний у "
 "контекстному меню вікна оболонки та вікон виведення."
 
-#: ../../library/idle.rst:281
+#: ../../library/idle.rst:284
 msgid "Debugger (toggle)"
 msgstr "Налагоджувач (перемикач)"
 
-#: ../../library/idle.rst:282
+#: ../../library/idle.rst:285
 msgid ""
 "When activated, code entered in the Shell or run from an Editor will run "
 "under the debugger.  In the Editor, breakpoints can be set with the context "
@@ -683,11 +683,11 @@ msgstr ""
 "встановити за допомогою контекстного меню. Ця функція ще не завершена і дещо"
 " експериментальна."
 
-#: ../../library/idle.rst:286
+#: ../../library/idle.rst:289
 msgid "Stack Viewer"
 msgstr "Переглядач стека"
 
-#: ../../library/idle.rst:287
+#: ../../library/idle.rst:290
 msgid ""
 "Show the stack traceback of the last exception in a tree widget, with access"
 " to locals and globals."
@@ -695,26 +695,26 @@ msgstr ""
 "Показати зворотне трасування стека останнього винятку у віджеті дерева з "
 "доступом до локальних і глобальних."
 
-#: ../../library/idle.rst:290
+#: ../../library/idle.rst:293
 msgid "Auto-open Stack Viewer"
 msgstr "Автоматичне відкриття Stack Viewer"
 
-#: ../../library/idle.rst:291
+#: ../../library/idle.rst:294
 msgid ""
 "Toggle automatically opening the stack viewer on an unhandled exception."
 msgstr ""
 "Увімкнути автоматичне відкриття засобу перегляду стеків у разі необробленого"
 " винятку."
 
-#: ../../library/idle.rst:294
+#: ../../library/idle.rst:297
 msgid "Options menu (Shell and Editor)"
 msgstr "Меню параметрів (оболонка та редактор)"
 
-#: ../../library/idle.rst:296
+#: ../../library/idle.rst:299
 msgid "Configure IDLE"
 msgstr "Налаштувати IDLE"
 
-#: ../../library/idle.rst:297
+#: ../../library/idle.rst:300
 msgid ""
 "Open a configuration dialog and change preferences for the following: fonts,"
 " indentation, keybindings, text color themes, startup windows and size, "
@@ -729,7 +729,7 @@ msgstr ""
 "додаткової інформації див. :ref:`Налаштування налаштувань <preferences>` у "
 "розділі Довідка та налаштування."
 
-#: ../../library/idle.rst:304
+#: ../../library/idle.rst:307
 msgid ""
 "Most configuration options apply to all windows or all future windows. The "
 "option items below only apply to the active window."
@@ -738,11 +738,11 @@ msgstr ""
 "майбутніх вікон. Наведені нижче параметри застосовуються лише до активного "
 "вікна."
 
-#: ../../library/idle.rst:307
+#: ../../library/idle.rst:310
 msgid "Show/Hide Code Context (Editor Window only)"
 msgstr "Показати/приховати контекст коду (лише у вікні редактора)"
 
-#: ../../library/idle.rst:308
+#: ../../library/idle.rst:311
 msgid ""
 "Open a pane at the top of the edit window which shows the block context of "
 "the code which has scrolled above the top of the window.  See :ref:`Code "
@@ -753,11 +753,11 @@ msgstr ""
 ":ref:`Контекст коду <code-context>` у розділі \"Редагування та навігація\" "
 "нижче."
 
-#: ../../library/idle.rst:313
+#: ../../library/idle.rst:316
 msgid "Show/Hide Line Numbers (Editor Window only)"
 msgstr "Показати/приховати номери рядків (лише у вікні редактора)"
 
-#: ../../library/idle.rst:314
+#: ../../library/idle.rst:317
 msgid ""
 "Open a column to the left of the edit window which shows the number of each "
 "line of text.  The default is off, which may be changed in the preferences "
@@ -767,11 +767,11 @@ msgstr ""
 "кожного рядка тексту. За замовчуванням вимкнено, що можна змінити в "
 "налаштуваннях (див. :ref:`Налаштування параметрів <preferences>`)."
 
-#: ../../library/idle.rst:318
+#: ../../library/idle.rst:321
 msgid "Zoom/Restore Height"
 msgstr "Збільшити/відновити висоту"
 
-#: ../../library/idle.rst:319
+#: ../../library/idle.rst:322
 msgid ""
 "Toggles the window between normal size and maximum height. The initial size "
 "defaults to 40 lines by 80 chars unless changed on the General tab of the "
@@ -787,11 +787,11 @@ msgstr ""
 "збільшення на екрані. Зміна налаштувань екрана може призвести до втрати "
 "збереженої висоти. Цей перемикач не діє, коли вікно розгорнуто."
 
-#: ../../library/idle.rst:327
+#: ../../library/idle.rst:330
 msgid "Window menu (Shell and Editor)"
 msgstr "Меню \"Вікно\" (оболонка та редактор)"
 
-#: ../../library/idle.rst:329
+#: ../../library/idle.rst:332
 msgid ""
 "Lists the names of all open windows; select one to bring it to the "
 "foreground (deiconifying it if necessary)."
@@ -799,23 +799,23 @@ msgstr ""
 "Перераховує назви всіх відкритих вікон; виберіть один, щоб вивести його на "
 "передній план (деіконіфікуючи його, якщо необхідно)."
 
-#: ../../library/idle.rst:333
+#: ../../library/idle.rst:336
 msgid "Help menu (Shell and Editor)"
 msgstr "Меню \"Довідка\" (Shell і Editor)"
 
-#: ../../library/idle.rst:335
+#: ../../library/idle.rst:338
 msgid "About IDLE"
 msgstr "Про IDLE"
 
-#: ../../library/idle.rst:336
+#: ../../library/idle.rst:339
 msgid "Display version, copyright, license, credits, and more."
 msgstr "Версія для відображення, авторські права, ліцензія, авторство тощо."
 
-#: ../../library/idle.rst:338
+#: ../../library/idle.rst:341
 msgid "IDLE Help"
 msgstr "Довідка IDLE"
 
-#: ../../library/idle.rst:339
+#: ../../library/idle.rst:342
 msgid ""
 "Display this IDLE document, detailing the menu options, basic editing and "
 "navigation, and other tips."
@@ -823,11 +823,11 @@ msgstr ""
 "Відобразіть цей IDLE-документ із детальним описом параметрів меню, базового "
 "редагування та навігації та іншими порадами."
 
-#: ../../library/idle.rst:342
+#: ../../library/idle.rst:345
 msgid "Python Docs"
 msgstr "Документи Python"
 
-#: ../../library/idle.rst:343
+#: ../../library/idle.rst:346
 msgid ""
 "Access local Python documentation, if installed, or start a web browser and "
 "open docs.python.org showing the latest Python documentation."
@@ -836,17 +836,17 @@ msgstr ""
 "запустіть веб-браузер і відкрийте docs.python.org, де показано останню "
 "документацію Python."
 
-#: ../../library/idle.rst:346
+#: ../../library/idle.rst:349
 msgid "Turtle Demo"
 msgstr "Черепаха демо"
 
-#: ../../library/idle.rst:347
+#: ../../library/idle.rst:350
 msgid ""
 "Run the turtledemo module with example Python code and turtle drawings."
 msgstr ""
 "Запустіть модуль turtledemo з прикладом коду Python і малюнками черепахи."
 
-#: ../../library/idle.rst:349
+#: ../../library/idle.rst:352
 msgid ""
 "Additional help sources may be added here with the Configure IDLE dialog "
 "under the General tab. See the :ref:`Help sources <help-sources>` subsection"
@@ -857,11 +857,11 @@ msgstr ""
 ":ref:`Джерела довідки <help-sources>` нижче, щоб дізнатися більше про пункти"
 " меню \"Довідка\"."
 
-#: ../../library/idle.rst:362
+#: ../../library/idle.rst:365
 msgid "Context menus"
 msgstr ""
 
-#: ../../library/idle.rst:364
+#: ../../library/idle.rst:367
 msgid ""
 "Open a context menu by right-clicking in a window (Control-click on macOS). "
 "Context menus have the standard clipboard functions also on the Edit menu."
@@ -870,7 +870,7 @@ msgstr ""
 "утримуючи Control у macOS). Контекстні меню мають стандартні функції буфера "
 "обміну також у меню Правка."
 
-#: ../../library/idle.rst:376
+#: ../../library/idle.rst:379
 msgid ""
 "Editor windows also have breakpoint functions.  Lines with a breakpoint set "
 "are specially marked.  Breakpoints only have an effect when running under "
@@ -882,35 +882,35 @@ msgstr ""
 "під налагоджувачем. Точки зупину для файлу зберігаються в каталозі "
 "користувача ``.idlerc``."
 
-#: ../../library/idle.rst:353 ../../library/idle.rst:381
+#: ../../library/idle.rst:356 ../../library/idle.rst:384
 msgid "Set Breakpoint"
 msgstr "Встановити точку зупину"
 
-#: ../../library/idle.rst:382
+#: ../../library/idle.rst:385
 msgid "Set a breakpoint on the current line."
 msgstr "Встановити точку зупину на поточному рядку."
 
-#: ../../library/idle.rst:353 ../../library/idle.rst:384
+#: ../../library/idle.rst:356 ../../library/idle.rst:387
 msgid "Clear Breakpoint"
 msgstr "Очистити точку зупину"
 
-#: ../../library/idle.rst:385
+#: ../../library/idle.rst:388
 msgid "Clear the breakpoint on that line."
 msgstr "Очистіть точку розриву на цьому рядку."
 
-#: ../../library/idle.rst:387
+#: ../../library/idle.rst:390
 msgid "Shell and Output windows also have the following."
 msgstr "Вікна Shell і Output також мають наступне."
 
-#: ../../library/idle.rst:389
+#: ../../library/idle.rst:392
 msgid "Go to file/line"
 msgstr "Перейти до файлу/рядка"
 
-#: ../../library/idle.rst:390
+#: ../../library/idle.rst:393
 msgid "Same as in Debug menu."
 msgstr "Те саме, що в меню Debug."
 
-#: ../../library/idle.rst:392
+#: ../../library/idle.rst:395
 msgid ""
 "The Shell window also has an output squeezing facility explained in the "
 "*Python Shell window* subsection below."
@@ -918,11 +918,11 @@ msgstr ""
 "Вікно Shell також має функцію стискання виводу, пояснену в підрозділі *Вікно"
 " Python Shell* нижче."
 
-#: ../../library/idle.rst:395
+#: ../../library/idle.rst:398
 msgid "Squeeze"
 msgstr "Стиснути"
 
-#: ../../library/idle.rst:396
+#: ../../library/idle.rst:399
 msgid ""
 "If the cursor is over an output line, squeeze all the output between the "
 "code above and the prompt below down to a 'Squeezed text' label."
@@ -930,15 +930,15 @@ msgstr ""
 "Якщо курсор знаходиться над рядком виводу, стисніть увесь вивід між кодом "
 "вище та підказкою внизу до мітки \"Стиснутий текст\"."
 
-#: ../../library/idle.rst:403
+#: ../../library/idle.rst:406
 msgid "Editing and Navigation"
 msgstr ""
 
-#: ../../library/idle.rst:406
+#: ../../library/idle.rst:409
 msgid "Editor windows"
 msgstr "Вікна редактора"
 
-#: ../../library/idle.rst:408
+#: ../../library/idle.rst:411
 msgid ""
 "IDLE may open editor windows when it starts, depending on settings and how "
 "you start IDLE.  Thereafter, use the File menu.  There can be only one open "
@@ -948,7 +948,7 @@ msgstr ""
 "налаштувань і способу запуску IDLE. Після цього скористайтеся меню \"Файл\"."
 " Для певного файлу може бути лише одне відкрите вікно редактора."
 
-#: ../../library/idle.rst:412
+#: ../../library/idle.rst:415
 msgid ""
 "The title bar contains the name of the file, the full path, and the version "
 "of Python and IDLE running the window.  The status bar contains the line "
@@ -959,7 +959,7 @@ msgstr ""
 "яких запущено вікно. Рядок стану містить номер рядка ('Ln') і номер стовпця "
 "('Col'). Номери рядків починаються з 1; номери стовпців з 0."
 
-#: ../../library/idle.rst:417
+#: ../../library/idle.rst:420
 msgid ""
 "IDLE assumes that files with a known .py* extension contain Python code and "
 "that other files do not.  Run Python code with the Run menu."
@@ -968,11 +968,11 @@ msgstr ""
 "інші файли його не містять. Запустіть код Python за допомогою меню "
 "\"Виконати\"."
 
-#: ../../library/idle.rst:421
+#: ../../library/idle.rst:424
 msgid "Key bindings"
 msgstr "Прив'язки клавіш"
 
-#: ../../library/idle.rst:423
+#: ../../library/idle.rst:426
 msgid ""
 "The IDLE insertion cursor is a thin vertical bar between character "
 "positions.  When characters are entered, the insertion cursor and everything"
@@ -980,7 +980,7 @@ msgid ""
 "the new space."
 msgstr ""
 
-#: ../../library/idle.rst:428
+#: ../../library/idle.rst:431
 msgid ""
 "Several non-character keys move the cursor and possibly delete characters.  "
 "Deletion does not puts text on the clipboard, but IDLE has an undo list.  "
@@ -989,42 +989,42 @@ msgid ""
 "discussions assume that the keys have not been re-bound to something else.)"
 msgstr ""
 
-#: ../../library/idle.rst:435
+#: ../../library/idle.rst:438
 msgid "Arrow keys move the cursor one character or line."
 msgstr ""
 
-#: ../../library/idle.rst:437
+#: ../../library/idle.rst:440
 msgid ""
 ":kbd:`C-LeftArrow` and :kbd:`C-RightArrow` moves left or right one word."
 msgstr ""
 
-#: ../../library/idle.rst:439
+#: ../../library/idle.rst:442
 msgid ":kbd:`Home` and :kbd:`End` go to the beginning or end of the line."
 msgstr ""
 
-#: ../../library/idle.rst:441
+#: ../../library/idle.rst:444
 msgid ":kbd:`Page Up` and :kbd:`Page Down` go up or down one screen."
 msgstr ""
 
-#: ../../library/idle.rst:443
+#: ../../library/idle.rst:446
 msgid ":kbd:`C-Home` and :kbd:`C-End` go to beginning or end of the file."
 msgstr ""
 
-#: ../../library/idle.rst:445
+#: ../../library/idle.rst:448
 msgid ""
 ":kbd:`Backspace` and :kbd:`Del` (or :kbd:`C-d`) delete the previous or next "
 "character."
 msgstr ""
 
-#: ../../library/idle.rst:448
+#: ../../library/idle.rst:451
 msgid ":kbd:`C-Backspace` and :kbd:`C-Del` delete one word left or right."
 msgstr ""
 
-#: ../../library/idle.rst:450
+#: ../../library/idle.rst:453
 msgid ":kbd:`C-k` deletes ('kills') everything to the right."
 msgstr ""
 
-#: ../../library/idle.rst:452
+#: ../../library/idle.rst:455
 msgid ""
 "Standard keybindings (like :kbd:`C-c` to copy and :kbd:`C-v` to paste) may "
 "work.  Keybindings are selected in the Configure IDLE dialog."
@@ -1033,11 +1033,11 @@ msgstr ""
 ":kbd:`C-v` для вставлення) можуть працювати. Сполучення клавіш вибираються в"
 " діалоговому вікні \"Налаштувати IDLE\"."
 
-#: ../../library/idle.rst:456
+#: ../../library/idle.rst:459
 msgid "Automatic indentation"
 msgstr "Автоматичний відступ"
 
-#: ../../library/idle.rst:458
+#: ../../library/idle.rst:461
 msgid ""
 "After a block-opening statement, the next line is indented by 4 spaces (in "
 "the Python Shell window by one tab).  After certain keywords (break, return "
@@ -1054,7 +1054,7 @@ msgstr ""
 "ширини відступу. Наразі табуляції обмежені чотирма пробілами через обмеження"
 " Tcl/Tk."
 
-#: ../../library/idle.rst:465
+#: ../../library/idle.rst:468
 msgid ""
 "See also the indent/dedent region commands on the :ref:`Format menu <format-"
 "menu>`."
@@ -1062,11 +1062,11 @@ msgstr ""
 "Дивіться також команди області відступу/відступу в :ref:`меню Формат "
 "<format-menu>`."
 
-#: ../../library/idle.rst:469
+#: ../../library/idle.rst:472
 msgid "Search and Replace"
 msgstr "Пошук і заміна"
 
-#: ../../library/idle.rst:471
+#: ../../library/idle.rst:474
 msgid ""
 "Any selection becomes a search target.  However, only selections within a "
 "line work because searches are only performed within lines with the terminal"
@@ -1074,11 +1074,11 @@ msgid ""
 "interpreted according to the Python re module."
 msgstr ""
 
-#: ../../library/idle.rst:479
+#: ../../library/idle.rst:482
 msgid "Completions"
 msgstr "Доробки"
 
-#: ../../library/idle.rst:481
+#: ../../library/idle.rst:484
 msgid ""
 "Completions are supplied, when requested and available, for module names, "
 "attributes of classes or functions, or filenames.  Each request method "
@@ -1100,7 +1100,7 @@ msgstr ""
 ":kbd:`Escape`, :kbd:`Enter` і подвійних клавіш :kbd:`Tab` або клацань за "
 "межами поля. Подвійне клацання в полі вибирає та закриває."
 
-#: ../../library/idle.rst:492
+#: ../../library/idle.rst:495
 msgid ""
 "One way to open a box is to type a key character and wait for a predefined "
 "interval.  This defaults to 2 seconds; customize it in the settings dialog."
@@ -1121,7 +1121,7 @@ msgstr ""
 "можна вказати диск.) Переходьте до підкаталогів, вводячи назву каталогу та "
 "роздільник."
 
-#: ../../library/idle.rst:502
+#: ../../library/idle.rst:505
 msgid ""
 "Instead of waiting, or after a box is closed, open a completion box "
 "immediately with Show Completions on the Edit menu.  The default hot key is "
@@ -1139,7 +1139,7 @@ msgstr ""
 "Показувати завершення після того, як цитата завершує імена файлів у "
 "поточному каталозі замість кореневого каталогу."
 
-#: ../../library/idle.rst:510
+#: ../../library/idle.rst:513
 msgid ""
 "Hitting :kbd:`Tab` after a prefix usually has the same effect as Show "
 "Completions.  (With no prefix, it indents.)  However, if there is only one "
@@ -1151,7 +1151,7 @@ msgstr ""
 " один збіг із префіксом, цей збіг негайно додається до тексту редактора без "
 "відкриття поля."
 
-#: ../../library/idle.rst:515
+#: ../../library/idle.rst:518
 msgid ""
 "Invoking 'Show Completions', or hitting :kbd:`Tab` after a prefix, outside "
 "of a string and without a preceding '.' opens a box with keywords, builtin "
@@ -1161,7 +1161,7 @@ msgstr ""
 "поза рядком і без попереднього '.' відкриває вікно з ключовими словами, "
 "вбудованими назвами та доступними назвами рівня модулів."
 
-#: ../../library/idle.rst:519
+#: ../../library/idle.rst:522
 msgid ""
 "When editing code in an editor (as oppose to Shell), increase the available "
 "module-level names by running your code and not restarting the Shell "
@@ -1173,7 +1173,7 @@ msgstr ""
 "Shell після цього. Це особливо корисно після додавання імпорту у верхній "
 "частині файлу. Це також збільшує можливі завершення атрибутів."
 
-#: ../../library/idle.rst:525
+#: ../../library/idle.rst:528
 msgid ""
 "Completion boxes initially exclude names beginning with '_' or, for modules,"
 " not included in '__all__'.  The hidden names can be accessed by typing '_' "
@@ -1183,11 +1183,11 @@ msgstr ""
 "модулів, не включені в '__all__'. Доступ до прихованих імен можна отримати, "
 "ввівши \"_\" після \".\" до або після відкриття вікна."
 
-#: ../../library/idle.rst:532
+#: ../../library/idle.rst:535
 msgid "Calltips"
 msgstr "Підказки"
 
-#: ../../library/idle.rst:534
+#: ../../library/idle.rst:537
 msgid ""
 "A calltip is shown automatically when one types :kbd:`(` after the name of "
 "an *accessible* function.  A function name expression may include dots and "
@@ -1204,7 +1204,7 @@ msgstr ""
 "та \"Показати підказку виклику\" або введіть відповідний ярлик, щоб "
 "відобразити підказку виклику."
 
-#: ../../library/idle.rst:541
+#: ../../library/idle.rst:544
 msgid ""
 "The calltip consists of the function's signature and docstring up to the "
 "latter's first blank line or the fifth non-blank line.  (Some builtin "
@@ -1218,7 +1218,7 @@ msgstr ""
 "те, що попередні або наступні аргументи передаються лише за позицією чи "
 "назвою (ключовим словом). Деталі можуть бути змінені."
 
-#: ../../library/idle.rst:547
+#: ../../library/idle.rst:550
 msgid ""
 "In Shell, the accessible functions depends on what modules have been "
 "imported into the user process, including those imported by Idle itself, and"
@@ -1228,7 +1228,7 @@ msgstr ""
 "процес користувача, включно з тими, що імпортовані самим Idle, і які "
 "визначення були запущені з моменту останнього перезапуску."
 
-#: ../../library/idle.rst:551
+#: ../../library/idle.rst:554
 msgid ""
 "For example, restart the Shell and enter ``itertools.count(``.  A calltip "
 "appears because Idle imports itertools into the user process for its own "
@@ -1244,7 +1244,7 @@ msgstr ""
 "нічого не роблять. Введіть ``import turtle``. Після цього ``turtle.write(`` "
 "відобразить підказку."
 
-#: ../../library/idle.rst:558
+#: ../../library/idle.rst:561
 msgid ""
 "In an editor, import statements have no effect until one runs the file. One "
 "might want to run a file after writing import statements, after adding "
@@ -1254,11 +1254,11 @@ msgstr ""
 "може захотіти запустити файл після написання операторів імпорту, після "
 "додавання визначень функцій або після відкриття існуючого файлу."
 
-#: ../../library/idle.rst:565
+#: ../../library/idle.rst:568
 msgid "Code Context"
 msgstr "Контекст коду"
 
-#: ../../library/idle.rst:567
+#: ../../library/idle.rst:570
 msgid ""
 "Within an editor window containing Python code, code context can be toggled "
 "in order to show or hide a pane at the top of the window.  When shown, this "
@@ -1283,7 +1283,7 @@ msgstr ""
 " рядок. Клацання рядка в контекстній панелі перемістить цей рядок у верхню "
 "частину редактора."
 
-#: ../../library/idle.rst:578
+#: ../../library/idle.rst:581
 msgid ""
 "The text and background colors for the context pane can be configured under "
 "the Highlights tab in the Configure IDLE dialog."
@@ -1291,17 +1291,17 @@ msgstr ""
 "Кольори тексту та фону для контекстної панелі можна налаштувати на вкладці "
 "Highlights у діалоговому вікні Configure IDLE."
 
-#: ../../library/idle.rst:582
+#: ../../library/idle.rst:585
 msgid "Shell window"
 msgstr ""
 
-#: ../../library/idle.rst:584
+#: ../../library/idle.rst:587
 msgid ""
 "In IDLE's Shell, enter, edit, and recall complete statements. (Most consoles"
 " and terminals only work with a single physical line at a time)."
 msgstr ""
 
-#: ../../library/idle.rst:587
+#: ../../library/idle.rst:590
 msgid ""
 "Submit a single-line statement for execution by hitting :kbd:`Return` with "
 "the cursor anywhere on the line.  If a line is extended with Backslash "
@@ -1309,7 +1309,7 @@ msgid ""
 "line compound statement by entering a blank line after the statement."
 msgstr ""
 
-#: ../../library/idle.rst:593
+#: ../../library/idle.rst:596
 msgid ""
 "When one pastes code into Shell, it is not compiled and possibly executed "
 "until one hits :kbd:`Return`, as specified above. One may edit pasted code "
@@ -1318,7 +1318,7 @@ msgid ""
 "one."
 msgstr ""
 
-#: ../../library/idle.rst:599
+#: ../../library/idle.rst:602
 msgid ""
 "Lines containing ``RESTART`` mean that the user execution process has been "
 "re-started.  This occurs when the user execution process has crashed, when "
@@ -1326,38 +1326,38 @@ msgid ""
 " window."
 msgstr ""
 
-#: ../../library/idle.rst:604
+#: ../../library/idle.rst:607
 msgid ""
 "The editing features described in previous subsections work when entering "
 "code interactively.  IDLE's Shell window also responds to the following:"
 msgstr ""
 
-#: ../../library/idle.rst:607
+#: ../../library/idle.rst:610
 msgid ":kbd:`C-c` attempts to interrupt statement execution (but may fail)."
 msgstr ""
 
-#: ../../library/idle.rst:609
+#: ../../library/idle.rst:612
 msgid ":kbd:`C-d` closes Shell if typed at a ``>>>`` prompt."
 msgstr ""
 
-#: ../../library/idle.rst:611
+#: ../../library/idle.rst:614
 msgid ""
 ":kbd:`Alt-p` and :kbd:`Alt-n` (:kbd:`C-p` and :kbd:`C-n` on macOS) retrieve "
 "to the current prompt the previous or next previously entered statement that"
 " matches anything already typed."
 msgstr ""
 
-#: ../../library/idle.rst:615
+#: ../../library/idle.rst:618
 msgid ""
 ":kbd:`Return` while the cursor is on any previous statement appends the "
 "latter to anything already typed at the prompt."
 msgstr ""
 
-#: ../../library/idle.rst:619
+#: ../../library/idle.rst:622
 msgid "Text colors"
 msgstr "Кольори тексту"
 
-#: ../../library/idle.rst:621
+#: ../../library/idle.rst:624
 msgid ""
 "Idle defaults to black on white text, but colors text with special meanings."
 " For the shell, these are shell output, shell error, user output, and user "
@@ -1374,7 +1374,7 @@ msgstr ""
 "текстового вікна це курсор (якщо є), знайдений текст (якщо можливо) і "
 "виділений текст."
 
-#: ../../library/idle.rst:628
+#: ../../library/idle.rst:631
 msgid ""
 "IDLE also highlights the :ref:`soft keywords <soft-keywords>` "
 ":keyword:`match`, :keyword:`case <match>`, and :keyword:`_ <wildcard-"
@@ -1388,7 +1388,7 @@ msgstr ""
 "буде неправильним у деяких рідкісних випадках, включаючи деякі ``_``-s у "
 "шаблонах ``case``."
 
-#: ../../library/idle.rst:634
+#: ../../library/idle.rst:637
 msgid ""
 "Text coloring is done in the background, so uncolorized text is occasionally"
 " visible.  To change the color scheme, use the Configure IDLE dialog "
@@ -1401,11 +1401,11 @@ msgstr ""
 "зупину налагоджувача в редакторі та тексту в спливаючих і діалогових вікнах "
 "не можна налаштувати користувачем."
 
-#: ../../library/idle.rst:641
+#: ../../library/idle.rst:644
 msgid "Startup and Code Execution"
 msgstr ""
 
-#: ../../library/idle.rst:643
+#: ../../library/idle.rst:646
 msgid ""
 "Upon startup with the ``-s`` option, IDLE will execute the file referenced "
 "by the environment variables :envvar:`IDLESTARTUP` or "
@@ -1425,7 +1425,7 @@ msgstr ""
 "оболонки IDLE, або для виконання операторів імпорту для імпорту загальних "
 "модулів."
 
-#: ../../library/idle.rst:651
+#: ../../library/idle.rst:654
 msgid ""
 "In addition, ``Tk`` also loads a startup file if it is present.  Note that "
 "the Tk file is loaded unconditionally.  This additional file is ``.Idle.py``"
@@ -1439,54 +1439,91 @@ msgstr ""
 "цьому файлі виконуватимуться в просторі імен Tk, тому цей файл не корисний "
 "для імпорту функцій, які будуть використовуватися з оболонки IDLE Python."
 
-#: ../../library/idle.rst:658
+#: ../../library/idle.rst:661
 msgid "Command line usage"
 msgstr "Використання командного рядка"
 
-#: ../../library/idle.rst:660
+#: ../../library/idle.rst:665
 msgid ""
-"idle.py [-c command] [-d] [-e] [-h] [-i] [-r file] [-s] [-t title] [-] [arg] ...\n"
-"\n"
-"-c command  run command in the shell window\n"
-"-d          enable debugger and open shell window\n"
-"-e          open editor window\n"
-"-h          print help message with legal combinations and exit\n"
-"-i          open shell window\n"
-"-r file     run file in shell window\n"
-"-s          run $IDLESTARTUP or $PYTHONSTARTUP first, in shell window\n"
-"-t title    set title of shell window\n"
-"-           run stdin in shell (- must be last option before args)"
+"IDLE can be invoked from the command line with various options. The general "
+"syntax is:"
 msgstr ""
 
-#: ../../library/idle.rst:674
-msgid "If there are arguments:"
-msgstr "Якщо є аргументи:"
-
-#: ../../library/idle.rst:676
-msgid ""
-"If ``-``, ``-c``, or ``r`` is used, all arguments are placed in "
-"``sys.argv[1:...]`` and ``sys.argv[0]`` is set to ``''``, ``'-c'``, or "
-"``'-r'``.  No editor window is opened, even if that is the default set in "
-"the Options dialog."
+#: ../../library/idle.rst:667
+msgid "python -m idlelib [options] [file ...]"
 msgstr ""
-"Якщо використовується ``-``, ``-c`` або ``r``, усі аргументи розміщуються в "
-"``sys.argv[1:...]`` та ``sys.argv[0 ]`` має значення ``''``, ``'-c''`` або "
-"``'-r''``. Вікно редактора не відкривається, навіть якщо це встановлено за "
-"умовчанням у діалоговому вікні \"Параметри\"."
+
+#: ../../library/idle.rst:671
+msgid "The following options are available:"
+msgstr ""
+
+#: ../../library/idle.rst:675
+msgid ""
+"Run the specified Python command in the shell window. For example, pass ``-c"
+" \"print('Hello, World!')\"``. On Windows, the outer quotes must be double "
+"quotes as shown."
+msgstr ""
 
 #: ../../library/idle.rst:681
-msgid ""
-"Otherwise, arguments are files opened for editing and ``sys.argv`` reflects "
-"the arguments passed to IDLE itself."
+msgid "Enable the debugger and open the shell window."
 msgstr ""
-"В іншому випадку аргументи – це файли, відкриті для редагування, а "
-"``sys.argv`` відображає аргументи, передані самому IDLE."
 
 #: ../../library/idle.rst:685
+msgid "Open an editor window."
+msgstr ""
+
+#: ../../library/idle.rst:689
+msgid "Print a help message with legal combinations of options and exit."
+msgstr ""
+
+#: ../../library/idle.rst:693
+msgid "Open a shell window."
+msgstr ""
+
+#: ../../library/idle.rst:697
+msgid "Run the specified file in the shell window."
+msgstr ""
+
+#: ../../library/idle.rst:701
+msgid ""
+"Run the startup file (as defined by the environment variables "
+":envvar:`IDLESTARTUP` or :envvar:`PYTHONSTARTUP`) before opening the shell "
+"window."
+msgstr ""
+
+#: ../../library/idle.rst:705
+msgid "Set the title of the shell window."
+msgstr ""
+
+#: ../../library/idle.rst:709
+msgid ""
+"Read and execute standard input in the shell window. This option must be the"
+" last one before any arguments."
+msgstr ""
+
+#: ../../library/idle.rst:711
+msgid "If arguments are provided:"
+msgstr ""
+
+#: ../../library/idle.rst:713
+msgid ""
+"If ``-``, ``-c``, or ``-r`` is used, all arguments are placed in "
+"``sys.argv[1:]``, and ``sys.argv[0]`` is set to ``''``, ``'-c'``, or "
+"``'-r'`` respectively. No editor window is opened, even if that is the "
+"default set in the *Options* dialog."
+msgstr ""
+
+#: ../../library/idle.rst:716
+msgid ""
+"Otherwise, arguments are treated as files to be opened for editing, and "
+"``sys.argv`` reflects the arguments passed to IDLE itself."
+msgstr ""
+
+#: ../../library/idle.rst:720
 msgid "Startup failure"
 msgstr "Помилка запуску"
 
-#: ../../library/idle.rst:687
+#: ../../library/idle.rst:722
 msgid ""
 "IDLE uses a socket to communicate between the IDLE GUI process and the user "
 "code execution process.  A connection must be established whenever the Shell"
@@ -1503,7 +1540,7 @@ msgstr ""
 " помилки ``Tk`` із повідомленням \"неможливо підключитися\", яке спрямовує "
 "користувача сюди. Потім він виходить."
 
-#: ../../library/idle.rst:694
+#: ../../library/idle.rst:729
 msgid ""
 "One specific connection failure on Unix systems results from misconfigured "
 "masquerading rules somewhere in a system's network setup. When IDLE is "
@@ -1520,7 +1557,7 @@ msgstr ""
 "-irv 127.0.0.1 6543`` в одному вікні терміналу і ``tcplisten <same args>`` в"
 " іншому."
 
-#: ../../library/idle.rst:702
+#: ../../library/idle.rst:737
 msgid ""
 "A common cause of failure is a user-written file with the same name as a "
 "standard library module, such as *random.py* and *tkinter.py*. When such a "
@@ -1534,7 +1571,7 @@ msgstr ""
 "запустити, IDLE не може імпортувати файл stdlib. Поточне виправлення полягає"
 " в перейменуванні файлу користувача."
 
-#: ../../library/idle.rst:708
+#: ../../library/idle.rst:743
 msgid ""
 "Though less common than in the past, an antivirus or firewall program may "
 "stop the connection.  If the program cannot be taught to allow the "
@@ -1548,7 +1585,7 @@ msgstr ""
 " з’єднання, оскільки на зовнішніх портах не видно жодних даних. Подібною "
 "проблемою є неправильна конфігурація мережі, яка блокує підключення."
 
-#: ../../library/idle.rst:715
+#: ../../library/idle.rst:750
 msgid ""
 "Python installation issues occasionally stop IDLE: multiple versions can "
 "clash, or a single installation might need admin access.  If one undo the "
@@ -1561,7 +1598,7 @@ msgstr ""
 "запускатися від імені адміністратора, можливо, найлегше буде повністю "
 "видалити Python і почати заново."
 
-#: ../../library/idle.rst:720
+#: ../../library/idle.rst:755
 msgid ""
 "A zombie pythonw.exe process could be a problem.  On Windows, use Task "
 "Manager to check for one and stop it if there is.  Sometimes a restart "
@@ -1576,7 +1613,7 @@ msgstr ""
 " або використання Restart Shell у меню Shell може вирішити тимчасову "
 "проблему."
 
-#: ../../library/idle.rst:726
+#: ../../library/idle.rst:761
 msgid ""
 "When IDLE first starts, it attempts to read user configuration files in "
 "``~/.idlerc/`` (~ is one's home directory).  If there is a problem, an error"
@@ -1595,7 +1632,7 @@ msgstr ""
 "виникла помилка, найкращим рішенням може бути видалення його та початок "
 "заново з діалогового вікна налаштувань."
 
-#: ../../library/idle.rst:734
+#: ../../library/idle.rst:769
 msgid ""
 "If IDLE quits with no message, and it was not started from a console, try "
 "starting it from a console or terminal (``python -m idlelib``) and see if "
@@ -1605,7 +1642,7 @@ msgstr ""
 "консолі, спробуйте запустити його з консолі або терміналу (``python -m "
 "idlelib``) і перевірте, чи це призведе до повідомлення про помилку."
 
-#: ../../library/idle.rst:738
+#: ../../library/idle.rst:773
 msgid ""
 "On Unix-based systems with tcl/tk older than ``8.6.11`` (see ``About IDLE``)"
 " certain characters of certain fonts can cause a tk failure with a message "
@@ -1621,11 +1658,11 @@ msgstr ""
 "символу. Якщо неможливо оновити tcl/tk, переконфігуруйте IDLE, щоб "
 "використовувати шрифт, який працює краще."
 
-#: ../../library/idle.rst:746
+#: ../../library/idle.rst:781
 msgid "Running user code"
 msgstr "Виконується код користувача"
 
-#: ../../library/idle.rst:748
+#: ../../library/idle.rst:783
 msgid ""
 "With rare exceptions, the result of executing Python code with IDLE is "
 "intended to be the same as executing the same code by the default method, "
@@ -1642,7 +1679,7 @@ msgstr ""
 " з більшої кількості записів, а ``threading.active_count()`` повертає 2 "
 "замість 1."
 
-#: ../../library/idle.rst:755
+#: ../../library/idle.rst:790
 msgid ""
 "By default, IDLE runs user code in a separate OS process rather than in the "
 "user interface process that runs the shell and editor.  In the execution "
@@ -1659,7 +1696,7 @@ msgstr ""
 "``sys.__stdout__`` і ``sys.__stderr__``, не змінюються, але можуть бути "
 "``None``."
 
-#: ../../library/idle.rst:762
+#: ../../library/idle.rst:797
 msgid ""
 "Sending print output from one process to a text widget in another is slower "
 "than printing to a system terminal in the same process. This has the most "
@@ -1679,7 +1716,7 @@ msgstr ""
 "відобразити разом, а потім надрукуйте один рядок. І рядки формату, і "
 ":meth:`str.join` можуть допомогти поєднати поля та рядки."
 
-#: ../../library/idle.rst:771
+#: ../../library/idle.rst:806
 msgid ""
 "IDLE's standard stream replacements are not inherited by subprocesses "
 "created in the execution process, whether directly by user code or by "
@@ -1690,7 +1727,7 @@ msgid ""
 "attached to that window for input and output."
 msgstr ""
 
-#: ../../library/idle.rst:780
+#: ../../library/idle.rst:815
 msgid ""
 "If ``sys`` is reset by user code, such as with ``importlib.reload(sys)``, "
 "IDLE's changes are lost and input from the keyboard and output to the screen"
@@ -1700,7 +1737,7 @@ msgstr ""
 "``importlib.reload(sys)``, зміни IDLE втрачаються, а введення з клавіатури "
 "та виведення на екран працюватимуть некоректно."
 
-#: ../../library/idle.rst:784
+#: ../../library/idle.rst:819
 msgid ""
 "When Shell has the focus, it controls the keyboard and screen.  This is "
 "normally transparent, but functions that directly access the keyboard and "
@@ -1712,7 +1749,7 @@ msgstr ""
 "працюватимуть. До них входять специфічні для системи функції, які "
 "визначають, чи була натиснута клавіша, і якщо так, то яку."
 
-#: ../../library/idle.rst:789
+#: ../../library/idle.rst:824
 msgid ""
 "The IDLE code running in the execution process adds frames to the call stack"
 " that would not be there otherwise.  IDLE wraps ``sys.getrecursionlimit`` "
@@ -1723,7 +1760,7 @@ msgstr ""
 " яких інакше там не було б. IDLE обертає ``sys.getrecursionlimit`` і "
 "``sys.setrecursionlimit``, щоб зменшити ефект додаткових кадрів стеку."
 
-#: ../../library/idle.rst:794
+#: ../../library/idle.rst:829
 msgid ""
 "When user code raises SystemExit either directly or by calling sys.exit, "
 "IDLE returns to a Shell prompt instead of exiting."
@@ -1731,11 +1768,11 @@ msgstr ""
 "Коли код користувача викликає SystemExit безпосередньо або шляхом виклику "
 "sys.exit, IDLE повертається до підказки Shell замість виходу."
 
-#: ../../library/idle.rst:798
+#: ../../library/idle.rst:833
 msgid "User output in Shell"
 msgstr "Вивід користувача в Shell"
 
-#: ../../library/idle.rst:800
+#: ../../library/idle.rst:835
 msgid ""
 "When a program outputs text, the result is determined by the corresponding "
 "output device.  When IDLE executes user code, ``sys.stdout`` and "
@@ -1751,7 +1788,7 @@ msgstr ""
 "запрограмованими доповненнями. Там, де це важливо, Shell призначена для "
 "розробки, а не для виробництва."
 
-#: ../../library/idle.rst:807
+#: ../../library/idle.rst:842
 msgid ""
 "For instance, Shell never throws away output.  A program that sends "
 "unlimited output to Shell will eventually fill memory, resulting in a memory"
@@ -1765,7 +1802,7 @@ msgstr ""
 "останні n рядків виводу. Консоль Windows, наприклад, зберігає встановлені "
 "користувачем від 1 до 9999 рядків, з 300 за замовчуванням."
 
-#: ../../library/idle.rst:813
+#: ../../library/idle.rst:848
 msgid ""
 "A Tk Text widget, and hence IDLE's Shell, displays characters (codepoints) "
 "in the BMP (Basic Multilingual Plane) subset of Unicode.  Which characters "
@@ -1790,7 +1827,7 @@ msgstr ""
 "вивід за допомогою клавіш зі стрілками може продемонструвати деяку дивовижну"
 " поведінку інтервалів.) ::"
 
-#: ../../library/idle.rst:823
+#: ../../library/idle.rst:858
 msgid ""
 ">>> s = 'a\\tb\\a<\\x02><\\r>\\bc\\nd'  # Enter 22 chars.\n"
 ">>> len(s)\n"
@@ -1801,7 +1838,7 @@ msgid ""
 "# Result varies by OS and font.  Try it."
 msgstr ""
 
-#: ../../library/idle.rst:831
+#: ../../library/idle.rst:866
 msgid ""
 "The ``repr`` function is used for interactive echo of expression values.  It"
 " returns an altered version of the input string in which control codes, some"
@@ -1815,7 +1852,7 @@ msgstr ""
 "вихідні коди. Як показано вище, це дозволяє ідентифікувати символи в рядку, "
 "незалежно від того, як вони відображаються."
 
-#: ../../library/idle.rst:837
+#: ../../library/idle.rst:872
 msgid ""
 "Normal and error output are generally kept separate (on separate lines) from"
 " code input and each other.  They each get different highlight colors."
@@ -1824,7 +1861,7 @@ msgstr ""
 " від введення коду та один від одного. Кожен з них отримує різні кольори "
 "виділення."
 
-#: ../../library/idle.rst:840
+#: ../../library/idle.rst:875
 msgid ""
 "For SyntaxError tracebacks, the normal '^' marking where the error was "
 "detected is replaced by coloring the text with an error highlight. When code"
@@ -1838,7 +1875,7 @@ msgstr ""
 "кнопкою миші на рядку трасування, щоб перейти до відповідного рядка в "
 "редакторі IDLE. При необхідності файл буде відкрито."
 
-#: ../../library/idle.rst:846
+#: ../../library/idle.rst:881
 msgid ""
 "Shell has a special facility for squeezing output lines down to a 'Squeezed "
 "text' label.  This is done automatically for output over N lines (N = 50 by "
@@ -1854,7 +1891,7 @@ msgstr ""
 "кількістю рядків можна стиснути, клацнувши на виводі правою кнопкою миші. Це"
 " можуть бути корисні рядки, достатні для сповільнення прокручування."
 
-#: ../../library/idle.rst:854
+#: ../../library/idle.rst:889
 msgid ""
 "Squeezed output is expanded in place by double-clicking the label. It can "
 "also be sent to the clipboard or a separate view window by right-clicking "
@@ -1864,11 +1901,11 @@ msgstr ""
 " можна відправити в буфер обміну або в окреме вікно перегляду, клацнувши "
 "правою кнопкою миші на мітці."
 
-#: ../../library/idle.rst:859
+#: ../../library/idle.rst:894
 msgid "Developing tkinter applications"
 msgstr "Розробка додатків tkinter"
 
-#: ../../library/idle.rst:861
+#: ../../library/idle.rst:896
 msgid ""
 "IDLE is intentionally different from standard Python in order to facilitate "
 "development of tkinter programs.  Enter ``import tkinter as tk; root = "
@@ -1889,7 +1926,7 @@ msgstr ""
 "стандартному Python нічого помітно не змінюється, доки не буде введено "
 "``root.update()``."
 
-#: ../../library/idle.rst:870
+#: ../../library/idle.rst:905
 msgid ""
 "Most tkinter programs run ``root.mainloop()``, which usually does not return"
 " until the tk app is destroyed.  If the program is run with ``python -i`` or"
@@ -1903,7 +1940,7 @@ msgstr ""
 "не з’являється, доки не повернеться ``mainloop()``, після чого не залишиться"
 " нічого для взаємодіяти з."
 
-#: ../../library/idle.rst:876
+#: ../../library/idle.rst:911
 msgid ""
 "When running a tkinter program from an IDLE editor, one can comment out the "
 "mainloop call.  One then gets a shell prompt immediately and can interact "
@@ -1915,11 +1952,11 @@ msgstr ""
 "оболонки та може взаємодіяти з живою програмою. Треба лише не забувати знову"
 " ввімкнути виклик основного циклу під час роботи на стандартному Python."
 
-#: ../../library/idle.rst:882
+#: ../../library/idle.rst:917
 msgid "Running without a subprocess"
 msgstr "Запуск без підпроцесу"
 
-#: ../../library/idle.rst:884
+#: ../../library/idle.rst:919
 msgid ""
 "By default, IDLE executes user code in a separate subprocess via a socket, "
 "which uses the internal loopback interface.  This connection is not "
@@ -1931,7 +1968,7 @@ msgstr ""
 "зовні, і дані не надсилаються та не отримуються з Інтернету. Якщо програмне "
 "забезпечення брандмауера все одно скаржиться, ви можете ігнорувати це."
 
-#: ../../library/idle.rst:889
+#: ../../library/idle.rst:924
 msgid ""
 "If the attempt to make the socket connection fails, Idle will notify you. "
 "Such failures are sometimes transient, but if persistent, the problem may be"
@@ -1945,7 +1982,7 @@ msgstr ""
 "системи. Поки проблему не буде вирішено, можна запускати Idle з перемикачем "
 "командного рядка -n."
 
-#: ../../library/idle.rst:895
+#: ../../library/idle.rst:930
 msgid ""
 "If IDLE is started with the -n command line switch it will run in a single "
 "process and will not create the subprocess which runs the RPC Python "
@@ -1969,15 +2006,15 @@ msgstr ""
 "чинності. З цих причин бажано запускати IDLE із підпроцесом за "
 "замовчуванням, якщо це взагалі можливо."
 
-#: ../../library/idle.rst:910
+#: ../../library/idle.rst:945
 msgid "Help and Preferences"
 msgstr ""
 
-#: ../../library/idle.rst:915
+#: ../../library/idle.rst:950
 msgid "Help sources"
 msgstr "Довідкові джерела"
 
-#: ../../library/idle.rst:917
+#: ../../library/idle.rst:952
 msgid ""
 "Help menu entry \"IDLE Help\" displays a formatted html version of the IDLE "
 "chapter of the Library Reference.  The result, in a read-only tkinter text "
@@ -1994,7 +2031,7 @@ msgstr ""
 "натисніть кнопку Зміст (Зміст) і виберіть заголовок розділу у вікні, що "
 "відкриється."
 
-#: ../../library/idle.rst:925
+#: ../../library/idle.rst:960
 msgid ""
 "Help menu entry \"Python Docs\" opens the extensive sources of help, "
 "including tutorials, available at ``docs.python.org/x.y``, where 'x.y' is "
@@ -2008,7 +2045,7 @@ msgstr ""
 "системі є офлайнова копія документів (це може бути варіант інсталяції), вона"
 " буде відкрита натомість."
 
-#: ../../library/idle.rst:931
+#: ../../library/idle.rst:966
 msgid ""
 "Selected URLs can be added or removed from the help menu at any time using "
 "the General tab of the Configure IDLE dialog."
@@ -2016,11 +2053,11 @@ msgstr ""
 "Вибрані URL-адреси можна будь-коли додати або видалити з меню довідки за "
 "допомогою вкладки \"Загальні\" діалогового вікна \"Налаштувати IDLE\"."
 
-#: ../../library/idle.rst:937
+#: ../../library/idle.rst:972
 msgid "Setting preferences"
 msgstr "Встановлення налаштувань"
 
-#: ../../library/idle.rst:939
+#: ../../library/idle.rst:974
 msgid ""
 "The font preferences, highlighting, keys, and general preferences can be "
 "changed via Configure IDLE on the Option menu. Non-default user settings are"
@@ -2035,7 +2072,7 @@ msgstr ""
 "користувача, вирішуються редагуванням або видаленням одного чи кількох "
 "файлів у ``.idlerc``."
 
-#: ../../library/idle.rst:945
+#: ../../library/idle.rst:980
 msgid ""
 "On the Font tab, see the text sample for the effect of font face and size on"
 " multiple characters in multiple languages.  Edit the sample to add other "
@@ -2050,7 +2087,7 @@ msgstr ""
 "мають проблеми в Shell або редакторі, додайте їх у верхній частині зразка та"
 " спробуйте змінити спочатку розмір, а потім шрифт."
 
-#: ../../library/idle.rst:952
+#: ../../library/idle.rst:987
 msgid ""
 "On the Highlights and Keys tab, select a built-in or custom color theme and "
 "key set.  To use a newer built-in color theme or key set with older IDLEs, "
@@ -2062,11 +2099,11 @@ msgstr ""
 "тему або набір ключів зі старішими IDLE, збережіть їх як нову спеціальну "
 "тему або набір ключів, щоб вони були доступні для старіших IDLE."
 
-#: ../../library/idle.rst:958
+#: ../../library/idle.rst:993
 msgid "IDLE on macOS"
 msgstr "IDLE на macOS"
 
-#: ../../library/idle.rst:960
+#: ../../library/idle.rst:995
 msgid ""
 "Under System Preferences: Dock, one can set \"Prefer tabs when opening "
 "documents\" to \"Always\".  This setting is not compatible with the "
@@ -2077,11 +2114,11 @@ msgstr ""
 "несумісний із фреймворком графічного інтерфейсу tk/tkinter, який "
 "використовується IDLE, і порушує роботу кількох функцій IDLE."
 
-#: ../../library/idle.rst:965
+#: ../../library/idle.rst:1000
 msgid "Extensions"
 msgstr "Розширення"
 
-#: ../../library/idle.rst:967
+#: ../../library/idle.rst:1002
 msgid ""
 "IDLE contains an extension facility.  Preferences for extensions can be "
 "changed with the Extensions tab of the preferences dialog. See the beginning"
@@ -2095,21 +2132,21 @@ msgstr ""
 "інформації. Єдиним поточним розширенням за замовчуванням є zzdummy, приклад "
 "також використовується для тестування."
 
-#: ../../library/idle.rst:975
-msgid "idlelib"
+#: ../../library/idle.rst:1010
+msgid "idlelib --- implementation of IDLE application"
 msgstr ""
 
-#: ../../library/idle.rst:980
+#: ../../library/idle.rst:1015
 msgid "**Source code:** :source:`Lib/idlelib`"
 msgstr ""
 
-#: ../../library/idle.rst:984
+#: ../../library/idle.rst:1019
 msgid ""
 "The Lib/idlelib package implements the IDLE application.  See the rest of "
 "this page for how to use IDLE."
 msgstr ""
 
-#: ../../library/idle.rst:987
+#: ../../library/idle.rst:1022
 msgid ""
 "The files in idlelib are described in idlelib/README.txt.  Access it either "
 "in idlelib or click Help => About IDLE on the IDLE menu.  This file also "
@@ -2119,6 +2156,10 @@ msgid ""
 msgstr ""
 
 #: ../../library/idle.rst:10
+msgid "IDLE"
+msgstr "IDLE"
+
+#: ../../library/idle.rst:10
 msgid "Python Editor"
 msgstr ""
 
@@ -2126,26 +2167,26 @@ msgstr ""
 msgid "Integrated Development Environment"
 msgstr ""
 
-#: ../../library/idle.rst:68
+#: ../../library/idle.rst:71
 msgid "Module browser"
 msgstr ""
 
-#: ../../library/idle.rst:68
+#: ../../library/idle.rst:71
 msgid "Path browser"
 msgstr ""
 
-#: ../../library/idle.rst:210
+#: ../../library/idle.rst:213
 msgid "Run script"
 msgstr ""
 
-#: ../../library/idle.rst:277
+#: ../../library/idle.rst:280
 msgid "debugger"
 msgstr ""
 
-#: ../../library/idle.rst:277
+#: ../../library/idle.rst:280
 msgid "stack viewer"
 msgstr ""
 
-#: ../../library/idle.rst:353
+#: ../../library/idle.rst:356
 msgid "breakpoints"
 msgstr ""

@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"POT-Creation-Date: 2025-04-04 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 00:52+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -43,17 +43,23 @@ msgstr ""
 
 #: ../../howto/argparse.rst:16
 msgid ""
-"There are two other modules that fulfill the same task, namely :mod:`getopt`"
-" (an equivalent for ``getopt()`` from the C language) and the deprecated "
-":mod:`optparse`. Note also that :mod:`argparse` is based on :mod:`optparse`,"
-" and therefore very similar in terms of usage."
+"The standard library includes two other libraries directly related to "
+"command-line parameter processing: the lower level :mod:`optparse` module "
+"(which may require more code to configure for a given application, but also "
+"allows an application to request behaviors that ``argparse`` doesn't "
+"support), and the very low level :mod:`getopt` (which specifically serves as"
+" an equivalent to the :c:func:`!getopt` family of functions available to C "
+"programmers). While neither of those modules is covered directly in this "
+"guide, many of the core concepts in ``argparse`` first originated in "
+"``optparse``, so some aspects of this tutorial will also be relevant to "
+"``optparse`` users."
 msgstr ""
 
-#: ../../howto/argparse.rst:24
+#: ../../howto/argparse.rst:29
 msgid "Concepts"
 msgstr "Концепції"
 
-#: ../../howto/argparse.rst:26
+#: ../../howto/argparse.rst:31
 msgid ""
 "Let's show the sort of functionality that we are going to explore in this "
 "introductory tutorial by making use of the :command:`ls` command:"
@@ -61,7 +67,7 @@ msgstr ""
 "Давайте покажемо тип функціональності, який ми збираємося досліджувати в "
 "цьому вступному посібнику, використовуючи команду :command:`ls`:"
 
-#: ../../howto/argparse.rst:29
+#: ../../howto/argparse.rst:34
 msgid ""
 "$ ls\n"
 "cpython  devguide  prog.py  pypy  rm-unused-function.patch\n"
@@ -81,11 +87,11 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../../howto/argparse.rst:48
+#: ../../howto/argparse.rst:53
 msgid "A few concepts we can learn from the four commands:"
 msgstr "Кілька понять, які ми можемо вивчити з чотирьох команд:"
 
-#: ../../howto/argparse.rst:50
+#: ../../howto/argparse.rst:55
 msgid ""
 "The :command:`ls` command is useful when run without any options at all. It "
 "defaults to displaying the contents of the current directory."
@@ -93,7 +99,7 @@ msgstr ""
 "Команда :command:`ls` корисна, якщо її запускати без жодних опцій. За "
 "замовчуванням відображається вміст поточного каталогу."
 
-#: ../../howto/argparse.rst:53
+#: ../../howto/argparse.rst:58
 msgid ""
 "If we want beyond what it provides by default, we tell it a bit more. In "
 "this case, we want it to display a different directory, ``pypy``. What we "
@@ -113,7 +119,7 @@ msgstr ""
 "використанням якої є ``cp SRC DEST``. Перша позиція — це *те, що ви хочете "
 "скопіювати*, а друга позиція — це *куди ви хочете це скопіювати*."
 
-#: ../../howto/argparse.rst:62
+#: ../../howto/argparse.rst:67
 msgid ""
 "Now, say we want to change behaviour of the program. In our example, we "
 "display more info for each file instead of just showing the file names. The "
@@ -123,7 +129,7 @@ msgstr ""
 "показуємо більше інформації для кожного файлу, а не просто показуємо імена "
 "файлів. ``-l`` у цьому випадку відомий як необов'язковий аргумент."
 
-#: ../../howto/argparse.rst:66
+#: ../../howto/argparse.rst:71
 msgid ""
 "That's a snippet of the help text. It's very useful in that you can come "
 "across a program you have never used before, and can figure out how it works"
@@ -133,27 +139,27 @@ msgstr ""
 "натрапити на програму, якою ніколи раніше не користувалися, і зрозуміти, як "
 "вона працює, просто прочитавши довідковий текст."
 
-#: ../../howto/argparse.rst:72
+#: ../../howto/argparse.rst:77
 msgid "The basics"
 msgstr "Основи"
 
-#: ../../howto/argparse.rst:74
+#: ../../howto/argparse.rst:79
 msgid "Let us start with a very simple example which does (almost) nothing::"
 msgstr "Почнемо з дуже простого прикладу, який (майже) нічого не робить:"
 
-#: ../../howto/argparse.rst:76
+#: ../../howto/argparse.rst:81
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
 "parser.parse_args()"
 msgstr ""
 
-#: ../../howto/argparse.rst:80 ../../howto/argparse.rst:188
-#: ../../howto/argparse.rst:209
+#: ../../howto/argparse.rst:85 ../../howto/argparse.rst:193
+#: ../../howto/argparse.rst:214
 msgid "Following is a result of running the code:"
 msgstr "Нижче наведено результат виконання коду:"
 
-#: ../../howto/argparse.rst:82
+#: ../../howto/argparse.rst:87
 msgid ""
 "$ python prog.py\n"
 "$ python prog.py --help\n"
@@ -169,12 +175,12 @@ msgid ""
 "prog.py: error: unrecognized arguments: foo"
 msgstr ""
 
-#: ../../howto/argparse.rst:97 ../../howto/argparse.rst:254
-#: ../../howto/argparse.rst:298
+#: ../../howto/argparse.rst:102 ../../howto/argparse.rst:259
+#: ../../howto/argparse.rst:303
 msgid "Here is what is happening:"
 msgstr "Ось що відбувається:"
 
-#: ../../howto/argparse.rst:99
+#: ../../howto/argparse.rst:104
 msgid ""
 "Running the script without any options results in nothing displayed to "
 "stdout. Not so useful."
@@ -182,7 +188,7 @@ msgstr ""
 "Запуск сценарію без будь-яких параметрів призводить до того, що стандартний "
 "вивід нічого не відображає. Не дуже корисно."
 
-#: ../../howto/argparse.rst:102
+#: ../../howto/argparse.rst:107
 msgid ""
 "The second one starts to display the usefulness of the :mod:`argparse` "
 "module. We have done almost nothing, but already we get a nice help message."
@@ -190,7 +196,7 @@ msgstr ""
 "Другий починає відображати корисність модуля :mod:`argparse`. Ми майже "
 "нічого не зробили, але вже отримуємо гарне довідкове повідомлення."
 
-#: ../../howto/argparse.rst:105
+#: ../../howto/argparse.rst:110
 msgid ""
 "The ``--help`` option, which can also be shortened to ``-h``, is the only "
 "option we get for free (i.e. no need to specify it). Specifying anything "
@@ -202,15 +208,15 @@ msgstr ""
 "чого іншого призводить до помилки. Але навіть тоді ми отримуємо корисне "
 "повідомлення про використання, також безкоштовно."
 
-#: ../../howto/argparse.rst:112
+#: ../../howto/argparse.rst:117
 msgid "Introducing Positional arguments"
 msgstr "Представлення позиційних аргументів"
 
-#: ../../howto/argparse.rst:114
+#: ../../howto/argparse.rst:119
 msgid "An example::"
 msgstr "Приклад::"
 
-#: ../../howto/argparse.rst:116
+#: ../../howto/argparse.rst:121
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -219,11 +225,11 @@ msgid ""
 "print(args.echo)"
 msgstr ""
 
-#: ../../howto/argparse.rst:122
+#: ../../howto/argparse.rst:127
 msgid "And running the code:"
 msgstr "І запуск коду:"
 
-#: ../../howto/argparse.rst:124
+#: ../../howto/argparse.rst:129
 msgid ""
 "$ python prog.py\n"
 "usage: prog.py [-h] echo\n"
@@ -240,11 +246,11 @@ msgid ""
 "foo"
 msgstr ""
 
-#: ../../howto/argparse.rst:140
+#: ../../howto/argparse.rst:145
 msgid "Here is what's happening:"
 msgstr "Ось що відбувається:"
 
-#: ../../howto/argparse.rst:142
+#: ../../howto/argparse.rst:147
 msgid ""
 "We've added the :meth:`~ArgumentParser.add_argument` method, which is what "
 "we use to specify which command-line options the program is willing to "
@@ -252,17 +258,17 @@ msgid ""
 "function."
 msgstr ""
 
-#: ../../howto/argparse.rst:146
+#: ../../howto/argparse.rst:151
 msgid "Calling our program now requires us to specify an option."
 msgstr "Для виклику нашої програми тепер потрібно вказати опцію."
 
-#: ../../howto/argparse.rst:148
+#: ../../howto/argparse.rst:153
 msgid ""
 "The :meth:`~ArgumentParser.parse_args` method actually returns some data "
 "from the options specified, in this case, ``echo``."
 msgstr ""
 
-#: ../../howto/argparse.rst:151
+#: ../../howto/argparse.rst:156
 msgid ""
 "The variable is some form of 'magic' that :mod:`argparse` performs for free "
 "(i.e. no need to specify which variable that value is stored in). You will "
@@ -274,7 +280,7 @@ msgstr ""
 "також помітите, що його назва відповідає рядковому аргументу, наданому "
 "методу, ``echo``."
 
-#: ../../howto/argparse.rst:156
+#: ../../howto/argparse.rst:161
 msgid ""
 "Note however that, although the help display looks nice and all, it "
 "currently is not as helpful as it can be. For example we see that we got "
@@ -288,7 +294,7 @@ msgstr ""
 "робить, окрім здогадок або читання вихідного коду. Отже, давайте зробимо це "
 "трохи кориснішим::"
 
-#: ../../howto/argparse.rst:161
+#: ../../howto/argparse.rst:166
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -297,11 +303,11 @@ msgid ""
 "print(args.echo)"
 msgstr ""
 
-#: ../../howto/argparse.rst:167
+#: ../../howto/argparse.rst:172
 msgid "And we get:"
 msgstr "І отримуємо:"
 
-#: ../../howto/argparse.rst:169
+#: ../../howto/argparse.rst:174
 msgid ""
 "$ python prog.py -h\n"
 "usage: prog.py [-h] echo\n"
@@ -313,11 +319,11 @@ msgid ""
 "  -h, --help  show this help message and exit"
 msgstr ""
 
-#: ../../howto/argparse.rst:180
+#: ../../howto/argparse.rst:185
 msgid "Now, how about doing something even more useful::"
 msgstr "А тепер як щодо того, щоб зробити щось ще корисніше:"
 
-#: ../../howto/argparse.rst:182
+#: ../../howto/argparse.rst:187
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -326,7 +332,7 @@ msgid ""
 "print(args.square**2)"
 msgstr ""
 
-#: ../../howto/argparse.rst:190
+#: ../../howto/argparse.rst:195
 msgid ""
 "$ python prog.py 4\n"
 "Traceback (most recent call last):\n"
@@ -335,7 +341,7 @@ msgid ""
 "TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'"
 msgstr ""
 
-#: ../../howto/argparse.rst:198
+#: ../../howto/argparse.rst:203
 msgid ""
 "That didn't go so well. That's because :mod:`argparse` treats the options we"
 " give it as strings, unless we tell it otherwise. So, let's tell "
@@ -345,7 +351,7 @@ msgstr ""
 "параметри як рядки, якщо ми не вкажемо інше. Отже, давайте скажемо "
 ":mod:`argparse` розглядати цей вхід як ціле число::"
 
-#: ../../howto/argparse.rst:202
+#: ../../howto/argparse.rst:207
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -355,7 +361,7 @@ msgid ""
 "print(args.square**2)"
 msgstr ""
 
-#: ../../howto/argparse.rst:211
+#: ../../howto/argparse.rst:216
 msgid ""
 "$ python prog.py 4\n"
 "16\n"
@@ -364,7 +370,7 @@ msgid ""
 "prog.py: error: argument square: invalid int value: 'four'"
 msgstr ""
 
-#: ../../howto/argparse.rst:219
+#: ../../howto/argparse.rst:224
 msgid ""
 "That went well. The program now even helpfully quits on bad illegal input "
 "before proceeding."
@@ -372,11 +378,11 @@ msgstr ""
 "Це пройшло добре. Програма тепер навіть допомагає завершити роботу, якщо "
 "неправильно введено неправильні дані, перш ніж продовжити."
 
-#: ../../howto/argparse.rst:224
+#: ../../howto/argparse.rst:229
 msgid "Introducing Optional arguments"
 msgstr "Представляємо додаткові аргументи"
 
-#: ../../howto/argparse.rst:226
+#: ../../howto/argparse.rst:231
 msgid ""
 "So far we have been playing with positional arguments. Let us have a look on"
 " how to add optional ones::"
@@ -384,7 +390,7 @@ msgstr ""
 "Досі ми гралися з позиційними аргументами. Давайте розглянемо, як додати "
 "необов'язкові:"
 
-#: ../../howto/argparse.rst:229
+#: ../../howto/argparse.rst:234
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -394,12 +400,12 @@ msgid ""
 "    print(\"verbosity turned on\")"
 msgstr ""
 
-#: ../../howto/argparse.rst:236 ../../howto/argparse.rst:282
-#: ../../howto/argparse.rst:398 ../../howto/argparse.rst:432
+#: ../../howto/argparse.rst:241 ../../howto/argparse.rst:287
+#: ../../howto/argparse.rst:403 ../../howto/argparse.rst:437
 msgid "And the output:"
 msgstr "І вихід:"
 
-#: ../../howto/argparse.rst:238
+#: ../../howto/argparse.rst:243
 msgid ""
 "$ python prog.py --verbosity 1\n"
 "verbosity turned on\n"
@@ -416,7 +422,7 @@ msgid ""
 "prog.py: error: argument --verbosity: expected one argument"
 msgstr ""
 
-#: ../../howto/argparse.rst:256
+#: ../../howto/argparse.rst:261
 msgid ""
 "The program is written so as to display something when ``--verbosity`` is "
 "specified and display nothing when not."
@@ -424,7 +430,7 @@ msgstr ""
 "Програма написана таким чином, щоб щось відображати, коли вказано "
 "``--verbosity``, і нічого не відображати, якщо ні."
 
-#: ../../howto/argparse.rst:259
+#: ../../howto/argparse.rst:264
 msgid ""
 "To show that the option is actually optional, there is no error when running"
 " the program without it. Note that by default, if an optional argument isn't"
@@ -433,11 +439,11 @@ msgid ""
 ":keyword:`if` statement."
 msgstr ""
 
-#: ../../howto/argparse.rst:265
+#: ../../howto/argparse.rst:270
 msgid "The help message is a bit different."
 msgstr "Довідкове повідомлення дещо інше."
 
-#: ../../howto/argparse.rst:267
+#: ../../howto/argparse.rst:272
 msgid ""
 "When using the ``--verbosity`` option, one must also specify some value, any"
 " value."
@@ -445,7 +451,7 @@ msgstr ""
 "При використанні опції ``--verbosity`` необхідно також вказати певне "
 "значення, будь-яке значення."
 
-#: ../../howto/argparse.rst:270
+#: ../../howto/argparse.rst:275
 msgid ""
 "The above example accepts arbitrary integer values for ``--verbosity``, but "
 "for our simple program, only two values are actually useful, ``True`` or "
@@ -455,7 +461,7 @@ msgstr ""
 "але для нашої простої програми насправді корисними є лише два значення, "
 "``True`` або ``False``. Давайте відповідно змінимо код::"
 
-#: ../../howto/argparse.rst:274
+#: ../../howto/argparse.rst:279
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -466,7 +472,7 @@ msgid ""
 "    print(\"verbosity turned on\")"
 msgstr ""
 
-#: ../../howto/argparse.rst:284
+#: ../../howto/argparse.rst:289
 msgid ""
 "$ python prog.py --verbose\n"
 "verbosity turned on\n"
@@ -481,7 +487,7 @@ msgid ""
 "  --verbose   increase output verbosity"
 msgstr ""
 
-#: ../../howto/argparse.rst:300
+#: ../../howto/argparse.rst:305
 msgid ""
 "The option is now more of a flag than something that requires a value. We "
 "even changed the name of the option to match that idea. Note that we now "
@@ -490,7 +496,7 @@ msgid ""
 "``args.verbose``. Not specifying it implies ``False``."
 msgstr ""
 
-#: ../../howto/argparse.rst:307
+#: ../../howto/argparse.rst:312
 msgid ""
 "It complains when you specify a value, in true spirit of what flags actually"
 " are."
@@ -498,15 +504,15 @@ msgstr ""
 "Він скаржиться, коли ви вказуєте значення, у справжньому дусі того, чим "
 "насправді є прапори."
 
-#: ../../howto/argparse.rst:310
+#: ../../howto/argparse.rst:315
 msgid "Notice the different help text."
 msgstr "Зверніть увагу на інший текст довідки."
 
-#: ../../howto/argparse.rst:314
+#: ../../howto/argparse.rst:319
 msgid "Short options"
 msgstr "Короткі варіанти"
 
-#: ../../howto/argparse.rst:316
+#: ../../howto/argparse.rst:321
 msgid ""
 "If you are familiar with command line usage, you will notice that I haven't "
 "yet touched on the topic of short versions of the options. It's quite "
@@ -515,7 +521,7 @@ msgstr ""
 "Якщо ви знайомі з використанням командного рядка, ви помітите, що я ще не "
 "торкався теми коротких версій параметрів. Це досить просто::"
 
-#: ../../howto/argparse.rst:320
+#: ../../howto/argparse.rst:325
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -526,11 +532,11 @@ msgid ""
 "    print(\"verbosity turned on\")"
 msgstr ""
 
-#: ../../howto/argparse.rst:328
+#: ../../howto/argparse.rst:333
 msgid "And here goes:"
 msgstr "І ось:"
 
-#: ../../howto/argparse.rst:330
+#: ../../howto/argparse.rst:335
 msgid ""
 "$ python prog.py -v\n"
 "verbosity turned on\n"
@@ -542,20 +548,20 @@ msgid ""
 "  -v, --verbose  increase output verbosity"
 msgstr ""
 
-#: ../../howto/argparse.rst:341
+#: ../../howto/argparse.rst:346
 msgid "Note that the new ability is also reflected in the help text."
 msgstr ""
 "Зверніть увагу, що нова здатність також відображається в тексті довідки."
 
-#: ../../howto/argparse.rst:345
+#: ../../howto/argparse.rst:350
 msgid "Combining Positional and Optional arguments"
 msgstr "Поєднання позиційних і необов’язкових аргументів"
 
-#: ../../howto/argparse.rst:347
+#: ../../howto/argparse.rst:352
 msgid "Our program keeps growing in complexity::"
 msgstr "Наша програма постійно ускладнюється:"
 
-#: ../../howto/argparse.rst:349
+#: ../../howto/argparse.rst:354
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -571,11 +577,11 @@ msgid ""
 "    print(answer)"
 msgstr ""
 
-#: ../../howto/argparse.rst:362
+#: ../../howto/argparse.rst:367
 msgid "And now the output:"
 msgstr "А тепер вихід:"
 
-#: ../../howto/argparse.rst:364
+#: ../../howto/argparse.rst:369
 msgid ""
 "$ python prog.py\n"
 "usage: prog.py [-h] [-v] square\n"
@@ -588,15 +594,15 @@ msgid ""
 "the square of 4 equals 16"
 msgstr ""
 
-#: ../../howto/argparse.rst:376
+#: ../../howto/argparse.rst:381
 msgid "We've brought back a positional argument, hence the complaint."
 msgstr "Ми повернули позиційний аргумент, тому скарга."
 
-#: ../../howto/argparse.rst:378
+#: ../../howto/argparse.rst:383
 msgid "Note that the order does not matter."
 msgstr "Зауважте, що порядок не має значення."
 
-#: ../../howto/argparse.rst:380
+#: ../../howto/argparse.rst:385
 msgid ""
 "How about we give this program of ours back the ability to have multiple "
 "verbosity values, and actually get to use them::"
@@ -604,7 +610,7 @@ msgstr ""
 "Як щодо того, щоб ми повернули цій нашій програмі можливість мати кілька "
 "значень докладності та фактично отримати їх використання:"
 
-#: ../../howto/argparse.rst:383
+#: ../../howto/argparse.rst:388
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -622,7 +628,7 @@ msgid ""
 "    print(answer)"
 msgstr ""
 
-#: ../../howto/argparse.rst:400
+#: ../../howto/argparse.rst:405
 msgid ""
 "$ python prog.py 4\n"
 "16\n"
@@ -637,7 +643,7 @@ msgid ""
 "16"
 msgstr ""
 
-#: ../../howto/argparse.rst:414
+#: ../../howto/argparse.rst:419
 msgid ""
 "These all look good except the last one, which exposes a bug in our program."
 " Let's fix it by restricting the values the ``--verbosity`` option can "
@@ -647,7 +653,7 @@ msgstr ""
 "програмі. Давайте виправимо це, обмеживши значення, які може приймати "
 "параметр ``--verbosity``:"
 
-#: ../../howto/argparse.rst:417
+#: ../../howto/argparse.rst:422
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -665,7 +671,7 @@ msgid ""
 "    print(answer)"
 msgstr ""
 
-#: ../../howto/argparse.rst:434
+#: ../../howto/argparse.rst:439
 msgid ""
 "$ python prog.py 4 -v 3\n"
 "usage: prog.py [-h] [-v {0,1,2}] square\n"
@@ -682,7 +688,7 @@ msgid ""
 "                        increase output verbosity"
 msgstr ""
 
-#: ../../howto/argparse.rst:450
+#: ../../howto/argparse.rst:455
 msgid ""
 "Note that the change also reflects both in the error message as well as the "
 "help string."
@@ -690,7 +696,7 @@ msgstr ""
 "Зауважте, що зміна також відображається як у повідомленні про помилку, так і"
 " в рядку довідки."
 
-#: ../../howto/argparse.rst:453
+#: ../../howto/argparse.rst:458
 msgid ""
 "Now, let's use a different approach of playing with verbosity, which is "
 "pretty common. It also matches the way the CPython executable handles its "
@@ -700,7 +706,7 @@ msgstr ""
 " поширеним. Це також відповідає тому, як виконуваний файл CPython обробляє "
 "власний аргумент багатослівності (перевірте вихід ``python --help``)::"
 
-#: ../../howto/argparse.rst:457
+#: ../../howto/argparse.rst:462
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -718,7 +724,7 @@ msgid ""
 "    print(answer)"
 msgstr ""
 
-#: ../../howto/argparse.rst:472
+#: ../../howto/argparse.rst:477
 msgid ""
 "We have introduced another action, \"count\", to count the number of "
 "occurrences of specific options."
@@ -726,7 +732,7 @@ msgstr ""
 "Ми запровадили ще одну дію, \"підрахунок\", щоб підрахувати кількість "
 "повторень певних параметрів."
 
-#: ../../howto/argparse.rst:476
+#: ../../howto/argparse.rst:481
 msgid ""
 "$ python prog.py 4\n"
 "16\n"
@@ -752,7 +758,7 @@ msgid ""
 "16"
 msgstr ""
 
-#: ../../howto/argparse.rst:501
+#: ../../howto/argparse.rst:506
 msgid ""
 "Yes, it's now more of a flag (similar to ``action=\"store_true\"``) in the "
 "previous version of our script. That should explain the complaint."
@@ -760,11 +766,11 @@ msgstr ""
 "Так, тепер це більше позначка (схожа на ``action=\"store_true\"``) у "
 "попередній версії нашого сценарію. Це має пояснити скаргу."
 
-#: ../../howto/argparse.rst:504
+#: ../../howto/argparse.rst:509
 msgid "It also behaves similar to \"store_true\" action."
 msgstr "Він також поводиться подібно до дії \"store_true\"."
 
-#: ../../howto/argparse.rst:506
+#: ../../howto/argparse.rst:511
 msgid ""
 "Now here's a demonstration of what the \"count\" action gives. You've "
 "probably seen this sort of usage before."
@@ -772,7 +778,7 @@ msgstr ""
 "Тепер ось демонстрація того, що дає дія \"підрахунок\". Ви, напевно, бачили "
 "таке використання раніше."
 
-#: ../../howto/argparse.rst:509
+#: ../../howto/argparse.rst:514
 msgid ""
 "And if you don't specify the ``-v`` flag, that flag is considered to have "
 "``None`` value."
@@ -780,7 +786,7 @@ msgstr ""
 "І якщо ви не вкажете прапорець ``-v``, цей прапорець вважатиметься таким, що"
 " має значення ``None``."
 
-#: ../../howto/argparse.rst:512
+#: ../../howto/argparse.rst:517
 msgid ""
 "As should be expected, specifying the long form of the flag, we should get "
 "the same output."
@@ -788,7 +794,7 @@ msgstr ""
 "Як і слід було очікувати, вказавши довгу форму прапора, ми повинні отримати "
 "той самий результат."
 
-#: ../../howto/argparse.rst:515
+#: ../../howto/argparse.rst:520
 msgid ""
 "Sadly, our help output isn't very informative on the new ability our script "
 "has acquired, but that can always be fixed by improving the documentation "
@@ -799,15 +805,15 @@ msgstr ""
 "покращивши документацію для нашого сценарію (наприклад, за допомогою "
 "аргументу ключового слова ``help``)."
 
-#: ../../howto/argparse.rst:519
+#: ../../howto/argparse.rst:524
 msgid "That last output exposes a bug in our program."
 msgstr "Цей останній вихід виявляє помилку в нашій програмі."
 
-#: ../../howto/argparse.rst:522
+#: ../../howto/argparse.rst:527
 msgid "Let's fix::"
 msgstr "Виправимо::"
 
-#: ../../howto/argparse.rst:524
+#: ../../howto/argparse.rst:529
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -827,11 +833,11 @@ msgid ""
 "    print(answer)"
 msgstr ""
 
-#: ../../howto/argparse.rst:541
+#: ../../howto/argparse.rst:546
 msgid "And this is what it gives:"
 msgstr "І ось що це дає:"
 
-#: ../../howto/argparse.rst:543
+#: ../../howto/argparse.rst:548
 msgid ""
 "$ python prog.py 4 -vvv\n"
 "the square of 4 equals 16\n"
@@ -844,7 +850,7 @@ msgid ""
 "TypeError: '>=' not supported between instances of 'NoneType' and 'int'"
 msgstr ""
 
-#: ../../howto/argparse.rst:556
+#: ../../howto/argparse.rst:561
 msgid ""
 "First output went well, and fixes the bug we had before. That is, we want "
 "any value >= 2 to be as verbose as possible."
@@ -852,15 +858,15 @@ msgstr ""
 "Перший вихід пройшов добре та виправляє помилку, яку ми мали раніше. Тобто "
 "ми хочемо, щоб будь-яке значення >= 2 було якомога детальнішим."
 
-#: ../../howto/argparse.rst:559
+#: ../../howto/argparse.rst:564
 msgid "Third output not so good."
 msgstr "Третій вихід не дуже хороший."
 
-#: ../../howto/argparse.rst:561
+#: ../../howto/argparse.rst:566
 msgid "Let's fix that bug::"
 msgstr "Давайте виправимо цю помилку::"
 
-#: ../../howto/argparse.rst:563
+#: ../../howto/argparse.rst:568
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -878,7 +884,7 @@ msgid ""
 "    print(answer)"
 msgstr ""
 
-#: ../../howto/argparse.rst:578
+#: ../../howto/argparse.rst:583
 msgid ""
 "We've just introduced yet another keyword, ``default``. We've set it to "
 "``0`` in order to make it comparable to the other int values. Remember that "
@@ -892,17 +898,17 @@ msgstr ""
 "він отримує значення ``None``, яке не можна порівняти зі значенням int "
 "(отже, виняток :exc:`TypeError`)."
 
-#: ../../howto/argparse.rst:585
+#: ../../howto/argparse.rst:590
 msgid "And:"
 msgstr "і:"
 
-#: ../../howto/argparse.rst:587
+#: ../../howto/argparse.rst:592
 msgid ""
 "$ python prog.py 4\n"
 "16"
 msgstr ""
 
-#: ../../howto/argparse.rst:592
+#: ../../howto/argparse.rst:597
 msgid ""
 "You can go quite far just with what we've learned so far, and we have only "
 "scratched the surface. The :mod:`argparse` module is very powerful, and "
@@ -912,11 +918,11 @@ msgstr ""
 "подряпали поверхню. Модуль :mod:`argparse` дуже потужний, і ми вивчимо його "
 "трохи більше, перш ніж закінчити цей підручник."
 
-#: ../../howto/argparse.rst:599
+#: ../../howto/argparse.rst:604
 msgid "Getting a little more advanced"
 msgstr "Ставши трохи більш просунутим"
 
-#: ../../howto/argparse.rst:601
+#: ../../howto/argparse.rst:606
 msgid ""
 "What if we wanted to expand our tiny program to perform other powers, not "
 "just squares::"
@@ -924,7 +930,7 @@ msgstr ""
 "Що, якби ми захотіли розширити нашу крихітну програму для виконання інших "
 "ступенів, а не лише квадратів:"
 
-#: ../../howto/argparse.rst:604
+#: ../../howto/argparse.rst:609
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -941,12 +947,12 @@ msgid ""
 "    print(answer)"
 msgstr ""
 
-#: ../../howto/argparse.rst:618 ../../howto/argparse.rst:656
-#: ../../howto/argparse.rst:872
+#: ../../howto/argparse.rst:623 ../../howto/argparse.rst:661
+#: ../../howto/argparse.rst:877
 msgid "Output:"
 msgstr "Вихід:"
 
-#: ../../howto/argparse.rst:620
+#: ../../howto/argparse.rst:625
 msgid ""
 "$ python prog.py\n"
 "usage: prog.py [-h] [-v] x y\n"
@@ -965,7 +971,7 @@ msgid ""
 "4^2 == 16"
 msgstr ""
 
-#: ../../howto/argparse.rst:639
+#: ../../howto/argparse.rst:644
 msgid ""
 "Notice that so far we've been using verbosity level to *change* the text "
 "that gets displayed. The following example instead uses verbosity level to "
@@ -975,7 +981,7 @@ msgstr ""
 " текст, який відображається. Натомість у наступному прикладі "
 "використовується рівень детальності для відображення *більше* тексту::"
 
-#: ../../howto/argparse.rst:643
+#: ../../howto/argparse.rst:648
 msgid ""
 "import argparse\n"
 "parser = argparse.ArgumentParser()\n"
@@ -991,7 +997,7 @@ msgid ""
 "print(answer)"
 msgstr ""
 
-#: ../../howto/argparse.rst:658
+#: ../../howto/argparse.rst:663
 msgid ""
 "$ python prog.py 4 2\n"
 "16\n"
@@ -1002,18 +1008,18 @@ msgid ""
 "4^2 == 16"
 msgstr ""
 
-#: ../../howto/argparse.rst:672
+#: ../../howto/argparse.rst:677
 msgid "Specifying ambiguous arguments"
 msgstr ""
 
-#: ../../howto/argparse.rst:674
+#: ../../howto/argparse.rst:679
 msgid ""
 "When there is ambiguity in deciding whether an argument is positional or for"
 " an argument, ``--`` can be used to tell :meth:`~ArgumentParser.parse_args` "
 "that everything after that is a positional argument::"
 msgstr ""
 
-#: ../../howto/argparse.rst:678
+#: ../../howto/argparse.rst:683
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> parser.add_argument('-n', nargs='+')\n"
@@ -1035,11 +1041,11 @@ msgid ""
 "Namespace(args=['2', '3'], n=['1'])"
 msgstr ""
 
-#: ../../howto/argparse.rst:699
+#: ../../howto/argparse.rst:704
 msgid "Conflicting options"
 msgstr "Конфліктні варіанти"
 
-#: ../../howto/argparse.rst:701
+#: ../../howto/argparse.rst:706
 msgid ""
 "So far, we have been working with two methods of an "
 ":class:`argparse.ArgumentParser` instance. Let's introduce a third one, "
@@ -1050,7 +1056,7 @@ msgid ""
 "one::"
 msgstr ""
 
-#: ../../howto/argparse.rst:709
+#: ../../howto/argparse.rst:714
 msgid ""
 "import argparse\n"
 "\n"
@@ -1071,7 +1077,7 @@ msgid ""
 "    print(f\"{args.x}^{args.y} == {answer}\")"
 msgstr ""
 
-#: ../../howto/argparse.rst:727
+#: ../../howto/argparse.rst:732
 msgid ""
 "Our program is now simpler, and we've lost some functionality for the sake "
 "of demonstration. Anyways, here's the output:"
@@ -1079,7 +1085,7 @@ msgstr ""
 "Наша програма стала простішою, і ми втратили деякі функції заради "
 "демонстрації. У будь-якому випадку, ось результат:"
 
-#: ../../howto/argparse.rst:730
+#: ../../howto/argparse.rst:735
 msgid ""
 "$ python prog.py 4 2\n"
 "4^2 == 16\n"
@@ -1095,7 +1101,7 @@ msgid ""
 "prog.py: error: argument -q/--quiet: not allowed with argument -v/--verbose"
 msgstr ""
 
-#: ../../howto/argparse.rst:745
+#: ../../howto/argparse.rst:750
 msgid ""
 "That should be easy to follow. I've added that last output so you can see "
 "the sort of flexibility you get, i.e. mixing long form options with short "
@@ -1105,7 +1111,7 @@ msgstr ""
 "бачити, яку гнучкість ви отримуєте, тобто змішування параметрів довгої форми"
 " з опціями короткої."
 
-#: ../../howto/argparse.rst:749
+#: ../../howto/argparse.rst:754
 msgid ""
 "Before we conclude, you probably want to tell your users the main purpose of"
 " your program, just in case they don't know::"
@@ -1113,7 +1119,7 @@ msgstr ""
 "Перш ніж завершити, ви, ймовірно, захочете повідомити своїм користувачам "
 "головну мету вашої програми, на випадок, якщо вони не знають:"
 
-#: ../../howto/argparse.rst:752
+#: ../../howto/argparse.rst:757
 msgid ""
 "import argparse\n"
 "\n"
@@ -1134,7 +1140,7 @@ msgid ""
 "    print(f\"{args.x}^{args.y} == {answer}\")"
 msgstr ""
 
-#: ../../howto/argparse.rst:770
+#: ../../howto/argparse.rst:775
 msgid ""
 "Note that slight difference in the usage text. Note the ``[-v | -q]``, which"
 " tells us that we can either use ``-v`` or ``-q``, but not both at the same "
@@ -1144,7 +1150,7 @@ msgstr ""
 "``[-v | -q]``, який говорить нам, що ми можемо використовувати ``-v`` або "
 "``-q``, але не обидва одночасно:"
 
-#: ../../howto/argparse.rst:774 ../../howto/argparse.rst:801
+#: ../../howto/argparse.rst:779 ../../howto/argparse.rst:806
 msgid ""
 "$ python prog.py --help\n"
 "usage: prog.py [-h] [-v | -q] x y\n"
@@ -1161,11 +1167,11 @@ msgid ""
 "  -q, --quiet"
 msgstr ""
 
-#: ../../howto/argparse.rst:792
+#: ../../howto/argparse.rst:797
 msgid "How to translate the argparse output"
 msgstr ""
 
-#: ../../howto/argparse.rst:794
+#: ../../howto/argparse.rst:799
 msgid ""
 "The output of the :mod:`argparse` module such as its help text and error "
 "messages are all made translatable using the :mod:`gettext` module. This "
@@ -1173,64 +1179,64 @@ msgid ""
 " See also :ref:`i18n-howto`."
 msgstr ""
 
-#: ../../howto/argparse.rst:799
+#: ../../howto/argparse.rst:804
 msgid "For instance, in this :mod:`argparse` output:"
 msgstr ""
 
-#: ../../howto/argparse.rst:817
+#: ../../howto/argparse.rst:822
 msgid ""
 "The strings ``usage:``, ``positional arguments:``, ``options:`` and ``show "
 "this help message and exit`` are all translatable."
 msgstr ""
 
-#: ../../howto/argparse.rst:820
+#: ../../howto/argparse.rst:825
 msgid ""
 "In order to translate these strings, they must first be extracted into a "
 "``.po`` file. For example, using `Babel <https://babel.pocoo.org/>`__, run "
 "this command:"
 msgstr ""
 
-#: ../../howto/argparse.rst:824
+#: ../../howto/argparse.rst:829
 msgid "$ pybabel extract -o messages.po /usr/lib/python3.12/argparse.py"
 msgstr ""
 
-#: ../../howto/argparse.rst:828
+#: ../../howto/argparse.rst:833
 msgid ""
 "This command will extract all translatable strings from the :mod:`argparse` "
 "module and output them into a file named ``messages.po``. This command "
 "assumes that your Python installation is in ``/usr/lib``."
 msgstr ""
 
-#: ../../howto/argparse.rst:832
+#: ../../howto/argparse.rst:837
 msgid ""
 "You can find out the location of the :mod:`argparse` module on your system "
 "using this script::"
 msgstr ""
 
-#: ../../howto/argparse.rst:835
+#: ../../howto/argparse.rst:840
 msgid ""
 "import argparse\n"
 "print(argparse.__file__)"
 msgstr ""
 
-#: ../../howto/argparse.rst:838
+#: ../../howto/argparse.rst:843
 msgid ""
 "Once the messages in the ``.po`` file are translated and the translations "
 "are installed using :mod:`gettext`, :mod:`argparse` will be able to display "
 "the translated messages."
 msgstr ""
 
-#: ../../howto/argparse.rst:842
+#: ../../howto/argparse.rst:847
 msgid ""
 "To translate your own strings in the :mod:`argparse` output, use "
 ":mod:`gettext`."
 msgstr ""
 
-#: ../../howto/argparse.rst:845
+#: ../../howto/argparse.rst:850
 msgid "Custom type converters"
 msgstr ""
 
-#: ../../howto/argparse.rst:847
+#: ../../howto/argparse.rst:852
 msgid ""
 "The :mod:`argparse` module allows you to specify custom type converters for "
 "your command-line arguments. This allows you to modify user input before "
@@ -1238,7 +1244,7 @@ msgid ""
 "need to pre-process the input before it is used in your program."
 msgstr ""
 
-#: ../../howto/argparse.rst:852
+#: ../../howto/argparse.rst:857
 msgid ""
 "When using a custom type converter, you can use any callable that takes a "
 "single string argument (the argument value) and returns the converted value."
@@ -1246,13 +1252,13 @@ msgid ""
 " action class with the **action** parameter instead."
 msgstr ""
 
-#: ../../howto/argparse.rst:857
+#: ../../howto/argparse.rst:862
 msgid ""
 "For example, let's say you want to handle arguments with different prefixes "
 "and process them accordingly::"
 msgstr ""
 
-#: ../../howto/argparse.rst:860
+#: ../../howto/argparse.rst:865
 msgid ""
 "import argparse\n"
 "\n"
@@ -1267,30 +1273,30 @@ msgid ""
 "print(args)"
 msgstr ""
 
-#: ../../howto/argparse.rst:874
+#: ../../howto/argparse.rst:879
 msgid ""
 "$ python prog.py -a value1 +a value2\n"
 "Namespace(a=[('-', 'value1'), ('+', 'value2')])"
 msgstr ""
 
-#: ../../howto/argparse.rst:879
+#: ../../howto/argparse.rst:884
 msgid "In this example, we:"
 msgstr ""
 
-#: ../../howto/argparse.rst:881
+#: ../../howto/argparse.rst:886
 msgid ""
 "Created a parser with custom prefix characters using the ``prefix_chars`` "
 "parameter."
 msgstr ""
 
-#: ../../howto/argparse.rst:884
+#: ../../howto/argparse.rst:889
 msgid ""
 "Defined two arguments, ``-a`` and ``+a``, which used the ``type`` parameter "
 "to create custom type converters to store the value in a tuple with the "
 "prefix."
 msgstr ""
 
-#: ../../howto/argparse.rst:887
+#: ../../howto/argparse.rst:892
 msgid ""
 "Without the custom type converters, the arguments would have treated the "
 "``-a`` and ``+a`` as the same argument, which would have been undesirable. "
@@ -1298,11 +1304,11 @@ msgid ""
 "two arguments."
 msgstr ""
 
-#: ../../howto/argparse.rst:892
+#: ../../howto/argparse.rst:897
 msgid "Conclusion"
 msgstr "Висновок"
 
-#: ../../howto/argparse.rst:894
+#: ../../howto/argparse.rst:899
 msgid ""
 "The :mod:`argparse` module offers a lot more than shown here. Its docs are "
 "quite detailed and thorough, and full of examples. Having gone through this "
