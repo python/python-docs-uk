@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"POT-Creation-Date: 2025-04-04 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
 "Last-Translator: Yuliia Shevchenko, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -66,7 +66,7 @@ msgid ""
 "then :file:`lib/site-packages` (on Windows) or "
 ":file:`lib/python{X.Y[t]}/site-packages` (on Unix and macOS). (The optional "
 "suffix \"t\" indicates the :term:`free threading` build, and is appended if "
-"``\"t\"`` is present in the :attr:`sys.abiflags` constant.) For each of the "
+"``\"t\"`` is present in the :data:`sys.abiflags` constant.) For each of the "
 "distinct head-tail combinations, it sees if it refers to an existing "
 "directory, and if so, adds it to ``sys.path`` and also inspects the newly "
 "added path for configuration files."

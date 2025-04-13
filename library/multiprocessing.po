@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-15 14:18+0000\n"
+"POT-Creation-Date: 2025-03-28 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:10+0000\n"
 "Last-Translator: Rafael Fontenelle <rffontenelle@gmail.com>, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -464,7 +464,7 @@ msgstr ""
 
 #: ../../library/multiprocessing.rst:285
 msgid ""
-"The :meth:`~Connection.send` method serializes the the object and "
+"The :meth:`~Connection.send` method serializes the object and "
 ":meth:`~Connection.recv` re-creates the object."
 msgstr ""
 
@@ -1372,9 +1372,9 @@ msgstr ""
 
 #: ../../library/multiprocessing.rst:822
 msgid ""
-"The :meth:`~multiprocessing.Connection.send` method serializes the the "
-"object using :mod:`pickle` and the :meth:`~multiprocessing.Connection.recv` "
-"re-creates the object."
+"The :meth:`~multiprocessing.Connection.send` method serializes the object "
+"using :mod:`pickle` and the :meth:`~multiprocessing.Connection.recv` re-"
+"creates the object."
 msgstr ""
 
 #: ../../library/multiprocessing.rst:827

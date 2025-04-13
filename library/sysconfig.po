@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-04-04 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:14+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -738,42 +738,45 @@ msgid "Windows will return one of:"
 msgstr "Windows поверне одне з:"
 
 #: ../../library/sysconfig.rst:391
-msgid "win-amd64 (64bit Windows on AMD64, aka x86_64, Intel64, and EM64T)"
+msgid "win-amd64 (64-bit Windows on AMD64, aka x86_64, Intel64, and EM64T)"
 msgstr ""
-"win-amd64 (64-розрядна Windows на AMD64, також x86_64, Intel64 і EM64T)"
 
 #: ../../library/sysconfig.rst:392
+msgid "win-arm64 (64-bit Windows on ARM64, aka AArch64)"
+msgstr ""
+
+#: ../../library/sysconfig.rst:393
 msgid "win32 (all others - specifically, sys.platform is returned)"
 msgstr "win32 (усі інші - зокрема повертається sys.platform)"
 
-#: ../../library/sysconfig.rst:394
+#: ../../library/sysconfig.rst:395
 msgid "macOS can return:"
 msgstr "macOS може повертати:"
 
-#: ../../library/sysconfig.rst:396
+#: ../../library/sysconfig.rst:397
 msgid "macosx-10.6-ppc"
 msgstr "macosx-10.6-ppc"
 
-#: ../../library/sysconfig.rst:397
+#: ../../library/sysconfig.rst:398
 msgid "macosx-10.4-ppc64"
 msgstr "macosx-10.4-ppc64"
 
-#: ../../library/sysconfig.rst:398
+#: ../../library/sysconfig.rst:399
 msgid "macosx-10.3-i386"
 msgstr "macosx-10.3-i386"
 
-#: ../../library/sysconfig.rst:399
+#: ../../library/sysconfig.rst:400
 msgid "macosx-10.4-fat"
 msgstr "macosx-10.4-жир"
 
-#: ../../library/sysconfig.rst:401
+#: ../../library/sysconfig.rst:402
 msgid ""
 "For other non-POSIX platforms, currently just returns :data:`sys.platform`."
 msgstr ""
 "Для інших платформ, відмінних від POSIX, наразі повертає лише "
 ":data:`sys.platform`."
 
-#: ../../library/sysconfig.rst:406
+#: ../../library/sysconfig.rst:407
 msgid ""
 "Return ``True`` if the running Python interpreter was built from source and "
 "is being run from its built location, and not from a location resulting from"
@@ -784,17 +787,17 @@ msgstr ""
 "розташування, яке є результатом, наприклад, запуск ``make install`` або "
 "встановлення через бінарний інсталятор."
 
-#: ../../library/sysconfig.rst:413
+#: ../../library/sysconfig.rst:414
 msgid "Parse a :file:`config.h`\\-style file."
 msgstr "Проаналізуйте файл у стилі :file:`config.h`\\."
 
-#: ../../library/sysconfig.rst:415
+#: ../../library/sysconfig.rst:416
 msgid "*fp* is a file-like object pointing to the :file:`config.h`\\-like file."
 msgstr ""
 "*fp* — це файлоподібний об’єкт, що вказує на :file:`config.h`\\подібний "
 "файл."
 
-#: ../../library/sysconfig.rst:417
+#: ../../library/sysconfig.rst:418
 msgid ""
 "A dictionary containing name/value pairs is returned.  If an optional "
 "dictionary is passed in as the second argument, it is used instead of a new "
@@ -804,24 +807,24 @@ msgstr ""
 " передається як другий аргумент, він використовується замість нового "
 "словника та оновлюється значеннями, зчитаними у файлі."
 
-#: ../../library/sysconfig.rst:424
+#: ../../library/sysconfig.rst:425
 msgid "Return the path of :file:`pyconfig.h`."
 msgstr "Повертає шлях до :file:`pyconfig.h`."
 
-#: ../../library/sysconfig.rst:428
+#: ../../library/sysconfig.rst:429
 msgid "Return the path of :file:`Makefile`."
 msgstr "Повертає шлях до :file:`Makefile`."
 
-#: ../../library/sysconfig.rst:433
+#: ../../library/sysconfig.rst:434
 msgid "Using :mod:`sysconfig` as a script"
 msgstr "Використання :mod:`sysconfig` як сценарію"
 
-#: ../../library/sysconfig.rst:435
+#: ../../library/sysconfig.rst:436
 msgid "You can use :mod:`sysconfig` as a script with Python's *-m* option:"
 msgstr ""
 "Ви можете використовувати :mod:`sysconfig` як сценарій з опцією Python *-m*:"
 
-#: ../../library/sysconfig.rst:437
+#: ../../library/sysconfig.rst:438
 msgid ""
 "$ python -m sysconfig\n"
 "Platform: \"macosx-10.4-i386\"\n"
@@ -846,7 +849,7 @@ msgid ""
 "        ..."
 msgstr ""
 
-#: ../../library/sysconfig.rst:461
+#: ../../library/sysconfig.rst:462
 msgid ""
 "This call will print in the standard output the information returned by "
 ":func:`get_platform`, :func:`get_python_version`, :func:`get_path` and "

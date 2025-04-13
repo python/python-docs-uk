@@ -1,19 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Dmytro Kazanzhy, 2024
+# Dmytro Kazanzhy, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 14:17+0000\n"
+"POT-Creation-Date: 2025-04-11 14:19+0000\n"
 "PO-Revision-Date: 2021-06-28 01:04+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2024\n"
+"Last-Translator: Dmytro Kazanzhy, 2025\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../library/datetime.rst:2
 msgid ":mod:`!datetime` --- Basic date and time types"
-msgstr ""
+msgstr ":mod:`!datetime` --- Базові типи дати і часу"
 
 #: ../../library/datetime.rst:11
 msgid "**Source code:** :source:`Lib/datetime.py`"
@@ -33,7 +33,7 @@ msgstr "**Вихідний код:** :source:`Lib/datetime.py`"
 msgid ""
 "The :mod:`!datetime` module supplies classes for manipulating dates and "
 "times."
-msgstr ""
+msgstr "Модуль :mod:`!datetime` постачає класи для маніпуляції датою і часом."
 
 #: ../../library/datetime.rst:19
 msgid ""
@@ -42,12 +42,12 @@ msgid ""
 "manipulation."
 msgstr ""
 "Хоча арифметика дати й часу підтримується, основна увага при реалізації "
-"зосереджена на ефективному вилученні атрибутів для форматування виводу та "
+"зосереджена на ефективному отриманні атрибутів для форматування виводу та "
 "обробки."
 
 #: ../../library/datetime.rst:24
 msgid "Skip to :ref:`the format codes <format-codes>`."
-msgstr ""
+msgstr "Пропустити до :ref:`кодів формату <format-codes>`."
 
 #: ../../library/datetime.rst:28
 msgid "Module :mod:`calendar`"
@@ -71,8 +71,7 @@ msgstr "Модуль :mod:`zoneinfo`"
 
 #: ../../library/datetime.rst:35
 msgid "Concrete time zones representing the IANA time zone database."
-msgstr ""
-"Конкретні часові пояси, що представляють базу даних часових поясів IANA."
+msgstr "Конкретні часові пояси, що представляють базу часових поясів IANA."
 
 #: ../../library/datetime.rst:37
 msgid "Package `dateutil <https://dateutil.readthedocs.io/en/stable/>`_"
@@ -85,7 +84,7 @@ msgstr ""
 
 #: ../../library/datetime.rst:40
 msgid "Package :pypi:`DateType`"
-msgstr ""
+msgstr "Пакет :pypi:`DateType`"
 
 #: ../../library/datetime.rst:41
 msgid ""
@@ -468,6 +467,10 @@ msgid ""
 ">>> (d.days, d.seconds, d.microseconds)\n"
 "(-1, 86399, 999999)"
 msgstr ""
+">>> from datetime import timedelta\n"
+">>> d = timedelta(microseconds=-1)\n"
+">>> (d.days, d.seconds, d.microseconds)\n"
+"(-1, 86399, 999999)"
 
 #: ../../library/datetime.rst:265 ../../library/datetime.rst:566
 #: ../../library/datetime.rst:1126 ../../library/datetime.rst:1764
@@ -511,11 +514,11 @@ msgstr "Атрибути екземпляра (тільки для читанн�
 
 #: ../../library/datetime.rst:291
 msgid "Between -999,999,999 and 999,999,999 inclusive."
-msgstr ""
+msgstr "Між -999,999,999 та 999,999,999 включно."
 
 #: ../../library/datetime.rst:296
 msgid "Between 0 and 86,399 inclusive."
-msgstr ""
+msgstr "Між 0 та 86,399 включно."
 
 #: ../../library/datetime.rst:300
 msgid ""
@@ -533,10 +536,16 @@ msgid ""
 ">>> duration.total_seconds()\n"
 "11235813.0"
 msgstr ""
+">>> from datetime import timedelta\n"
+">>> duration = timedelta(seconds=11235813)\n"
+">>> duration.days, duration.seconds\n"
+"(130, 3813)\n"
+">>> duration.total_seconds()\n"
+"11235813.0"
 
 #: ../../library/datetime.rst:315
 msgid "Between 0 and 999,999 inclusive."
-msgstr ""
+msgstr "Між 0 та 999,999 включно."
 
 #: ../../library/datetime.rst:318 ../../library/datetime.rst:601
 #: ../../library/datetime.rst:1199
@@ -802,7 +811,7 @@ msgstr ""
 "Повертає загальну кількість секунд, що міститься в тривалості. Еквівалент "
 "``td / timedelta(seconds=1)``. Для одиниць інтервалу, відмінних від секунд, "
 "використовуйте напряму форму ділення (наприклад, ``td / "
-"timedelta(мікросекунди=1)``)."
+"timedelta(microseconds=1)``)."
 
 #: ../../library/datetime.rst:436
 msgid ""
@@ -1162,11 +1171,9 @@ msgstr "У логічних контекстах усі об’єкти :class:`
 
 #: ../../library/datetime.rst:669
 msgid ""
-"Return a date with the same value, except for those parameters given new "
-"values by whichever keyword arguments are specified."
+"Return a new :class:`date` object with the same values, but with specified "
+"parameters updated."
 msgstr ""
-"Повертає дату з тим самим значенням, за винятком тих параметрів, яким надано"
-" нові значення за будь-якими аргументами ключового слова."
 
 #: ../../library/datetime.rst:672 ../../library/datetime.rst:1937
 msgid "Example::"
@@ -1182,8 +1189,8 @@ msgstr ""
 
 #: ../../library/datetime.rst:679
 msgid ""
-":class:`date` objects are also supported by generic function "
-":func:`copy.replace`."
+"The generic function :func:`copy.replace` also supports :class:`date` "
+"objects."
 msgstr ""
 
 #: ../../library/datetime.rst:685 ../../library/datetime.rst:1405
@@ -1407,7 +1414,7 @@ msgid ""
 "\n"
 ">>> # Methods for to extracting 'components' under different calendars\n"
 ">>> t = d.timetuple()\n"
-">>> for i in t:     \n"
+">>> for i in t:\n"
 "...     print(i)\n"
 "2002                # year\n"
 "3                   # month\n"
@@ -1419,7 +1426,7 @@ msgid ""
 "70                  # 70th day in the year\n"
 "-1\n"
 ">>> ic = d.isocalendar()\n"
-">>> for i in ic:    \n"
+">>> for i in ic:\n"
 "...     print(i)\n"
 "2002                # ISO year\n"
 "11                  # ISO week number\n"
@@ -1592,7 +1599,7 @@ msgstr ""
 "``datetime.now(timezone.utc)``."
 
 #: ../../library/datetime.rst:940
-msgid "Use :meth:`datetime.now` with :attr:`UTC` instead."
+msgid "Use :meth:`datetime.now` with :const:`UTC` instead."
 msgstr ""
 
 #: ../../library/datetime.rst:945
@@ -1734,7 +1741,7 @@ msgstr ""
 ":exc:`ValueError` у разі помилки :c:func:`gmtime`."
 
 #: ../../library/datetime.rst:1012
-msgid "Use :meth:`datetime.fromtimestamp` with :attr:`UTC` instead."
+msgid "Use :meth:`datetime.fromtimestamp` with :const:`UTC` instead."
 msgstr ""
 
 #: ../../library/datetime.rst:1017
@@ -1809,7 +1816,7 @@ msgid ""
 "datetime.datetime(2011, 11, 4, 0, 5, 23, 283000)\n"
 ">>> datetime.fromisoformat('2011-11-04 00:05:23.283+00:00')\n"
 "datetime.datetime(2011, 11, 4, 0, 5, 23, 283000, tzinfo=datetime.timezone.utc)\n"
-">>> datetime.fromisoformat('2011-11-04T00:05:23+04:00')   \n"
+">>> datetime.fromisoformat('2011-11-04T00:05:23+04:00')\n"
 "datetime.datetime(2011, 11, 4, 0, 5, 23,\n"
 "    tzinfo=datetime.timezone(datetime.timedelta(seconds=14400)))"
 msgstr ""
@@ -1874,7 +1881,7 @@ msgid ""
 ">>> from datetime import datetime\n"
 ">>> date_string = \"02/29\"\n"
 ">>> when = datetime.strptime(f\"{date_string};1984\", \"%m/%d;%Y\")  # Avoids leap year bug.\n"
-">>> when.strftime(\"%B %d\")  \n"
+">>> when.strftime(\"%B %d\")\n"
 "'February 29'"
 msgstr ""
 
@@ -2106,15 +2113,11 @@ msgstr ""
 
 #: ../../library/datetime.rst:1318
 msgid ""
-"Return a datetime with the same attributes, except for those attributes "
-"given new values by whichever keyword arguments are specified. Note that "
-"``tzinfo=None`` can be specified to create a naive datetime from an aware "
-"datetime with no conversion of date and time data."
+"Return a new :class:`datetime` object with the same attributes, but with "
+"specified parameters updated. Note that ``tzinfo=None`` can be specified to "
+"create a naive datetime from an aware datetime with no conversion of date "
+"and time data."
 msgstr ""
-"Повертає дату й час із тими самими атрибутами, за винятком тих атрибутів, "
-"яким надано нові значення за будь-якими аргументами ключового слова. "
-"Зауважте, що ``tzinfo=None`` можна вказати для створення простої дати-часу з"
-" усвідомленої дати-часу без перетворення даних дати й часу."
 
 #: ../../library/datetime.rst:1323
 msgid ""
@@ -2490,12 +2493,13 @@ msgid ""
 "``'milliseconds'``: Include full time, but truncate fractional second part "
 "to milliseconds. ``HH:MM:SS.sss`` format."
 msgstr ""
-"``'мілісекунди``: включити повний час, але скоротити дробову другу частину "
-"до мілісекунд. Формат ``HH:MM:SS.sss``."
+"``'milliseconds'``: включити повний час, але скоротити дробову другу частину"
+" до мілісекунд. Формат ``HH:MM:SS.sss``."
 
 #: ../../library/datetime.rst:1554 ../../library/datetime.rst:1929
 msgid "``'microseconds'``: Include full time in ``HH:MM:SS.ffffff`` format."
-msgstr "``'мікросекунди``: включіть повний час у форматі ``ГГ:ХХ:СС.ffffff``."
+msgstr ""
+"``'microseconds'``: включіть повний час у форматі ``HH:MM:SS.ffffff``."
 
 #: ../../library/datetime.rst:1558 ../../library/datetime.rst:1933
 msgid "Excluded time components are truncated, not rounded."
@@ -2509,7 +2513,7 @@ msgstr ""
 #: ../../library/datetime.rst:1563
 msgid ""
 ">>> from datetime import datetime\n"
-">>> datetime.now().isoformat(timespec='minutes')   \n"
+">>> datetime.now().isoformat(timespec='minutes')\n"
 "'2002-12-25T00:00'\n"
 ">>> dt = datetime(2015, 1, 1, 12, 30, 59, 0)\n"
 ">>> dt.isoformat(timespec='microseconds')\n"
@@ -2518,13 +2522,15 @@ msgstr ""
 
 #: ../../library/datetime.rst:1570 ../../library/datetime.rst:1948
 msgid "Added the *timespec* parameter."
-msgstr ""
+msgstr "Додано параметр *специфікації часу*."
 
 #: ../../library/datetime.rst:1576
 msgid ""
 "For a :class:`.datetime` instance ``d``, ``str(d)`` is equivalent to "
 "``d.isoformat(' ')``."
 msgstr ""
+"Для екземпляра :class:`.datetime`  ``d``, ``str(d)`` є еквівалентним до "
+"``d.isoformat(' ')``."
 
 #: ../../library/datetime.rst:1582
 msgid "Return a string representing the date and time::"
@@ -2536,6 +2542,9 @@ msgid ""
 ">>> datetime(2002, 12, 4, 20, 30, 40).ctime()\n"
 "'Wed Dec  4 20:30:40 2002'"
 msgstr ""
+">>> from datetime import datetime\n"
+">>> datetime(2002, 12, 4, 20, 30, 40).ctime()\n"
+"'Wed Dec  4 20:30:40 2002'"
 
 #: ../../library/datetime.rst:1588
 msgid ""
@@ -2589,9 +2598,9 @@ msgid ""
 "datetime.datetime(2005, 7, 14, 12, 30)\n"
 "\n"
 ">>> # Using datetime.now()\n"
-">>> datetime.now()   \n"
+">>> datetime.now()\n"
 "datetime.datetime(2007, 12, 6, 16, 29, 43, 79043)   # GMT +1\n"
-">>> datetime.now(timezone.utc)   \n"
+">>> datetime.now(timezone.utc)\n"
 "datetime.datetime(2007, 12, 6, 15, 29, 43, 79060, tzinfo=datetime.timezone.utc)\n"
 "\n"
 ">>> # Using datetime.strptime()\n"
@@ -2601,7 +2610,7 @@ msgid ""
 "\n"
 ">>> # Using datetime.timetuple() to get tuple of all attributes\n"
 ">>> tt = dt.timetuple()\n"
-">>> for it in tt:   \n"
+">>> for it in tt:\n"
 "...     print(it)\n"
 "...\n"
 "2006    # year\n"
@@ -2616,7 +2625,7 @@ msgid ""
 "\n"
 ">>> # Date in ISO format\n"
 ">>> ic = dt.isocalendar()\n"
-">>> for it in ic:   \n"
+">>> for it in ic:\n"
 "...     print(it)\n"
 "...\n"
 "2006    # ISO year\n"
@@ -2685,6 +2694,48 @@ msgid ""
 "            return \"+04:30\"\n"
 "        return \"+04\""
 msgstr ""
+"from datetime import timedelta, datetime, tzinfo, timezone\n"
+"\n"
+"class KabulTz(tzinfo):\n"
+"    # Kabul used +4 until 1945, when they moved to +4:30\n"
+"    UTC_MOVE_DATE = datetime(1944, 12, 31, 20, tzinfo=timezone.utc)\n"
+"\n"
+"    def utcoffset(self, dt):\n"
+"        if dt.year < 1945:\n"
+"            return timedelta(hours=4)\n"
+"        elif (1945, 1, 1, 0, 0) <= dt.timetuple()[:5] < (1945, 1, 1, 0, 30):\n"
+"            # An ambiguous (\"imaginary\") half-hour range representing\n"
+"            # a 'fold' in time due to the shift from +4 to +4:30.\n"
+"            # If dt falls in the imaginary range, use fold to decide how\n"
+"            # to resolve. See PEP495.\n"
+"            return timedelta(hours=4, minutes=(30 if dt.fold else 0))\n"
+"        else:\n"
+"            return timedelta(hours=4, minutes=30)\n"
+"\n"
+"    def fromutc(self, dt):\n"
+"        # Follow same validations as in datetime.tzinfo\n"
+"        if not isinstance(dt, datetime):\n"
+"            raise TypeError(\"fromutc() requires a datetime argument\")\n"
+"        if dt.tzinfo is not self:\n"
+"            raise ValueError(\"dt.tzinfo is not self\")\n"
+"\n"
+"        # A custom implementation is required for fromutc as\n"
+"        # the input to this function is a datetime with utc values\n"
+"        # but with a tzinfo set to self.\n"
+"        # See datetime.astimezone or fromtimestamp.\n"
+"        if dt.replace(tzinfo=timezone.utc) >= self.UTC_MOVE_DATE:\n"
+"            return dt + timedelta(hours=4, minutes=30)\n"
+"        else:\n"
+"            return dt + timedelta(hours=4)\n"
+"\n"
+"    def dst(self, dt):\n"
+"        # Kabul does not observe daylight saving time.\n"
+"        return timedelta(0)\n"
+"\n"
+"    def tzname(self, dt):\n"
+"        if dt >= self.UTC_MOVE_DATE:\n"
+"            return \"+04:30\"\n"
+"        return \"+04\""
 
 #: ../../library/datetime.rst:1718
 msgid "Usage of ``KabulTz`` from above::"
@@ -2713,6 +2764,26 @@ msgid ""
 ">>> dt2 == dt3\n"
 "True"
 msgstr ""
+">>> tz1 = KabulTz()\n"
+"\n"
+">>> # Datetime before the change\n"
+">>> dt1 = datetime(1900, 11, 21, 16, 30, tzinfo=tz1)\n"
+">>> print(dt1.utcoffset())\n"
+"4:00:00\n"
+"\n"
+">>> # Datetime after the change\n"
+">>> dt2 = datetime(2006, 6, 14, 13, 0, tzinfo=tz1)\n"
+">>> print(dt2.utcoffset())\n"
+"4:30:00\n"
+"\n"
+">>> # Convert datetime to another time zone\n"
+">>> dt3 = dt2.astimezone(timezone.utc)\n"
+">>> dt3\n"
+"datetime.datetime(2006, 6, 14, 8, 30, tzinfo=datetime.timezone.utc)\n"
+">>> dt2\n"
+"datetime.datetime(2006, 6, 14, 13, 0, tzinfo=KabulTz())\n"
+">>> dt2 == dt3\n"
+"True"
 
 #: ../../library/datetime.rst:1744
 msgid ":class:`.time` Objects"
@@ -2836,7 +2907,7 @@ msgstr ""
 
 #: ../../library/datetime.rst:1862
 msgid "Examples:"
-msgstr "приклади:"
+msgstr "Приклади:"
 
 #: ../../library/datetime.rst:1864
 msgid ""
@@ -2858,6 +2929,23 @@ msgid ""
 ">>> time.fromisoformat('04:23:01+00:00')\n"
 "datetime.time(4, 23, 1, tzinfo=datetime.timezone.utc)"
 msgstr ""
+">>> from datetime import time\n"
+">>> time.fromisoformat('04:23:01')\n"
+"datetime.time(4, 23, 1)\n"
+">>> time.fromisoformat('T04:23:01')\n"
+"datetime.time(4, 23, 1)\n"
+">>> time.fromisoformat('T042301')\n"
+"datetime.time(4, 23, 1)\n"
+">>> time.fromisoformat('04:23:01.000384')\n"
+"datetime.time(4, 23, 1, 384)\n"
+">>> time.fromisoformat('04:23:01,000384')\n"
+"datetime.time(4, 23, 1, 384)\n"
+">>> time.fromisoformat('04:23:01+04:00')\n"
+"datetime.time(4, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=14400)))\n"
+">>> time.fromisoformat('04:23:01Z')\n"
+"datetime.time(4, 23, 1, tzinfo=datetime.timezone.utc)\n"
+">>> time.fromisoformat('04:23:01+00:00')\n"
+"datetime.time(4, 23, 1, tzinfo=datetime.timezone.utc)"
 
 #: ../../library/datetime.rst:1886
 msgid ""
@@ -2867,15 +2955,11 @@ msgstr ""
 
 #: ../../library/datetime.rst:1896
 msgid ""
-"Return a :class:`.time` with the same value, except for those attributes "
-"given new values by whichever keyword arguments are specified. Note that "
-"``tzinfo=None`` can be specified to create a naive :class:`.time` from an "
-"aware :class:`.time`, without conversion of the time data."
+"Return a new :class:`.time` with the same values, but with specified "
+"parameters updated. Note that ``tzinfo=None`` can be specified to create a "
+"naive :class:`.time` from an aware :class:`.time`, without conversion of the"
+" time data."
 msgstr ""
-"Повертає :class:`.time` з тим самим значенням, за винятком тих атрибутів, "
-"яким надано нові значення за будь-якими аргументами ключового слова. "
-"Зауважте, що ``tzinfo=None`` можна вказати для створення простого "
-":class:`.time` із відомого :class:`.time` без перетворення даних часу."
 
 #: ../../library/datetime.rst:1901
 msgid ""
@@ -2926,6 +3010,14 @@ msgid ""
 ">>> dt.isoformat(timespec='auto')\n"
 "'12:34:56'"
 msgstr ""
+">>> from datetime import time\n"
+">>> time(hour=12, minute=34, second=56, microsecond=123456).isoformat(timespec='minutes')\n"
+"'12:34'\n"
+">>> dt = time(hour=12, minute=34, second=56, microsecond=0)\n"
+">>> dt.isoformat(timespec='microseconds')\n"
+"'12:34:56.000000'\n"
+">>> dt.isoformat(timespec='auto')\n"
+"'12:34:56'"
 
 #: ../../library/datetime.rst:1954
 msgid "For a time ``t``, ``str(t)`` is equivalent to ``t.isoformat()``."
@@ -3015,6 +3107,30 @@ msgid ""
 ">>> 'The {} is {:%H:%M}.'.format(\"time\", t)\n"
 "'The time is 12:10.'"
 msgstr ""
+">>> from datetime import time, tzinfo, timedelta\n"
+">>> class TZ1(tzinfo):\n"
+"...     def utcoffset(self, dt):\n"
+"...         return timedelta(hours=1)\n"
+"...     def dst(self, dt):\n"
+"...         return timedelta(0)\n"
+"...     def tzname(self,dt):\n"
+"...         return \"+01:00\"\n"
+"...     def  __repr__(self):\n"
+"...         return f\"{self.__class__.__name__}()\"\n"
+"...\n"
+">>> t = time(12, 10, 30, tzinfo=TZ1())\n"
+">>> t\n"
+"datetime.time(12, 10, 30, tzinfo=TZ1())\n"
+">>> t.isoformat()\n"
+"'12:10:30+01:00'\n"
+">>> t.dst()\n"
+"datetime.timedelta(0)\n"
+">>> t.tzname()\n"
+"'+01:00'\n"
+">>> t.strftime(\"%H:%M:%S %Z\")\n"
+"'12:10:30 +01:00'\n"
+">>> 'The {} is {:%H:%M}.'.format(\"time\", t)\n"
+"'The time is 12:10.'"
 
 #: ../../library/datetime.rst:2030
 msgid ":class:`tzinfo` Objects"
@@ -4481,7 +4597,7 @@ msgstr "будь-яке значення в ``time.tzname`` для локалі 
 
 #: ../../library/datetime.rst:2675
 msgid "the hard-coded values ``UTC`` and ``GMT``"
-msgstr "жорстко закодовані значення ``UTC`` і ``GMT``"
+msgstr "закодовані значення ``UTC`` і ``GMT``"
 
 #: ../../library/datetime.rst:2677
 msgid ""
