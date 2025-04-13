@@ -1,19 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Dmytro Kazanzhy, 2023
+# Dmytro Kazanzhy, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-04-04 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:07+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2023\n"
+"Last-Translator: Dmytro Kazanzhy, 2025\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -668,91 +668,7 @@ msgid ""
 "attribute :attr:`index_pages`."
 msgstr ""
 
-#: ../../library/http.server.rst:423
-msgid ""
-":mod:`http.server` can also be invoked directly using the :option:`-m` "
-"switch of the interpreter.  Similar to the previous example, this serves "
-"files relative to the current directory::"
-msgstr ""
-":mod:`http.server` також можна викликати безпосередньо за допомогою "
-"перемикача :option:`-m` інтерпретатора. Подібно до попереднього прикладу, це"
-" обслуговує файли відносно поточного каталогу::"
-
-#: ../../library/http.server.rst:427
-msgid "python -m http.server"
-msgstr ""
-
-#: ../../library/http.server.rst:429
-msgid ""
-"The server listens to port 8000 by default. The default can be overridden by"
-" passing the desired port number as an argument::"
-msgstr ""
-"За замовчуванням сервер слухає порт 8000. Значення за замовчуванням можна "
-"змінити, передавши потрібний номер порту як аргумент::"
-
-#: ../../library/http.server.rst:432
-msgid "python -m http.server 9000"
-msgstr ""
-
-#: ../../library/http.server.rst:434
-msgid ""
-"By default, the server binds itself to all interfaces.  The option "
-"``-b/--bind`` specifies a specific address to which it should bind. Both "
-"IPv4 and IPv6 addresses are supported. For example, the following command "
-"causes the server to bind to localhost only::"
-msgstr ""
-"За замовчуванням сервер прив’язується до всіх інтерфейсів. Параметр "
-"``-b/--bind`` вказує конкретну адресу, до якої має бути прив’язаний. "
-"Підтримуються адреси IPv4 і IPv6. Наприклад, наступна команда змушує сервер "
-"прив’язуватися лише до localhost::"
-
-#: ../../library/http.server.rst:439
-msgid "python -m http.server --bind 127.0.0.1"
-msgstr ""
-
-#: ../../library/http.server.rst:441
-msgid "Added the ``--bind`` option."
-msgstr ""
-
-#: ../../library/http.server.rst:444
-msgid "Support IPv6 in the ``--bind`` option."
-msgstr ""
-
-#: ../../library/http.server.rst:447
-msgid ""
-"By default, the server uses the current directory. The option "
-"``-d/--directory`` specifies a directory to which it should serve the files."
-" For example, the following command uses a specific directory::"
-msgstr ""
-"За замовчуванням сервер використовує поточний каталог. Параметр "
-"``-d/--directory`` вказує каталог, до якого він має розміщувати файли. "
-"Наприклад, наступна команда використовує певний каталог::"
-
-#: ../../library/http.server.rst:451
-msgid "python -m http.server --directory /tmp/"
-msgstr ""
-
-#: ../../library/http.server.rst:453
-msgid "Added the ``--directory`` option."
-msgstr ""
-
-#: ../../library/http.server.rst:456
-msgid ""
-"By default, the server is conformant to HTTP/1.0. The option "
-"``-p/--protocol`` specifies the HTTP version to which the server is "
-"conformant. For example, the following command runs an HTTP/1.1 conformant "
-"server::"
-msgstr ""
-
-#: ../../library/http.server.rst:460
-msgid "python -m http.server --protocol HTTP/1.1"
-msgstr ""
-
-#: ../../library/http.server.rst:462
-msgid "Added the ``--protocol`` option."
-msgstr ""
-
-#: ../../library/http.server.rst:467
+#: ../../library/http.server.rst:424
 msgid ""
 "This class is used to serve either files or output of CGI scripts from the "
 "current directory and below. Note that mapping HTTP hierarchic structure to "
@@ -764,7 +680,7 @@ msgstr ""
 "структури HTTP зі структурою локального каталогу відбувається точно так "
 "само, як у :class:`SimpleHTTPRequestHandler`."
 
-#: ../../library/http.server.rst:473
+#: ../../library/http.server.rst:430
 msgid ""
 "CGI scripts run by the :class:`CGIHTTPRequestHandler` class cannot execute "
 "redirects (HTTP code 302), because code 200 (script output follows) is sent "
@@ -775,7 +691,7 @@ msgstr ""
 "сценарію йде далі) надсилається перед виконанням сценарію CGI. Це випереджає"
 " код стану."
 
-#: ../../library/http.server.rst:478
+#: ../../library/http.server.rst:435
 msgid ""
 "The class will however, run the CGI script, instead of serving it as a file,"
 " if it guesses it to be a CGI script.  Only directory-based CGI are used ---"
@@ -787,7 +703,7 @@ msgstr ""
 "основі каталогу --- іншою загальною конфігурацією сервера є розгляд "
 "спеціальних розширень як позначення сценаріїв CGI."
 
-#: ../../library/http.server.rst:483
+#: ../../library/http.server.rst:440
 msgid ""
 "The :func:`do_GET` and :func:`do_HEAD` functions are modified to run CGI "
 "scripts and serve the output, instead of serving files, if the request leads"
@@ -797,11 +713,11 @@ msgstr ""
 "скриптів і обслуговування виводу замість обслуговування файлів, якщо запит "
 "веде десь нижче шляху ``cgi_directories``."
 
-#: ../../library/http.server.rst:487
+#: ../../library/http.server.rst:444
 msgid "The :class:`CGIHTTPRequestHandler` defines the following data member:"
 msgstr ":class:`CGIHTTPRequestHandler` визначає такий елемент даних:"
 
-#: ../../library/http.server.rst:491
+#: ../../library/http.server.rst:448
 msgid ""
 "This defaults to ``['/cgi-bin', '/htbin']`` and describes directories to "
 "treat as containing CGI scripts."
@@ -809,11 +725,11 @@ msgstr ""
 "За замовчуванням це ``['/cgi-bin', '/htbin']`` і описує каталоги, які слід "
 "вважати такими, що містять сценарії CGI."
 
-#: ../../library/http.server.rst:494
+#: ../../library/http.server.rst:451
 msgid "The :class:`CGIHTTPRequestHandler` defines the following method:"
 msgstr ":class:`CGIHTTPRequestHandler` визначає такий метод:"
 
-#: ../../library/http.server.rst:498
+#: ../../library/http.server.rst:455
 msgid ""
 "This method serves the ``'POST'`` request type, only allowed for CGI "
 "scripts.  Error 501, \"Can only POST to CGI scripts\", is output when trying"
@@ -823,7 +739,7 @@ msgstr ""
 "CGI. Помилка 501 \"Можна публікувати лише сценарії CGI\" виводиться під час "
 "спроби ПУБЛІКАЦІЇ за URL-адресою, яка не є CGI."
 
-#: ../../library/http.server.rst:502
+#: ../../library/http.server.rst:459
 msgid ""
 "Note that CGI scripts will be run with UID of user nobody, for security "
 "reasons.  Problems with the CGI script will be translated to error 403."
@@ -832,7 +748,7 @@ msgstr ""
 "міркувань безпеки. Проблеми зі сценарієм CGI будуть переведені на помилку "
 "403."
 
-#: ../../library/http.server.rst:507
+#: ../../library/http.server.rst:464
 msgid ""
 ":class:`CGIHTTPRequestHandler` is being removed in 3.15.  CGI has not been "
 "considered a good way to do things for well over a decade. This code has "
@@ -841,7 +757,76 @@ msgid ""
 "<http.server-security>`."
 msgstr ""
 
+#: ../../library/http.server.rst:474
+msgid "Command-line interface"
+msgstr ""
+
+#: ../../library/http.server.rst:476
+msgid ""
+":mod:`http.server` can also be invoked directly using the :option:`-m` "
+"switch of the interpreter.  The following example illustrates how to serve "
+"files relative to the current directory::"
+msgstr ""
+
+#: ../../library/http.server.rst:480
+msgid "python -m http.server [OPTIONS] [port]"
+msgstr ""
+
+#: ../../library/http.server.rst:482
+msgid "The following options are accepted:"
+msgstr "Приймаються такі варіанти:"
+
+#: ../../library/http.server.rst:488
+msgid ""
+"The server listens to port 8000 by default. The default can be overridden by"
+" passing the desired port number as an argument::"
+msgstr ""
+"За замовчуванням сервер слухає порт 8000. Значення за замовчуванням можна "
+"змінити, передавши потрібний номер порту як аргумент::"
+
+#: ../../library/http.server.rst:491
+msgid "python -m http.server 9000"
+msgstr ""
+
+#: ../../library/http.server.rst:495
+msgid ""
+"Specifies a specific address to which it should bind. Both IPv4 and IPv6 "
+"addresses are supported. By default, the server binds itself to all "
+"interfaces. For example, the following command causes the server to bind to "
+"localhost only::"
+msgstr ""
+
+#: ../../library/http.server.rst:500
+msgid "python -m http.server --bind 127.0.0.1"
+msgstr ""
+
+#: ../../library/http.server.rst:504
+msgid "Support IPv6 in the ``--bind`` option."
+msgstr ""
+
+#: ../../library/http.server.rst:509
+msgid ""
+"Specifies a directory to which it should serve the files. By default, the "
+"server uses the current directory. For example, the following command uses a"
+" specific directory::"
+msgstr ""
+
 #: ../../library/http.server.rst:513
+msgid "python -m http.server --directory /tmp/"
+msgstr ""
+
+#: ../../library/http.server.rst:519
+msgid ""
+"Specifies the HTTP version to which the server is conformant. By default, "
+"the server is conformant to HTTP/1.0. For example, the following command "
+"runs an HTTP/1.1 conformant server::"
+msgstr ""
+
+#: ../../library/http.server.rst:523
+msgid "python -m http.server --protocol HTTP/1.1"
+msgstr ""
+
+#: ../../library/http.server.rst:529
 msgid ""
 ":class:`CGIHTTPRequestHandler` can be enabled in the command line by passing"
 " the ``--cgi`` option::"
@@ -849,35 +834,35 @@ msgstr ""
 ":class:`CGIHTTPRequestHandler` можна ввімкнути в командному рядку, передавши"
 " параметр ``--cgi``::"
 
-#: ../../library/http.server.rst:516
+#: ../../library/http.server.rst:532
 msgid "python -m http.server --cgi"
 msgstr ""
 
-#: ../../library/http.server.rst:520
+#: ../../library/http.server.rst:536
 msgid ""
 ":mod:`http.server` command line ``--cgi`` support is being removed because "
 ":class:`CGIHTTPRequestHandler` is being removed."
 msgstr ""
 
-#: ../../library/http.server.rst:525
+#: ../../library/http.server.rst:541
 msgid ""
-":class:`CGIHTTPRequestHandler` and the ``--cgi`` command line option are not"
+":class:`CGIHTTPRequestHandler` and the ``--cgi`` command-line option are not"
 " intended for use by untrusted clients and may be vulnerable to "
 "exploitation. Always use within a secure environment."
 msgstr ""
 
-#: ../../library/http.server.rst:532
-msgid "Security Considerations"
+#: ../../library/http.server.rst:549
+msgid "Security considerations"
 msgstr "Міркування безпеки"
 
-#: ../../library/http.server.rst:536
+#: ../../library/http.server.rst:553
 msgid ""
 ":class:`SimpleHTTPRequestHandler` will follow symbolic links when handling "
 "requests, this makes it possible for files outside of the specified "
 "directory to be served."
 msgstr ""
 
-#: ../../library/http.server.rst:540
+#: ../../library/http.server.rst:557
 msgid ""
 "Earlier versions of Python did not scrub control characters from the log "
 "messages emitted to stderr from ``python -m http.server`` or the default "
@@ -886,7 +871,7 @@ msgid ""
 "codes to your terminal."
 msgstr ""
 
-#: ../../library/http.server.rst:546
+#: ../../library/http.server.rst:563
 msgid "Control characters are scrubbed in stderr logs."
 msgstr ""
 
@@ -914,10 +899,10 @@ msgstr "URL"
 msgid "httpd"
 msgstr ""
 
-#: ../../library/http.server.rst:534
+#: ../../library/http.server.rst:551
 msgid "http.server"
 msgstr "http.сервер"
 
-#: ../../library/http.server.rst:534
+#: ../../library/http.server.rst:551
 msgid "security"
 msgstr ""

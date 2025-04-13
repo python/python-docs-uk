@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-08 14:16+0000\n"
+"POT-Creation-Date: 2025-04-11 14:19+0000\n"
 "PO-Revision-Date: 2021-06-28 01:14+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -91,17 +91,21 @@ msgstr ""
 "Рядок символів ASCII, які вважаються знаками пунктуації в локалі "
 "``C``:``!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~``."
 
-#: ../../library/string.rst:64
+#: ../../library/string.rst:65
 msgid ""
-"String of ASCII characters which are considered printable.  This is a "
-"combination of :const:`digits`, :const:`ascii_letters`, "
+"String of ASCII characters which are considered printable by Python. This is"
+" a combination of :const:`digits`, :const:`ascii_letters`, "
 ":const:`punctuation`, and :const:`whitespace`."
 msgstr ""
-"Рядок символів ASCII, які вважаються друкованими. Це комбінація "
-":const:`digits`, :const:`ascii_letters`, :const:`punctuation` і "
-":const:`whitespace`."
 
 #: ../../library/string.rst:71
+msgid ""
+"By design, :meth:`string.printable.isprintable() <str.isprintable>` returns "
+":const:`False`. In particular, ``string.printable`` is not printable in the "
+"POSIX sense (see :manpage:`LC_CTYPE <locale(5)>`)."
+msgstr ""
+
+#: ../../library/string.rst:78
 msgid ""
 "A string containing all ASCII characters that are considered whitespace. "
 "This includes the characters space, tab, linefeed, return, formfeed, and "
@@ -111,11 +115,11 @@ msgstr ""
 "символи пробілу, табуляції, переходу рядка, повернення, переходу форми та "
 "вертикальної табуляції."
 
-#: ../../library/string.rst:79
+#: ../../library/string.rst:86
 msgid "Custom String Formatting"
 msgstr "Спеціальне форматування рядків"
 
-#: ../../library/string.rst:81
+#: ../../library/string.rst:88
 msgid ""
 "The built-in string class provides the ability to do complex variable "
 "substitutions and value formatting via the :meth:`~str.format` method "
@@ -131,11 +135,11 @@ msgstr ""
 "використовуючи ту саму реалізацію, що й вбудований метод "
 ":meth:`~str.format`."
 
-#: ../../library/string.rst:90
+#: ../../library/string.rst:97
 msgid "The :class:`Formatter` class has the following public methods:"
 msgstr "Клас :class:`Formatter` має такі публічні методи:"
 
-#: ../../library/string.rst:94
+#: ../../library/string.rst:101
 msgid ""
 "The primary API method.  It takes a format string and an arbitrary set of "
 "positional and keyword arguments. It is just a wrapper that calls "
@@ -144,7 +148,7 @@ msgstr ""
 "Основний метод API. Він приймає рядок формату та довільний набір позиційних "
 "і ключових аргументів. Це просто оболонка, яка викликає :meth:`vformat`."
 
-#: ../../library/string.rst:98
+#: ../../library/string.rst:105
 msgid ""
 "A format string argument is now :ref:`positional-only <positional-"
 "only_parameter>`."
@@ -152,7 +156,7 @@ msgstr ""
 "Аргумент формату рядка тепер :ref:`позиційний лише <positional-"
 "only_parameter>`."
 
-#: ../../library/string.rst:104
+#: ../../library/string.rst:111
 msgid ""
 "This function does the actual work of formatting.  It is exposed as a "
 "separate function for cases where you want to pass in a predefined "
@@ -169,7 +173,7 @@ msgstr ""
 "розбиває рядок формату на символьні дані та поля заміни. Він викликає різні "
 "методи, описані нижче."
 
-#: ../../library/string.rst:112
+#: ../../library/string.rst:119
 msgid ""
 "In addition, the :class:`Formatter` defines a number of methods that are "
 "intended to be replaced by subclasses:"
@@ -177,7 +181,7 @@ msgstr ""
 "Крім того, :class:`Formatter` визначає ряд методів, які мають бути замінені "
 "підкласами:"
 
-#: ../../library/string.rst:117
+#: ../../library/string.rst:124
 msgid ""
 "Loop over the format_string and return an iterable of tuples "
 "(*literal_text*, *field_name*, *format_spec*, *conversion*).  This is used "
@@ -188,7 +192,7 @@ msgstr ""
 "*field_name*, *format_spec*, *conversion*). Це використовується "
 ":meth:`vformat`, щоб розбити рядок на буквальний текст або поля заміни."
 
-#: ../../library/string.rst:122
+#: ../../library/string.rst:129
 msgid ""
 "The values in the tuple conceptually represent a span of literal text "
 "followed by a single replacement field.  If there is no literal text (which "
@@ -203,7 +207,7 @@ msgstr ""
 "буде рядком нульової довжини. Якщо поля заміни немає, значення *field_name*,"
 " *format_spec* і *conversion* будуть ``None``."
 
-#: ../../library/string.rst:131
+#: ../../library/string.rst:138
 msgid ""
 "Given *field_name* as returned by :meth:`parse` (see above), convert it to "
 "an object to be formatted.  Returns a tuple (obj, used_key).  The default "
@@ -219,7 +223,7 @@ msgstr ""
 ":meth:`vformat`. Повернене значення *used_key* має те саме значення, що й "
 "параметр *key* для :meth:`get_value`."
 
-#: ../../library/string.rst:140
+#: ../../library/string.rst:147
 msgid ""
 "Retrieve a given field value.  The *key* argument will be either an integer "
 "or a string.  If it is an integer, it represents the index of the positional"
@@ -230,7 +234,7 @@ msgstr ""
 " Якщо це ціле число, воно представляє індекс позиційного аргументу в *args*;"
 " якщо це рядок, то він представляє іменований аргумент у *kwargs*."
 
-#: ../../library/string.rst:145
+#: ../../library/string.rst:152
 msgid ""
 "The *args* parameter is set to the list of positional arguments to "
 ":meth:`vformat`, and the *kwargs* parameter is set to the dictionary of "
@@ -240,7 +244,7 @@ msgstr ""
 ":meth:`vformat`, а параметр *kwargs* встановлюється на словник ключових "
 "аргументів."
 
-#: ../../library/string.rst:149
+#: ../../library/string.rst:156
 msgid ""
 "For compound field names, these functions are only called for the first "
 "component of the field name; subsequent components are handled through "
@@ -250,7 +254,7 @@ msgstr ""
 " імені поля; подальші компоненти обробляються через звичайні операції "
 "атрибутів та індексування."
 
-#: ../../library/string.rst:153
+#: ../../library/string.rst:160
 msgid ""
 "So for example, the field expression '0.name' would cause :meth:`get_value` "
 "to be called with a *key* argument of 0.  The ``name`` attribute will be "
@@ -261,7 +265,7 @@ msgstr ""
 "з аргументом *key* 0. Атрибут ``name`` шукатиметься після :meth:`get_value` "
 "повертається шляхом виклику вбудованої функції :func:`getattr`."
 
-#: ../../library/string.rst:158
+#: ../../library/string.rst:165
 msgid ""
 "If the index or keyword refers to an item that does not exist, then an "
 ":exc:`IndexError` or :exc:`KeyError` should be raised."
@@ -269,7 +273,7 @@ msgstr ""
 "Якщо індекс або ключове слово посилається на елемент, який не існує, тоді "
 "має бути викликана :exc:`IndexError` або :exc:`KeyError`."
 
-#: ../../library/string.rst:163
+#: ../../library/string.rst:170
 msgid ""
 "Implement checking for unused arguments if desired.  The arguments to this "
 "function is the set of all argument keys that were actually referred to in "
@@ -287,7 +291,7 @@ msgstr ""
 "Припускається, що :meth:`check_unused_args` викликає виключення, якщо "
 "перевірка не вдається."
 
-#: ../../library/string.rst:173
+#: ../../library/string.rst:180
 msgid ""
 ":meth:`format_field` simply calls the global :func:`format` built-in.  The "
 "method is provided so that subclasses can override it."
@@ -295,7 +299,7 @@ msgstr ""
 ":meth:`format_field` просто викликає глобальний вбудований :func:`format`. "
 "Метод надається для того, щоб підкласи могли його замінити."
 
-#: ../../library/string.rst:178
+#: ../../library/string.rst:185
 msgid ""
 "Converts the value (returned by :meth:`get_field`) given a conversion type "
 "(as in the tuple returned by the :meth:`parse` method).  The default version"
@@ -306,11 +310,11 @@ msgstr ""
 "замовчуванням підтримує типи перетворення 's' (str), 'r' (repr) і 'a' "
 "(ascii)."
 
-#: ../../library/string.rst:187
+#: ../../library/string.rst:194
 msgid "Format String Syntax"
 msgstr "Синтаксис рядка формату"
 
-#: ../../library/string.rst:189
+#: ../../library/string.rst:196
 msgid ""
 "The :meth:`str.format` method and the :class:`Formatter` class share the "
 "same syntax for format strings (although in the case of :class:`Formatter`, "
@@ -325,7 +329,7 @@ msgstr ""
 "синтаксису :ref:`форматованих рядкових літералів <f-strings>`, але він менш "
 "складний і, зокрема, не підтримує довільні вирази."
 
-#: ../../library/string.rst:202
+#: ../../library/string.rst:209
 msgid ""
 "Format strings contain \"replacement fields\" surrounded by curly braces "
 "``{}``. Anything that is not contained in braces is considered literal text,"
@@ -338,11 +342,11 @@ msgstr ""
 "копіюється без змін у вивід. Якщо вам потрібно включити фігурну дужку в "
 "буквальний текст, її можна екранувати подвоєнням: ``{{`` і ``}}``."
 
-#: ../../library/string.rst:207
+#: ../../library/string.rst:214
 msgid "The grammar for a replacement field is as follows:"
 msgstr "Граматика поля заміни така:"
 
-#: ../../library/string.rst:219
+#: ../../library/string.rst:226
 msgid ""
 "In less formal terms, the replacement field can start with a *field_name* "
 "that specifies the object whose value is to be formatted and inserted into "
@@ -358,11 +362,11 @@ msgstr ""
 "передує двокрапка ``':''``. Вони вказують нестандартний формат для значення "
 "заміни."
 
-#: ../../library/string.rst:226
+#: ../../library/string.rst:233
 msgid "See also the :ref:`formatspec` section."
 msgstr "Дивіться також розділ :ref:`formatspec`."
 
-#: ../../library/string.rst:228
+#: ../../library/string.rst:235
 msgid ""
 "The *field_name* itself begins with an *arg_name* that is either a number or"
 " a keyword.  If it's a number, it refers to a positional argument, and if "
@@ -379,7 +383,7 @@ msgid ""
 " lookup using :meth:`~object.__getitem__`."
 msgstr ""
 
-#: ../../library/string.rst:242
+#: ../../library/string.rst:249
 msgid ""
 "The positional argument specifiers can be omitted for :meth:`str.format`, so"
 " ``'{} {}'.format(a, b)`` is equivalent to ``'{0} {1}'.format(a, b)``."
@@ -387,17 +391,17 @@ msgstr ""
 "Специфікатори позиційного аргументу можна опустити для :meth:`str.format`, "
 "тому ``'{} {}'.format(a, b)`` еквівалентний ``'{0} {1}'.format (а, б)``."
 
-#: ../../library/string.rst:246
+#: ../../library/string.rst:253
 msgid ""
 "The positional argument specifiers can be omitted for :class:`Formatter`."
 msgstr ""
 "Специфікатори позиційного аргументу можна опустити для :class:`Formatter`."
 
-#: ../../library/string.rst:249
+#: ../../library/string.rst:256
 msgid "Some simple format string examples::"
 msgstr "Кілька простих прикладів рядків форматування::"
 
-#: ../../library/string.rst:251
+#: ../../library/string.rst:258
 msgid ""
 "\"First, thou shalt count to {0}\"  # References first positional argument\n"
 "\"Bring me a {}\"                   # Implicitly references the first positional argument\n"
@@ -407,7 +411,7 @@ msgid ""
 "\"Units destroyed: {players[0]}\"   # First element of keyword argument 'players'."
 msgstr ""
 
-#: ../../library/string.rst:258
+#: ../../library/string.rst:265
 msgid ""
 "The *conversion* field causes a type coercion before formatting.  Normally, "
 "the job of formatting a value is done by the :meth:`~object.__format__` "
@@ -417,7 +421,7 @@ msgid ""
 ":meth:`~object.__format__`, the normal formatting logic is bypassed."
 msgstr ""
 
-#: ../../library/string.rst:265
+#: ../../library/string.rst:272
 msgid ""
 "Three conversion flags are currently supported: ``'!s'`` which calls "
 ":func:`str` on the value, ``'!r'`` which calls :func:`repr` and ``'!a'`` "
@@ -427,18 +431,18 @@ msgstr ""
 ":func:`str` для значення, ``''!r'``, який викликає :func:`repr` та ``'!a'`` "
 ", який викликає :func:`ascii`."
 
-#: ../../library/string.rst:269
+#: ../../library/string.rst:276
 msgid "Some examples::"
 msgstr "Деякі приклади::"
 
-#: ../../library/string.rst:271
+#: ../../library/string.rst:278
 msgid ""
 "\"Harold's a clever {0!s}\"        # Calls str() on the argument first\n"
 "\"Bring out the holy {name!r}\"    # Calls repr() on the argument first\n"
 "\"More {!a}\"                      # Calls ascii() on the argument first"
 msgstr ""
 
-#: ../../library/string.rst:275
+#: ../../library/string.rst:282
 msgid ""
 "The *format_spec* field contains a specification of how the value should be "
 "presented, including such details as field width, alignment, padding, "
@@ -450,7 +454,7 @@ msgstr ""
 "десяткова точність тощо. Кожен тип значення може визначати власну \"міні-"
 "мову форматування\" або інтерпретацію *format_spec*."
 
-#: ../../library/string.rst:280
+#: ../../library/string.rst:287
 msgid ""
 "Most built-in types support a common formatting mini-language, which is "
 "described in the next section."
@@ -458,7 +462,7 @@ msgstr ""
 "Більшість вбудованих типів підтримують загальну міні-мову форматування, яка "
 "описана в наступному розділі."
 
-#: ../../library/string.rst:283
+#: ../../library/string.rst:290
 msgid ""
 "A *format_spec* field can also include nested replacement fields within it. "
 "These nested replacement fields may contain a field name, conversion flag "
@@ -473,15 +477,15 @@ msgstr ""
 "замінюються перед інтерпретацією рядка *format_spec*. Це дозволяє динамічно "
 "вказувати форматування значення."
 
-#: ../../library/string.rst:290
+#: ../../library/string.rst:297
 msgid "See the :ref:`formatexamples` section for some examples."
 msgstr "Перегляньте розділ :ref:`formatexamples` для деяких прикладів."
 
-#: ../../library/string.rst:296
+#: ../../library/string.rst:303
 msgid "Format Specification Mini-Language"
 msgstr "Міні-мова специфікації формату"
 
-#: ../../library/string.rst:298
+#: ../../library/string.rst:305
 msgid ""
 "\"Format specifications\" are used within replacement fields contained "
 "within a format string to define how individual values are presented (see "
@@ -495,7 +499,7 @@ msgstr ""
 "безпосередньо до вбудованої функції :func:`format`. Кожен форматований тип "
 "може визначати, як слід інтерпретувати специфікацію формату."
 
-#: ../../library/string.rst:305
+#: ../../library/string.rst:312
 msgid ""
 "Most built-in types implement the following options for format "
 "specifications, although some of the formatting options are only supported "
@@ -504,7 +508,7 @@ msgstr ""
 "Більшість вбудованих типів реалізують такі параметри специфікацій формату, "
 "хоча деякі параметри форматування підтримуються лише числовими типами."
 
-#: ../../library/string.rst:308
+#: ../../library/string.rst:315
 msgid ""
 "A general convention is that an empty format specification produces the same"
 " result as if you had called :func:`str` on the value. A non-empty format "
@@ -514,11 +518,11 @@ msgstr ""
 "такий самий результат, як якщо б ви викликали :func:`str` для значення. "
 "Непорожня специфікація формату зазвичай змінює результат."
 
-#: ../../library/string.rst:312
+#: ../../library/string.rst:319
 msgid "The general form of a *standard format specifier* is:"
 msgstr "Загальна форма *специфікатора стандартного формату* така:"
 
-#: ../../library/string.rst:324
+#: ../../library/string.rst:333
 msgid ""
 "If a valid *align* value is specified, it can be preceded by a *fill* "
 "character that can be any character and defaults to a space if omitted. It "
@@ -536,25 +540,26 @@ msgstr ""
 "вставити фігурну дужку з вкладеним полем заміни. Це обмеження не впливає на "
 "функцію :func:`format`."
 
-#: ../../library/string.rst:333
+#: ../../library/string.rst:342
 msgid "The meaning of the various alignment options is as follows:"
 msgstr "Значення різних параметрів вирівнювання таке:"
 
-#: ../../library/string.rst:342 ../../library/string.rst:374
+#: ../../library/string.rst:351 ../../library/string.rst:383
+#: ../../library/string.rst:442
 msgid "Option"
 msgstr "Варіант"
 
-#: ../../library/string.rst:342 ../../library/string.rst:374
-#: ../../library/string.rst:457 ../../library/string.rst:468
-#: ../../library/string.rst:503
+#: ../../library/string.rst:351 ../../library/string.rst:383
+#: ../../library/string.rst:442 ../../library/string.rst:481
+#: ../../library/string.rst:492 ../../library/string.rst:527
 msgid "Meaning"
 msgstr "Значення"
 
-#: ../../library/string.rst:344
+#: ../../library/string.rst:353
 msgid "``'<'``"
 msgstr "``'<'``"
 
-#: ../../library/string.rst:344
+#: ../../library/string.rst:353
 msgid ""
 "Forces the field to be left-aligned within the available space (this is the "
 "default for most objects)."
@@ -562,11 +567,11 @@ msgstr ""
 "Примусово вирівнює поле за лівим краєм у межах доступного простору (це "
 "типове значення для більшості об’єктів)."
 
-#: ../../library/string.rst:347
+#: ../../library/string.rst:356
 msgid "``'>'``"
 msgstr "``'>'``"
 
-#: ../../library/string.rst:347
+#: ../../library/string.rst:356
 msgid ""
 "Forces the field to be right-aligned within the available space (this is the"
 " default for numbers)."
@@ -574,11 +579,11 @@ msgstr ""
 "Примусово вирівнює поле за правим краєм у межах доступного простору (це "
 "типове значення для чисел)."
 
-#: ../../library/string.rst:350
+#: ../../library/string.rst:359
 msgid "``'='``"
 msgstr "``'='``"
 
-#: ../../library/string.rst:350
+#: ../../library/string.rst:359
 msgid ""
 "Forces the padding to be placed after the sign (if any) but before the "
 "digits.  This is used for printing fields in the form '+000000120'. This "
@@ -587,15 +592,15 @@ msgid ""
 "precedes the field width."
 msgstr ""
 
-#: ../../library/string.rst:357
+#: ../../library/string.rst:366
 msgid "``'^'``"
 msgstr "``'^'``"
 
-#: ../../library/string.rst:357
+#: ../../library/string.rst:366
 msgid "Forces the field to be centered within the available space."
 msgstr "Примусово центрує поле в межах доступного простору."
 
-#: ../../library/string.rst:361
+#: ../../library/string.rst:370
 msgid ""
 "Note that unless a minimum field width is defined, the field width will "
 "always be the same size as the data to fill it, so that the alignment option"
@@ -605,61 +610,55 @@ msgstr ""
 "матиме той самий розмір, що й дані для його заповнення, тому параметр "
 "вирівнювання не має значення в цьому випадку."
 
-#: ../../library/string.rst:365
+#: ../../library/string.rst:374
 msgid ""
 "The *sign* option is only valid for number types, and can be one of the "
 "following:"
 msgstr ""
 "Параметр *знак* дійсний лише для типів чисел і може бути одним із таких:"
 
-#: ../../library/string.rst:376
+#: ../../library/string.rst:385
 msgid "``'+'``"
 msgstr "``'+'``"
 
-#: ../../library/string.rst:376
+#: ../../library/string.rst:385
 msgid ""
-"indicates that a sign should be used for both positive as well as negative "
+"Indicates that a sign should be used for both positive as well as negative "
 "numbers."
 msgstr ""
-"вказує на те, що знак слід використовувати як для додатних, так і для "
-"від’ємних чисел."
 
-#: ../../library/string.rst:379
+#: ../../library/string.rst:388
 msgid "``'-'``"
 msgstr "``'-'``"
 
-#: ../../library/string.rst:379
+#: ../../library/string.rst:388
 msgid ""
-"indicates that a sign should be used only for negative numbers (this is the "
+"Indicates that a sign should be used only for negative numbers (this is the "
 "default behavior)."
 msgstr ""
-"вказує, що знак слід використовувати лише для від’ємних чисел (це типова "
-"поведінка)."
 
-#: ../../library/string.rst:368 ../../library/string.rst:382
+#: ../../library/string.rst:377 ../../library/string.rst:391
 msgid "space"
 msgstr "простір"
 
-#: ../../library/string.rst:382
+#: ../../library/string.rst:391
 msgid ""
-"indicates that a leading space should be used on positive numbers, and a "
+"Indicates that a leading space should be used on positive numbers, and a "
 "minus sign on negative numbers."
 msgstr ""
-"вказує на те, що для додатних чисел слід використовувати пробіл, а для "
-"від’ємних – знак мінус."
 
-#: ../../library/string.rst:389
+#: ../../library/string.rst:398
 msgid ""
 "The ``'z'`` option coerces negative zero floating-point values to positive "
 "zero after rounding to the format precision.  This option is only valid for "
 "floating-point presentation types."
 msgstr ""
 
-#: ../../library/string.rst:393
+#: ../../library/string.rst:402
 msgid "Added the ``'z'`` option (see also :pep:`682`)."
 msgstr ""
 
-#: ../../library/string.rst:398
+#: ../../library/string.rst:407
 msgid ""
 "The ``'#'`` option causes the \"alternate form\" to be used for the "
 "conversion.  The alternate form is defined differently for different types."
@@ -684,44 +683,14 @@ msgstr ""
 "лише якщо за ним стоїть цифра. Крім того, для перетворень ``'g'`` і ``'G''``"
 " кінцеві нулі не видаляються з результату."
 
-#: ../../library/string.rst:412
+#: ../../library/string.rst:419
 msgid ""
-"The ``','`` option signals the use of a comma for a thousands separator. For"
-" a locale aware separator, use the ``'n'`` integer presentation type "
-"instead."
-msgstr ""
-"Параметр ``',`` вказує на використання коми для роздільника тисяч. Для "
-"роздільника з урахуванням локалі використовуйте натомість цілочисельний тип "
-"представлення ``'n'``."
-
-#: ../../library/string.rst:416
-msgid "Added the ``','`` option (see also :pep:`378`)."
-msgstr "Додано параметр ``',''`` (див. також :pep:`378`)."
-
-#: ../../library/string.rst:421
-msgid ""
-"The ``'_'`` option signals the use of an underscore for a thousands "
-"separator for floating-point presentation types and for integer presentation"
-" type ``'d'``.  For integer presentation types ``'b'``, ``'o'``, ``'x'``, "
-"and ``'X'``, underscores will be inserted every 4 digits.  For other "
-"presentation types, specifying this option is an error."
-msgstr ""
-
-#: ../../library/string.rst:428
-msgid "Added the ``'_'`` option (see also :pep:`515`)."
-msgstr "Додано параметр ``'_'`` (див. також :pep:`515`)."
-
-#: ../../library/string.rst:431
-msgid ""
-"*width* is a decimal integer defining the minimum total field width, "
+"The *width* is a decimal integer defining the minimum total field width, "
 "including any prefixes, separators, and other formatting characters. If not "
 "specified, then the field width will be determined by the content."
 msgstr ""
-"*ширина* — це десяткове ціле число, що визначає мінімальну загальну ширину "
-"поля, включаючи будь-які префікси, роздільники та інші символи форматування."
-" Якщо не вказано, ширина поля визначатиметься вмістом."
 
-#: ../../library/string.rst:435
+#: ../../library/string.rst:423
 msgid ""
 "When no explicit alignment is given, preceding the *width* field by a zero "
 "(``'0'``) character enables sign-aware zero-padding for numeric types, "
@@ -729,7 +698,7 @@ msgid ""
 "``'0'`` with an *alignment* type of ``'='``."
 msgstr ""
 
-#: ../../library/string.rst:440
+#: ../../library/string.rst:428
 msgid ""
 "Preceding the *width* field by ``'0'`` no longer affects the default "
 "alignment for strings."
@@ -737,7 +706,50 @@ msgstr ""
 "Попереднє поле *width* ``'0'`` більше не впливає на стандартне вирівнювання "
 "для рядків."
 
+#: ../../library/string.rst:433
+msgid ""
+"The *grouping* option after the *width* field specifies a digit group "
+"separator for the integral part of a number. It can be one of the following:"
+msgstr ""
+
 #: ../../library/string.rst:444
+msgid "``','``"
+msgstr ""
+
+#: ../../library/string.rst:444
+msgid ""
+"Inserts a comma every 3 digits for integer presentation type ``'d'`` and "
+"floating-point presentation types, excluding ``'n'``. For other presentation"
+" types, this option is not supported."
+msgstr ""
+
+#: ../../library/string.rst:450
+msgid "``'_'``"
+msgstr ""
+
+#: ../../library/string.rst:450
+msgid ""
+"Inserts an underscore every 3 digits for integer presentation type ``'d'`` "
+"and floating-point presentation types, excluding ``'n'``. For integer "
+"presentation types ``'b'``, ``'o'``, ``'x'``, and ``'X'``, underscores are "
+"inserted every 4 digits. For other presentation types, this option is not "
+"supported."
+msgstr ""
+
+#: ../../library/string.rst:460
+msgid ""
+"For a locale aware separator, use the ``'n'`` presentation type instead."
+msgstr ""
+
+#: ../../library/string.rst:462
+msgid "Added the ``','`` option (see also :pep:`378`)."
+msgstr "Додано параметр ``',''`` (див. також :pep:`378`)."
+
+#: ../../library/string.rst:465
+msgid "Added the ``'_'`` option (see also :pep:`515`)."
+msgstr "Додано параметр ``'_'`` (див. також :pep:`515`)."
+
+#: ../../library/string.rst:468
 msgid ""
 "The *precision* is a decimal integer indicating how many digits should be "
 "displayed after the decimal point for presentation types ``'f'`` and "
@@ -754,81 +766,81 @@ msgstr ""
 "скільки символів буде використано з вмісту поля. *Точність* не допускається "
 "для цілочисельних типів подання."
 
-#: ../../library/string.rst:452
+#: ../../library/string.rst:476
 msgid "Finally, the *type* determines how the data should be presented."
 msgstr "Нарешті, *тип* визначає, як мають бути представлені дані."
 
-#: ../../library/string.rst:454
+#: ../../library/string.rst:478
 msgid "The available string presentation types are:"
 msgstr "Доступні типи подання рядків:"
 
-#: ../../library/string.rst:457 ../../library/string.rst:468
-#: ../../library/string.rst:503
+#: ../../library/string.rst:481 ../../library/string.rst:492
+#: ../../library/string.rst:527
 msgid "Type"
 msgstr "Тип"
 
-#: ../../library/string.rst:459
+#: ../../library/string.rst:483
 msgid "``'s'``"
 msgstr "``'s''``"
 
-#: ../../library/string.rst:459
+#: ../../library/string.rst:483
 msgid ""
 "String format. This is the default type for strings and may be omitted."
 msgstr "Формат рядка. Це типовий тип для рядків, і його можна опустити."
 
-#: ../../library/string.rst:462 ../../library/string.rst:491
-#: ../../library/string.rst:576
+#: ../../library/string.rst:486 ../../library/string.rst:515
+#: ../../library/string.rst:601
 msgid "None"
 msgstr "Жодного"
 
-#: ../../library/string.rst:462
+#: ../../library/string.rst:486
 msgid "The same as ``'s'``."
 msgstr "Те саме, що ``'s``."
 
-#: ../../library/string.rst:465
+#: ../../library/string.rst:489
 msgid "The available integer presentation types are:"
 msgstr "Доступні типи представлення цілих чисел:"
 
-#: ../../library/string.rst:470
+#: ../../library/string.rst:494
 msgid "``'b'``"
 msgstr "``'b''``"
 
-#: ../../library/string.rst:470
+#: ../../library/string.rst:494
 msgid "Binary format. Outputs the number in base 2."
 msgstr "Двійковий формат. Виводить число за основою 2."
 
-#: ../../library/string.rst:472
+#: ../../library/string.rst:496
 msgid "``'c'``"
 msgstr "``'c''``"
 
-#: ../../library/string.rst:472
+#: ../../library/string.rst:496
 msgid ""
 "Character. Converts the integer to the corresponding unicode character "
 "before printing."
 msgstr ""
 "характер. Перетворює ціле число на відповідний символ Юнікоду перед друком."
 
-#: ../../library/string.rst:475
+#: ../../library/string.rst:499
 msgid "``'d'``"
 msgstr "``'d''``"
 
-#: ../../library/string.rst:475
+#: ../../library/string.rst:499
 msgid "Decimal Integer. Outputs the number in base 10."
 msgstr "Десяткове ціле число. Виводить число за основою 10."
 
-#: ../../library/string.rst:477
+#: ../../library/string.rst:501
 msgid "``'o'``"
 msgstr "``'o'``"
 
-#: ../../library/string.rst:477
+#: ../../library/string.rst:501
 msgid "Octal format. Outputs the number in base 8."
 msgstr "Вісімковий формат. Виводить число за основою 8."
 
-#: ../../library/string.rst:479
+#: ../../library/string.rst:503
 msgid "``'x'``"
 msgstr "``'x''``"
 
-#: ../../library/string.rst:479
+#: ../../library/string.rst:503
 msgid ""
 "Hex format. Outputs the number in base 16, using lower-case letters for the "
 "digits above 9."
@@ -836,11 +848,11 @@ msgstr ""
 "Шістнадцятковий формат. Виводить число за основою 16, використовуючи малі "
 "літери для цифр над 9."
 
-#: ../../library/string.rst:482
+#: ../../library/string.rst:506
 msgid "``'X'``"
 msgstr "``'X''``"
 
-#: ../../library/string.rst:482
+#: ../../library/string.rst:506
 msgid ""
 "Hex format. Outputs the number in base 16, using upper-case letters for the "
 "digits above 9. In case ``'#'`` is specified, the prefix ``'0x'`` will be "
@@ -850,23 +862,21 @@ msgstr ""
 "верхнього регістру для цифр над 9. Якщо вказано ``'#'``, префікс ``'0x'`` "
 "буде написаний у верхньому регістрі до ``'0X'``  також."
 
-#: ../../library/string.rst:487 ../../library/string.rst:569
+#: ../../library/string.rst:511 ../../library/string.rst:593
 msgid "``'n'``"
 msgstr "``'n'``"
 
-#: ../../library/string.rst:487
+#: ../../library/string.rst:511
 msgid ""
 "Number. This is the same as ``'d'``, except that it uses the current locale "
-"setting to insert the appropriate number separator characters."
+"setting to insert the appropriate digit group separators."
 msgstr ""
-"Номер. Це те саме, що ``'d''``, за винятком того, що він використовує "
-"поточні параметри мови для вставки відповідних символів-роздільників чисел."
 
-#: ../../library/string.rst:491
+#: ../../library/string.rst:515
 msgid "The same as ``'d'``."
 msgstr "Те саме, що ``'d'``."
 
-#: ../../library/string.rst:494
+#: ../../library/string.rst:518
 msgid ""
 "In addition to the above presentation types, integers can be formatted with "
 "the floating-point presentation types listed below (except ``'n'`` and "
@@ -874,7 +884,7 @@ msgid ""
 "floating-point number before formatting."
 msgstr ""
 
-#: ../../library/string.rst:499
+#: ../../library/string.rst:523
 msgid ""
 "The available presentation types for :class:`float` and "
 ":class:`~decimal.Decimal` values are:"
@@ -882,11 +892,11 @@ msgstr ""
 "Доступні типи представлення значень :class:`float` і "
 ":class:`~decimal.Decimal`:"
 
-#: ../../library/string.rst:505
+#: ../../library/string.rst:529
 msgid "``'e'``"
 msgstr "``'e''``"
 
-#: ../../library/string.rst:505
+#: ../../library/string.rst:529
 msgid ""
 "Scientific notation. For a given precision ``p``, formats the number in "
 "scientific notation with the letter 'e' separating the coefficient from the "
@@ -898,11 +908,11 @@ msgid ""
 "the ``#`` option is used."
 msgstr ""
 
-#: ../../library/string.rst:516
+#: ../../library/string.rst:540
 msgid "``'E'``"
 msgstr "``'E'``"
 
-#: ../../library/string.rst:516
+#: ../../library/string.rst:540
 msgid ""
 "Scientific notation. Same as ``'e'`` except it uses an upper case 'E' as the"
 " separator character."
@@ -910,11 +920,11 @@ msgstr ""
 "Наукова нотація. Те саме, що ``'e'``, за винятком того, що він використовує "
 "верхній регістр 'E' як символ роздільника."
 
-#: ../../library/string.rst:519
+#: ../../library/string.rst:543
 msgid "``'f'``"
 msgstr "``'f''``"
 
-#: ../../library/string.rst:519
+#: ../../library/string.rst:543
 msgid ""
 "Fixed-point notation. For a given precision ``p``, formats the number as a "
 "decimal number with exactly ``p`` digits following the decimal point. With "
@@ -924,11 +934,11 @@ msgid ""
 "point is omitted unless the ``#`` option is used."
 msgstr ""
 
-#: ../../library/string.rst:528
+#: ../../library/string.rst:552
 msgid "``'F'``"
 msgstr "``'F''``"
 
-#: ../../library/string.rst:528
+#: ../../library/string.rst:552
 msgid ""
 "Fixed-point notation. Same as ``'f'``, but converts ``nan`` to  ``NAN`` and "
 "``inf`` to ``INF``."
@@ -936,11 +946,11 @@ msgstr ""
 "Позначення з фіксованою комою. Те саме, що ``'f``, але перетворює ``nan`` на"
 " ``NAN`` і ``inf`` на ``INF``."
 
-#: ../../library/string.rst:531
+#: ../../library/string.rst:555
 msgid "``'g'``"
 msgstr "``'g''``"
 
-#: ../../library/string.rst:531
+#: ../../library/string.rst:555
 msgid ""
 "General format.  For a given precision ``p >= 1``, this rounds the number to"
 " ``p`` significant digits and then formats the result in either fixed-point "
@@ -952,7 +962,7 @@ msgstr ""
 " або в науковому позначенні, залежно від його величини. Точність ``0`` "
 "розглядається як еквівалентна точності ``1``."
 
-#: ../../library/string.rst:538
+#: ../../library/string.rst:562
 msgid ""
 "The precise rules are as follows: suppose that the result formatted with "
 "presentation type ``'e'`` and precision ``p-1`` would have exponent ``exp``."
@@ -974,7 +984,7 @@ msgstr ""
 "також видаляється, якщо після неї не залишилося цифр, якщо не "
 "використовується опція ``'#'``."
 
-#: ../../library/string.rst:551
+#: ../../library/string.rst:575
 msgid ""
 "With no precision given, uses a precision of ``6`` significant digits for "
 ":class:`float`. For :class:`~decimal.Decimal`, the coefficient of the result"
@@ -990,7 +1000,7 @@ msgstr ""
 "значення молодшої значущої цифри більше 1, а в інших випадках "
 "використовується нотація з фіксованою комою."
 
-#: ../../library/string.rst:560
+#: ../../library/string.rst:584
 msgid ""
 "Positive and negative infinity, positive and negative zero, and nans, are "
 "formatted as ``inf``, ``-inf``, ``0``, ``-0`` and ``nan`` respectively, "
@@ -1000,11 +1010,11 @@ msgstr ""
 "форматуються як ``inf``, ``-inf``, ``0``, ``-0`` і ``nan`` відповідно, "
 "незалежно точності."
 
-#: ../../library/string.rst:565
+#: ../../library/string.rst:589
 msgid "``'G'``"
 msgstr "``'G''``"
 
-#: ../../library/string.rst:565
+#: ../../library/string.rst:589
 msgid ""
 "General format. Same as ``'g'`` except switches to ``'E'`` if the number "
 "gets too large. The representations of infinity and NaN are uppercased, too."
@@ -1013,20 +1023,18 @@ msgstr ""
 "якщо число стає завеликим. Представлення нескінченності та NaN також "
 "написані у верхньому регістрі."
 
-#: ../../library/string.rst:569
+#: ../../library/string.rst:593
 msgid ""
 "Number. This is the same as ``'g'``, except that it uses the current locale "
-"setting to insert the appropriate number separator characters."
+"setting to insert the appropriate digit group separators for the integral "
+"part of a number."
 msgstr ""
-"Номер. Це те саме, що ``'g''``, за винятком того, що він використовує "
-"поточні налаштування мови для вставки відповідних символів-роздільників "
-"чисел."
 
-#: ../../library/string.rst:573
+#: ../../library/string.rst:598
 msgid "``'%'``"
 msgstr "``'%'``"
 
-#: ../../library/string.rst:573
+#: ../../library/string.rst:598
 msgid ""
 "Percentage. Multiplies the number by 100 and displays in fixed (``'f'``) "
 "format, followed by a percent sign."
@@ -1034,7 +1042,7 @@ msgstr ""
 "Відсоток. Множить число на 100 і відображає у фіксованому форматі (``'f'``) "
 "із знаком відсотка."
 
-#: ../../library/string.rst:576
+#: ../../library/string.rst:601
 msgid ""
 "For :class:`float` this is like the ``'g'`` type, except that when fixed-"
 "point notation is used to format the result, it always includes at least one"
@@ -1043,7 +1051,7 @@ msgid ""
 "as large as needed to represent the given value faithfully."
 msgstr ""
 
-#: ../../library/string.rst:584
+#: ../../library/string.rst:609
 msgid ""
 "For :class:`~decimal.Decimal`, this is the same as either ``'g'`` or ``'G'``"
 " depending on the value of ``context.capitals`` for the current decimal "
@@ -1052,7 +1060,7 @@ msgstr ""
 "Для :class:`~decimal.Decimal` це те саме, що ``'g'`` або ``'G'`` залежно від"
 " значення ``context.capitals`` для поточного десяткового контексту."
 
-#: ../../library/string.rst:588
+#: ../../library/string.rst:613
 msgid ""
 "The overall effect is to match the output of :func:`str` as altered by the "
 "other format modifiers."
@@ -1060,7 +1068,15 @@ msgstr ""
 "Загальним ефектом є відповідність виводу :func:`str`, зміненого іншими "
 "модифікаторами формату."
 
-#: ../../library/string.rst:592
+#: ../../library/string.rst:617
+msgid ""
+"The result should be correctly rounded to a given precision ``p`` of digits "
+"after the decimal point.  The rounding mode for :class:`float` matches that "
+"of the :func:`round` builtin.  For :class:`~decimal.Decimal`, the rounding "
+"mode of the current :ref:`context <decimal-context>` will be used."
+msgstr ""
+
+#: ../../library/string.rst:622
 msgid ""
 "The available presentation types for :class:`complex` are the same as those "
 "for :class:`float` (``'%'`` is not allowed).  Both the real and imaginary "
@@ -1072,11 +1088,11 @@ msgid ""
 "surrounded by parentheses), possibly altered by other format modifiers."
 msgstr ""
 
-#: ../../library/string.rst:605
+#: ../../library/string.rst:635
 msgid "Format examples"
 msgstr "Приклади форматування"
 
-#: ../../library/string.rst:607
+#: ../../library/string.rst:637
 msgid ""
 "This section contains examples of the :meth:`str.format` syntax and "
 "comparison with the old ``%``-formatting."
@@ -1084,7 +1100,7 @@ msgstr ""
 "Цей розділ містить приклади синтаксису :meth:`str.format` і порівняння зі "
 "старим ``%``-форматуванням."
 
-#: ../../library/string.rst:610
+#: ../../library/string.rst:640
 msgid ""
 "In most of the cases the syntax is similar to the old ``%``-formatting, with"
 " the addition of the ``{}`` and with ``:`` used instead of ``%``. For "
@@ -1094,7 +1110,7 @@ msgstr ""
 "додаванням ``{}`` і використанням ``:`` замість ``%``. Наприклад, "
 "``'%03.2f''`` можна перекласти на ``'{:03.2f}''``."
 
-#: ../../library/string.rst:614
+#: ../../library/string.rst:644
 msgid ""
 "The new format syntax also supports new and different options, shown in the "
 "following examples."
@@ -1102,11 +1118,11 @@ msgstr ""
 "Новий синтаксис формату також підтримує нові та різні параметри, показані в "
 "наступних прикладах."
 
-#: ../../library/string.rst:617
+#: ../../library/string.rst:647
 msgid "Accessing arguments by position::"
 msgstr "Доступ до аргументів за позицією::"
 
-#: ../../library/string.rst:619
+#: ../../library/string.rst:649
 msgid ""
 ">>> '{0}, {1}, {2}'.format('a', 'b', 'c')\n"
 "'a, b, c'\n"
@@ -1120,11 +1136,11 @@ msgid ""
 "'abracadabra'"
 msgstr ""
 
-#: ../../library/string.rst:630
+#: ../../library/string.rst:660
 msgid "Accessing arguments by name::"
 msgstr "Доступ до аргументів за назвою::"
 
-#: ../../library/string.rst:632
+#: ../../library/string.rst:662
 msgid ""
 ">>> 'Coordinates: {latitude}, {longitude}'.format(latitude='37.24N', longitude='-115.81W')\n"
 "'Coordinates: 37.24N, -115.81W'\n"
@@ -1133,11 +1149,11 @@ msgid ""
 "'Coordinates: 37.24N, -115.81W'"
 msgstr ""
 
-#: ../../library/string.rst:638
+#: ../../library/string.rst:668
 msgid "Accessing arguments' attributes::"
 msgstr "Доступ до атрибутів аргументів::"
 
-#: ../../library/string.rst:640
+#: ../../library/string.rst:670
 msgid ""
 ">>> c = 3-5j\n"
 ">>> ('The complex number {0} is formed from the real part {0.real} '\n"
@@ -1153,32 +1169,32 @@ msgid ""
 "'Point(4, 2)'"
 msgstr ""
 
-#: ../../library/string.rst:653
+#: ../../library/string.rst:683
 msgid "Accessing arguments' items::"
 msgstr "Доступ до елементів аргументів::"
 
-#: ../../library/string.rst:655
+#: ../../library/string.rst:685
 msgid ""
 ">>> coord = (3, 5)\n"
 ">>> 'X: {0[0]};  Y: {0[1]}'.format(coord)\n"
 "'X: 3;  Y: 5'"
 msgstr ""
 
-#: ../../library/string.rst:659
+#: ../../library/string.rst:689
 msgid "Replacing ``%s`` and ``%r``::"
 msgstr "Заміна ``%s`` та ``%r``::"
 
-#: ../../library/string.rst:661
+#: ../../library/string.rst:691
 msgid ""
 ">>> \"repr() shows quotes: {!r}; str() doesn't: {!s}\".format('test1', 'test2')\n"
 "\"repr() shows quotes: 'test1'; str() doesn't: test2\""
 msgstr ""
 
-#: ../../library/string.rst:664
+#: ../../library/string.rst:694
 msgid "Aligning the text and specifying a width::"
 msgstr "Вирівнювання тексту та визначення ширини::"
 
-#: ../../library/string.rst:666
+#: ../../library/string.rst:696
 msgid ""
 ">>> '{:<30}'.format('left aligned')\n"
 "'left aligned                  '\n"
@@ -1190,11 +1206,11 @@ msgid ""
 "'***********centered***********'"
 msgstr ""
 
-#: ../../library/string.rst:675
+#: ../../library/string.rst:705
 msgid "Replacing ``%+f``, ``%-f``, and ``% f`` and specifying a sign::"
 msgstr "Заміна ``%+f``, ``%-f`` і ``% f`` та вказівка знака::"
 
-#: ../../library/string.rst:677
+#: ../../library/string.rst:707
 msgid ""
 ">>> '{:+f}; {:+f}'.format(3.14, -3.14)  # show it always\n"
 "'+3.140000; -3.140000'\n"
@@ -1204,12 +1220,12 @@ msgid ""
 "'3.140000; -3.140000'"
 msgstr ""
 
-#: ../../library/string.rst:684
+#: ../../library/string.rst:714
 msgid ""
 "Replacing ``%x`` and ``%o`` and converting the value to different bases::"
 msgstr "Заміна ``%x`` і ``%o`` і перетворення значення на різні бази::"
 
-#: ../../library/string.rst:686
+#: ../../library/string.rst:716
 msgid ""
 ">>> # format also supports binary numbers\n"
 ">>> \"int: {0:d};  hex: {0:x};  oct: {0:o};  bin: {0:b}\".format(42)\n"
@@ -1219,21 +1235,27 @@ msgid ""
 "'int: 42;  hex: 0x2a;  oct: 0o52;  bin: 0b101010'"
 msgstr ""
 
-#: ../../library/string.rst:693
-msgid "Using the comma as a thousands separator::"
-msgstr "Використання коми як роздільника тисяч::"
-
-#: ../../library/string.rst:695
-msgid ""
-">>> '{:,}'.format(1234567890)\n"
-"'1,234,567,890'"
+#: ../../library/string.rst:723
+msgid "Using the comma or the underscore as a digit group separator::"
 msgstr ""
 
-#: ../../library/string.rst:698
+#: ../../library/string.rst:725
+msgid ""
+">>> '{:,}'.format(1234567890)\n"
+"'1,234,567,890'\n"
+">>> '{:_}'.format(1234567890)\n"
+"'1_234_567_890'\n"
+">>> '{:_b}'.format(1234567890)\n"
+"'100_1001_1001_0110_0000_0010_1101_0010'\n"
+">>> '{:_x}'.format(1234567890)\n"
+"'4996_02d2'"
+msgstr ""
+
+#: ../../library/string.rst:734
 msgid "Expressing a percentage::"
 msgstr "Вираз у відсотках::"
 
-#: ../../library/string.rst:700
+#: ../../library/string.rst:736
 msgid ""
 ">>> points = 19\n"
 ">>> total = 22\n"
@@ -1241,11 +1263,11 @@ msgid ""
 "'Correct answers: 86.36%'"
 msgstr ""
 
-#: ../../library/string.rst:705
+#: ../../library/string.rst:741
 msgid "Using type-specific formatting::"
 msgstr "Використання спеціального форматування::"
 
-#: ../../library/string.rst:707
+#: ../../library/string.rst:743
 msgid ""
 ">>> import datetime\n"
 ">>> d = datetime.datetime(2010, 7, 4, 12, 15, 58)\n"
@@ -1253,11 +1275,11 @@ msgid ""
 "'2010-07-04 12:15:58'"
 msgstr ""
 
-#: ../../library/string.rst:712
+#: ../../library/string.rst:748
 msgid "Nesting arguments and more complex examples::"
 msgstr "Вкладені аргументи та більш складні приклади::"
 
-#: ../../library/string.rst:714
+#: ../../library/string.rst:750
 msgid ""
 ">>> for align, text in zip('<^>', ['left', 'center', 'right']):\n"
 "...     '{0:{fill}{align}16}'.format(text, fill=align, align=align)\n"
@@ -1273,7 +1295,7 @@ msgid ""
 "3232235521\n"
 ">>>\n"
 ">>> width = 5\n"
-">>> for num in range(5,12): \n"
+">>> for num in range(5,12):\n"
 "...     for base in 'dXob':\n"
 "...         print('{0:{width}{base}}'.format(num, base=base, width=width), end=' ')\n"
 "...     print()\n"
@@ -1287,11 +1309,11 @@ msgid ""
 "   11     B    13  1011"
 msgstr ""
 
-#: ../../library/string.rst:746
+#: ../../library/string.rst:782
 msgid "Template strings"
 msgstr "Рядки шаблону"
 
-#: ../../library/string.rst:748
+#: ../../library/string.rst:784
 msgid ""
 "Template strings provide simpler string substitutions as described in "
 ":pep:`292`.  A primary use case for template strings is for "
@@ -1302,17 +1324,17 @@ msgid ""
 "<https://flufli18n.readthedocs.io/en/latest/>`_ package."
 msgstr ""
 
-#: ../../library/string.rst:758
+#: ../../library/string.rst:794
 msgid ""
 "Template strings support ``$``-based substitutions, using the following "
 "rules:"
 msgstr "Рядки шаблону підтримують заміни на основі ``$`` за такими правилами:"
 
-#: ../../library/string.rst:760
+#: ../../library/string.rst:796
 msgid "``$$`` is an escape; it is replaced with a single ``$``."
 msgstr "``$$`` є екрануванням; він замінюється одним ``$``."
 
-#: ../../library/string.rst:762
+#: ../../library/string.rst:798
 msgid ""
 "``$identifier`` names a substitution placeholder matching a mapping key of "
 "``\"identifier\"``.  By default, ``\"identifier\"`` is restricted to any "
@@ -1328,7 +1350,7 @@ msgstr ""
 "ASCII. Перший неідентифікаційний символ після символу ``$`` завершує цю "
 "специфікацію заповнювача."
 
-#: ../../library/string.rst:769
+#: ../../library/string.rst:805
 msgid ""
 "``${identifier}`` is equivalent to ``$identifier``.  It is required when "
 "valid identifier characters follow the placeholder but are not part of the "
@@ -1338,14 +1360,14 @@ msgstr ""
 "символи ідентифікатора слідують за заповнювачем, але не є частиною "
 "заповнювача, наприклад ``\"${noun}ification\"``."
 
-#: ../../library/string.rst:773
+#: ../../library/string.rst:809
 msgid ""
 "Any other appearance of ``$`` in the string will result in a "
 ":exc:`ValueError` being raised."
 msgstr ""
 "Будь-яка інша поява ``$`` у рядку призведе до появи :exc:`ValueError`."
 
-#: ../../library/string.rst:776
+#: ../../library/string.rst:812
 msgid ""
 "The :mod:`string` module provides a :class:`Template` class that implements "
 "these rules.  The methods of :class:`Template` are:"
@@ -1353,11 +1375,11 @@ msgstr ""
 "Модуль :mod:`string` надає клас :class:`Template`, який реалізує ці правила."
 " Методи :class:`Template`:"
 
-#: ../../library/string.rst:782
+#: ../../library/string.rst:818
 msgid "The constructor takes a single argument which is the template string."
 msgstr "Конструктор приймає один аргумент, який є рядком шаблону."
 
-#: ../../library/string.rst:787
+#: ../../library/string.rst:823
 msgid ""
 "Performs the template substitution, returning a new string.  *mapping* is "
 "any dictionary-like object with keys that match the placeholders in the "
@@ -1371,7 +1393,7 @@ msgstr ""
 "заповнювачами. Якщо вказано як *mapping*, так і *kwds* і є дублікати, "
 "заповнювачі з *kwds* мають пріоритет."
 
-#: ../../library/string.rst:796
+#: ../../library/string.rst:832
 msgid ""
 "Like :meth:`substitute`, except that if placeholders are missing from "
 "*mapping* and *kwds*, instead of raising a :exc:`KeyError` exception, the "
@@ -1385,7 +1407,7 @@ msgstr ""
 " на відміну від :meth:`substitute`, будь-яка інша поява ``$`` просто "
 "повертатиме ``$`` замість того, щоб викликати :exc:`ValueError`."
 
-#: ../../library/string.rst:802
+#: ../../library/string.rst:838
 msgid ""
 "While other exceptions may still occur, this method is called \"safe\" "
 "because it always tries to return a usable string instead of raising an "
@@ -1402,24 +1424,24 @@ msgstr ""
 "невідповідні фігурні дужки або заповнювачі, які не є дійсними "
 "ідентифікаторами Python."
 
-#: ../../library/string.rst:812
+#: ../../library/string.rst:848
 msgid ""
 "Returns false if the template has invalid placeholders that will cause "
 ":meth:`substitute` to raise :exc:`ValueError`."
 msgstr ""
 
-#: ../../library/string.rst:820
+#: ../../library/string.rst:856
 msgid ""
 "Returns a list of the valid identifiers in the template, in the order they "
 "first appear, ignoring any invalid identifiers."
 msgstr ""
 
-#: ../../library/string.rst:825
+#: ../../library/string.rst:861
 msgid ":class:`Template` instances also provide one public data attribute:"
 msgstr ""
 "Екземпляри :class:`Template` також надають один публічний атрибут даних:"
 
-#: ../../library/string.rst:829
+#: ../../library/string.rst:865
 msgid ""
 "This is the object passed to the constructor's *template* argument.  In "
 "general, you shouldn't change it, but read-only access is not enforced."
@@ -1427,11 +1449,11 @@ msgstr ""
 "Це об’єкт, переданий аргументу *template* конструктора. Загалом, вам не слід"
 " змінювати його, але доступ лише для читання не застосовується."
 
-#: ../../library/string.rst:832
+#: ../../library/string.rst:868
 msgid "Here is an example of how to use a Template::"
 msgstr "Ось приклад використання шаблону::"
 
-#: ../../library/string.rst:834
+#: ../../library/string.rst:870
 msgid ""
 ">>> from string import Template\n"
 ">>> s = Template('$who likes $what')\n"
@@ -1450,7 +1472,7 @@ msgid ""
 "'tim likes $what'"
 msgstr ""
 
-#: ../../library/string.rst:850
+#: ../../library/string.rst:886
 msgid ""
 "Advanced usage: you can derive subclasses of :class:`Template` to customize "
 "the placeholder syntax, delimiter character, or the entire regular "
@@ -1462,7 +1484,7 @@ msgstr ""
 "вираз, який використовується для аналізу рядків шаблону. Для цього ви можете"
 " змінити ці атрибути класу:"
 
-#: ../../library/string.rst:855
+#: ../../library/string.rst:891
 msgid ""
 "*delimiter* -- This is the literal string describing a placeholder "
 "introducing delimiter.  The default value is ``$``.  Note that this should "
@@ -1478,7 +1500,7 @@ msgstr ""
 "роздільник після створення класу (тобто інший роздільник має бути "
 "встановлено в просторі імен класу підкласу)."
 
-#: ../../library/string.rst:862
+#: ../../library/string.rst:898
 msgid ""
 "*idpattern* -- This is the regular expression describing the pattern for "
 "non-braced placeholders.  The default value is the regular expression "
@@ -1490,7 +1512,7 @@ msgstr ""
 "Якщо це задано і *braceidpattern* має значення ``None``, цей шаблон також "
 "застосовуватиметься до заповнювачів у дужках."
 
-#: ../../library/string.rst:869
+#: ../../library/string.rst:905
 msgid ""
 "Since default *flags* is ``re.IGNORECASE``, pattern ``[a-z]`` can match with"
 " some non-ASCII characters. That's why we use the local ``a`` flag here."
@@ -1499,7 +1521,7 @@ msgstr ""
 "збігатися з деякими символами, відмінними від ASCII. Ось чому ми "
 "використовуємо місцевий прапор ``a`` тут."
 
-#: ../../library/string.rst:873
+#: ../../library/string.rst:909
 msgid ""
 "*braceidpattern* can be used to define separate patterns used inside and "
 "outside the braces."
@@ -1507,7 +1529,7 @@ msgstr ""
 "*braceidpattern* можна використовувати для визначення окремих шаблонів, що "
 "використовуються всередині та поза дужками."
 
-#: ../../library/string.rst:877
+#: ../../library/string.rst:913
 msgid ""
 "*braceidpattern* -- This is like *idpattern* but describes the pattern for "
 "braced placeholders.  Defaults to ``None`` which means to fall back to "
@@ -1521,7 +1543,7 @@ msgstr ""
 "усередині, так і ззовні дужок). Якщо дано, це дозволяє визначати різні "
 "шаблони для заповнювачів у дужках і без дужок."
 
-#: ../../library/string.rst:885
+#: ../../library/string.rst:921
 msgid ""
 "*flags* -- The regular expression flags that will be applied when compiling "
 "the regular expression used for recognizing substitutions.  The default "
@@ -1535,7 +1557,7 @@ msgstr ""
 "``re.VERBOSE`` завжди додаватиметься до прапорців, тому спеціальні "
 "*idpattern*\\ мають відповідати угодам для докладних регулярних виразів."
 
-#: ../../library/string.rst:893
+#: ../../library/string.rst:929
 msgid ""
 "Alternatively, you can provide the entire regular expression pattern by "
 "overriding the class attribute *pattern*.  If you do this, the value must be"
@@ -1549,7 +1571,7 @@ msgstr ""
 "захоплення відповідають правилам, наведеним вище, а також правилу недійсних "
 "заповнювачів:"
 
-#: ../../library/string.rst:899
+#: ../../library/string.rst:935
 msgid ""
 "*escaped* -- This group matches the escape sequence, e.g. ``$$``, in the "
 "default pattern."
@@ -1557,7 +1579,7 @@ msgstr ""
 "*escaped* -- ця група відповідає escape-послідовності, напр. ``$$``, у "
 "шаблоні за замовчуванням."
 
-#: ../../library/string.rst:902
+#: ../../library/string.rst:938
 msgid ""
 "*named* -- This group matches the unbraced placeholder name; it should not "
 "include the delimiter in capturing group."
@@ -1565,7 +1587,7 @@ msgstr ""
 "*named* -- ця група відповідає імені заповнювача без дужок; він не повинен "
 "містити роздільник у групі захоплення."
 
-#: ../../library/string.rst:905
+#: ../../library/string.rst:941
 msgid ""
 "*braced* -- This group matches the brace enclosed placeholder name; it "
 "should not include either the delimiter or braces in the capturing group."
@@ -1573,7 +1595,7 @@ msgstr ""
 "*в дужках* -- ця група відповідає імені заповнювача в дужках; він не повинен"
 " включати ні роздільник, ні дужки в групу захоплення."
 
-#: ../../library/string.rst:908
+#: ../../library/string.rst:944
 msgid ""
 "*invalid* -- This group matches any other delimiter pattern (usually a "
 "single delimiter), and it should appear last in the regular expression."
@@ -1582,17 +1604,17 @@ msgstr ""
 "(зазвичай один роздільник), і вона має з’являтися останньою в регулярному "
 "виразі."
 
-#: ../../library/string.rst:911
+#: ../../library/string.rst:947
 msgid ""
 "The methods on this class will raise :exc:`ValueError` if the pattern "
 "matches the template without one of these named groups matching."
 msgstr ""
 
-#: ../../library/string.rst:916
+#: ../../library/string.rst:952
 msgid "Helper functions"
 msgstr "Допоміжні функції"
 
-#: ../../library/string.rst:920
+#: ../../library/string.rst:956
 msgid ""
 "Split the argument into words using :meth:`str.split`, capitalize each word "
 "using :meth:`str.capitalize`, and join the capitalized words using "
@@ -1608,77 +1630,76 @@ msgstr ""
 "пробілом, а пробіли на початку та в кінці видаляються, інакше *sep* "
 "використовується для розділення та об’єднання слів."
 
-#: ../../library/string.rst:195
+#: ../../library/string.rst:202
 msgid "{} (curly brackets)"
 msgstr ""
 
-#: ../../library/string.rst:195 ../../library/string.rst:335
-#: ../../library/string.rst:368 ../../library/string.rst:387
-#: ../../library/string.rst:396 ../../library/string.rst:410
-#: ../../library/string.rst:419
+#: ../../library/string.rst:202 ../../library/string.rst:344
+#: ../../library/string.rst:377 ../../library/string.rst:396
+#: ../../library/string.rst:405 ../../library/string.rst:437
 msgid "in string formatting"
 msgstr ""
 
-#: ../../library/string.rst:195
+#: ../../library/string.rst:202
 msgid ". (dot)"
 msgstr ""
 
-#: ../../library/string.rst:195
+#: ../../library/string.rst:202
 msgid "[] (square brackets)"
 msgstr "[] (квадратні дужки)"
 
-#: ../../library/string.rst:195
+#: ../../library/string.rst:202
 msgid "! (exclamation)"
 msgstr "! (знак оклику)"
 
-#: ../../library/string.rst:195
+#: ../../library/string.rst:202
 msgid ": (colon)"
 msgstr ""
 
-#: ../../library/string.rst:335
+#: ../../library/string.rst:344
 msgid "< (less)"
 msgstr ""
 
-#: ../../library/string.rst:335
+#: ../../library/string.rst:344
 msgid "> (greater)"
 msgstr ""
 
-#: ../../library/string.rst:335
+#: ../../library/string.rst:344
 msgid "= (equals)"
 msgstr ""
 
-#: ../../library/string.rst:335
+#: ../../library/string.rst:344
 msgid "^ (caret)"
 msgstr ""
 
-#: ../../library/string.rst:368
+#: ../../library/string.rst:377
 msgid "+ (plus)"
 msgstr ""
 
-#: ../../library/string.rst:368
+#: ../../library/string.rst:377
 msgid "- (minus)"
 msgstr "- (мінус)"
 
-#: ../../library/string.rst:387
+#: ../../library/string.rst:396
 msgid "z"
 msgstr ""
 
-#: ../../library/string.rst:396
+#: ../../library/string.rst:405
 msgid "# (hash)"
 msgstr "# (хеш)"
 
-#: ../../library/string.rst:410
+#: ../../library/string.rst:437
 msgid ", (comma)"
 msgstr ""
 
-#: ../../library/string.rst:419
+#: ../../library/string.rst:437
 msgid "_ (underscore)"
 msgstr ""
 
-#: ../../library/string.rst:756
+#: ../../library/string.rst:792
 msgid "$ (dollar)"
 msgstr ""
 
-#: ../../library/string.rst:756
+#: ../../library/string.rst:792
 msgid "in template strings"
 msgstr ""

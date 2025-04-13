@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-08 14:16+0000\n"
+"POT-Creation-Date: 2025-03-28 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 00:54+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -2344,7 +2344,7 @@ msgstr ""
 
 #: ../../library/ast.rst:1803
 msgid ""
-">>> print(ast.dump(ast.parse(\"type Alias[**P = (int, str)] = Callable[P, int]\"), indent=4))\n"
+">>> print(ast.dump(ast.parse(\"type Alias[**P = [int, str]] = Callable[P, int]\"), indent=4))\n"
 "Module(\n"
 "    body=[\n"
 "        TypeAlias(\n"
@@ -2352,7 +2352,7 @@ msgid ""
 "            type_params=[\n"
 "                ParamSpec(\n"
 "                    name='P',\n"
-"                    default_value=Tuple(\n"
+"                    default_value=List(\n"
 "                        elts=[\n"
 "                            Name(id='int', ctx=Load()),\n"
 "                            Name(id='str', ctx=Load())],\n"

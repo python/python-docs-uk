@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-04-11 14:19+0000\n"
 "PO-Revision-Date: 2021-06-28 01:11+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -142,7 +142,7 @@ msgstr ""
 msgid ""
 "When *aware_datetime* is true, fields with type ``datetime.datetime`` will "
 "be created as :ref:`aware object <datetime-naive-aware>`, with "
-":attr:`!tzinfo` as :attr:`datetime.UTC`."
+":attr:`!tzinfo` as :const:`datetime.UTC`."
 msgstr ""
 
 #: ../../library/plistlib.rst:76
@@ -159,35 +159,31 @@ msgstr ""
 
 #: ../../library/plistlib.rst:81
 msgid ""
-"The parser for the binary format raises :exc:`InvalidFileException` when the"
-" file cannot be parsed."
+"The parser raises :exc:`InvalidFileException` when the file cannot be "
+"parsed."
 msgstr ""
-"Синтаксичний аналізатор двійкового формату викликає "
-":exc:`InvalidFileException`, коли файл не може бути проаналізований."
 
-#: ../../library/plistlib.rst:86 ../../library/plistlib.rst:131
+#: ../../library/plistlib.rst:85 ../../library/plistlib.rst:130
 msgid "The keyword-only parameter *aware_datetime* has been added."
 msgstr ""
 
-#: ../../library/plistlib.rst:92
+#: ../../library/plistlib.rst:91
 msgid ""
 "Load a plist from a bytes or string object. See :func:`load` for an "
 "explanation of the keyword arguments."
 msgstr ""
 
-#: ../../library/plistlib.rst:97
+#: ../../library/plistlib.rst:96
 msgid "*data* can be a string when *fmt* equals :data:`FMT_XML`."
 msgstr ""
 
-#: ../../library/plistlib.rst:102
+#: ../../library/plistlib.rst:101
 msgid ""
-"Write *value* to a plist file. *Fp* should be a writable, binary file "
+"Write *value* to a plist file. *fp* should be a writable, binary file "
 "object."
 msgstr ""
-"Запишіть *значення* у файл plist. *Fp* має бути доступним для запису "
-"двійковим файловим об’єктом."
 
-#: ../../library/plistlib.rst:105
+#: ../../library/plistlib.rst:104
 msgid ""
 "The *fmt* argument specifies the format of the plist file and can be one of "
 "the following values:"
@@ -195,15 +191,15 @@ msgstr ""
 "Аргумент *fmt* визначає формат файлу plist і може бути одним із таких "
 "значень:"
 
-#: ../../library/plistlib.rst:108
+#: ../../library/plistlib.rst:107
 msgid ":data:`FMT_XML`: XML formatted plist file"
 msgstr ":data:`FMT_XML`: Plist-файл у форматі XML"
 
-#: ../../library/plistlib.rst:110
+#: ../../library/plistlib.rst:109
 msgid ":data:`FMT_BINARY`: Binary formatted plist file"
 msgstr ":data:`FMT_BINARY`: файл plist у двійковому форматі"
 
-#: ../../library/plistlib.rst:112
+#: ../../library/plistlib.rst:111
 msgid ""
 "When *sort_keys* is true (the default) the keys for dictionaries will be "
 "written to the plist in sorted order, otherwise they will be written in the "
@@ -213,7 +209,7 @@ msgstr ""
 "будуть записані до plist у відсортованому порядку, інакше вони будуть "
 "записані в порядку ітерацій словника."
 
-#: ../../library/plistlib.rst:116
+#: ../../library/plistlib.rst:115
 msgid ""
 "When *skipkeys* is false (the default) the function raises :exc:`TypeError` "
 "when a key of a dictionary is not a string, otherwise such keys are skipped."
@@ -222,14 +218,14 @@ msgstr ""
 ":exc:`TypeError`, коли ключ словника не є рядком, інакше такі ключі "
 "пропускаються."
 
-#: ../../library/plistlib.rst:119
+#: ../../library/plistlib.rst:118
 msgid ""
 "When *aware_datetime* is true and any field with type ``datetime.datetime`` "
 "is set as an :ref:`aware object <datetime-naive-aware>`, it will convert to "
 "UTC timezone before writing it."
 msgstr ""
 
-#: ../../library/plistlib.rst:123
+#: ../../library/plistlib.rst:122
 msgid ""
 "A :exc:`TypeError` will be raised if the object is of an unsupported type or"
 " a container that contains objects of unsupported types."
@@ -237,7 +233,7 @@ msgstr ""
 "Якщо тип об’єкта не підтримується або контейнер містить об’єкти "
 "непідтримуваних типів, виникне :exc:`TypeError`."
 
-#: ../../library/plistlib.rst:126
+#: ../../library/plistlib.rst:125
 msgid ""
 "An :exc:`OverflowError` will be raised for integer values that cannot be "
 "represented in (binary) plist files."
@@ -245,7 +241,7 @@ msgstr ""
 "Помилка :exc:`OverflowError` буде викликана для цілих значень, які не можуть"
 " бути представлені в (бінарних) файлах plist."
 
-#: ../../library/plistlib.rst:137
+#: ../../library/plistlib.rst:136
 msgid ""
 "Return *value* as a plist-formatted bytes object. See the documentation for "
 ":func:`dump` for an explanation of the keyword arguments of this function."
@@ -254,11 +250,11 @@ msgstr ""
 "документацію для :func:`dump` для пояснення ключових аргументів цієї "
 "функції."
 
-#: ../../library/plistlib.rst:144
+#: ../../library/plistlib.rst:143
 msgid "The following classes are available:"
 msgstr "Доступні такі класи:"
 
-#: ../../library/plistlib.rst:148
+#: ../../library/plistlib.rst:147
 msgid ""
 "Wraps an :class:`int`.  This is used when reading or writing NSKeyedArchiver"
 " encoded data, which contains UID (see PList manual)."
@@ -266,7 +262,7 @@ msgstr ""
 "Обгортає :class:`int`. Це використовується під час читання або запису даних,"
 " закодованих NSKeyedArchiver, які містять UID (див. посібник PList)."
 
-#: ../../library/plistlib.rst:151
+#: ../../library/plistlib.rst:150
 msgid ""
 "It has one attribute, :attr:`data`, which can be used to retrieve the int "
 "value of the UID.  :attr:`data` must be in the range ``0 <= data < 2**64``."
@@ -274,27 +270,35 @@ msgstr ""
 "Він має один атрибут, :attr:`data`, який можна використовувати для отримання"
 " int-значення UID. :attr:`data` має бути в діапазоні ``0 <= data < 2**64``."
 
-#: ../../library/plistlib.rst:157
+#: ../../library/plistlib.rst:156
 msgid "The following constants are available:"
 msgstr "Доступні такі константи:"
 
-#: ../../library/plistlib.rst:161
+#: ../../library/plistlib.rst:160
 msgid "The XML format for plist files."
 msgstr "Формат XML для файлів plist."
 
-#: ../../library/plistlib.rst:168
+#: ../../library/plistlib.rst:167
 msgid "The binary format for plist files"
 msgstr "Двійковий формат для файлів plist"
 
-#: ../../library/plistlib.rst:174
+#: ../../library/plistlib.rst:172
+msgid "The module defines the following exceptions:"
+msgstr ""
+
+#: ../../library/plistlib.rst:176
+msgid "Raised when a file cannot be parsed."
+msgstr ""
+
+#: ../../library/plistlib.rst:182
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../library/plistlib.rst:176
+#: ../../library/plistlib.rst:184
 msgid "Generating a plist::"
 msgstr "Створення plist::"
 
-#: ../../library/plistlib.rst:178
+#: ../../library/plistlib.rst:186
 msgid ""
 "import datetime\n"
 "import plistlib\n"
@@ -317,11 +321,11 @@ msgid ""
 "print(plistlib.dumps(pl).decode())"
 msgstr ""
 
-#: ../../library/plistlib.rst:198
+#: ../../library/plistlib.rst:206
 msgid "Parsing a plist::"
 msgstr "Розбір plist::"
 
-#: ../../library/plistlib.rst:200
+#: ../../library/plistlib.rst:208
 msgid ""
 "import plistlib\n"
 "\n"
