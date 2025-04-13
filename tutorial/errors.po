@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-15 14:18+0000\n"
+"POT-Creation-Date: 2025-04-04 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:50+0000\n"
 "Last-Translator: Nadiia Gorash <nmaiboroda@gmail.com>, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -59,19 +59,23 @@ msgstr ""
 
 #: ../../tutorial/errors.rst:26
 msgid ""
-"The parser repeats the offending line and displays little 'arrow's pointing "
-"at the token in the line where the error was detected.  The error may be "
-"caused by the absence of a token *before* the indicated token.  In the "
-"example, the error is detected at the function :func:`print`, since a colon "
-"(``':'``) is missing before it.  File name and line number are printed so "
-"you know where to look in case the input came from a script."
+"The parser repeats the offending line and displays little arrows pointing at"
+" the place where the error was detected.  Note that this is not always the "
+"place that needs to be fixed.  In the example, the error is detected at the "
+"function :func:`print`, since a colon (``':'``) is missing just before it."
 msgstr ""
 
-#: ../../tutorial/errors.rst:37
+#: ../../tutorial/errors.rst:31
+msgid ""
+"The file name (``<stdin>`` in our example) and line number are printed so "
+"you know where to look in case the input came from a file."
+msgstr ""
+
+#: ../../tutorial/errors.rst:38
 msgid "Exceptions"
 msgstr "Винятки"
 
-#: ../../tutorial/errors.rst:39
+#: ../../tutorial/errors.rst:40
 msgid ""
 "Even if a statement or expression is syntactically correct, it may cause an "
 "error when an attempt is made to execute it. Errors detected during "
@@ -87,7 +91,7 @@ msgstr ""
 "обробляються програмами, і вони призводять до повідомлень про помилки, як "
 "показано тут::"
 
-#: ../../tutorial/errors.rst:45
+#: ../../tutorial/errors.rst:46
 msgid ""
 ">>> 10 * (1/0)\n"
 "Traceback (most recent call last):\n"
@@ -109,7 +113,7 @@ msgid ""
 "TypeError: can only concatenate str (not \"int\") to str"
 msgstr ""
 
-#: ../../tutorial/errors.rst:64
+#: ../../tutorial/errors.rst:65
 msgid ""
 "The last line of the error message indicates what happened. Exceptions come "
 "in different types, and the type is printed as part of the message: the "
@@ -129,14 +133,14 @@ msgstr ""
 "винятків є вбудованими ідентифікаторами (а не зарезервованими ключовими "
 "словами)."
 
-#: ../../tutorial/errors.rst:72
+#: ../../tutorial/errors.rst:73
 msgid ""
 "The rest of the line provides detail based on the type of exception and what"
 " caused it."
 msgstr ""
 "Решта рядка надає деталі на основі типу винятку та причини його виникнення."
 
-#: ../../tutorial/errors.rst:75
+#: ../../tutorial/errors.rst:76
 msgid ""
 "The preceding part of the error message shows the context where the "
 "exception occurred, in the form of a stack traceback. In general it contains"
@@ -148,17 +152,17 @@ msgstr ""
 " стека зі списком вихідних рядків; однак він не відображатиме рядки, "
 "прочитані зі стандартного введення."
 
-#: ../../tutorial/errors.rst:80
+#: ../../tutorial/errors.rst:81
 msgid ""
 ":ref:`bltin-exceptions` lists the built-in exceptions and their meanings."
 msgstr ""
 ":ref:`bltin-exceptions` містить список вбудованих винятків та їх значення."
 
-#: ../../tutorial/errors.rst:86
+#: ../../tutorial/errors.rst:87
 msgid "Handling Exceptions"
 msgstr "Обробка винятків"
 
-#: ../../tutorial/errors.rst:88
+#: ../../tutorial/errors.rst:89
 msgid ""
 "It is possible to write programs that handle selected exceptions. Look at "
 "the following example, which asks the user for input until a valid integer "
@@ -174,7 +178,7 @@ msgstr ""
 "системою); зауважте, що створене користувачем переривання сигналізується за "
 "допомогою виклику винятку :exc:`KeyboardInterrupt`. ::"
 
-#: ../../tutorial/errors.rst:94
+#: ../../tutorial/errors.rst:95
 msgid ""
 ">>> while True:\n"
 "...     try:\n"
@@ -185,11 +189,11 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../../tutorial/errors.rst:102
+#: ../../tutorial/errors.rst:103
 msgid "The :keyword:`try` statement works as follows."
 msgstr "Оператор :keyword:`try` працює наступним чином."
 
-#: ../../tutorial/errors.rst:104
+#: ../../tutorial/errors.rst:105
 msgid ""
 "First, the *try clause* (the statement(s) between the :keyword:`try` and "
 ":keyword:`except` keywords) is executed."
@@ -197,7 +201,7 @@ msgstr ""
 "Спочатку виконується пропозиція *try* (вираз(и) між ключовими словами "
 ":keyword:`try` і :keyword:`except`)."
 
-#: ../../tutorial/errors.rst:107
+#: ../../tutorial/errors.rst:108
 msgid ""
 "If no exception occurs, the *except clause* is skipped and execution of the "
 ":keyword:`try` statement is finished."
@@ -205,7 +209,7 @@ msgstr ""
 "Якщо винятків не відбувається, пункт *except* пропускається, і виконання "
 "оператора :keyword:`try` завершується."
 
-#: ../../tutorial/errors.rst:110
+#: ../../tutorial/errors.rst:111
 msgid ""
 "If an exception occurs during execution of the :keyword:`try` clause, the "
 "rest of the clause is skipped.  Then, if its type matches the exception "
@@ -217,7 +221,7 @@ msgstr ""
 "за ключовим словом :keyword:`except`, виконується *except*, а потім "
 "виконання продовжується після блоку try/except."
 
-#: ../../tutorial/errors.rst:115
+#: ../../tutorial/errors.rst:116
 msgid ""
 "If an exception occurs which does not match the exception named in the "
 "*except clause*, it is passed on to outer :keyword:`try` statements; if no "
@@ -225,7 +229,7 @@ msgid ""
 " error message."
 msgstr ""
 
-#: ../../tutorial/errors.rst:119
+#: ../../tutorial/errors.rst:120
 msgid ""
 "A :keyword:`try` statement may have more than one *except clause*, to "
 "specify handlers for different exceptions.  At most one handler will be "
@@ -241,13 +245,13 @@ msgstr ""
 " *except* може називати кілька винятків у вигляді кортежу в дужках, "
 "наприклад::"
 
-#: ../../tutorial/errors.rst:125
+#: ../../tutorial/errors.rst:126
 msgid ""
 "... except (RuntimeError, TypeError, NameError):\n"
 "...     pass"
 msgstr ""
 
-#: ../../tutorial/errors.rst:128
+#: ../../tutorial/errors.rst:129
 msgid ""
 "A class in an :keyword:`except` clause matches exceptions which are "
 "instances of the class itself or one of its derived classes (but not the "
@@ -256,7 +260,7 @@ msgid ""
 "print B, C, D in that order::"
 msgstr ""
 
-#: ../../tutorial/errors.rst:133
+#: ../../tutorial/errors.rst:134
 msgid ""
 "class B(Exception):\n"
 "    pass\n"
@@ -278,7 +282,7 @@ msgid ""
 "        print(\"B\")"
 msgstr ""
 
-#: ../../tutorial/errors.rst:152
+#: ../../tutorial/errors.rst:153
 msgid ""
 "Note that if the *except clauses* were reversed (with ``except B`` first), "
 "it would have printed B, B, B --- the first matching *except clause* is "
@@ -288,14 +292,14 @@ msgstr ""
 "спочатку), було б надруковано B, B, B --- спрацьовує перше відповідне "
 "*except пункт*."
 
-#: ../../tutorial/errors.rst:155
+#: ../../tutorial/errors.rst:156
 msgid ""
 "When an exception occurs, it may have associated values, also known as the "
 "exception's *arguments*. The presence and types of the arguments depend on "
 "the exception type."
 msgstr ""
 
-#: ../../tutorial/errors.rst:159
+#: ../../tutorial/errors.rst:160
 msgid ""
 "The *except clause* may specify a variable after the exception name.  The "
 "variable is bound to the exception instance which typically has an ``args`` "
@@ -304,7 +308,7 @@ msgid ""
 "explicitly accessing ``.args``.  ::"
 msgstr ""
 
-#: ../../tutorial/errors.rst:165
+#: ../../tutorial/errors.rst:166
 msgid ""
 ">>> try:\n"
 "...     raise Exception('spam', 'eggs')\n"
@@ -324,13 +328,13 @@ msgid ""
 "y = eggs"
 msgstr ""
 
-#: ../../tutorial/errors.rst:182
+#: ../../tutorial/errors.rst:183
 msgid ""
 "The exception's :meth:`~object.__str__` output is printed as the last part "
 "('detail') of the message for unhandled exceptions."
 msgstr ""
 
-#: ../../tutorial/errors.rst:185
+#: ../../tutorial/errors.rst:186
 msgid ""
 ":exc:`BaseException` is the common base class of all exceptions. One of its "
 "subclasses, :exc:`Exception`, is the base class of all the non-fatal "
@@ -341,7 +345,7 @@ msgid ""
 "wishes to interrupt the program."
 msgstr ""
 
-#: ../../tutorial/errors.rst:193
+#: ../../tutorial/errors.rst:194
 msgid ""
 ":exc:`Exception` can be used as a wildcard that catches (almost) everything."
 " However, it is good practice to be as specific as possible with the types "
@@ -349,14 +353,14 @@ msgid ""
 "exceptions to propagate on."
 msgstr ""
 
-#: ../../tutorial/errors.rst:198
+#: ../../tutorial/errors.rst:199
 msgid ""
 "The most common pattern for handling :exc:`Exception` is to print or log the"
 " exception and then re-raise it (allowing a caller to handle the exception "
 "as well)::"
 msgstr ""
 
-#: ../../tutorial/errors.rst:202
+#: ../../tutorial/errors.rst:203
 msgid ""
 "import sys\n"
 "\n"
@@ -373,7 +377,7 @@ msgid ""
 "    raise"
 msgstr ""
 
-#: ../../tutorial/errors.rst:216
+#: ../../tutorial/errors.rst:217
 msgid ""
 "The :keyword:`try` ... :keyword:`except` statement has an optional *else "
 "clause*, which, when present, must follow all *except clauses*.  It is "
@@ -385,7 +389,7 @@ msgstr ""
 "корисно для коду, який потрібно виконати, якщо *речення* try не викликає "
 "винятку. Наприклад::"
 
-#: ../../tutorial/errors.rst:221
+#: ../../tutorial/errors.rst:222
 msgid ""
 "for arg in sys.argv[1:]:\n"
 "    try:\n"
@@ -397,7 +401,7 @@ msgid ""
 "        f.close()"
 msgstr ""
 
-#: ../../tutorial/errors.rst:230
+#: ../../tutorial/errors.rst:231
 msgid ""
 "The use of the :keyword:`!else` clause is better than adding additional code"
 " to the :keyword:`try` clause because it avoids accidentally catching an "
@@ -409,14 +413,14 @@ msgstr ""
 " перехоплення виняткової ситуації, яка не була викликана кодом, захищеним "
 ":keyword:`!try` ... :keyword:`!except` оператор."
 
-#: ../../tutorial/errors.rst:235
+#: ../../tutorial/errors.rst:236
 msgid ""
 "Exception handlers do not handle only exceptions that occur immediately in "
 "the *try clause*, but also those that occur inside functions that are called"
 " (even indirectly) in the *try clause*. For example::"
 msgstr ""
 
-#: ../../tutorial/errors.rst:239
+#: ../../tutorial/errors.rst:240
 msgid ""
 ">>> def this_fails():\n"
 "...     x = 1/0\n"
@@ -429,11 +433,11 @@ msgid ""
 "Handling run-time error: division by zero"
 msgstr ""
 
-#: ../../tutorial/errors.rst:253
+#: ../../tutorial/errors.rst:254
 msgid "Raising Exceptions"
 msgstr "Створення винятків"
 
-#: ../../tutorial/errors.rst:255
+#: ../../tutorial/errors.rst:256
 msgid ""
 "The :keyword:`raise` statement allows the programmer to force a specified "
 "exception to occur. For example::"
@@ -441,7 +445,7 @@ msgstr ""
 "Оператор :keyword:`raise` дозволяє програмісту примусово викликати певний "
 "виняток. Наприклад::"
 
-#: ../../tutorial/errors.rst:258
+#: ../../tutorial/errors.rst:259
 msgid ""
 ">>> raise NameError('HiThere')\n"
 "Traceback (most recent call last):\n"
@@ -450,7 +454,7 @@ msgid ""
 "NameError: HiThere"
 msgstr ""
 
-#: ../../tutorial/errors.rst:264
+#: ../../tutorial/errors.rst:265
 msgid ""
 "The sole argument to :keyword:`raise` indicates the exception to be raised. "
 "This must be either an exception instance or an exception class (a class "
@@ -459,11 +463,11 @@ msgid ""
 "instantiated by calling its constructor with no arguments::"
 msgstr ""
 
-#: ../../tutorial/errors.rst:270
+#: ../../tutorial/errors.rst:271
 msgid "raise ValueError  # shorthand for 'raise ValueError()'"
 msgstr ""
 
-#: ../../tutorial/errors.rst:272
+#: ../../tutorial/errors.rst:273
 msgid ""
 "If you need to determine whether an exception was raised but don't intend to"
 " handle it, a simpler form of the :keyword:`raise` statement allows you to "
@@ -473,7 +477,7 @@ msgstr ""
 "наміру його обробляти, простіша форма оператора :keyword:`raise` дозволяє "
 "повторно викликати виняток::"
 
-#: ../../tutorial/errors.rst:276
+#: ../../tutorial/errors.rst:277
 msgid ""
 ">>> try:\n"
 "...     raise NameError('HiThere')\n"
@@ -488,18 +492,18 @@ msgid ""
 "NameError: HiThere"
 msgstr ""
 
-#: ../../tutorial/errors.rst:292
+#: ../../tutorial/errors.rst:293
 msgid "Exception Chaining"
 msgstr "З’єднання винятків"
 
-#: ../../tutorial/errors.rst:294
+#: ../../tutorial/errors.rst:295
 msgid ""
 "If an unhandled exception occurs inside an :keyword:`except` section, it "
 "will have the exception being handled attached to it and included in the "
 "error message::"
 msgstr ""
 
-#: ../../tutorial/errors.rst:298
+#: ../../tutorial/errors.rst:299
 msgid ""
 ">>> try:\n"
 "...     open(\"database.sqlite\")\n"
@@ -520,24 +524,24 @@ msgid ""
 "RuntimeError: unable to handle error"
 msgstr ""
 
-#: ../../tutorial/errors.rst:316
+#: ../../tutorial/errors.rst:317
 msgid ""
 "To indicate that an exception is a direct consequence of another, the "
 ":keyword:`raise` statement allows an optional :keyword:`from<raise>` "
 "clause::"
 msgstr ""
 
-#: ../../tutorial/errors.rst:319
+#: ../../tutorial/errors.rst:320
 msgid ""
 "# exc must be exception instance or None.\n"
 "raise RuntimeError from exc"
 msgstr ""
 
-#: ../../tutorial/errors.rst:322
+#: ../../tutorial/errors.rst:323
 msgid "This can be useful when you are transforming exceptions. For example::"
 msgstr "Це може бути корисним, коли ви перетворюєте винятки. Наприклад::"
 
-#: ../../tutorial/errors.rst:324
+#: ../../tutorial/errors.rst:325
 msgid ""
 ">>> def func():\n"
 "...     raise ConnectionError\n"
@@ -562,13 +566,13 @@ msgid ""
 "RuntimeError: Failed to open database"
 msgstr ""
 
-#: ../../tutorial/errors.rst:346
+#: ../../tutorial/errors.rst:347
 msgid ""
 "It also allows disabling automatic exception chaining using the ``from "
 "None`` idiom::"
 msgstr ""
 
-#: ../../tutorial/errors.rst:349
+#: ../../tutorial/errors.rst:350
 msgid ""
 ">>> try:\n"
 "...     open('database.sqlite')\n"
@@ -581,18 +585,18 @@ msgid ""
 "RuntimeError"
 msgstr ""
 
-#: ../../tutorial/errors.rst:359
+#: ../../tutorial/errors.rst:360
 msgid ""
 "For more information about chaining mechanics, see :ref:`bltin-exceptions`."
 msgstr ""
 "Для отримання додаткової інформації про механіку ланцюжка див. :ref:`bltin-"
 "exceptions`."
 
-#: ../../tutorial/errors.rst:365
+#: ../../tutorial/errors.rst:366
 msgid "User-defined Exceptions"
 msgstr "Винятки, визначені користувачем"
 
-#: ../../tutorial/errors.rst:367
+#: ../../tutorial/errors.rst:368
 msgid ""
 "Programs may name their own exceptions by creating a new exception class "
 "(see :ref:`tut-classes` for more about Python classes).  Exceptions should "
@@ -604,7 +608,7 @@ msgstr ""
 "Винятки зазвичай мають бути похідними від класу :exc:`Exception`, прямо чи "
 "опосередковано."
 
-#: ../../tutorial/errors.rst:371
+#: ../../tutorial/errors.rst:372
 msgid ""
 "Exception classes can be defined which do anything any other class can do, "
 "but are usually kept simple, often only offering a number of attributes that"
@@ -615,7 +619,7 @@ msgstr ""
 "інший клас, але зазвичай вони прості, часто пропонують лише ряд атрибутів, "
 "які дозволяють обробникам витягувати інформацію про помилку для винятку."
 
-#: ../../tutorial/errors.rst:375
+#: ../../tutorial/errors.rst:376
 msgid ""
 "Most exceptions are defined with names that end in \"Error\", similar to the"
 " naming of the standard exceptions."
@@ -623,17 +627,17 @@ msgstr ""
 "Більшість винятків визначаються іменами, які закінчуються на \"Помилка\", "
 "подібно до назв стандартних винятків."
 
-#: ../../tutorial/errors.rst:378
+#: ../../tutorial/errors.rst:379
 msgid ""
 "Many standard modules define their own exceptions to report errors that may "
 "occur in functions they define."
 msgstr ""
 
-#: ../../tutorial/errors.rst:385
+#: ../../tutorial/errors.rst:386
 msgid "Defining Clean-up Actions"
 msgstr "Визначення дій з очищення"
 
-#: ../../tutorial/errors.rst:387
+#: ../../tutorial/errors.rst:388
 msgid ""
 "The :keyword:`try` statement has another optional clause which is intended "
 "to define clean-up actions that must be executed under all circumstances.  "
@@ -643,7 +647,7 @@ msgstr ""
 "визначення дій очищення, які необхідно виконувати за будь-яких обставин. "
 "Наприклад::"
 
-#: ../../tutorial/errors.rst:391
+#: ../../tutorial/errors.rst:392
 msgid ""
 ">>> try:\n"
 "...     raise KeyboardInterrupt\n"
@@ -657,7 +661,7 @@ msgid ""
 "KeyboardInterrupt"
 msgstr ""
 
-#: ../../tutorial/errors.rst:402
+#: ../../tutorial/errors.rst:403
 msgid ""
 "If a :keyword:`finally` clause is present, the :keyword:`!finally` clause "
 "will execute as the last task before the :keyword:`try` statement completes."
@@ -671,7 +675,7 @@ msgstr ""
 "створює виняток оператор :keyword:`!try` чи ні. У наступних пунктах "
 "розглядаються більш складні випадки, коли виникає виняток:"
 
-#: ../../tutorial/errors.rst:408
+#: ../../tutorial/errors.rst:409
 msgid ""
 "If an exception occurs during execution of the :keyword:`!try` clause, the "
 "exception may be handled by an :keyword:`except` clause. If the exception is"
@@ -683,7 +687,7 @@ msgstr ""
 "не обробляється пропозицією :keyword:`!except`, виняток виникає повторно "
 "після того, як пропозиція :keyword:`!finally` буде виконана."
 
-#: ../../tutorial/errors.rst:414
+#: ../../tutorial/errors.rst:415
 msgid ""
 "An exception could occur during execution of an :keyword:`!except` or "
 ":keyword:`!else` clause. Again, the exception is re-raised after the "
@@ -693,7 +697,7 @@ msgstr ""
 ":keyword:`!else`. Знову ж таки, виняток повторно викликається після "
 "виконання пункту :keyword:`!finally`."
 
-#: ../../tutorial/errors.rst:418
+#: ../../tutorial/errors.rst:419
 msgid ""
 "If the :keyword:`!finally` clause executes a :keyword:`break`, "
 ":keyword:`continue` or :keyword:`return` statement, exceptions are not re-"
@@ -702,7 +706,7 @@ msgstr ""
 "Якщо пропозиція :keyword:`!finally` виконує оператор :keyword:`break`, "
 ":keyword:`continue` або :keyword:`return`, винятки не виникають повторно."
 
-#: ../../tutorial/errors.rst:422
+#: ../../tutorial/errors.rst:423
 msgid ""
 "If the :keyword:`!try` statement reaches a :keyword:`break`, "
 ":keyword:`continue` or :keyword:`return` statement, the :keyword:`!finally` "
@@ -714,7 +718,7 @@ msgstr ""
 "виконано безпосередньо перед :keyword:`!break`, :keyword:`!continue` або "
 ":keyword:`!return` виконання оператора."
 
-#: ../../tutorial/errors.rst:428
+#: ../../tutorial/errors.rst:429
 msgid ""
 "If a :keyword:`!finally` clause includes a :keyword:`!return` statement, the"
 " returned value will be the one from the :keyword:`!finally` clause's "
@@ -726,11 +730,11 @@ msgstr ""
 "пропозиції :keyword:`!finally`, а не значення з оператора :keyword:`!return`"
 " пункту :keyword:`!try`."
 
-#: ../../tutorial/errors.rst:434
+#: ../../tutorial/errors.rst:435
 msgid "For example::"
 msgstr "Наприклад::"
 
-#: ../../tutorial/errors.rst:436
+#: ../../tutorial/errors.rst:437
 msgid ""
 ">>> def bool_return():\n"
 "...     try:\n"
@@ -742,11 +746,11 @@ msgid ""
 "False"
 msgstr ""
 
-#: ../../tutorial/errors.rst:445
+#: ../../tutorial/errors.rst:446
 msgid "A more complicated example::"
 msgstr "Більш складний приклад::"
 
-#: ../../tutorial/errors.rst:447
+#: ../../tutorial/errors.rst:448
 msgid ""
 ">>> def divide(x, y):\n"
 "...     try:\n"
@@ -776,7 +780,7 @@ msgid ""
 "TypeError: unsupported operand type(s) for /: 'str' and 'str'"
 msgstr ""
 
-#: ../../tutorial/errors.rst:474
+#: ../../tutorial/errors.rst:475
 msgid ""
 "As you can see, the :keyword:`finally` clause is executed in any event.  The"
 " :exc:`TypeError` raised by dividing two strings is not handled by the "
@@ -788,7 +792,7 @@ msgstr ""
 "пропозицією :keyword:`except` і тому повторно виникає після виконання "
 "пропозиції :keyword:`!finally`."
 
-#: ../../tutorial/errors.rst:479
+#: ../../tutorial/errors.rst:480
 msgid ""
 "In real world applications, the :keyword:`finally` clause is useful for "
 "releasing external resources (such as files or network connections), "
@@ -798,11 +802,11 @@ msgstr ""
 "зовнішніх ресурсів (таких як файли або мережеві підключення), незалежно від "
 "того, чи було використання ресурсу успішним."
 
-#: ../../tutorial/errors.rst:487
+#: ../../tutorial/errors.rst:488
 msgid "Predefined Clean-up Actions"
 msgstr "Попередньо визначені дії з очищення"
 
-#: ../../tutorial/errors.rst:489
+#: ../../tutorial/errors.rst:490
 msgid ""
 "Some objects define standard clean-up actions to be undertaken when the "
 "object is no longer needed, regardless of whether or not the operation using"
@@ -814,13 +818,13 @@ msgstr ""
 "використанням об’єкта успішною чи невдалою. Подивіться на наступний приклад,"
 " який намагається відкрити файл і вивести його вміст на екран. ::"
 
-#: ../../tutorial/errors.rst:494
+#: ../../tutorial/errors.rst:495
 msgid ""
 "for line in open(\"myfile.txt\"):\n"
 "    print(line, end=\"\")"
 msgstr ""
 
-#: ../../tutorial/errors.rst:497
+#: ../../tutorial/errors.rst:498
 msgid ""
 "The problem with this code is that it leaves the file open for an "
 "indeterminate amount of time after this part of the code has finished "
@@ -835,14 +839,14 @@ msgstr ""
 "програм. Оператор :keyword:`with` дозволяє використовувати такі об’єкти, як "
 "файли, таким чином, щоб вони завжди були своєчасно та правильно очищені. ::"
 
-#: ../../tutorial/errors.rst:503
+#: ../../tutorial/errors.rst:504
 msgid ""
 "with open(\"myfile.txt\") as f:\n"
 "    for line in f:\n"
 "        print(line, end=\"\")"
 msgstr ""
 
-#: ../../tutorial/errors.rst:507
+#: ../../tutorial/errors.rst:508
 msgid ""
 "After the statement is executed, the file *f* is always closed, even if a "
 "problem was encountered while processing the lines. Objects which, like "
@@ -853,11 +857,11 @@ msgstr ""
 "обробки рядків виникла проблема. Об’єкти, які, як і файли, забезпечують "
 "попередньо визначені дії очищення, вкажуть це у своїй документації."
 
-#: ../../tutorial/errors.rst:515
+#: ../../tutorial/errors.rst:516
 msgid "Raising and Handling Multiple Unrelated Exceptions"
 msgstr ""
 
-#: ../../tutorial/errors.rst:517
+#: ../../tutorial/errors.rst:518
 msgid ""
 "There are situations where it is necessary to report several exceptions that"
 " have occurred. This is often the case in concurrency frameworks, when "
@@ -866,14 +870,14 @@ msgid ""
 "errors rather than raise the first exception."
 msgstr ""
 
-#: ../../tutorial/errors.rst:523
+#: ../../tutorial/errors.rst:524
 msgid ""
 "The builtin :exc:`ExceptionGroup` wraps a list of exception instances so "
 "that they can be raised together. It is an exception itself, so it can be "
 "caught like any other exception. ::"
 msgstr ""
 
-#: ../../tutorial/errors.rst:527
+#: ../../tutorial/errors.rst:528
 msgid ""
 ">>> def f():\n"
 "...     excs = [OSError('error 1'), SystemError('error 2')]\n"
@@ -901,7 +905,7 @@ msgid ""
 ">>>"
 msgstr ""
 
-#: ../../tutorial/errors.rst:552
+#: ../../tutorial/errors.rst:553
 msgid ""
 "By using ``except*`` instead of ``except``, we can selectively handle only "
 "the exceptions in the group that match a certain type. In the following "
@@ -910,7 +914,7 @@ msgid ""
 " exceptions propagate to other clauses and eventually to be reraised. ::"
 msgstr ""
 
-#: ../../tutorial/errors.rst:559
+#: ../../tutorial/errors.rst:560
 msgid ""
 ">>> def f():\n"
 "...     raise ExceptionGroup(\n"
@@ -954,7 +958,7 @@ msgid ""
 ">>>"
 msgstr ""
 
-#: ../../tutorial/errors.rst:600
+#: ../../tutorial/errors.rst:601
 msgid ""
 "Note that the exceptions nested in an exception group must be instances, not"
 " types. This is because in practice the exceptions would typically be ones "
@@ -962,7 +966,7 @@ msgid ""
 " pattern::"
 msgstr ""
 
-#: ../../tutorial/errors.rst:605
+#: ../../tutorial/errors.rst:606
 msgid ""
 ">>> excs = []\n"
 "... for test in tests:\n"
@@ -976,11 +980,11 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../../tutorial/errors.rst:620
+#: ../../tutorial/errors.rst:621
 msgid "Enriching Exceptions with Notes"
 msgstr ""
 
-#: ../../tutorial/errors.rst:622
+#: ../../tutorial/errors.rst:623
 msgid ""
 "When an exception is created in order to be raised, it is usually "
 "initialized with information that describes the error that has occurred. "
@@ -991,7 +995,7 @@ msgid ""
 "added, after the exception. ::"
 msgstr ""
 
-#: ../../tutorial/errors.rst:629
+#: ../../tutorial/errors.rst:630
 msgid ""
 ">>> try:\n"
 "...     raise TypeError('bad type')\n"
@@ -1009,7 +1013,7 @@ msgid ""
 ">>>"
 msgstr ""
 
-#: ../../tutorial/errors.rst:644
+#: ../../tutorial/errors.rst:645
 msgid ""
 "For example, when collecting exceptions into an exception group, we may want"
 " to add context information for the individual errors. In the following each"
@@ -1017,7 +1021,7 @@ msgid ""
 "::"
 msgstr ""
 
-#: ../../tutorial/errors.rst:648
+#: ../../tutorial/errors.rst:649
 msgid ""
 ">>> def f():\n"
 "...     raise OSError('operation failed')\n"

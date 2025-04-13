@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-08 14:16+0000\n"
+"POT-Creation-Date: 2025-03-21 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:18+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid ":mod:`!xmlrpc` --- XMLRPC server and client modules"
 msgstr ""
 
-#: ../../library/xmlrpc.rst:4
+#: ../../library/xmlrpc.rst:7
 msgid ""
 "XML-RPC is a Remote Procedure Call method that uses XML passed via HTTP as a"
 " transport.  With it, a client can call methods with parameters on a remote "
@@ -36,7 +36,7 @@ msgstr ""
 " методи з параметрами на віддаленому сервері (сервер має назву URI) і "
 "отримати назад структуровані дані."
 
-#: ../../library/xmlrpc.rst:8
+#: ../../library/xmlrpc.rst:11
 msgid ""
 "``xmlrpc`` is a package that collects server and client modules implementing"
 " XML-RPC.  The modules are:"
@@ -44,10 +44,10 @@ msgstr ""
 "``xmlrpc`` — це пакет, який збирає серверні та клієнтські модулі, що "
 "реалізують XML-RPC. Модулі:"
 
-#: ../../library/xmlrpc.rst:11
+#: ../../library/xmlrpc.rst:14
 msgid ":mod:`xmlrpc.client`"
 msgstr ":mod:`xmlrpc.client`"
 
-#: ../../library/xmlrpc.rst:12
+#: ../../library/xmlrpc.rst:15
 msgid ":mod:`xmlrpc.server`"
 msgstr ":mod:`xmlrpc.server`"

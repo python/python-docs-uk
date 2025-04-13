@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-12 08:36+0000\n"
+"POT-Creation-Date: 2025-04-04 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 00:56+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -51,15 +51,11 @@ msgstr ""
 
 #: ../../library/collections.abc.rst:30
 msgid ""
-"1) A newly written class can inherit directly from one of the abstract base "
+"A newly written class can inherit directly from one of the abstract base "
 "classes.  The class must supply the required abstract methods.  The "
 "remaining mixin methods come from inheritance and can be overridden if "
 "desired.  Other methods may be added as needed:"
 msgstr ""
-"1) Щойно написаний клас може успадкувати безпосередньо від одного з "
-"абстрактних базових класів. Клас повинен надавати необхідні абстрактні "
-"методи. Решта методів mixin походять із успадкування та можуть бути замінені"
-" за бажанням. За потреби можна додати інші методи:"
 
 #: ../../library/collections.abc.rst:35
 msgid ""
@@ -80,7 +76,7 @@ msgstr ""
 
 #: ../../library/collections.abc.rst:50
 msgid ""
-"2) Existing classes and built-in classes can be registered as \"virtual "
+"Existing classes and built-in classes can be registered as \"virtual "
 "subclasses\" of the ABCs.  Those classes should define the full API "
 "including all of the abstract methods and all of the mixin methods. This "
 "lets users rely on :func:`issubclass` or :func:`isinstance` tests to "
@@ -88,12 +84,6 @@ msgid ""
 "rule is for methods that are automatically inferred from the rest of the "
 "API:"
 msgstr ""
-"2) Існуючі класи та вбудовані класи можуть бути зареєстровані як "
-"\"віртуальні підкласи\" ABC. Ці класи повинні визначати повний API, "
-"включаючи всі абстрактні методи та всі методи mixin. Це дозволяє "
-"користувачам покладатися на тести :func:`issubclass` або :func:`isinstance`,"
-" щоб визначити, чи підтримується повний інтерфейс. Винятком із цього правила"
-" є методи, які автоматично виводяться з решти API:"
 
 #: ../../library/collections.abc.rst:58
 msgid ""
@@ -126,21 +116,18 @@ msgstr ""
 
 #: ../../library/collections.abc.rst:82
 msgid ""
-"3) Some simple interfaces are directly recognizable by the presence of the "
+"Some simple interfaces are directly recognizable by the presence of the "
 "required methods (unless those methods have been set to :const:`None`):"
 msgstr ""
-"3) Деякі прості інтерфейси можна безпосередньо розпізнати за наявністю "
-"необхідних методів (якщо для цих методів не встановлено значення "
-":const:`None`):"
 
-#: ../../library/collections.abc.rst:86
+#: ../../library/collections.abc.rst:85
 msgid ""
 "class E:\n"
 "    def __iter__(self): ...\n"
 "    def __next__(self): ..."
 msgstr ""
 
-#: ../../library/collections.abc.rst:92
+#: ../../library/collections.abc.rst:91
 msgid ""
 ">>> issubclass(E, Iterable)\n"
 "True\n"
@@ -148,7 +135,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: ../../library/collections.abc.rst:99
+#: ../../library/collections.abc.rst:98
 msgid ""
 "Complex interfaces do not support this last technique because an interface "
 "is more than just the presence of method names.  Interfaces specify "
@@ -164,7 +151,7 @@ msgstr ""
 "надає ``__getitem__``, ``__len__`` і ``__iter__``, недостатньо для того, щоб"
 " відрізнити :class:`Sequence` від :class:`Mapping`."
 
-#: ../../library/collections.abc.rst:107
+#: ../../library/collections.abc.rst:106
 msgid ""
 "These abstract classes now support ``[]``. See :ref:`types-genericalias` and"
 " :pep:`585`."
@@ -172,178 +159,177 @@ msgstr ""
 "Ці абстрактні класи тепер підтримують ``[]``. Див. :ref:`types-genericalias`"
 " і :pep:`585`."
 
-#: ../../library/collections.abc.rst:114
+#: ../../library/collections.abc.rst:113
 msgid "Collections Abstract Base Classes"
 msgstr "Колекції Абстрактні базові класи"
 
-#: ../../library/collections.abc.rst:116
+#: ../../library/collections.abc.rst:115
 msgid ""
 "The collections module offers the following :term:`ABCs <abstract base "
 "class>`:"
 msgstr "Модуль колекцій пропонує наступне :term:`ABCs <abstract base class>`:"
 
-#: ../../library/collections.abc.rst:121
+#: ../../library/collections.abc.rst:120
 msgid "ABC"
 msgstr "ABC"
 
-#: ../../library/collections.abc.rst:121
+#: ../../library/collections.abc.rst:120
 msgid "Inherits from"
 msgstr "Успадковує від"
 
-#: ../../library/collections.abc.rst:121
+#: ../../library/collections.abc.rst:120
 msgid "Abstract Methods"
 msgstr "Методи реферату"
 
-#: ../../library/collections.abc.rst:121
+#: ../../library/collections.abc.rst:120
 msgid "Mixin Methods"
 msgstr "Методи Міксіна"
 
-#: ../../library/collections.abc.rst:123
+#: ../../library/collections.abc.rst:122
 msgid ":class:`Container` [1]_"
 msgstr ":class:`Container` [1]_"
 
-#: ../../library/collections.abc.rst:123
+#: ../../library/collections.abc.rst:122
 msgid "``__contains__``"
 msgstr "``__contains__``"
 
-#: ../../library/collections.abc.rst:124
+#: ../../library/collections.abc.rst:123
 msgid ":class:`Hashable` [1]_"
 msgstr ":class:`Hashable` [1]_"
 
-#: ../../library/collections.abc.rst:124
+#: ../../library/collections.abc.rst:123
 msgid "``__hash__``"
 msgstr "``__hash__``"
 
-#: ../../library/collections.abc.rst:125
+#: ../../library/collections.abc.rst:124
 msgid ":class:`Iterable` [1]_ [2]_"
 msgstr ":class:`Iterable` [1]_ [2]_"
 
-#: ../../library/collections.abc.rst:125 ../../library/collections.abc.rst:126
+#: ../../library/collections.abc.rst:124 ../../library/collections.abc.rst:125
 msgid "``__iter__``"
 msgstr "``__iter__``"
 
-#: ../../library/collections.abc.rst:126
+#: ../../library/collections.abc.rst:125
 msgid ":class:`Iterator` [1]_"
 msgstr ":class:`Iterator` [1]_"
 
-#: ../../library/collections.abc.rst:126 ../../library/collections.abc.rst:127
+#: ../../library/collections.abc.rst:125 ../../library/collections.abc.rst:126
 msgid ":class:`Iterable`"
 msgstr ":class:`Iterable`"
 
-#: ../../library/collections.abc.rst:126
+#: ../../library/collections.abc.rst:125
 msgid "``__next__``"
 msgstr "``__next__``"
 
-#: ../../library/collections.abc.rst:127
+#: ../../library/collections.abc.rst:126
 msgid ":class:`Reversible` [1]_"
 msgstr ":class:`Reversible` [1]_"
 
-#: ../../library/collections.abc.rst:127
+#: ../../library/collections.abc.rst:126
 msgid "``__reversed__``"
 msgstr "``__reversed__``"
 
-#: ../../library/collections.abc.rst:128
+#: ../../library/collections.abc.rst:127
 msgid ":class:`Generator`  [1]_"
 msgstr ":class:`Generator` [1]_"
 
-#: ../../library/collections.abc.rst:128
+#: ../../library/collections.abc.rst:127
 msgid ":class:`Iterator`"
 msgstr ":class:`Iterator`"
 
-#: ../../library/collections.abc.rst:128 ../../library/collections.abc.rst:176
+#: ../../library/collections.abc.rst:127 ../../library/collections.abc.rst:176
 msgid "``send``, ``throw``"
 msgstr "``відправити``, ``кинути``"
 
-#: ../../library/collections.abc.rst:128
+#: ../../library/collections.abc.rst:127
 msgid "``close``, ``__iter__``, ``__next__``"
 msgstr "``закрити``, ``__iter__``, ``__next__``"
 
-#: ../../library/collections.abc.rst:129
+#: ../../library/collections.abc.rst:128
 msgid ":class:`Sized`  [1]_"
 msgstr ":class:`Sized` [1]_"
 
-#: ../../library/collections.abc.rst:129 ../../library/collections.abc.rst:168
+#: ../../library/collections.abc.rst:128
 msgid "``__len__``"
 msgstr "``__len__``"
 
-#: ../../library/collections.abc.rst:130
+#: ../../library/collections.abc.rst:129
 msgid ":class:`Callable`  [1]_"
 msgstr ":class:`Callable` [1]_"
 
-#: ../../library/collections.abc.rst:130
+#: ../../library/collections.abc.rst:129
 msgid "``__call__``"
 msgstr "``__call__``"
 
-#: ../../library/collections.abc.rst:131
+#: ../../library/collections.abc.rst:130
 msgid ":class:`Collection`  [1]_"
 msgstr ":class:`Collection` [1]_"
 
-#: ../../library/collections.abc.rst:131
+#: ../../library/collections.abc.rst:130
 msgid ":class:`Sized`, :class:`Iterable`, :class:`Container`"
 msgstr ":class:`Sized`, :class:`Iterable`, :class:`Container`"
 
-#: ../../library/collections.abc.rst:131 ../../library/collections.abc.rst:147
+#: ../../library/collections.abc.rst:130 ../../library/collections.abc.rst:146
 msgid "``__contains__``, ``__iter__``, ``__len__``"
 msgstr "``__contains__``, ``__iter__``, ``__len__``"
 
-#: ../../library/collections.abc.rst:135 ../../library/collections.abc.rst:138
-#: ../../library/collections.abc.rst:144
+#: ../../library/collections.abc.rst:134 ../../library/collections.abc.rst:137
+#: ../../library/collections.abc.rst:143
 msgid ":class:`Sequence`"
 msgstr ":class:`Sequence`"
 
-#: ../../library/collections.abc.rst:135
+#: ../../library/collections.abc.rst:134
 msgid ":class:`Reversible`, :class:`Collection`"
 msgstr ":class:`Reversible`, :class:`Collection`"
 
-#: ../../library/collections.abc.rst:135 ../../library/collections.abc.rst:144
+#: ../../library/collections.abc.rst:134 ../../library/collections.abc.rst:143
 msgid "``__getitem__``, ``__len__``"
 msgstr "``__getitem__``, ``__len__``"
 
-#: ../../library/collections.abc.rst:135
+#: ../../library/collections.abc.rst:134
 msgid ""
 "``__contains__``, ``__iter__``, ``__reversed__``, ``index``, and ``count``"
 msgstr ""
 "``__contains__``, ``__iter__``, ``__reversed__``, ``index`` і ``count``"
 
-#: ../../library/collections.abc.rst:138
+#: ../../library/collections.abc.rst:137
 msgid ":class:`MutableSequence`"
 msgstr ":class:`MutableSequence`"
 
-#: ../../library/collections.abc.rst:138
+#: ../../library/collections.abc.rst:137
 msgid ""
 "``__getitem__``, ``__setitem__``, ``__delitem__``, ``__len__``, ``insert``"
 msgstr ""
 "``__getitem__``, ``__setitem__``, ``__delitem__``, ``__len__``, ``вставити``"
 
-#: ../../library/collections.abc.rst:138
+#: ../../library/collections.abc.rst:137
 msgid ""
 "Inherited :class:`Sequence` methods and ``append``, ``clear``, ``reverse``, "
 "``extend``, ``pop``, ``remove``, and ``__iadd__``"
 msgstr ""
 
-#: ../../library/collections.abc.rst:144
+#: ../../library/collections.abc.rst:143
 msgid ":class:`ByteString`"
 msgstr ":class:`ByteString`"
 
-#: ../../library/collections.abc.rst:144
+#: ../../library/collections.abc.rst:143
 msgid "Inherited :class:`Sequence` methods"
 msgstr "Успадковані методи :class:`Sequence`"
 
-#: ../../library/collections.abc.rst:147 ../../library/collections.abc.rst:151
+#: ../../library/collections.abc.rst:146 ../../library/collections.abc.rst:151
 msgid ":class:`Set`"
 msgstr ":class:`Set`"
 
-#: ../../library/collections.abc.rst:147 ../../library/collections.abc.rst:157
+#: ../../library/collections.abc.rst:146 ../../library/collections.abc.rst:157
 msgid ":class:`Collection`"
 msgstr ":class:`Collection`"
 
-#: ../../library/collections.abc.rst:147
+#: ../../library/collections.abc.rst:146
 msgid ""
 "``__le__``, ``__lt__``, ``__eq__``, ``__ne__``, ``__gt__``, ``__ge__``, "
-"``__and__``, ``__or__``, ``__sub__``, ``__xor__``, and ``isdisjoint``"
+"``__and__``, ``__or__``, ``__sub__``, ``__rsub__``, ``__xor__``, "
+"``__rxor__`` and ``isdisjoint``"
 msgstr ""
-"``__le__``, ``__lt__``, ``__eq__``, ``__ne__``, ``__gt__``, ``__ge__``, "
-"``__and__``, ``__or__``, ``__sub__``, ``__xor__`` і ``isdisjoint``"
 
 #: ../../library/collections.abc.rst:151
 msgid ":class:`MutableSet`"
@@ -402,6 +388,10 @@ msgstr ":class:`MappingView`"
 #: ../../library/collections.abc.rst:168
 msgid ":class:`Sized`"
 msgstr ":class:`Sized`"
+
+#: ../../library/collections.abc.rst:168
+msgid "``__init__``, ``__len__`` and ``__repr__``"
+msgstr ""
 
 #: ../../library/collections.abc.rst:169
 msgid ":class:`ItemsView`"
