@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Taras Kuzyo <kuzyo.taras@gmail.com>, 2023
 # Ivan Prytula, 2023
-# Dmytro Kazanzhy, 2024
 # Yuliia Shevchenko, 2024
+# Dmytro Kazanzhy, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-04-11 14:19+0000\n"
 "PO-Revision-Date: 2021-06-28 01:06+0000\n"
-"Last-Translator: Yuliia Shevchenko, 2024\n"
+"Last-Translator: Dmytro Kazanzhy, 2025\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1698,9 +1698,9 @@ msgstr ""
 
 #: ../../library/functions.rst:973
 msgid ""
-">>> s = input('--> ')  \n"
+">>> s = input('--> ')\n"
 "--> Monty Python's Flying Circus\n"
-">>> s  \n"
+">>> s\n"
 "\"Monty Python's Flying Circus\""
 msgstr ""
 
@@ -2932,11 +2932,11 @@ msgstr ""
 "Для вбудованих типів, які підтримують :func:`round`, значення округлюються "
 "до найближчого кратного 10 у степені мінус *ndigits*; якщо два кратні "
 "однаково близькі, округлення виконується в бік парного вибору (тому, "
-"наприклад, як``round(0.5)``, так і ``round(-0.5)`` є ``0``, а ``round(1.5)``"
-" є ``2``). Будь-яке ціле значення є дійсним для *nцифр* (додатне, нульове "
-"або від’ємне). Повернене значення є цілим числом, якщо *ndigits* пропущено "
-"або ``None``. В іншому випадку значення, що повертається, має той самий тип,"
-" що й *число*."
+"наприклад, як ``round(0.5)``, так і ``round(-0.5)`` є ``0``, а "
+"``round(1.5)`` є ``2``). Будь-яке ціле значення є дійсним для *nцифр* "
+"(додатне, нульове або від’ємне). Повернене значення є цілим числом, якщо "
+"*ndigits* пропущено або ``None``. В іншому випадку значення, що "
+"повертається, має той самий тип, що й *число*."
 
 #: ../../library/functions.rst:1775
 msgid ""

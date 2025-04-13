@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-03-21 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:05+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -519,12 +519,13 @@ msgstr ""
 
 #: ../../library/exceptions.rst:338
 msgid ""
-"``NotImplementedError`` and :data:`NotImplemented` are not interchangeable, "
-"even though they have similar names and purposes.  See "
-":data:`!NotImplemented` for details on when to use it."
+":exc:`!NotImplementedError` and :data:`!NotImplemented` are not "
+"interchangeable. This exception should only be used as described above; see "
+":data:`NotImplemented` for details on correct usage of the built-in "
+"constant."
 msgstr ""
 
-#: ../../library/exceptions.rst:347
+#: ../../library/exceptions.rst:349
 msgid ""
 "This exception is raised when a system function returns a system-related "
 "error, including I/O failures such as \"file not found\" or \"disk full\" "
@@ -535,7 +536,7 @@ msgstr ""
 "заповнений\" (не для недопустимих типів аргументів або інших випадкових "
 "помилок)."
 
-#: ../../library/exceptions.rst:351
+#: ../../library/exceptions.rst:353
 msgid ""
 "The second form of the constructor sets the corresponding attributes, "
 "described below.  The attributes default to :const:`None` if not specified."
@@ -548,7 +549,7 @@ msgstr ""
 "сумісності, якщо передано три аргументи, атрибут :attr:`~BaseException.args`"
 " містить лише 2 кортежу з перших двох аргументів конструктора."
 
-#: ../../library/exceptions.rst:357
+#: ../../library/exceptions.rst:359
 msgid ""
 "The constructor often actually returns a subclass of :exc:`OSError`, as "
 "described in `OS exceptions`_ below.  The particular subclass depends on the"
@@ -562,11 +563,11 @@ msgstr ""
 " безпосередньо або через псевдонім і не успадковується під час створення "
 "підкласу."
 
-#: ../../library/exceptions.rst:365
+#: ../../library/exceptions.rst:367
 msgid "A numeric error code from the C variable :c:data:`errno`."
 msgstr "Числовий код помилки зі змінної C :c:data:`errno`."
 
-#: ../../library/exceptions.rst:369
+#: ../../library/exceptions.rst:371
 msgid ""
 "Under Windows, this gives you the native Windows error code.  The "
 ":attr:`.errno` attribute is then an approximate translation, in POSIX terms,"
@@ -575,7 +576,7 @@ msgstr ""
 "У Windows це дає вам рідний код помилки Windows. Тоді атрибут :attr:`.errno`"
 " є приблизним перекладом, у термінах POSIX, цього рідного коду помилки."
 
-#: ../../library/exceptions.rst:373
+#: ../../library/exceptions.rst:375
 msgid ""
 "Under Windows, if the *winerror* constructor argument is an integer, the "
 ":attr:`.errno` attribute is determined from the Windows error code, and the "
@@ -587,7 +588,7 @@ msgstr ""
 "ігнорується. На інших платформах аргумент *winerror* ігнорується, а атрибут "
 ":attr:`winerror` не існує."
 
-#: ../../library/exceptions.rst:381
+#: ../../library/exceptions.rst:383
 msgid ""
 "The corresponding error message, as provided by the operating system.  It is"
 " formatted by the C functions :c:func:`perror` under POSIX, and "
@@ -597,7 +598,7 @@ msgstr ""
 "відформатований функціями C :c:func:`perror` під POSIX і "
 ":c:func:`FormatMessage` під Windows."
 
-#: ../../library/exceptions.rst:389
+#: ../../library/exceptions.rst:391
 msgid ""
 "For exceptions that involve a file system path (such as :func:`open` or "
 ":func:`os.unlink`), :attr:`filename` is the file name passed to the "
@@ -611,7 +612,7 @@ msgstr ""
 "(наприклад, :func:`os.rename`), :attr:`filename2` відповідає другому імені "
 "файлу, переданому функції."
 
-#: ../../library/exceptions.rst:396
+#: ../../library/exceptions.rst:398
 msgid ""
 ":exc:`EnvironmentError`, :exc:`IOError`, :exc:`WindowsError`, "
 ":exc:`socket.error`, :exc:`select.error` and :exc:`mmap.error` have been "
@@ -621,7 +622,7 @@ msgstr ""
 ":exc:`socket.error`, :exc:`select.error` і :exc:`mmap.error` об’єднано у "
 ":exc:`OSError`, і конструктор може повернути підклас."
 
-#: ../../library/exceptions.rst:402
+#: ../../library/exceptions.rst:404
 msgid ""
 "The :attr:`filename` attribute is now the original file name passed to the "
 "function, instead of the name encoded to or decoded from the "
@@ -633,7 +634,7 @@ msgstr ""
 "encoding and error handler`. Також було додано аргумент і атрибут "
 "конструктора *filename2*."
 
-#: ../../library/exceptions.rst:411
+#: ../../library/exceptions.rst:413
 msgid ""
 "Raised when the result of an arithmetic operation is too large to be "
 "represented.  This cannot occur for integers (which would rather raise "
@@ -643,36 +644,36 @@ msgid ""
 "handling in C, most floating-point operations are not checked."
 msgstr ""
 
-#: ../../library/exceptions.rst:421
+#: ../../library/exceptions.rst:423
 msgid ""
 "This exception is derived from :exc:`RuntimeError`.  It is raised when an "
 "operation is blocked during interpreter shutdown also known as :term:`Python"
 " finalization <interpreter shutdown>`."
 msgstr ""
 
-#: ../../library/exceptions.rst:425
+#: ../../library/exceptions.rst:427
 msgid ""
 "Examples of operations which can be blocked with a "
 ":exc:`PythonFinalizationError` during the Python finalization:"
 msgstr ""
 
-#: ../../library/exceptions.rst:428
+#: ../../library/exceptions.rst:430
 msgid "Creating a new Python thread."
 msgstr ""
 
-#: ../../library/exceptions.rst:429
+#: ../../library/exceptions.rst:431
 msgid ":func:`os.fork`."
 msgstr ""
 
-#: ../../library/exceptions.rst:431
+#: ../../library/exceptions.rst:433
 msgid "See also the :func:`sys.is_finalizing` function."
 msgstr ""
 
-#: ../../library/exceptions.rst:433 ../../library/exceptions.rst:443
+#: ../../library/exceptions.rst:435 ../../library/exceptions.rst:445
 msgid "Previously, a plain :exc:`RuntimeError` was raised."
 msgstr "Раніше було викликано звичайне повідомлення :exc:`RuntimeError`."
 
-#: ../../library/exceptions.rst:439
+#: ../../library/exceptions.rst:441
 msgid ""
 "This exception is derived from :exc:`RuntimeError`.  It is raised when the "
 "interpreter detects that the maximum recursion depth (see "
@@ -682,7 +683,7 @@ msgstr ""
 "інтерпретатор виявляє, що максимальна глибина рекурсії (див. "
 ":func:`sys.getrecursionlimit`) перевищена."
 
-#: ../../library/exceptions.rst:449
+#: ../../library/exceptions.rst:451
 msgid ""
 "This exception is raised when a weak reference proxy, created by the "
 ":func:`weakref.proxy` function, is used to access an attribute of the "
@@ -694,7 +695,7 @@ msgstr ""
 "референта після його збирання сміття. Щоб дізнатися більше про слабкі "
 "посилання, перегляньте модуль :mod:`weakref`."
 
-#: ../../library/exceptions.rst:457
+#: ../../library/exceptions.rst:459
 msgid ""
 "Raised when an error is detected that doesn't fall in any of the other "
 "categories.  The associated value is a string indicating what precisely went"
@@ -703,7 +704,7 @@ msgstr ""
 "Викликається, коли виявлено помилку, яка не підпадає під жодну з інших "
 "категорій. Пов’язане значення — це рядок, який вказує, що саме пішло не так."
 
-#: ../../library/exceptions.rst:464
+#: ../../library/exceptions.rst:466
 msgid ""
 "Raised by built-in function :func:`next` and an :term:`iterator`\\'s "
 ":meth:`~iterator.__next__` method to signal that there are no further items "
@@ -713,14 +714,14 @@ msgstr ""
 " :meth:`~iterator.__next__`, щоб повідомити про те, що ітератор не створює "
 "жодних елементів."
 
-#: ../../library/exceptions.rst:470
+#: ../../library/exceptions.rst:472
 msgid ""
 "The exception object has a single attribute :attr:`!value`, which is given "
 "as an argument when constructing the exception, and defaults to "
 ":const:`None`."
 msgstr ""
 
-#: ../../library/exceptions.rst:474
+#: ../../library/exceptions.rst:476
 msgid ""
 "When a :term:`generator` or :term:`coroutine` function returns, a new "
 ":exc:`StopIteration` instance is raised, and the value returned by the "
@@ -732,7 +733,7 @@ msgstr ""
 "функцією, використовується як параметр :attr:`value` для конструктор "
 "винятку."
 
-#: ../../library/exceptions.rst:479
+#: ../../library/exceptions.rst:481
 msgid ""
 "If a generator code directly or indirectly raises :exc:`StopIteration`, it "
 "is converted into a :exc:`RuntimeError` (retaining the :exc:`StopIteration` "
@@ -742,7 +743,7 @@ msgstr ""
 "він перетворюється на :exc:`RuntimeError` (зберігаючи :exc:`StopIteration` "
 "як нову причину винятку)."
 
-#: ../../library/exceptions.rst:483
+#: ../../library/exceptions.rst:485
 msgid ""
 "Added ``value`` attribute and the ability for generator functions to use it "
 "to return a value."
@@ -750,7 +751,7 @@ msgstr ""
 "Додано атрибут ``value`` і можливість для функцій генератора використовувати"
 " його для повернення значення."
 
-#: ../../library/exceptions.rst:487
+#: ../../library/exceptions.rst:489
 msgid ""
 "Introduced the RuntimeError transformation via ``from __future__ import "
 "generator_stop``, see :pep:`479`."
@@ -758,7 +759,7 @@ msgstr ""
 "Представлено перетворення RuntimeError через ``from __future__ import "
 "generator_stop``, див. :pep:`479`."
 
-#: ../../library/exceptions.rst:491
+#: ../../library/exceptions.rst:493
 msgid ""
 "Enable :pep:`479` for all code by default: a :exc:`StopIteration` error "
 "raised in a generator is transformed into a :exc:`RuntimeError`."
@@ -767,13 +768,13 @@ msgstr ""
 ":exc:`StopIteration`, викликана генератором, перетворюється на "
 ":exc:`RuntimeError`."
 
-#: ../../library/exceptions.rst:497
+#: ../../library/exceptions.rst:499
 msgid ""
 "Must be raised by :meth:`~object.__anext__` method of an :term:`asynchronous"
 " iterator` object to stop the iteration."
 msgstr ""
 
-#: ../../library/exceptions.rst:504
+#: ../../library/exceptions.rst:506
 msgid ""
 "Raised when the parser encounters a syntax error.  This may occur in an "
 ":keyword:`import` statement, in a call to the built-in functions "
@@ -785,7 +786,7 @@ msgstr ""
 ":func:`compile`, :func:`exec` або :func:`eval`, або під час читання "
 "початкового сценарію або стандартний ввід (також інтерактивно)."
 
-#: ../../library/exceptions.rst:510
+#: ../../library/exceptions.rst:512
 msgid ""
 "The :func:`str` of the exception instance returns only the error message. "
 "Details is a tuple whose members are also available as separate attributes."
@@ -793,11 +794,11 @@ msgstr ""
 ":func:`str` екземпляра винятку повертає лише повідомлення про помилку. "
 "Деталі — це кортеж, члени якого також доступні як окремі атрибути."
 
-#: ../../library/exceptions.rst:515
+#: ../../library/exceptions.rst:517
 msgid "The name of the file the syntax error occurred in."
 msgstr "Назва файлу, у якому сталася синтаксична помилка."
 
-#: ../../library/exceptions.rst:519
+#: ../../library/exceptions.rst:521
 msgid ""
 "Which line number in the file the error occurred in. This is 1-indexed: the "
 "first line in the file has a ``lineno`` of 1."
@@ -805,7 +806,7 @@ msgstr ""
 "У якому номері рядка у файлі сталася помилка. Це індексовано 1: перший рядок"
 " у файлі має ``lineno`` 1."
 
-#: ../../library/exceptions.rst:524
+#: ../../library/exceptions.rst:526
 msgid ""
 "The column in the line where the error occurred. This is 1-indexed: the "
 "first character in the line has an ``offset`` of 1."
@@ -813,11 +814,11 @@ msgstr ""
 "Стовпець у рядку, де сталася помилка. Це індексується 1: перший символ у "
 "рядку має ``зміщення`` 1."
 
-#: ../../library/exceptions.rst:529
+#: ../../library/exceptions.rst:531
 msgid "The source code text involved in the error."
 msgstr "Текст вихідного коду, пов’язаний з помилкою."
 
-#: ../../library/exceptions.rst:533
+#: ../../library/exceptions.rst:535
 msgid ""
 "Which line number in the file the error occurred ends in. This is 1-indexed:"
 " the first line in the file has a ``lineno`` of 1."
@@ -825,7 +826,7 @@ msgstr ""
 "На якому номері рядка у файлі закінчується помилка. Це індексовано 1: перший"
 " рядок у файлі має ``lineno`` 1."
 
-#: ../../library/exceptions.rst:538
+#: ../../library/exceptions.rst:540
 msgid ""
 "The column in the end line where the error occurred finishes. This is "
 "1-indexed: the first character in the line has an ``offset`` of 1."
@@ -833,7 +834,7 @@ msgstr ""
 "Стовпець у кінцевому рядку, де сталася помилка, завершується. Це "
 "індексується 1: перший символ у рядку має ``зміщення`` 1."
 
-#: ../../library/exceptions.rst:541
+#: ../../library/exceptions.rst:543
 msgid ""
 "For errors in f-string fields, the message is prefixed by \"f-string: \" and"
 " the offsets are offsets in a text constructed from the replacement "
@@ -845,11 +846,11 @@ msgstr ""
 "{a b} field' призводить до такого атрибута args: ('f-string: ...', ('', 1, "
 "2, '(a b)\\n', 1, 5)) ."
 
-#: ../../library/exceptions.rst:546
+#: ../../library/exceptions.rst:548
 msgid "Added the :attr:`end_lineno` and :attr:`end_offset` attributes."
 msgstr "Додано атрибути :attr:`end_lineno` і :attr:`end_offset`."
 
-#: ../../library/exceptions.rst:551
+#: ../../library/exceptions.rst:553
 msgid ""
 "Base class for syntax errors related to incorrect indentation.  This is a "
 "subclass of :exc:`SyntaxError`."
@@ -857,7 +858,7 @@ msgstr ""
 "Базовий клас для синтаксичних помилок, пов’язаних із неправильним відступом."
 " Це підклас :exc:`SyntaxError`."
 
-#: ../../library/exceptions.rst:557
+#: ../../library/exceptions.rst:559
 msgid ""
 "Raised when indentation contains an inconsistent use of tabs and spaces. "
 "This is a subclass of :exc:`IndentationError`."
@@ -865,32 +866,27 @@ msgstr ""
 "Піднімається, коли відступ містить непослідовне використання табуляції та "
 "пробілів. Це підклас :exc:`IndentationError`."
 
-#: ../../library/exceptions.rst:563
+#: ../../library/exceptions.rst:565
 msgid ""
 "Raised when the interpreter finds an internal error, but the situation does "
 "not look so serious to cause it to abandon all hope. The associated value is"
-" a string indicating what went wrong (in low-level terms)."
+" a string indicating what went wrong (in low-level terms). In "
+":term:`CPython`, this could be raised by incorrectly using Python's C API, "
+"such as returning a ``NULL`` value without an exception set."
 msgstr ""
-"Виникає, коли перекладач виявляє внутрішню помилку, але ситуація не виглядає"
-" настільки серйозною, щоб змусити його втратити будь-яку надію. Пов’язане "
-"значення — це рядок, що вказує на те, що пішло не так (у термінах низького "
-"рівня)."
 
-#: ../../library/exceptions.rst:567
+#: ../../library/exceptions.rst:571
 msgid ""
-"You should report this to the author or maintainer of your Python "
-"interpreter. Be sure to report the version of the Python interpreter "
-"(``sys.version``; it is also printed at the start of an interactive Python "
-"session), the exact error message (the exception's associated value) and if "
-"possible the source of the program that triggered the error."
+"If you're confident that this exception wasn't your fault, or the fault of a"
+" package you're using, you should report this to the author or maintainer of"
+" your Python interpreter. Be sure to report the version of the Python "
+"interpreter (``sys.version``; it is also printed at the start of an "
+"interactive Python session), the exact error message (the exception's "
+"associated value) and if possible the source of the program that triggered "
+"the error."
 msgstr ""
-"Ви повинні повідомити про це автора або супроводжуючого вашого "
-"інтерпретатора Python. Обов’язково повідомте версію інтерпретатора Python "
-"(``sys.version``; вона також друкується на початку інтерактивного сеансу "
-"Python), точне повідомлення про помилку (пов’язане значення винятку) і, якщо"
-" можливо, джерело програма, яка викликала помилку."
 
-#: ../../library/exceptions.rst:576
+#: ../../library/exceptions.rst:582
 msgid ""
 "This exception is raised by the :func:`sys.exit` function.  It inherits from"
 " :exc:`BaseException` instead of :exc:`Exception` so that it is not "
@@ -914,7 +910,7 @@ msgstr ""
 "значення ``None``, статус виходу дорівнює нулю; якщо він має інший тип "
 "(наприклад, рядок), значення об’єкта друкується, а статус виходу один."
 
-#: ../../library/exceptions.rst:587
+#: ../../library/exceptions.rst:593
 msgid ""
 "A call to :func:`sys.exit` is translated into an exception so that clean-up "
 "handlers (:keyword:`finally` clauses of :keyword:`try` statements) can be "
@@ -930,7 +926,7 @@ msgstr ""
 "необхідність негайного виходу (наприклад, у дочірньому процесі після виклику"
 " :func:`os.fork`)."
 
-#: ../../library/exceptions.rst:596
+#: ../../library/exceptions.rst:602
 msgid ""
 "The exit status or error message that is passed to the constructor. "
 "(Defaults to ``None``.)"
@@ -938,7 +934,7 @@ msgstr ""
 "Статус виходу або повідомлення про помилку, яке передається конструктору. "
 "(За замовчуванням ``None``.)"
 
-#: ../../library/exceptions.rst:602
+#: ../../library/exceptions.rst:608
 msgid ""
 "Raised when an operation or function is applied to an object of "
 "inappropriate type.  The associated value is a string giving details about "
@@ -948,7 +944,7 @@ msgstr ""
 "невідповідного типу. Пов’язане значення — це рядок, що містить відомості про"
 " невідповідність типу."
 
-#: ../../library/exceptions.rst:605
+#: ../../library/exceptions.rst:611
 msgid ""
 "This exception may be raised by user code to indicate that an attempted "
 "operation on an object is not supported, and is not meant to be. If an "
@@ -960,7 +956,7 @@ msgstr ""
 "призначений для підтримки даної операції, але ще не надав реалізацію, "
 ":exc:`NotImplementedError` є правильним винятком для виклику."
 
-#: ../../library/exceptions.rst:610
+#: ../../library/exceptions.rst:616
 msgid ""
 "Passing arguments of the wrong type (e.g. passing a :class:`list` when an "
 ":class:`int` is expected) should result in a :exc:`TypeError`, but passing "
@@ -972,7 +968,7 @@ msgstr ""
 "передача аргументів із неправильним значенням (наприклад, число за межами "
 "очікувані межі) має призвести до :exc:`ValueError`."
 
-#: ../../library/exceptions.rst:617
+#: ../../library/exceptions.rst:623
 msgid ""
 "Raised when a reference is made to a local variable in a function or method,"
 " but no value has been bound to that variable.  This is a subclass of "
@@ -982,7 +978,7 @@ msgstr ""
 "методі, але жодне значення не прив’язано до цієї змінної. Це підклас "
 ":exc:`NameError`."
 
-#: ../../library/exceptions.rst:624
+#: ../../library/exceptions.rst:630
 msgid ""
 "Raised when a Unicode-related encoding or decoding error occurs.  It is a "
 "subclass of :exc:`ValueError`."
@@ -990,7 +986,7 @@ msgstr ""
 "Викликається, коли виникає помилка кодування чи декодування, пов’язана з "
 "Unicode. Це підклас :exc:`ValueError`."
 
-#: ../../library/exceptions.rst:627
+#: ../../library/exceptions.rst:633
 msgid ""
 ":exc:`UnicodeError` has attributes that describe the encoding or decoding "
 "error.  For example, ``err.object[err.start:err.end]`` gives the particular "
@@ -1000,27 +996,27 @@ msgstr ""
 "декодування. Наприклад, ``err.object[err.start:err.end]`` вказує на певний "
 "недійсний вхід, який не вдалося виконати кодеку."
 
-#: ../../library/exceptions.rst:633
+#: ../../library/exceptions.rst:639
 msgid "The name of the encoding that raised the error."
 msgstr "Назва кодування, яке викликало помилку."
 
-#: ../../library/exceptions.rst:637
+#: ../../library/exceptions.rst:643
 msgid "A string describing the specific codec error."
 msgstr "Рядок, що описує певну помилку кодека."
 
-#: ../../library/exceptions.rst:641
+#: ../../library/exceptions.rst:647
 msgid "The object the codec was attempting to encode or decode."
 msgstr "Об’єкт, який кодек намагався закодувати або декодувати."
 
-#: ../../library/exceptions.rst:645
+#: ../../library/exceptions.rst:651
 msgid "The first index of invalid data in :attr:`object`."
 msgstr "Перший індекс недійсних даних в :attr:`object`."
 
-#: ../../library/exceptions.rst:649
+#: ../../library/exceptions.rst:655
 msgid "The index after the last invalid data in :attr:`object`."
 msgstr "Індекс після останніх недійсних даних у :attr:`object`."
 
-#: ../../library/exceptions.rst:654
+#: ../../library/exceptions.rst:660
 msgid ""
 "Raised when a Unicode-related error occurs during encoding.  It is a "
 "subclass of :exc:`UnicodeError`."
@@ -1028,7 +1024,7 @@ msgstr ""
 "Викликається, коли під час кодування виникає помилка, пов’язана з Unicode. "
 "Це підклас :exc:`UnicodeError`."
 
-#: ../../library/exceptions.rst:660
+#: ../../library/exceptions.rst:666
 msgid ""
 "Raised when a Unicode-related error occurs during decoding.  It is a "
 "subclass of :exc:`UnicodeError`."
@@ -1036,7 +1032,7 @@ msgstr ""
 "Викликається, коли під час декодування виникає помилка, пов’язана з Unicode."
 " Це підклас :exc:`UnicodeError`."
 
-#: ../../library/exceptions.rst:666
+#: ../../library/exceptions.rst:672
 msgid ""
 "Raised when a Unicode-related error occurs during translating.  It is a "
 "subclass of :exc:`UnicodeError`."
@@ -1044,7 +1040,7 @@ msgstr ""
 "Викликається, коли під час перекладу виникає помилка, пов’язана з Unicode. "
 "Це підклас :exc:`UnicodeError`."
 
-#: ../../library/exceptions.rst:672
+#: ../../library/exceptions.rst:678
 msgid ""
 "Raised when an operation or function receives an argument that has the right"
 " type but an inappropriate value, and the situation is not described by a "
@@ -1054,7 +1050,7 @@ msgstr ""
 "правильний тип, але невідповідне значення, і ситуація не описується більш "
 "точним винятком, таким як :exc:`IndexError`."
 
-#: ../../library/exceptions.rst:679
+#: ../../library/exceptions.rst:685
 msgid ""
 "Raised when the second argument of a division or modulo operation is zero.  "
 "The associated value is a string indicating the type of the operands and the"
@@ -1063,7 +1059,7 @@ msgstr ""
 "Викликається, коли другий аргумент операції ділення або модуля дорівнює "
 "нулю. Пов’язане значення — це рядок, що вказує тип операндів і операції."
 
-#: ../../library/exceptions.rst:684
+#: ../../library/exceptions.rst:690
 msgid ""
 "The following exceptions are kept for compatibility with previous versions; "
 "starting from Python 3.3, they are aliases of :exc:`OSError`."
@@ -1071,15 +1067,15 @@ msgstr ""
 "Наступні винятки зберігаються для сумісності з попередніми версіями; "
 "починаючи з Python 3.3, вони є псевдонімами :exc:`OSError`."
 
-#: ../../library/exceptions.rst:693
+#: ../../library/exceptions.rst:699
 msgid "Only available on Windows."
 msgstr "Доступно лише для Windows."
 
-#: ../../library/exceptions.rst:697
+#: ../../library/exceptions.rst:703
 msgid "OS exceptions"
 msgstr "Винятки ОС"
 
-#: ../../library/exceptions.rst:699
+#: ../../library/exceptions.rst:705
 msgid ""
 "The following exceptions are subclasses of :exc:`OSError`, they get raised "
 "depending on the system error code."
@@ -1087,7 +1083,7 @@ msgstr ""
 "Наступні винятки є підкласами :exc:`OSError`, вони виникають залежно від "
 "коду системної помилки."
 
-#: ../../library/exceptions.rst:704
+#: ../../library/exceptions.rst:710
 msgid ""
 "Raised when an operation would block on an object (e.g. socket) set for non-"
 "blocking operation. Corresponds to :c:data:`errno` "
@@ -1095,7 +1091,7 @@ msgid ""
 ":py:const:`~errno.EWOULDBLOCK` and :py:const:`~errno.EINPROGRESS`."
 msgstr ""
 
-#: ../../library/exceptions.rst:709
+#: ../../library/exceptions.rst:715
 msgid ""
 "In addition to those of :exc:`OSError`, :exc:`BlockingIOError` can have one "
 "more attribute:"
@@ -1103,7 +1099,7 @@ msgstr ""
 "Окрім атрибутів :exc:`OSError`, :exc:`BlockingIOError` може мати ще один "
 "атрибут:"
 
-#: ../../library/exceptions.rst:714
+#: ../../library/exceptions.rst:720
 msgid ""
 "An integer containing the number of characters written to the stream before "
 "it blocked.  This attribute is available when using the buffered I/O classes"
@@ -1113,17 +1109,17 @@ msgstr ""
 "блокуванням. Цей атрибут доступний під час використання буферизованих класів"
 " введення-виведення з модуля :mod:`io`."
 
-#: ../../library/exceptions.rst:720
+#: ../../library/exceptions.rst:726
 msgid ""
 "Raised when an operation on a child process failed. Corresponds to "
 ":c:data:`errno` :py:const:`~errno.ECHILD`."
 msgstr ""
 
-#: ../../library/exceptions.rst:725
+#: ../../library/exceptions.rst:731
 msgid "A base class for connection-related issues."
 msgstr "Базовий клас для проблем, пов’язаних із з’єднанням."
 
-#: ../../library/exceptions.rst:727
+#: ../../library/exceptions.rst:733
 msgid ""
 "Subclasses are :exc:`BrokenPipeError`, :exc:`ConnectionAbortedError`, "
 ":exc:`ConnectionRefusedError` and :exc:`ConnectionResetError`."
@@ -1131,7 +1127,7 @@ msgstr ""
 "Підкласами є :exc:`BrokenPipeError`, :exc:`ConnectionAbortedError`, "
 ":exc:`ConnectionRefusedError` і :exc:`ConnectionResetError`."
 
-#: ../../library/exceptions.rst:732
+#: ../../library/exceptions.rst:738
 msgid ""
 "A subclass of :exc:`ConnectionError`, raised when trying to write on a pipe "
 "while the other end has been closed, or trying to write on a socket which "
@@ -1139,45 +1135,45 @@ msgid ""
 ":py:const:`~errno.EPIPE` and :py:const:`~errno.ESHUTDOWN`."
 msgstr ""
 
-#: ../../library/exceptions.rst:739
+#: ../../library/exceptions.rst:745
 msgid ""
 "A subclass of :exc:`ConnectionError`, raised when a connection attempt is "
 "aborted by the peer. Corresponds to :c:data:`errno` "
 ":py:const:`~errno.ECONNABORTED`."
 msgstr ""
 
-#: ../../library/exceptions.rst:745
+#: ../../library/exceptions.rst:751
 msgid ""
 "A subclass of :exc:`ConnectionError`, raised when a connection attempt is "
 "refused by the peer. Corresponds to :c:data:`errno` "
 ":py:const:`~errno.ECONNREFUSED`."
 msgstr ""
 
-#: ../../library/exceptions.rst:751
+#: ../../library/exceptions.rst:757
 msgid ""
 "A subclass of :exc:`ConnectionError`, raised when a connection is reset by "
 "the peer. Corresponds to :c:data:`errno` :py:const:`~errno.ECONNRESET`."
 msgstr ""
 
-#: ../../library/exceptions.rst:757
+#: ../../library/exceptions.rst:763
 msgid ""
 "Raised when trying to create a file or directory which already exists. "
 "Corresponds to :c:data:`errno` :py:const:`~errno.EEXIST`."
 msgstr ""
 
-#: ../../library/exceptions.rst:762
+#: ../../library/exceptions.rst:768
 msgid ""
 "Raised when a file or directory is requested but doesn't exist. Corresponds "
 "to :c:data:`errno` :py:const:`~errno.ENOENT`."
 msgstr ""
 
-#: ../../library/exceptions.rst:767
+#: ../../library/exceptions.rst:773
 msgid ""
 "Raised when a system call is interrupted by an incoming signal. Corresponds "
 "to :c:data:`errno` :py:const:`~errno.EINTR`."
 msgstr ""
 
-#: ../../library/exceptions.rst:770
+#: ../../library/exceptions.rst:776
 msgid ""
 "Python now retries system calls when a syscall is interrupted by a signal, "
 "except if the signal handler raises an exception (see :pep:`475` for the "
@@ -1188,13 +1184,13 @@ msgstr ""
 "(обґрунтування див. :pep:`475`), замість того, щоб викликати "
 ":exc:`InterruptedError`."
 
-#: ../../library/exceptions.rst:777
+#: ../../library/exceptions.rst:783
 msgid ""
 "Raised when a file operation (such as :func:`os.remove`) is requested on a "
 "directory. Corresponds to :c:data:`errno` :py:const:`~errno.EISDIR`."
 msgstr ""
 
-#: ../../library/exceptions.rst:783
+#: ../../library/exceptions.rst:789
 msgid ""
 "Raised when a directory operation (such as :func:`os.listdir`) is requested "
 "on something which is not a directory.  On most POSIX platforms, it may also"
@@ -1203,7 +1199,7 @@ msgid ""
 ":py:const:`~errno.ENOTDIR`."
 msgstr ""
 
-#: ../../library/exceptions.rst:791
+#: ../../library/exceptions.rst:797
 msgid ""
 "Raised when trying to run an operation without the adequate access rights - "
 "for example filesystem permissions. Corresponds to :c:data:`errno` "
@@ -1211,37 +1207,37 @@ msgid ""
 ":py:const:`~errno.ENOTCAPABLE`."
 msgstr ""
 
-#: ../../library/exceptions.rst:796
+#: ../../library/exceptions.rst:802
 msgid ""
 "WASI's :py:const:`~errno.ENOTCAPABLE` is now mapped to "
 ":exc:`PermissionError`."
 msgstr ""
 
-#: ../../library/exceptions.rst:802
+#: ../../library/exceptions.rst:808
 msgid ""
 "Raised when a given process doesn't exist. Corresponds to :c:data:`errno` "
 ":py:const:`~errno.ESRCH`."
 msgstr ""
 
-#: ../../library/exceptions.rst:807
+#: ../../library/exceptions.rst:813
 msgid ""
 "Raised when a system function timed out at the system level. Corresponds to "
 ":c:data:`errno` :py:const:`~errno.ETIMEDOUT`."
 msgstr ""
 
-#: ../../library/exceptions.rst:810
+#: ../../library/exceptions.rst:816
 msgid "All the above :exc:`OSError` subclasses were added."
 msgstr "Було додано всі наведені вище підкласи :exc:`OSError`."
 
-#: ../../library/exceptions.rst:816
+#: ../../library/exceptions.rst:822
 msgid ":pep:`3151` - Reworking the OS and IO exception hierarchy"
 msgstr ":pep:`3151` - Переробка ієрархії винятків ОС та вводу-виводу"
 
-#: ../../library/exceptions.rst:822
+#: ../../library/exceptions.rst:828
 msgid "Warnings"
 msgstr "Попередження"
 
-#: ../../library/exceptions.rst:824
+#: ../../library/exceptions.rst:830
 msgid ""
 "The following exceptions are used as warning categories; see the "
 ":ref:`warning-categories` documentation for more details."
@@ -1249,15 +1245,15 @@ msgstr ""
 "Наступні винятки використовуються як категорії попереджень; подробиці "
 "дивіться в документації :ref:`warning-categories`."
 
-#: ../../library/exceptions.rst:829
+#: ../../library/exceptions.rst:835
 msgid "Base class for warning categories."
 msgstr "Базовий клас для категорій попереджень."
 
-#: ../../library/exceptions.rst:834
+#: ../../library/exceptions.rst:840
 msgid "Base class for warnings generated by user code."
 msgstr "Базовий клас для попереджень, створених кодом користувача."
 
-#: ../../library/exceptions.rst:839
+#: ../../library/exceptions.rst:845
 msgid ""
 "Base class for warnings about deprecated features when those warnings are "
 "intended for other Python developers."
@@ -1265,7 +1261,7 @@ msgstr ""
 "Базовий клас для попереджень про застарілі функції, якщо ці попередження "
 "призначені для інших розробників Python."
 
-#: ../../library/exceptions.rst:842
+#: ../../library/exceptions.rst:848
 msgid ""
 "Ignored by the default warning filters, except in the ``__main__`` module "
 "(:pep:`565`). Enabling the :ref:`Python Development Mode <devmode>` shows "
@@ -1275,11 +1271,11 @@ msgstr ""
 "(:pep:`565`). Увімкнення режиму :ref:`Python Development Mode <devmode>` "
 "показує це попередження."
 
-#: ../../library/exceptions.rst:846 ../../library/exceptions.rst:862
+#: ../../library/exceptions.rst:852 ../../library/exceptions.rst:868
 msgid "The deprecation policy is described in :pep:`387`."
 msgstr "Політика припинення підтримки описана в :pep:`387`."
 
-#: ../../library/exceptions.rst:851
+#: ../../library/exceptions.rst:857
 msgid ""
 "Base class for warnings about features which are obsolete and expected to be"
 " deprecated in the future, but are not deprecated at the moment."
@@ -1287,7 +1283,7 @@ msgstr ""
 "Базовий клас для попереджень про функції, які є застарілими та які, як "
 "очікується, будуть застарілими в майбутньому, але наразі не застаріли."
 
-#: ../../library/exceptions.rst:855
+#: ../../library/exceptions.rst:861
 msgid ""
 "This class is rarely used as emitting a warning about a possible upcoming "
 "deprecation is unusual, and :exc:`DeprecationWarning` is preferred for "
@@ -1297,8 +1293,8 @@ msgstr ""
 "можливе припинення підтримки є незвичним, а :exc:`DeprecationWarning` є "
 "кращим для вже активних застарілих функцій."
 
-#: ../../library/exceptions.rst:859 ../../library/exceptions.rst:885
-#: ../../library/exceptions.rst:912
+#: ../../library/exceptions.rst:865 ../../library/exceptions.rst:891
+#: ../../library/exceptions.rst:918
 msgid ""
 "Ignored by the default warning filters. Enabling the :ref:`Python "
 "Development Mode <devmode>` shows this warning."
@@ -1306,16 +1302,16 @@ msgstr ""
 "Ігнорується стандартними фільтрами попереджень. Увімкнення режиму "
 ":ref:`Python Development Mode <devmode>` показує це попередження."
 
-#: ../../library/exceptions.rst:867
+#: ../../library/exceptions.rst:873
 msgid "Base class for warnings about dubious syntax."
 msgstr "Базовий клас для попереджень про сумнівний синтаксис."
 
-#: ../../library/exceptions.rst:872
+#: ../../library/exceptions.rst:878
 msgid "Base class for warnings about dubious runtime behavior."
 msgstr ""
 "Базовий клас для попереджень про сумнівну поведінку під час виконання."
 
-#: ../../library/exceptions.rst:877
+#: ../../library/exceptions.rst:883
 msgid ""
 "Base class for warnings about deprecated features when those warnings are "
 "intended for end users of applications that are written in Python."
@@ -1323,38 +1319,38 @@ msgstr ""
 "Базовий клас для попереджень про застарілі функції, якщо ці попередження "
 "призначені для кінцевих користувачів програм, написаних на Python."
 
-#: ../../library/exceptions.rst:883
+#: ../../library/exceptions.rst:889
 msgid "Base class for warnings about probable mistakes in module imports."
 msgstr "Базовий клас для попереджень про можливі помилки при імпорті модуля."
 
-#: ../../library/exceptions.rst:891
+#: ../../library/exceptions.rst:897
 msgid "Base class for warnings related to Unicode."
 msgstr "Базовий клас для попереджень, пов’язаних із Unicode."
 
-#: ../../library/exceptions.rst:896
+#: ../../library/exceptions.rst:902
 msgid "Base class for warnings related to encodings."
 msgstr "Базовий клас для попереджень щодо кодувань."
 
-#: ../../library/exceptions.rst:898
+#: ../../library/exceptions.rst:904
 msgid "See :ref:`io-encoding-warning` for details."
 msgstr "Дивіться :ref:`io-encoding-warning` для деталей."
 
-#: ../../library/exceptions.rst:905
+#: ../../library/exceptions.rst:911
 msgid ""
 "Base class for warnings related to :class:`bytes` and :class:`bytearray`."
 msgstr ""
 "Базовий клас для попереджень, пов’язаних із :class:`bytes` і "
 ":class:`bytearray`."
 
-#: ../../library/exceptions.rst:910
+#: ../../library/exceptions.rst:916
 msgid "Base class for warnings related to resource usage."
 msgstr "Базовий клас для попереджень щодо використання ресурсів."
 
-#: ../../library/exceptions.rst:921
+#: ../../library/exceptions.rst:927
 msgid "Exception groups"
 msgstr ""
 
-#: ../../library/exceptions.rst:923
+#: ../../library/exceptions.rst:929
 msgid ""
 "The following are used when it is necessary to raise multiple unrelated "
 "exceptions. They are part of the exception hierarchy so they can be handled "
@@ -1363,7 +1359,7 @@ msgid ""
 " based on the types of the contained exceptions."
 msgstr ""
 
-#: ../../library/exceptions.rst:932
+#: ../../library/exceptions.rst:938
 msgid ""
 "Both of these exception types wrap the exceptions in the sequence ``excs``. "
 "The ``msg`` parameter must be a string. The difference between the two "
@@ -1374,7 +1370,7 @@ msgid ""
 "not :exc:`BaseExceptionGroup`."
 msgstr ""
 
-#: ../../library/exceptions.rst:940
+#: ../../library/exceptions.rst:946
 msgid ""
 "The :exc:`BaseExceptionGroup` constructor returns an :exc:`ExceptionGroup` "
 "rather than a :exc:`BaseExceptionGroup` if all contained exceptions are "
@@ -1384,24 +1380,24 @@ msgid ""
 "subclass."
 msgstr ""
 
-#: ../../library/exceptions.rst:949
+#: ../../library/exceptions.rst:955
 msgid ""
 "The ``msg`` argument to the constructor. This is a read-only attribute."
 msgstr ""
 
-#: ../../library/exceptions.rst:953
+#: ../../library/exceptions.rst:959
 msgid ""
 "A tuple of the exceptions in the ``excs`` sequence given to the constructor."
 " This is a read-only attribute."
 msgstr ""
 
-#: ../../library/exceptions.rst:958
+#: ../../library/exceptions.rst:964
 msgid ""
 "Returns an exception group that contains only the exceptions from the "
 "current group that match *condition*, or ``None`` if the result is empty."
 msgstr ""
 
-#: ../../library/exceptions.rst:961
+#: ../../library/exceptions.rst:967
 msgid ""
 "The condition can be an exception type or tuple of exception types, in which"
 " case each exception is checked for a match using the same check that is "
@@ -1410,7 +1406,7 @@ msgid ""
 "returns true for the exceptions that should be in the subgroup."
 msgstr ""
 
-#: ../../library/exceptions.rst:967
+#: ../../library/exceptions.rst:973
 msgid ""
 "The nesting structure of the current exception is preserved in the result, "
 "as are the values of its :attr:`message`, "
@@ -1419,31 +1415,31 @@ msgid ""
 "fields. Empty nested groups are omitted from the result."
 msgstr ""
 
-#: ../../library/exceptions.rst:974
+#: ../../library/exceptions.rst:980
 msgid ""
 "The condition is checked for all exceptions in the nested exception group, "
 "including the top-level and any nested exception groups. If the condition is"
 " true for such an exception group, it is included in the result in full."
 msgstr ""
 
-#: ../../library/exceptions.rst:978
+#: ../../library/exceptions.rst:984
 msgid "``condition`` can be any callable which is not a type object."
 msgstr ""
 
-#: ../../library/exceptions.rst:983
+#: ../../library/exceptions.rst:989
 msgid ""
 "Like :meth:`subgroup`, but returns the pair ``(match, rest)`` where "
 "``match`` is ``subgroup(condition)`` and ``rest`` is the remaining non-"
 "matching part."
 msgstr ""
 
-#: ../../library/exceptions.rst:989
+#: ../../library/exceptions.rst:995
 msgid ""
 "Returns an exception group with the same :attr:`message`, but which wraps "
 "the exceptions in ``excs``."
 msgstr ""
 
-#: ../../library/exceptions.rst:992
+#: ../../library/exceptions.rst:998
 msgid ""
 "This method is used by :meth:`subgroup` and :meth:`split`, which are used in"
 " various contexts to break up an exception group. A subclass needs to "
@@ -1451,7 +1447,7 @@ msgid ""
 "instances of the subclass rather than :exc:`ExceptionGroup`."
 msgstr ""
 
-#: ../../library/exceptions.rst:998
+#: ../../library/exceptions.rst:1004
 msgid ""
 ":meth:`subgroup` and :meth:`split` copy the "
 ":attr:`~BaseException.__traceback__`, :attr:`~BaseException.__cause__`, "
@@ -1460,7 +1456,7 @@ msgid ""
 ":meth:`derive`, so these fields do not need to be updated by :meth:`derive`."
 msgstr ""
 
-#: ../../library/exceptions.rst:1005
+#: ../../library/exceptions.rst:1011
 msgid ""
 ">>> class MyGroup(ExceptionGroup):\n"
 "...     def derive(self, excs):\n"
@@ -1486,7 +1482,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: ../../library/exceptions.rst:1031
+#: ../../library/exceptions.rst:1037
 msgid ""
 "Note that :exc:`BaseExceptionGroup` defines :meth:`~object.__new__`, so "
 "subclasses that need a different constructor signature need to override that"
@@ -1495,7 +1491,7 @@ msgid ""
 "group's message from it. ::"
 msgstr ""
 
-#: ../../library/exceptions.rst:1037
+#: ../../library/exceptions.rst:1043
 msgid ""
 "class Errors(ExceptionGroup):\n"
 "   def __new__(cls, errors, exit_code):\n"
@@ -1507,22 +1503,22 @@ msgid ""
 "      return Errors(excs, self.exit_code)"
 msgstr ""
 
-#: ../../library/exceptions.rst:1046
+#: ../../library/exceptions.rst:1052
 msgid ""
 "Like :exc:`ExceptionGroup`, any subclass of :exc:`BaseExceptionGroup` which "
 "is also a subclass of :exc:`Exception` can only wrap instances of "
 ":exc:`Exception`."
 msgstr ""
 
-#: ../../library/exceptions.rst:1054
+#: ../../library/exceptions.rst:1060
 msgid "Exception hierarchy"
 msgstr "Ієрархія винятків"
 
-#: ../../library/exceptions.rst:1056
+#: ../../library/exceptions.rst:1062
 msgid "The class hierarchy for built-in exceptions is:"
 msgstr "Ієрархія класів для вбудованих винятків така:"
 
-#: ../../library/exceptions.rst:1058
+#: ../../library/exceptions.rst:1064
 msgid ""
 "BaseException\n"
 " ├── BaseExceptionGroup\n"
@@ -1635,10 +1631,10 @@ msgstr ""
 msgid "assert"
 msgstr ""
 
-#: ../../library/exceptions.rst:345
+#: ../../library/exceptions.rst:347
 msgid "module"
 msgstr "модуль"
 
-#: ../../library/exceptions.rst:345
+#: ../../library/exceptions.rst:347
 msgid "errno"
 msgstr ""

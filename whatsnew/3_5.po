@@ -1,19 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Dmytro Kazanzhy, 2022
+# Dmytro Kazanzhy, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-04-11 14:19+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Last-Translator: Dmytro Kazanzhy, 2025\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2848,8 +2848,8 @@ msgid ""
 msgstr ""
 "Нові методи :meth:`Path.write_text() <pathlib.Path.write_text>`, "
 ":meth:`Path.read_text() <pathlib.Path.read_text>`, :meth:`Path.write_bytes()"
-" <pathlib.Path.write_bytes>`, :meth:`Path.read_bytes()` для спрощення "
-"операцій читання/запису файлів."
+" <pathlib.Path.write_bytes>`, :meth:`Path.read_bytes() "
+"<pathlib.Path.read_bytes>` для спрощення операцій з читання/запису файлів."
 
 #: ../../whatsnew/3.5.rst:1555
 msgid ""

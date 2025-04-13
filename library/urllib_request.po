@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-03-28 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:17+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -292,27 +292,37 @@ msgstr ""
 
 #: ../../library/urllib.request.rst:152
 msgid ""
-"Convert the pathname *path* from the local syntax for a path to the form "
-"used in the path component of a URL.  This does not produce a complete URL."
-"  The return value will already be quoted using the "
-":func:`~urllib.parse.quote` function."
+"Convert the given local path to a ``file:`` URL. This function uses "
+":func:`~urllib.parse.quote` function to encode the path. For historical "
+"reasons, the return value omits the ``file:`` scheme prefix. This example "
+"shows the function being used on Windows::"
 msgstr ""
-"Перетворіть назву шляху *path* із локального синтаксису шляху на форму, яка "
-"використовується в компоненті шляху URL-адреси. Це не створює повну URL-"
-"адресу. Повернене значення вже буде взято в лапки за допомогою функції "
-":func:`~urllib.parse.quote`."
 
-#: ../../library/urllib.request.rst:159
+#: ../../library/urllib.request.rst:157
 msgid ""
-"Convert the path component *path* from a percent-encoded URL to the local "
-"syntax for a path.  This does not accept a complete URL.  This function uses"
-" :func:`~urllib.parse.unquote` to decode *path*."
+">>> from urllib.request import pathname2url\n"
+">>> path = 'C:\\\\Program Files'\n"
+">>> 'file:' + pathname2url(path)\n"
+"'file:///C:/Program%20Files'"
 msgstr ""
-"Перетворіть компонент шляху *path* із URL-адреси у відсотковому кодуванні на"
-" локальний синтаксис для шляху. Це не приймає повну URL-адресу. Ця функція "
-"використовує :func:`~urllib.parse.unquote` для декодування *шляху*."
 
 #: ../../library/urllib.request.rst:165
+msgid ""
+"Convert the given ``file:`` URL to a local path. This function uses "
+":func:`~urllib.parse.unquote` to decode the URL. For historical reasons, the"
+" given value *must* omit the ``file:`` scheme prefix. This example shows the"
+" function being used on Windows::"
+msgstr ""
+
+#: ../../library/urllib.request.rst:170
+msgid ""
+">>> from urllib.request import url2pathname\n"
+">>> url = 'file:///C:/Program%20Files'\n"
+">>> url2pathname(url.removeprefix('file:'))\n"
+"'C:\\\\Program Files'"
+msgstr ""
+
+#: ../../library/urllib.request.rst:177
 msgid ""
 "This helper function returns a dictionary of scheme to proxy server URL "
 "mappings. It scans the environment for variables named ``<scheme>_proxy``, "
@@ -330,7 +340,7 @@ msgstr ""
 "існують (і не узгоджуються) змінні середовища як у нижньому, так і у "
 "верхньому регістрах, перевага віддається нижньому регістру."
 
-#: ../../library/urllib.request.rst:175
+#: ../../library/urllib.request.rst:187
 msgid ""
 "If the environment variable ``REQUEST_METHOD`` is set, which usually "
 "indicates your script is running in a CGI environment, the environment "
@@ -349,19 +359,19 @@ msgstr ""
 " що назва змінної написана малими літерами (або принаймні суфікс "
 "``_proxy``)."
 
-#: ../../library/urllib.request.rst:184
+#: ../../library/urllib.request.rst:196
 msgid "The following classes are provided:"
 msgstr "Передбачені такі заняття:"
 
-#: ../../library/urllib.request.rst:188
+#: ../../library/urllib.request.rst:200
 msgid "This class is an abstraction of a URL request."
 msgstr "Цей клас є абстракцією URL-запиту."
 
-#: ../../library/urllib.request.rst:190
+#: ../../library/urllib.request.rst:202
 msgid "*url* should be a string containing a valid, properly encoded URL."
 msgstr ""
 
-#: ../../library/urllib.request.rst:192
+#: ../../library/urllib.request.rst:204
 msgid ""
 "*data* must be an object specifying additional data to send to the server, "
 "or ``None`` if no such data is needed.  Currently HTTP requests are the only"
@@ -383,7 +393,7 @@ msgstr ""
 "тоді як ``Transfer-Encoding: chunked``, як зазначено в :rfc:`7230`, розділ "
 "3.3.1, використовуватиметься для надсилання файлів та інших ітерацій."
 
-#: ../../library/urllib.request.rst:202
+#: ../../library/urllib.request.rst:214
 msgid ""
 "For an HTTP POST request method, *data* should be a buffer in the standard "
 ":mimetype:`application/x-www-form-urlencoded` format.  The "
@@ -397,7 +407,7 @@ msgstr ""
 "2-кортежів і повертає рядок ASCII у цьому форматі. Перш ніж використовувати "
 "як параметр *data*, його слід закодувати в байти."
 
-#: ../../library/urllib.request.rst:208
+#: ../../library/urllib.request.rst:220
 msgid ""
 "*headers* should be a dictionary, and will be treated as if "
 ":meth:`add_header` was called with each key and value as arguments. This is "
@@ -420,7 +430,7 @@ msgstr ""
 "`\"Python-urllib/2.6\"`` (на Python 2.6). Усі ключі заголовка надсилаються у"
 " верблюжому футлярі."
 
-#: ../../library/urllib.request.rst:219
+#: ../../library/urllib.request.rst:231
 msgid ""
 "An appropriate ``Content-Type`` header should be included if the *data* "
 "argument is present.  If this header has not been provided and *data* is not"
@@ -428,7 +438,7 @@ msgid ""
 " as a default."
 msgstr ""
 
-#: ../../library/urllib.request.rst:224
+#: ../../library/urllib.request.rst:236
 msgid ""
 "The next two arguments are only of interest for correct handling of third-"
 "party HTTP cookies:"
@@ -436,7 +446,7 @@ msgstr ""
 "Наступні два аргументи цікаві лише для правильної обробки сторонніх файлів "
 "cookie HTTP:"
 
-#: ../../library/urllib.request.rst:227
+#: ../../library/urllib.request.rst:239
 msgid ""
 "*origin_req_host* should be the request-host of the origin transaction, as "
 "defined by :rfc:`2965`.  It defaults to "
@@ -451,7 +461,7 @@ msgstr ""
 "Наприклад, якщо запит стосується зображення в документі HTML, це має бути "
 "хост запиту для сторінки, що містить зображення."
 
-#: ../../library/urllib.request.rst:235
+#: ../../library/urllib.request.rst:247
 msgid ""
 "*unverifiable* should indicate whether the request is unverifiable, as "
 "defined by :rfc:`2965`.  It defaults to ``False``.  An unverifiable request "
@@ -466,7 +476,7 @@ msgstr ""
 "можливості підтвердити автоматичне отримання зображення, це має бути "
 "правдою."
 
-#: ../../library/urllib.request.rst:242
+#: ../../library/urllib.request.rst:254
 msgid ""
 "*method* should be a string that indicates the HTTP request method that will"
 " be used (e.g. ``'HEAD'``).  If provided, its value is stored in the "
@@ -476,7 +486,7 @@ msgid ""
 ":attr:`~Request.method` attribute in the class itself."
 msgstr ""
 
-#: ../../library/urllib.request.rst:250
+#: ../../library/urllib.request.rst:262
 msgid ""
 "The request will not work as expected if the data object is unable to "
 "deliver its content more than once (e.g. a file or an iterable that can "
@@ -492,15 +502,15 @@ msgstr ""
 "одразу після заголовків. У бібліотеці немає підтримки очікування 100 "
 "продовжень."
 
-#: ../../library/urllib.request.rst:257
+#: ../../library/urllib.request.rst:269
 msgid ":attr:`Request.method` argument is added to the Request class."
 msgstr " Аргумент  :attr:`Request.method` додається до класу Request."
 
-#: ../../library/urllib.request.rst:260
+#: ../../library/urllib.request.rst:272
 msgid "Default :attr:`Request.method` may be indicated at the class level."
 msgstr "Типовий :attr:`Request.method` може бути вказаний на рівні класу."
 
-#: ../../library/urllib.request.rst:263
+#: ../../library/urllib.request.rst:275
 msgid ""
 "Do not raise an error if the ``Content-Length`` has not been provided and "
 "*data* is neither ``None`` nor a bytes object. Fall back to use chunked "
@@ -510,7 +520,7 @@ msgstr ""
 "надано, а *data* не є ні ``None``, ні об'єктом bytes. Поверніться до "
 "використання фрагментованого кодування передачі."
 
-#: ../../library/urllib.request.rst:270
+#: ../../library/urllib.request.rst:282
 msgid ""
 "The :class:`OpenerDirector` class opens URLs via :class:`BaseHandler`\\ s "
 "chained together. It manages the chaining of handlers, and recovery from "
@@ -520,7 +530,7 @@ msgstr ""
 ":class:`BaseHandler`\\ об’єднані разом. Він керує ланцюжком обробників і "
 "відновленням після помилок."
 
-#: ../../library/urllib.request.rst:276
+#: ../../library/urllib.request.rst:288
 msgid ""
 "This is the base class for all registered handlers --- and handles only the "
 "simple mechanics of registration."
@@ -528,7 +538,7 @@ msgstr ""
 "Це базовий клас для всіх зареєстрованих обробників --- і обробляє лише "
 "просту механіку реєстрації."
 
-#: ../../library/urllib.request.rst:282
+#: ../../library/urllib.request.rst:294
 msgid ""
 "A class which defines a default handler for HTTP error responses; all "
 "responses are turned into :exc:`~urllib.error.HTTPError` exceptions."
@@ -537,15 +547,15 @@ msgstr ""
 "HTTP; усі відповіді перетворюються на винятки "
 ":exc:`~urllib.error.HTTPError`."
 
-#: ../../library/urllib.request.rst:288
+#: ../../library/urllib.request.rst:300
 msgid "A class to handle redirections."
 msgstr "Клас для обробки переспрямувань."
 
-#: ../../library/urllib.request.rst:293
+#: ../../library/urllib.request.rst:305
 msgid "A class to handle HTTP Cookies."
 msgstr "Клас для обробки файлів cookie HTTP."
 
-#: ../../library/urllib.request.rst:298
+#: ../../library/urllib.request.rst:310
 msgid ""
 "Cause requests to go through a proxy. If *proxies* is given, it must be a "
 "dictionary mapping protocol names to URLs of proxies. The default is to read"
@@ -563,12 +573,12 @@ msgstr ""
 "параметрів Інтернету реєстру, а в середовищі macOS інформація проксі-сервера"
 " отримується з System Configuration Framework."
 
-#: ../../library/urllib.request.rst:306
+#: ../../library/urllib.request.rst:318
 msgid "To disable autodetected proxy pass an empty dictionary."
 msgstr ""
 "Щоб вимкнути автоматичне визначення проксі, передайте порожній словник."
 
-#: ../../library/urllib.request.rst:308
+#: ../../library/urllib.request.rst:320
 msgid ""
 "The :envvar:`no_proxy` environment variable can be used to specify hosts "
 "which shouldn't be reached via proxy; if set, it should be a comma-separated"
@@ -580,7 +590,7 @@ msgstr ""
 "бути розділений комами список суфіксів імен хостів, необов’язково з "
 "додаванням ``:port``, наприклад ``cern.ch,ncsa.uiuc.edu,some.host:8080``."
 
-#: ../../library/urllib.request.rst:315
+#: ../../library/urllib.request.rst:327
 msgid ""
 "``HTTP_PROXY`` will be ignored if a variable ``REQUEST_METHOD`` is set; see "
 "the documentation on :func:`~urllib.request.getproxies`."
@@ -588,13 +598,13 @@ msgstr ""
 "``HTTP_PROXY`` ігноруватиметься, якщо встановлено змінну ``REQUEST_METHOD``;"
 " перегляньте документацію на :func:`~urllib.request.getproxies`."
 
-#: ../../library/urllib.request.rst:321
+#: ../../library/urllib.request.rst:333
 msgid "Keep a database of  ``(realm, uri) -> (user, password)`` mappings."
 msgstr ""
 "Зберігайте базу даних відповідностей ``(сфера, uri) -> (користувач, "
 "пароль)``."
 
-#: ../../library/urllib.request.rst:326
+#: ../../library/urllib.request.rst:338
 msgid ""
 "Keep a database of  ``(realm, uri) -> (user, password)`` mappings. A realm "
 "of ``None`` is considered a catch-all realm, which is searched if no other "
@@ -604,7 +614,7 @@ msgstr ""
 "пароль)``. Сфера ``None`` вважається всеохоплюючою областю, у якій "
 "виконується пошук, якщо жодна інша область не підходить."
 
-#: ../../library/urllib.request.rst:333
+#: ../../library/urllib.request.rst:345
 msgid ""
 "A variant of :class:`HTTPPasswordMgrWithDefaultRealm` that also has a "
 "database of ``uri -> is_authenticated`` mappings.  Can be used by a "
@@ -616,7 +626,7 @@ msgstr ""
 "BasicAuth, щоб визначити, коли надсилати облікові дані для автентифікації "
 "негайно замість очікування відповіді ``401``."
 
-#: ../../library/urllib.request.rst:343
+#: ../../library/urllib.request.rst:355
 msgid ""
 "This is a mixin class that helps with HTTP authentication, both to the "
 "remote host and to a proxy. *password_mgr*, if given, should be something "
@@ -651,11 +661,11 @@ msgstr ""
 "URI або будь-якого з його супер-URI автоматично включали облікові дані "
 "автентифікації."
 
-#: ../../library/urllib.request.rst:360
+#: ../../library/urllib.request.rst:372
 msgid "Added ``is_authenticated`` support."
 msgstr "Додано підтримку ``is_authenticated``."
 
-#: ../../library/urllib.request.rst:366
+#: ../../library/urllib.request.rst:378
 msgid ""
 "Handle authentication with the remote host. *password_mgr*, if given, should"
 " be something that is compatible with :class:`HTTPPasswordMgr`; refer to "
@@ -669,7 +679,7 @@ msgstr ""
 "який має підтримуватися. HTTPBasicAuthHandler викличе помилку "
 ":exc:`ValueError`, якщо надано неправильну схему автентифікації."
 
-#: ../../library/urllib.request.rst:375 ../../library/urllib.request.rst:409
+#: ../../library/urllib.request.rst:387 ../../library/urllib.request.rst:421
 msgid ""
 "Handle authentication with the proxy. *password_mgr*, if given, should be "
 "something that is compatible with :class:`HTTPPasswordMgr`; refer to section"
@@ -681,7 +691,7 @@ msgstr ""
 "розділу :ref:`http-password-mgr` для отримання інформації про інтерфейс, "
 "який має підтримуватися."
 
-#: ../../library/urllib.request.rst:383
+#: ../../library/urllib.request.rst:395
 msgid ""
 "This is a mixin class that helps with HTTP authentication, both to the "
 "remote host and to a proxy. *password_mgr*, if given, should be something "
@@ -694,7 +704,7 @@ msgstr ""
 " із :class:`HTTPPasswordMgr`; зверніться до розділу :ref:`http-password-mgr`"
 " для отримання інформації про інтерфейс, який має підтримуватися."
 
-#: ../../library/urllib.request.rst:392
+#: ../../library/urllib.request.rst:404
 msgid ""
 "Handle authentication with the remote host. *password_mgr*, if given, should"
 " be something that is compatible with :class:`HTTPPasswordMgr`; refer to "
@@ -716,15 +726,15 @@ msgstr ""
 "метод обробника викличе :exc:`ValueError`, коли представлено схему "
 "автентифікації, відмінну від Digest або Basic."
 
-#: ../../library/urllib.request.rst:402
+#: ../../library/urllib.request.rst:414
 msgid "Raise :exc:`ValueError` on unsupported Authentication Scheme."
 msgstr "Викликати :exc:`ValueError` на непідтримуваній схемі автентифікації."
 
-#: ../../library/urllib.request.rst:417
+#: ../../library/urllib.request.rst:429
 msgid "A class to handle opening of HTTP URLs."
 msgstr "Клас для обробки відкриття URL-адрес HTTP."
 
-#: ../../library/urllib.request.rst:422
+#: ../../library/urllib.request.rst:434
 msgid ""
 "A class to handle opening of HTTPS URLs.  *context* and *check_hostname* "
 "have the same meaning as in :class:`http.client.HTTPSConnection`."
@@ -732,42 +742,42 @@ msgstr ""
 "Клас для обробки URL-адрес HTTPS. *context* і *check_hostname* мають те саме"
 " значення, що й у :class:`http.client.HTTPSConnection`."
 
-#: ../../library/urllib.request.rst:425
+#: ../../library/urllib.request.rst:437
 msgid "*context* and *check_hostname* were added."
 msgstr "*context* і *check_hostname* були додані."
 
-#: ../../library/urllib.request.rst:431
+#: ../../library/urllib.request.rst:443
 msgid "Open local files."
 msgstr "Відкрийте локальні файли."
 
-#: ../../library/urllib.request.rst:435
+#: ../../library/urllib.request.rst:447
 msgid "Open data URLs."
 msgstr "URL-адреси відкритих даних."
 
-#: ../../library/urllib.request.rst:441
+#: ../../library/urllib.request.rst:453
 msgid "Open FTP URLs."
 msgstr "Відкрийте URL-адреси FTP."
 
-#: ../../library/urllib.request.rst:446
+#: ../../library/urllib.request.rst:458
 msgid ""
 "Open FTP URLs, keeping a cache of open FTP connections to minimize delays."
 msgstr ""
 "Відкриті URL-адреси FTP, зберігаючи кеш відкритих з’єднань FTP, щоб "
 "мінімізувати затримки."
 
-#: ../../library/urllib.request.rst:451
+#: ../../library/urllib.request.rst:463
 msgid "A catch-all class to handle unknown URLs."
 msgstr "Універсальний клас для обробки невідомих URL-адрес."
 
-#: ../../library/urllib.request.rst:456 ../../library/urllib.request.rst:1162
+#: ../../library/urllib.request.rst:468 ../../library/urllib.request.rst:1174
 msgid "Process HTTP error responses."
 msgstr "Обробляти відповіді на помилки HTTP."
 
-#: ../../library/urllib.request.rst:462
+#: ../../library/urllib.request.rst:474
 msgid "Request Objects"
 msgstr "Об'єкти запиту"
 
-#: ../../library/urllib.request.rst:464
+#: ../../library/urllib.request.rst:476
 msgid ""
 "The following methods describe :class:`Request`'s public interface, and so "
 "all may be overridden in subclasses.  It also defines several public "
@@ -778,11 +788,11 @@ msgstr ""
 "атрибутів, які можуть використовуватися клієнтами для перевірки "
 "аналізованого запиту."
 
-#: ../../library/urllib.request.rst:471
+#: ../../library/urllib.request.rst:483
 msgid "The original URL passed to the constructor."
 msgstr "Вихідна URL-адреса передається конструктору."
 
-#: ../../library/urllib.request.rst:475
+#: ../../library/urllib.request.rst:487
 msgid ""
 "Request.full_url is a property with setter, getter and a deleter. Getting "
 ":attr:`~Request.full_url` returns the original request URL with the "
@@ -792,11 +802,11 @@ msgstr ""
 " Отримання :attr:`~Request.full_url` повертає початкову URL-адресу запиту з "
 "фрагментом, якщо він був присутній."
 
-#: ../../library/urllib.request.rst:481
+#: ../../library/urllib.request.rst:493
 msgid "The URI scheme."
 msgstr "Схема URI."
 
-#: ../../library/urllib.request.rst:485
+#: ../../library/urllib.request.rst:497
 msgid ""
 "The URI authority, typically a host, but may also contain a port separated "
 "by a colon."
@@ -804,11 +814,11 @@ msgstr ""
 "Повноваження URI, як правило, хост, але також може містити порт, розділений "
 "двокрапкою."
 
-#: ../../library/urllib.request.rst:490
+#: ../../library/urllib.request.rst:502
 msgid "The original host for the request, without port."
 msgstr "Оригінальний хост для запиту, без порту."
 
-#: ../../library/urllib.request.rst:494
+#: ../../library/urllib.request.rst:506
 msgid ""
 "The URI path.  If the :class:`Request` uses a proxy, then selector will be "
 "the full URL that is passed to the proxy."
@@ -816,11 +826,11 @@ msgstr ""
 "Шлях URI. Якщо :class:`Request` використовує проксі, тоді селектором буде "
 "повна URL-адреса, яка передається проксі."
 
-#: ../../library/urllib.request.rst:499
+#: ../../library/urllib.request.rst:511
 msgid "The entity body for the request, or ``None`` if not specified."
 msgstr "Тіло сутності для запиту або ``None``, якщо не вказано."
 
-#: ../../library/urllib.request.rst:501
+#: ../../library/urllib.request.rst:513
 msgid ""
 "Changing value of :attr:`Request.data` now deletes \"Content-Length\" header"
 " if it was previously set or calculated."
@@ -828,7 +838,7 @@ msgstr ""
 "Зміна значення :attr:`Request.data` тепер видаляє заголовок \"Content-"
 "Length\", якщо він був раніше встановлений або обчислений."
 
-#: ../../library/urllib.request.rst:507
+#: ../../library/urllib.request.rst:519
 msgid ""
 "boolean, indicates whether the request is unverifiable as defined by "
 ":rfc:`2965`."
@@ -836,7 +846,7 @@ msgstr ""
 "логічне значення, вказує, чи запит не можна перевірити, як визначено "
 ":rfc:`2965`."
 
-#: ../../library/urllib.request.rst:512
+#: ../../library/urllib.request.rst:524
 msgid ""
 "The HTTP request method to use.  By default its value is :const:`None`, "
 "which means that :meth:`~Request.get_method` will do its normal computation "
@@ -854,7 +864,7 @@ msgstr ""
 "установивши його на рівні класу в підкласі :class:`Request`, або передавши "
 "значення у конструктор :class:`Request` через аргумент *method*."
 
-#: ../../library/urllib.request.rst:522
+#: ../../library/urllib.request.rst:534
 msgid ""
 "A default value can now be set in subclasses; previously it could only be "
 "set via the constructor argument."
@@ -862,7 +872,7 @@ msgstr ""
 "Значення за замовчуванням тепер можна встановити в підкласах; раніше його "
 "можна було встановити лише через аргумент конструктора."
 
-#: ../../library/urllib.request.rst:529
+#: ../../library/urllib.request.rst:541
 msgid ""
 "Return a string indicating the HTTP request method.  If "
 ":attr:`Request.method` is not ``None``, return its value, otherwise return "
@@ -874,11 +884,11 @@ msgstr ""
 "поверніть ``'GET'``, якщо :attr:`Request.data` має значення ``None`` або ``'"
 " POST''``, якщо це не так. Це має значення лише для запитів HTTP."
 
-#: ../../library/urllib.request.rst:534
+#: ../../library/urllib.request.rst:546
 msgid "get_method now looks at the value of :attr:`Request.method`."
 msgstr "get_method тепер переглядає значення :attr:`Request.method`."
 
-#: ../../library/urllib.request.rst:540
+#: ../../library/urllib.request.rst:552
 msgid ""
 "Add another header to the request.  Headers are currently ignored by all "
 "handlers except HTTP handlers, where they are added to the list of headers "
@@ -899,11 +909,11 @@ msgstr ""
 "використовуючи лише один заголовок. Зауважте, що заголовки, додані за "
 "допомогою цього методу, також додаються до перенаправлених запитів."
 
-#: ../../library/urllib.request.rst:552
+#: ../../library/urllib.request.rst:564
 msgid "Add a header that will not be added to a redirected request."
 msgstr "Додайте заголовок, який не буде додано до переспрямованого запиту."
 
-#: ../../library/urllib.request.rst:557
+#: ../../library/urllib.request.rst:569
 msgid ""
 "Return whether the instance has the named header (checks both regular and "
 "unredirected)."
@@ -911,7 +921,7 @@ msgstr ""
 "Повертає, чи має екземпляр названий заголовок (перевіряє як звичайний, так і"
 " неперенаправлений)."
 
-#: ../../library/urllib.request.rst:563
+#: ../../library/urllib.request.rst:575
 msgid ""
 "Remove named header from the request instance (both from regular and "
 "unredirected headers)."
@@ -919,15 +929,15 @@ msgstr ""
 "Видаліть іменований заголовок із екземпляра запиту (як зі звичайних, так і з"
 " непереспрямованих заголовків)."
 
-#: ../../library/urllib.request.rst:571
+#: ../../library/urllib.request.rst:583
 msgid "Return the URL given in the constructor."
 msgstr "Повертає URL-адресу, указану в конструкторі."
 
-#: ../../library/urllib.request.rst:575
+#: ../../library/urllib.request.rst:587
 msgid "Returns :attr:`Request.full_url`"
 msgstr "Повертає :attr:`Request.full_url`"
 
-#: ../../library/urllib.request.rst:580
+#: ../../library/urllib.request.rst:592
 msgid ""
 "Prepare the request by connecting to a proxy server. The *host* and *type* "
 "will replace those of the instance, and the instance's selector will be the "
@@ -937,7 +947,7 @@ msgstr ""
 "параметри екземпляра, а селектор екземпляра буде оригінальною URL-адресою, "
 "заданою в конструкторі."
 
-#: ../../library/urllib.request.rst:587
+#: ../../library/urllib.request.rst:599
 msgid ""
 "Return the value of the given header. If the header is not present, return "
 "the default value."
@@ -945,13 +955,13 @@ msgstr ""
 "Повертає значення заданого заголовка. Якщо заголовок відсутній, поверніть "
 "значення за замовчуванням."
 
-#: ../../library/urllib.request.rst:593
+#: ../../library/urllib.request.rst:605
 msgid ""
 "Return a list of tuples (header_name, header_value) of the Request headers."
 msgstr ""
 "Повертає список кортежів (header_name, header_value) заголовків запиту."
 
-#: ../../library/urllib.request.rst:595
+#: ../../library/urllib.request.rst:607
 msgid ""
 "The request methods add_data, has_data, get_data, get_type, get_host, "
 "get_selector, get_origin_req_host and is_unverifiable that were deprecated "
@@ -961,15 +971,15 @@ msgstr ""
 "get_selector, get_origin_req_host і is_unverifiable, які були застарілими з "
 "3.3, були видалені."
 
-#: ../../library/urllib.request.rst:604
+#: ../../library/urllib.request.rst:616
 msgid "OpenerDirector Objects"
 msgstr "Об’єкти OpenerDirector"
 
-#: ../../library/urllib.request.rst:606
+#: ../../library/urllib.request.rst:618
 msgid ":class:`OpenerDirector` instances have the following methods:"
 msgstr "Екземпляри :class:`OpenerDirector` мають такі методи:"
 
-#: ../../library/urllib.request.rst:611
+#: ../../library/urllib.request.rst:623
 msgid ""
 "*handler* should be an instance of :class:`BaseHandler`.  The following "
 "methods are searched, and added to the possible chains (note that HTTP "
@@ -986,53 +996,53 @@ msgstr ""
 "обробником відповіді протоколу HTTP. Також *type* слід замінити фактичним "
 "кодом HTTP, наприклад, :meth:`http_error_404` оброблятиме помилки HTTP 404."
 
-#: ../../library/urllib.request.rst:619
+#: ../../library/urllib.request.rst:631
 msgid ""
 ":meth:`!<protocol>_open` --- signal that the handler knows how to open "
 "*protocol* URLs."
 msgstr ""
 
-#: ../../library/urllib.request.rst:622
+#: ../../library/urllib.request.rst:634
 msgid "See |protocol_open|_ for more information."
 msgstr "Перегляньте |protocol_open|_ для отримання додаткової інформації."
 
-#: ../../library/urllib.request.rst:624
+#: ../../library/urllib.request.rst:636
 msgid ""
 ":meth:`!http_error_\\<type\\>` --- signal that the handler knows how to "
 "handle HTTP errors with HTTP error code *type*."
 msgstr ""
 
-#: ../../library/urllib.request.rst:627
+#: ../../library/urllib.request.rst:639
 msgid "See |http_error_nnn|_ for more information."
 msgstr "Перегляньте |http_error_nnn|_ для отримання додаткової інформації."
 
-#: ../../library/urllib.request.rst:629
+#: ../../library/urllib.request.rst:641
 msgid ""
 ":meth:`!<protocol>_error` --- signal that the handler knows how to handle "
 "errors from (non-\\ ``http``) *protocol*."
 msgstr ""
 
-#: ../../library/urllib.request.rst:632
+#: ../../library/urllib.request.rst:644
 msgid ""
 ":meth:`!<protocol>_request` --- signal that the handler knows how to pre-"
 "process *protocol* requests."
 msgstr ""
 
-#: ../../library/urllib.request.rst:635
+#: ../../library/urllib.request.rst:647
 msgid "See |protocol_request|_ for more information."
 msgstr "Перегляньте |protocol_request|_ для отримання додаткової інформації."
 
-#: ../../library/urllib.request.rst:637
+#: ../../library/urllib.request.rst:649
 msgid ""
 ":meth:`!<protocol>_response` --- signal that the handler knows how to post-"
 "process *protocol* responses."
 msgstr ""
 
-#: ../../library/urllib.request.rst:640
+#: ../../library/urllib.request.rst:652
 msgid "See |protocol_response|_ for more information."
 msgstr "Дивіться |protocol_response|_ для отримання додаткової інформації."
 
-#: ../../library/urllib.request.rst:649
+#: ../../library/urllib.request.rst:661
 msgid ""
 "Open the given *url* (which can be a request object or a string), optionally"
 " passing the given *data*. Arguments, return values and exceptions raised "
@@ -1053,7 +1063,7 @@ msgstr ""
 " умовчанням). Функція тайм-ауту фактично працює лише для з’єднань HTTP, "
 "HTTPS і FTP."
 
-#: ../../library/urllib.request.rst:661
+#: ../../library/urllib.request.rst:673
 msgid ""
 "Handle an error of the given protocol.  This will call the registered error "
 "handlers for the given protocol with the given arguments (which are protocol"
@@ -1062,18 +1072,18 @@ msgid ""
 ":meth:`!http_error_\\<type\\>` methods of the handler classes."
 msgstr ""
 
-#: ../../library/urllib.request.rst:667
+#: ../../library/urllib.request.rst:679
 msgid ""
 "Return values and exceptions raised are the same as those of "
 ":func:`urlopen`."
 msgstr ""
 "Повернуті значення та викликані винятки такі самі, як і для :func:`urlopen`."
 
-#: ../../library/urllib.request.rst:669
+#: ../../library/urllib.request.rst:681
 msgid "OpenerDirector objects open URLs in three stages:"
 msgstr "Об’єкти OpenerDirector відкривають URL-адреси в три етапи:"
 
-#: ../../library/urllib.request.rst:671
+#: ../../library/urllib.request.rst:683
 msgid ""
 "The order in which these methods are called within each stage is determined "
 "by sorting the handler instances."
@@ -1081,13 +1091,13 @@ msgstr ""
 "Порядок, у якому ці методи викликаються на кожному етапі, визначається "
 "сортуванням екземплярів обробника."
 
-#: ../../library/urllib.request.rst:674
+#: ../../library/urllib.request.rst:686
 msgid ""
 "Every handler with a method named like :meth:`!<protocol>_request` has that "
 "method called to pre-process the request."
 msgstr ""
 
-#: ../../library/urllib.request.rst:677
+#: ../../library/urllib.request.rst:689
 msgid ""
 "Handlers with a method named like :meth:`!<protocol>_open` are called to "
 "handle the request. This stage ends when a handler either returns a non-\\ "
@@ -1095,7 +1105,7 @@ msgid ""
 ":exc:`~urllib.error.URLError`).  Exceptions are allowed to propagate."
 msgstr ""
 
-#: ../../library/urllib.request.rst:682
+#: ../../library/urllib.request.rst:694
 msgid ""
 "In fact, the above algorithm is first tried for methods named "
 ":meth:`~BaseHandler.default_open`.  If all such methods return "
@@ -1104,7 +1114,7 @@ msgid ""
 "algorithm is repeated for methods named :meth:`~BaseHandler.unknown_open`."
 msgstr ""
 
-#: ../../library/urllib.request.rst:688
+#: ../../library/urllib.request.rst:700
 msgid ""
 "Note that the implementation of these methods may involve calls of the "
 "parent :class:`OpenerDirector` instance's :meth:`~OpenerDirector.open` and "
@@ -1114,17 +1124,17 @@ msgstr ""
 ":meth:`~OpenerDirector.open` і :meth:`~OpenerDirector.error` примірника "
 "батьківського :class:`OpenerDirector`."
 
-#: ../../library/urllib.request.rst:692
+#: ../../library/urllib.request.rst:704
 msgid ""
 "Every handler with a method named like :meth:`!<protocol>_response` has that"
 " method called to post-process the response."
 msgstr ""
 
-#: ../../library/urllib.request.rst:699
+#: ../../library/urllib.request.rst:711
 msgid "BaseHandler Objects"
 msgstr "Об’єкти BaseHandler"
 
-#: ../../library/urllib.request.rst:701
+#: ../../library/urllib.request.rst:713
 msgid ""
 ":class:`BaseHandler` objects provide a couple of methods that are directly "
 "useful, and others that are meant to be used by derived classes.  These are "
@@ -1134,15 +1144,15 @@ msgstr ""
 "корисними, а також інші, які призначені для використання похідними класами. "
 "Вони призначені для безпосереднього використання:"
 
-#: ../../library/urllib.request.rst:708
+#: ../../library/urllib.request.rst:720
 msgid "Add a director as parent."
 msgstr "Додати директора як батька."
 
-#: ../../library/urllib.request.rst:713
+#: ../../library/urllib.request.rst:725
 msgid "Remove any parents."
 msgstr "Видаліть усіх батьків."
 
-#: ../../library/urllib.request.rst:715
+#: ../../library/urllib.request.rst:727
 msgid ""
 "The following attribute and methods should only be used by classes derived "
 "from :class:`BaseHandler`."
@@ -1150,14 +1160,14 @@ msgstr ""
 "Наступний атрибут і методи мають використовуватися лише класами, похідними "
 "від :class:`BaseHandler`."
 
-#: ../../library/urllib.request.rst:720
+#: ../../library/urllib.request.rst:732
 msgid ""
 "The convention has been adopted that subclasses defining "
 ":meth:`!<protocol>_request` or :meth:`!<protocol>_response` methods are "
 "named :class:`!\\*Processor`; all others are named :class:`!\\*Handler`."
 msgstr ""
 
-#: ../../library/urllib.request.rst:727
+#: ../../library/urllib.request.rst:739
 msgid ""
 "A valid :class:`OpenerDirector`, which can be used to open using a different"
 " protocol, or handle errors."
@@ -1165,7 +1175,7 @@ msgstr ""
 "Дійсний :class:`OpenerDirector`, який можна використовувати для відкриття за"
 " допомогою іншого протоколу або обробки помилок."
 
-#: ../../library/urllib.request.rst:733
+#: ../../library/urllib.request.rst:745
 msgid ""
 "This method is *not* defined in :class:`BaseHandler`, but subclasses should "
 "define it if they want to catch all URLs."
@@ -1173,7 +1183,7 @@ msgstr ""
 "Цей метод *не* визначено в :class:`BaseHandler`, але підкласи повинні "
 "визначити його, якщо вони хочуть перехоплювати всі URL-адреси."
 
-#: ../../library/urllib.request.rst:736
+#: ../../library/urllib.request.rst:748
 msgid ""
 "This method, if implemented, will be called by the parent "
 ":class:`OpenerDirector`.  It should return a file-like object as described "
@@ -1184,11 +1194,11 @@ msgid ""
 ":exc:`~urllib.error.URLError`)."
 msgstr ""
 
-#: ../../library/urllib.request.rst:743
+#: ../../library/urllib.request.rst:755
 msgid "This method will be called before any protocol-specific open method."
 msgstr "Цей метод буде викликано перед будь-яким відкритим методом протоколу."
 
-#: ../../library/urllib.request.rst:750
+#: ../../library/urllib.request.rst:762
 msgid ""
 "This method is *not* defined in :class:`BaseHandler`, but subclasses should "
 "define it if they want to handle URLs with the given protocol."
@@ -1197,14 +1207,14 @@ msgstr ""
 "визначити його, якщо вони хочуть обробляти URL-адреси за допомогою заданого "
 "протоколу."
 
-#: ../../library/urllib.request.rst:753
+#: ../../library/urllib.request.rst:765
 msgid ""
 "This method, if defined, will be called by the parent "
 ":class:`OpenerDirector`. Return values should be the same as for  "
 ":meth:`~BaseHandler.default_open`."
 msgstr ""
 
-#: ../../library/urllib.request.rst:759
+#: ../../library/urllib.request.rst:771
 msgid ""
 "This method is *not* defined in :class:`BaseHandler`, but subclasses should "
 "define it if they want to catch all URLs with no specific registered handler"
@@ -1214,7 +1224,7 @@ msgstr ""
 "визначити його, якщо вони хочуть перехопити всі URL-адреси без спеціального "
 "зареєстрованого обробника для його відкриття."
 
-#: ../../library/urllib.request.rst:763
+#: ../../library/urllib.request.rst:775
 msgid ""
 "This method, if implemented, will be called by the :attr:`parent` "
 ":class:`OpenerDirector`.  Return values should be the same as for "
@@ -1224,7 +1234,7 @@ msgstr ""
 ":class:`OpenerDirector`. Повернуті значення мають бути такими ж, як і для "
 ":meth:`default_open`."
 
-#: ../../library/urllib.request.rst:770
+#: ../../library/urllib.request.rst:782
 msgid ""
 "This method is *not* defined in :class:`BaseHandler`, but subclasses should "
 "override it if they intend to provide a catch-all for otherwise unhandled "
@@ -1238,7 +1248,7 @@ msgstr ""
 ":class:`OpenerDirector`, який отримує помилку, і зазвичай не повинен "
 "викликатися за інших обставин."
 
-#: ../../library/urllib.request.rst:775
+#: ../../library/urllib.request.rst:787
 msgid ""
 "*req* will be a :class:`Request` object, *fp* will be a file-like object "
 "with the HTTP error body, *code* will be the three-digit code of the error, "
@@ -1250,7 +1260,7 @@ msgstr ""
 "для користувача пояснення коду та *hdrs* буде об’єктом відображення із "
 "заголовками помилки."
 
-#: ../../library/urllib.request.rst:780
+#: ../../library/urllib.request.rst:792
 msgid ""
 "Return values and exceptions raised should be the same as those of "
 ":func:`urlopen`."
@@ -1258,7 +1268,7 @@ msgstr ""
 "Повернуті значення та викликані винятки мають бути такими самими, як у "
 ":func:`urlopen`."
 
-#: ../../library/urllib.request.rst:787
+#: ../../library/urllib.request.rst:799
 msgid ""
 "*nnn* should be a three-digit HTTP error code.  This method is also not "
 "defined in :class:`BaseHandler`, but will be called, if it exists, on an "
@@ -1268,18 +1278,18 @@ msgstr ""
 " :class:`BaseHandler`, але буде викликаний, якщо він існує, на екземплярі "
 "підкласу, коли виникає помилка HTTP з кодом *nnn*."
 
-#: ../../library/urllib.request.rst:791
+#: ../../library/urllib.request.rst:803
 msgid "Subclasses should override this method to handle specific HTTP errors."
 msgstr ""
 "Підкласи повинні замінити цей метод для обробки конкретних помилок HTTP."
 
-#: ../../library/urllib.request.rst:793
+#: ../../library/urllib.request.rst:805
 msgid ""
 "Arguments, return values and exceptions raised should be the same as for "
 ":meth:`~BaseHandler.http_error_default`."
 msgstr ""
 
-#: ../../library/urllib.request.rst:801
+#: ../../library/urllib.request.rst:813
 msgid ""
 "This method is *not* defined in :class:`BaseHandler`, but subclasses should "
 "define it if they want to pre-process requests of the given protocol."
@@ -1288,7 +1298,7 @@ msgstr ""
 "визначити його, якщо вони хочуть попередньо обробляти запити даного "
 "протоколу."
 
-#: ../../library/urllib.request.rst:804
+#: ../../library/urllib.request.rst:816
 msgid ""
 "This method, if defined, will be called by the parent "
 ":class:`OpenerDirector`. *req* will be a :class:`Request` object. The return"
@@ -1298,7 +1308,7 @@ msgstr ""
 ":class:`OpenerDirector`. *req* буде об’єктом :class:`Request`. Поверненим "
 "значенням має бути об’єкт :class:`Request`."
 
-#: ../../library/urllib.request.rst:813
+#: ../../library/urllib.request.rst:825
 msgid ""
 "This method is *not* defined in :class:`BaseHandler`, but subclasses should "
 "define it if they want to post-process responses of the given protocol."
@@ -1306,7 +1316,7 @@ msgstr ""
 "Цей метод *не* визначено в :class:`BaseHandler`, але підкласи повинні "
 "визначити його, якщо вони хочуть постобробити відповіді заданого протоколу."
 
-#: ../../library/urllib.request.rst:816
+#: ../../library/urllib.request.rst:828
 msgid ""
 "This method, if defined, will be called by the parent "
 ":class:`OpenerDirector`. *req* will be a :class:`Request` object. *response*"
@@ -1320,11 +1330,11 @@ msgstr ""
 "повертається :func:`urlopen`. Значення, що повертається, має реалізовувати "
 "той самий інтерфейс, що й значення, що повертається :func:`urlopen`."
 
-#: ../../library/urllib.request.rst:826
+#: ../../library/urllib.request.rst:838
 msgid "HTTPRedirectHandler Objects"
 msgstr "Об’єкти HTTPRedirectHandler"
 
-#: ../../library/urllib.request.rst:830
+#: ../../library/urllib.request.rst:842
 msgid ""
 "Some HTTP redirections require action from this module's client code.  If "
 "this is the case, :exc:`~urllib.error.HTTPError` is raised.  See :rfc:`2616`"
@@ -1334,14 +1344,14 @@ msgstr ""
 " Якщо це так, виникає :exc:`~urllib.error.HTTPError`. Див. :rfc:`2616` для "
 "детальної інформації про точні значення різних кодів перенаправлення."
 
-#: ../../library/urllib.request.rst:834
+#: ../../library/urllib.request.rst:846
 msgid ""
 "An :exc:`~urllib.error.HTTPError` exception raised as a security "
 "consideration if the HTTPRedirectHandler is presented with a redirected URL "
 "which is not an HTTP, HTTPS or FTP URL."
 msgstr ""
 
-#: ../../library/urllib.request.rst:841
+#: ../../library/urllib.request.rst:853
 msgid ""
 "Return a :class:`Request` or ``None`` in response to a redirect. This is "
 "called by the default implementations of the :meth:`!http_error_30\\*` "
@@ -1352,7 +1362,7 @@ msgid ""
 "handle this URL, or return ``None`` if you can't but another handler might."
 msgstr ""
 
-#: ../../library/urllib.request.rst:851
+#: ../../library/urllib.request.rst:863
 msgid ""
 "The default implementation of this method does not strictly follow "
 ":rfc:`2616`, which says that 301 and 302 responses to ``POST`` requests must"
@@ -1367,7 +1377,7 @@ msgstr ""
 "дозволяють автоматичне перенаправлення цих відповідей, змінюючи POST на "
 "``GET``, і реалізація за замовчуванням відтворює цю поведінку."
 
-#: ../../library/urllib.request.rst:860
+#: ../../library/urllib.request.rst:872
 msgid ""
 "Redirect to the ``Location:`` or ``URI:`` URL.  This method is called by the"
 " parent :class:`OpenerDirector` when getting an HTTP 'moved permanently' "
@@ -1377,50 +1387,50 @@ msgstr ""
 "викликається батьківським :class:`OpenerDirector` під час отримання HTTP-"
 "відповіді \"переміщено назавжди\"."
 
-#: ../../library/urllib.request.rst:866
+#: ../../library/urllib.request.rst:878
 msgid ""
 "The same as :meth:`http_error_301`, but called for the 'found' response."
 msgstr ""
 "Те саме, що :meth:`http_error_301`, але викликається відповідь 'знайдено'."
 
-#: ../../library/urllib.request.rst:871
+#: ../../library/urllib.request.rst:883
 msgid ""
 "The same as :meth:`http_error_301`, but called for the 'see other' response."
 msgstr ""
 "Те саме, що :meth:`http_error_301`, але викликається відповідь \"переглянути"
 " інше\"."
 
-#: ../../library/urllib.request.rst:876
+#: ../../library/urllib.request.rst:888
 msgid ""
 "The same as :meth:`http_error_301`, but called for the 'temporary redirect' "
 "response. It does not allow changing the request method from ``POST`` to "
 "``GET``."
 msgstr ""
 
-#: ../../library/urllib.request.rst:883
+#: ../../library/urllib.request.rst:895
 msgid ""
 "The same as :meth:`http_error_301`, but called for the 'permanent redirect' "
 "response. It does not allow changing the request method from ``POST`` to "
 "``GET``."
 msgstr ""
 
-#: ../../library/urllib.request.rst:893
+#: ../../library/urllib.request.rst:905
 msgid "HTTPCookieProcessor Objects"
 msgstr "Об’єкти HTTPCookieProcessor"
 
-#: ../../library/urllib.request.rst:895
+#: ../../library/urllib.request.rst:907
 msgid ":class:`HTTPCookieProcessor` instances have one attribute:"
 msgstr "Екземпляри :class:`HTTPCookieProcessor` мають один атрибут:"
 
-#: ../../library/urllib.request.rst:899
+#: ../../library/urllib.request.rst:911
 msgid "The :class:`http.cookiejar.CookieJar` in which cookies are stored."
 msgstr ":class:`http.cookiejar.CookieJar`, у якому зберігаються файли cookie."
 
-#: ../../library/urllib.request.rst:905
+#: ../../library/urllib.request.rst:917
 msgid "ProxyHandler Objects"
 msgstr "Об’єкти ProxyHandler"
 
-#: ../../library/urllib.request.rst:911
+#: ../../library/urllib.request.rst:923
 msgid ""
 "The :class:`ProxyHandler` will have a method :meth:`!<protocol>_open` for "
 "every *protocol* which has a proxy in the *proxies* dictionary given in the "
@@ -1429,11 +1439,11 @@ msgid ""
 "actually execute the protocol."
 msgstr ""
 
-#: ../../library/urllib.request.rst:921
+#: ../../library/urllib.request.rst:933
 msgid "HTTPPasswordMgr Objects"
 msgstr "Об’єкти HTTPPasswordMgr"
 
-#: ../../library/urllib.request.rst:923
+#: ../../library/urllib.request.rst:935
 msgid ""
 "These methods are available on :class:`HTTPPasswordMgr` and "
 ":class:`HTTPPasswordMgrWithDefaultRealm` objects."
@@ -1441,7 +1451,7 @@ msgstr ""
 "Ці методи доступні в об’єктах :class:`HTTPPasswordMgr` і "
 ":class:`HTTPPasswordMgrWithDefaultRealm`."
 
-#: ../../library/urllib.request.rst:929
+#: ../../library/urllib.request.rst:941
 msgid ""
 "*uri* can be either a single URI, or a sequence of URIs. *realm*, *user* and"
 " *passwd* must be strings. This causes ``(user, passwd)`` to be used as "
@@ -1453,7 +1463,7 @@ msgstr ""
 " маркерів автентифікації, коли надається автентифікація для *сфери* та "
 "супер-URI будь-якого з указаних URI."
 
-#: ../../library/urllib.request.rst:937
+#: ../../library/urllib.request.rst:949
 msgid ""
 "Get user/password for given realm and URI, if any.  This method will return "
 "``(None, None)`` if there is no matching user/password."
@@ -1461,7 +1471,7 @@ msgstr ""
 "Отримайте користувача/пароль для заданої області та URI, якщо є. Цей метод "
 "поверне ``(None, None)``, якщо немає відповідного користувача/паролю."
 
-#: ../../library/urllib.request.rst:940
+#: ../../library/urllib.request.rst:952
 msgid ""
 "For :class:`HTTPPasswordMgrWithDefaultRealm` objects, the realm ``None`` "
 "will be searched if the given *realm* has no matching user/password."
@@ -1469,11 +1479,11 @@ msgstr ""
 "Для об’єктів :class:`HTTPPasswordMgrWithDefaultRealm` шукатиметься область "
 "``None``, якщо дана *сфера* не має відповідного користувача/паролю."
 
-#: ../../library/urllib.request.rst:947
+#: ../../library/urllib.request.rst:959
 msgid "HTTPPasswordMgrWithPriorAuth Objects"
 msgstr "Об’єкти HTTPPasswordMgrWithPriorAuth"
 
-#: ../../library/urllib.request.rst:949
+#: ../../library/urllib.request.rst:961
 msgid ""
 "This password manager extends :class:`HTTPPasswordMgrWithDefaultRealm` to "
 "support tracking URIs for which authentication credentials should always be "
@@ -1483,7 +1493,7 @@ msgstr ""
 "підтримки URI відстеження, для яких завжди слід надсилати облікові дані "
 "автентифікації."
 
-#: ../../library/urllib.request.rst:956
+#: ../../library/urllib.request.rst:968
 msgid ""
 "*realm*, *uri*, *user*, *passwd* are as for "
 ":meth:`HTTPPasswordMgr.add_password`.  *is_authenticated* sets the initial "
@@ -1495,28 +1505,28 @@ msgstr ""
 "початкове значення прапора ``is_authenticated`` для даного URI або списку "
 "URI. Якщо *is_authenticated* указано як ``True``, *realm* ігнорується."
 
-#: ../../library/urllib.request.rst:964
+#: ../../library/urllib.request.rst:976
 msgid "Same as for :class:`HTTPPasswordMgrWithDefaultRealm` objects"
 msgstr "Те саме, що для об’єктів :class:`HTTPPasswordMgrWithDefaultRealm`"
 
-#: ../../library/urllib.request.rst:970
+#: ../../library/urllib.request.rst:982
 msgid ""
 "Update the ``is_authenticated`` flag for the given *uri* or list of URIs."
 msgstr ""
 "Оновіть прапорець ``is_authenticated`` для заданого *uri* або списку URI."
 
-#: ../../library/urllib.request.rst:976
+#: ../../library/urllib.request.rst:988
 msgid ""
 "Returns the current state of the ``is_authenticated`` flag for the given "
 "URI."
 msgstr ""
 "Повертає поточний стан прапора ``is_authenticated`` для вказаного URI."
 
-#: ../../library/urllib.request.rst:983
+#: ../../library/urllib.request.rst:995
 msgid "AbstractBasicAuthHandler Objects"
 msgstr "Об’єкти AbstractBasicAuthHandler"
 
-#: ../../library/urllib.request.rst:988
+#: ../../library/urllib.request.rst:1000
 msgid ""
 "Handle an authentication request by getting a user/password pair, and re-"
 "trying the request.  *authreq* should be the name of the header where the "
@@ -1530,7 +1540,7 @@ msgstr ""
 "автентифікації, *req* має бути (не вдалося) об’єктом :class:`Request` , а "
 "*headers* мають бути заголовками помилок."
 
-#: ../../library/urllib.request.rst:994
+#: ../../library/urllib.request.rst:1006
 msgid ""
 "*host* is either an authority (e.g. ``\"python.org\"``) or a URL containing "
 "an authority component (e.g. ``\"http://python.org/\"``). In either case, "
@@ -1543,25 +1553,25 @@ msgstr ""
 "містити компонент userinfo (тому ``\"python.org\"`` і ``\"python.org:80\"`` "
 "підходять, ``\"joe:password@python.org\"`` не є)."
 
-#: ../../library/urllib.request.rst:1003
+#: ../../library/urllib.request.rst:1015
 msgid "HTTPBasicAuthHandler Objects"
 msgstr "Об’єкти HTTPBasicAuthHandler"
 
-#: ../../library/urllib.request.rst:1008 ../../library/urllib.request.rst:1019
-#: ../../library/urllib.request.rst:1044 ../../library/urllib.request.rst:1055
+#: ../../library/urllib.request.rst:1020 ../../library/urllib.request.rst:1031
+#: ../../library/urllib.request.rst:1056 ../../library/urllib.request.rst:1067
 msgid "Retry the request with authentication information, if available."
 msgstr ""
 "Повторіть запит із інформацією для автентифікації, якщо вона доступна."
 
-#: ../../library/urllib.request.rst:1014
+#: ../../library/urllib.request.rst:1026
 msgid "ProxyBasicAuthHandler Objects"
 msgstr "Об’єкти ProxyBasicAuthHandler"
 
-#: ../../library/urllib.request.rst:1025
+#: ../../library/urllib.request.rst:1037
 msgid "AbstractDigestAuthHandler Objects"
 msgstr "Об’єкти AbstractDigestAuthHandler"
 
-#: ../../library/urllib.request.rst:1030
+#: ../../library/urllib.request.rst:1042
 msgid ""
 "*authreq* should be the name of the header where the information about the "
 "realm is included in the request, *host* should be the host to authenticate "
@@ -1573,19 +1583,19 @@ msgstr ""
 "вдалося) об’єктом :class:`Request`, і *headers* повинні бути заголовками "
 "помилок."
 
-#: ../../library/urllib.request.rst:1039
+#: ../../library/urllib.request.rst:1051
 msgid "HTTPDigestAuthHandler Objects"
 msgstr "Об’єкти HTTPDigestAuthHandler"
 
-#: ../../library/urllib.request.rst:1050
+#: ../../library/urllib.request.rst:1062
 msgid "ProxyDigestAuthHandler Objects"
 msgstr "Об’єкти ProxyDigestAuthHandler"
 
-#: ../../library/urllib.request.rst:1061
+#: ../../library/urllib.request.rst:1073
 msgid "HTTPHandler Objects"
 msgstr "Об’єкти HTTPHandler"
 
-#: ../../library/urllib.request.rst:1066
+#: ../../library/urllib.request.rst:1078
 msgid ""
 "Send an HTTP request, which can be either GET or POST, depending on "
 "``req.has_data()``."
@@ -1593,11 +1603,11 @@ msgstr ""
 "Надішліть запит HTTP, який може бути GET або POST, залежно від "
 "``req.has_data()``."
 
-#: ../../library/urllib.request.rst:1073
+#: ../../library/urllib.request.rst:1085
 msgid "HTTPSHandler Objects"
 msgstr "Об’єкти HTTPSHandler"
 
-#: ../../library/urllib.request.rst:1078
+#: ../../library/urllib.request.rst:1090
 msgid ""
 "Send an HTTPS request, which can be either GET or POST, depending on "
 "``req.has_data()``."
@@ -1605,11 +1615,11 @@ msgstr ""
 "Надішліть запит HTTPS, який може бути GET або POST, залежно від "
 "``req.has_data()``."
 
-#: ../../library/urllib.request.rst:1085
+#: ../../library/urllib.request.rst:1097
 msgid "FileHandler Objects"
 msgstr "Об’єкти FileHandler"
 
-#: ../../library/urllib.request.rst:1090
+#: ../../library/urllib.request.rst:1102
 msgid ""
 "Open the file locally, if there is no host name, or the host name is "
 "``'localhost'``."
@@ -1617,17 +1627,17 @@ msgstr ""
 "Відкрийте файл локально, якщо немає імені хоста або ім’я хоста "
 "``'localhost'``."
 
-#: ../../library/urllib.request.rst:1093
+#: ../../library/urllib.request.rst:1105
 msgid ""
 "This method is applicable only for local hostnames.  When a remote hostname "
 "is given, a :exc:`~urllib.error.URLError` is raised."
 msgstr ""
 
-#: ../../library/urllib.request.rst:1101
+#: ../../library/urllib.request.rst:1113
 msgid "DataHandler Objects"
 msgstr "Об’єкти DataHandler"
 
-#: ../../library/urllib.request.rst:1105
+#: ../../library/urllib.request.rst:1117
 msgid ""
 "Read a data URL. This kind of URL contains the content encoded in the URL "
 "itself. The data URL syntax is specified in :rfc:`2397`. This implementation"
@@ -1637,11 +1647,11 @@ msgid ""
 "implementation will raise a :exc:`ValueError` in that case."
 msgstr ""
 
-#: ../../library/urllib.request.rst:1116
+#: ../../library/urllib.request.rst:1128
 msgid "FTPHandler Objects"
 msgstr "Об’єкти FTPHandler"
 
-#: ../../library/urllib.request.rst:1121
+#: ../../library/urllib.request.rst:1133
 msgid ""
 "Open the FTP file indicated by *req*. The login is always done with empty "
 "username and password."
@@ -1649,11 +1659,11 @@ msgstr ""
 "Відкрийте файл FTP, позначений *req*. Вхід завжди виконується з порожнім "
 "іменем користувача та паролем."
 
-#: ../../library/urllib.request.rst:1128
+#: ../../library/urllib.request.rst:1140
 msgid "CacheFTPHandler Objects"
 msgstr "Об’єкти CacheFTPHandler"
 
-#: ../../library/urllib.request.rst:1130
+#: ../../library/urllib.request.rst:1142
 msgid ""
 ":class:`CacheFTPHandler` objects are :class:`FTPHandler` objects with the "
 "following additional methods:"
@@ -1661,31 +1671,31 @@ msgstr ""
 "Об’єкти :class:`CacheFTPHandler` — це об’єкти :class:`FTPHandler` із такими "
 "додатковими методами:"
 
-#: ../../library/urllib.request.rst:1136
+#: ../../library/urllib.request.rst:1148
 msgid "Set timeout of connections to *t* seconds."
 msgstr "Встановіть тайм-аут підключень на *t* секунд."
 
-#: ../../library/urllib.request.rst:1141
+#: ../../library/urllib.request.rst:1153
 msgid "Set maximum number of cached connections to *m*."
 msgstr "Установіть максимальну кількість кешованих підключень до *m*."
 
-#: ../../library/urllib.request.rst:1147
+#: ../../library/urllib.request.rst:1159
 msgid "UnknownHandler Objects"
 msgstr "Об’єкти UnknownHandler"
 
-#: ../../library/urllib.request.rst:1152
+#: ../../library/urllib.request.rst:1164
 msgid "Raise a :exc:`~urllib.error.URLError` exception."
 msgstr "Викликати виняток :exc:`~urllib.error.URLError`."
 
-#: ../../library/urllib.request.rst:1158
+#: ../../library/urllib.request.rst:1170
 msgid "HTTPErrorProcessor Objects"
 msgstr "Об’єкти HTTPErrorProcessor"
 
-#: ../../library/urllib.request.rst:1164
+#: ../../library/urllib.request.rst:1176
 msgid "For 200 error codes, the response object is returned immediately."
 msgstr "Для 200 кодів помилок об’єкт відповіді повертається негайно."
 
-#: ../../library/urllib.request.rst:1166
+#: ../../library/urllib.request.rst:1178
 msgid ""
 "For non-200 error codes, this simply passes the job on to the "
 ":meth:`!http_error_\\<type\\>` handler methods, via "
@@ -1694,19 +1704,19 @@ msgid ""
 " error."
 msgstr ""
 
-#: ../../library/urllib.request.rst:1174
+#: ../../library/urllib.request.rst:1186
 msgid "Process HTTPS error responses."
 msgstr "Обробляти відповіді на помилки HTTPS."
 
-#: ../../library/urllib.request.rst:1176
+#: ../../library/urllib.request.rst:1188
 msgid "The behavior is same as :meth:`http_response`."
 msgstr "Поведінка така ж, як :meth:`http_response`."
 
-#: ../../library/urllib.request.rst:1182
+#: ../../library/urllib.request.rst:1194
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../library/urllib.request.rst:1184
+#: ../../library/urllib.request.rst:1196
 msgid ""
 "In addition to the examples below, more examples are given in :ref:`urllib-"
 "howto`."
@@ -1714,28 +1724,22 @@ msgstr ""
 "Крім наведених нижче прикладів, більше прикладів наведено в :ref:`urllib-"
 "howto`."
 
-#: ../../library/urllib.request.rst:1187
+#: ../../library/urllib.request.rst:1199
 msgid ""
 "This example gets the python.org main page and displays the first 300 bytes "
-"of it. ::"
+"of it::"
 msgstr ""
-"Цей приклад отримує головну сторінку python.org і відображає її перші 300 "
-"байт. ::"
 
-#: ../../library/urllib.request.rst:1190
+#: ../../library/urllib.request.rst:1202
 msgid ""
 ">>> import urllib.request\n"
 ">>> with urllib.request.urlopen('http://www.python.org/') as f:\n"
 "...     print(f.read(300))\n"
 "...\n"
-"b'<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n"
-"\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\\n\\n\\n<html\n"
-"xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\\n\\n<head>\\n\n"
-"<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />\\n\n"
-"<title>Python Programming '"
+"b'<!doctype html>\\n<!--[if lt IE 7]>   <html class=\"no-js ie6 lt-ie7 lt-ie8 lt-ie9\">   <![endif]-->\\n<!--[if IE 7]>      <html class=\"no-js ie7 lt-ie8 lt-ie9\">          <![endif]-->\\n<!--[if IE 8]>      <html class=\"no-js ie8 lt-ie9\">"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1200
+#: ../../library/urllib.request.rst:1208
 msgid ""
 "Note that urlopen returns a bytes object.  This is because there is no way "
 "for urlopen to automatically determine the encoding of the byte stream it "
@@ -1748,52 +1752,56 @@ msgstr ""
 "HTTP. Загалом, програма декодує повернутий об’єкт bytes у рядок, як тільки "
 "вона визначить або вгадає відповідне кодування."
 
-#: ../../library/urllib.request.rst:1206
+#: ../../library/urllib.request.rst:1214
 msgid ""
-"The following W3C document, https://www.w3.org/International/O-charset\\ , "
-"lists the various ways in which an (X)HTML or an XML document could have "
+"The following HTML spec document, https://html.spec.whatwg.org/#charset, "
+"lists the various ways in which an HTML or an XML document could have "
 "specified its encoding information."
 msgstr ""
-"У наступному документі W3C, https://www.w3.org/International/O-charset\\, "
-"наведено перелік різних способів, якими документ (X)HTML або XML міг би "
-"вказати інформацію про кодування."
 
-#: ../../library/urllib.request.rst:1210
+#: ../../library/urllib.request.rst:1218
+msgid ""
+"For additional information, see the W3C document: "
+"https://www.w3.org/International/questions/qa-html-encoding-declarations."
+msgstr ""
+
+#: ../../library/urllib.request.rst:1220
 msgid ""
 "As the python.org website uses *utf-8* encoding as specified in its meta "
-"tag, we will use the same for decoding the bytes object. ::"
+"tag, we will use the same for decoding the bytes object::"
 msgstr ""
-"Оскільки веб-сайт python.org використовує кодування *utf-8*, як зазначено в "
-"його мета-тегу, ми будемо використовувати те саме для декодування об’єкта "
-"bytes. ::"
 
-#: ../../library/urllib.request.rst:1213
+#: ../../library/urllib.request.rst:1223
 msgid ""
 ">>> with urllib.request.urlopen('http://www.python.org/') as f:\n"
 "...     print(f.read(100).decode('utf-8'))\n"
 "...\n"
-"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n"
-"\"http://www.w3.org/TR/xhtml1/DTD/xhtm"
+"<!doctype html>\n"
+"<!--[if lt IE 7]>   <html class=\"no-js ie6 lt-ie7 lt-ie8 lt-ie9\">   <![endif]-->\n"
+"<!-"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1219
+#: ../../library/urllib.request.rst:1230
 msgid ""
 "It is also possible to achieve the same result without using the "
-":term:`context manager` approach. ::"
+":term:`context manager` approach::"
 msgstr ""
-"Також можна досягти того самого результату, не використовуючи підхід "
-":term:`context manager`. ::"
 
-#: ../../library/urllib.request.rst:1222
+#: ../../library/urllib.request.rst:1233
 msgid ""
 ">>> import urllib.request\n"
 ">>> f = urllib.request.urlopen('http://www.python.org/')\n"
-">>> print(f.read(100).decode('utf-8'))\n"
-"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n"
-"\"http://www.w3.org/TR/xhtml1/DTD/xhtm"
+">>> try:\n"
+"...     print(f.read(100).decode('utf-8'))\n"
+"... finally:\n"
+"...     f.close()\n"
+"...\n"
+"<!doctype html>\n"
+"<!--[if lt IE 7]>   <html class=\"no-js ie6 lt-ie7 lt-ie8 lt-ie9\">   <![endif]-->\n"
+"<!--"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1228
+#: ../../library/urllib.request.rst:1244
 msgid ""
 "In the following example, we are sending a data-stream to the stdin of a CGI"
 " and reading the data it returns to us. Note that this example will only "
@@ -1803,7 +1811,7 @@ msgstr ""
 "дані, які він повертає нам. Зауважте, що цей приклад працюватиме, лише якщо "
 "інсталяція Python підтримує SSL. ::"
 
-#: ../../library/urllib.request.rst:1232
+#: ../../library/urllib.request.rst:1248
 msgid ""
 ">>> import urllib.request\n"
 ">>> req = urllib.request.Request(url='https://localhost/cgi-bin/test.cgi',\n"
@@ -1814,12 +1822,12 @@ msgid ""
 "Got Data: \"This data is passed to stdin of the CGI\""
 msgstr ""
 
-#: ../../library/urllib.request.rst:1240
+#: ../../library/urllib.request.rst:1256
 msgid "The code for the sample CGI used in the above example is::"
 msgstr ""
 "Код для прикладу CGI, використаного у наведеному вище прикладі, такий:"
 
-#: ../../library/urllib.request.rst:1242
+#: ../../library/urllib.request.rst:1258
 msgid ""
 "#!/usr/bin/env python\n"
 "import sys\n"
@@ -1827,11 +1835,11 @@ msgid ""
 "print('Content-type: text/plain\\n\\nGot Data: \"%s\"' % data)"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1247
+#: ../../library/urllib.request.rst:1263
 msgid "Here is an example of doing a ``PUT`` request using :class:`Request`::"
 msgstr "Ось приклад виконання запиту ``PUT`` за допомогою :class:`Request`::"
 
-#: ../../library/urllib.request.rst:1249
+#: ../../library/urllib.request.rst:1265
 msgid ""
 "import urllib.request\n"
 "DATA = b'some data'\n"
@@ -1842,11 +1850,11 @@ msgid ""
 "print(f.reason)"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1257
+#: ../../library/urllib.request.rst:1273
 msgid "Use of Basic HTTP Authentication::"
 msgstr "Використання базової автентифікації HTTP::"
 
-#: ../../library/urllib.request.rst:1259
+#: ../../library/urllib.request.rst:1275
 msgid ""
 "import urllib.request\n"
 "# Create an OpenerDirector with support for Basic HTTP Authentication...\n"
@@ -1858,10 +1866,11 @@ msgid ""
 "opener = urllib.request.build_opener(auth_handler)\n"
 "# ...and install it globally so it can be used with urlopen.\n"
 "urllib.request.install_opener(opener)\n"
-"urllib.request.urlopen('http://www.example.com/login.html')"
+"with urllib.request.urlopen('http://www.example.com/login.html') as f:\n"
+"    print(f.read().decode('utf-8'))"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1271
+#: ../../library/urllib.request.rst:1288
 msgid ""
 ":func:`build_opener` provides many handlers by default, including a "
 ":class:`ProxyHandler`.  By default, :class:`ProxyHandler` uses the "
@@ -1870,14 +1879,14 @@ msgid ""
 "variable is read to obtain the HTTP proxy's URL."
 msgstr ""
 
-#: ../../library/urllib.request.rst:1277
+#: ../../library/urllib.request.rst:1294
 msgid ""
 "This example replaces the default :class:`ProxyHandler` with one that uses "
 "programmatically supplied proxy URLs, and adds proxy authorization support "
 "with :class:`ProxyBasicAuthHandler`. ::"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1281
+#: ../../library/urllib.request.rst:1298
 msgid ""
 "proxy_handler = urllib.request.ProxyHandler({'http': 'http://www.example.com:3128/'})\n"
 "proxy_auth_handler = urllib.request.ProxyBasicAuthHandler()\n"
@@ -1885,29 +1894,31 @@ msgid ""
 "\n"
 "opener = urllib.request.build_opener(proxy_handler, proxy_auth_handler)\n"
 "# This time, rather than install the OpenerDirector, we use it directly:\n"
-"opener.open('http://www.example.com/login.html')"
+"with opener.open('http://www.example.com/login.html') as f:\n"
+"   print(f.read().decode('utf-8'))"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1289
+#: ../../library/urllib.request.rst:1307
 msgid "Adding HTTP headers:"
 msgstr "Додавання заголовків HTTP:"
 
-#: ../../library/urllib.request.rst:1291
+#: ../../library/urllib.request.rst:1309
 msgid "Use the *headers* argument to the :class:`Request` constructor, or::"
 msgstr ""
 "Використовуйте аргумент *headers* для конструктора :class:`Request` або:"
 
-#: ../../library/urllib.request.rst:1293
+#: ../../library/urllib.request.rst:1311
 msgid ""
 "import urllib.request\n"
 "req = urllib.request.Request('http://www.example.com/')\n"
 "req.add_header('Referer', 'http://www.python.org/')\n"
 "# Customize the default User-Agent header value:\n"
 "req.add_header('User-Agent', 'urllib-example/0.1 (Contact: . . .)')\n"
-"r = urllib.request.urlopen(req)"
+"with urllib.request.urlopen(req) as f:\n"
+"    print(f.read().decode('utf-8'))"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1300
+#: ../../library/urllib.request.rst:1320
 msgid ""
 ":class:`OpenerDirector` automatically adds a :mailheader:`User-Agent` header"
 " to every :class:`Request`.  To change this::"
@@ -1915,15 +1926,16 @@ msgstr ""
 ":class:`OpenerDirector` автоматично додає заголовок :mailheader:`User-Agent`"
 " до кожного :class:`Request`. Щоб змінити це:"
 
-#: ../../library/urllib.request.rst:1303
+#: ../../library/urllib.request.rst:1323
 msgid ""
 "import urllib.request\n"
 "opener = urllib.request.build_opener()\n"
 "opener.addheaders = [('User-agent', 'Mozilla/5.0')]\n"
-"opener.open('http://www.example.com/')"
+"with opener.open('http://www.example.com/') as f:\n"
+"   print(f.read().decode('utf-8'))"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1308
+#: ../../library/urllib.request.rst:1329
 msgid ""
 "Also, remember that a few standard headers (:mailheader:`Content-Length`, "
 ":mailheader:`Content-Type` and :mailheader:`Host`) are added when the "
@@ -1935,7 +1947,7 @@ msgstr ""
 ":class:`Request` передається до :func:`urlopen` (або "
 ":meth:`OpenerDirector.open`)."
 
-#: ../../library/urllib.request.rst:1315
+#: ../../library/urllib.request.rst:1336
 msgid ""
 "Here is an example session that uses the ``GET`` method to retrieve a URL "
 "containing parameters::"
@@ -1943,7 +1955,7 @@ msgstr ""
 "Ось приклад сеансу, який використовує метод ``GET`` для отримання URL-"
 "адреси, що містить параметри:"
 
-#: ../../library/urllib.request.rst:1318
+#: ../../library/urllib.request.rst:1339
 msgid ""
 ">>> import urllib.request\n"
 ">>> import urllib.parse\n"
@@ -1954,7 +1966,7 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../../library/urllib.request.rst:1326
+#: ../../library/urllib.request.rst:1347
 msgid ""
 "The following example uses the ``POST`` method instead. Note that params "
 "output from urlencode is encoded to bytes before it is sent to urlopen as "
@@ -1964,7 +1976,7 @@ msgstr ""
 "Зауважте, що параметри, виведені з urlencode, кодуються до байтів перед тим,"
 " як надсилаються до urlopen як дані::"
 
-#: ../../library/urllib.request.rst:1329
+#: ../../library/urllib.request.rst:1350
 msgid ""
 ">>> import urllib.request\n"
 ">>> import urllib.parse\n"
@@ -1975,7 +1987,7 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../../library/urllib.request.rst:1337
+#: ../../library/urllib.request.rst:1358
 msgid ""
 "The following example uses an explicitly specified HTTP proxy, overriding "
 "environment settings::"
@@ -1983,7 +1995,7 @@ msgstr ""
 "У наступному прикладі використовується явно вказаний проксі-сервер HTTP, "
 "який замінює налаштування середовища:"
 
-#: ../../library/urllib.request.rst:1340
+#: ../../library/urllib.request.rst:1361
 msgid ""
 ">>> import urllib.request\n"
 ">>> proxies = {'http': 'http://proxy.example.com:8080/'}\n"
@@ -1993,7 +2005,7 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../../library/urllib.request.rst:1347
+#: ../../library/urllib.request.rst:1368
 msgid ""
 "The following example uses no proxies at all, overriding environment "
 "settings::"
@@ -2001,7 +2013,7 @@ msgstr ""
 "У наступному прикладі проксі-сервери взагалі не використовуються, замінюючи "
 "налаштування середовища:"
 
-#: ../../library/urllib.request.rst:1349
+#: ../../library/urllib.request.rst:1370
 msgid ""
 ">>> import urllib.request\n"
 ">>> opener = urllib.request.FancyURLopener({})\n"
@@ -2010,11 +2022,11 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../../library/urllib.request.rst:1357
+#: ../../library/urllib.request.rst:1378
 msgid "Legacy interface"
 msgstr "Застарілий інтерфейс"
 
-#: ../../library/urllib.request.rst:1359
+#: ../../library/urllib.request.rst:1380
 msgid ""
 "The following functions and classes are ported from the Python 2 module "
 "``urllib`` (as opposed to ``urllib2``).  They might become deprecated at "
@@ -2024,7 +2036,7 @@ msgstr ""
 "відміну від ``urllib2``). Вони можуть стати застарілими в якийсь момент у "
 "майбутньому."
 
-#: ../../library/urllib.request.rst:1365
+#: ../../library/urllib.request.rst:1386
 msgid ""
 "Copy a network object denoted by a URL to a local file. If the URL points to"
 " a local file, the object will not be copied unless filename is supplied. "
@@ -2034,7 +2046,7 @@ msgid ""
 " a remote object). Exceptions are the same as for :func:`urlopen`."
 msgstr ""
 
-#: ../../library/urllib.request.rst:1372
+#: ../../library/urllib.request.rst:1393
 msgid ""
 "The second argument, if present, specifies the file location to copy to (if "
 "absent, the location will be a tempfile with a generated name). The third "
@@ -2054,11 +2066,11 @@ msgstr ""
 "загальний розмір файлу. Третім аргументом може бути ``-1`` на старих FTP-"
 "серверах, які не повертають розмір файлу у відповідь на запит на отримання."
 
-#: ../../library/urllib.request.rst:1381
+#: ../../library/urllib.request.rst:1402
 msgid "The following example illustrates the most common usage scenario::"
 msgstr "Наступний приклад ілюструє найпоширеніший сценарій використання:"
 
-#: ../../library/urllib.request.rst:1383
+#: ../../library/urllib.request.rst:1404
 msgid ""
 ">>> import urllib.request\n"
 ">>> local_filename, headers = urllib.request.urlretrieve('http://python.org/')\n"
@@ -2066,7 +2078,7 @@ msgid ""
 ">>> html.close()"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1388
+#: ../../library/urllib.request.rst:1409
 msgid ""
 "If the *url* uses the :file:`http:` scheme identifier, the optional *data* "
 "argument may be given to specify a ``POST`` request (normally the request "
@@ -2080,7 +2092,7 @@ msgstr ""
 "форматі :mimetype:`application/x-www-form-urlencoded`; перегляньте функцію "
 ":func:`urllib.parse.urlencode`."
 
-#: ../../library/urllib.request.rst:1394
+#: ../../library/urllib.request.rst:1415
 msgid ""
 ":func:`urlretrieve` will raise :exc:`~urllib.error.ContentTooShortError` "
 "when it detects that the amount of data available  was less than the "
@@ -2088,7 +2100,7 @@ msgid ""
 "This can occur, for example, when the  download is interrupted."
 msgstr ""
 
-#: ../../library/urllib.request.rst:1399
+#: ../../library/urllib.request.rst:1420
 msgid ""
 "The *Content-Length* is treated as a lower bound: if there's more data  to "
 "read, urlretrieve reads more data, but if less data is available,  it raises"
@@ -2098,13 +2110,13 @@ msgstr ""
 "читання, urlretrieve зчитує більше даних, але якщо доступних даних менше, "
 "виникає виняток."
 
-#: ../../library/urllib.request.rst:1403
+#: ../../library/urllib.request.rst:1424
 msgid ""
 "You can still retrieve the downloaded data in this case, it is stored in the"
 " :attr:`!content` attribute of the exception instance."
 msgstr ""
 
-#: ../../library/urllib.request.rst:1406
+#: ../../library/urllib.request.rst:1427
 msgid ""
 "If no *Content-Length* header was supplied, urlretrieve can not check the "
 "size of the data it has downloaded, and just returns it.  In this case you "
@@ -2114,7 +2126,7 @@ msgstr ""
 "розмір завантажених даних і просто повертає їх. У цьому випадку ви просто "
 "повинні припустити, що завантаження пройшло успішно."
 
-#: ../../library/urllib.request.rst:1412
+#: ../../library/urllib.request.rst:1433
 msgid ""
 "Cleans up temporary files that may have been left behind by previous calls "
 "to :func:`urlretrieve`."
@@ -2122,7 +2134,7 @@ msgstr ""
 "Очищає тимчасові файли, які могли бути залишені попередніми викликами "
 ":func:`urlretrieve`."
 
-#: ../../library/urllib.request.rst:1419
+#: ../../library/urllib.request.rst:1440
 msgid ""
 "Base class for opening and reading URLs.  Unless you need to support opening"
 " objects using schemes other than :file:`http:`, :file:`ftp:`, or "
@@ -2133,7 +2145,7 @@ msgstr ""
 ":file:`http:`, :file:`ftp:`або :file:`file:`, можливо, ви захочете "
 "використовувати :class:`FancyURLopener`."
 
-#: ../../library/urllib.request.rst:1423
+#: ../../library/urllib.request.rst:1444
 msgid ""
 "By default, the :class:`URLopener` class sends a :mailheader:`User-Agent` "
 "header of ``urllib/VVV``, where *VVV* is the :mod:`urllib` version number. "
@@ -2149,7 +2161,7 @@ msgstr ""
 ":class:`FancyURLopener` і встановивши атрибуту класу :attr:`version` "
 "відповідне значення рядка у визначенні підкласу."
 
-#: ../../library/urllib.request.rst:1429
+#: ../../library/urllib.request.rst:1450
 msgid ""
 "The optional *proxies* parameter should be a dictionary mapping scheme names"
 " to proxy URLs, where an empty dictionary turns proxies off completely.  Its"
@@ -2163,7 +2175,7 @@ msgstr ""
 "використані параметри середовища проксі, якщо вони присутні, як "
 "обговорювалося у визначенні :func:`urlopen` вище."
 
-#: ../../library/urllib.request.rst:1434
+#: ../../library/urllib.request.rst:1455
 msgid ""
 "Additional keyword parameters, collected in *x509*, may be used for "
 "authentication of the client when using the :file:`https:` scheme.  The "
@@ -2176,7 +2188,7 @@ msgstr ""
 "надання ключа SSL і сертифіката; обидва потрібні для підтримки "
 "автентифікації клієнта."
 
-#: ../../library/urllib.request.rst:1439
+#: ../../library/urllib.request.rst:1460
 msgid ""
 ":class:`URLopener` objects will raise an :exc:`OSError` exception if the "
 "server returns an error code."
@@ -2184,7 +2196,7 @@ msgstr ""
 "Об’єкти :class:`URLopener` викличуть виняток :exc:`OSError`, якщо сервер "
 "повертає код помилки."
 
-#: ../../library/urllib.request.rst:1444
+#: ../../library/urllib.request.rst:1465
 msgid ""
 "Open *fullurl* using the appropriate protocol.  This method sets up cache "
 "and proxy information, then calls the appropriate open method with its input"
@@ -2198,16 +2210,16 @@ msgstr ""
 "викликається :meth:`open_unknown`. Аргумент *data* має те саме значення, що "
 "й аргумент *data* :func:`urlopen`."
 
-#: ../../library/urllib.request.rst:1450
+#: ../../library/urllib.request.rst:1471
 msgid "This method always quotes *fullurl* using :func:`~urllib.parse.quote`."
 msgstr ""
 "Цей метод завжди цитує *fullurl* за допомогою :func:`~urllib.parse.quote`."
 
-#: ../../library/urllib.request.rst:1454
+#: ../../library/urllib.request.rst:1475
 msgid "Overridable interface to open unknown URL types."
 msgstr "Перевизначений інтерфейс для відкриття невідомих типів URL."
 
-#: ../../library/urllib.request.rst:1459
+#: ../../library/urllib.request.rst:1480
 msgid ""
 "Retrieves the contents of *url* and places it in *filename*.  The return "
 "value is a tuple consisting of a local filename and either an "
@@ -2238,7 +2250,7 @@ msgstr ""
 " після кожного зчитування даних із мережі. *reporthook* ігнорується для "
 "локальних URL-адрес."
 
-#: ../../library/urllib.request.rst:1472
+#: ../../library/urllib.request.rst:1493
 msgid ""
 "If the *url* uses the :file:`http:` scheme identifier, the optional *data* "
 "argument may be given to specify a ``POST`` request (normally the request "
@@ -2252,7 +2264,7 @@ msgstr ""
 ":mimetype:`application/x-www-form-urlencoded`; перегляньте функцію "
 ":func:`urllib.parse.urlencode`."
 
-#: ../../library/urllib.request.rst:1481
+#: ../../library/urllib.request.rst:1502
 msgid ""
 "Variable that specifies the user agent of the opener object.  To get "
 ":mod:`urllib` to tell servers that it is a particular user agent, set this "
@@ -2264,7 +2276,7 @@ msgstr ""
 "встановіть це в підкласі як змінну класу або в конструкторі перед викликом "
 "базового конструктора."
 
-#: ../../library/urllib.request.rst:1491
+#: ../../library/urllib.request.rst:1512
 msgid ""
 ":class:`FancyURLopener` subclasses :class:`URLopener` providing default "
 "handling for the following HTTP response codes: 301, 302, 303, 307 and 401."
@@ -2282,14 +2294,14 @@ msgstr ""
 " відповіді 30x рекурсія обмежена значенням атрибута *maxtries*, яке за "
 "замовчуванням дорівнює 10."
 
-#: ../../library/urllib.request.rst:1498
+#: ../../library/urllib.request.rst:1519
 msgid ""
 "For all other response codes, the method "
 ":meth:`~BaseHandler.http_error_default` is called which you can override in "
 "subclasses to handle the error appropriately."
 msgstr ""
 
-#: ../../library/urllib.request.rst:1503
+#: ../../library/urllib.request.rst:1524
 msgid ""
 "According to the letter of :rfc:`2616`, 301 and 302 responses to POST "
 "requests must not be automatically redirected without confirmation by the "
@@ -2302,13 +2314,13 @@ msgstr ""
 "браузери дозволяють автоматичне перенаправлення цих відповідей, змінюючи "
 "POST на GET, і :mod:`urllib` відтворює цю поведінку."
 
-#: ../../library/urllib.request.rst:1508
+#: ../../library/urllib.request.rst:1529
 msgid ""
 "The parameters to the constructor are the same as those for "
 ":class:`URLopener`."
 msgstr "Параметри конструктора такі самі, як і для :class:`URLopener`."
 
-#: ../../library/urllib.request.rst:1512
+#: ../../library/urllib.request.rst:1533
 msgid ""
 "When performing basic authentication, a :class:`FancyURLopener` instance "
 "calls its :meth:`prompt_user_passwd` method.  The default implementation "
@@ -2322,7 +2334,7 @@ msgstr ""
 "замінити цей метод для підтримки більш відповідної поведінки, якщо це "
 "необхідно."
 
-#: ../../library/urllib.request.rst:1517
+#: ../../library/urllib.request.rst:1538
 msgid ""
 "The :class:`FancyURLopener` class offers one additional method that should "
 "be overloaded to provide the appropriate behavior:"
@@ -2330,7 +2342,7 @@ msgstr ""
 "Клас :class:`FancyURLopener` пропонує один додатковий метод, який слід "
 "перевантажити, щоб забезпечити належну поведінку:"
 
-#: ../../library/urllib.request.rst:1522
+#: ../../library/urllib.request.rst:1543
 msgid ""
 "Return information needed to authenticate the user at the given host in the "
 "specified security realm.  The return value should be a tuple, ``(user, "
@@ -2341,7 +2353,7 @@ msgstr ""
 "``(користувач, пароль)``, який можна використовувати для базової "
 "автентифікації."
 
-#: ../../library/urllib.request.rst:1526
+#: ../../library/urllib.request.rst:1547
 msgid ""
 "The implementation prompts for this information on the terminal; an "
 "application should override this method to use an appropriate interaction "
@@ -2351,11 +2363,11 @@ msgstr ""
 " метод, щоб використовувати відповідну модель взаємодії в локальному "
 "середовищі."
 
-#: ../../library/urllib.request.rst:1532
+#: ../../library/urllib.request.rst:1553
 msgid ":mod:`urllib.request` Restrictions"
 msgstr ":mod:`urllib.request` Обмеження"
 
-#: ../../library/urllib.request.rst:1538
+#: ../../library/urllib.request.rst:1559
 msgid ""
 "Currently, only the following protocols are supported: HTTP (versions 0.9 "
 "and 1.0), FTP, local files, and data URLs."
@@ -2363,11 +2375,11 @@ msgstr ""
 "Наразі підтримуються лише такі протоколи: HTTP (версії 0.9 і 1.0), FTP, "
 "локальні файли та URL-адреси даних."
 
-#: ../../library/urllib.request.rst:1541
+#: ../../library/urllib.request.rst:1562
 msgid "Added support for data URLs."
 msgstr "Додано підтримку URL-адрес даних."
 
-#: ../../library/urllib.request.rst:1543
+#: ../../library/urllib.request.rst:1564
 msgid ""
 "The caching feature of :func:`urlretrieve` has been disabled until someone "
 "finds the time to hack proper processing of Expiration time headers."
@@ -2375,13 +2387,13 @@ msgstr ""
 "Функцію кешування :func:`urlretrieve` вимкнено, доки хтось не знайде час "
 "зламати правильну обробку заголовків часу закінчення терміну дії."
 
-#: ../../library/urllib.request.rst:1546
+#: ../../library/urllib.request.rst:1567
 msgid ""
 "There should be a function to query whether a particular URL is in the "
 "cache."
 msgstr "Має бути функція для запиту, чи є певна URL-адреса в кеші."
 
-#: ../../library/urllib.request.rst:1548
+#: ../../library/urllib.request.rst:1569
 msgid ""
 "For backward compatibility, if a URL appears to point to a local file but "
 "the file can't be opened, the URL is re-interpreted using the FTP protocol."
@@ -2392,7 +2404,7 @@ msgstr ""
 "протоколу FTP. Іноді це може призвести до незрозумілих повідомлень про "
 "помилки."
 
-#: ../../library/urllib.request.rst:1552
+#: ../../library/urllib.request.rst:1573
 msgid ""
 "The :func:`urlopen` and :func:`urlretrieve` functions can cause arbitrarily "
 "long delays while waiting for a network connection to be set up.  This means"
@@ -2404,7 +2416,7 @@ msgstr ""
 "означає, що важко побудувати інтерактивний веб-клієнт за допомогою цих "
 "функцій без використання потоків."
 
-#: ../../library/urllib.request.rst:1561
+#: ../../library/urllib.request.rst:1582
 msgid ""
 "The data returned by :func:`urlopen` or :func:`urlretrieve` is the raw data "
 "returned by the server.  This may be binary data (such as an image), plain "
@@ -2420,7 +2432,7 @@ msgstr ""
 "на заголовок :mailheader:`Content-Type`. Якщо повернуті дані є HTML, ви "
 "можете використати модуль :mod:`html.parser` для їх аналізу."
 
-#: ../../library/urllib.request.rst:1570
+#: ../../library/urllib.request.rst:1591
 msgid ""
 "The code handling the FTP protocol cannot differentiate between a file and a"
 " directory.  This can lead to unexpected behavior when attempting to read a "
@@ -2452,11 +2464,11 @@ msgstr ""
 "можливість використання модуля :mod:`ftplib`, створення підкласу "
 ":class:`FancyURLopener` або зміни *_urlopener* відповідно до ваших потреб."
 
-#: ../../library/urllib.request.rst:1587
+#: ../../library/urllib.request.rst:1608
 msgid ":mod:`urllib.response` --- Response classes used by urllib"
 msgstr ":mod:`urllib.response` --- Класи відповідей, які використовує urllib"
 
-#: ../../library/urllib.request.rst:1592
+#: ../../library/urllib.request.rst:1613
 msgid ""
 "The :mod:`urllib.response` module defines functions and classes which define"
 " a minimal file-like interface, including ``read()`` and ``readline()``. "
@@ -2470,7 +2482,7 @@ msgstr ""
 ":mod:`urllib.request`. Типовий об’єкт відповіді – це екземпляр "
 ":class:`urllib.response.addinfourl`:"
 
-#: ../../library/urllib.request.rst:1601
+#: ../../library/urllib.request.rst:1622
 msgid ""
 "URL of the resource retrieved, commonly used to determine if a redirect was "
 "followed."
@@ -2478,7 +2490,7 @@ msgstr ""
 "URL-адреса отриманого ресурсу, яка зазвичай використовується для визначення "
 "того, чи було переспрямовано."
 
-#: ../../library/urllib.request.rst:1605
+#: ../../library/urllib.request.rst:1626
 msgid ""
 "Returns the headers of the response in the form of an "
 ":class:`~email.message.EmailMessage` instance."
@@ -2486,34 +2498,34 @@ msgstr ""
 "Повертає заголовки відповіді у формі екземпляра "
 ":class:`~email.message.EmailMessage`."
 
-#: ../../library/urllib.request.rst:1611
+#: ../../library/urllib.request.rst:1632
 msgid "Status code returned by server."
 msgstr "Код статусу, повернутий сервером."
 
-#: ../../library/urllib.request.rst:1615
+#: ../../library/urllib.request.rst:1636
 msgid "Deprecated in favor of :attr:`~addinfourl.url`."
 msgstr "Застаріло на користь :attr:`~addinfourl.url`."
 
-#: ../../library/urllib.request.rst:1620
+#: ../../library/urllib.request.rst:1641
 msgid "Deprecated in favor of :attr:`~addinfourl.headers`."
 msgstr "Застаріло на користь :attr:`~addinfourl.headers`."
 
-#: ../../library/urllib.request.rst:1625 ../../library/urllib.request.rst:1630
+#: ../../library/urllib.request.rst:1646 ../../library/urllib.request.rst:1651
 msgid "Deprecated in favor of :attr:`~addinfourl.status`."
 msgstr "Застаріло на користь :attr:`~addinfourl.status`."
 
-#: ../../library/urllib.request.rst:1534 ../../library/urllib.request.rst:1557
+#: ../../library/urllib.request.rst:1555 ../../library/urllib.request.rst:1578
 msgid "HTTP"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1534 ../../library/urllib.request.rst:1557
+#: ../../library/urllib.request.rst:1555 ../../library/urllib.request.rst:1578
 msgid "protocol"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1534 ../../library/urllib.request.rst:1568
+#: ../../library/urllib.request.rst:1555 ../../library/urllib.request.rst:1589
 msgid "FTP"
 msgstr ""
 
-#: ../../library/urllib.request.rst:1557
+#: ../../library/urllib.request.rst:1578
 msgid "HTML"
 msgstr ""

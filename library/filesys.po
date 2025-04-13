@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:00+0000\n"
+"POT-Creation-Date: 2025-04-04 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:06+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -37,11 +37,11 @@ msgstr ""
 "шляхами переносним способом і створення тимчасових файлів. Повний список "
 "модулів у цьому розділі:"
 
-#: ../../library/filesys.rst:29
+#: ../../library/filesys.rst:28
 msgid "Module :mod:`os`"
 msgstr "Модуль :mod:`os`"
 
-#: ../../library/filesys.rst:30
+#: ../../library/filesys.rst:29
 msgid ""
 "Operating system interfaces, including functions to work with files at a "
 "lower level than Python :term:`file objects <file object>`."
@@ -49,11 +49,11 @@ msgstr ""
 "Інтерфейси операційної системи, включаючи функції для роботи з файлами на "
 "нижчому рівні, ніж Python :term:`file objects <file object>`."
 
-#: ../../library/filesys.rst:33
+#: ../../library/filesys.rst:32
 msgid "Module :mod:`io`"
 msgstr "Модуль :mod:`io`"
 
-#: ../../library/filesys.rst:34
+#: ../../library/filesys.rst:33
 msgid ""
 "Python's built-in I/O library, including both abstract classes and some "
 "concrete classes such as file I/O."
@@ -61,11 +61,11 @@ msgstr ""
 "Вбудована бібліотека вводу-виводу Python, що включає як абстрактні класи, "
 "так і деякі конкретні класи, такі як файловий ввід-вивід."
 
-#: ../../library/filesys.rst:37
+#: ../../library/filesys.rst:36
 msgid "Built-in function :func:`open`"
 msgstr "Вбудована функція :func:`open`"
 
-#: ../../library/filesys.rst:38
+#: ../../library/filesys.rst:37
 msgid "The standard way to open files for reading and writing with Python."
 msgstr ""
 "Стандартний спосіб відкриття файлів для читання та запису за допомогою "
