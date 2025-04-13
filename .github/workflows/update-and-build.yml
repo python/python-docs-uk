@@ -5,13 +5,15 @@ on:
     - cron: '0 6 * * *'
   push:
     branches: ['main']
+  pull_request:
+    branches: ['main']
   workflow_dispatch:
 
 jobs:
+
   update-translation:
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
       matrix:
         version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
     steps:
@@ -20,40 +22,66 @@ jobs:
           access_token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@master
         with:
-          python-version: 3
-      - run: sudo apt-get install -y gettext
+          python-version: '3.12'
+      - run: sudo apt-get install -y gettext rsync
+      - run: pip install transifex-python six sphinx-intl blurb
       - run: curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
         working-directory: /usr/local/bin
-      - run: pip install requests cogapp polib transifex-python sphinx-lint sphinx-intl blurb six
+      - uses: actions/checkout@master
+        with:
+          repository: python/cpython
+          ref: main
+      - run: make gettext
+        working-directory: ./Doc
+      - run: sphinx-intl create-txconfig
+        working-directory: ./Doc/build
+      - run: sphinx-intl update-txconfig-resources --transifex-organization-name python-doc --transifex-project-name python-newest -d . -p gettext
+        working-directory: ./Doc/build
+        env:
+          TX_TOKEN: ${{ secrets.TX_TOKEN }}
+      - run: tx pull -l uk --force --skip
+        working-directory: ./Doc/build
+        env:
+          TX_TOKEN: ${{ secrets.TX_TOKEN }}
+      - run: find -name "*.po" -exec msgcat --no-location -o {} {} \;
+        working-directory: ./Doc/build
       - uses: actions/checkout@master
         with:
           ref: ${{ matrix.version }}
-      - run: .github/scripts/manage_translation.py recreate_config
-        env:
-          TX_TOKEN: ${{ secrets.TX_TOKEN }}
-      - run: .github/scripts/manage_translation.py fetch_translations
-        env:
-          TX_TOKEN: ${{ secrets.TX_TOKEN }}
-      - run: git config --local user.email github-actions@github.com
-      - run: git config --local user.name "GitHub Action's update-translation job"
-      - run: git add .
-      - run: git commit -m 'Update translation from Transifex' || true
+          path: ./Doc/build/uk/LC_MESSAGES
+      - run: |
+          git config --local user.email github-actions@github.com
+          git config --local user.name "GitHub Action's update-translation job"
+          git add -f .
+          git commit -m 'Update translation from Transifex' || true
+        working-directory: ./Doc/build/uk/LC_MESSAGES
       - uses: ad-m/github-push-action@master
         with:
           branch: ${{ matrix.version }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: peter-evans/repository-dispatch@main
+          directory: ./Doc/build/uk/LC_MESSAGES
+
+  lint-translation:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
+    needs: ['update-translation']
+    continue-on-error: true
+    steps:
+      - uses: actions/setup-python@master
         with:
-          python-version: 3
+          python-version: '3.12'
+      - run: pip install sphinx-lint
       - uses: actions/checkout@master
         with:
           ref: ${{ matrix.version }}
       - uses: rffontenelle/sphinx-lint-problem-matcher@v1.0.0
       - run: sphinx-lint
+
   build-translation:
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
       matrix:
         version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
         format: [html, latex]
@@ -61,7 +89,7 @@ jobs:
     steps:
       - uses: actions/setup-python@master
         with:
-          python-version: 3.12  # pin for Sphinx 3.4.3 in 3.10 branch (see #63)
+          python-version: '3.12'
       - uses: actions/checkout@master
         with:
           repository: python/cpython
@@ -75,16 +103,17 @@ jobs:
       - run: git pull
         working-directory: ./Doc/locales/uk/LC_MESSAGES
       - uses: sphinx-doc/github-problem-matcher@v1.1
-      - run: make -e SPHINXOPTS=" -D language='uk' -W --keep-going" ${{ matrix.format }}
+      - run: make -e SPHINXOPTS="-D language='uk' -D gettext_compact=0 --keep-going --color" SPHINXERRORHANDLING="" ${{ matrix.format }}
         working-directory: ./Doc
       - uses: actions/upload-artifact@master
+        if: success() || failure()
         with:
           name: build-${{ matrix.version }}-${{ matrix.format }}
           path: Doc/build/${{ matrix.format }}
+
   output-pdf:
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
       matrix:
         version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
     needs: ['build-translation']
@@ -94,7 +123,7 @@ jobs:
           name: build-${{ matrix.version }}-latex
       - run: sudo apt-get update
       - run: sudo apt-get install -y latexmk texlive-xetex fonts-freefont-otf xindy
-      - run: make -i
+      - run: make
       - uses: actions/upload-artifact@master
         with:
           name: build-${{ matrix.version }}-pdf
