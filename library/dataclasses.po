@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-11 14:19+0000\n"
+"POT-Creation-Date: 2025-04-18 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:03+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -538,6 +538,15 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:352
 msgid ""
+"``InitVar[T]`` type annotations describe variables that are :ref:`init-only "
+"<dataclasses-init-only-variables>`. Fields annotated with :class:`!InitVar` "
+"are considered pseudo-fields, and thus are neither returned by the "
+":func:`fields` function nor used in any way except adding them as parameters"
+" to :meth:`~object.__init__` and an optional :meth:`__post_init__`."
+msgstr ""
+
+#: ../../library/dataclasses.rst:361
+msgid ""
 "Returns a tuple of :class:`Field` objects that define the fields for this "
 "dataclass.  Accepts either a dataclass, or an instance of a dataclass. "
 "Raises :exc:`TypeError` if not passed a dataclass or instance of one. Does "
@@ -548,7 +557,7 @@ msgstr ""
 ":exc:`TypeError`, якщо не передано клас даних або його екземпляр. Не "
 "повертає псевдополя, які є ``ClassVar`` або ``InitVar``."
 
-#: ../../library/dataclasses.rst:359
+#: ../../library/dataclasses.rst:368
 msgid ""
 "Converts the dataclass *obj* to a dict (by using the factory function "
 "*dict_factory*).  Each dataclass is converted to a dict of its fields, as "
@@ -556,11 +565,11 @@ msgid ""
 "into.  Other objects are copied with :func:`copy.deepcopy`."
 msgstr ""
 
-#: ../../library/dataclasses.rst:365
+#: ../../library/dataclasses.rst:374
 msgid "Example of using :func:`!asdict` on nested dataclasses::"
 msgstr ""
 
-#: ../../library/dataclasses.rst:367
+#: ../../library/dataclasses.rst:376
 msgid ""
 "@dataclass\n"
 "class Point:\n"
@@ -578,21 +587,21 @@ msgid ""
 "assert asdict(c) == {'mylist': [{'x': 0, 'y': 0}, {'x': 10, 'y': 4}]}"
 msgstr ""
 
-#: ../../library/dataclasses.rst:382 ../../library/dataclasses.rst:402
+#: ../../library/dataclasses.rst:391 ../../library/dataclasses.rst:411
 msgid "To create a shallow copy, the following workaround may be used::"
 msgstr "Щоб створити дрібну копію, можна використати такий обхідний шлях:"
 
-#: ../../library/dataclasses.rst:384
+#: ../../library/dataclasses.rst:393
 msgid "{field.name: getattr(obj, field.name) for field in fields(obj)}"
 msgstr ""
 
-#: ../../library/dataclasses.rst:386
+#: ../../library/dataclasses.rst:395
 msgid ""
 ":func:`!asdict` raises :exc:`TypeError` if *obj* is not a dataclass "
 "instance."
 msgstr ""
 
-#: ../../library/dataclasses.rst:391
+#: ../../library/dataclasses.rst:400
 msgid ""
 "Converts the dataclass *obj* to a tuple (by using the factory function "
 "*tuple_factory*).  Each dataclass is converted to a tuple of its field "
@@ -600,27 +609,27 @@ msgid ""
 "objects are copied with :func:`copy.deepcopy`."
 msgstr ""
 
-#: ../../library/dataclasses.rst:397
+#: ../../library/dataclasses.rst:406
 msgid "Continuing from the previous example::"
 msgstr "Продовжуючи попередній приклад:"
 
-#: ../../library/dataclasses.rst:399
+#: ../../library/dataclasses.rst:408
 msgid ""
 "assert astuple(p) == (10, 20)\n"
 "assert astuple(c) == ([(0, 0), (10, 4)],)"
 msgstr ""
 
-#: ../../library/dataclasses.rst:404
+#: ../../library/dataclasses.rst:413
 msgid "tuple(getattr(obj, field.name) for field in dataclasses.fields(obj))"
 msgstr ""
 
-#: ../../library/dataclasses.rst:406
+#: ../../library/dataclasses.rst:415
 msgid ""
 ":func:`!astuple` raises :exc:`TypeError` if *obj* is not a dataclass "
 "instance."
 msgstr ""
 
-#: ../../library/dataclasses.rst:411
+#: ../../library/dataclasses.rst:420
 msgid ""
 "Creates a new dataclass with name *cls_name*, fields as defined in *fields*,"
 " base classes as given in *bases*, and initialized with a namespace as given"
@@ -632,14 +641,14 @@ msgid ""
 ":func:`@dataclass <dataclass>`."
 msgstr ""
 
-#: ../../library/dataclasses.rst:421
+#: ../../library/dataclasses.rst:430
 msgid ""
 "If *module* is defined, the :attr:`!__module__` attribute of the dataclass "
 "is set to that value. By default, it is set to the module name of the "
 "caller."
 msgstr ""
 
-#: ../../library/dataclasses.rst:425
+#: ../../library/dataclasses.rst:434
 msgid ""
 "This function is not strictly required, because any Python mechanism for "
 "creating a new class with :attr:`!__annotations__` can then apply the "
@@ -647,7 +656,7 @@ msgid ""
 "dataclass.  This function is provided as a convenience.  For example::"
 msgstr ""
 
-#: ../../library/dataclasses.rst:431
+#: ../../library/dataclasses.rst:440
 msgid ""
 "C = make_dataclass('C',\n"
 "                   [('x', int),\n"
@@ -656,11 +665,11 @@ msgid ""
 "                   namespace={'add_one': lambda self: self.x + 1})"
 msgstr ""
 
-#: ../../library/dataclasses.rst:437
+#: ../../library/dataclasses.rst:446
 msgid "Is equivalent to::"
 msgstr "Еквівалентно::"
 
-#: ../../library/dataclasses.rst:439
+#: ../../library/dataclasses.rst:448
 msgid ""
 "@dataclass\n"
 "class C:\n"
@@ -672,7 +681,7 @@ msgid ""
 "        return self.x + 1"
 msgstr ""
 
-#: ../../library/dataclasses.rst:450
+#: ../../library/dataclasses.rst:459
 msgid ""
 "Creates a new object of the same type as *obj*, replacing fields with values"
 " from *changes*.  If *obj* is not a Data Class, raises :exc:`TypeError`.  If"
@@ -680,27 +689,27 @@ msgid ""
 ":exc:`TypeError`."
 msgstr ""
 
-#: ../../library/dataclasses.rst:455
+#: ../../library/dataclasses.rst:464
 msgid ""
 "The newly returned object is created by calling the :meth:`~object.__init__`"
 " method of the dataclass.  This ensures that :meth:`__post_init__`, if "
 "present, is also called."
 msgstr ""
 
-#: ../../library/dataclasses.rst:459
+#: ../../library/dataclasses.rst:468
 msgid ""
 "Init-only variables without default values, if any exist, must be specified "
 "on the call to :func:`!replace` so that they can be passed to "
 ":meth:`!__init__` and :meth:`__post_init__`."
 msgstr ""
 
-#: ../../library/dataclasses.rst:463
+#: ../../library/dataclasses.rst:472
 msgid ""
 "It is an error for *changes* to contain any fields that are defined as "
 "having ``init=False``.  A :exc:`ValueError` will be raised in this case."
 msgstr ""
 
-#: ../../library/dataclasses.rst:467
+#: ../../library/dataclasses.rst:476
 msgid ""
 "Be forewarned about how ``init=False`` fields work during a call to "
 ":func:`!replace`.  They are not copied from the source object, but rather "
@@ -711,19 +720,19 @@ msgid ""
 "handles instance copying."
 msgstr ""
 
-#: ../../library/dataclasses.rst:476
+#: ../../library/dataclasses.rst:485
 msgid ""
 "Dataclass instances are also supported by generic function "
 ":func:`copy.replace`."
 msgstr ""
 
-#: ../../library/dataclasses.rst:480
+#: ../../library/dataclasses.rst:489
 msgid ""
 "Return ``True`` if its parameter is a dataclass (including subclasses of a "
 "dataclass) or an instance of one, otherwise return ``False``."
 msgstr ""
 
-#: ../../library/dataclasses.rst:483
+#: ../../library/dataclasses.rst:492
 msgid ""
 "If you need to know if a class is an instance of a dataclass (and not a "
 "dataclass itself), then add a further check for ``not isinstance(obj, "
@@ -733,19 +742,19 @@ msgstr ""
 "класом даних), тоді додайте додаткову перевірку для ``not isinstance(obj, "
 "type)``::"
 
-#: ../../library/dataclasses.rst:487
+#: ../../library/dataclasses.rst:496
 msgid ""
 "def is_dataclass_instance(obj):\n"
 "    return is_dataclass(obj) and not isinstance(obj, type)"
 msgstr ""
 
-#: ../../library/dataclasses.rst:492
+#: ../../library/dataclasses.rst:501
 msgid "A sentinel value signifying a missing default or default_factory."
 msgstr ""
 "Дозорне значення, яке вказує на відсутність параметра default або "
 "default_factory."
 
-#: ../../library/dataclasses.rst:496
+#: ../../library/dataclasses.rst:505
 msgid ""
 "A sentinel value used as a type annotation.  Any fields after a pseudo-field"
 " with the type of :const:`!KW_ONLY` are marked as keyword-only fields.  Note"
@@ -756,7 +765,7 @@ msgid ""
 "the class is instantiated."
 msgstr ""
 
-#: ../../library/dataclasses.rst:505
+#: ../../library/dataclasses.rst:514
 msgid ""
 "In this example, the fields ``y`` and ``z`` will be marked as keyword-only "
 "fields::"
@@ -764,7 +773,7 @@ msgstr ""
 "У цьому прикладі поля ``y`` і ``z`` будуть позначені як поля лише для "
 "ключових слів:"
 
-#: ../../library/dataclasses.rst:507
+#: ../../library/dataclasses.rst:516
 msgid ""
 "@dataclass\n"
 "class Point:\n"
@@ -776,24 +785,24 @@ msgid ""
 "p = Point(0, y=1.5, z=2.0)"
 msgstr ""
 
-#: ../../library/dataclasses.rst:516
+#: ../../library/dataclasses.rst:525
 msgid ""
 "In a single dataclass, it is an error to specify more than one field whose "
 "type is :const:`!KW_ONLY`."
 msgstr ""
 
-#: ../../library/dataclasses.rst:523
+#: ../../library/dataclasses.rst:532
 msgid ""
 "Raised when an implicitly defined :meth:`~object.__setattr__` or "
 ":meth:`~object.__delattr__` is called on a dataclass which was defined with "
 "``frozen=True``. It is a subclass of :exc:`AttributeError`."
 msgstr ""
 
-#: ../../library/dataclasses.rst:530
+#: ../../library/dataclasses.rst:539
 msgid "Post-init processing"
 msgstr "Обробка після ініціалізації"
 
-#: ../../library/dataclasses.rst:534
+#: ../../library/dataclasses.rst:543
 msgid ""
 "When defined on the class, it will be called by the generated "
 ":meth:`~object.__init__`, normally as :meth:`!self.__post_init__`. However, "
@@ -803,7 +812,7 @@ msgid ""
 "automatically be called."
 msgstr ""
 
-#: ../../library/dataclasses.rst:541
+#: ../../library/dataclasses.rst:550
 msgid ""
 "Among other uses, this allows for initializing field values that depend on "
 "one or more other fields.  For example::"
@@ -811,7 +820,7 @@ msgstr ""
 "Серед іншого використання це дозволяє ініціалізувати значення полів, які "
 "залежать від одного або кількох інших полів. Наприклад::"
 
-#: ../../library/dataclasses.rst:544
+#: ../../library/dataclasses.rst:553
 msgid ""
 "@dataclass\n"
 "class C:\n"
@@ -823,7 +832,7 @@ msgid ""
 "        self.c = self.a + self.b"
 msgstr ""
 
-#: ../../library/dataclasses.rst:553
+#: ../../library/dataclasses.rst:562
 msgid ""
 "The :meth:`~object.__init__` method generated by :func:`@dataclass "
 "<dataclass>` does not call base class :meth:`!__init__` methods. If the base"
@@ -831,7 +840,7 @@ msgid ""
 "to call this method in a :meth:`__post_init__` method::"
 msgstr ""
 
-#: ../../library/dataclasses.rst:558
+#: ../../library/dataclasses.rst:567
 msgid ""
 "class Rectangle:\n"
 "    def __init__(self, height, width):\n"
@@ -846,25 +855,25 @@ msgid ""
 "        super().__init__(self.side, self.side)"
 msgstr ""
 
-#: ../../library/dataclasses.rst:570
+#: ../../library/dataclasses.rst:579
 msgid ""
 "Note, however, that in general the dataclass-generated :meth:`!__init__` "
 "methods don't need to be called, since the derived dataclass will take care "
 "of initializing all fields of any base class that is a dataclass itself."
 msgstr ""
 
-#: ../../library/dataclasses.rst:574
+#: ../../library/dataclasses.rst:583
 msgid ""
 "See the section below on init-only variables for ways to pass parameters to "
 ":meth:`!__post_init__`.  Also see the warning about how :func:`replace` "
 "handles ``init=False`` fields."
 msgstr ""
 
-#: ../../library/dataclasses.rst:581
+#: ../../library/dataclasses.rst:590
 msgid "Class variables"
 msgstr "Змінні класу"
 
-#: ../../library/dataclasses.rst:583
+#: ../../library/dataclasses.rst:592
 msgid ""
 "One of the few places where :func:`@dataclass <dataclass>` actually inspects"
 " the type of a field is to determine if a field is a class variable as "
@@ -875,16 +884,16 @@ msgid ""
 ":func:`fields` function."
 msgstr ""
 
-#: ../../library/dataclasses.rst:594
+#: ../../library/dataclasses.rst:603
 msgid "Init-only variables"
 msgstr "Змінні лише для ініціалізації"
 
-#: ../../library/dataclasses.rst:596
+#: ../../library/dataclasses.rst:605
 msgid ""
 "Another place where :func:`@dataclass <dataclass>` inspects a type "
 "annotation is to determine if a field is an init-only variable.  It does "
-"this by seeing if the type of a field is of type ``dataclasses.InitVar``.  "
-"If a field is an ``InitVar``, it is considered a pseudo-field called an "
+"this by seeing if the type of a field is of type :class:`InitVar`.  If a "
+"field is an :class:`InitVar`, it is considered a pseudo-field called an "
 "init-only field.  As it is not a true field, it is not returned by the "
 "module-level :func:`fields` function.  Init-only fields are added as "
 "parameters to the generated :meth:`~object.__init__` method, and are passed "
@@ -892,7 +901,7 @@ msgid ""
 "by dataclasses."
 msgstr ""
 
-#: ../../library/dataclasses.rst:606
+#: ../../library/dataclasses.rst:615
 msgid ""
 "For example, suppose a field will be initialized from a database, if a value"
 " is not provided when creating the class::"
@@ -900,7 +909,7 @@ msgstr ""
 "Наприклад, припустимо, що поле буде ініціалізовано з бази даних, якщо під "
 "час створення класу не вказано значення::"
 
-#: ../../library/dataclasses.rst:609
+#: ../../library/dataclasses.rst:618
 msgid ""
 "@dataclass\n"
 "class C:\n"
@@ -915,17 +924,17 @@ msgid ""
 "c = C(10, database=my_database)"
 msgstr ""
 
-#: ../../library/dataclasses.rst:621
+#: ../../library/dataclasses.rst:630
 msgid ""
 "In this case, :func:`fields` will return :class:`Field` objects for "
 ":attr:`!i` and :attr:`!j`, but not for :attr:`!database`."
 msgstr ""
 
-#: ../../library/dataclasses.rst:627
+#: ../../library/dataclasses.rst:636
 msgid "Frozen instances"
 msgstr "Заморожені екземпляри"
 
-#: ../../library/dataclasses.rst:629
+#: ../../library/dataclasses.rst:638
 msgid ""
 "It is not possible to create truly immutable Python objects.  However, by "
 "passing ``frozen=True`` to the :func:`@dataclass <dataclass>` decorator you "
@@ -934,18 +943,18 @@ msgid ""
 "class.  These methods will raise a :exc:`FrozenInstanceError` when invoked."
 msgstr ""
 
-#: ../../library/dataclasses.rst:635
+#: ../../library/dataclasses.rst:644
 msgid ""
 "There is a tiny performance penalty when using ``frozen=True``: "
 ":meth:`~object.__init__` cannot use simple assignment to initialize fields, "
 "and must use :meth:`!object.__setattr__`."
 msgstr ""
 
-#: ../../library/dataclasses.rst:644
+#: ../../library/dataclasses.rst:653
 msgid "Inheritance"
 msgstr "Спадщина"
 
-#: ../../library/dataclasses.rst:646
+#: ../../library/dataclasses.rst:655
 msgid ""
 "When the dataclass is being created by the :func:`@dataclass <dataclass>` "
 "decorator, it looks through all of the class's base classes in reverse MRO "
@@ -957,7 +966,7 @@ msgid ""
 "order, derived classes override base classes.  An example::"
 msgstr ""
 
-#: ../../library/dataclasses.rst:656
+#: ../../library/dataclasses.rst:665
 msgid ""
 "@dataclass\n"
 "class Base:\n"
@@ -970,28 +979,28 @@ msgid ""
 "    x: int = 15"
 msgstr ""
 
-#: ../../library/dataclasses.rst:666
+#: ../../library/dataclasses.rst:675
 msgid ""
 "The final list of fields is, in order, :attr:`!x`, :attr:`!y`, :attr:`!z`.  "
 "The final type of :attr:`!x` is :class:`int`, as specified in class "
 ":class:`!C`."
 msgstr ""
 
-#: ../../library/dataclasses.rst:669
+#: ../../library/dataclasses.rst:678
 msgid ""
 "The generated :meth:`~object.__init__` method for :class:`!C` will look "
 "like::"
 msgstr ""
 
-#: ../../library/dataclasses.rst:671
+#: ../../library/dataclasses.rst:680
 msgid "def __init__(self, x: int = 15, y: int = 0, z: int = 10):"
 msgstr ""
 
-#: ../../library/dataclasses.rst:674
+#: ../../library/dataclasses.rst:683
 msgid "Re-ordering of keyword-only parameters in :meth:`!__init__`"
 msgstr ""
 
-#: ../../library/dataclasses.rst:676
+#: ../../library/dataclasses.rst:685
 msgid ""
 "After the parameters needed for :meth:`~object.__init__` are computed, any "
 "keyword-only parameters are moved to come after all regular (non-keyword-"
@@ -999,14 +1008,14 @@ msgid ""
 "implemented in Python: they must come after non-keyword-only parameters."
 msgstr ""
 
-#: ../../library/dataclasses.rst:682
+#: ../../library/dataclasses.rst:691
 msgid ""
 "In this example, :attr:`!Base.y`, :attr:`!Base.w`, and :attr:`!D.t` are "
 "keyword-only fields, and :attr:`!Base.x` and :attr:`!D.z` are regular "
 "fields::"
 msgstr ""
 
-#: ../../library/dataclasses.rst:685
+#: ../../library/dataclasses.rst:694
 msgid ""
 "@dataclass\n"
 "class Base:\n"
@@ -1021,18 +1030,18 @@ msgid ""
 "    t: int = field(kw_only=True, default=0)"
 msgstr ""
 
-#: ../../library/dataclasses.rst:697
+#: ../../library/dataclasses.rst:706
 msgid ""
 "The generated :meth:`!__init__` method for :class:`!D` will look like::"
 msgstr ""
 
-#: ../../library/dataclasses.rst:699
+#: ../../library/dataclasses.rst:708
 msgid ""
 "def __init__(self, x: Any = 15.0, z: int = 10, *, y: int = 0, w: int = 1, t:"
 " int = 0):"
 msgstr ""
 
-#: ../../library/dataclasses.rst:701
+#: ../../library/dataclasses.rst:710
 msgid ""
 "Note that the parameters have been re-ordered from how they appear in the "
 "list of fields: parameters derived from regular fields are followed by "
@@ -1042,28 +1051,28 @@ msgstr ""
 "відображаються в списку полів: за параметрами, отриманими зі звичайних "
 "полів, слідують параметри, отримані з полів лише з ключовими словами."
 
-#: ../../library/dataclasses.rst:705
+#: ../../library/dataclasses.rst:714
 msgid ""
 "The relative ordering of keyword-only parameters is maintained in the re-"
 "ordered :meth:`!__init__` parameter list."
 msgstr ""
 
-#: ../../library/dataclasses.rst:710
+#: ../../library/dataclasses.rst:719
 msgid "Default factory functions"
 msgstr "Стандартні заводські функції"
 
-#: ../../library/dataclasses.rst:712
+#: ../../library/dataclasses.rst:721
 msgid ""
 "If a :func:`field` specifies a *default_factory*, it is called with zero "
 "arguments when a default value for the field is needed.  For example, to "
 "create a new instance of a list, use::"
 msgstr ""
 
-#: ../../library/dataclasses.rst:716
+#: ../../library/dataclasses.rst:725
 msgid "mylist: list = field(default_factory=list)"
 msgstr ""
 
-#: ../../library/dataclasses.rst:718
+#: ../../library/dataclasses.rst:727
 msgid ""
 "If a field is excluded from :meth:`~object.__init__` (using ``init=False``) "
 "and the field also specifies *default_factory*, then the default factory "
@@ -1072,11 +1081,11 @@ msgid ""
 "initial value."
 msgstr ""
 
-#: ../../library/dataclasses.rst:725
+#: ../../library/dataclasses.rst:734
 msgid "Mutable default values"
 msgstr "Змінні значення за замовчуванням"
 
-#: ../../library/dataclasses.rst:727
+#: ../../library/dataclasses.rst:736
 msgid ""
 "Python stores default member variable values in class attributes. Consider "
 "this example, not using dataclasses::"
@@ -1084,7 +1093,7 @@ msgstr ""
 "Python зберігає значення змінних членів за замовчуванням в атрибутах класу. "
 "Розглянемо цей приклад, не використовуючи класи даних::"
 
-#: ../../library/dataclasses.rst:730
+#: ../../library/dataclasses.rst:739
 msgid ""
 "class C:\n"
 "    x = []\n"
@@ -1099,17 +1108,17 @@ msgid ""
 "assert o1.x is o2.x"
 msgstr ""
 
-#: ../../library/dataclasses.rst:742
+#: ../../library/dataclasses.rst:751
 msgid ""
 "Note that the two instances of class :class:`!C` share the same class "
 "variable :attr:`!x`, as expected."
 msgstr ""
 
-#: ../../library/dataclasses.rst:745
+#: ../../library/dataclasses.rst:754
 msgid "Using dataclasses, *if* this code was valid::"
 msgstr "Використання класів даних, *якщо* цей код дійсний::"
 
-#: ../../library/dataclasses.rst:747
+#: ../../library/dataclasses.rst:756
 msgid ""
 "@dataclass\n"
 "class D:\n"
@@ -1118,11 +1127,11 @@ msgid ""
 "        self.x.append(element)"
 msgstr ""
 
-#: ../../library/dataclasses.rst:753
+#: ../../library/dataclasses.rst:762
 msgid "it would generate code similar to::"
 msgstr "це створить код, подібний до::"
 
-#: ../../library/dataclasses.rst:755
+#: ../../library/dataclasses.rst:764
 msgid ""
 "class D:\n"
 "    x = []\n"
@@ -1134,7 +1143,7 @@ msgid ""
 "assert D().x is D().x"
 msgstr ""
 
-#: ../../library/dataclasses.rst:764
+#: ../../library/dataclasses.rst:773
 msgid ""
 "This has the same issue as the original example using class :class:`!C`. "
 "That is, two instances of class :class:`!D` that do not specify a value for "
@@ -1148,7 +1157,7 @@ msgid ""
 "errors."
 msgstr ""
 
-#: ../../library/dataclasses.rst:775
+#: ../../library/dataclasses.rst:784
 msgid ""
 "Using default factory functions is a way to create new instances of mutable "
 "types as default values for fields::"
@@ -1156,7 +1165,7 @@ msgstr ""
 "Використання заводських функцій за замовчуванням — це спосіб створення нових"
 " екземплярів змінних типів як значень за замовчуванням для полів::"
 
-#: ../../library/dataclasses.rst:778
+#: ../../library/dataclasses.rst:787
 msgid ""
 "@dataclass\n"
 "class D:\n"
@@ -1165,38 +1174,38 @@ msgid ""
 "assert D().x is not D().x"
 msgstr ""
 
-#: ../../library/dataclasses.rst:784
+#: ../../library/dataclasses.rst:793
 msgid ""
 "Instead of looking for and disallowing objects of type :class:`list`, "
 ":class:`dict`, or :class:`set`, unhashable objects are now not allowed as "
 "default values.  Unhashability is used to approximate mutability."
 msgstr ""
 
-#: ../../library/dataclasses.rst:791
+#: ../../library/dataclasses.rst:800
 msgid "Descriptor-typed fields"
 msgstr ""
 
-#: ../../library/dataclasses.rst:793
+#: ../../library/dataclasses.rst:802
 msgid ""
 "Fields that are assigned :ref:`descriptor objects <descriptors>` as their "
 "default value have the following special behaviors:"
 msgstr ""
 
-#: ../../library/dataclasses.rst:796
+#: ../../library/dataclasses.rst:805
 msgid ""
 "The value for the field passed to the dataclass's :meth:`~object.__init__` "
 "method is passed to the descriptor's :meth:`~object.__set__` method rather "
 "than overwriting the descriptor object."
 msgstr ""
 
-#: ../../library/dataclasses.rst:800
+#: ../../library/dataclasses.rst:809
 msgid ""
 "Similarly, when getting or setting the field, the descriptor's "
 ":meth:`~object.__get__` or :meth:`!__set__` method is called rather than "
 "returning or overwriting the descriptor object."
 msgstr ""
 
-#: ../../library/dataclasses.rst:804
+#: ../../library/dataclasses.rst:813
 msgid ""
 "To determine whether a field contains a default value, :func:`@dataclass "
 "<dataclass>` will call the descriptor's :meth:`!__get__` method using its "
@@ -1206,7 +1215,7 @@ msgid ""
 "in this situation, no default value will be provided for the field."
 msgstr ""
 
-#: ../../library/dataclasses.rst:814
+#: ../../library/dataclasses.rst:823
 msgid ""
 "class IntConversionDescriptor:\n"
 "    def __init__(self, *, default):\n"
@@ -1234,7 +1243,7 @@ msgid ""
 "print(i.quantity_on_hand)   # 2"
 msgstr ""
 
-#: ../../library/dataclasses.rst:839
+#: ../../library/dataclasses.rst:848
 msgid ""
 "Note that if a field is annotated with a descriptor type, but is not "
 "assigned a descriptor object as its default value, the field will act like a"
