@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-11 14:19+0000\n"
+"POT-Creation-Date: 2025-04-18 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 00:47+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -20,6 +20,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: ../../tools/templates/_docs_by_version.html:10
+msgid "Stable"
+msgstr "Стабільний"
+
+#: ../../tools/templates/_docs_by_version.html:11
+msgid "In development"
+msgstr "В розробці"
 
 #: ../../tools/templates/customsourcelink.html:3
 msgid "This Page"
@@ -446,39 +454,31 @@ msgstr "Завантажте ці документи"
 msgid "Docs by version"
 msgstr "Документи за версіями"
 
-#: ../../tools/templates/indexsidebar.html:5
-msgid "Stable"
-msgstr "Стабільний"
-
-#: ../../tools/templates/indexsidebar.html:6
-msgid "In development"
-msgstr "В розробці"
-
 #: ../../tools/templates/indexsidebar.html:7
 msgid "All versions"
 msgstr "Всі версії"
 
-#: ../../tools/templates/indexsidebar.html:10
+#: ../../tools/templates/indexsidebar.html:9
 msgid "Other resources"
 msgstr "Інші ресурси"
 
-#: ../../tools/templates/indexsidebar.html:13
+#: ../../tools/templates/indexsidebar.html:12
 msgid "PEP Index"
 msgstr "Індекс PEP"
 
-#: ../../tools/templates/indexsidebar.html:14
+#: ../../tools/templates/indexsidebar.html:13
 msgid "Beginner's Guide"
 msgstr "Посібник для початківців"
 
-#: ../../tools/templates/indexsidebar.html:15
+#: ../../tools/templates/indexsidebar.html:14
 msgid "Book List"
 msgstr "Список книг"
 
-#: ../../tools/templates/indexsidebar.html:16
+#: ../../tools/templates/indexsidebar.html:15
 msgid "Audio/Visual Talks"
 msgstr "Аудіо/візуальні бесіди"
 
-#: ../../tools/templates/indexsidebar.html:17
+#: ../../tools/templates/indexsidebar.html:16
 msgid "Python Developer’s Guide"
 msgstr "Посібник розробника Python"
 
