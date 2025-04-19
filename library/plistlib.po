@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-11 14:19+0000\n"
+"POT-Creation-Date: 2025-04-18 14:18+0000\n"
 "PO-Revision-Date: 2021-06-28 01:11+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -262,43 +262,39 @@ msgstr ""
 "Обгортає :class:`int`. Це використовується під час читання або запису даних,"
 " закодованих NSKeyedArchiver, які містять UID (див. посібник PList)."
 
-#: ../../library/plistlib.rst:150
-msgid ""
-"It has one attribute, :attr:`data`, which can be used to retrieve the int "
-"value of the UID.  :attr:`data` must be in the range ``0 <= data < 2**64``."
+#: ../../library/plistlib.rst:152
+msgid "Int value of the UID.  It must be in the range ``0 <= data < 2**64``."
 msgstr ""
-"Він має один атрибут, :attr:`data`, який можна використовувати для отримання"
-" int-значення UID. :attr:`data` має бути в діапазоні ``0 <= data < 2**64``."
 
-#: ../../library/plistlib.rst:156
+#: ../../library/plistlib.rst:157
 msgid "The following constants are available:"
 msgstr "Доступні такі константи:"
 
-#: ../../library/plistlib.rst:160
+#: ../../library/plistlib.rst:161
 msgid "The XML format for plist files."
 msgstr "Формат XML для файлів plist."
 
-#: ../../library/plistlib.rst:167
+#: ../../library/plistlib.rst:168
 msgid "The binary format for plist files"
 msgstr "Двійковий формат для файлів plist"
 
-#: ../../library/plistlib.rst:172
+#: ../../library/plistlib.rst:173
 msgid "The module defines the following exceptions:"
 msgstr ""
 
-#: ../../library/plistlib.rst:176
+#: ../../library/plistlib.rst:177
 msgid "Raised when a file cannot be parsed."
 msgstr ""
 
-#: ../../library/plistlib.rst:182
+#: ../../library/plistlib.rst:183
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../library/plistlib.rst:184
+#: ../../library/plistlib.rst:185
 msgid "Generating a plist::"
 msgstr "Створення plist::"
 
-#: ../../library/plistlib.rst:186
+#: ../../library/plistlib.rst:187
 msgid ""
 "import datetime\n"
 "import plistlib\n"
@@ -321,11 +317,11 @@ msgid ""
 "print(plistlib.dumps(pl).decode())"
 msgstr ""
 
-#: ../../library/plistlib.rst:206
+#: ../../library/plistlib.rst:207
 msgid "Parsing a plist::"
 msgstr "Розбір plist::"
 
-#: ../../library/plistlib.rst:208
+#: ../../library/plistlib.rst:209
 msgid ""
 "import plistlib\n"
 "\n"
