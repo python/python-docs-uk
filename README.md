@@ -49,7 +49,7 @@ Python Software Foundation [по ліцензії CC0](https://creativecommons.o
 
 **Оновлення локального перекладу**
 * `.github/scripts/manage_translation.py recreate_config`
-* `.github/scripts/manage_translation.py fetch_translations`
+* `tx pull -l uk --force --skip`
 
 **Подяка**
 * Maciej Olko - Polish team

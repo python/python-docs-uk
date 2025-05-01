@@ -15,9 +15,11 @@ transifex_api.setup(auth=os.getenv('TX_TOKEN'))
 
 RESOURCE_NAME_MAP = {'glossary_': 'glossary'}
 
+LANG = 'uk'
+
 ORGANISATION_ID = 'o:python-doc'
 PROJECT_ID = 'o:python-doc:p:python-newest'
-LANGUAGE_ID = 'l:uk'
+LANGUAGE_ID = f'l:{LANG}'
 ORGANISATION = transifex_api.Organization.get(id=ORGANISATION_ID)
 PROJECT = transifex_api.Project.get(id=PROJECT_ID)
 LANGUAGE = transifex_api.Language.get(id=LANGUAGE_ID)
@@ -46,6 +48,10 @@ def recreate_config() -> None:
                 f'file_filter = {path}\n',
                 'type = PO\n',
                 'source_lang = en\n',
+                'minimum_perc = 0\n',
+                f'trans.{LANG} = {path}\n',
+                f'source_file = {path}\n',
+                f'resource_name = {resource.name}\n'
             ))
 
 
@@ -88,15 +94,8 @@ def recreate_team_stats() -> None:
             fo.writelines(f"| {user} | {role} | {translators[user]} | {reviewers[user]} | {proofreaders[user]} |\n")
 
 
-def fetch_translations():
-    """Fetch translations from Transifex, remove source lines."""
-    pull_return_code = os.system(f'tx pull -l uk --force --skip')
-    if pull_return_code != 0:
-        exit(pull_return_code)
-
-
 if __name__ == "__main__":
-    RUNNABLE_SCRIPTS = ('recreate_config', 'recreate_resource_stats', 'recreate_team_stats',  'fetch_translations')
+    RUNNABLE_SCRIPTS = ('recreate_config', 'recreate_resource_stats', 'recreate_team_stats')
 
     parser = ArgumentParser()
     parser.add_argument('cmd', nargs=1, choices=RUNNABLE_SCRIPTS)
